@@ -5,11 +5,6 @@
                 <option name="name" value="merge_sort"/>
             </pragma>
         </directive>
-        <directive functionName="merge_sort" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="merge_sort"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

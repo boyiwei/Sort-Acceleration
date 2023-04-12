@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../sort_test.c ../../../sort_top.c
+HLS_SOURCES = ../../../sort_test.c ../../../sort_top.c ../../../radix_sort.c ../../../merge_sort.c
 
 override TARGET := csim.exe
 
@@ -87,3 +87,15 @@ $(ObjDir)/sort_top.o: ../../../sort_top.c $(ObjDir)/.dir
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/sort_top.d
+
+$(ObjDir)/radix_sort.o: ../../../radix_sort.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../radix_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/radix_sort.d
+
+$(ObjDir)/merge_sort.o: ../../../merge_sort.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../merge_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/merge_sort.d

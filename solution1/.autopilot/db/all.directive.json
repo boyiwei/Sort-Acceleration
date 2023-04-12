@@ -6,8 +6,8 @@
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "17",
+          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/directives.tcl",
+          "sourceLine": "6",
           "pragma": {
             "name": "TOP",
             "option": [{
@@ -22,7 +22,7 @@
           "functionLabel": "",
           "id": "2",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "17",
+          "sourceLine": "20",
           "pragma": {
             "name": "TOP",
             "option": [{

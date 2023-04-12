@@ -1,11 +1,11 @@
 #include <stdio.h>
-#define batch_size 49
+#include "batch_size.h"
 #define bit_width_bin 32
 #define bit_width_hex bit_width_bin/4
 #define bit_width_oct bit_width_bin/3
 #define bit_width_qua bit_width_bin/2
 
-void sort_seperate_bucket(int data[batch_size], int sorted_data[batch_size]){
+void radix_sort_seperate_bucket(int data[batch_size], int sorted_data[batch_size]){
 	int bucket[16][batch_size];
 	int bucket_pointer[16] = {0};
 	int k = 0;
@@ -47,7 +47,7 @@ void sort_seperate_bucket(int data[batch_size], int sorted_data[batch_size]){
 	}
 }
 
-void sort_top(int data[batch_size], int sorted_data[batch_size])
+void radix_sort_unified_bucket(int data[batch_size], int sorted_data[batch_size])
 {
 
 	int bucket[batch_size]; // a unified bucket. In this function we only need one bucket with 16 pointer in it.

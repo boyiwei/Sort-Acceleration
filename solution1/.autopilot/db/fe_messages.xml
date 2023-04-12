@@ -1,30 +1,6 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:22:9" msg_body="Only for/while/do support the pipeline  pragma">
-        <args ClangWarningOption="ignored-hls-attributes"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:69:9" msg_body="Only for/while/do support the pipeline  pragma">
-        <args ClangWarningOption="ignored-hls-attributes"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:21:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="sort_seperate_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="loop_merge" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:22:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="sort_seperate_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:35:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="sort_seperate_bucket" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=48" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:67:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="sort_top" ARG_PragmaIsValid="1" ARG_PragmaType="loop_merge" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:69:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="sort_top" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:17:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="directive" ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=merge_sort" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/merge_sort.c:13:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="" msg_id="207-812" msg_severity="ERROR" msg_loc="sort_seperate_bucket/radix_sort.c:2:10" msg_body="'batch_size.h' file not found">
+        <args/>
     </msg>
 </xilinx:hls_fe_msgs>
 
