@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="sort_seperate_bucket">
+<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="merge_sort">
   <files>
-    <file name="../../Sort/sort_test.c" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
-    <file name="../../Sort/dataset.h" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
-    <file name="../../Sort/data.h" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
+    <file name="../data.h" sc="0" tb="1" cflags="" csimflags=""/>
+    <file name="../dataset.h" sc="0" tb="1" cflags="" csimflags=""/>
+    <file name="../sort_test.c" sc="0" tb="1" cflags="" csimflags=""/>
+    <file name="sort_seperate_bucket/merge_sort.c" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
+    <file name="sort_seperate_bucket/radix_sort.c" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
     <file name="sort_seperate_bucket/sort_top.c" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
   </files>
   <solutions>

@@ -876,11 +876,7 @@ extern int __overflow (FILE *, int);
 
 
 
-__attribute__((sdx_kernel("sort_seperate_bucket", 0))) void sort_seperate_bucket(int data[49], int sorted_data[49]){
-#line 16 "/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl"
-#pragma HLSDIRECTIVE TOP name=sort_seperate_bucket
-# 8 "sort_seperate_bucket/sort_top.c"
-
+void sort_seperate_bucket(int data[49], int sorted_data[49]){
  int bucket[16][49];
  int bucket_pointer[16] = {0};
  int k = 0;

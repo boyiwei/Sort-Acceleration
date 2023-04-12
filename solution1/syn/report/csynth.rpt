@@ -1,10 +1,10 @@
 
 
 ================================================================
-== Synthesis Summary Report of 'sort_seperate_bucket'
+== Synthesis Summary Report of 'merge_sort'
 ================================================================
 + General Information: 
-    * Date:           Tue Apr 11 11:08:58 2023
+    * Date:           Tue Apr 11 18:17:15 2023
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        sort_seperate_bucket
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,46 +15,30 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +--------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+------------+-----+
-    |                         Modules                        | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |         |           |            |     |
-    |                         & Loops                        | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |     FF    |     LUT    | URAM|
-    +--------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+------------+-----+
-    |+ sort_seperate_bucket                                  |     -|  3.54|     7445|  7.445e+04|         -|     7446|     -|        no|  2 (~0%)|  1 (~0%)|  569 (~0%)|  1071 (~0%)|    -|
-    | + sort_seperate_bucket_Pipeline_1                      |     -|  5.85|       18|    180.000|         -|       18|     -|        no|        -|        -|    7 (~0%)|    49 (~0%)|    -|
-    |  o Loop 1                                              |     -|  7.30|       16|    160.000|         1|        1|    16|       yes|        -|        -|          -|           -|    -|
-    | + sort_seperate_bucket_Pipeline_initialization         |     -|  4.71|       51|    510.000|         -|       51|     -|        no|        -|        -|   15 (~0%)|    61 (~0%)|    -|
-    |  o initialization                                      |     -|  7.30|       49|    490.000|         2|        1|    49|       yes|        -|        -|          -|           -|    -|
-    | o sort_procedure                                       |     -|  7.30|     7392|  7.392e+04|       924|        -|     8|        no|        -|        -|          -|           -|    -|
-    |  + sort_seperate_bucket_Pipeline_input_bucket          |     -|  3.58|       54|    540.000|         -|       54|     -|        no|        -|  1 (~0%)|  227 (~0%)|   311 (~0%)|    -|
-    |   o input_bucket                                       |     -|  7.30|       52|    520.000|         5|        1|    49|       yes|        -|        -|          -|           -|    -|
-    |  + sort_seperate_bucket_Pipeline_clear_bucket_pointer  |     -|  5.85|       18|    180.000|         -|       18|     -|        no|        -|        -|    7 (~0%)|    49 (~0%)|    -|
-    |   o clear_bucket_pointer                               |     -|  7.30|       16|    160.000|         1|        1|    16|       yes|        -|        -|          -|           -|    -|
-    |  o output_bucket                                       |     -|  7.30|      848|  8.480e+03|        53|        -|    16|        no|        -|        -|          -|           -|    -|
-    |   + sort_seperate_bucket_Pipeline_VITIS_LOOP_34_1      |     -|  4.71|       50|    500.000|         -|       50|     -|        no|        -|        -|   67 (~0%)|   161 (~0%)|    -|
-    |    o VITIS_LOOP_34_1                                   |     -|  7.30|       48|    480.000|         2|        1|    48|       yes|        -|        -|          -|           -|    -|
-    +--------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+---------+-----------+------------+-----+
+    +--------------+------+------+---------+--------+----------+---------+------+----------+------+----+---+----+-----+
+    |    Modules   | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |   |    |     |
+    |    & Loops   | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP| FF| LUT| URAM|
+    +--------------+------+------+---------+--------+----------+---------+------+----------+------+----+---+----+-----+
+    |+ merge_sort  |     -|  7.30|        0|   0.000|         -|        1|     -|        no|     -|   -|  -|   -|    -|
+    +--------------+------+------+---------+--------+----------+---------+------+----------+------+----+---+----+-----+
 
 
 ================================================================
 == HW Interfaces
 ================================================================
-* AP_MEMORY
-+----------------------+----------+
-| Interface            | Bitwidth |
-+----------------------+----------+
-| data_address0        | 6        |
-| data_q0              | 32       |
-| sorted_data_address0 | 6        |
-| sorted_data_d0       | 32       |
-| sorted_data_q0       | 32       |
-+----------------------+----------+
+* Other Ports
++-------------+---------+----------+
+| Interface   | Mode    | Bitwidth |
++-------------+---------+----------+
+| input1      | ap_none | 32       |
+| input2      | ap_none | 32       |
+| sorted_data | ap_none | 32       |
++-------------+---------+----------+
 
 * TOP LEVEL CONTROL
 +-----------+------------+-----------------------------------+
 | Interface | Type       | Ports                             |
 +-----------+------------+-----------------------------------+
-| ap_clk    | clock      | ap_clk                            |
-| ap_rst    | reset      | ap_rst                            |
 | ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
 +-----------+------------+-----------------------------------+
 
@@ -66,65 +50,30 @@
 +-------------+-----------+----------+
 | Argument    | Direction | Datatype |
 +-------------+-----------+----------+
-| data        | in        | int*     |
-| sorted_data | inout     | int*     |
+| input1      | unused    | int*     |
+| input2      | unused    | int*     |
+| sorted_data | unused    | int*     |
 +-------------+-----------+----------+
 
 * SW-to-HW Mapping
-+-------------+----------------------+---------+----------+
-| Argument    | HW Interface         | HW Type | HW Usage |
-+-------------+----------------------+---------+----------+
-| data        | data_address0        | port    | offset   |
-| data        | data_ce0             | port    |          |
-| data        | data_q0              | port    |          |
-| sorted_data | sorted_data_address0 | port    | offset   |
-| sorted_data | sorted_data_ce0      | port    |          |
-| sorted_data | sorted_data_we0      | port    |          |
-| sorted_data | sorted_data_d0       | port    |          |
-| sorted_data | sorted_data_q0       | port    |          |
-+-------------+----------------------+---------+----------+
++-------------+--------------+---------+
+| Argument    | HW Interface | HW Type |
++-------------+--------------+---------+
+| input1      | input1       | port    |
+| input2      | input2       | port    |
+| sorted_data | sorted_data  | port    |
++-------------+--------------+---------+
 
 
 ================================================================
 == Bind Op Report
 ================================================================
-+-------------------------------------------------------+-----+--------+------------+-----+--------+---------+
-| Name                                                  | DSP | Pragma | Variable   | Op  | Impl   | Latency |
-+-------------------------------------------------------+-----+--------+------------+-----+--------+---------+
-| + sort_seperate_bucket                                | 1   |        |            |     |        |         |
-|   i_2_fu_199_p2                                       | -   |        | i_2        | add | fabric | 0       |
-|   add_ln33_2_fu_218_p2                                | -   |        | add_ln33_2 | add | fabric | 0       |
-|   add_ln33_1_fu_230_p2                                | -   |        | add_ln33_1 | add | fabric | 0       |
-|   add_ln33_fu_256_p2                                  | -   |        | add_ln33   | add | fabric | 0       |
-|  + sort_seperate_bucket_Pipeline_1                    | 0   |        |            |     |        |         |
-|    empty_12_fu_56_p2                                  | -   |        | empty_12   | add | fabric | 0       |
-|  + sort_seperate_bucket_Pipeline_initialization       | 0   |        |            |     |        |         |
-|    add_ln14_fu_81_p2                                  | -   |        | add_ln14   | add | fabric | 0       |
-|  + sort_seperate_bucket_Pipeline_input_bucket         | 1   |        |            |     |        |         |
-|    add_ln25_fu_135_p2                                 | -   |        | add_ln25   | add | fabric | 0       |
-|    mac_muladd_4ns_6ns_10ns_10_4_1_U4                  | 1   |        | mul_ln28   | mul | dsp48  | 3       |
-|    mac_muladd_4ns_6ns_10ns_10_4_1_U4                  | 1   |        | add_ln28   | add | dsp48  | 3       |
-|    bucket_pointer_d0                                  | -   |        | add_ln29   | add | fabric | 0       |
-|  + sort_seperate_bucket_Pipeline_clear_bucket_pointer | 0   |        |            |     |        |         |
-|    add_ln43_fu_60_p2                                  | -   |        | add_ln43   | add | fabric | 0       |
-|  + sort_seperate_bucket_Pipeline_VITIS_LOOP_34_1      | 0   |        |            |     |        |         |
-|    add_ln34_fu_128_p2                                 | -   |        | add_ln34   | add | fabric | 0       |
-|    add_ln36_fu_138_p2                                 | -   |        | add_ln36   | add | fabric | 0       |
-|    add_ln37_fu_166_p2                                 | -   |        | add_ln37   | add | fabric | 0       |
-+-------------------------------------------------------+-----+--------+------------+-----+--------+---------+
-
+  No bind op info in design
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+------------------------+------+------+--------+----------------+---------+------+---------+
-| Name                   | BRAM | URAM | Pragma | Variable       | Storage | Impl | Latency |
-+------------------------+------+------+--------+----------------+---------+------+---------+
-| + sort_seperate_bucket | 2    | 0    |        |                |         |      |         |
-|   bucket_U             | 2    | -    |        | bucket         | ram_1p  | auto | 1       |
-|   bucket_pointer_U     | -    | -    |        | bucket_pointer | ram_s2p | auto | 1       |
-+------------------------+------+------+--------+----------------+---------+------+---------+
-
+  No bind storage info in design
 
 ================================================================
 == Pragma Report
@@ -141,6 +90,7 @@
 +----------------+--------------+------------------------------------------------------------+
 | Type           | Options      | Location                                                   |
 +----------------+--------------+------------------------------------------------------------+
+| pipeline       |              | sort_seperate_bucket/merge_sort.c:13 in merge_sort         |
 | loop_merge     |              | sort_seperate_bucket/sort_top.c:21 in sort_seperate_bucket |
 | loop_tripcount | min=0 max=48 | sort_seperate_bucket/sort_top.c:35 in sort_seperate_bucket |
 | loop_merge     |              | sort_seperate_bucket/sort_top.c:67 in sort_top             |

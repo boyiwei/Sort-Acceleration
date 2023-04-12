@@ -1,4 +1,3 @@
 <pragmas>
-<pragma file="sort_seperate_bucket/sort_top.c" line="35" pragmaType="loop_tripcount" parentfunction="sort_seperate_bucket" min="0" max="48" avg="24"/>
-<pragma file="sort_seperate_bucket/sort_top.c" line="21" pragmaType="loop_merge" parentfunction="sort_seperate_bucket" force="0"/>
+<pragma file="sort_seperate_bucket/merge_sort.c" line="13" pragmaType="pipeline" parentfunction="merge_sort" off="0" ii="-1" rewind="0" style=""/>
 </pragmas>

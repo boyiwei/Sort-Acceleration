@@ -1,6 +1,3 @@
-/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:16:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=sort_seperate_bucket_XLX_SEP_ PragmaOptions=name=sort_seperate_bucket_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLSDIRECTIVE TOP name=sort_seperate_bucket
-        ^
 sort_seperate_bucket/sort_top.c:21:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_merge_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sort_seperate_bucket_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS LOOP_MERGE
         ^
@@ -22,4 +19,4 @@ sort_seperate_bucket/sort_top.c:69:9: warning: HLS pragma dump _XLX_SEP_ PragmaI
 sort_seperate_bucket/sort_top.c:69:9: warning: Only for/while/do support the pipeline  pragma [-Wignored-hls-attributes]
 #pragma HLS PIPELINE
         ^~~~~~~~~~~~
-8 warnings generated.
+7 warnings generated.

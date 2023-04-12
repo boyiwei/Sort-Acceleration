@@ -1,11 +1,11 @@
 
-set TopModule "sort_seperate_bucket"
+set TopModule "merge_sort"
 set ClockPeriod 10
-set ClockList ap_clk
+set ClockList {}
 set HasVivadoClockPeriod 0
-set CombLogicFlag 0
+set CombLogicFlag 1
 set PipelineFlag 0
-set DataflowTaskPipelineFlag 1
+set DataflowTaskPipelineFlag 0
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
 set FloatingPointFlag 0
@@ -13,7 +13,7 @@ set FftOrFirFlag 0
 set NbRWValue 0
 set intNbAccess 0
 set NewDSPMapping 1
-set HasDSPModule 1
+set HasDSPModule 0
 set ResetLevelFlag 1
 set ResetStyle control
 set ResetSyncFlag 1
@@ -23,7 +23,7 @@ set ResetRegisterNum 0
 set FsmEncStyle onehot
 set MaxFanout 0
 set RtlPrefix {}
-set RtlSubPrefix sort_seperate_bucket_
+set RtlSubPrefix merge_sort_
 set ExtraCCFlags {}
 set ExtraCLdFlags {}
 set SynCheckOptions {}
@@ -42,10 +42,10 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xcvu11p:-flga2577:-1-e
-set SourceFiles {sc {} c ../sort_top.c}
-set SourceFlags {sc {} c {{}}}
+set SourceFiles {sc {} c {../sort_top.c ../merge_sort.c}}
+set SourceFlags {sc {} c {{} {}}}
 set DirectiveFile /home/boyiw7/sort_seperate_bucket/solution1/solution1.directive
-set TBFiles {verilog {../../Sort/sort_test.c ../../Sort/dataset.h ../../Sort/data.h} bc {../../Sort/sort_test.c ../../Sort/dataset.h ../../Sort/data.h} vhdl {../../Sort/sort_test.c ../../Sort/dataset.h ../../Sort/data.h} sc {../../Sort/sort_test.c ../../Sort/dataset.h ../../Sort/data.h} cas {../../Sort/sort_test.c ../../Sort/dataset.h ../../Sort/data.h} c {}}
+set TBFiles {verilog {../sort_test.c ../dataset.h ../data.h} bc {../sort_test.c ../dataset.h ../data.h} vhdl {../sort_test.c ../dataset.h ../data.h} sc {../sort_test.c ../dataset.h ../data.h} cas {../sort_test.c ../dataset.h ../data.h} c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

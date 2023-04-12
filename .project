@@ -42,6 +42,16 @@
 			<location>/home/boyiw7/sort_seperate_bucket/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>source/merge_sort.c</name>
+			<type>1</type>
+			<location>/home/boyiw7/sort_seperate_bucket/merge_sort.c</location>
+		</link>
+		<link>
+			<name>source/radix_sort.c</name>
+			<type>1</type>
+			<location>/home/boyiw7/sort_seperate_bucket/radix_sort.c</location>
+		</link>
+		<link>
 			<name>source/sort_top.c</name>
 			<type>1</type>
 			<location>/home/boyiw7/sort_seperate_bucket/sort_top.c</location>
@@ -49,17 +59,17 @@
 		<link>
 			<name>testbench/data.h</name>
 			<type>1</type>
-			<location>/home/boyiw7/Sort/data.h</location>
+			<location>/home/boyiw7/sort_seperate_bucket/data.h</location>
 		</link>
 		<link>
 			<name>testbench/dataset.h</name>
 			<type>1</type>
-			<location>/home/boyiw7/Sort/dataset.h</location>
+			<location>/home/boyiw7/sort_seperate_bucket/dataset.h</location>
 		</link>
 		<link>
 			<name>testbench/sort_test.c</name>
 			<type>1</type>
-			<location>/home/boyiw7/Sort/sort_test.c</location>
+			<location>/home/boyiw7/sort_seperate_bucket/sort_test.c</location>
 		</link>
 		<link>
 			<name>solution1/constraints/.xml.directive</name>

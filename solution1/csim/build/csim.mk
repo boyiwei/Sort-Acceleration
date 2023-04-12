@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../Sort/sort_test.c ../../../sort_top.c
+HLS_SOURCES = ../../../sort_test.c ../../../sort_top.c
 
 override TARGET := csim.exe
 
@@ -76,8 +76,8 @@ all: $(TARGET)
 
 AUTOCC := apcc  
 
-$(ObjDir)/sort_test.o: ../../../../Sort/sort_test.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../../Sort/sort_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/sort_test.o: ../../../sort_test.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../sort_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/sort_test.d

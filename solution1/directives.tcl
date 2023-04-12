@@ -3,4 +3,3 @@
 ## Please DO NOT edit it.
 ## Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ############################################################
-set_directive_top -name sort_seperate_bucket "sort_seperate_bucket"

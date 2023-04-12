@@ -161,40 +161,6 @@
                         					
                     </folderInfo>
                     					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1785636069.1554094406" name="sort_test.c" rcbsApplicability="disable" resourcePath="testbench/sort_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.202263881.125995837">
-                        						
-                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.202263881.125995837" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.202263881">
-                            							
-                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.33374316" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
-                            							
-                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.575061674" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-                                								
-                                <listOptionValue builtIn="false" value="/home/boyiw7"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/auto_cc/include"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/include/ap_sysc"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/include"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/systemc/include"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/include/etc"/>
-                                							
-                            </option>
-                            							
-                            <option id="gnu.c.compiler.option.misc.other.1170518928" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
-                            							
-                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.643133481" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
-                            						
-                        </tool>
-                        					
-                    </fileInfo>
-                    					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1785636069.1167125735" name="data.h" rcbsApplicability="disable" resourcePath="testbench/data.h" toolsToInvoke=""/>
-                    					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1785636069.1410701693" name="dataset.h" rcbsApplicability="disable" resourcePath="testbench/dataset.h" toolsToInvoke=""/>
-                    					
                     <sourceEntries>
                         						
                         <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
@@ -346,40 +312,6 @@
                         </toolChain>
                         					
                     </folderInfo>
-                    					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.2006708030.2044679648" name="sort_test.c" rcbsApplicability="disable" resourcePath="testbench/sort_test.c" toolsToInvoke="cdt.managedbuild.tool.gnu.c.compiler.exe.release.833971815.1271903105">
-                        						
-                        <tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.833971815.1271903105" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release.833971815">
-                            							
-                            <option id="gnu.c.compiler.option.preprocessor.def.symbols.2017249044" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols"/>
-                            							
-                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.24523547" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-                                								
-                                <listOptionValue builtIn="false" value="/home/boyiw7"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/auto_cc/include"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/include/ap_sysc"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/include"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/systemc/include"/>
-                                								
-                                <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2022.2/include/etc"/>
-                                							
-                            </option>
-                            							
-                            <option id="gnu.c.compiler.option.misc.other.403243785" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
-                            							
-                            <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.227754630" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
-                            						
-                        </tool>
-                        					
-                    </fileInfo>
-                    					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.2006708030.1617547505" name="data.h" rcbsApplicability="disable" resourcePath="testbench/data.h" toolsToInvoke=""/>
-                    					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.2006708030.1060272103" name="dataset.h" rcbsApplicability="disable" resourcePath="testbench/dataset.h" toolsToInvoke=""/>
                     					
                     <sourceEntries>
                         						

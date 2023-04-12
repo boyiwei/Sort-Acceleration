@@ -292,3 +292,92 @@ INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_34_1'.
 INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_34_1'
 INFO: [SCHED 204-11] Finished scheduling.
 INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.138 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu11p-flga2577-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcvu11p-flga2577-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.07 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/sort_top.c:22:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/sort_top.c:69:9)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.48 seconds. CPU system time: 0.7 seconds. Elapsed time: 1.48 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.65 seconds. CPU system time: 0.77 seconds. Elapsed time: 4.79 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.076 GB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'sort_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'initialization' (sort_seperate_bucket/sort_top.c:58) in function 'sort_top' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'sort_procedure' (sort_seperate_bucket/sort_top.c:65) in function 'sort_top' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'sort_procedure' (sort_seperate_bucket/sort_top.c:65) in function 'sort_top' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'bucket_pointer_initialization' (sort_seperate_bucket/sort_top.c:71) in function 'sort_top' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'input_bucket' (sort_seperate_bucket/sort_top.c:80) in function 'sort_top' completely with a factor of 49.
+INFO: [HLS 200-489] Unrolling loop 'output_bucket' (sort_seperate_bucket/sort_top.c:91) in function 'sort_top' completely with a factor of 49.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.101 GB.
+WARNING: [HLS 200-946] Cannot merge loops in region 'sort_top': data dependence(s) between loops prevent merging.
+INFO: [HLS 200-472] Inferring partial write operation for 'bucket_sizes' 
+INFO: [HLS 200-472] Inferring partial write operation for 'bucket_sizes' (sort_seperate_bucket/sort_top.c:61:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'bucket_pointer' (sort_seperate_bucket/sort_top.c:74:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'bucket_sizes' (sort_seperate_bucket/sort_top.c:76:20)
+INFO: [HLS 200-472] Inferring partial write operation for 'bucket' (sort_seperate_bucket/sort_top.c:83:38)
+INFO: [HLS 200-472] Inferring partial write operation for 'bucket_pointer' (sort_seperate_bucket/sort_top.c:84:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'bucket_sizes' (sort_seperate_bucket/sort_top.c:87:33)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.132 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sort_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sort_top_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.132 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.132 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sort_top_Pipeline_initialization' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'initialization'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'initialization'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.133 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.133 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sort_top_Pipeline_sort_procedure' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'sort_procedure'.
+WARNING: [HLS 200-880] The II Violation in module 'sort_top_Pipeline_sort_procedure' (loop 'sort_procedure'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'load' operation ('bucket_load_48', sort_seperate_bucket/sort_top.c:92) on array 'bucket' and 'store' operation ('bucket_addr_write_ln83', sort_seperate_bucket/sort_top.c:83) of variable 'sorted_data_load', sort_seperate_bucket/sort_top.c:81 on array 'bucket'.
+WARNING: [HLS 200-880] The II Violation in module 'sort_top_Pipeline_sort_procedure' (loop 'sort_procedure'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'load' operation ('bucket_load_48', sort_seperate_bucket/sort_top.c:92) on array 'bucket' and 'store' operation ('bucket_addr_write_ln83', sort_seperate_bucket/sort_top.c:83) of variable 'sorted_data_load', sort_seperate_bucket/sort_top.c:81 on array 'bucket'.
+WARNING: [HLS 200-880] The II Violation in module 'sort_top_Pipeline_sort_procedure' (loop 'sort_procedure'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'load' operation ('bucket_load_48', sort_seperate_bucket/sort_top.c:92) on array 'bucket' and 'store' operation ('bucket_addr_write_ln83', sort_seperate_bucket/sort_top.c:83) of variable 'sorted_data_load', sort_seperate_bucket/sort_top.c:81 on array 'bucket'.
+WARNING: [HLS 200-880] The II Violation in module 'sort_top_Pipeline_sort_procedure' (loop 'sort_procedure'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'load' operation ('bucket_load_48', sort_seperate_bucket/sort_top.c:92) on array 'bucket' and 'store' operation ('bucket_addr_write_ln83', sort_seperate_bucket/sort_top.c:83) of variable 'sorted_data_load', sort_seperate_bucket/sort_top.c:81 on array 'bucket'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

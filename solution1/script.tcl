@@ -4,15 +4,17 @@
 ## Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project sort_seperate_bucket
-set_top sort_seperate_bucket
+set_top merge_sort
+add_files sort_seperate_bucket/merge_sort.c
+add_files sort_seperate_bucket/radix_sort.c
 add_files sort_seperate_bucket/sort_top.c
-add_files -tb Sort/sort_test.c -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb Sort/dataset.h -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
-add_files -tb Sort/data.h -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb sort_seperate_bucket/data.h
+add_files -tb sort_seperate_bucket/dataset.h
+add_files -tb sort_seperate_bucket/sort_test.c
 open_solution "solution1" -flow_target vivado
 set_part {xcvu11p-flga2577-1-e}
 create_clock -period 10 -name default
-source "./sort_seperate_bucket/solution1/directives.tcl"
+#source "./sort_seperate_bucket/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design
