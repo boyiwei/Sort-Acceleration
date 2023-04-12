@@ -1,0 +1,63 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../sort_top.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Tue Apr 11 10:58:40 PDT 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/4698851681235921003572
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 2.35 seconds. Total CPU system time: 0.29 seconds. Total elapsed time: 2.48 seconds; peak allocated memory: 98.965 MB.
+   Generating csim.exe
+Checking results
+Sorted_results: rank 0, value= 5552231 
+Sorted_results: rank 1, value= 36006549 
+Sorted_results: rank 2, value= 65598788 
+Sorted_results: rank 3, value= 80878740 
+Sorted_results: rank 4, value= 88490000 
+Sorted_results: rank 5, value= 127352324 
+Sorted_results: rank 6, value= 186404399 
+Sorted_results: rank 7, value= 189878413 
+Sorted_results: rank 8, value= 256088272 
+Sorted_results: rank 9, value= 325695605 
+Sorted_results: rank 10, value= 447183299 
+Sorted_results: rank 11, value= 476693086 
+Sorted_results: rank 12, value= 493744502 
+Sorted_results: rank 13, value= 516944765 
+Sorted_results: rank 14, value= 553297039 
+Sorted_results: rank 15, value= 581354734 
+Sorted_results: rank 16, value= 606445162 
+Sorted_results: rank 17, value= 690890325 
+Sorted_results: rank 18, value= 710066025 
+Sorted_results: rank 19, value= 779669220 
+Sorted_results: rank 20, value= 848570768 
+Sorted_results: rank 21, value= 876464942 
+Sorted_results: rank 22, value= 895555376 
+Sorted_results: rank 23, value= 923732607 
+Sorted_results: rank 24, value= 1040104694 
+Sorted_results: rank 25, value= 1044853451 
+Sorted_results: rank 26, value= 1046829005 
+Sorted_results: rank 27, value= 1088674490 
+Sorted_results: rank 28, value= 1203505172 
+Sorted_results: rank 29, value= 1307386113 
+Sorted_results: rank 30, value= 1320722758 
+Sorted_results: rank 31, value= 1326800232 
+Sorted_results: rank 32, value= 1356902103 
+Sorted_results: rank 33, value= 1408842592 
+Sorted_results: rank 34, value= 1542136754 
+Sorted_results: rank 35, value= 1608778821 
+Sorted_results: rank 36, value= 1646408990 
+Sorted_results: rank 37, value= 1679599905 
+Sorted_results: rank 38, value= 1700208832 
+Sorted_results: rank 39, value= 1852261356 
+Sorted_results: rank 40, value= 1859492446 
+Sorted_results: rank 41, value= 1873411667 
+Sorted_results: rank 42, value= 1910440446 
+Sorted_results: rank 43, value= 1914072138 
+Sorted_results: rank 44, value= 1922698068 
+Sorted_results: rank 45, value= 1933005737 
+Sorted_results: rank 46, value= 1974215913 
+Sorted_results: rank 47, value= 1974227909 
+Sorted_results: rank 48, value= 2026238854 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

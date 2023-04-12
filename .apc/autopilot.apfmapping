@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="sort_top.c" path="/home/boyiw7/sort_seperate_bucket/sort_top.c"/>
+  </source>
+  <testbench>
+    <originFiles name="sort_test.c" path="/home/boyiw7/Sort/sort_test.c"/>
+    <originFiles name="dataset.h" path="/home/boyiw7/Sort/dataset.h"/>
+    <originFiles name="data.h" path="/home/boyiw7/Sort/data.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

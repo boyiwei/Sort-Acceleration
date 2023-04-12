@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-946] Cannot merge loops in region 'xlx_merge_loop.input_bucket.0': data dependence(s) between loops prevent merging.&#xA;Resolution: For help on HLS 200-946 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-946.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-11T11:08:57.228-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'sort_procedure' (sort_seperate_bucket/sort_top.c:19:10) in function 'sort_seperate_bucket' more than one sub loop.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-11T11:08:57.222-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'output_bucket' (sort_seperate_bucket/sort_top.c:33:12) in function 'sort_seperate_bucket' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-11T11:08:57.197-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'VITIS_LOOP_34_1' (sort_seperate_bucket/sort_top.c:35:9) in function 'sort_seperate_bucket'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-11T11:08:57.184-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/sort_top.c:69:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-11T11:08:52.968-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/sort_top.c:22:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-11T11:08:52.382-0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
