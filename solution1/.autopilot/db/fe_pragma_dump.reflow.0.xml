@@ -1,0 +1,6 @@
+<pragmas>
+<pragma file="sort_seperate_bucket/sort_top.c" line="12" pragmaType="dataflow" parentfunction="sort_top" disable_start_propagation="0"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="13" pragmaType="bind_storage" parentfunction="sort_top" op="666" impl="22" latency="-1" variable="half_sorted"/>
+<pragma file="sort_seperate_bucket/merge_sort.c" line="9" pragmaType="pipeline" parentfunction="merge_sort" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="sort_seperate_bucket/radix_sort.c" line="67" pragmaType="loop_merge" parentfunction="radix_sort_unified_bucket" force="0"/>
+</pragmas>
