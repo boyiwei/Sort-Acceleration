@@ -2,36 +2,36 @@ INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling(apcc) ../../../sort_test.c in debug mode
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 12 10:58:04 PDT 2023
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 12 11:54:50 PDT 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/10094451681322284107548
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/10843591681325690107797
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 2.24 seconds. Total CPU system time: 0.26 seconds. Total elapsed time: 2.31 seconds; peak allocated memory: 98.969 MB.
+INFO: [HLS 200-112] Total CPU user time: 2.23 seconds. Total CPU system time: 0.27 seconds. Total elapsed time: 2.3 seconds; peak allocated memory: 98.965 MB.
    Compiling(apcc) ../../../sort_top.c in debug mode
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 12 10:58:07 PDT 2023
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 12 11:54:53 PDT 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/10095551681322288047068
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/10844511681325694055940
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 2.2 seconds. Total CPU system time: 0.26 seconds. Total elapsed time: 2.27 seconds; peak allocated memory: 98.965 MB.
+INFO: [HLS 200-112] Total CPU user time: 2.22 seconds. Total CPU system time: 0.29 seconds. Total elapsed time: 2.31 seconds; peak allocated memory: 98.965 MB.
    Compiling(apcc) ../../../radix_sort.c in debug mode
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 12 10:58:11 PDT 2023
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 12 11:54:57 PDT 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/10096441681322291964348
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/10845401681325697970673
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 2.3 seconds. Total CPU system time: 0.3 seconds. Total elapsed time: 2.44 seconds; peak allocated memory: 98.965 MB.
+INFO: [HLS 200-112] Total CPU user time: 2.27 seconds. Total CPU system time: 0.29 seconds. Total elapsed time: 2.35 seconds; peak allocated memory: 98.965 MB.
    Compiling(apcc) ../../../merge_sort.c in debug mode
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 12 10:58:15 PDT 2023
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 12 11:55:01 PDT 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/10097831681322296009731
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/10846291681325701960580
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 2.24 seconds. Total CPU system time: 0.33 seconds. Total elapsed time: 2.35 seconds; peak allocated memory: 98.965 MB.
+INFO: [HLS 200-112] Total CPU user time: 2.24 seconds. Total CPU system time: 0.26 seconds. Total elapsed time: 2.31 seconds; peak allocated memory: 98.965 MB.
    Generating csim.exe
 Checking results
 i=0, input1[0] = 5552231, input2[0]=5552231
@@ -228,7 +228,7 @@ i=95, input1[47] = 1974227909, input2[48]=2026238854
 sorted_data[95]=1974227909, j=48
 i=96, input1[48] = 2026238854, input2[48]=2026238854
 sorted_data[96]=2026238854, k=49
-i=97, input1[48] = 2026238854, input2[49]=0
+i=97, input1[48] = 2026238854, input2[49]=-589534508
 Sorted_results: rank 0, value= 5552231 
 Sorted_results: rank 1, value= 5552231 
 Sorted_results: rank 2, value= 36006549 

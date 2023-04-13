@@ -3,22 +3,24 @@
   <errorLogs>
     <logs>
       <synLog>
-        <logs message="ERROR: [HLS 207-812] 'batch_size.h' file not found (sort_seperate_bucket/radix_sort.c:2:10)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T10:53:01.043-0700"/>
+        <logs message="ERROR: [HLS 200-70] Pre-synthesis failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T13:36:28.900-0700"/>
+        <logs message="ERROR: [HLS 200-1715] Encountered problem during source synthesis" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T13:36:28.894-0700"/>
+        <logs message="ERROR: [HLS 200-779] Non-shared array 'half_sorted' (sort_seperate_bucket/sort_top.c:11) failed dataflow checking: it can only have a single reader and a single writer." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T13:36:28.879-0700"/>
+        <logs message="ERROR: [HLS 200-979] Variable 'half_sorted' (sort_seperate_bucket/sort_top.c:11) failed dataflow checking: it can only be written in one process function." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T13:36:28.864-0700"/>
       </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T10:55:45.229-0700"/>
-        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T10:55:45.143-0700"/>
-        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T10:55:45.139-0700"/>
-        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T10:55:45.131-0700"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="WARNING: [HLS 207-5527] 'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead (sort_seperate_bucket/sort_top.c:13:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T13:36:24.068-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:69:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T13:36:23.011-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:22:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-12T13:36:22.401-0700" type="Warning"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>

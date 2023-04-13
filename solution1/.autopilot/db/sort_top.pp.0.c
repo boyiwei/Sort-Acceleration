@@ -870,4 +870,44 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 2 "sort_seperate_bucket/sort_top.c" 2
+# 1 "sort_seperate_bucket/radix_sort.h" 1
 
+# 1 "sort_seperate_bucket/batch_size.h" 1
+# 3 "sort_seperate_bucket/radix_sort.h" 2
+
+void radix_sort_seperate_bucket(int data[49], int sorted_data[49]);
+
+void radix_sort_unified_bucket(int data[49], int sorted_data[49]);
+# 3 "sort_seperate_bucket/sort_top.c" 2
+# 1 "sort_seperate_bucket/merge_sort.h" 1
+
+# 1 "sort_seperate_bucket/batch_size.h" 1
+# 3 "sort_seperate_bucket/merge_sort.h" 2
+
+
+void merge_sort(int input1[49], int input2[49], int sorted_data[2*49]);
+# 4 "sort_seperate_bucket/sort_top.c" 2
+# 1 "sort_seperate_bucket/batch_size.h" 1
+# 5 "sort_seperate_bucket/sort_top.c" 2
+
+
+
+__attribute__((sdx_kernel("sort_top", 0))) void sort_top(int input[2][49], int output[2*49]){
+#line 21 "/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=sort_top
+# 8 "sort_seperate_bucket/sort_top.c"
+
+#line 6 "/home/boyiw7/sort_seperate_bucket/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=sort_top
+# 8 "sort_seperate_bucket/sort_top.c"
+
+
+
+ int half_sorted[2][49];
+#pragma HLS DATAFLOW
+#pragma HLS RESOURCE variable= half_sorted core=RAM_2P_BRAM
+ radix_sort_unified_bucket(input[0], half_sorted[0]);
+ radix_sort_unified_bucket(input[1], half_sorted[1]);
+
+ merge_sort(half_sorted[0], half_sorted[1], output);
+}

@@ -6,9 +6,13 @@
 
 
 void sort_top(int input[2][batch_size], int output[2*batch_size]){
+//	int half_sorted0[batch_size];
+//	int half_sorted1[batch_size]; // To use HLS DATAFLOW, we cannot define a 2-dimension array.
 	int half_sorted[2][batch_size];
-	void radix_sort_unified_bucket(input[1], half_sorted[1]);
-	void radix_sort_unified_bucket(input[2], half_sorted[2]);
+#pragma HLS DATAFLOW
+#pragma HLS RESOURCE variable= half_sorted core=RAM_2P_BRAM
+	radix_sort_unified_bucket(input[0], half_sorted[0]);
+	radix_sort_unified_bucket(input[1], half_sorted[1]);
 
-	void merge_sort(half_sorted[1], half_sorted[2], output);
+	merge_sort(half_sorted[0], half_sorted[1], output);
 }

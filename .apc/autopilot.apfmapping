@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="merge_sort.c" path="/home/boyiw7/sort_seperate_bucket/merge_sort.c"/>
-    <originFiles name="radix_sort.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort.c"/>
-    <originFiles name="sort_top.c" path="/home/boyiw7/sort_seperate_bucket/sort_top.c"/>
     <originFiles name="batch_size.h" path="/home/boyiw7/sort_seperate_bucket/batch_size.h"/>
+    <originFiles name="merge_sort.c" path="/home/boyiw7/sort_seperate_bucket/merge_sort.c"/>
     <originFiles name="merge_sort.h" path="/home/boyiw7/sort_seperate_bucket/merge_sort.h"/>
+    <originFiles name="radix_sort.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort.c"/>
     <originFiles name="radix_sort.h" path="/home/boyiw7/sort_seperate_bucket/radix_sort.h"/>
+    <originFiles name="sort_top.c" path="/home/boyiw7/sort_seperate_bucket/sort_top.c"/>
   </source>
   <testbench>
+    <originFiles name="batch_size.h" path="/home/boyiw7/batch_size.h"/>
     <originFiles name="dataset.h" path="/home/boyiw7/sort_seperate_bucket/dataset.h"/>
     <originFiles name="sort_test.c" path="/home/boyiw7/sort_seperate_bucket/sort_test.c"/>
-    <originFiles name="batch_size.h" path="/home/boyiw7/batch_size.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>
