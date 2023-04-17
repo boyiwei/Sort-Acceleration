@@ -67,6 +67,11 @@
 			<location>/home/boyiw7/sort_seperate_bucket/radix_sort.h</location>
 		</link>
 		<link>
+			<name>source/radix_sort_separate_bucket_parallel.c</name>
+			<type>1</type>
+			<location>/home/boyiw7/sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</location>
+		</link>
+		<link>
 			<name>source/sort_top.c</name>
 			<type>1</type>
 			<location>/home/boyiw7/sort_seperate_bucket/sort_top.c</location>

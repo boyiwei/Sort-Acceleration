@@ -1,8 +1,8 @@
 {
-  "Top": "sort_top",
-  "RtlTop": "sort_top",
+  "Top": "radix_sort_seperate_bucket_parallel",
+  "RtlTop": "radix_sort_seperate_bucket_parallel",
   "RtlPrefix": "",
-  "RtlSubPrefix": "sort_top_",
+  "RtlSubPrefix": "radix_sort_seperate_bucket_parallel_",
   "SourceLanguage": "c",
   "HostMachineBits": "64",
   "FunctionProtocol": "ap_ctrl_hs",
@@ -15,7 +15,7 @@
     "Triple": "fpga64-xilinx-none"
   },
   "Args": {
-    "input": {
+    "data": {
       "index": "0",
       "direction": "in",
       "srcType": "int*",
@@ -23,151 +23,67 @@
       "hwRefs": [
         {
           "type": "port",
-          "interface": "input_r_address0",
-          "name": "input_r_address0",
+          "interface": "data_address0",
+          "name": "data_address0",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "input_r_ce0",
-          "name": "input_r_ce0",
+          "interface": "data_ce0",
+          "name": "data_ce0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "input_r_d0",
-          "name": "input_r_d0",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "input_r_q0",
-          "name": "input_r_q0",
+          "interface": "data_q0",
+          "name": "data_q0",
           "usage": "data",
           "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "input_r_we0",
-          "name": "input_r_we0",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "input_r_address1",
-          "name": "input_r_address1",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "input_r_ce1",
-          "name": "input_r_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "input_r_d1",
-          "name": "input_r_d1",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "input_r_q1",
-          "name": "input_r_q1",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "input_r_we1",
-          "name": "input_r_we1",
-          "usage": "control",
-          "direction": "out"
         }
       ]
     },
-    "output": {
+    "sorted_data": {
       "index": "1",
-      "direction": "out",
+      "direction": "inout",
       "srcType": "int*",
       "srcSize": "32",
       "hwRefs": [
         {
           "type": "port",
-          "interface": "output_r_address0",
-          "name": "output_r_address0",
+          "interface": "sorted_data_address0",
+          "name": "sorted_data_address0",
           "usage": "address",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_r_ce0",
-          "name": "output_r_ce0",
+          "interface": "sorted_data_ce0",
+          "name": "sorted_data_ce0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_r_d0",
-          "name": "output_r_d0",
-          "usage": "data",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "output_r_q0",
-          "name": "output_r_q0",
-          "usage": "data",
-          "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "output_r_we0",
-          "name": "output_r_we0",
+          "interface": "sorted_data_we0",
+          "name": "sorted_data_we0",
           "usage": "control",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_r_address1",
-          "name": "output_r_address1",
-          "usage": "address",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "output_r_ce1",
-          "name": "output_r_ce1",
-          "usage": "control",
-          "direction": "out"
-        },
-        {
-          "type": "port",
-          "interface": "output_r_d1",
-          "name": "output_r_d1",
+          "interface": "sorted_data_d0",
+          "name": "sorted_data_d0",
           "usage": "data",
           "direction": "out"
         },
         {
           "type": "port",
-          "interface": "output_r_q1",
-          "name": "output_r_q1",
+          "interface": "sorted_data_q0",
+          "name": "sorted_data_q0",
           "usage": "data",
           "direction": "in"
-        },
-        {
-          "type": "port",
-          "interface": "output_r_we1",
-          "name": "output_r_we1",
-          "usage": "control",
-          "direction": "out"
         }
       ]
     }
@@ -175,85 +91,75 @@
   "HlsSolution": {
     "FlowTarget": "vivado",
     "DirectiveTcl": [
-      "set_directive_top sort_top -name sort_top",
-      "set_directive_top sort_top -name sort_top",
-      "set_directive_top sort_top -name sort_top",
-      "set_directive_top sort_top -name sort_top"
+      "set_directive_top radix_sort_seperate_bucket_parallel -name radix_sort_seperate_bucket_parallel",
+      "set_directive_top radix_sort_seperate_bucket_parallel -name radix_sort_seperate_bucket_parallel",
+      "set_directive_top radix_sort_seperate_bucket_parallel -name radix_sort_seperate_bucket_parallel"
     ],
     "ProfileOption": "0",
     "ProfileType": "none",
-    "KernelName": "sort_top"
+    "KernelName": "radix_sort_seperate_bucket_parallel"
   },
   "ClockInfo": {
     "ClockName": "ap_clk",
     "ClockPeriod": "10",
     "Uncertainty": "2.7",
     "IsCombinational": "0",
-    "II": "1142",
-    "Latency": "1141"
+    "II": "1879 ~ 5591",
+    "Latency": "1878"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
     "Vendor": "xilinx.com",
     "Library": "hls",
-    "Name": "sort_top",
+    "Name": "radix_sort_seperate_bucket_parallel",
     "Version": "1.0",
-    "DisplayName": "Sort_top",
-    "Revision": "2112984148",
+    "DisplayName": "Radix_sort_seperate_bucket_parallel",
+    "Revision": "2112991221",
     "Description": "An IP generated by Vitis HLS",
     "Taxonomy": "\/VITIS_HLS_IP",
     "AutoFamilySupport": "",
-    "ZipFile": "xilinx_com_hls_sort_top_1_0.zip"
+    "ZipFile": "xilinx_com_hls_radix_sort_seperate_bucket_parallel_1_0.zip"
   },
   "Files": {
     "CSource": [
-      "..\/merge_sort.c",
+      "..\/sort_top.c",
       "..\/radix_sort.c",
-      "..\/sort_top.c"
+      "..\/merge_sort.c"
     ],
     "Vhdl": [
-      "impl\/vhdl\/sort_top_flow_control_loop_pipe.vhd",
-      "impl\/vhdl\/sort_top_flow_control_loop_pipe_sequential_init.vhd",
-      "impl\/vhdl\/sort_top_half_sorted0_RAM_AUTO_1R1W.vhd",
-      "impl\/vhdl\/sort_top_half_sorted0_RAM_AUTO_1R1W_memcore.vhd",
-      "impl\/vhdl\/sort_top_merge_sort_1.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_1.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_1_bucket_pointer_RAM_AUTO_1R1W.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_1_bucket_RAM_AUTO_1R1W.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_1_bucket_sizes_RAM_AUTO_1R1W.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_1_Pipeline_1.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_1_Pipeline_initialization.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_1_Pipeline_sort_procedure.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_2.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_2_bucket_pointer_RAM_AUTO_1R1W.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_2_bucket_RAM_AUTO_1R1W.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_2_bucket_sizes_RAM_AUTO_1R1W.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_2_Pipeline_1.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_2_Pipeline_initialization.vhd",
-      "impl\/vhdl\/sort_top_radix_sort_unified_bucket_1_2_Pipeline_sort_procedure.vhd",
-      "impl\/vhdl\/sort_top.vhd"
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_bucket1_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_bucket_pointer1_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_bucket_pointer2_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_input_bucket_1_1.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_input_bucket_parallel_1.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_mac_muladd_4ns_5ns_9ns_9_4_1.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_1.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_2.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_clear_bucket_pointer.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_initialization.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2_bucket2_RAM_AUTbkb.vhd",
+      "impl\/vhdl\/radix_sort_seperate_bucket_parallel.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/sort_top_flow_control_loop_pipe.v",
-      "impl\/verilog\/sort_top_flow_control_loop_pipe_sequential_init.v",
-      "impl\/verilog\/sort_top_half_sorted0_RAM_AUTO_1R1W.v",
-      "impl\/verilog\/sort_top_half_sorted0_RAM_AUTO_1R1W_memcore.v",
-      "impl\/verilog\/sort_top_merge_sort_1.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_1.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_1_bucket_pointer_RAM_AUTO_1R1W.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_1_bucket_RAM_AUTO_1R1W.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_1_bucket_sizes_RAM_AUTO_1R1W.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_1_Pipeline_1.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_1_Pipeline_initialization.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_1_Pipeline_sort_procedure.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_2.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_2_bucket_pointer_RAM_AUTO_1R1W.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_2_bucket_RAM_AUTO_1R1W.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_2_bucket_sizes_RAM_AUTO_1R1W.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_2_Pipeline_1.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_2_Pipeline_initialization.v",
-      "impl\/verilog\/sort_top_radix_sort_unified_bucket_1_2_Pipeline_sort_procedure.v",
-      "impl\/verilog\/sort_top.v"
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_bucket1_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_bucket_pointer1_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_bucket_pointer2_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_input_bucket_1_1.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_input_bucket_parallel_1.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_mac_muladd_4ns_5ns_9ns_9_4_1.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_1.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_2.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_clear_bucket_pointer.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_initialization.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2_bucket2_RAM_AUTbkb.dat",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2_bucket2_RAM_AUTbkb.v",
+      "impl\/verilog\/radix_sort_seperate_bucket_parallel.v"
     ],
     "IpMisc": ["impl\/misc\/logo.png"],
     "CsynthXml": "syn\/report\/csynth.xml",
@@ -263,8 +169,11 @@
     "XoHlsDir": "",
     "ProtoInst": [
       ".debug\/sort_top.protoinst",
+      ".debug\/radix_sort_unified_bucket.protoinst",
       ".debug\/sort_seperate_bucket.protoinst",
-      ".debug\/merge_sort.protoinst"
+      ".debug\/radix_sort_seperate_bucket_parallel.protoinst",
+      ".debug\/merge_sort.protoinst",
+      ".debug\/radix_sort_seperate_bucket.protoinst"
     ]
   },
   "SubcoreInfo": {
@@ -296,8 +205,8 @@
       "portMap": {
         "ap_start": "start",
         "ap_done": "done",
-        "ap_ready": "ready",
-        "ap_idle": "idle"
+        "ap_idle": "idle",
+        "ap_ready": "ready"
       },
       "ports": [
         "ap_done",
@@ -306,184 +215,79 @@
         "ap_start"
       ]
     },
-    "input_r_address0": {
+    "data_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
-      "dataWidth": "7",
-      "portMap": {"input_r_address0": "DATA"},
-      "ports": ["input_r_address0"],
+      "dataWidth": "6",
+      "portMap": {"data_address0": "DATA"},
+      "ports": ["data_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "input"
+          "argName": "data"
         }]
     },
-    "input_r_d0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "32",
-      "portMap": {"input_r_d0": "DATA"},
-      "ports": ["input_r_d0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "input"
-        }]
-    },
-    "input_r_q0": {
+    "data_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "32",
-      "portMap": {"input_r_q0": "DATA"},
-      "ports": ["input_r_q0"],
+      "portMap": {"data_q0": "DATA"},
+      "ports": ["data_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "input"
+          "argName": "data"
         }]
     },
-    "input_r_address1": {
+    "sorted_data_address0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
-      "dataWidth": "7",
-      "portMap": {"input_r_address1": "DATA"},
-      "ports": ["input_r_address1"],
+      "dataWidth": "6",
+      "portMap": {"sorted_data_address0": "DATA"},
+      "ports": ["sorted_data_address0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "input"
+          "argName": "sorted_data"
         }]
     },
-    "input_r_d1": {
+    "sorted_data_d0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "master",
       "dataWidth": "32",
-      "portMap": {"input_r_d1": "DATA"},
-      "ports": ["input_r_d1"],
+      "portMap": {"sorted_data_d0": "DATA"},
+      "ports": ["sorted_data_d0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "input"
+          "argName": "sorted_data"
         }]
     },
-    "input_r_q1": {
+    "sorted_data_q0": {
       "type": "data",
       "busTypeName": "data",
       "protocol": "ap_memory",
       "mode": "slave",
       "dataWidth": "32",
-      "portMap": {"input_r_q1": "DATA"},
-      "ports": ["input_r_q1"],
+      "portMap": {"sorted_data_q0": "DATA"},
+      "ports": ["sorted_data_q0"],
       "constraints": [{
           "constraint_type": "pragma interface",
           "mode": "ap_memory",
           "register_option": "0",
-          "argName": "input"
-        }]
-    },
-    "output_r_address0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "7",
-      "portMap": {"output_r_address0": "DATA"},
-      "ports": ["output_r_address0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "output"
-        }]
-    },
-    "output_r_d0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "32",
-      "portMap": {"output_r_d0": "DATA"},
-      "ports": ["output_r_d0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "output"
-        }]
-    },
-    "output_r_q0": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "slave",
-      "dataWidth": "32",
-      "portMap": {"output_r_q0": "DATA"},
-      "ports": ["output_r_q0"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "output"
-        }]
-    },
-    "output_r_address1": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "7",
-      "portMap": {"output_r_address1": "DATA"},
-      "ports": ["output_r_address1"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "output"
-        }]
-    },
-    "output_r_d1": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "master",
-      "dataWidth": "32",
-      "portMap": {"output_r_d1": "DATA"},
-      "ports": ["output_r_d1"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "output"
-        }]
-    },
-    "output_r_q1": {
-      "type": "data",
-      "busTypeName": "data",
-      "protocol": "ap_memory",
-      "mode": "slave",
-      "dataWidth": "32",
-      "portMap": {"output_r_q1": "DATA"},
-      "ports": ["output_r_q1"],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "ap_memory",
-          "register_option": "0",
-          "argName": "output"
+          "argName": "sorted_data"
         }]
     }
   },
@@ -504,215 +308,152 @@
       "dir": "out",
       "width": "1"
     },
-    "ap_ready": {
-      "dir": "out",
-      "width": "1"
-    },
     "ap_idle": {
       "dir": "out",
       "width": "1"
     },
-    "input_r_address0": {
-      "dir": "out",
-      "width": "7"
-    },
-    "input_r_ce0": {
+    "ap_ready": {
       "dir": "out",
       "width": "1"
     },
-    "input_r_d0": {
+    "data_address0": {
       "dir": "out",
-      "width": "32"
+      "width": "6"
     },
-    "input_r_q0": {
+    "data_ce0": {
+      "dir": "out",
+      "width": "1"
+    },
+    "data_q0": {
       "dir": "in",
       "width": "32"
     },
-    "input_r_we0": {
+    "sorted_data_address0": {
+      "dir": "out",
+      "width": "6"
+    },
+    "sorted_data_ce0": {
       "dir": "out",
       "width": "1"
     },
-    "input_r_address1": {
-      "dir": "out",
-      "width": "7"
-    },
-    "input_r_ce1": {
+    "sorted_data_we0": {
       "dir": "out",
       "width": "1"
     },
-    "input_r_d1": {
+    "sorted_data_d0": {
       "dir": "out",
       "width": "32"
     },
-    "input_r_q1": {
+    "sorted_data_q0": {
       "dir": "in",
       "width": "32"
-    },
-    "input_r_we1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "output_r_address0": {
-      "dir": "out",
-      "width": "7"
-    },
-    "output_r_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "output_r_d0": {
-      "dir": "out",
-      "width": "32"
-    },
-    "output_r_q0": {
-      "dir": "in",
-      "width": "32"
-    },
-    "output_r_we0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "output_r_address1": {
-      "dir": "out",
-      "width": "7"
-    },
-    "output_r_ce1": {
-      "dir": "out",
-      "width": "1"
-    },
-    "output_r_d1": {
-      "dir": "out",
-      "width": "32"
-    },
-    "output_r_q1": {
-      "dir": "in",
-      "width": "32"
-    },
-    "output_r_we1": {
-      "dir": "out",
-      "width": "1"
     }
   },
   "ModuleInfo": {
     "Hierarchy": {
-      "ModuleName": "sort_top",
+      "ModuleName": "radix_sort_seperate_bucket_parallel",
       "Instances": [
         {
-          "ModuleName": "radix_sort_unified_bucket_1_1",
-          "InstanceName": "radix_sort_unified_bucket_1_1_U0",
-          "Instances": [
-            {
-              "ModuleName": "radix_sort_unified_bucket_1_1_Pipeline_1",
-              "InstanceName": "grp_radix_sort_unified_bucket_1_1_Pipeline_1_fu_40"
-            },
-            {
-              "ModuleName": "radix_sort_unified_bucket_1_1_Pipeline_initialization",
-              "InstanceName": "grp_radix_sort_unified_bucket_1_1_Pipeline_initialization_fu_46"
-            },
-            {
-              "ModuleName": "radix_sort_unified_bucket_1_1_Pipeline_sort_procedure",
-              "InstanceName": "grp_radix_sort_unified_bucket_1_1_Pipeline_sort_procedure_fu_55"
-            }
-          ]
+          "ModuleName": "radix_sort_seperate_bucket_parallel_Pipeline_1",
+          "InstanceName": "grp_radix_sort_seperate_bucket_parallel_Pipeline_1_fu_166"
         },
         {
-          "ModuleName": "radix_sort_unified_bucket_1_2",
-          "InstanceName": "radix_sort_unified_bucket_1_2_U0",
-          "Instances": [
-            {
-              "ModuleName": "radix_sort_unified_bucket_1_2_Pipeline_1",
-              "InstanceName": "grp_radix_sort_unified_bucket_1_2_Pipeline_1_fu_42"
-            },
-            {
-              "ModuleName": "radix_sort_unified_bucket_1_2_Pipeline_initialization",
-              "InstanceName": "grp_radix_sort_unified_bucket_1_2_Pipeline_initialization_fu_48"
-            },
-            {
-              "ModuleName": "radix_sort_unified_bucket_1_2_Pipeline_sort_procedure",
-              "InstanceName": "grp_radix_sort_unified_bucket_1_2_Pipeline_sort_procedure_fu_57"
-            }
-          ]
+          "ModuleName": "radix_sort_seperate_bucket_parallel_Pipeline_2",
+          "InstanceName": "grp_radix_sort_seperate_bucket_parallel_Pipeline_2_fu_172"
         },
         {
-          "ModuleName": "merge_sort_1",
-          "InstanceName": "merge_sort_1_U0"
+          "ModuleName": "radix_sort_seperate_bucket_parallel_Pipeline_initialization",
+          "InstanceName": "grp_radix_sort_seperate_bucket_parallel_Pipeline_initialization_fu_178"
+        },
+        {
+          "ModuleName": "input_bucket_parallel_1",
+          "InstanceName": "grp_input_bucket_parallel_1_fu_186",
+          "Instances": [{
+              "ModuleName": "input_bucket_1_1",
+              "InstanceName": "input_bucket_1_1_U0"
+            }]
+        },
+        {
+          "ModuleName": "radix_sort_seperate_bucket_parallel_Pipeline_clear_bucket_pointer",
+          "InstanceName": "grp_radix_sort_seperate_bucket_parallel_Pipeline_clear_bucket_pointer_fu_195"
+        },
+        {
+          "ModuleName": "radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1",
+          "InstanceName": "grp_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1_fu_201"
+        },
+        {
+          "ModuleName": "radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2",
+          "InstanceName": "grp_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2_fu_213"
         }
       ]
     },
     "Info": {
-      "radix_sort_unified_bucket_1_1_Pipeline_1": {
+      "radix_sort_seperate_bucket_parallel_Pipeline_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "radix_sort_unified_bucket_1_1_Pipeline_initialization": {
+      "radix_sort_seperate_bucket_parallel_Pipeline_2": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "radix_sort_unified_bucket_1_1_Pipeline_sort_procedure": {
+      "radix_sort_seperate_bucket_parallel_Pipeline_initialization": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "radix_sort_unified_bucket_1_1": {
+      "input_bucket_1_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "radix_sort_unified_bucket_1_2_Pipeline_1": {
+      "input_bucket_parallel_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "radix_sort_unified_bucket_1_2_Pipeline_initialization": {
+      "radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "radix_sort_unified_bucket_1_2_Pipeline_sort_procedure": {
+      "radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "radix_sort_unified_bucket_1_2": {
+      "radix_sort_seperate_bucket_parallel_Pipeline_clear_bucket_pointer": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "radix_sort_seperate_bucket_parallel": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "0",
         "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
-      "merge_sort_1": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "1",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
-      "sort_top": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "0",
-        "isPipelined": "1",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       }
     },
     "Metrics": {
-      "radix_sort_unified_bucket_1_1_Pipeline_1": {
+      "radix_sort_seperate_bucket_parallel_Pipeline_1": {
         "Latency": {
           "LatencyBest": "18",
           "LatencyAvg": "18",
@@ -751,117 +492,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "radix_sort_unified_bucket_1_1_Pipeline_initialization": {
-        "Latency": {
-          "LatencyBest": "52",
-          "LatencyAvg": "52",
-          "LatencyWorst": "52",
-          "PipelineII": "52",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "2.602"
-        },
-        "Loops": [{
-            "Name": "initialization",
-            "TripCount": "49",
-            "Latency": "50",
-            "PipelineII": "1",
-            "PipelineDepth": "3"
-          }],
-        "Area": {
-          "FF": "118",
-          "AVAIL_FF": "2592000",
-          "UTIL_FF": "~0",
-          "LUT": "179",
-          "AVAIL_LUT": "1296000",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "4032",
-          "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "9216",
-          "UTIL_DSP": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "960",
-          "UTIL_URAM": "0"
-        }
-      },
-      "radix_sort_unified_bucket_1_1_Pipeline_sort_procedure": {
-        "Latency": {
-          "LatencyBest": "1066",
-          "LatencyAvg": "1066",
-          "LatencyWorst": "1066",
-          "PipelineII": "1066",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "3.744"
-        },
-        "Loops": [{
-            "Name": "sort_procedure",
-            "TripCount": "8",
-            "Latency": "1064",
-            "PipelineII": "133",
-            "PipelineDepth": "133"
-          }],
-        "Area": {
-          "FF": "2432",
-          "AVAIL_FF": "2592000",
-          "UTIL_FF": "~0",
-          "LUT": "7879",
-          "AVAIL_LUT": "1296000",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "4032",
-          "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "9216",
-          "UTIL_DSP": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "960",
-          "UTIL_URAM": "0"
-        }
-      },
-      "radix_sort_unified_bucket_1_1": {
-        "Latency": {
-          "LatencyBest": "1141",
-          "LatencyAvg": "1141",
-          "LatencyWorst": "1141",
-          "PipelineII": "1141",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "3.744"
-        },
-        "Area": {
-          "BRAM_18K": "2",
-          "AVAIL_BRAM": "4032",
-          "UTIL_BRAM": "~0",
-          "FF": "2695",
-          "AVAIL_FF": "2592000",
-          "UTIL_FF": "~0",
-          "LUT": "8362",
-          "AVAIL_LUT": "1296000",
-          "UTIL_LUT": "~0",
-          "URAM": "0",
-          "AVAIL_URAM": "960",
-          "UTIL_URAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "9216",
-          "UTIL_DSP": "0"
-        }
-      },
-      "radix_sort_unified_bucket_1_2_Pipeline_1": {
+      "radix_sort_seperate_bucket_parallel_Pipeline_2": {
         "Latency": {
           "LatencyBest": "18",
           "LatencyAvg": "18",
@@ -900,7 +531,7 @@
           "UTIL_URAM": "0"
         }
       },
-      "radix_sort_unified_bucket_1_2_Pipeline_initialization": {
+      "radix_sort_seperate_bucket_parallel_Pipeline_initialization": {
         "Latency": {
           "LatencyBest": "52",
           "LatencyAvg": "52",
@@ -912,130 +543,20 @@
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "2.602"
+          "Estimate": "2.594"
         },
         "Loops": [{
             "Name": "initialization",
-            "TripCount": "49",
+            "TripCount": "50",
             "Latency": "50",
-            "PipelineII": "1",
-            "PipelineDepth": "3"
-          }],
-        "Area": {
-          "FF": "118",
-          "AVAIL_FF": "2592000",
-          "UTIL_FF": "~0",
-          "LUT": "193",
-          "AVAIL_LUT": "1296000",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "4032",
-          "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "9216",
-          "UTIL_DSP": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "960",
-          "UTIL_URAM": "0"
-        }
-      },
-      "radix_sort_unified_bucket_1_2_Pipeline_sort_procedure": {
-        "Latency": {
-          "LatencyBest": "1066",
-          "LatencyAvg": "1066",
-          "LatencyWorst": "1066",
-          "PipelineII": "1066",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "3.744"
-        },
-        "Loops": [{
-            "Name": "sort_procedure",
-            "TripCount": "8",
-            "Latency": "1064",
-            "PipelineII": "133",
-            "PipelineDepth": "133"
-          }],
-        "Area": {
-          "FF": "2432",
-          "AVAIL_FF": "2592000",
-          "UTIL_FF": "~0",
-          "LUT": "7879",
-          "AVAIL_LUT": "1296000",
-          "UTIL_LUT": "~0",
-          "BRAM_18K": "0",
-          "AVAIL_BRAM": "4032",
-          "UTIL_BRAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "9216",
-          "UTIL_DSP": "0",
-          "URAM": "0",
-          "AVAIL_URAM": "960",
-          "UTIL_URAM": "0"
-        }
-      },
-      "radix_sort_unified_bucket_1_2": {
-        "Latency": {
-          "LatencyBest": "1141",
-          "LatencyAvg": "1141",
-          "LatencyWorst": "1141",
-          "PipelineII": "1141",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "3.744"
-        },
-        "Area": {
-          "BRAM_18K": "2",
-          "AVAIL_BRAM": "4032",
-          "UTIL_BRAM": "~0",
-          "FF": "2695",
-          "AVAIL_FF": "2592000",
-          "UTIL_FF": "~0",
-          "LUT": "8376",
-          "AVAIL_LUT": "1296000",
-          "UTIL_LUT": "~0",
-          "URAM": "0",
-          "AVAIL_URAM": "960",
-          "UTIL_URAM": "0",
-          "DSP": "0",
-          "AVAIL_DSP": "9216",
-          "UTIL_DSP": "0"
-        }
-      },
-      "merge_sort_1": {
-        "Latency": {
-          "LatencyBest": "100",
-          "LatencyAvg": "100",
-          "LatencyWorst": "100",
-          "PipelineII": "100",
-          "PipelineDepth": "",
-          "PipelineType": "no"
-        },
-        "Timing": {
-          "Target": "10.00",
-          "Uncertainty": "2.70",
-          "Estimate": "3.396"
-        },
-        "Loops": [{
-            "Name": "VITIS_LOOP_7_1",
-            "TripCount": "98",
-            "Latency": "98",
             "PipelineII": "1",
             "PipelineDepth": "2"
           }],
         "Area": {
-          "FF": "147",
+          "FF": "15",
           "AVAIL_FF": "2592000",
           "UTIL_FF": "~0",
-          "LUT": "390",
+          "LUT": "61",
           "AVAIL_LUT": "1296000",
           "UTIL_LUT": "~0",
           "BRAM_18K": "0",
@@ -1049,36 +570,252 @@
           "UTIL_URAM": "0"
         }
       },
-      "sort_top": {
+      "input_bucket_1_1": {
         "Latency": {
-          "LatencyBest": "1141",
-          "LatencyAvg": "1141",
-          "LatencyWorst": "1141",
-          "PipelineII": "1142",
+          "LatencyBest": "126",
+          "LatencyAvg": "126",
+          "LatencyWorst": "126",
+          "PipelineII": "126",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.664"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_101_1",
+            "TripCount": "25",
+            "Latency": "125",
+            "PipelineII": "",
+            "PipelineDepth": "5"
+          }],
+        "Area": {
+          "DSP": "1",
+          "AVAIL_DSP": "9216",
+          "UTIL_DSP": "~0",
+          "FF": "55",
+          "AVAIL_FF": "2592000",
+          "UTIL_FF": "~0",
+          "LUT": "231",
+          "AVAIL_LUT": "1296000",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "input_bucket_parallel_1": {
+        "Latency": {
+          "LatencyBest": "126",
+          "LatencyAvg": "126",
+          "LatencyWorst": "126",
+          "PipelineII": "127",
           "PipelineDepth": "",
           "PipelineType": "dataflow"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "2.70",
-          "Estimate": "3.744"
+          "Estimate": "3.664"
         },
         "Area": {
-          "BRAM_18K": "12",
-          "AVAIL_BRAM": "4032",
-          "UTIL_BRAM": "~0",
-          "FF": "5539",
+          "DSP": "1",
+          "AVAIL_DSP": "9216",
+          "UTIL_DSP": "~0",
+          "FF": "55",
           "AVAIL_FF": "2592000",
           "UTIL_FF": "~0",
-          "LUT": "17160",
+          "LUT": "231",
           "AVAIL_LUT": "1296000",
-          "UTIL_LUT": "1",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1": {
+        "Latency": {
+          "LatencyBest": "3",
+          "LatencyAvg": "14",
+          "LatencyWorst": "26",
+          "PipelineIIMin": "3",
+          "PipelineIIMax": "26",
+          "PipelineII": "3 ~ 26",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "2.594"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_135_1",
+            "TripCount": "",
+            "LatencyMin": "1",
+            "LatencyMax": "24",
+            "Latency": "1 ~ 24",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "67",
+          "AVAIL_FF": "2592000",
+          "UTIL_FF": "~0",
+          "LUT": "160",
+          "AVAIL_LUT": "1296000",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9216",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2": {
+        "Latency": {
+          "LatencyBest": "3",
+          "LatencyAvg": "3",
+          "LatencyWorst": "3",
+          "PipelineII": "3",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "2.594"
+        },
+        "Loops": [{
+            "Name": "VITIS_LOOP_140_2",
+            "TripCount": "1",
+            "Latency": "1",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "BRAM_18K": "1",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "~0",
+          "FF": "45",
+          "AVAIL_FF": "2592000",
+          "UTIL_FF": "~0",
+          "LUT": "123",
+          "AVAIL_LUT": "1296000",
+          "UTIL_LUT": "~0",
           "URAM": "0",
           "AVAIL_URAM": "960",
           "UTIL_URAM": "0",
           "DSP": "0",
           "AVAIL_DSP": "9216",
           "UTIL_DSP": "0"
+        }
+      },
+      "radix_sort_seperate_bucket_parallel_Pipeline_clear_bucket_pointer": {
+        "Latency": {
+          "LatencyBest": "18",
+          "LatencyAvg": "18",
+          "LatencyWorst": "18",
+          "PipelineII": "18",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "1.450"
+        },
+        "Loops": [{
+            "Name": "clear_bucket_pointer",
+            "TripCount": "16",
+            "Latency": "16",
+            "PipelineII": "1",
+            "PipelineDepth": "1"
+          }],
+        "Area": {
+          "FF": "7",
+          "AVAIL_FF": "2592000",
+          "UTIL_FF": "~0",
+          "LUT": "49",
+          "AVAIL_LUT": "1296000",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "9216",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
+        }
+      },
+      "radix_sort_seperate_bucket_parallel": {
+        "Latency": {
+          "LatencyBest": "1878",
+          "LatencyAvg": "3030",
+          "LatencyWorst": "5590",
+          "PipelineIIMin": "1879",
+          "PipelineIIMax": "5591",
+          "PipelineII": "1879 ~ 5591",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.731"
+        },
+        "Loops": [{
+            "Name": "sort_procedure",
+            "TripCount": "8",
+            "LatencyMin": "1824",
+            "LatencyMax": "5536",
+            "Latency": "1824 ~ 5536",
+            "PipelineII": "",
+            "PipelineDepthMin": "228",
+            "PipelineDepthMax": "692",
+            "PipelineDepth": "228 ~ 692",
+            "Loops": [{
+                "Name": "output_bucket",
+                "TripCount": "16",
+                "LatencyMin": "80",
+                "LatencyMax": "544",
+                "Latency": "80 ~ 544",
+                "PipelineII": "",
+                "PipelineDepthMin": "5",
+                "PipelineDepthMax": "34",
+                "PipelineDepth": "5 ~ 34"
+              }]
+          }],
+        "Area": {
+          "BRAM_18K": "2",
+          "AVAIL_BRAM": "4032",
+          "UTIL_BRAM": "~0",
+          "DSP": "1",
+          "AVAIL_DSP": "9216",
+          "UTIL_DSP": "~0",
+          "FF": "493",
+          "AVAIL_FF": "2592000",
+          "UTIL_FF": "~0",
+          "LUT": "1348",
+          "AVAIL_LUT": "1296000",
+          "UTIL_LUT": "~0",
+          "URAM": "0",
+          "AVAIL_URAM": "960",
+          "UTIL_URAM": "0"
         }
       }
     }
@@ -1086,7 +823,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2023-04-12 13:28:28 PDT",
+    "Time": "2023-04-17 11:21:08 PDT",
     "ToolName": "vitis_hls",
     "ToolVersion": "2022.2"
   }

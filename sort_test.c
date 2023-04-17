@@ -14,26 +14,14 @@ int input[2][batch_size]={
 		}
 };
 
-//input[0][]= {
-//#include "dataset.h"
-//};
-//
-//input[1][]= {
-//#include "dataset.h"
-//};
-
-int sorted_data[2*batch_size];
+//int sorted_data[2*batch_size];
+int sorted_data[batch_size];
 
 int main(void){
     printf("Checking results\n");
-//    sort_top(data, HLSResult);
-    sort_top(input, sorted_data);
+    radix_sort_seperate_bucket_parallel(input[1], sorted_data);
     int i;
-//    for(i=0; i<batch_size; i++){
-//        printf("Sorted_results: rank %d, value= %d \n", i, HLSResult[i]);
-//    }
-
-    for(i=0; i<2*batch_size; i++){
+    for(i=0; i<batch_size; i++){
         printf("Sorted_results: rank %d, value= %d \n", i, sorted_data[i]);
     }
     return 0;

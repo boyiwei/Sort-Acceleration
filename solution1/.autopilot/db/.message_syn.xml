@@ -1,45 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.04 seconds. Elapsed time: 10.07 seconds; current allocated memory: 1.075 GB." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;sort_seperate_bucket/merge_sort.c&apos; ..." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;sort_seperate_bucket/radix_sort.c&apos; ..." resolution=""/>
-	<Message severity="WARNING" prefix="[HLS 207-5560]" key="HLS 207-5560" tag="" content="Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:22:9)" resolution=""/>
-	<Message severity="WARNING" prefix="[HLS 207-5560]" key="HLS 207-5560" tag="" content="Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:69:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.08 seconds; current allocated memory: 1.081 GB." resolution=""/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;sort_seperate_bucket/sort_top.c&apos; ..." resolution=""/>
-	<Message severity="WARNING" prefix="[HLS 207-5527]" key="HLS 207-5527" tag="" content="&apos;Resource pragma&apos; is deprecated, use &apos;bind_op/bind_storage pragma&apos; instead (sort_seperate_bucket/sort_top.c:13:9)" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 1.3 seconds. CPU system time: 1.9 seconds. Elapsed time: 3.21 seconds; current allocated memory: 1.075 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;sort_seperate_bucket/radix_sort.c&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5560]" key="HLS 207-5560" tag="" content="Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-5560]" key="HLS 207-5560" tag="" content="Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;sort_seperate_bucket/merge_sort.c&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 1.29 seconds. CPU system time: 2 seconds. Elapsed time: 3.28 seconds; current allocated memory: 1.081 GB." resolution=""/>
 	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vivado&apos; flow target." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Compiling Optimization and Transform: CPU user time: 3.64 seconds. CPU system time: 0.78 seconds. Elapsed time: 4.41 seconds; current allocated memory: 1.076 GB." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.076 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Compiling Optimization and Transform: CPU user time: 3.81 seconds. CPU system time: 0.8 seconds. Elapsed time: 4.61 seconds; current allocated memory: 1.082 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.082 GB." resolution=""/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.076 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.082 GB." resolution=""/>
 	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.077 GB." resolution=""/>
-	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-2&apos; in function &apos;radix_sort_unified_bucket.1.2&apos; automatically." resolution=""/>
-	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;initialization&apos; (sort_seperate_bucket/radix_sort.c:58) in function &apos;radix_sort_unified_bucket.1.2&apos; automatically." resolution=""/>
-	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;sort_procedure&apos; (sort_seperate_bucket/radix_sort.c:65) in function &apos;radix_sort_unified_bucket.1.2&apos; automatically." resolution=""/>
-	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-2&apos; in function &apos;radix_sort_unified_bucket.1.1&apos; automatically." resolution=""/>
-	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;initialization&apos; (sort_seperate_bucket/radix_sort.c:58) in function &apos;radix_sort_unified_bucket.1.1&apos; automatically." resolution=""/>
-	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;sort_procedure&apos; (sort_seperate_bucket/radix_sort.c:65) in function &apos;radix_sort_unified_bucket.1.1&apos; automatically." resolution=""/>
-	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;sort_procedure&apos; (sort_seperate_bucket/radix_sort.c:65) in function &apos;radix_sort_unified_bucket.1.2&apos; for pipelining." resolution=""/>
-	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;sort_procedure&apos; (sort_seperate_bucket/radix_sort.c:65) in function &apos;radix_sort_unified_bucket.1.1&apos; for pipelining." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;bucket_pointer_initialization&apos; (sort_seperate_bucket/radix_sort.c:71) in function &apos;radix_sort_unified_bucket.1.2&apos; completely with a factor of 16." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;input_bucket&apos; (sort_seperate_bucket/radix_sort.c:80) in function &apos;radix_sort_unified_bucket.1.2&apos; completely with a factor of 49." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;output_bucket&apos; (sort_seperate_bucket/radix_sort.c:91) in function &apos;radix_sort_unified_bucket.1.2&apos; completely with a factor of 49." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;bucket_pointer_initialization&apos; (sort_seperate_bucket/radix_sort.c:71) in function &apos;radix_sort_unified_bucket.1.1&apos; completely with a factor of 16." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;input_bucket&apos; (sort_seperate_bucket/radix_sort.c:80) in function &apos;radix_sort_unified_bucket.1.1&apos; completely with a factor of 49." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;output_bucket&apos; (sort_seperate_bucket/radix_sort.c:91) in function &apos;radix_sort_unified_bucket.1.1&apos; completely with a factor of 49." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-778]" key="HLS 200-778" tag="" content="Automatically marking array &apos;input_r&apos; (sort_seperate_bucket/sort_top.c:8) as shared between two reader processes." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-755]" key="HLS 200-755" tag="" content="Binding port 0 of memory &apos;input_r&apos; (sort_seperate_bucket/sort_top.c:8) to function &apos;radix_sort_unified_bucket.1.15&apos; (sort_seperate_bucket/radix_sort.c:53:33)" resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-755]" key="HLS 200-755" tag="" content="Binding port 1 of memory &apos;input_r&apos; (sort_seperate_bucket/sort_top.c:8) to function &apos;radix_sort_unified_bucket.1.26&apos; (sort_seperate_bucket/radix_sort.c:53:33)" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 200-979]" key="HLS 200-979" tag="DATAFLOW,VITIS_THROUGHPUT" content="Variable &apos;half_sorted&apos; (sort_seperate_bucket/sort_top.c:11) failed dataflow checking: it can only be written in one process function." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-992]" key="HLS 200-992" tag="DATAFLOW,VITIS_THROUGHPUT" content="Variable &apos;half_sorted&apos; has read and write operations in process function &apos;radix_sort_unified_bucket.1.15&apos; (sort_seperate_bucket/radix_sort.c:53:33) (around sort_seperate_bucket/sort_top.c:14)." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-992.html"/>
-	<Message severity="INFO" prefix="[HLS 200-992]" key="HLS 200-992" tag="DATAFLOW,VITIS_THROUGHPUT" content="Variable &apos;half_sorted&apos; has read and write operations in process function &apos;radix_sort_unified_bucket.1.26&apos; (sort_seperate_bucket/radix_sort.c:53:33) (around sort_seperate_bucket/sort_top.c:15)." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-992.html"/>
-	<Message severity="ERROR" prefix="[HLS 200-779]" key="HLS 200-779" tag="" content="Non-shared array &apos;half_sorted&apos; (sort_seperate_bucket/sort_top.c:11) failed dataflow checking: it can only have a single reader and a single writer." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-992]" key="HLS 200-992" tag="DATAFLOW,VITIS_THROUGHPUT" content="Variable &apos;half_sorted&apos; has read and write operations in process function &apos;radix_sort_unified_bucket.1.15&apos; (sort_seperate_bucket/radix_sort.c:53:33) (around sort_seperate_bucket/sort_top.c:14)." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-992.html"/>
-	<Message severity="INFO" prefix="[HLS 200-992]" key="HLS 200-992" tag="DATAFLOW,VITIS_THROUGHPUT" content="Variable &apos;half_sorted&apos; has read and write operations in process function &apos;radix_sort_unified_bucket.1.26&apos; (sort_seperate_bucket/radix_sort.c:53:33) (around sort_seperate_bucket/sort_top.c:15)." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-992.html"/>
-	<Message severity="INFO" prefix="[HLS 200-992]" key="HLS 200-992" tag="DATAFLOW,VITIS_THROUGHPUT" content="Variable &apos;half_sorted&apos; has read operations in process function &apos;merge_sort.17&apos; (sort_seperate_bucket/merge_sort.c:5:18) (around sort_seperate_bucket/sort_top.c:17)." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-992.html"/>
-	<Message severity="ERROR" prefix="[HLS 200-1715]" key="HLS 200-1715" tag="" content="Encountered problem during source synthesis" resolution=""/>
-	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1855" tag="" content="Pre-synthesis failed." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 5.34 seconds. CPU system time: 2.71 seconds. Elapsed time: 8.05 seconds; current allocated memory: 9.172 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.082 GB." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-2&apos; in function &apos;radix_sort_seperate_bucket_parallel&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-3&apos; in function &apos;radix_sort_seperate_bucket_parallel&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;initialization&apos; (sort_seperate_bucket/radix_sort.c:124) in function &apos;radix_sort_seperate_bucket_parallel&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;VITIS_LOOP_135_1&apos; (sort_seperate_bucket/radix_sort.c:135) in function &apos;radix_sort_seperate_bucket_parallel&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;VITIS_LOOP_140_2&apos; (sort_seperate_bucket/radix_sort.c:121) in function &apos;radix_sort_seperate_bucket_parallel&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;clear_bucket_pointer&apos; (sort_seperate_bucket/radix_sort.c:149) in function &apos;radix_sort_seperate_bucket_parallel&apos; automatically." resolution=""/>
+	<Message severity="WARNING" prefix="[XFORM 203-561]" key="XFORM_LOOPBOUND_INVALID_405" tag="" content="Updating loop lower bound from 0 to 1 for loop &apos;VITIS_LOOP_135_1&apos; (sort_seperate_bucket/radix_sort.c:136:9) in function &apos;radix_sort_seperate_bucket_parallel&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[XFORM 203-561]" key="XFORM_LOOPBOUND_INVALID_405" tag="" content="Updating loop lower bound from 0 to 1 for loop &apos;VITIS_LOOP_140_2&apos; (sort_seperate_bucket/radix_sort.c:141:9) in function &apos;radix_sort_seperate_bucket_parallel&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-712]" key="XFORM_DATAFLOW_TRANSFORM_230" tag="DATAFLOW" content="Applying dataflow to function &apos;input_bucket_parallel.1&apos; (sort_seperate_bucket/radix_sort.c:109:1), detected/extracted 1 process function(s): 
+	 &apos;input_bucket.1.1&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[XFORM 203-561]" key="XFORM_LOOPBOUND_INVALID_402" tag="" content="Updating loop upper bound from 24 to 1 for loop &apos;VITIS_LOOP_140_2&apos; in function &apos;radix_sort_seperate_bucket_parallel&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Loop, function and other optimizations: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.104 GB." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-960]" key="HLS 200-960" tag="LOOP,VITIS_LATENCY" content="Cannot flatten loop &apos;output_bucket&apos; (sort_seperate_bucket/radix_sort.c:134:12) in function &apos;radix_sort_seperate_bucket_parallel&apos; more than one sub loop." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-960]" key="HLS 200-960" tag="LOOP,VITIS_LATENCY" content="Cannot flatten loop &apos;sort_procedure&apos; (sort_seperate_bucket/radix_sort.c:129:10) in function &apos;radix_sort_seperate_bucket_parallel&apos; more than one sub loop." resolution="http://www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html"/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;bucket_pointer1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;bucket_pointer2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;bucket_pointer1&apos; (sort_seperate_bucket/radix_sort.c:150:23)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;bucket_pointer2&apos; (sort_seperate_bucket/radix_sort.c:151:23)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;bucket&apos; (sort_seperate_bucket/radix_sort.c:104:48)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;bucket_pointer&apos; (sort_seperate_bucket/radix_sort.c:105:29)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Architecture Synthesis: CPU user time: 0.08 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.170 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;radix_sort_seperate_bucket_parallel&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;input_bucket.1.1&apos; to &apos;input_bucket_1_1&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;input_bucket_parallel.1&apos; to &apos;input_bucket_parallel_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;radix_sort_seperate_bucket_parallel_Pipeline_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop &apos;Loop 1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;radix_sort_seperate_bucket_parallel_Pipeline_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop &apos;Loop 1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;radix_sort_seperate_bucket_parallel_Pipeline_initialization&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;initialization&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop &apos;initialization&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;input_bucket_1_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP latency (root=mul_ln104) to 3 in order to utilize available DSP registers." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;input_bucket_parallel_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.172 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_135_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop &apos;VITIS_LOOP_135_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.173 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.173 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_140_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop &apos;VITIS_LOOP_140_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.173 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.173 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;radix_sort_seperate_bucket_parallel_Pipeline_clear_bucket_pointer&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;clear_bucket_pointer&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop &apos;clear_bucket_pointer&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.174 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.174 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;radix_sort_seperate_bucket_parallel&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.174 GB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.174 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;radix_sort_seperate_bucket_parallel_Pipeline_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;radix_sort_seperate_bucket_parallel_Pipeline_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.174 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;radix_sort_seperate_bucket_parallel_Pipeline_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;radix_sort_seperate_bucket_parallel_Pipeline_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.174 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;radix_sort_seperate_bucket_parallel_Pipeline_initialization&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;radix_sort_seperate_bucket_parallel_Pipeline_initialization&apos; pipeline &apos;initialization&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;radix_sort_seperate_bucket_parallel_Pipeline_initialization&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.175 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;input_bucket_1_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mac_muladd_4ns_5ns_9ns_9_4_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;input_bucket_1_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.176 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;input_bucket_parallel_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;input_bucket_parallel_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.177 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1&apos; pipeline &apos;VITIS_LOOP_135_1&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_135_1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.177 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2&apos; pipeline &apos;VITIS_LOOP_140_2&apos; pipeline type &apos;loop pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2_bucket2_RAM_AUTO_1R1W&apos; to &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2_bucket2_RAM_AUTbkb&apos; due to the length limit 80" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;radix_sort_seperate_bucket_parallel_radix_sort_seperate_bucket_parallel_Pipeline_VITIS_LOOP_140_2_bucket2_RAM_AUTbkb&apos; using auto ROMs." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.178 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;radix_sort_seperate_bucket_parallel_Pipeline_clear_bucket_pointer&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;radix_sort_seperate_bucket_parallel_Pipeline_clear_bucket_pointer&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.179 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;radix_sort_seperate_bucket_parallel&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;radix_sort_seperate_bucket_parallel/data&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;radix_sort_seperate_bucket_parallel/sorted_data&apos; to &apos;ap_memory&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;radix_sort_seperate_bucket_parallel&apos; to &apos;ap_ctrl_hs&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;radix_sort_seperate_bucket_parallel&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;radix_sort_seperate_bucket_parallel_bucket1_RAM_AUTO_1R1W&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;radix_sort_seperate_bucket_parallel_bucket_pointer1_RAM_AUTO_1R1W&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;radix_sort_seperate_bucket_parallel_bucket_pointer2_RAM_AUTO_1R1W&apos; using auto RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.181 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Generating all RTL models: CPU user time: 0.48 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.52 seconds; current allocated memory: 1.185 GB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Updating report files: CPU user time: 0.36 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.192 GB." resolution=""/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for radix_sort_seperate_bucket_parallel." resolution=""/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for radix_sort_seperate_bucket_parallel." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,VITIS_KERNEL" content="**** Loop Constraint Status: All loop constraints were satisfied." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,VITIS_KERNEL" content="**** Estimated Fmax: 268.01 MHz" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 7.44 seconds. CPU system time: 3.05 seconds. Elapsed time: 10.58 seconds; current allocated memory: 114.863 MB." resolution=""/>
 </Messages>

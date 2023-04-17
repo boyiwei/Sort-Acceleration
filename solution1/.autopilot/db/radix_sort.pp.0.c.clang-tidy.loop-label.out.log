@@ -1,5 +1,20 @@
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:906:4: warning: Added loop label VITIS_LOOP_34_1:   [xilinx-label-all-loops]
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:954:4: warning: Added loop label VITIS_LOOP_82_1:   [xilinx-label-all-loops]
    for(int m=0; m<bucket_pointer[l]; m++){
    ^~~
-   VITIS_LOOP_34_1: 
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:906:4: note: FIX-IT applied suggested code changes
+   VITIS_LOOP_82_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:954:4: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:973:2: warning: Added loop label VITIS_LOOP_101_1:   [xilinx-label-all-loops]
+ for (int j = start; j < 50/2; j++) {
+ ^~~
+ VITIS_LOOP_101_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:973:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:1011:4: warning: Added loop label VITIS_LOOP_135_1:   [xilinx-label-all-loops]
+   for(int m1=0; m1<bucket_pointer1[l]; m1++){
+   ^~~
+   VITIS_LOOP_135_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:1011:4: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:1016:4: warning: Added loop label VITIS_LOOP_140_2:   [xilinx-label-all-loops]
+   for(int m2=0; m2<bucket_pointer2[l]; m2++){
+   ^~~
+   VITIS_LOOP_140_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c:1016:4: note: FIX-IT applied suggested code changes

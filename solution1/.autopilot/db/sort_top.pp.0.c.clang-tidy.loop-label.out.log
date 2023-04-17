@@ -1,3 +1,0 @@
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:908:9: error: Resource with core_name: RAM_2P_BRAM pragma is ignored, because this core doesn't exist at all  [clang-diagnostic-error]
-#pragma HLS RESOURCE variable= half_sorted core=RAM_2P_BRAM
-        ^

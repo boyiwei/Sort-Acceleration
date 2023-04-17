@@ -7,6 +7,7 @@
     <originFiles name="radix_sort.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort.c"/>
     <originFiles name="radix_sort.h" path="/home/boyiw7/sort_seperate_bucket/radix_sort.h"/>
     <originFiles name="sort_top.c" path="/home/boyiw7/sort_seperate_bucket/sort_top.c"/>
+    <originFiles name="radix_sort_separate_bucket_parallel.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort_separate_bucket_parallel.c"/>
   </source>
   <testbench>
     <originFiles name="batch_size.h" path="/home/boyiw7/batch_size.h"/>

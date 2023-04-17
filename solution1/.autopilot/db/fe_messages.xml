@@ -1,42 +1,42 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/merge_sort.c:9:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:22:9" msg_body="Only for/while/do support the pipeline  pragma">
-        <args ClangWarningOption="ignored-hls-attributes"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:69:9" msg_body="Only for/while/do support the pipeline  pragma">
-        <args ClangWarningOption="ignored-hls-attributes"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:21:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_seperate_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="loop_merge" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:22:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_seperate_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:35:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_seperate_bucket" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=48" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:67:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_unified_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="loop_merge" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:69:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_unified_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5527" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:13:9" msg_body="'Resource pragma' is deprecated, use 'bind_op/bind_storage pragma' instead">
-        <args ClangWarningOption="ignored-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:21:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="directive" ARG_PragmaFunction="sort_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=sort_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/directives.tcl:6:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="directive" ARG_PragmaFunction="sort_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=sort_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:12:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="sort_top" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:13:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="sort_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable= half_sorted core=RAM_2P_BRAM" ARG_PragmaType="resource" ClangWarningOption="dump-hls-pragmas"/>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:28:9" msg_body="Only for/while/do support the pipeline  pragma">
+        <args ClangWarningOption="ignored-hls-attributes"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:70:9" msg_body="Only for/while/do support the pipeline  pragma">
+        <args ClangWarningOption="ignored-hls-attributes"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix_sort_unified_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="loop_merge" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix_sort_unified_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:69:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix_sort_seperate_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="loop_merge" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:70:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix_sort_seperate_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:83:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix_sort_seperate_bucket" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=48" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:110:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="input_bucket_parallel" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="radix_sort_seperate_bucket_parallel" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=radix_sort_seperate_bucket_parallel" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:136:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix_sort_seperate_bucket_parallel" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=24" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:141:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="radix_sort_seperate_bucket_parallel" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=24" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/merge_sort.c:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="merge_sort" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
 </xilinx:hls_fe_msgs>
 

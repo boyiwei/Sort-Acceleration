@@ -1,9 +1,0 @@
----
-MainSourceFile:  /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
-Diagnostics:     
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Resource with core_name: RAM_2P_BRAM pragma is ignored, because this core doesn''t exist at all '
-    FileOffset:      13
-    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
-    Replacements:    
-...

@@ -2,22 +2,22 @@
       "name": "",
       "directive": [
         {
-          "functionName": "sort_top",
+          "functionName": "radix_sort_seperate_bucket_parallel",
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/directives.tcl",
-          "sourceLine": "6",
+          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
+          "sourceLine": "21",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top"
+                "value": "radix_sort_seperate_bucket_parallel"
               }]
           }
         },
         {
-          "functionName": "sort_top",
+          "functionName": "radix_sort_seperate_bucket_parallel",
           "label": "",
           "functionLabel": "",
           "id": "2",
@@ -27,12 +27,12 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top"
+                "value": "radix_sort_seperate_bucket_parallel"
               }]
           }
         },
         {
-          "functionName": "sort_top",
+          "functionName": "radix_sort_seperate_bucket_parallel",
           "label": "",
           "functionLabel": "",
           "id": "3",
@@ -42,22 +42,7 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top"
-              }]
-          }
-        },
-        {
-          "functionName": "sort_top",
-          "label": "",
-          "functionLabel": "",
-          "id": "4",
-          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "21",
-          "pragma": {
-            "name": "TOP",
-            "option": [{
-                "name": "name",
-                "value": "sort_top"
+                "value": "radix_sort_seperate_bucket_parallel"
               }]
           }
         }

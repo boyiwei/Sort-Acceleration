@@ -877,57 +877,16 @@ extern int __overflow (FILE *, int);
 
 
 
-void radix_sort_seperate_bucket(int data[49], int sorted_data[49]){
- int bucket[16][49];
- int bucket_pointer[16] = {0};
- int k = 0;
 
- initialization:
- for(int j=0; j<49; j++){
-  sorted_data[j] = data[j];
- }
-
- sort_procedure:
- for(int i=0; i<32/4; i++){
-
-#pragma HLS LOOP_MERGE
-#pragma HLS pipeline
-
- input_bucket:
-  for (int j = 0; j < 49; j++) {
-   int shifted = sorted_data[j] >> (i * 4);
-   int ith_radix = shifted & 0xf;
-   bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];
-   bucket_pointer[ith_radix] += 1;
-  }
-
-  output_bucket:
-  for (int l = 0; l < 16; l++) {
-   VITIS_LOOP_34_1: for(int m=0; m<bucket_pointer[l]; m++){
-#pragma HLS loop_tripcount min=0 max=48
- sorted_data[k] = bucket[l][m];
-    k = k + 1;
-   }
-  }
-
-
-  clear_bucket_pointer:
-  for(int n=0; n<16; n++){
-   bucket_pointer[n] = 0;
-  }
-  k = 0;
- }
-}
-
-void radix_sort_unified_bucket(int data[49], int sorted_data[49])
+void radix_sort_unified_bucket(int data[50], int sorted_data[50])
 {
 
- int bucket[49];
+ int bucket[50];
  int bucket_pointer[16];
  int bucket_sizes[16] = {0};
 
  initialization:
- for (int j = 0; j < 49; j++) {
+ for (int j = 0; j < 50; j++) {
   sorted_data[j] = data[j];
   int next_ith_radix = sorted_data[j] & 0xf;
   bucket_sizes[next_ith_radix] += 1;
@@ -949,7 +908,7 @@ void radix_sort_unified_bucket(int data[49], int sorted_data[49])
   }
 
   input_bucket:
-  for (int j = 0; j < 49; j++) {
+  for (int j = 0; j < 50; j++) {
    int shifted = sorted_data[j] >> (i * 4);
    int ith_radix = shifted & 0xf;
    bucket[bucket_pointer[ith_radix]] = sorted_data[j];
@@ -960,8 +919,113 @@ void radix_sort_unified_bucket(int data[49], int sorted_data[49])
   }
 
   output_bucket:
-  for (int k = 0; k < 49; k++) {
+  for (int k = 0; k < 50; k++) {
    sorted_data[k] = bucket[k];
   }
+ }
+}
+
+void radix_sort_seperate_bucket(int data[50], int sorted_data[50]){
+ int bucket[16][50];
+ int bucket_pointer[16] = {0};
+ int k = 0;
+
+ initialization:
+ for(int j=0; j<50; j++){
+  sorted_data[j] = data[j];
+ }
+
+ sort_procedure:
+ for(int i=0; i<32/4; i++){
+
+#pragma HLS LOOP_MERGE
+#pragma HLS pipeline
+
+ input_bucket:
+  for (int j = 0; j < 50; j++) {
+   int shifted = sorted_data[j] >> (i * 4);
+   int ith_radix = shifted & 0xf;
+   bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];
+   bucket_pointer[ith_radix] += 1;
+  }
+
+  output_bucket:
+  for (int l = 0; l < 16; l++) {
+   VITIS_LOOP_82_1: for(int m=0; m<bucket_pointer[l]; m++){
+#pragma HLS loop_tripcount min=0 max=48
+ sorted_data[k] = bucket[l][m];
+    k = k + 1;
+   }
+  }
+
+
+  clear_bucket_pointer:
+  for(int n=0; n<16; n++){
+   bucket_pointer[n] = 0;
+  }
+  k = 0;
+ }
+}
+
+
+
+void input_bucket(int i, int sorted_data[50], int bucket[16][50/2], int bucket_pointer[16], int start){
+ VITIS_LOOP_101_1: for (int j = start; j < 50/2; j++) {
+  int shifted = sorted_data[j] >> (i * 4);
+  int ith_radix = shifted & 0xf;
+  bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];
+  bucket_pointer[ith_radix] += 1;
+ }
+}
+
+void input_bucket_parallel(int i, int sorted_data[50], int bucket1[16][50/2], int bucket2[16][50/2], int bucket_pointer1[16], int bucket_pointer2[16]) {
+#pragma HLS DATAFLOW
+ input_bucket(i, sorted_data, bucket1, bucket_pointer1, 0);
+    input_bucket(i, sorted_data, bucket2, bucket_pointer2, 50/2);
+}
+
+
+__attribute__((sdx_kernel("radix_sort_seperate_bucket_parallel", 0))) void radix_sort_seperate_bucket_parallel(int data[50], int sorted_data[50]){
+#line 21 "/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=radix_sort_seperate_bucket_parallel
+# 116 "sort_seperate_bucket/radix_sort.c"
+
+ int bucket1[16][50/2];
+ int bucket2[16][50/2];
+ int bucket_pointer1[16] = {0};
+ int bucket_pointer2[16] = {0};
+ int k = 0;
+
+ initialization:
+ for(int j=0; j<50; j++){
+  sorted_data[j] = data[j];
+ }
+
+ sort_procedure:
+ for(int i=0; i<32/4; i++){
+
+  input_bucket_parallel(i, sorted_data, bucket1, bucket2, bucket_pointer1, bucket_pointer2);
+
+  output_bucket:
+  for (int l = 0; l < 16; l++) {
+   VITIS_LOOP_135_1: for(int m1=0; m1<bucket_pointer1[l]; m1++){
+#pragma HLS loop_tripcount min=0 max=24
+ sorted_data[k] = bucket1[l][m1];
+    k = k + 1;
+   }
+   VITIS_LOOP_140_2: for(int m2=0; m2<bucket_pointer2[l]; m2++){
+#pragma HLS loop_tripcount min=0 max=24
+ sorted_data[k] = bucket2[l][m2];
+    k = k + 1;
+   }
+  }
+
+
+  clear_bucket_pointer:
+  for(int n=0; n<16; n++){
+   bucket_pointer1[n] = 0;
+   bucket_pointer2[n] = 0;
+  }
+  k = 0;
  }
 }
