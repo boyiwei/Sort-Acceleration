@@ -70,7 +70,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2053350784</coreId>
+						<coreId>509653504</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -106,7 +106,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2053956688</coreId>
+						<coreId>510554096</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -142,7 +142,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2053890256</coreId>
+						<coreId>128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -293,10 +293,10 @@
 					<Obj>
 						<type>0</type>
 						<id>9</id>
-						<name>zext_ln101</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>zext_ln11</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -309,10 +309,10 @@
 									<item_version>0</item_version>
 									<item class_id="13" tracking_level="0" version="0">
 										<first class_id="14" tracking_level="0" version="0">
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -325,7 +325,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>58</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -349,10 +349,10 @@
 					<Obj>
 						<type>0</type>
 						<id>10</id>
-						<name>j_write_ln101</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>j_write_ln11</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -365,10 +365,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -381,7 +381,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2053889488</coreId>
+						<coreId>512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -397,7 +397,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.46</m_delay>
+				<m_delay>0.42</m_delay>
 				<m_topoIndex>5</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -406,10 +406,10 @@
 					<Obj>
 						<type>0</type>
 						<id>11</id>
-						<name>br_ln101</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>br_ln11</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -422,10 +422,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -438,7 +438,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>279432228</coreId>
+						<coreId>543973749</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -463,9 +463,9 @@
 						<type>0</type>
 						<id>13</id>
 						<name>j_2</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -478,10 +478,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -519,10 +519,10 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>zext_ln101_1</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>zext_ln11_1</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -535,10 +535,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -575,10 +575,10 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>icmp_ln101</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>icmp_ln11</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -591,10 +591,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -607,7 +607,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>510568608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -623,7 +623,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.72</m_delay>
+				<m_delay>0.75</m_delay>
 				<m_topoIndex>9</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -632,10 +632,10 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>add_ln101</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>add_ln11</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -648,10 +648,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -664,7 +664,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>510568848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -680,7 +680,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.82</m_delay>
+				<m_delay>0.78</m_delay>
 				<m_topoIndex>10</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -689,10 +689,10 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>br_ln101</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>br_ln11</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -705,10 +705,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -748,9 +748,9 @@
 						<type>0</type>
 						<id>21</id>
 						<name>sorted_data_addr</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -763,10 +763,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>102</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -779,7 +779,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2054088640</coreId>
+						<coreId>510810800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>6</bitwidth>
@@ -806,9 +806,9 @@
 						<type>0</type>
 						<id>22</id>
 						<name>sorted_data_load</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -821,10 +821,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>102</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -837,7 +837,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2054089448</coreId>
+						<coreId>510811608</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -852,7 +852,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.29</m_delay>
+				<m_delay>1.23</m_delay>
 				<m_topoIndex>13</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -862,9 +862,9 @@
 						<type>0</type>
 						<id>23</id>
 						<name>shifted</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -877,10 +877,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>102</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -893,7 +893,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2053964464</coreId>
+						<coreId>510811952</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -909,7 +909,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.27</m_delay>
+				<m_delay>1.38</m_delay>
 				<m_topoIndex>16</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -919,9 +919,9 @@
 						<type>0</type>
 						<id>24</id>
 						<name>ith_radix</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>102</lineNumber>
+						<lineNumber>12</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -934,10 +934,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>102</second>
+										<second>12</second>
 									</item>
 								</second>
 							</item>
@@ -950,7 +950,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2053965440</coreId>
+						<coreId>510813152</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -974,10 +974,10 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>zext_ln104</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>zext_ln14</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -990,10 +990,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1006,7 +1006,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1819113532</coreId>
+						<coreId>6775156</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1030,10 +1030,10 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>zext_ln104_1</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>zext_ln14_1</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1046,10 +1046,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1062,7 +1062,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2053983792</coreId>
+						<coreId>510779488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1086,10 +1086,10 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>mul_ln104</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>mul_ln14</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1102,10 +1102,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1118,7 +1118,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>1212371803</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1134,7 +1134,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.08</m_delay>
+				<m_delay>0.99</m_delay>
 				<m_topoIndex>19</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1144,9 +1144,9 @@
 						<type>0</type>
 						<id>28</id>
 						<name>bucket_pointer_addr</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1159,10 +1159,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1175,7 +1175,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1869573152</coreId>
+						<coreId>510784880</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>4</bitwidth>
@@ -1202,9 +1202,9 @@
 						<type>0</type>
 						<id>29</id>
 						<name>bucket_pointer_load</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1217,10 +1217,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1233,7 +1233,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2054064032</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1248,7 +1248,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.73</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>22</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1257,10 +1257,10 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>trunc_ln104</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>trunc_ln14</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1273,10 +1273,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1289,7 +1289,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330010203</coreId>
+						<coreId>510779488</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1313,10 +1313,10 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>add_ln104</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>add_ln14</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1329,10 +1329,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1361,7 +1361,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.83</m_delay>
+				<m_delay>0.64</m_delay>
 				<m_topoIndex>24</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1370,10 +1370,10 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>zext_ln104_2</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>zext_ln14_2</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1386,10 +1386,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1402,7 +1402,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2054066512</coreId>
+						<coreId>510788992</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1427,9 +1427,9 @@
 						<type>0</type>
 						<id>33</id>
 						<name>bucket_addr</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1442,10 +1442,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1458,7 +1458,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1330010203</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -1484,10 +1484,10 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>bucket_addr_write_ln104</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>bucket_addr_write_ln14</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>14</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1500,10 +1500,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>104</second>
+										<second>14</second>
 									</item>
 								</second>
 							</item>
@@ -1532,7 +1532,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.29</m_delay>
+				<m_delay>1.23</m_delay>
 				<m_topoIndex>29</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1541,10 +1541,10 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>add_ln105</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>add_ln15</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>105</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1557,10 +1557,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>105</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -1573,7 +1573,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2054195040</coreId>
+						<coreId>510792544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1589,7 +1589,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.14</m_delay>
+				<m_delay>1.01</m_delay>
 				<m_topoIndex>25</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1598,10 +1598,10 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>bucket_pointer_addr_write_ln105</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>bucket_pointer_addr_write_ln15</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>105</lineNumber>
+						<lineNumber>15</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1614,10 +1614,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>105</second>
+										<second>15</second>
 									</item>
 								</second>
 							</item>
@@ -1630,7 +1630,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2054198576</coreId>
+						<coreId>510559360</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1647,7 +1647,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.73</m_delay>
+				<m_delay>0.67</m_delay>
 				<m_topoIndex>26</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1656,10 +1656,10 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>j_write_ln101</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>j_write_ln11</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1672,10 +1672,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -1688,7 +1688,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2054188912</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1706,7 +1706,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.46</m_delay>
+				<m_delay>0.42</m_delay>
 				<m_topoIndex>14</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1715,10 +1715,10 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>br_ln101</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>br_ln11</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>101</lineNumber>
+						<lineNumber>11</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1731,10 +1731,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>101</second>
+										<second>11</second>
 									</item>
 								</second>
 							</item>
@@ -1771,10 +1771,10 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>_ln107</name>
-						<fileName>sort_seperate_bucket/radix_sort.c</fileName>
+						<name>_ln17</name>
+						<fileName>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>107</lineNumber>
+						<lineNumber>17</lineNumber>
 						<contextFuncName>input_bucket</contextFuncName>
 						<contextNormFuncName>input_bucket</contextNormFuncName>
 						<inlineStackInfo>
@@ -1787,10 +1787,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/radix_sort.c</first>
+											<first>sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</first>
 											<second>input_bucket</second>
 										</first>
-										<second>107</second>
+										<second>17</second>
 									</item>
 								</second>
 							</item>
@@ -1848,7 +1848,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2054188912</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1879,7 +1879,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>2</bitwidth>
@@ -1910,7 +1910,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>2054193856</coreId>
+						<coreId>510657008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -1941,7 +1941,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>510657856</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>5</bitwidth>
@@ -2003,7 +2003,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>510659040</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2034,7 +2034,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>510659792</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>9</bitwidth>
@@ -2068,7 +2068,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2053959776</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2104,7 +2104,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2053962944</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2139,7 +2139,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>2054066512</coreId>
+					<coreId>510325072</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2187,7 +2187,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>7955819</coreId>
+					<coreId>0</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -2647,8 +2647,8 @@
 		</item>
 		<item class_id_reference="22" object_id="_104">
 			<mId>3</mId>
-			<mTag>VITIS_LOOP_101_1</mTag>
-			<mNormTag>VITIS_LOOP_101_1</mNormTag>
+			<mTag>VITIS_LOOP_11_1</mTag>
+			<mNormTag>VITIS_LOOP_11_1</mNormTag>
 			<mType>1</mType>
 			<sub_regions>
 				<count>0</count>

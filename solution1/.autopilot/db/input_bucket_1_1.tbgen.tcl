@@ -90,7 +90,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "bucket", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "bucket_pointer", "Type" : "Memory", "Direction" : "IO"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_101_1", "PipelineType" : "no",
+			{"Name" : "VITIS_LOOP_11_1", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "6", "FirstState" : "ap_ST_fsm_state2", "LastState" : ["ap_ST_fsm_state6"], "QuitState" : ["ap_ST_fsm_state2"], "PreState" : ["ap_ST_fsm_state1"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mac_muladd_4ns_5ns_9ns_9_4_1_U5", "Parent" : "0"}]}
 

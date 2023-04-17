@@ -23,7 +23,8 @@ void input_bucket_parallel_2(int i, int sorted_data[batch_size], int bucket1[16]
 }
 
 
-void radix_sort_seperate_bucket_parallel_2(int data[batch_size], int sorted_data[batch_size]){
+
+void radix_sort_separate_bucket_parallel_2(int data[batch_size], int sorted_data[batch_size]){
 	int bucket1[16][batch_size/2];
 	int bucket2[16][batch_size/2]; // Be careful that batch_size can't be an odd number.
 	int bucket_pointer1[16] = {0};
@@ -38,7 +39,7 @@ void radix_sort_seperate_bucket_parallel_2(int data[batch_size], int sorted_data
 	sort_procedure:
 	for(int i=0; i<bit_width_hex; i++){
 
-		input_bucket_parallel(i, sorted_data, bucket1, bucket2, bucket_pointer1, bucket_pointer2);
+		input_bucket_parallel_2(i, sorted_data, bucket1, bucket2, bucket_pointer1, bucket_pointer2);
 
 		output_bucket:
 		for (int l = 0; l < 16; l++) {

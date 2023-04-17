@@ -1,0 +1,15 @@
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:883:2: warning: Added loop label VITIS_LOOP_11_1:   [xilinx-label-all-loops]
+ for (int j = start; j < 50/2; j++) {
+ ^~~
+ VITIS_LOOP_11_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:883:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:921:4: warning: Added loop label VITIS_LOOP_45_1:   [xilinx-label-all-loops]
+   for(int m1=0; m1<bucket_pointer1[l]; m1++){
+   ^~~
+   VITIS_LOOP_45_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:921:4: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:926:4: warning: Added loop label VITIS_LOOP_50_2:   [xilinx-label-all-loops]
+   for(int m2=0; m2<bucket_pointer2[l]; m2++){
+   ^~~
+   VITIS_LOOP_50_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:926:4: note: FIX-IT applied suggested code changes

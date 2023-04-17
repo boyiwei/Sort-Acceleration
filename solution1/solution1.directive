@@ -1,18 +1,23 @@
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
     <sourceFile name="">
-        <directive functionName="radix_sort_seperate_bucket_parallel" label="" functionLabel="">
+        <directive functionName="radix_sort_separate_bucket_parallel_2" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="radix_sort_seperate_bucket_parallel"/>
+                <option name="name" value="radix_sort_separate_bucket_parallel_2"/>
             </pragma>
         </directive>
-        <directive functionName="radix_sort_seperate_bucket_parallel" label="" functionLabel="">
+        <directive functionName="radix_sort_separate_bucket_parallel_2" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="radix_sort_seperate_bucket_parallel"/>
+                <option name="name" value="radix_sort_separate_bucket_parallel_2"/>
             </pragma>
         </directive>
-        <directive functionName="radix_sort_seperate_bucket_parallel" label="" functionLabel="">
+        <directive functionName="radix_sort_separate_bucket_parallel_2" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="radix_sort_seperate_bucket_parallel"/>
+                <option name="name" value="radix_sort_separate_bucket_parallel_2"/>
+            </pragma>
+        </directive>
+        <directive functionName="radix_sort_separate_bucket_parallel_2" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="radix_sort_separate_bucket_parallel_2"/>
             </pragma>
         </directive>
     </sourceFile>

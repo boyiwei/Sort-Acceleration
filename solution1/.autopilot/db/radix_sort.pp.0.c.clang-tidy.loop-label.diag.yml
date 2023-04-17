@@ -10,31 +10,4 @@ Diagnostics:
         Offset:          24223
         Length:          0
         ReplacementText: 'VITIS_LOOP_82_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_101_1:  '
-    FileOffset:      101
-    FilePath:        /home/boyiw7/sort_seperate_bucket/radix_sort.c
-    Replacements:    
-      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c
-        Offset:          24564
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_101_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_135_1:  '
-    FileOffset:      135
-    FilePath:        /home/boyiw7/sort_seperate_bucket/radix_sort.c
-    Replacements:    
-      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c
-        Offset:          25801
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_135_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_140_2:  '
-    FileOffset:      140
-    FilePath:        /home/boyiw7/sort_seperate_bucket/radix_sort.c
-    Replacements:    
-      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c
-        Offset:          25942
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_140_2: '
 ...

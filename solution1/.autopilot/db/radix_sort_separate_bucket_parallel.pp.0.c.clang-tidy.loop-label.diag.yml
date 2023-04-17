@@ -1,0 +1,31 @@
+---
+MainSourceFile:  /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_11_1:  '
+    FileOffset:      11
+    FilePath:        /home/boyiw7/sort_seperate_bucket/radix_sort_separate_bucket_parallel.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c
+        Offset:          22833
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_11_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_45_1:  '
+    FileOffset:      45
+    FilePath:        /home/boyiw7/sort_seperate_bucket/radix_sort_separate_bucket_parallel.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c
+        Offset:          24104
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_45_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_50_2:  '
+    FileOffset:      50
+    FilePath:        /home/boyiw7/sort_seperate_bucket/radix_sort_separate_bucket_parallel.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c
+        Offset:          24245
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_50_2: '
+...

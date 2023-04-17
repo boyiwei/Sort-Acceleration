@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 5
-set name radix_sort_seperate_bucket_parallel_mac_muladd_4ns_5ns_9ns_9_4_1
+set name radix_sort_separate_bucket_parallel_2_mac_muladd_4ns_5ns_9ns_9_4_1
 set corename simcore_mac
 set op mac
 set stage_num 4
