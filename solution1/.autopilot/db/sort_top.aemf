@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1681779935407">
-  <ports id="1" name="input_r" type="PortType" originalName="input" coreName="RAM" coreId="272" bitwidth="32" iftype="IfTypeRegister" arraysize="1000000">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1681780339254">
+  <ports id="1" name="input_r" type="PortType" originalName="input" coreName="RAM" coreId="1819113532" bitwidth="32" iftype="IfTypeRegister" arraysize="1000000">
     <dataOutputObjs>call</dataOutputObjs>
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
-  <ports id="2" name="output_r" type="PortType" coreName="RAM" coreId="144" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="1000000">
+  <ports id="2" name="output_r" type="PortType" coreName="RAM" coreId="1763734384" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="1000000">
     <dataInputObjs>call</dataInputObjs>
   </ports>
   <edges id="22" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
@@ -32,26 +32,26 @@
         <dataOutputObjs>call</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="_ln15" lineNumber="15" fileName="sort_seperate_bucket/sort_top.c" fileDirectory=".." rtlName="radix_sort_unified_bucket_1_1_U0" coreId="2985285272" contextFuncName="sort_top" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="_ln15" lineNumber="15" fileName="sort_seperate_bucket/sort_top.c" fileDirectory=".." rtlName="radix_sort_unified_bucket_1_1_U0" coreId="705875024" contextFuncName="sort_top" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/sort_top.c" linenumber="15" fileDirectory="/home/boyiw7" functionName="sort_top"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>radix_sort_unified_bucket_1_1</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln16" lineNumber="16" fileName="sort_seperate_bucket/sort_top.c" fileDirectory=".." rtlName="radix_sort_unified_bucket_1_2_U0" coreId="2987576752" contextFuncName="sort_top" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln16" lineNumber="16" fileName="sort_seperate_bucket/sort_top.c" fileDirectory=".." rtlName="radix_sort_unified_bucket_1_2_U0" coreId="705875024" contextFuncName="sort_top" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/sort_top.c" linenumber="16" fileDirectory="/home/boyiw7" functionName="sort_top"/>
         <dataInputObjs>input_r</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>radix_sort_unified_bucket_1_2</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln18" lineNumber="18" fileName="sort_seperate_bucket/sort_top.c" fileDirectory=".." rtlName="merge_sort_1_U0" coreId="2986442224" contextFuncName="sort_top" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="_ln18" lineNumber="18" fileName="sort_seperate_bucket/sort_top.c" fileDirectory=".." rtlName="merge_sort_1_U0" coreId="704574928" contextFuncName="sort_top" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/sort_top.c" linenumber="18" fileDirectory="/home/boyiw7" functionName="sort_top"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>output_r</dataOutputObjs>
         <constName>merge_sort_1</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln19" lineNumber="19" fileName="sort_seperate_bucket/sort_top.c" fileDirectory=".." coreId="2986448464" contextFuncName="sort_top" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="_ln19" lineNumber="19" fileName="sort_seperate_bucket/sort_top.c" fileDirectory=".." coreId="700590752" contextFuncName="sort_top" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/sort_top.c" linenumber="19" fileDirectory="/home/boyiw7" functionName="sort_top"/>
       </node_objs>
       <fileValidLineNumbers fileName="sort_seperate_bucket/sort_top.c">
@@ -131,7 +131,7 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="sort_top" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="17000257" mMaxLatency="17000257" mIsDfPipe="true">
+    <cfgRegions mId="1" mTag="sort_top" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="8500257" mMaxLatency="8500257" mIsDfPipe="true">
       <basicBlocks>16</basicBlocks>
       <mDfPipe allPipePinInst="//@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.0/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.1/@pins.0/@inst //@CFGRegionsRoot/@cfgRegions.0/@mDfPipe/@processe_list.2/@pins.0/@inst">
         <processe_list name="radix_sort_unified_bucket_1_1_U0" ssdmobj_id="12">

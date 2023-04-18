@@ -20,6 +20,11 @@
                 <option name="name" value="sort_top"/>
             </pragma>
         </directive>
+        <directive functionName="sort_top" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="sort_top"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

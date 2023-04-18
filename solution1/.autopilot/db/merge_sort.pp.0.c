@@ -873,13 +873,13 @@ extern int __overflow (FILE *, int);
 # 1 "sort_seperate_bucket/batch_size.h" 1
 # 3 "sort_seperate_bucket/merge_sort.c" 2
 
-void merge_sort(int input1[1000000], int input2[1000000], int sorted_data[2*1000000]){
+void merge_sort(int input1[500000], int input2[500000], int sorted_data[2*500000]){
  int j = 0;
  int k = 0;
- VITIS_LOOP_7_1: for(int i=0; i<2*1000000; i++){
+ VITIS_LOOP_7_1: for(int i=0; i<2*500000; i++){
   printf("i=%d, input1[%d] = %d, input2[%d]=%d\n", i, j, input1[j], k, input2[k]);
 #pragma HLS PIPELINE
- if((j<1000000)&&(k<1000000)){
+ if((j<500000)&&(k<500000)){
    if(input1[j]<input2[k]){
     sorted_data[i] = input1[j];
     j = j + 1;
@@ -892,7 +892,7 @@ void merge_sort(int input1[1000000], int input2[1000000], int sorted_data[2*1000
    }
   }
 
-  else if((j==1000000)&&(k<1000000)){
+  else if((j==500000)&&(k<500000)){
    sorted_data[i] = input2[k];
    k = k + 1;
   }

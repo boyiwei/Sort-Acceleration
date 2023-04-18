@@ -875,9 +875,9 @@ extern int __overflow (FILE *, int);
 # 1 "sort_seperate_bucket/batch_size.h" 1
 # 3 "sort_seperate_bucket/radix_sort.h" 2
 
-void radix_sort_seperate_bucket(int data[1000000], int sorted_data[1000000]);
+void radix_sort_seperate_bucket(int data[500000], int sorted_data[500000]);
 
-void radix_sort_unified_bucket(int data[1000000], int sorted_data[1000000]);
+void radix_sort_unified_bucket(int data[500000], int sorted_data[500000]);
 # 3 "sort_seperate_bucket/sort_top.c" 2
 # 1 "sort_seperate_bucket/merge_sort.h" 1
 
@@ -885,21 +885,25 @@ void radix_sort_unified_bucket(int data[1000000], int sorted_data[1000000]);
 # 3 "sort_seperate_bucket/merge_sort.h" 2
 
 
-void merge_sort(int input1[1000000], int input2[1000000], int sorted_data[2*1000000]);
+void merge_sort(int input1[500000], int input2[500000], int sorted_data[2*500000]);
 # 4 "sort_seperate_bucket/sort_top.c" 2
 # 1 "sort_seperate_bucket/batch_size.h" 1
 # 5 "sort_seperate_bucket/sort_top.c" 2
 
 
 
-__attribute__((sdx_kernel("sort_top", 0))) void sort_top(int input[2][1000000/2], int output[1000000]){
+__attribute__((sdx_kernel("sort_top", 0))) void sort_top(int input[2][500000], int output[2*500000]){
 #line 23 "/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl"
 #pragma HLSDIRECTIVE TOP name=sort_top
 # 8 "sort_seperate_bucket/sort_top.c"
 
- printf("batch_size = %d\n", 1000000/2);
- int half_sorted0[1000000/2];
- int half_sorted1[1000000/2];
+#line 6 "/home/boyiw7/sort_seperate_bucket/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=sort_top
+# 8 "sort_seperate_bucket/sort_top.c"
+
+ printf("batch_size = %d\n", 500000/2);
+ int half_sorted0[500000];
+ int half_sorted1[500000];
 
 #pragma HLS DATAFLOW
 

@@ -87,9 +87,9 @@ reg   [63:0] reuse_addr_reg_fu_44;
 wire    ap_loop_init;
 reg   [31:0] reuse_reg_fu_48;
 wire   [31:0] add_ln20_fu_173_p2;
-reg   [19:0] j_fu_52;
-wire   [19:0] add_ln17_fu_124_p2;
-reg   [19:0] ap_sig_allocacmp_j_3;
+reg   [18:0] j_fu_52;
+wire   [18:0] add_ln17_fu_124_p2;
+reg   [18:0] ap_sig_allocacmp_j_3;
 wire   [3:0] next_ith_radix_fu_140_p1;
 wire   [31:0] reuse_select_fu_166_p3;
 reg    ap_done_reg;
@@ -171,7 +171,7 @@ always @ (posedge ap_clk) begin
         if (((icmp_ln17_fu_118_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             j_fu_52 <= add_ln17_fu_124_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            j_fu_52 <= 20'd0;
+            j_fu_52 <= 19'd0;
         end
     end
 end
@@ -206,7 +206,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln17_fu_118_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        j_cast_reg_210[19 : 0] <= j_cast_fu_130_p1[19 : 0];
+        j_cast_reg_210[18 : 0] <= j_cast_fu_130_p1[18 : 0];
     end
 end
 
@@ -252,7 +252,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_j_3 = 20'd0;
+        ap_sig_allocacmp_j_3 = 19'd0;
     end else begin
         ap_sig_allocacmp_j_3 = j_fu_52;
     end
@@ -317,7 +317,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln17_fu_124_p2 = (ap_sig_allocacmp_j_3 + 20'd1);
+assign add_ln17_fu_124_p2 = (ap_sig_allocacmp_j_3 + 19'd1);
 
 assign add_ln20_fu_173_p2 = (reuse_select_fu_166_p3 + 32'd1);
 
@@ -349,7 +349,7 @@ assign bucket_sizes_address1 = zext_ln20_fu_144_p1;
 
 assign bucket_sizes_d0 = (reuse_select_fu_166_p3 + 32'd1);
 
-assign icmp_ln17_fu_118_p2 = ((ap_sig_allocacmp_j_3 == 20'd1000000) ? 1'b1 : 1'b0);
+assign icmp_ln17_fu_118_p2 = ((ap_sig_allocacmp_j_3 == 19'd500000) ? 1'b1 : 1'b0);
 
 assign input_r_address0 = j_cast_fu_130_p1;
 
@@ -366,7 +366,7 @@ assign sorted_data_d0 = input_r_q0;
 assign zext_ln20_fu_144_p1 = next_ith_radix_fu_140_p1;
 
 always @ (posedge ap_clk) begin
-    j_cast_reg_210[63:20] <= 44'b00000000000000000000000000000000000000000000;
+    j_cast_reg_210[63:19] <= 45'b000000000000000000000000000000000000000000000;
 end
 
 endmodule //sort_top_radix_sort_unified_bucket_1_1_Pipeline_initialization

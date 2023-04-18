@@ -57,7 +57,7 @@ output  [31:0] bucket_pointer_d0;
 output  [3:0] bucket_pointer_address1;
 output   bucket_pointer_ce1;
 input  [31:0] bucket_pointer_q1;
-output  [19:0] bucket_address0;
+output  [18:0] bucket_address0;
 output   bucket_ce0;
 output   bucket_we0;
 output  [31:0] bucket_d0;
@@ -116,9 +116,9 @@ wire   [31:0] add_ln43_fu_258_p2;
 reg   [63:0] reuse_addr_reg_fu_54;
 reg   [31:0] reuse_reg_fu_58;
 wire   [31:0] add_ln46_fu_280_p2;
-reg   [19:0] j_fu_62;
-wire   [19:0] add_ln39_fu_170_p2;
-reg   [19:0] ap_sig_allocacmp_j_1;
+reg   [18:0] j_fu_62;
+wire   [18:0] add_ln39_fu_170_p2;
+reg   [18:0] ap_sig_allocacmp_j_1;
 wire   [31:0] shifted_fu_186_p2;
 wire   [3:0] ith_radix_fu_191_p1;
 wire   [3:0] next_ith_radix_1_fu_214_p4;
@@ -203,7 +203,7 @@ always @ (posedge ap_clk) begin
         if (((icmp_ln39_fu_164_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             j_fu_62 <= add_ln39_fu_170_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            j_fu_62 <= 20'd0;
+            j_fu_62 <= 19'd0;
         end
     end
 end
@@ -302,7 +302,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_j_1 = 20'd0;
+        ap_sig_allocacmp_j_1 = 19'd0;
     end else begin
         ap_sig_allocacmp_j_1 = j_fu_62;
     end
@@ -391,7 +391,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln39_fu_170_p2 = (ap_sig_allocacmp_j_1 + 20'd1);
+assign add_ln39_fu_170_p2 = (ap_sig_allocacmp_j_1 + 19'd1);
 
 assign add_ln43_fu_258_p2 = (reuse_select10_fu_246_p3 + 32'd1);
 
@@ -437,7 +437,7 @@ assign bucket_sizes_address1 = zext_ln46_fu_224_p1;
 
 assign bucket_sizes_d0 = (reuse_select_fu_273_p3 + 32'd1);
 
-assign icmp_ln39_fu_164_p2 = ((ap_sig_allocacmp_j_1 == 20'd1000000) ? 1'b1 : 1'b0);
+assign icmp_ln39_fu_164_p2 = ((ap_sig_allocacmp_j_1 == 19'd500000) ? 1'b1 : 1'b0);
 
 assign ith_radix_fu_191_p1 = shifted_fu_186_p2[3:0];
 

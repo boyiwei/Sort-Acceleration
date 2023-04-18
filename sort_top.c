@@ -5,10 +5,10 @@
 
 
 
-void sort_top(int input[2][batch_size/2], int output[batch_size]){
+void sort_top(int input[2][batch_size], int output[2*batch_size]){
 	printf("batch_size = %d\n", batch_size/2);
-	int half_sorted0[batch_size/2];
-	int half_sorted1[batch_size/2]; // To use HLS DATAFLOW, we cannot define a 2-dimension array.
+	int half_sorted0[batch_size];
+	int half_sorted1[batch_size]; // To use HLS DATAFLOW, we cannot define a 2-dimension array.
 
 #pragma HLS DATAFLOW
 

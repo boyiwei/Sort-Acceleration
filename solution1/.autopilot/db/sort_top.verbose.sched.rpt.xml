@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'sort_top'" level="0">
-<item name = "Date">Mon Apr 17 18:05:32 2023
+<item name = "Date">Mon Apr 17 18:12:16 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">sort_seperate_bucket</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">17000257, 17000257, 0.170 sec, 0.170 sec, 17000258, 17000258, dataflow</column>
+<column name="">8500257, 8500257, 85.003 ms, 85.003 ms, 8500258, 8500258, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

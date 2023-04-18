@@ -84,7 +84,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "17000257", "EstimateLatencyMax" : "17000257",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "8500257", "EstimateLatencyMax" : "8500257",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -100,8 +100,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
-					{"ID" : "3", "SubInstance" : "radix_sort_unified_bucket_1_1_U0", "Port" : "input_r"},
-					{"ID" : "17", "SubInstance" : "radix_sort_unified_bucket_1_2_U0", "Port" : "input_r"}]},
+					{"ID" : "17", "SubInstance" : "radix_sort_unified_bucket_1_2_U0", "Port" : "input_r"},
+					{"ID" : "3", "SubInstance" : "radix_sort_unified_bucket_1_1_U0", "Port" : "input_r"}]},
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O",
 				"SubConnect" : [
 					{"ID" : "31", "SubInstance" : "merge_sort_1_U0", "Port" : "output_r"}]}]},
@@ -113,7 +113,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "17000257", "EstimateLatencyMax" : "17000257",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "8500257", "EstimateLatencyMax" : "8500257",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -161,7 +161,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000003", "EstimateLatencyMax" : "1000003",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "500003", "EstimateLatencyMax" : "500003",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -204,7 +204,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000003", "EstimateLatencyMax" : "1000003",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "500003", "EstimateLatencyMax" : "500003",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -228,7 +228,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000002", "EstimateLatencyMax" : "1000002",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "500002", "EstimateLatencyMax" : "500002",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -249,7 +249,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "17000257", "EstimateLatencyMax" : "17000257",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "8500257", "EstimateLatencyMax" : "8500257",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -264,8 +264,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "sorted_data", "Type" : "Memory", "Direction" : "IO", "DependentProc" : ["31"], "DependentChan" : "2", "PIPODir" : "O",
 				"SubConnect" : [
 					{"ID" : "23", "SubInstance" : "grp_radix_sort_unified_bucket_1_2_Pipeline_initialization_fu_74", "Port" : "sorted_data", "Inst_start_state" : "3", "Inst_end_state" : "4"},
-					{"ID" : "29", "SubInstance" : "grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99", "Port" : "sorted_data", "Inst_start_state" : "9", "Inst_end_state" : "10"},
-					{"ID" : "27", "SubInstance" : "grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89", "Port" : "sorted_data", "Inst_start_state" : "7", "Inst_end_state" : "8"}]}],
+					{"ID" : "27", "SubInstance" : "grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89", "Port" : "sorted_data", "Inst_start_state" : "7", "Inst_end_state" : "8"},
+					{"ID" : "29", "SubInstance" : "grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99", "Port" : "sorted_data", "Inst_start_state" : "9", "Inst_end_state" : "10"}]}],
 		"Loop" : [
 			{"Name" : "sort_procedure", "PipelineType" : "no",
 				"LoopDec" : {"FSMBitwidth" : "10", "FirstState" : "ap_ST_fsm_state5", "LastState" : ["ap_ST_fsm_state10"], "QuitState" : ["ap_ST_fsm_state5"], "PreState" : ["ap_ST_fsm_state4"], "PostState" : ["ap_ST_fsm_state1"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
@@ -297,7 +297,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000003", "EstimateLatencyMax" : "1000003",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "500003", "EstimateLatencyMax" : "500003",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -340,7 +340,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000003", "EstimateLatencyMax" : "1000003",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "500003", "EstimateLatencyMax" : "500003",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -364,7 +364,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000002", "EstimateLatencyMax" : "1000002",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "500002", "EstimateLatencyMax" : "500002",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -385,7 +385,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2000002", "EstimateLatencyMax" : "2000002",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000002", "EstimateLatencyMax" : "1000002",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -457,8 +457,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "17000257", "Max" : "17000257"}
-	, {"Name" : "Interval", "Min" : "17000258", "Max" : "17000258"}
+	{"Name" : "Latency", "Min" : "8500257", "Max" : "8500257"}
+	, {"Name" : "Interval", "Min" : "8500258", "Max" : "8500258"}
 ]}
 
 set PipelineEnableSignalInfo {[

@@ -6,8 +6,8 @@
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "23",
+          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/directives.tcl",
+          "sourceLine": "6",
           "pragma": {
             "name": "TOP",
             "option": [{
@@ -51,6 +51,21 @@
           "label": "",
           "functionLabel": "",
           "id": "4",
+          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
+          "sourceLine": "23",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sort_top"
+              }]
+          }
+        },
+        {
+          "functionName": "sort_top",
+          "label": "",
+          "functionLabel": "",
+          "id": "5",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
           "sourceLine": "23",
           "pragma": {

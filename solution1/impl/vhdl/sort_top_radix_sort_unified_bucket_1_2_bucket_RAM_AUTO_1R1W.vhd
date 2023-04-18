@@ -12,8 +12,8 @@ entity sort_top_radix_sort_unified_bucket_1_2_bucket_RAM_AUTO_1R1W is
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 20;
-        AddressRange    : integer   := 1000000
+        AddressWidth    : integer   := 19;
+        AddressRange    : integer   := 500000
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

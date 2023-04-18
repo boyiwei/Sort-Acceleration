@@ -13,8 +13,8 @@ module sort_top_radix_sort_unified_bucket_1_2_bucket_RAM_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 20;
-parameter AddressRange = 1000000;
+parameter AddressWidth = 19;
+parameter AddressRange = 500000;
  
 input[AddressWidth-1:0] address0;
 input ce0;

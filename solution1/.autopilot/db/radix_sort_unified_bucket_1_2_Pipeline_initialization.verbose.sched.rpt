@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_unified_bucket_1_2_Pipeline_initialization'
 ================================================================
-* Date:           Mon Apr 17 18:05:31 2023
+* Date:           Mon Apr 17 18:12:15 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -25,24 +25,24 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+---------+---------+---------+
-    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
-    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
-    +---------+---------+-----------+-----------+---------+---------+---------+
-    |  1000003|  1000003|  10.000 ms|  10.000 ms|  1000003|  1000003|       no|
-    +---------+---------+-----------+-----------+---------+---------+---------+
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   500003|   500003|  5.000 ms|  5.000 ms|  500003|  500003|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +------------------+---------+---------+----------+-----------+-----------+---------+----------+
-        |                  |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
-        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
-        +------------------+---------+---------+----------+-----------+-----------+---------+----------+
-        |- initialization  |  1000001|  1000001|         3|          1|          1|  1000000|       yes|
-        +------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        +------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- initialization  |   500001|   500001|         3|          1|          1|  500000|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+--------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -92,45 +92,46 @@ ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operatio
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specbindport_ln0 = specbindport void @_ssdm_op_SpecBindPort, i32 %input_r, i32 1, void @p_str"   --->   Operation 9 'specbindport' 'specbindport_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specshared_ln0 = specshared void @_ssdm_op_SpecShared, i32 %input_r, void @p_str"   --->   Operation 10 'specshared' 'specshared_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_r, void @empty_2, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.38ns)   --->   "%store_ln0 = store i20 0, i20 %j"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 12 [1/1] (0.38ns)   --->   "%store_ln0 = store i19 0, i19 %j"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 13 [1/1] (0.38ns)   --->   "%store_ln0 = store i32 0, i32 %reuse_reg"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 14 [1/1] (0.38ns)   --->   "%store_ln0 = store i64 18446744073709551615, i64 %reuse_addr_reg"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%j_2 = load i20 %j" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 16 'load' 'j_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%j_2 = load i19 %j" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 16 'load' 'j_2' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 17 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.72ns)   --->   "%icmp_ln17 = icmp_eq  i20 %j_2, i20 1000000" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 18 'icmp' 'icmp_ln17' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1000000, i64 1000000, i64 1000000"   --->   Operation 19 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.80ns)   --->   "%add_ln17 = add i20 %j_2, i20 1" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 20 'add' 'add_ln17' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.71ns)   --->   "%icmp_ln17 = icmp_eq  i19 %j_2, i19 500000" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 18 'icmp' 'icmp_ln17' <Predicate = true> <Delay = 0.71> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 500000, i64 500000, i64 500000"   --->   Operation 19 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.80ns)   --->   "%add_ln17 = add i19 %j_2, i19 1" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 20 'add' 'add_ln17' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln17 = br i1 %icmp_ln17, void %for.inc.split, void %bucket_pointer_initialization.preheader.exitStub" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 21 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.80ns)   --->   "%add_ln18 = add i20 %j_2, i20 500000" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 22 'add' 'add_ln18' <Predicate = (!icmp_ln17)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln18 = zext i20 %add_ln18" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 23 'zext' 'zext_ln18' <Predicate = (!icmp_ln17)> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%input_r_addr = getelementptr i32 %input_r, i64 0, i64 %zext_ln18" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 24 'getelementptr' 'input_r_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
-ST_1 : Operation 25 [2/2] (1.24ns)   --->   "%input_r_load = load i20 %input_r_addr" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 25 'load' 'input_r_load' <Predicate = (!icmp_ln17)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000000> <RAM>
-ST_1 : Operation 26 [1/1] (0.38ns)   --->   "%store_ln17 = store i20 %add_ln17, i20 %j" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 26 'store' 'store_ln17' <Predicate = (!icmp_ln17)> <Delay = 0.38>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln18 = zext i19 %j_2" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 22 'zext' 'zext_ln18' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.80ns)   --->   "%add_ln18 = add i20 %zext_ln18, i20 500000" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 23 'add' 'add_ln18' <Predicate = (!icmp_ln17)> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln18_1 = zext i20 %add_ln18" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 24 'zext' 'zext_ln18_1' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%input_r_addr = getelementptr i32 %input_r, i64 0, i64 %zext_ln18_1" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 25 'getelementptr' 'input_r_addr' <Predicate = (!icmp_ln17)> <Delay = 0.00>
+ST_1 : Operation 26 [2/2] (1.24ns)   --->   "%input_r_load = load i20 %input_r_addr" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 26 'load' 'input_r_load' <Predicate = (!icmp_ln17)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000000> <RAM>
+ST_1 : Operation 27 [1/1] (0.38ns)   --->   "%store_ln17 = store i19 %add_ln17, i19 %j" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 27 'store' 'store_ln17' <Predicate = (!icmp_ln17)> <Delay = 0.38>
 
 State 2 <SV = 1> <Delay = 2.49>
-ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%j_cast = zext i20 %j_2" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 27 'zext' 'j_cast' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 28 [1/2] (1.24ns)   --->   "%input_r_load = load i20 %input_r_addr" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 28 'load' 'input_r_load' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000000> <RAM>
-ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%next_ith_radix = trunc i32 %input_r_load" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 29 'trunc' 'next_ith_radix' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%sorted_data_addr = getelementptr i32 %sorted_data, i64 0, i64 %j_cast" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 30 'getelementptr' 'sorted_data_addr' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 31 [1/1] (1.24ns)   --->   "%store_ln18 = store i32 %input_r_load, i19 %sorted_data_addr" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 31 'store' 'store_ln18' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 500000> <RAM>
-ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln20 = zext i4 %next_ith_radix" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 32 'zext' 'zext_ln20' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%bucket_sizes_addr = getelementptr i32 %bucket_sizes, i64 0, i64 %zext_ln20" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 33 'getelementptr' 'bucket_sizes_addr' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%reuse_addr_reg_load = load i64 %reuse_addr_reg"   --->   Operation 34 'load' 'reuse_addr_reg_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 35 [2/2] (0.69ns)   --->   "%bucket_sizes_load = load i4 %bucket_sizes_addr" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 35 'load' 'bucket_sizes_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
-ST_2 : Operation 36 [1/1] (1.06ns)   --->   "%addr_cmp = icmp_eq  i64 %reuse_addr_reg_load, i64 %zext_ln20" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 36 'icmp' 'addr_cmp' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 37 [1/1] (0.38ns)   --->   "%store_ln20 = store i64 %zext_ln20, i64 %reuse_addr_reg" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 37 'store' 'store_ln20' <Predicate = true> <Delay = 0.38>
-ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 46 'ret' 'ret_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%j_cast = zext i19 %j_2" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 28 'zext' 'j_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/2] (1.24ns)   --->   "%input_r_load = load i20 %input_r_addr" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 29 'load' 'input_r_load' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000000> <RAM>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%next_ith_radix = trunc i32 %input_r_load" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 30 'trunc' 'next_ith_radix' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%sorted_data_addr = getelementptr i32 %sorted_data, i64 0, i64 %j_cast" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 31 'getelementptr' 'sorted_data_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (1.24ns)   --->   "%store_ln18 = store i32 %input_r_load, i19 %sorted_data_addr" [sort_seperate_bucket/radix_sort.c:18]   --->   Operation 32 'store' 'store_ln18' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 500000> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln20 = zext i4 %next_ith_radix" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 33 'zext' 'zext_ln20' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%bucket_sizes_addr = getelementptr i32 %bucket_sizes, i64 0, i64 %zext_ln20" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 34 'getelementptr' 'bucket_sizes_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%reuse_addr_reg_load = load i64 %reuse_addr_reg"   --->   Operation 35 'load' 'reuse_addr_reg_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (0.69ns)   --->   "%bucket_sizes_load = load i4 %bucket_sizes_addr" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 36 'load' 'bucket_sizes_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_2 : Operation 37 [1/1] (1.06ns)   --->   "%addr_cmp = icmp_eq  i64 %reuse_addr_reg_load, i64 %zext_ln20" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 37 'icmp' 'addr_cmp' <Predicate = true> <Delay = 1.06> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.38ns)   --->   "%store_ln20 = store i64 %zext_ln20, i64 %reuse_addr_reg" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 38 'store' 'store_ln20' <Predicate = true> <Delay = 0.38>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 47 'ret' 'ret_ln0' <Predicate = (icmp_ln17)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 2.27>
-ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%specloopname_ln17 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 38 'specloopname' 'specloopname_ln17' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%reuse_reg_load = load i32 %reuse_reg"   --->   Operation 39 'load' 'reuse_reg_load' <Predicate = (addr_cmp)> <Delay = 0.00>
-ST_3 : Operation 40 [1/2] (0.69ns)   --->   "%bucket_sizes_load = load i4 %bucket_sizes_addr" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 40 'load' 'bucket_sizes_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
-ST_3 : Operation 41 [1/1] (0.00ns) (grouped into LUT with out node add_ln20)   --->   "%reuse_select = select i1 %addr_cmp, i32 %reuse_reg_load, i32 %bucket_sizes_load" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 41 'select' 'reuse_select' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_3 : Operation 42 [1/1] (0.88ns) (out node of the LUT)   --->   "%add_ln20 = add i32 %reuse_select, i32 1" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 42 'add' 'add_ln20' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 43 [1/1] (0.69ns)   --->   "%store_ln20 = store i32 %add_ln20, i4 %bucket_sizes_addr" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 43 'store' 'store_ln20' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
-ST_3 : Operation 44 [1/1] (0.38ns)   --->   "%store_ln20 = store i32 %add_ln20, i32 %reuse_reg" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 44 'store' 'store_ln20' <Predicate = true> <Delay = 0.38>
-ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln17 = br void %for.inc" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 45 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%specloopname_ln17 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 39 'specloopname' 'specloopname_ln17' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%reuse_reg_load = load i32 %reuse_reg"   --->   Operation 40 'load' 'reuse_reg_load' <Predicate = (addr_cmp)> <Delay = 0.00>
+ST_3 : Operation 41 [1/2] (0.69ns)   --->   "%bucket_sizes_load = load i4 %bucket_sizes_addr" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 41 'load' 'bucket_sizes_load' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_3 : Operation 42 [1/1] (0.00ns) (grouped into LUT with out node add_ln20)   --->   "%reuse_select = select i1 %addr_cmp, i32 %reuse_reg_load, i32 %bucket_sizes_load" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 42 'select' 'reuse_select' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.88ns) (out node of the LUT)   --->   "%add_ln20 = add i32 %reuse_select, i32 1" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 43 'add' 'add_ln20' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.69ns)   --->   "%store_ln20 = store i32 %add_ln20, i4 %bucket_sizes_addr" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 44 'store' 'store_ln20' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
+ST_3 : Operation 45 [1/1] (0.38ns)   --->   "%store_ln20 = store i32 %add_ln20, i32 %reuse_reg" [sort_seperate_bucket/radix_sort.c:20]   --->   Operation 45 'store' 'store_ln20' <Predicate = true> <Delay = 0.38>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln17 = br void %for.inc" [sort_seperate_bucket/radix_sort.c:17]   --->   Operation 46 'br' 'br_ln17' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -141,22 +142,22 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
  <State 1>: 2.06ns
 The critical path consists of the following:
 	'alloca' operation ('j') [6]  (0 ns)
-	'load' operation ('j', sort_seperate_bucket/radix_sort.c:18) on local variable 'j' [15]  (0 ns)
-	'add' operation ('add_ln18', sort_seperate_bucket/radix_sort.c:18) [23]  (0.809 ns)
-	'getelementptr' operation ('input_r_addr', sort_seperate_bucket/radix_sort.c:18) [25]  (0 ns)
-	'load' operation ('input_r_load', sort_seperate_bucket/radix_sort.c:18) on array 'input_r' [27]  (1.25 ns)
+	'load' operation ('j', sort_seperate_bucket/radix_sort.c:17) on local variable 'j' [15]  (0 ns)
+	'add' operation ('add_ln18', sort_seperate_bucket/radix_sort.c:18) [24]  (0.809 ns)
+	'getelementptr' operation ('input_r_addr', sort_seperate_bucket/radix_sort.c:18) [26]  (0 ns)
+	'load' operation ('input_r_load', sort_seperate_bucket/radix_sort.c:18) on array 'input_r' [28]  (1.25 ns)
 
  <State 2>: 2.5ns
 The critical path consists of the following:
-	'load' operation ('input_r_load', sort_seperate_bucket/radix_sort.c:18) on array 'input_r' [27]  (1.25 ns)
-	'store' operation ('store_ln18', sort_seperate_bucket/radix_sort.c:18) of variable 'input_r_load', sort_seperate_bucket/radix_sort.c:18 on array 'sorted_data' [30]  (1.25 ns)
+	'load' operation ('input_r_load', sort_seperate_bucket/radix_sort.c:18) on array 'input_r' [28]  (1.25 ns)
+	'store' operation ('store_ln18', sort_seperate_bucket/radix_sort.c:18) of variable 'input_r_load', sort_seperate_bucket/radix_sort.c:18 on array 'sorted_data' [31]  (1.25 ns)
 
  <State 3>: 2.28ns
 The critical path consists of the following:
-	'load' operation ('bucket_sizes_load', sort_seperate_bucket/radix_sort.c:20) on array 'bucket_sizes' [35]  (0.699 ns)
-	'select' operation ('reuse_select', sort_seperate_bucket/radix_sort.c:20) [37]  (0 ns)
-	'add' operation ('add_ln20', sort_seperate_bucket/radix_sort.c:20) [38]  (0.88 ns)
-	'store' operation ('store_ln20', sort_seperate_bucket/radix_sort.c:20) of variable 'add_ln20', sort_seperate_bucket/radix_sort.c:20 on array 'bucket_sizes' [39]  (0.699 ns)
+	'load' operation ('bucket_sizes_load', sort_seperate_bucket/radix_sort.c:20) on array 'bucket_sizes' [36]  (0.699 ns)
+	'select' operation ('reuse_select', sort_seperate_bucket/radix_sort.c:20) [38]  (0 ns)
+	'add' operation ('add_ln20', sort_seperate_bucket/radix_sort.c:20) [39]  (0.88 ns)
+	'store' operation ('store_ln20', sort_seperate_bucket/radix_sort.c:20) of variable 'add_ln20', sort_seperate_bucket/radix_sort.c:20 on array 'bucket_sizes' [40]  (0.699 ns)
 
 
 ============================================================

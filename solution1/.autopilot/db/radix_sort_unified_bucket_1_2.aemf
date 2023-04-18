@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1681779934515">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1681780338350">
   <ports id="1" name="input_r" type="PortType" coreName="RAM" coreId="0" bitwidth="32" iftype="IfTypeRegister" arraysize="1000000">
     <dataOutputObjs>call</dataOutputObjs>
   </ports>
@@ -60,7 +60,7 @@
   <edges id="-80" source_obj="//@blocks.2/@node_objs.4" sink_obj="//@ports.1"/>
   <blocks id="14" name="entry" type="BlockType">
     <controlOutputObjs>bucket_pointer_initialization</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="i" originalName="i" coreId="2984602512" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="3" name="i" originalName="i" coreId="705088960" bitwidth="4" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -86,23 +86,23 @@
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_1_fu_68" coreId="2984602512" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_1_fu_68" coreId="703983736" opcode="call" nodeLatency="1" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <constName>radix_sort_unified_bucket_1_2_Pipeline_1</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_initialization_fu_74" coreId="2986169168" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_initialization_fu_74" coreId="704368832" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <dataInputObjs>input_r</dataInputObjs>
       <dataInputObjs>sorted_data</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>sorted_data</dataOutputObjs>
       <constName>radix_sort_unified_bucket_1_2_Pipeline_initialization</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_write_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="2984602512" contextFuncName="radix_sort_unified_bucket" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_write_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="703194976" contextFuncName="radix_sort_unified_bucket" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="6" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/radix_sort.c" linenumber="24" fileDirectory="/home/boyiw7" functionName="radix_sort_unified_bucket"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="2983315424" contextFuncName="radix_sort_unified_bucket" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="br_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="704368832" contextFuncName="radix_sort_unified_bucket" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/radix_sort.c" linenumber="24" fileDirectory="/home/boyiw7" functionName="radix_sort_unified_bucket"/>
       <controlInputObjs>bucket_pointer_initialization</controlInputObjs>
     </node_objs>
@@ -120,7 +120,7 @@
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>for.end64</controlOutputObjs>
     <controlOutputObjs>xlx_merge_loop.bucket_pointer_initialization.0_begin</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="i_1" originalName="i" coreId="2986606032" bitwidth="4" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="i_1" originalName="i" coreId="704952560" bitwidth="4" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataOutputObjs>icmp</dataOutputObjs>
       <dataOutputObjs>add</dataOutputObjs>
@@ -138,7 +138,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="2982619312" contextFuncName="radix_sort_unified_bucket" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="br_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="4294967295" contextFuncName="radix_sort_unified_bucket" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/radix_sort.c" linenumber="24" fileDirectory="/home/boyiw7" functionName="radix_sort_unified_bucket"/>
       <dataInputObjs>icmp</dataInputObjs>
       <controlInputObjs>xlx_merge_loop.bucket_pointer_initialization.0_begin</controlInputObjs>
@@ -152,21 +152,21 @@
     <controlInputObjs>bucket_pointer_initialization</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
     <controlOutputObjs>bucket_pointer_initialization</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_bucket_pointer_initialization_fu_83" coreId="2986232752" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_bucket_pointer_initialization_fu_83" coreId="703983424" opcode="call" nodeLabel="4.0" nodeLatency="1" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>radix_sort_unified_bucket_1_2_Pipeline_bucket_pointer_initialization</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="empty_17" rtlName="empty_17_fu_126_p1" coreId="2985874832" bitwidth="3" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="empty_17" rtlName="empty_17_fu_126_p1" coreId="704791024" bitwidth="3" opcode="trunc" nodeLabel="4.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
       <dataInputObjs>load</dataInputObjs>
       <dataOutputObjs>bitconcatenate</dataOutputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="mul" rtlName="mul_fu_135_p3" coreId="2985121968" bitwidth="5" opcode="bitconcatenate" nodeLabel="6.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="mul" rtlName="mul_fu_135_p3" coreId="704367808" bitwidth="5" opcode="bitconcatenate" nodeLabel="6.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
       <dataInputObjs>trunc</dataInputObjs>
       <dataOutputObjs>call</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89" coreId="2985874832" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89" coreId="0" opcode="call" nodeLabel="6.0" nodeLatency="1" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
       <dataInputObjs>sorted_data</dataInputObjs>
       <dataInputObjs>bitconcatenate</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
@@ -175,18 +175,18 @@
       <dataOutputObjs>sorted_data</dataOutputObjs>
       <constName>radix_sort_unified_bucket_1_2_Pipeline_input_bucket</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99" coreId="2986765696" opcode="call" nodeLabel="8.0" nodeLatency="1" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="_ln0" rtlName="grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99" coreId="704546144" opcode="call" nodeLabel="8.0" nodeLatency="1" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
       <dataInputObjs>alloca</dataInputObjs>
       <dataInputObjs>sorted_data</dataInputObjs>
       <dataOutputObjs>sorted_data</dataOutputObjs>
       <constName>radix_sort_unified_bucket_1_2_Pipeline_output_bucket</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="i_write_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="2984602512" contextFuncName="radix_sort_unified_bucket" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.38" m_topoIndex="15" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="i_write_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="498954623" contextFuncName="radix_sort_unified_bucket" opcode="store" nodeLabel="4.0" m_display="0" m_delay="0.38" m_topoIndex="15" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/radix_sort.c" linenumber="24" fileDirectory="/home/boyiw7" functionName="radix_sort_unified_bucket"/>
       <dataInputObjs>add</dataInputObjs>
       <dataInputObjs>alloca</dataInputObjs>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="2984966448" contextFuncName="radix_sort_unified_bucket" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="br_ln24" lineNumber="24" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="705053200" contextFuncName="radix_sort_unified_bucket" opcode="br" nodeLabel="9.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/radix_sort.c" linenumber="24" fileDirectory="/home/boyiw7" functionName="radix_sort_unified_bucket"/>
       <controlInputObjs>bucket_pointer_initialization</controlInputObjs>
     </node_objs>
@@ -197,7 +197,7 @@
   <blocks id="31" name="for.end64" type="BlockType">
     <controlInputObjs>bucket_pointer_initialization</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="_ln54" lineNumber="54" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="2986787088" contextFuncName="radix_sort_unified_bucket" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="_ln54" lineNumber="54" fileName="sort_seperate_bucket/radix_sort.c" fileDirectory=".." coreId="704546752" contextFuncName="radix_sort_unified_bucket" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/radix_sort.c" linenumber="54" fileDirectory="/home/boyiw7" functionName="radix_sort_unified_bucket"/>
     </node_objs>
     <fileValidLineNumbers fileName="sort_seperate_bucket/radix_sort.c">
@@ -354,17 +354,17 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="radix_sort_unified_bucket_1_2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="17000257" mMaxLatency="17000257">
+    <cfgRegions mId="1" mTag="radix_sort_unified_bucket_1_2" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="8500257" mMaxLatency="8500257">
       <subRegions>2</subRegions>
       <subRegions>3</subRegions>
       <subRegions>4</subRegions>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="1000024" mMaxLatency="1000024">
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="500024" mMaxLatency="500024">
       <basicBlocks>14</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="sort_procedure" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="16000232" mMaxLatency="16000232" mType="1">
+    <cfgRegions mId="3" mTag="sort_procedure" mII="-1" mDepth="-1" mMinTripCount="8" mMaxTripCount="8" mMinLatency="8000232" mMaxLatency="8000232" mType="1">
       <basicBlocks>20</basicBlocks>
       <basicBlocks>29</basicBlocks>
       <mDfPipe/>

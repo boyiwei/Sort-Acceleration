@@ -19,22 +19,22 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>17000257</Best-caseLatency>
-            <Average-caseLatency>17000257</Average-caseLatency>
-            <Worst-caseLatency>17000257</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.170 sec</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.170 sec</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.170 sec</Worst-caseRealTimeLatency>
-            <DataflowPipelineThroughput>17000258</DataflowPipelineThroughput>
-            <Interval-min>17000258</Interval-min>
-            <Interval-max>17000258</Interval-max>
+            <Best-caseLatency>8500257</Best-caseLatency>
+            <Average-caseLatency>8500257</Average-caseLatency>
+            <Worst-caseLatency>8500257</Worst-caseLatency>
+            <Best-caseRealTimeLatency>85.003 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>85.003 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>85.003 ms</Worst-caseRealTimeLatency>
+            <DataflowPipelineThroughput>8500258</DataflowPipelineThroughput>
+            <Interval-min>8500258</Interval-min>
+            <Interval-max>8500258</Interval-max>
         </SummaryOfOverallLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
             <BRAM_18K>64</BRAM_18K>
-            <FF>1366</FF>
-            <LUT>3084</LUT>
+            <FF>1355</FF>
+            <LUT>3076</LUT>
             <URAM>0</URAM>
             <DSP>0</DSP>
         </Resources>
@@ -420,7 +420,7 @@
                             <ModuleName>radix_sort_unified_bucket_1_2_Pipeline_initialization</ModuleName>
                             <IsCompInst>true</IsCompInst>
                             <ID>74</ID>
-                            <BindInstances>add_ln17_fu_130_p2 add_ln18_fu_136_p2 bucket_sizes_d0</BindInstances>
+                            <BindInstances>add_ln17_fu_130_p2 add_ln18_fu_140_p2 bucket_sizes_d0</BindInstances>
                         </Instance>
                         <Instance>
                             <InstName>grp_radix_sort_unified_bucket_1_2_Pipeline_bucket_pointer_initialization_fu_83</InstName>
@@ -451,7 +451,7 @@
                     <ModuleName>merge_sort_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>57</ID>
-                    <BindInstances>add_ln7_fu_120_p2 j_6_fu_171_p2 k_5_fu_182_p2 k_4_fu_209_p2 j_fu_219_p2</BindInstances>
+                    <BindInstances>add_ln7_fu_121_p2 j_6_fu_167_p2 k_5_fu_178_p2 k_4_fu_209_p2 j_fu_219_p2</BindInstances>
                 </Instance>
             </InstancesList>
             <BindInstances>half_sorted0_U half_sorted1_U</BindInstances>
@@ -528,22 +528,22 @@
                     <EstimatedClockPeriod>2.496</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>1000003</Best-caseLatency>
-                    <Average-caseLatency>1000003</Average-caseLatency>
-                    <Worst-caseLatency>1000003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>10.000 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>10.000 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>10.000 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1000003</PipelineInitiationInterval>
+                    <Best-caseLatency>500003</Best-caseLatency>
+                    <Average-caseLatency>500003</Average-caseLatency>
+                    <Worst-caseLatency>500003</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.000 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.000 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.000 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>500003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <initialization>
                         <Name>initialization</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>1000000</TripCount>
-                        <Latency>1000001</Latency>
-                        <AbsoluteTimeLatency>10.000 ms</AbsoluteTimeLatency>
+                        <TripCount>500000</TripCount>
+                        <Latency>500001</Latency>
+                        <AbsoluteTimeLatency>5.000 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -553,10 +553,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>146</FF>
+                    <FF>144</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>197</LUT>
+                    <LUT>196</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -646,22 +646,22 @@
                     <EstimatedClockPeriod>3.366</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>1000003</Best-caseLatency>
-                    <Average-caseLatency>1000003</Average-caseLatency>
-                    <Worst-caseLatency>1000003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>10.000 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>10.000 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>10.000 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1000003</PipelineInitiationInterval>
+                    <Best-caseLatency>500003</Best-caseLatency>
+                    <Average-caseLatency>500003</Average-caseLatency>
+                    <Worst-caseLatency>500003</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.000 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.000 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.000 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>500003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <input_bucket>
                         <Name>input_bucket</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>1000000</TripCount>
-                        <Latency>1000001</Latency>
-                        <AbsoluteTimeLatency>10.000 ms</AbsoluteTimeLatency>
+                        <TripCount>500000</TripCount>
+                        <Latency>500001</Latency>
+                        <AbsoluteTimeLatency>5.000 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -671,10 +671,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>264</FF>
+                    <FF>263</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>407</LUT>
+                    <LUT>406</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -706,22 +706,22 @@
                     <EstimatedClockPeriod>2.496</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>1000002</Best-caseLatency>
-                    <Average-caseLatency>1000002</Average-caseLatency>
-                    <Worst-caseLatency>1000002</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>10.000 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>10.000 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>10.000 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1000002</PipelineInitiationInterval>
+                    <Best-caseLatency>500002</Best-caseLatency>
+                    <Average-caseLatency>500002</Average-caseLatency>
+                    <Worst-caseLatency>500002</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.000 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.000 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.000 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>500002</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <output_bucket>
                         <Name>output_bucket</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>1000000</TripCount>
-                        <Latency>1000000</Latency>
-                        <AbsoluteTimeLatency>10.000 ms</AbsoluteTimeLatency>
+                        <TripCount>500000</TripCount>
+                        <Latency>500000</Latency>
+                        <AbsoluteTimeLatency>5.000 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -731,10 +731,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>43</FF>
+                    <FF>41</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>79</LUT>
+                    <LUT>78</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -764,13 +764,13 @@
                     <EstimatedClockPeriod>3.366</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>17000257</Best-caseLatency>
-                    <Average-caseLatency>17000257</Average-caseLatency>
-                    <Worst-caseLatency>17000257</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.170 sec</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.170 sec</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.170 sec</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>17000257</PipelineInitiationInterval>
+                    <Best-caseLatency>8500257</Best-caseLatency>
+                    <Average-caseLatency>8500257</Average-caseLatency>
+                    <Worst-caseLatency>8500257</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>85.003 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>85.003 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>85.003 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>8500257</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -778,10 +778,10 @@
                         <Name>sort_procedure</Name>
                         <Slack>7.30</Slack>
                         <TripCount>8</TripCount>
-                        <Latency>16000232</Latency>
-                        <AbsoluteTimeLatency>0.160 sec</AbsoluteTimeLatency>
-                        <IterationLatency>2000029</IterationLatency>
-                        <PipelineDepth>2000029</PipelineDepth>
+                        <Latency>8000232</Latency>
+                        <AbsoluteTimeLatency>80.002 ms</AbsoluteTimeLatency>
+                        <IterationLatency>1000029</IterationLatency>
+                        <PipelineDepth>1000029</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
                             <Instance>grp_radix_sort_unified_bucket_1_1_Pipeline_bucket_pointer_initialization_fu_83</Instance>
@@ -796,10 +796,10 @@
                     <BRAM_18K>16</BRAM_18K>
                     <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>595</FF>
+                    <FF>590</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1308</LUT>
+                    <LUT>1305</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <URAM>0</URAM>
@@ -887,22 +887,22 @@
                     <EstimatedClockPeriod>2.496</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>1000003</Best-caseLatency>
-                    <Average-caseLatency>1000003</Average-caseLatency>
-                    <Worst-caseLatency>1000003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>10.000 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>10.000 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>10.000 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1000003</PipelineInitiationInterval>
+                    <Best-caseLatency>500003</Best-caseLatency>
+                    <Average-caseLatency>500003</Average-caseLatency>
+                    <Worst-caseLatency>500003</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.000 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.000 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.000 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>500003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <initialization>
                         <Name>initialization</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>1000000</TripCount>
-                        <Latency>1000001</Latency>
-                        <AbsoluteTimeLatency>10.000 ms</AbsoluteTimeLatency>
+                        <TripCount>500000</TripCount>
+                        <Latency>500001</Latency>
+                        <AbsoluteTimeLatency>5.000 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -912,10 +912,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>146</FF>
+                    <FF>144</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>224</LUT>
+                    <LUT>223</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -931,7 +931,7 @@
             </AreaEstimates>
             <BindNodes>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="initialization" OPTYPE="add" PRAGMA="" RTLNAME="add_ln17_fu_130_p2" SOURCE="sort_seperate_bucket/radix_sort.c:17" URAM="0" VARIABLE="add_ln17"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="initialization" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_136_p2" SOURCE="sort_seperate_bucket/radix_sort.c:18" URAM="0" VARIABLE="add_ln18"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="initialization" OPTYPE="add" PRAGMA="" RTLNAME="add_ln18_fu_140_p2" SOURCE="sort_seperate_bucket/radix_sort.c:18" URAM="0" VARIABLE="add_ln18"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="initialization" OPTYPE="add" PRAGMA="" RTLNAME="bucket_sizes_d0" SOURCE="sort_seperate_bucket/radix_sort.c:20" URAM="0" VARIABLE="add_ln20"/>
             </BindNodes>
         </Module>
@@ -1006,22 +1006,22 @@
                     <EstimatedClockPeriod>3.366</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>1000003</Best-caseLatency>
-                    <Average-caseLatency>1000003</Average-caseLatency>
-                    <Worst-caseLatency>1000003</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>10.000 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>10.000 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>10.000 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1000003</PipelineInitiationInterval>
+                    <Best-caseLatency>500003</Best-caseLatency>
+                    <Average-caseLatency>500003</Average-caseLatency>
+                    <Worst-caseLatency>500003</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.000 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.000 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.000 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>500003</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <input_bucket>
                         <Name>input_bucket</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>1000000</TripCount>
-                        <Latency>1000001</Latency>
-                        <AbsoluteTimeLatency>10.000 ms</AbsoluteTimeLatency>
+                        <TripCount>500000</TripCount>
+                        <Latency>500001</Latency>
+                        <AbsoluteTimeLatency>5.000 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>3</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1031,10 +1031,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>264</FF>
+                    <FF>263</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>407</LUT>
+                    <LUT>406</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1066,22 +1066,22 @@
                     <EstimatedClockPeriod>2.496</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>1000002</Best-caseLatency>
-                    <Average-caseLatency>1000002</Average-caseLatency>
-                    <Worst-caseLatency>1000002</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>10.000 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>10.000 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>10.000 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1000002</PipelineInitiationInterval>
+                    <Best-caseLatency>500002</Best-caseLatency>
+                    <Average-caseLatency>500002</Average-caseLatency>
+                    <Worst-caseLatency>500002</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.000 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.000 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.000 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>500002</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <output_bucket>
                         <Name>output_bucket</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>1000000</TripCount>
-                        <Latency>1000000</Latency>
-                        <AbsoluteTimeLatency>10.000 ms</AbsoluteTimeLatency>
+                        <TripCount>500000</TripCount>
+                        <Latency>500000</Latency>
+                        <AbsoluteTimeLatency>5.000 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1091,10 +1091,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>43</FF>
+                    <FF>41</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>79</LUT>
+                    <LUT>78</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1124,13 +1124,13 @@
                     <EstimatedClockPeriod>3.366</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>17000257</Best-caseLatency>
-                    <Average-caseLatency>17000257</Average-caseLatency>
-                    <Worst-caseLatency>17000257</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.170 sec</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.170 sec</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.170 sec</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>17000257</PipelineInitiationInterval>
+                    <Best-caseLatency>8500257</Best-caseLatency>
+                    <Average-caseLatency>8500257</Average-caseLatency>
+                    <Worst-caseLatency>8500257</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>85.003 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>85.003 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>85.003 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>8500257</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -1138,10 +1138,10 @@
                         <Name>sort_procedure</Name>
                         <Slack>7.30</Slack>
                         <TripCount>8</TripCount>
-                        <Latency>16000232</Latency>
-                        <AbsoluteTimeLatency>0.160 sec</AbsoluteTimeLatency>
-                        <IterationLatency>2000029</IterationLatency>
-                        <PipelineDepth>2000029</PipelineDepth>
+                        <Latency>8000232</Latency>
+                        <AbsoluteTimeLatency>80.002 ms</AbsoluteTimeLatency>
+                        <IterationLatency>1000029</IterationLatency>
+                        <PipelineDepth>1000029</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
                             <Instance>grp_radix_sort_unified_bucket_1_2_Pipeline_bucket_pointer_initialization_fu_83</Instance>
@@ -1156,10 +1156,10 @@
                     <BRAM_18K>16</BRAM_18K>
                     <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>595</FF>
+                    <FF>590</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1335</LUT>
+                    <LUT>1332</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1189,22 +1189,22 @@
                     <EstimatedClockPeriod>3.355</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>2000002</Best-caseLatency>
-                    <Average-caseLatency>2000002</Average-caseLatency>
-                    <Worst-caseLatency>2000002</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>20.000 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>20.000 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>20.000 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>2000002</PipelineInitiationInterval>
+                    <Best-caseLatency>1000002</Best-caseLatency>
+                    <Average-caseLatency>1000002</Average-caseLatency>
+                    <Worst-caseLatency>1000002</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>10.000 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>10.000 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>10.000 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1000002</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
                     <VITIS_LOOP_7_1>
                         <Name>VITIS_LOOP_7_1</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>2000000</TripCount>
-                        <Latency>2000000</Latency>
-                        <AbsoluteTimeLatency>20.000 ms</AbsoluteTimeLatency>
+                        <TripCount>1000000</TripCount>
+                        <Latency>1000000</Latency>
+                        <AbsoluteTimeLatency>10.000 ms</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
@@ -1214,10 +1214,10 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>174</FF>
+                    <FF>173</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>409</LUT>
+                    <LUT>407</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -1232,9 +1232,9 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_7_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln7_fu_120_p2" SOURCE="sort_seperate_bucket/merge_sort.c:7" URAM="0" VARIABLE="add_ln7"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_7_1" OPTYPE="add" PRAGMA="" RTLNAME="j_6_fu_171_p2" SOURCE="sort_seperate_bucket/merge_sort.c:29" URAM="0" VARIABLE="j_6"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_7_1" OPTYPE="add" PRAGMA="" RTLNAME="k_5_fu_182_p2" SOURCE="sort_seperate_bucket/merge_sort.c:25" URAM="0" VARIABLE="k_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_7_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln7_fu_121_p2" SOURCE="sort_seperate_bucket/merge_sort.c:7" URAM="0" VARIABLE="add_ln7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_7_1" OPTYPE="add" PRAGMA="" RTLNAME="j_6_fu_167_p2" SOURCE="sort_seperate_bucket/merge_sort.c:29" URAM="0" VARIABLE="j_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_7_1" OPTYPE="add" PRAGMA="" RTLNAME="k_5_fu_178_p2" SOURCE="sort_seperate_bucket/merge_sort.c:25" URAM="0" VARIABLE="k_5"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_7_1" OPTYPE="add" PRAGMA="" RTLNAME="k_4_fu_209_p2" SOURCE="sort_seperate_bucket/merge_sort.c:18" URAM="0" VARIABLE="k_4"/>
                 <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_7_1" OPTYPE="add" PRAGMA="" RTLNAME="j_fu_219_p2" SOURCE="sort_seperate_bucket/merge_sort.c:13" URAM="0" VARIABLE="j"/>
             </BindNodes>
@@ -1248,14 +1248,14 @@
                     <EstimatedClockPeriod>3.366</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>17000257</Best-caseLatency>
-                    <Average-caseLatency>17000257</Average-caseLatency>
-                    <Worst-caseLatency>17000257</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.170 sec</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.170 sec</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.170 sec</Worst-caseRealTimeLatency>
-                    <DataflowPipelineThroughput>17000258</DataflowPipelineThroughput>
-                    <PipelineInitiationInterval>17000258</PipelineInitiationInterval>
+                    <Best-caseLatency>8500257</Best-caseLatency>
+                    <Average-caseLatency>8500257</Average-caseLatency>
+                    <Worst-caseLatency>8500257</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>85.003 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>85.003 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>85.003 ms</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>8500258</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>8500258</PipelineInitiationInterval>
                     <PipelineType>dataflow</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
@@ -1264,10 +1264,10 @@
                     <BRAM_18K>64</BRAM_18K>
                     <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>1</UTIL_BRAM>
-                    <FF>1366</FF>
+                    <FF>1355</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>3084</LUT>
+                    <LUT>3076</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <URAM>0</URAM>
@@ -1563,16 +1563,16 @@
         <Pragma type="pipeline" location="sort_seperate_bucket/radix_sort.c:70" status="warning" parentFunction="radix_sort_separate_bucket" variable="" isDirective="0" options="">
             <Msg msg_id="207-5560" msg_severity="WARNING" msg_body="Only for/while/do support the pipeline  pragma"/>
         </Pragma>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort.c:83" status="valid" parentFunction="radix_sort_separate_bucket" variable="" isDirective="0" options="min=0 max=1000000 -1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort.c:83" status="valid" parentFunction="radix_sort_separate_bucket" variable="" isDirective="0" options="min=0 max=500000 -1"/>
         <Pragma type="dataflow" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:29" status="valid" parentFunction="input_bucket_parallel_2" variable="" isDirective="0" options=""/>
         <Pragma type="dataflow" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:39" status="valid" parentFunction="input_bucket_parallel_5" variable="" isDirective="0" options=""/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:67" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=1000000/2-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:72" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=1000000/2-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:139" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=1000000/5-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:144" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=1000000/5-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:149" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=1000000/5-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:154" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=1000000/5-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:159" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=1000000/5-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:67" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=500000/2-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:72" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=500000/2-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:139" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=500000/5-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:144" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=500000/5-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:149" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=500000/5-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:154" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=500000/5-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:159" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=500000/5-1"/>
         <Pragma type="dataflow" location="sort_seperate_bucket/sort_top.c:13" status="valid" parentFunction="sort_top" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>

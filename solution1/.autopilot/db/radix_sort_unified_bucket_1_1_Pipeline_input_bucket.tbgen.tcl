@@ -16,7 +16,7 @@ set C_modelArgList {
 	{ sorted_data int 32 regular {array 500000 { 1 3 } 1 1 }  }
 	{ zext_ln39 int 5 regular  }
 	{ bucket_pointer int 32 regular {array 16 { 0 1 } 1 1 }  }
-	{ bucket int 32 regular {array 1000000 { 0 3 } 0 1 }  }
+	{ bucket int 32 regular {array 500000 { 0 3 } 0 1 }  }
 	{ bucket_sizes int 32 regular {array 16 { 0 1 } 1 1 }  }
 }
 set C_modelArgMapList {[ 
@@ -45,7 +45,7 @@ set portList {
 	{ bucket_pointer_address1 sc_out sc_lv 4 signal 2 } 
 	{ bucket_pointer_ce1 sc_out sc_logic 1 signal 2 } 
 	{ bucket_pointer_q1 sc_in sc_lv 32 signal 2 } 
-	{ bucket_address0 sc_out sc_lv 20 signal 3 } 
+	{ bucket_address0 sc_out sc_lv 19 signal 3 } 
 	{ bucket_ce0 sc_out sc_logic 1 signal 3 } 
 	{ bucket_we0 sc_out sc_logic 1 signal 3 } 
 	{ bucket_d0 sc_out sc_lv 32 signal 3 } 
@@ -75,7 +75,7 @@ set NewPortList {[
  	{ "name": "bucket_pointer_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "bucket_pointer", "role": "address1" }} , 
  	{ "name": "bucket_pointer_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bucket_pointer", "role": "ce1" }} , 
  	{ "name": "bucket_pointer_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer", "role": "q1" }} , 
- 	{ "name": "bucket_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "bucket", "role": "address0" }} , 
+ 	{ "name": "bucket_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":19, "type": "signal", "bundle":{"name": "bucket", "role": "address0" }} , 
  	{ "name": "bucket_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bucket", "role": "ce0" }} , 
  	{ "name": "bucket_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bucket", "role": "we0" }} , 
  	{ "name": "bucket_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket", "role": "d0" }} , 
@@ -94,7 +94,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000003", "EstimateLatencyMax" : "1000003",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "500003", "EstimateLatencyMax" : "500003",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -125,8 +125,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1000003", "Max" : "1000003"}
-	, {"Name" : "Interval", "Min" : "1000003", "Max" : "1000003"}
+	{"Name" : "Latency", "Min" : "500003", "Max" : "500003"}
+	, {"Name" : "Interval", "Min" : "500003", "Max" : "500003"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -137,6 +137,6 @@ set Spec2ImplPortList {
 	sorted_data { ap_memory {  { sorted_data_address0 mem_address 1 19 }  { sorted_data_ce0 mem_ce 1 1 }  { sorted_data_q0 in_data 0 32 } } }
 	zext_ln39 { ap_none {  { zext_ln39 in_data 0 5 } } }
 	bucket_pointer { ap_memory {  { bucket_pointer_address0 mem_address 1 4 }  { bucket_pointer_ce0 mem_ce 1 1 }  { bucket_pointer_we0 mem_we 1 1 }  { bucket_pointer_d0 mem_din 1 32 }  { bucket_pointer_address1 MemPortADDR2 1 4 }  { bucket_pointer_ce1 MemPortCE2 1 1 }  { bucket_pointer_q1 in_data 0 32 } } }
-	bucket { ap_memory {  { bucket_address0 mem_address 1 20 }  { bucket_ce0 mem_ce 1 1 }  { bucket_we0 mem_we 1 1 }  { bucket_d0 mem_din 1 32 } } }
+	bucket { ap_memory {  { bucket_address0 mem_address 1 19 }  { bucket_ce0 mem_ce 1 1 }  { bucket_we0 mem_we 1 1 }  { bucket_d0 mem_din 1 32 } } }
 	bucket_sizes { ap_memory {  { bucket_sizes_address0 mem_address 1 4 }  { bucket_sizes_ce0 mem_ce 1 1 }  { bucket_sizes_we0 mem_we 1 1 }  { bucket_sizes_d0 mem_din 1 32 }  { bucket_sizes_address1 MemPortADDR2 1 4 }  { bucket_sizes_ce1 MemPortCE2 1 1 }  { bucket_sizes_q1 in_data 0 32 } } }
 }

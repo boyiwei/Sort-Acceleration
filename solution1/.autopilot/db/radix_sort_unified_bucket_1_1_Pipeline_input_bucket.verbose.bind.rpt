@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_unified_bucket_1_1_Pipeline_input_bucket'
 ================================================================
-* Date:           Mon Apr 17 18:05:31 2023
+* Date:           Mon Apr 17 18:12:15 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -25,24 +25,24 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+---------+---------+---------+
-    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
-    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
-    +---------+---------+-----------+-----------+---------+---------+---------+
-    |  1000003|  1000003|  10.000 ms|  10.000 ms|  1000003|  1000003|       no|
-    +---------+---------+-----------+-----------+---------+---------+---------+
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   500003|   500003|  5.000 ms|  5.000 ms|  500003|  500003|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +----------------+---------+---------+----------+-----------+-----------+---------+----------+
-        |                |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
-        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
-        +----------------+---------+---------+----------+-----------+-----------+---------+----------+
-        |- input_bucket  |  1000001|  1000001|         3|          1|          1|  1000000|       yes|
-        +----------------+---------+---------+----------+-----------+-----------+---------+----------+
+        +----------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- input_bucket  |   500001|   500001|         3|          1|          1|  500000|       yes|
+        +----------------+---------+---------+----------+-----------+-----------+--------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -93,22 +93,22 @@ ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%reuse_reg = alloca i32 1"   --->   
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%j_2 = alloca i32 1"   --->   Operation 10 'alloca' 'j_2' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln39_read = read i5 @_ssdm_op_Read.ap_auto.i5, i5 %zext_ln39"   --->   Operation 11 'read' 'zext_ln39_read' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln39_cast = zext i5 %zext_ln39_read"   --->   Operation 12 'zext' 'zext_ln39_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.38ns)   --->   "%store_ln0 = store i20 0, i20 %j_2"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 13 [1/1] (0.38ns)   --->   "%store_ln0 = store i19 0, i19 %j_2"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 14 [1/1] (0.38ns)   --->   "%store_ln0 = store i32 0, i32 %reuse_reg"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 15 [1/1] (0.38ns)   --->   "%store_ln0 = store i64 18446744073709551615, i64 %reuse_addr_reg"   --->   Operation 15 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 16 [1/1] (0.38ns)   --->   "%store_ln0 = store i32 0, i32 %reuse_reg5"   --->   Operation 16 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 17 [1/1] (0.38ns)   --->   "%store_ln0 = store i64 18446744073709551615, i64 %reuse_addr_reg6"   --->   Operation 17 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
 ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc48"   --->   Operation 18 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%j = load i20 %j_2" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 19 'load' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%j = load i19 %j_2" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 19 'load' 'j' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 20 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.72ns)   --->   "%icmp_ln39 = icmp_eq  i20 %j, i20 1000000" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 21 'icmp' 'icmp_ln39' <Predicate = true> <Delay = 0.72> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1000000, i64 1000000, i64 1000000"   --->   Operation 22 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.80ns)   --->   "%add_ln39 = add i20 %j, i20 1" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 23 'add' 'add_ln39' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.71ns)   --->   "%icmp_ln39 = icmp_eq  i19 %j, i19 500000" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 21 'icmp' 'icmp_ln39' <Predicate = true> <Delay = 0.71> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 500000, i64 500000, i64 500000"   --->   Operation 22 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.80ns)   --->   "%add_ln39 = add i19 %j, i19 1" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 23 'add' 'add_ln39' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln39 = br i1 %icmp_ln39, void %for.inc48.split, void %for.inc59.preheader.exitStub" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 24 'br' 'br_ln39' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%j_2_cast = zext i20 %j" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 25 'zext' 'j_2_cast' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%j_2_cast = zext i19 %j" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 25 'zext' 'j_2_cast' <Predicate = (!icmp_ln39)> <Delay = 0.00>
 ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%sorted_data_addr = getelementptr i32 %sorted_data, i64 0, i64 %j_2_cast" [sort_seperate_bucket/radix_sort.c:40]   --->   Operation 26 'getelementptr' 'sorted_data_addr' <Predicate = (!icmp_ln39)> <Delay = 0.00>
 ST_1 : Operation 27 [2/2] (1.24ns)   --->   "%sorted_data_load = load i19 %sorted_data_addr" [sort_seperate_bucket/radix_sort.c:40]   --->   Operation 27 'load' 'sorted_data_load' <Predicate = (!icmp_ln39)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 500000> <RAM>
-ST_1 : Operation 28 [1/1] (0.38ns)   --->   "%store_ln39 = store i20 %add_ln39, i20 %j_2" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 28 'store' 'store_ln39' <Predicate = (!icmp_ln39)> <Delay = 0.38>
+ST_1 : Operation 28 [1/1] (0.38ns)   --->   "%store_ln39 = store i19 %add_ln39, i19 %j_2" [sort_seperate_bucket/radix_sort.c:39]   --->   Operation 28 'store' 'store_ln39' <Predicate = (!icmp_ln39)> <Delay = 0.38>
 
 State 2 <SV = 1> <Delay = 3.36>
 ST_2 : Operation 29 [1/2] (1.24ns)   --->   "%sorted_data_load = load i19 %sorted_data_addr" [sort_seperate_bucket/radix_sort.c:40]   --->   Operation 29 'load' 'sorted_data_load' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 500000> <RAM>
@@ -136,7 +136,7 @@ ST_3 : Operation 47 [1/2] (0.69ns)   --->   "%bucket_pointer_load = load i4 %buc
 ST_3 : Operation 48 [1/1] (0.22ns)   --->   "%reuse_select10 = select i1 %addr_cmp9, i32 %reuse_reg5_load, i32 %bucket_pointer_load" [sort_seperate_bucket/radix_sort.c:42]   --->   Operation 48 'select' 'reuse_select10' <Predicate = true> <Delay = 0.22> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.22> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln42_2 = zext i32 %reuse_select10" [sort_seperate_bucket/radix_sort.c:42]   --->   Operation 49 'zext' 'zext_ln42_2' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%bucket_addr = getelementptr i32 %bucket, i64 0, i64 %zext_ln42_2" [sort_seperate_bucket/radix_sort.c:42]   --->   Operation 50 'getelementptr' 'bucket_addr' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 51 [1/1] (1.24ns)   --->   "%store_ln42 = store i32 %sorted_data_load, i20 %bucket_addr" [sort_seperate_bucket/radix_sort.c:42]   --->   Operation 51 'store' 'store_ln42' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1000000> <RAM>
+ST_3 : Operation 51 [1/1] (1.24ns)   --->   "%store_ln42 = store i32 %sorted_data_load, i19 %bucket_addr" [sort_seperate_bucket/radix_sort.c:42]   --->   Operation 51 'store' 'store_ln42' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 500000> <RAM>
 ST_3 : Operation 52 [1/1] (0.88ns)   --->   "%add_ln43 = add i32 %reuse_select10, i32 1" [sort_seperate_bucket/radix_sort.c:43]   --->   Operation 52 'add' 'add_ln43' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_3 : Operation 53 [1/1] (0.69ns)   --->   "%store_ln43 = store i32 %add_ln43, i4 %bucket_pointer_addr" [sort_seperate_bucket/radix_sort.c:43]   --->   Operation 53 'store' 'store_ln43' <Predicate = true> <Delay = 0.69> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.69> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 16> <RAM>
 ST_3 : Operation 54 [1/1] (0.38ns)   --->   "%store_ln43 = store i32 %add_ln43, i32 %reuse_reg5" [sort_seperate_bucket/radix_sort.c:43]   --->   Operation 54 'store' 'store_ln43' <Predicate = true> <Delay = 0.38>
@@ -488,7 +488,7 @@ ret_ln0              (ret              ) [ 0000]
 <comp id="62" class="1004" name="j_2_fu_62">
 <pin_list>
 <pin id="63" dir="0" index="0" bw="1" slack="0"/>
-<pin id="64" dir="1" index="1" bw="20" slack="0"/>
+<pin id="64" dir="1" index="1" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -512,7 +512,7 @@ ret_ln0              (ret              ) [ 0000]
 <pin_list>
 <pin id="73" dir="0" index="0" bw="32" slack="0"/>
 <pin id="74" dir="0" index="1" bw="1" slack="0"/>
-<pin id="75" dir="0" index="2" bw="20" slack="0"/>
+<pin id="75" dir="0" index="2" bw="19" slack="0"/>
 <pin id="76" dir="1" index="3" bw="19" slack="0"/>
 </pin_list>
 <bind>
@@ -599,7 +599,7 @@ ret_ln0              (ret              ) [ 0000]
 <pin id="120" dir="0" index="0" bw="32" slack="0"/>
 <pin id="121" dir="0" index="1" bw="1" slack="0"/>
 <pin id="122" dir="0" index="2" bw="32" slack="0"/>
-<pin id="123" dir="1" index="3" bw="20" slack="0"/>
+<pin id="123" dir="1" index="3" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -609,7 +609,7 @@ ret_ln0              (ret              ) [ 0000]
 
 <comp id="126" class="1004" name="store_ln42_access_fu_126">
 <pin_list>
-<pin id="127" dir="0" index="0" bw="20" slack="0"/>
+<pin id="127" dir="0" index="0" bw="19" slack="0"/>
 <pin id="128" dir="0" index="1" bw="32" slack="1"/>
 <pin id="129" dir="0" index="2" bw="0" slack="2147483647"/>
 <pin id="130" dir="1" index="3" bw="32" slack="2147483647"/>
@@ -634,7 +634,7 @@ ret_ln0              (ret              ) [ 0000]
 <comp id="136" class="1004" name="store_ln0_store_fu_136">
 <pin_list>
 <pin id="137" dir="0" index="0" bw="1" slack="0"/>
-<pin id="138" dir="0" index="1" bw="20" slack="0"/>
+<pin id="138" dir="0" index="1" bw="19" slack="0"/>
 <pin id="139" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -693,8 +693,8 @@ ret_ln0              (ret              ) [ 0000]
 
 <comp id="161" class="1004" name="j_load_fu_161">
 <pin_list>
-<pin id="162" dir="0" index="0" bw="20" slack="0"/>
-<pin id="163" dir="1" index="1" bw="20" slack="0"/>
+<pin id="162" dir="0" index="0" bw="19" slack="0"/>
+<pin id="163" dir="1" index="1" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -704,8 +704,8 @@ ret_ln0              (ret              ) [ 0000]
 
 <comp id="164" class="1004" name="icmp_ln39_fu_164">
 <pin_list>
-<pin id="165" dir="0" index="0" bw="20" slack="0"/>
-<pin id="166" dir="0" index="1" bw="17" slack="0"/>
+<pin id="165" dir="0" index="0" bw="19" slack="0"/>
+<pin id="166" dir="0" index="1" bw="16" slack="0"/>
 <pin id="167" dir="1" index="2" bw="1" slack="1"/>
 </pin_list>
 <bind>
@@ -716,9 +716,9 @@ ret_ln0              (ret              ) [ 0000]
 
 <comp id="170" class="1004" name="add_ln39_fu_170">
 <pin_list>
-<pin id="171" dir="0" index="0" bw="20" slack="0"/>
+<pin id="171" dir="0" index="0" bw="19" slack="0"/>
 <pin id="172" dir="0" index="1" bw="1" slack="0"/>
-<pin id="173" dir="1" index="2" bw="20" slack="0"/>
+<pin id="173" dir="1" index="2" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -728,7 +728,7 @@ ret_ln0              (ret              ) [ 0000]
 
 <comp id="176" class="1004" name="j_2_cast_fu_176">
 <pin_list>
-<pin id="177" dir="0" index="0" bw="20" slack="0"/>
+<pin id="177" dir="0" index="0" bw="19" slack="0"/>
 <pin id="178" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
@@ -739,8 +739,8 @@ ret_ln0              (ret              ) [ 0000]
 
 <comp id="181" class="1004" name="store_ln39_store_fu_181">
 <pin_list>
-<pin id="182" dir="0" index="0" bw="20" slack="0"/>
-<pin id="183" dir="0" index="1" bw="20" slack="0"/>
+<pin id="182" dir="0" index="0" bw="19" slack="0"/>
+<pin id="183" dir="0" index="1" bw="19" slack="0"/>
 <pin id="184" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -1027,8 +1027,8 @@ ret_ln0              (ret              ) [ 0000]
 
 <comp id="320" class="1005" name="j_2_reg_320">
 <pin_list>
-<pin id="321" dir="0" index="0" bw="20" slack="0"/>
-<pin id="322" dir="1" index="1" bw="20" slack="0"/>
+<pin id="321" dir="0" index="0" bw="19" slack="0"/>
+<pin id="322" dir="1" index="1" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opset="j_2 "/>
@@ -1382,7 +1382,7 @@ ret_ln0              (ret              ) [ 0000]
 |----------|---------------------------|---------|---------|
 | Operation|      Functional Unit      |    FF   |   LUT   |
 |----------|---------------------------|---------|---------|
-|          |      add_ln39_fu_170      |    0    |    27   |
+|          |      add_ln39_fu_170      |    0    |    26   |
 |    add   |      add_ln43_fu_258      |    0    |    39   |
 |          |      add_ln46_fu_280      |    0    |    39   |
 |----------|---------------------------|---------|---------|
@@ -1407,7 +1407,7 @@ ret_ln0              (ret              ) [ 0000]
 |----------|---------------------------|---------|---------|
 |partselect|  next_ith_radix_2_fu_214  |    0    |    0    |
 |----------|---------------------------|---------|---------|
-|   Total  |                           |    0    |   333   |
+|   Total  |                           |    0    |   332   |
 |----------|---------------------------|---------|---------|
 
 Memories:
@@ -1422,7 +1422,7 @@ N/A
 |bucket_pointer_addr_reg_346|    4   |
 | bucket_sizes_addr_reg_357 |    4   |
 |     icmp_ln39_reg_332     |    1   |
-|        j_2_reg_320        |   20   |
+|        j_2_reg_320        |   19   |
 |  reuse_addr_reg6_reg_292  |   64   |
 |   reuse_addr_reg_reg_306  |   64   |
 |     reuse_reg5_reg_299    |   32   |
@@ -1431,7 +1431,7 @@ N/A
 |  sorted_data_load_reg_341 |   32   |
 |   zext_ln39_cast_reg_327  |   32   |
 +---------------------------+--------+
-|           Total           |   306  |
+|           Total           |   305  |
 +---------------------------+--------+
 
 * Multiplexer (MUX) list: 
@@ -1451,10 +1451,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    -   |    0   |   333  |
+|  Function |    -   |    0   |   332  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    1   |    -   |   27   |
-|  Register |    -   |   306  |    -   |
+|  Register |    -   |   305  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    1   |   306  |   360  |
+|   Total   |    1   |   305  |   359  |
 +-----------+--------+--------+--------+

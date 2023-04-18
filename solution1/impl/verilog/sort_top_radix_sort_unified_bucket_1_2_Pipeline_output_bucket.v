@@ -31,7 +31,7 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [19:0] bucket_address0;
+output  [18:0] bucket_address0;
 output   bucket_ce0;
 input  [31:0] bucket_q0;
 output  [18:0] sorted_data_address0;
@@ -60,10 +60,10 @@ wire   [63:0] k_cast_fu_81_p1;
 reg   [63:0] k_cast_reg_101;
 wire    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0;
-reg   [19:0] k_fu_30;
-wire   [19:0] add_ln50_fu_75_p2;
+reg   [18:0] k_fu_30;
+wire   [18:0] add_ln50_fu_75_p2;
 wire    ap_loop_init;
-reg   [19:0] ap_sig_allocacmp_k_1;
+reg   [18:0] ap_sig_allocacmp_k_1;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -131,14 +131,14 @@ always @ (posedge ap_clk) begin
         if (((icmp_ln50_fu_69_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             k_fu_30 <= add_ln50_fu_75_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            k_fu_30 <= 20'd0;
+            k_fu_30 <= 19'd0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln50_fu_69_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        k_cast_reg_101[19 : 0] <= k_cast_fu_81_p1[19 : 0];
+        k_cast_reg_101[18 : 0] <= k_cast_fu_81_p1[18 : 0];
     end
 end
 
@@ -184,7 +184,7 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_k_1 = 20'd0;
+        ap_sig_allocacmp_k_1 = 19'd0;
     end else begin
         ap_sig_allocacmp_k_1 = k_fu_30;
     end
@@ -225,7 +225,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln50_fu_75_p2 = (ap_sig_allocacmp_k_1 + 20'd1);
+assign add_ln50_fu_75_p2 = (ap_sig_allocacmp_k_1 + 19'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -247,7 +247,7 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign bucket_address0 = k_cast_fu_81_p1;
 
-assign icmp_ln50_fu_69_p2 = ((ap_sig_allocacmp_k_1 == 20'd1000000) ? 1'b1 : 1'b0);
+assign icmp_ln50_fu_69_p2 = ((ap_sig_allocacmp_k_1 == 19'd500000) ? 1'b1 : 1'b0);
 
 assign k_cast_fu_81_p1 = ap_sig_allocacmp_k_1;
 
@@ -256,7 +256,7 @@ assign sorted_data_address0 = k_cast_reg_101;
 assign sorted_data_d0 = bucket_q0;
 
 always @ (posedge ap_clk) begin
-    k_cast_reg_101[63:20] <= 44'b00000000000000000000000000000000000000000000;
+    k_cast_reg_101[63:19] <= 45'b000000000000000000000000000000000000000000000;
 end
 
 endmodule //sort_top_radix_sort_unified_bucket_1_2_Pipeline_output_bucket

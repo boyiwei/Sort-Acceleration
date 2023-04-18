@@ -23,7 +23,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="3" bw="20" op_0_bw="32">
+<Node id="3" bw="19" op_0_bw="32">
 <![CDATA[
 newFuncRoot:0 %k = alloca i32 1
 
@@ -38,9 +38,9 @@ newFuncRoot:0 %k = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="4" bw="0" op_0_bw="20" op_1_bw="20">
+<Node id="4" bw="0" op_0_bw="19" op_1_bw="19">
 <![CDATA[
-newFuncRoot:1 %store_ln0 = store i20 0, i20 %k
+newFuncRoot:1 %store_ln0 = store i19 0, i19 %k
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -68,9 +68,9 @@ newFuncRoot:2 %br_ln0 = br void %for.inc59
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="20" op_0_bw="20" op_1_bw="0">
+<Node id="7" bw="19" op_0_bw="19" op_1_bw="0">
 <![CDATA[
-for.inc59:0 %k_1 = load i20 %k
+for.inc59:0 %k_1 = load i19 %k
 
 ]]></Node>
 <StgValue><ssdm name="k_1"/></StgValue>
@@ -98,9 +98,9 @@ for.inc59:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 42
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="9" bw="1" op_0_bw="20" op_1_bw="20">
+<Node id="9" bw="1" op_0_bw="19" op_1_bw="19">
 <![CDATA[
-for.inc59:2 %icmp_ln50 = icmp_eq  i20 %k_1, i20 1000000
+for.inc59:2 %icmp_ln50 = icmp_eq  i19 %k_1, i19 500000
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln50"/></StgValue>
@@ -115,7 +115,7 @@ for.inc59:2 %icmp_ln50 = icmp_eq  i20 %k_1, i20 1000000
 
 <Node id="10" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc59:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1000000, i64 1000000, i64 1000000
+for.inc59:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 500000, i64 500000, i64 500000
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -128,9 +128,9 @@ for.inc59:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1000
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="20" op_0_bw="20" op_1_bw="20">
+<Node id="11" bw="19" op_0_bw="19" op_1_bw="19">
 <![CDATA[
-for.inc59:4 %add_ln50 = add i20 %k_1, i20 1
+for.inc59:4 %add_ln50 = add i19 %k_1, i19 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln50"/></StgValue>
@@ -159,9 +159,9 @@ for.inc59:5 %br_ln50 = br i1 %icmp_ln50, void %for.inc59.split, void %xlx_merge_
 </and_exp></or_exp>
 </condition>
 
-<Node id="14" bw="64" op_0_bw="20">
+<Node id="14" bw="64" op_0_bw="19">
 <![CDATA[
-for.inc59.split:0 %k_cast = zext i20 %k_1
+for.inc59.split:0 %k_cast = zext i19 %k_1
 
 ]]></Node>
 <StgValue><ssdm name="k_cast"/></StgValue>
@@ -175,7 +175,7 @@ for.inc59.split:0 %k_cast = zext i20 %k_1
 </and_exp></or_exp>
 </condition>
 
-<Node id="16" bw="20" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="16" bw="19" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
 for.inc59.split:2 %bucket_addr = getelementptr i32 %bucket, i64 0, i64 %k_cast
 
@@ -191,9 +191,9 @@ for.inc59.split:2 %bucket_addr = getelementptr i32 %bucket, i64 0, i64 %k_cast
 </and_exp></or_exp>
 </condition>
 
-<Node id="17" bw="32" op_0_bw="20">
+<Node id="17" bw="32" op_0_bw="19">
 <![CDATA[
-for.inc59.split:3 %bucket_load = load i20 %bucket_addr
+for.inc59.split:3 %bucket_load = load i19 %bucket_addr
 
 ]]></Node>
 <StgValue><ssdm name="bucket_load"/></StgValue>
@@ -207,9 +207,9 @@ for.inc59.split:3 %bucket_load = load i20 %bucket_addr
 </and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="0" op_0_bw="20" op_1_bw="20" op_2_bw="0" op_3_bw="0">
+<Node id="20" bw="0" op_0_bw="19" op_1_bw="19" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc59.split:6 %store_ln50 = store i20 %add_ln50, i20 %k
+for.inc59.split:6 %store_ln50 = store i19 %add_ln50, i19 %k
 
 ]]></Node>
 <StgValue><ssdm name="store_ln50"/></StgValue>
@@ -256,9 +256,9 @@ for.inc59.split:1 %specloopname_ln50 = specloopname void @_ssdm_op_SpecLoopName,
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="17" bw="32" op_0_bw="20">
+<Node id="17" bw="32" op_0_bw="19">
 <![CDATA[
-for.inc59.split:3 %bucket_load = load i20 %bucket_addr
+for.inc59.split:3 %bucket_load = load i19 %bucket_addr
 
 ]]></Node>
 <StgValue><ssdm name="bucket_load"/></StgValue>

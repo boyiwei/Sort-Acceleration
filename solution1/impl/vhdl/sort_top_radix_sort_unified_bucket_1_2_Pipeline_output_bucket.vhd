@@ -17,7 +17,7 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    bucket_address0 : OUT STD_LOGIC_VECTOR (19 downto 0);
+    bucket_address0 : OUT STD_LOGIC_VECTOR (18 downto 0);
     bucket_ce0 : OUT STD_LOGIC;
     bucket_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
     sorted_data_address0 : OUT STD_LOGIC_VECTOR (18 downto 0);
@@ -36,9 +36,9 @@ architecture behav of sort_top_radix_sort_unified_bucket_1_2_Pipeline_output_buc
     constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
-    constant ap_const_lv20_0 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000000000";
-    constant ap_const_lv20_F4240 : STD_LOGIC_VECTOR (19 downto 0) := "11110100001001000000";
-    constant ap_const_lv20_1 : STD_LOGIC_VECTOR (19 downto 0) := "00000000000000000001";
+    constant ap_const_lv19_0 : STD_LOGIC_VECTOR (18 downto 0) := "0000000000000000000";
+    constant ap_const_lv19_7A120 : STD_LOGIC_VECTOR (18 downto 0) := "1111010000100100000";
+    constant ap_const_lv19_1 : STD_LOGIC_VECTOR (18 downto 0) := "0000000000000000001";
 
 attribute shreg_extract : string;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (0 downto 0) := "1";
@@ -60,10 +60,10 @@ attribute shreg_extract : string;
     signal k_cast_reg_101 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal k_fu_30 : STD_LOGIC_VECTOR (19 downto 0);
-    signal add_ln50_fu_75_p2 : STD_LOGIC_VECTOR (19 downto 0);
+    signal k_fu_30 : STD_LOGIC_VECTOR (18 downto 0);
+    signal add_ln50_fu_75_p2 : STD_LOGIC_VECTOR (18 downto 0);
     signal ap_loop_init : STD_LOGIC;
-    signal ap_sig_allocacmp_k_1 : STD_LOGIC_VECTOR (19 downto 0);
+    signal ap_sig_allocacmp_k_1 : STD_LOGIC_VECTOR (18 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -161,7 +161,7 @@ begin
                 if (((icmp_ln50_fu_69_p2 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then 
                     k_fu_30 <= add_ln50_fu_75_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
-                    k_fu_30 <= ap_const_lv20_0;
+                    k_fu_30 <= ap_const_lv19_0;
                 end if;
             end if; 
         end if;
@@ -170,11 +170,11 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((icmp_ln50_fu_69_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                    k_cast_reg_101(19 downto 0) <= k_cast_fu_81_p1(19 downto 0);
+                    k_cast_reg_101(18 downto 0) <= k_cast_fu_81_p1(18 downto 0);
             end if;
         end if;
     end process;
-    k_cast_reg_101(63 downto 20) <= "00000000000000000000000000000000000000000000";
+    k_cast_reg_101(63 downto 19) <= "000000000000000000000000000000000000000000000";
 
     ap_NS_fsm_assign_proc : process (ap_CS_fsm)
     begin
@@ -185,7 +185,7 @@ begin
                 ap_NS_fsm <= "X";
         end case;
     end process;
-    add_ln50_fu_75_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_k_1) + unsigned(ap_const_lv20_1));
+    add_ln50_fu_75_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_k_1) + unsigned(ap_const_lv19_1));
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(0);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_pp0_stage0_11001 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -249,13 +249,13 @@ begin
     ap_sig_allocacmp_k_1_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0, k_fu_30, ap_loop_init)
     begin
         if (((ap_loop_init = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            ap_sig_allocacmp_k_1 <= ap_const_lv20_0;
+            ap_sig_allocacmp_k_1 <= ap_const_lv19_0;
         else 
             ap_sig_allocacmp_k_1 <= k_fu_30;
         end if; 
     end process;
 
-    bucket_address0 <= k_cast_fu_81_p1(20 - 1 downto 0);
+    bucket_address0 <= k_cast_fu_81_p1(19 - 1 downto 0);
 
     bucket_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)
     begin
@@ -266,7 +266,7 @@ begin
         end if; 
     end process;
 
-    icmp_ln50_fu_69_p2 <= "1" when (ap_sig_allocacmp_k_1 = ap_const_lv20_F4240) else "0";
+    icmp_ln50_fu_69_p2 <= "1" when (ap_sig_allocacmp_k_1 = ap_const_lv19_7A120) else "0";
     k_cast_fu_81_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_k_1),64));
     sorted_data_address0 <= k_cast_reg_101(19 - 1 downto 0);
 

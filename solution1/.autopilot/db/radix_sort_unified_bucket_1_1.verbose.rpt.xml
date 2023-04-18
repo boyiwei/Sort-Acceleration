@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'radix_sort_unified_bucket_1_1'" level="0">
-<item name = "Date">Mon Apr 17 18:05:33 2023
+<item name = "Date">Mon Apr 17 18:12:17 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">sort_seperate_bucket</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">17000257, 17000257, 0.170 sec, 0.170 sec, 17000257, 17000257, no</column>
+<column name="">8500257, 8500257, 85.003 ms, 85.003 ms, 8500257, 8500257, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -32,15 +32,15 @@
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
 <column name="grp_radix_sort_unified_bucket_1_1_Pipeline_1_fu_68">radix_sort_unified_bucket_1_1_Pipeline_1, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
-<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_initialization_fu_74">radix_sort_unified_bucket_1_1_Pipeline_initialization, 1000003, 1000003, 10.000 ms, 10.000 ms, 1000003, 1000003, no</column>
+<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_initialization_fu_74">radix_sort_unified_bucket_1_1_Pipeline_initialization, 500003, 500003, 5.000 ms, 5.000 ms, 500003, 500003, no</column>
 <column name="grp_radix_sort_unified_bucket_1_1_Pipeline_bucket_pointer_initialization_fu_83">radix_sort_unified_bucket_1_1_Pipeline_bucket_pointer_initialization, 18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
-<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89">radix_sort_unified_bucket_1_1_Pipeline_input_bucket, 1000003, 1000003, 10.000 ms, 10.000 ms, 1000003, 1000003, no</column>
-<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99">radix_sort_unified_bucket_1_1_Pipeline_output_bucket, 1000002, 1000002, 10.000 ms, 10.000 ms, 1000002, 1000002, no</column>
+<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89">radix_sort_unified_bucket_1_1_Pipeline_input_bucket, 500003, 500003, 5.000 ms, 5.000 ms, 500003, 500003, no</column>
+<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99">radix_sort_unified_bucket_1_1_Pipeline_output_bucket, 500002, 500002, 5.000 ms, 5.000 ms, 500002, 500002, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- sort_procedure">16000232, 16000232, 2000029, -, -, 8, no</column>
+<column name="- sort_procedure">8000232, 8000232, 1000029, -, -, 8, no</column>
 </table>
 </item>
 </section>
@@ -55,7 +55,7 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 23, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 505, 840, -</column>
+<column name="Instance">-, -, 500, 837, -</column>
 <column name="Memory">16, -, 64, 66, 0</column>
 <column name="Multiplexer">-, -, -, 379, -</column>
 <column name="Register">-, -, 26, -, -</column>
@@ -71,9 +71,9 @@
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="grp_radix_sort_unified_bucket_1_1_Pipeline_1_fu_68">radix_sort_unified_bucket_1_1_Pipeline_1, 0, 0, 7, 49, 0</column>
 <column name="grp_radix_sort_unified_bucket_1_1_Pipeline_bucket_pointer_initialization_fu_83">radix_sort_unified_bucket_1_1_Pipeline_bucket_pointer_initialization, 0, 0, 45, 108, 0</column>
-<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_initialization_fu_74">radix_sort_unified_bucket_1_1_Pipeline_initialization, 0, 0, 146, 197, 0</column>
-<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89">radix_sort_unified_bucket_1_1_Pipeline_input_bucket, 0, 0, 264, 407, 0</column>
-<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99">radix_sort_unified_bucket_1_1_Pipeline_output_bucket, 0, 0, 43, 79, 0</column>
+<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_initialization_fu_74">radix_sort_unified_bucket_1_1_Pipeline_initialization, 0, 0, 144, 196, 0</column>
+<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89">radix_sort_unified_bucket_1_1_Pipeline_input_bucket, 0, 0, 263, 406, 0</column>
+<column name="grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99">radix_sort_unified_bucket_1_1_Pipeline_output_bucket, 0, 0, 41, 78, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -82,7 +82,7 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="bucket_U">radix_sort_unified_bucket_1_1_bucket_RAM_AUTO_1R1W, 16, 0, 0, 0, 1000000, 32, 1, 32000000</column>
+<column name="bucket_U">radix_sort_unified_bucket_1_1_bucket_RAM_AUTO_1R1W, 16, 0, 0, 0, 500000, 32, 1, 16000000</column>
 <column name="bucket_pointer_U">radix_sort_unified_bucket_1_1_bucket_pointer_RAM_AUTO_1R1W, 0, 32, 33, 0, 16, 32, 1, 512</column>
 <column name="bucket_sizes_U">radix_sort_unified_bucket_1_1_bucket_sizes_RAM_AUTO_1R1W, 0, 32, 33, 0, 16, 32, 1, 512</column>
 </table>
@@ -102,7 +102,7 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">59, 11, 1, 11</column>
 <column name="ap_done">9, 2, 1, 2</column>
-<column name="bucket_address0">14, 3, 20, 60</column>
+<column name="bucket_address0">14, 3, 19, 57</column>
 <column name="bucket_ce0">14, 3, 1, 3</column>
 <column name="bucket_pointer_address0">14, 3, 4, 12</column>
 <column name="bucket_pointer_ce0">14, 3, 1, 3</column>

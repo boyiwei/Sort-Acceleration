@@ -76,7 +76,7 @@ attribute shreg_extract : string;
     signal mul_reg_158 : STD_LOGIC_VECTOR (4 downto 0);
     signal ap_CS_fsm_state7 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state7 : signal is "none";
-    signal bucket_address0 : STD_LOGIC_VECTOR (19 downto 0);
+    signal bucket_address0 : STD_LOGIC_VECTOR (18 downto 0);
     signal bucket_ce0 : STD_LOGIC;
     signal bucket_we0 : STD_LOGIC;
     signal bucket_q0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -142,7 +142,7 @@ attribute shreg_extract : string;
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89_bucket_pointer_d0 : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89_bucket_pointer_address1 : STD_LOGIC_VECTOR (3 downto 0);
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89_bucket_pointer_ce1 : STD_LOGIC;
-    signal grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89_bucket_address0 : STD_LOGIC_VECTOR (19 downto 0);
+    signal grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89_bucket_address0 : STD_LOGIC_VECTOR (18 downto 0);
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89_bucket_ce0 : STD_LOGIC;
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89_bucket_we0 : STD_LOGIC;
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89_bucket_d0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -156,7 +156,7 @@ attribute shreg_extract : string;
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99_ap_done : STD_LOGIC;
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99_ap_idle : STD_LOGIC;
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99_ap_ready : STD_LOGIC;
-    signal grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99_bucket_address0 : STD_LOGIC_VECTOR (19 downto 0);
+    signal grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99_bucket_address0 : STD_LOGIC_VECTOR (18 downto 0);
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99_bucket_ce0 : STD_LOGIC;
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99_sorted_data_address0 : STD_LOGIC_VECTOR (18 downto 0);
     signal grp_radix_sort_unified_bucket_1_2_Pipeline_output_bucket_fu_99_sorted_data_ce0 : STD_LOGIC;
@@ -277,7 +277,7 @@ attribute shreg_extract : string;
         bucket_pointer_address1 : OUT STD_LOGIC_VECTOR (3 downto 0);
         bucket_pointer_ce1 : OUT STD_LOGIC;
         bucket_pointer_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
-        bucket_address0 : OUT STD_LOGIC_VECTOR (19 downto 0);
+        bucket_address0 : OUT STD_LOGIC_VECTOR (18 downto 0);
         bucket_ce0 : OUT STD_LOGIC;
         bucket_we0 : OUT STD_LOGIC;
         bucket_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
@@ -299,7 +299,7 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        bucket_address0 : OUT STD_LOGIC_VECTOR (19 downto 0);
+        bucket_address0 : OUT STD_LOGIC_VECTOR (18 downto 0);
         bucket_ce0 : OUT STD_LOGIC;
         bucket_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
         sorted_data_address0 : OUT STD_LOGIC_VECTOR (18 downto 0);
@@ -317,7 +317,7 @@ attribute shreg_extract : string;
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
-        address0 : IN STD_LOGIC_VECTOR (19 downto 0);
+        address0 : IN STD_LOGIC_VECTOR (18 downto 0);
         ce0 : IN STD_LOGIC;
         we0 : IN STD_LOGIC;
         d0 : IN STD_LOGIC_VECTOR (31 downto 0);
@@ -367,8 +367,8 @@ begin
     bucket_U : component sort_top_radix_sort_unified_bucket_1_2_bucket_RAM_AUTO_1R1W
     generic map (
         DataWidth => 32,
-        AddressRange => 1000000,
-        AddressWidth => 20)
+        AddressRange => 500000,
+        AddressWidth => 19)
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -831,7 +831,7 @@ begin
         elsif ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
             bucket_address0 <= grp_radix_sort_unified_bucket_1_2_Pipeline_input_bucket_fu_89_bucket_address0;
         else 
-            bucket_address0 <= "XXXXXXXXXXXXXXXXXXXX";
+            bucket_address0 <= "XXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 

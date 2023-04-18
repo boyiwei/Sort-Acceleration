@@ -13,7 +13,7 @@ set hasInterrupt 0
 set C_modelName {radix_sort_unified_bucket.1.2_Pipeline_output_bucket}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ bucket int 32 regular {array 1000000 { 1 3 } 1 1 }  }
+	{ bucket int 32 regular {array 500000 { 1 3 } 1 1 }  }
 	{ sorted_data int 32 regular {array 500000 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
@@ -28,7 +28,7 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ bucket_address0 sc_out sc_lv 20 signal 0 } 
+	{ bucket_address0 sc_out sc_lv 19 signal 0 } 
 	{ bucket_ce0 sc_out sc_logic 1 signal 0 } 
 	{ bucket_q0 sc_in sc_lv 32 signal 0 } 
 	{ sorted_data_address0 sc_out sc_lv 19 signal 1 } 
@@ -43,7 +43,7 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "bucket_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "bucket", "role": "address0" }} , 
+ 	{ "name": "bucket_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":19, "type": "signal", "bundle":{"name": "bucket", "role": "address0" }} , 
  	{ "name": "bucket_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bucket", "role": "ce0" }} , 
  	{ "name": "bucket_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket", "role": "q0" }} , 
  	{ "name": "sorted_data_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":19, "type": "signal", "bundle":{"name": "sorted_data", "role": "address0" }} , 
@@ -58,7 +58,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000002", "EstimateLatencyMax" : "1000002",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "500002", "EstimateLatencyMax" : "500002",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -83,8 +83,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1000002", "Max" : "1000002"}
-	, {"Name" : "Interval", "Min" : "1000002", "Max" : "1000002"}
+	{"Name" : "Latency", "Min" : "500002", "Max" : "500002"}
+	, {"Name" : "Interval", "Min" : "500002", "Max" : "500002"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -92,6 +92,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	bucket { ap_memory {  { bucket_address0 mem_address 1 20 }  { bucket_ce0 mem_ce 1 1 }  { bucket_q0 in_data 0 32 } } }
+	bucket { ap_memory {  { bucket_address0 mem_address 1 19 }  { bucket_ce0 mem_ce 1 1 }  { bucket_q0 in_data 0 32 } } }
 	sorted_data { ap_memory {  { sorted_data_address0 mem_address 1 19 }  { sorted_data_ce0 mem_ce 1 1 }  { sorted_data_we0 mem_we 1 1 }  { sorted_data_d0 mem_din 1 32 } } }
 }

@@ -70,7 +70,7 @@ wire   [0:0] icmp_ln24_fu_114_p2;
 wire   [4:0] mul_fu_135_p3;
 reg   [4:0] mul_reg_158;
 wire    ap_CS_fsm_state7;
-reg   [19:0] bucket_address0;
+reg   [18:0] bucket_address0;
 reg    bucket_ce0;
 reg    bucket_we0;
 wire   [31:0] bucket_q0;
@@ -136,7 +136,7 @@ wire    grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89_bucket_poi
 wire   [31:0] grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89_bucket_pointer_d0;
 wire   [3:0] grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89_bucket_pointer_address1;
 wire    grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89_bucket_pointer_ce1;
-wire   [19:0] grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89_bucket_address0;
+wire   [18:0] grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89_bucket_address0;
 wire    grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89_bucket_ce0;
 wire    grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89_bucket_we0;
 wire   [31:0] grp_radix_sort_unified_bucket_1_1_Pipeline_input_bucket_fu_89_bucket_d0;
@@ -150,7 +150,7 @@ wire    grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99_ap_start;
 wire    grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99_ap_done;
 wire    grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99_ap_idle;
 wire    grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99_ap_ready;
-wire   [19:0] grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99_bucket_address0;
+wire   [18:0] grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99_bucket_address0;
 wire    grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99_bucket_ce0;
 wire   [18:0] grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99_sorted_data_address0;
 wire    grp_radix_sort_unified_bucket_1_1_Pipeline_output_bucket_fu_99_sorted_data_ce0;
@@ -198,8 +198,8 @@ end
 
 sort_top_radix_sort_unified_bucket_1_1_bucket_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
-    .AddressRange( 1000000 ),
-    .AddressWidth( 20 ))
+    .AddressRange( 500000 ),
+    .AddressWidth( 19 ))
 bucket_U(
     .clk(ap_clk),
     .reset(ap_rst),
