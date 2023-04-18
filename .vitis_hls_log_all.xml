@@ -6,7 +6,20 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.940-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.861-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.855-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.848-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:18:07.432-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:18:07.333-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:18:07.326-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:18:07.316-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:02:41.563-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:02:41.497-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:02:41.490-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:02:41.481-0700"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>

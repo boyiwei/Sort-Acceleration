@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../sort_test.c ../../../sort_top.c ../../../radix_sort_separate_bucket_parallel.c ../../../radix_sort.c ../../../merge_sort.c
+HLS_SOURCES = ../../../sort_test.c ../../../sort_top.c ../../../radix_sort_separate_bucket_parallel.c ../../../radix_sort.c ../../../merge_sort.c ../../../../heap_sort.c
 
 override TARGET := csim.exe
 
@@ -78,7 +78,7 @@ AUTOCC := apcc
 
 $(ObjDir)/sort_test.o: ../../../sort_test.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../sort_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/sort_test.d
 
@@ -105,3 +105,9 @@ $(ObjDir)/merge_sort.o: ../../../merge_sort.c $(ObjDir)/.dir
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/merge_sort.d
+
+$(ObjDir)/heap_sort.o: ../../../../heap_sort.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../../heap_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/heap_sort.d

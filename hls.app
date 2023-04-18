@@ -14,6 +14,8 @@
         <file name="sort_seperate_bucket/radix_sort.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/merge_sort.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/merge_sort.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="heap_sort.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="heap_sort.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/batch_size.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">

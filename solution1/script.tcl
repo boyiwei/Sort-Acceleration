@@ -6,6 +6,8 @@
 open_project sort_seperate_bucket
 set_top sort_top
 add_files sort_seperate_bucket/batch_size.h
+add_files heap_sort.c
+add_files heap_sort.h
 add_files sort_seperate_bucket/merge_sort.c
 add_files sort_seperate_bucket/merge_sort.h
 add_files sort_seperate_bucket/radix_sort.c
