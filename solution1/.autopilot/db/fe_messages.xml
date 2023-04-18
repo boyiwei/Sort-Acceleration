@@ -21,7 +21,7 @@
         <args ARG_PragmaFunction="radix_sort_separate_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:83:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=50 -1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1000000 -1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:29:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="input_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
@@ -30,30 +30,30 @@
         <args ARG_PragmaFunction="input_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:67:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=24" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1000000/2-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:72:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=24" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:23:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="directive" ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=radix_sort_separate_bucket_parallel_5" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1000000/2-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:139:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=9" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1000000/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:144:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=9" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1000000/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:149:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=9" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1000000/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:154:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=9" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1000000/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:159:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=9" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=1000000/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:12:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="sort_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=sort_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:13:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="sort_top" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
 </xilinx:hls_fe_msgs>

@@ -1,10 +1,10 @@
 
 
 ================================================================
-== Synthesis Summary Report of 'radix_sort_separate_bucket_parallel_5'
+== Synthesis Summary Report of 'sort_top'
 ================================================================
 + General Information: 
-    * Date:           Mon Apr 17 17:20:28 2023
+    * Date:           Mon Apr 17 18:05:35 2023
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        sort_seperate_bucket
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,60 +15,60 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+------------+------------+-----+
-    |                                    Modules                                   | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |            |            |     |
-    |                                    & Loops                                   | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF     |     LUT    | URAM|
-    +------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+------------+------------+-----+
-    |+ radix_sort_separate_bucket_parallel_5                                       |     -|  3.84|     8694|  8.694e+04|         -|     8695|     -|        no|  5 (~0%)|   -|  1264 (~0%)|  3440 (~0%)|    -|
-    | + radix_sort_separate_bucket_parallel_5_Pipeline_1                           |     -|  5.96|       18|    180.000|         -|       18|     -|        no|        -|   -|     7 (~0%)|    49 (~0%)|    -|
-    |  o Loop 1                                                                    |     -|  7.30|       16|    160.000|         1|        1|    16|       yes|        -|   -|           -|           -|    -|
-    | + radix_sort_separate_bucket_parallel_5_Pipeline_2                           |     -|  5.96|       18|    180.000|         -|       18|     -|        no|        -|   -|     7 (~0%)|    49 (~0%)|    -|
-    |  o Loop 1                                                                    |     -|  7.30|       16|    160.000|         1|        1|    16|       yes|        -|   -|           -|           -|    -|
-    | + radix_sort_separate_bucket_parallel_5_Pipeline_3                           |     -|  5.96|       18|    180.000|         -|       18|     -|        no|        -|   -|     7 (~0%)|    49 (~0%)|    -|
-    |  o Loop 1                                                                    |     -|  7.30|       16|    160.000|         1|        1|    16|       yes|        -|   -|           -|           -|    -|
-    | + radix_sort_separate_bucket_parallel_5_Pipeline_4                           |     -|  6.02|       18|    180.000|         -|       18|     -|        no|        -|   -|     7 (~0%)|    49 (~0%)|    -|
-    |  o Loop 1                                                                    |     -|  7.30|       16|    160.000|         1|        1|    16|       yes|        -|   -|           -|           -|    -|
-    | + radix_sort_separate_bucket_parallel_5_Pipeline_initialization              |     -|  5.90|       52|    520.000|         -|       52|     -|        no|        -|   -|    15 (~0%)|    61 (~0%)|    -|
-    |  o initialization                                                            |     -|  7.30|       50|    500.000|         2|        1|    50|       yes|        -|   -|           -|           -|    -|
-    | o sort_procedure                                                             |     -|  7.30|     8640|  8.640e+04|      1080|        -|     8|        no|        -|   -|           -|           -|    -|
-    |  + radix_sort_separate_bucket_parallel_5_Pipeline_inner_loop_initialization  |     -|  5.89|       52|    520.000|         -|       52|     -|        no|        -|   -|    22 (~0%)|   115 (~0%)|    -|
-    |   o inner_loop_initialization                                                |     -|  7.30|       50|    500.000|         2|        1|    50|       yes|        -|   -|           -|           -|    -|
-    |  + input_bucket_parallel_5*                                                  |     -|  4.57|       76|    760.000|         -|       77|     -|  dataflow|        -|   -|   162 (~0%)|   797 (~0%)|    -|
-    |   + input_bucket_5_1                                                         |     -|  4.57|       76|    760.000|         -|       76|     -|        no|        -|   -|    53 (~0%)|   250 (~0%)|    -|
-    |    o VITIS_LOOP_20_1                                                         |     -|  7.30|       75|    750.000|         3|        -|    25|        no|        -|   -|           -|           -|    -|
-    |   + input_bucket_5_2                                                         |     -|  4.57|       46|    460.000|         -|       46|     -|        no|        -|   -|    53 (~0%)|   250 (~0%)|    -|
-    |    o VITIS_LOOP_20_1                                                         |     -|  7.30|       45|    450.000|         3|        -|    15|        no|        -|   -|           -|           -|    -|
-    |   + input_bucket_5_3                                                         |     -|  4.57|       16|    160.000|         -|       16|     -|        no|        -|   -|    53 (~0%)|   250 (~0%)|    -|
-    |    o VITIS_LOOP_20_1                                                         |     -|  7.30|       15|    150.000|         3|        -|     5|        no|        -|   -|           -|           -|    -|
-    |  + radix_sort_separate_bucket_parallel_5_Pipeline_clear_bucket_pointer       |     -|  5.96|       18|    180.000|         -|       18|     -|        no|        -|   -|     7 (~0%)|    49 (~0%)|    -|
-    |   o clear_bucket_pointer                                                     |     -|  7.30|       16|    160.000|         1|        1|    16|       yes|        -|   -|           -|           -|    -|
-    |  o output_bucket                                                             |     -|  7.30|      928|  9.280e+03|        58|        -|    16|        no|        -|   -|           -|           -|    -|
-    |   + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_138_1          |     -|  5.40|       11|    110.000|         -|       11|     -|        no|        -|   -|    67 (~0%)|   159 (~0%)|    -|
-    |    o VITIS_LOOP_138_1                                                        |     -|  7.30|        9|     90.000|         2|        1|     9|       yes|        -|   -|           -|           -|    -|
-    |   + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_143_2          |     -|  5.40|       11|    110.000|         -|       11|     -|        no|        -|   -|    67 (~0%)|   159 (~0%)|    -|
-    |    o VITIS_LOOP_143_2                                                        |     -|  7.30|        9|     90.000|         2|        1|     9|       yes|        -|   -|           -|           -|    -|
-    |   + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_148_3          |     -|  5.40|       11|    110.000|         -|       11|     -|        no|        -|   -|    67 (~0%)|   159 (~0%)|    -|
-    |    o VITIS_LOOP_148_3                                                        |     -|  7.30|        9|     90.000|         2|        1|     9|       yes|        -|   -|           -|           -|    -|
-    |   + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_153_4          |     -|  5.41|        3|     30.000|         -|        3|     -|        no|  1 (~0%)|   -|    45 (~0%)|   109 (~0%)|    -|
-    |    o VITIS_LOOP_153_4                                                        |     -|  7.30|        1|     10.000|         2|        1|     1|       yes|        -|   -|           -|           -|    -|
-    |   + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_158_5          |     -|  4.91|       11|    110.000|         -|       11|     -|        no|  1 (~0%)|   -|    67 (~0%)|   159 (~0%)|    -|
-    |    o VITIS_LOOP_158_5                                                        |     -|  7.30|        9|     90.000|         2|        1|     9|       yes|        -|   -|           -|           -|    -|
-    +------------------------------------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+------------+------------+-----+
+    +---------------------------------------------------------------------------+------+------+----------+-----------+----------+----------+---------+----------+----------+----+------------+------------+-----+
+    |                                  Modules                                  | Issue|      | Latency  |  Latency  | Iteration|          |   Trip  |          |          |    |            |            |     |
+    |                                  & Loops                                  | Type | Slack| (cycles) |    (ns)   |  Latency | Interval |  Count  | Pipelined|   BRAM   | DSP|     FF     |     LUT    | URAM|
+    +---------------------------------------------------------------------------+------+------+----------+-----------+----------+----------+---------+----------+----------+----+------------+------------+-----+
+    |+ sort_top*                                                                |     -|  3.93|  17000257|  1.700e+08|         -|  17000258|        -|  dataflow|   64 (1%)|   -|  1366 (~0%)|  3084 (~0%)|    -|
+    | + radix_sort_unified_bucket_1_1                                           |     -|  3.93|  17000257|  1.700e+08|         -|  17000257|        -|        no|  16 (~0%)|   -|   595 (~0%)|  1308 (~0%)|    -|
+    |  + radix_sort_unified_bucket_1_1_Pipeline_1                               |     -|  5.96|        18|    180.000|         -|        18|        -|        no|         -|   -|     7 (~0%)|    49 (~0%)|    -|
+    |   o Loop 1                                                                |     -|  7.30|        16|    160.000|         1|         1|       16|       yes|         -|   -|           -|           -|    -|
+    |  + radix_sort_unified_bucket_1_1_Pipeline_initialization                  |     -|  4.80|   1000003|  1.000e+07|         -|   1000003|        -|        no|         -|   -|   146 (~0%)|   197 (~0%)|    -|
+    |   o initialization                                                        |     -|  7.30|   1000001|  1.000e+07|         3|         1|  1000000|       yes|         -|   -|           -|           -|    -|
+    |  o sort_procedure                                                         |     -|  7.30|  16000232|  1.600e+08|   2000029|         -|        8|        no|         -|   -|           -|           -|    -|
+    |   + radix_sort_unified_bucket_1_1_Pipeline_bucket_pointer_initialization  |     -|  5.33|        18|    180.000|         -|        18|        -|        no|         -|   -|    45 (~0%)|   108 (~0%)|    -|
+    |    o bucket_pointer_initialization                                        |     -|  7.30|        16|    160.000|         2|         1|       16|       yes|         -|   -|           -|           -|    -|
+    |   + radix_sort_unified_bucket_1_1_Pipeline_input_bucket                   |     -|  3.93|   1000003|  1.000e+07|         -|   1000003|        -|        no|         -|   -|   264 (~0%)|   407 (~0%)|    -|
+    |    o input_bucket                                                         |     -|  7.30|   1000001|  1.000e+07|         3|         1|  1000000|       yes|         -|   -|           -|           -|    -|
+    |   + radix_sort_unified_bucket_1_1_Pipeline_output_bucket                  |     -|  4.80|   1000002|  1.000e+07|         -|   1000002|        -|        no|         -|   -|    43 (~0%)|    79 (~0%)|    -|
+    |    o output_bucket                                                        |     -|  7.30|   1000000|  1.000e+07|         2|         1|  1000000|       yes|         -|   -|           -|           -|    -|
+    | + radix_sort_unified_bucket_1_2                                           |     -|  3.93|  17000257|  1.700e+08|         -|  17000257|        -|        no|  16 (~0%)|   -|   595 (~0%)|  1335 (~0%)|    -|
+    |  + radix_sort_unified_bucket_1_2_Pipeline_1                               |     -|  5.96|        18|    180.000|         -|        18|        -|        no|         -|   -|     7 (~0%)|    49 (~0%)|    -|
+    |   o Loop 1                                                                |     -|  7.30|        16|    160.000|         1|         1|       16|       yes|         -|   -|           -|           -|    -|
+    |  + radix_sort_unified_bucket_1_2_Pipeline_initialization                  |     -|  4.80|   1000003|  1.000e+07|         -|   1000003|        -|        no|         -|   -|   146 (~0%)|   224 (~0%)|    -|
+    |   o initialization                                                        |     -|  7.30|   1000001|  1.000e+07|         3|         1|  1000000|       yes|         -|   -|           -|           -|    -|
+    |  o sort_procedure                                                         |     -|  7.30|  16000232|  1.600e+08|   2000029|         -|        8|        no|         -|   -|           -|           -|    -|
+    |   + radix_sort_unified_bucket_1_2_Pipeline_bucket_pointer_initialization  |     -|  5.33|        18|    180.000|         -|        18|        -|        no|         -|   -|    45 (~0%)|   108 (~0%)|    -|
+    |    o bucket_pointer_initialization                                        |     -|  7.30|        16|    160.000|         2|         1|       16|       yes|         -|   -|           -|           -|    -|
+    |   + radix_sort_unified_bucket_1_2_Pipeline_input_bucket                   |     -|  3.93|   1000003|  1.000e+07|         -|   1000003|        -|        no|         -|   -|   264 (~0%)|   407 (~0%)|    -|
+    |    o input_bucket                                                         |     -|  7.30|   1000001|  1.000e+07|         3|         1|  1000000|       yes|         -|   -|           -|           -|    -|
+    |   + radix_sort_unified_bucket_1_2_Pipeline_output_bucket                  |     -|  4.80|   1000002|  1.000e+07|         -|   1000002|        -|        no|         -|   -|    43 (~0%)|    79 (~0%)|    -|
+    |    o output_bucket                                                        |     -|  7.30|   1000000|  1.000e+07|         2|         1|  1000000|       yes|         -|   -|           -|           -|    -|
+    | + merge_sort_1                                                            |     -|  3.94|   2000002|  2.000e+07|         -|   2000002|        -|        no|         -|   -|   174 (~0%)|   409 (~0%)|    -|
+    |  o VITIS_LOOP_7_1                                                         |     -|  7.30|   2000000|  2.000e+07|         2|         1|  2000000|       yes|         -|   -|           -|           -|    -|
+    +---------------------------------------------------------------------------+------+------+----------+-----------+----------+----------+---------+----------+----------+----+------------+------------+-----+
 
 
 ================================================================
 == HW Interfaces
 ================================================================
 * AP_MEMORY
-+----------------------+----------+
-| Interface            | Bitwidth |
-+----------------------+----------+
-| data_address0        | 6        |
-| data_q0              | 32       |
-| sorted_data_address0 | 6        |
-| sorted_data_d0       | 32       |
-| sorted_data_q0       | 32       |
-+----------------------+----------+
++-------------------+----------+
+| Interface         | Bitwidth |
++-------------------+----------+
+| input_r_address0  | 20       |
+| input_r_address1  | 20       |
+| input_r_d0        | 32       |
+| input_r_d1        | 32       |
+| input_r_q0        | 32       |
+| input_r_q1        | 32       |
+| output_r_address0 | 20       |
+| output_r_address1 | 20       |
+| output_r_d0       | 32       |
+| output_r_d1       | 32       |
+| output_r_q0       | 32       |
+| output_r_q1       | 32       |
++-------------------+----------+
 
 * TOP LEVEL CONTROL
 +-----------+------------+-----------------------------------+
@@ -84,113 +84,107 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+-------------+-----------+----------+
-| Argument    | Direction | Datatype |
-+-------------+-----------+----------+
-| data        | in        | int*     |
-| sorted_data | inout     | int*     |
-+-------------+-----------+----------+
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| input    | in        | int*     |
+| output   | out       | int*     |
++----------+-----------+----------+
 
 * SW-to-HW Mapping
-+-------------+----------------------+---------+----------+
-| Argument    | HW Interface         | HW Type | HW Usage |
-+-------------+----------------------+---------+----------+
-| data        | data_address0        | port    | offset   |
-| data        | data_ce0             | port    |          |
-| data        | data_q0              | port    |          |
-| sorted_data | sorted_data_address0 | port    | offset   |
-| sorted_data | sorted_data_ce0      | port    |          |
-| sorted_data | sorted_data_we0      | port    |          |
-| sorted_data | sorted_data_d0       | port    |          |
-| sorted_data | sorted_data_q0       | port    |          |
-+-------------+----------------------+---------+----------+
++----------+-------------------+---------+----------+
+| Argument | HW Interface      | HW Type | HW Usage |
++----------+-------------------+---------+----------+
+| input    | input_r_address0  | port    | offset   |
+| input    | input_r_ce0       | port    |          |
+| input    | input_r_d0        | port    |          |
+| input    | input_r_q0        | port    |          |
+| input    | input_r_we0       | port    |          |
+| input    | input_r_address1  | port    | offset   |
+| input    | input_r_ce1       | port    |          |
+| input    | input_r_d1        | port    |          |
+| input    | input_r_q1        | port    |          |
+| input    | input_r_we1       | port    |          |
+| output   | output_r_address0 | port    | offset   |
+| output   | output_r_ce0      | port    |          |
+| output   | output_r_d0       | port    |          |
+| output   | output_r_q0       | port    |          |
+| output   | output_r_we0      | port    |          |
+| output   | output_r_address1 | port    | offset   |
+| output   | output_r_ce1      | port    |          |
+| output   | output_r_d1       | port    |          |
+| output   | output_r_q1       | port    |          |
+| output   | output_r_we1      | port    |          |
++----------+-------------------+---------+----------+
 
 
 ================================================================
 == Bind Op Report
 ================================================================
-+-----------------------------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
-| Name                                                                        | DSP | Pragma | Variable    | Op  | Impl   | Latency |
-+-----------------------------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
-| + radix_sort_separate_bucket_parallel_5                                     | 0   |        |             |     |        |         |
-|   i_2_fu_386_p2                                                             | -   |        | i_2         | add | fabric | 0       |
-|   add_ln137_1_fu_402_p2                                                     | -   |        | add_ln137_1 | add | fabric | 0       |
-|   add_ln140_fu_441_p2                                                       | -   |        | add_ln140   | add | fabric | 0       |
-|   empty_fu_463_p2                                                           | -   |        | empty       | add | fabric | 0       |
-|   empty_22_fu_479_p2                                                        | -   |        | empty_22    | add | fabric | 0       |
-|   empty_23_fu_495_p2                                                        | -   |        | empty_23    | add | fabric | 0       |
-|   add_ln153_fu_504_p2                                                       | -   |        | add_ln153   | add | fabric | 0       |
-|   add_ln158_fu_511_p2                                                       | -   |        | add_ln158   | add | fabric | 0       |
-|   add_ln137_fu_521_p2                                                       | -   |        | add_ln137   | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_1                         | 0   |        |             |     |        |         |
-|    empty_21_fu_56_p2                                                        | -   |        | empty_21    | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_2                         | 0   |        |             |     |        |         |
-|    empty_20_fu_56_p2                                                        | -   |        | empty_20    | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_3                         | 0   |        |             |     |        |         |
-|    empty_19_fu_56_p2                                                        | -   |        | empty_19    | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_4                         | 0   |        |             |     |        |         |
-|    empty_18_fu_58_p2                                                        | -   |        | empty_18    | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_initialization            | 0   |        |             |     |        |         |
-|    add_ln107_fu_81_p2                                                       | -   |        | add_ln107   | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_inner_loop_initialization | 0   |        |             |     |        |         |
-|    add_ln114_fu_123_p2                                                      | -   |        | add_ln114   | add | fabric | 0       |
-|    add_ln122_fu_161_p2                                                      | -   |        | add_ln122   | add | fabric | 0       |
-|    add_ln119_fu_171_p2                                                      | -   |        | add_ln119   | add | fabric | 0       |
-|  + input_bucket_parallel_5                                                  | 0   |        |             |     |        |         |
-|   + input_bucket_5_1                                                        | 0   |        |             |     |        |         |
-|     add_ln20_fu_120_p2                                                      | -   |        | add_ln20    | add | fabric | 0       |
-|     bucket_pointer_d0                                                       | -   |        | add_ln24    | add | fabric | 0       |
-|   + input_bucket_5_2                                                        | 0   |        |             |     |        |         |
-|     bucket_pointer_d0                                                       | -   |        | add_ln24    | add | fabric | 0       |
-|     add_ln20_fu_120_p2                                                      | -   |        | add_ln20    | add | fabric | 0       |
-|   + input_bucket_5_3                                                        | 0   |        |             |     |        |         |
-|     bucket_pointer_d0                                                       | -   |        | add_ln24    | add | fabric | 0       |
-|     add_ln20_fu_120_p2                                                      | -   |        | add_ln20    | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_clear_bucket_pointer      | 0   |        |             |     |        |         |
-|    add_ln167_fu_110_p2                                                      | -   |        | add_ln167   | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_138_1          | 0   |        |             |     |        |         |
-|    add_ln138_fu_128_p2                                                      | -   |        | add_ln138   | add | fabric | 0       |
-|    add_ln140_1_fu_138_p2                                                    | -   |        | add_ln140_1 | add | fabric | 0       |
-|    add_ln141_fu_166_p2                                                      | -   |        | add_ln141   | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_143_2          | 0   |        |             |     |        |         |
-|    add_ln143_fu_128_p2                                                      | -   |        | add_ln143   | add | fabric | 0       |
-|    add_ln145_fu_138_p2                                                      | -   |        | add_ln145   | add | fabric | 0       |
-|    add_ln146_fu_166_p2                                                      | -   |        | add_ln146   | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_148_3          | 0   |        |             |     |        |         |
-|    add_ln148_fu_128_p2                                                      | -   |        | add_ln148   | add | fabric | 0       |
-|    add_ln150_fu_138_p2                                                      | -   |        | add_ln150   | add | fabric | 0       |
-|    add_ln151_fu_166_p2                                                      | -   |        | add_ln151   | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_153_4          | 0   |        |             |     |        |         |
-|    add_ln156_fu_170_p2                                                      | -   |        | add_ln156   | add | fabric | 0       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_158_5          | 0   |        |             |     |        |         |
-|    add_ln158_fu_130_p2                                                      | -   |        | add_ln158   | add | fabric | 0       |
-|    add_ln160_fu_140_p2                                                      | -   |        | add_ln160   | add | fabric | 0       |
-|    add_ln161_fu_168_p2                                                      | -   |        | add_ln161   | add | fabric | 0       |
-+-----------------------------------------------------------------------------+-----+--------+-------------+-----+--------+---------+
++--------------------------------------------------------------------------+-----+--------+-----------------------+-----+--------+---------+
+| Name                                                                     | DSP | Pragma | Variable              | Op  | Impl   | Latency |
++--------------------------------------------------------------------------+-----+--------+-----------------------+-----+--------+---------+
+| + sort_top                                                               | 0   |        |                       |     |        |         |
+|  + radix_sort_unified_bucket_1_1                                         | 0   |        |                       |     |        |         |
+|    i_4_fu_120_p2                                                         | -   |        | i_4                   | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_1_Pipeline_1                             | 0   |        |                       |     |        |         |
+|     empty_19_fu_56_p2                                                    | -   |        | empty_19              | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_1_Pipeline_initialization                | 0   |        |                       |     |        |         |
+|     add_ln17_fu_124_p2                                                   | -   |        | add_ln17              | add | fabric | 0       |
+|     bucket_sizes_d0                                                      | -   |        | add_ln20              | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_1_Pipeline_bucket_pointer_initialization | 0   |        |                       |     |        |         |
+|     add_ln32_fu_84_p2                                                    | -   |        | add_ln32              | add | fabric | 0       |
+|     next_bucket_pointer_fu_104_p2                                        | -   |        | next_bucket_pointer   | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_1_Pipeline_input_bucket                  | 0   |        |                       |     |        |         |
+|     add_ln39_fu_170_p2                                                   | -   |        | add_ln39              | add | fabric | 0       |
+|     bucket_pointer_d0                                                    | -   |        | add_ln43              | add | fabric | 0       |
+|     bucket_sizes_d0                                                      | -   |        | add_ln46              | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_1_Pipeline_output_bucket                 | 0   |        |                       |     |        |         |
+|     add_ln50_fu_75_p2                                                    | -   |        | add_ln50              | add | fabric | 0       |
+|  + radix_sort_unified_bucket_1_2                                         | 0   |        |                       |     |        |         |
+|    i_2_fu_120_p2                                                         | -   |        | i_2                   | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_2_Pipeline_1                             | 0   |        |                       |     |        |         |
+|     empty_16_fu_56_p2                                                    | -   |        | empty_16              | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_2_Pipeline_initialization                | 0   |        |                       |     |        |         |
+|     add_ln17_fu_130_p2                                                   | -   |        | add_ln17              | add | fabric | 0       |
+|     add_ln18_fu_136_p2                                                   | -   |        | add_ln18              | add | fabric | 0       |
+|     bucket_sizes_d0                                                      | -   |        | add_ln20              | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_2_Pipeline_bucket_pointer_initialization | 0   |        |                       |     |        |         |
+|     add_ln32_fu_84_p2                                                    | -   |        | add_ln32              | add | fabric | 0       |
+|     next_bucket_pointer_1_fu_104_p2                                      | -   |        | next_bucket_pointer_1 | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_2_Pipeline_input_bucket                  | 0   |        |                       |     |        |         |
+|     add_ln39_fu_170_p2                                                   | -   |        | add_ln39              | add | fabric | 0       |
+|     bucket_pointer_d0                                                    | -   |        | add_ln43              | add | fabric | 0       |
+|     bucket_sizes_d0                                                      | -   |        | add_ln46              | add | fabric | 0       |
+|   + radix_sort_unified_bucket_1_2_Pipeline_output_bucket                 | 0   |        |                       |     |        |         |
+|     add_ln50_fu_75_p2                                                    | -   |        | add_ln50              | add | fabric | 0       |
+|  + merge_sort_1                                                          | 0   |        |                       |     |        |         |
+|    add_ln7_fu_120_p2                                                     | -   |        | add_ln7               | add | fabric | 0       |
+|    j_6_fu_171_p2                                                         | -   |        | j_6                   | add | fabric | 0       |
+|    k_5_fu_182_p2                                                         | -   |        | k_5                   | add | fabric | 0       |
+|    k_4_fu_209_p2                                                         | -   |        | k_4                   | add | fabric | 0       |
+|    j_fu_219_p2                                                           | -   |        | j                     | add | fabric | 0       |
++--------------------------------------------------------------------------+-----+--------+-----------------------+-----+--------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+--------------------------------------------------------------------+------+------+--------+-----------------+---------+------+---------+
-| Name                                                               | BRAM | URAM | Pragma | Variable        | Storage | Impl | Latency |
-+--------------------------------------------------------------------+------+------+--------+-----------------+---------+------+---------+
-| + radix_sort_separate_bucket_parallel_5                            | 5    | 0    |        |                 |         |      |         |
-|   bucket0_U                                                        | 1    | -    |        | bucket0         | ram_1p  | auto | 1       |
-|   bucket1_U                                                        | 1    | -    |        | bucket1         | ram_1p  | auto | 1       |
-|   bucket2_U                                                        | 1    | -    |        | bucket2         | ram_1p  | auto | 1       |
-|   bucket_pointer0_U                                                | -    | -    |        | bucket_pointer0 | ram_1p  | auto | 1       |
-|   bucket_pointer1_U                                                | -    | -    |        | bucket_pointer1 | ram_1p  | auto | 1       |
-|   bucket_pointer2_U                                                | -    | -    |        | bucket_pointer2 | ram_1p  | auto | 1       |
-|   bucket_pointer3_U                                                | -    | -    |        | bucket_pointer3 | ram_1p  | auto | 1       |
-|   sorted_data0_U                                                   | -    | -    |        | sorted_data0    | ram_1p  | auto | 1       |
-|   sorted_data1_U                                                   | -    | -    |        | sorted_data1    | ram_1p  | auto | 1       |
-|   sorted_data2_U                                                   | -    | -    |        | sorted_data2    | ram_1p  | auto | 1       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_153_4 | 1    | 0    |        |                 |         |      |         |
-|    bucket3_U                                                       | 1    | -    |        | bucket3         | ram_1p  | auto | 1       |
-|  + radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_158_5 | 1    | 0    |        |                 |         |      |         |
-|    bucket4_U                                                       | 1    | -    |        | bucket4         | ram_1p  | auto | 1       |
-+--------------------------------------------------------------------+------+------+--------+-----------------+---------+------+---------+
++----------------------------------+------+------+--------+----------------+---------+------+---------+
+| Name                             | BRAM | URAM | Pragma | Variable       | Storage | Impl | Latency |
++----------------------------------+------+------+--------+----------------+---------+------+---------+
+| + sort_top                       | 64   | 0    |        |                |         |      |         |
+|   half_sorted0_U                 | 16   | -    |        | half_sorted0   | ram_1p  | auto | 1       |
+|   half_sorted1_U                 | 16   | -    |        | half_sorted1   | ram_1p  | auto | 1       |
+|  + radix_sort_unified_bucket_1_1 | 16   | 0    |        |                |         |      |         |
+|    bucket_U                      | 16   | -    |        | bucket         | ram_1p  | auto | 1       |
+|    bucket_pointer_U              | -    | -    |        | bucket_pointer | ram_s2p | auto | 1       |
+|    bucket_sizes_U                | -    | -    |        | bucket_sizes   | ram_s2p | auto | 1       |
+|  + radix_sort_unified_bucket_1_2 | 16   | 0    |        |                |         |      |         |
+|    bucket_U                      | 16   | -    |        | bucket         | ram_1p  | auto | 1       |
+|    bucket_pointer_U              | -    | -    |        | bucket_pointer | ram_s2p | auto | 1       |
+|    bucket_sizes_U                | -    | -    |        | bucket_sizes   | ram_s2p | auto | 1       |
++----------------------------------+------+------+--------+----------------+---------+------+---------+
 
 
 ================================================================
@@ -205,23 +199,23 @@
 +----------+---------+--------------------------------------------------------------------+------------------------------------------------+
 
 * Valid Pragma Syntax
-+----------------+-----------------+---------------------------------------------------------------------------------------------------------+
-| Type           | Options         | Location                                                                                                |
-+----------------+-----------------+---------------------------------------------------------------------------------------------------------+
-| pipeline       |                 | sort_seperate_bucket/merge_sort.c:9 in merge_sort                                                       |
-| loop_merge     |                 | sort_seperate_bucket/radix_sort.c:26 in radix_sort_unified_bucket                                       |
-| loop_merge     |                 | sort_seperate_bucket/radix_sort.c:69 in radix_sort_separate_bucket                                      |
-| loop_tripcount | min=0 max=50 -1 | sort_seperate_bucket/radix_sort.c:83 in radix_sort_separate_bucket                                      |
-| dataflow       |                 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:29 in input_bucket_parallel_2                |
-| dataflow       |                 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:39 in input_bucket_parallel_5                |
-| loop_tripcount | min=0 max=24    | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:67 in radix_sort_separate_bucket_parallel_2  |
-| loop_tripcount | min=0 max=24    | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:72 in radix_sort_separate_bucket_parallel_2  |
-| loop_tripcount | min=0 max=9     | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:139 in radix_sort_separate_bucket_parallel_5 |
-| loop_tripcount | min=0 max=9     | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:144 in radix_sort_separate_bucket_parallel_5 |
-| loop_tripcount | min=0 max=9     | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:149 in radix_sort_separate_bucket_parallel_5 |
-| loop_tripcount | min=0 max=9     | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:154 in radix_sort_separate_bucket_parallel_5 |
-| loop_tripcount | min=0 max=9     | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:159 in radix_sort_separate_bucket_parallel_5 |
-| dataflow       |                 | sort_seperate_bucket/sort_top.c:12 in sort_top                                                          |
-+----------------+-----------------+---------------------------------------------------------------------------------------------------------+
++----------------+-----------------------+---------------------------------------------------------------------------------------------------------+
+| Type           | Options               | Location                                                                                                |
++----------------+-----------------------+---------------------------------------------------------------------------------------------------------+
+| pipeline       |                       | sort_seperate_bucket/merge_sort.c:9 in merge_sort                                                       |
+| loop_merge     |                       | sort_seperate_bucket/radix_sort.c:26 in radix_sort_unified_bucket                                       |
+| loop_merge     |                       | sort_seperate_bucket/radix_sort.c:69 in radix_sort_separate_bucket                                      |
+| loop_tripcount | min=0 max=1000000 -1  | sort_seperate_bucket/radix_sort.c:83 in radix_sort_separate_bucket                                      |
+| dataflow       |                       | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:29 in input_bucket_parallel_2                |
+| dataflow       |                       | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:39 in input_bucket_parallel_5                |
+| loop_tripcount | min=0 max=1000000/2-1 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:67 in radix_sort_separate_bucket_parallel_2  |
+| loop_tripcount | min=0 max=1000000/2-1 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:72 in radix_sort_separate_bucket_parallel_2  |
+| loop_tripcount | min=0 max=1000000/5-1 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:139 in radix_sort_separate_bucket_parallel_5 |
+| loop_tripcount | min=0 max=1000000/5-1 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:144 in radix_sort_separate_bucket_parallel_5 |
+| loop_tripcount | min=0 max=1000000/5-1 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:149 in radix_sort_separate_bucket_parallel_5 |
+| loop_tripcount | min=0 max=1000000/5-1 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:154 in radix_sort_separate_bucket_parallel_5 |
+| loop_tripcount | min=0 max=1000000/5-1 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:159 in radix_sort_separate_bucket_parallel_5 |
+| dataflow       |                       | sort_seperate_bucket/sort_top.c:13 in sort_top                                                          |
++----------------+-----------------------+---------------------------------------------------------------------------------------------------------+
 
 

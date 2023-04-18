@@ -64,12 +64,12 @@ void radix_sort_separate_bucket_parallel_2(int data[batch_size], int sorted_data
 		output_bucket:
 		for (int l = 0; l < 16; l++) {
 			for(int m1=0; m1<bucket_pointer0[l]; m1++){
-#pragma HLS loop_tripcount min=0 max=24 // depends on the size of batch_size/n
+#pragma HLS loop_tripcount min=0 max=batch_size/2-1 // depends on the size of batch_size/n
 				sorted_data[k] = bucket[0][l][m1];
 				k = k + 1;
 			}
 			for(int m2=0; m2<bucket_pointer1[l]; m2++){
-#pragma HLS loop_tripcount min=0 max=24
+#pragma HLS loop_tripcount min=0 max=batch_size/2-1
 				sorted_data[k] = bucket[1][l][m2];
 				k = k + 1;
 			}
@@ -136,27 +136,27 @@ void radix_sort_separate_bucket_parallel_5(int data[batch_size], int sorted_data
 		output_bucket:
 		for (int l = 0; l < 16; l++) {
 			for(int m0=0; m0<bucket_pointer0[l]; m0++){
-#pragma HLS loop_tripcount min=0 max=9
+#pragma HLS loop_tripcount min=0 max=batch_size/5-1
 				sorted_data[k] = bucket0[l][m0];
 				k = k + 1;
 			}
 			for(int m1=0; m1<bucket_pointer1[l]; m1++){
-#pragma HLS loop_tripcount min=0 max=9
+#pragma HLS loop_tripcount min=0 max=batch_size/5-1
 				sorted_data[k] = bucket1[l][m1];
 				k = k + 1;
 			}
 			for(int m2=0; m2<bucket_pointer2[l]; m2++){
-#pragma HLS loop_tripcount min=0 max=9
+#pragma HLS loop_tripcount min=0 max=batch_size/5-1
 				sorted_data[k] = bucket2[l][m2];
 				k = k + 1;
 			}
 			for(int m3=0; m3<bucket_pointer3[l]; m3++){
-#pragma HLS loop_tripcount min=0 max=9
+#pragma HLS loop_tripcount min=0 max=batch_size/5-1
 				sorted_data[k] = bucket3[l][m3];
 				k = k + 1;
 			}
 			for(int m4=0; m4<bucket_pointer2[l]; m4++){
-#pragma HLS loop_tripcount min=0 max=9
+#pragma HLS loop_tripcount min=0 max=batch_size/5-1
 				sorted_data[k] = bucket4[l][m4];
 				k = k + 1;
 			}

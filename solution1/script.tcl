@@ -4,7 +4,7 @@
 ## Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project sort_seperate_bucket
-set_top radix_sort_separate_bucket_parallel_5
+set_top sort_top
 add_files sort_seperate_bucket/sort_top.c
 add_files sort_seperate_bucket/radix_sort_separate_bucket_parallel.c
 add_files sort_seperate_bucket/radix_sort.h

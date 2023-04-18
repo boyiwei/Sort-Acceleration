@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="radix_sort_separate_bucket_parallel_5">
+<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="sort_top">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

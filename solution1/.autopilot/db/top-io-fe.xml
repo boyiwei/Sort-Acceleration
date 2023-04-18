@@ -1,13 +1,13 @@
 <root versionMajor = "1" versionMinor = "5">
-  <kernel src_name="radix_sort_separate_bucket_parallel_5" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+  <kernel src_name="sort_top" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
     <args>
-      <arg id="0" access_type="r" src_name="data" src_type="int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="50">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="data" hw_bitwidth="32" hw_size_or_depth="50" hw_kernel_support="false">
+      <arg id="0" access_type="r" src_name="input" src_type="int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1000000">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="input_r" hw_bitwidth="32" hw_size_or_depth="1000000" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>
-      <arg id="1" access_type="rw" src_name="sorted_data" src_type="int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="50">
-        <hw hw_usage="data" hw_interface="BRAM" hw_name="sorted_data" hw_bitwidth="32" hw_size_or_depth="50" hw_kernel_support="false">
+      <arg id="1" access_type="w" src_name="output" src_type="int*" src_isptr="1" src_bitwidth="32" src_size_or_depth="1000000">
+        <hw hw_usage="data" hw_interface="BRAM" hw_name="output_r" hw_bitwidth="32" hw_size_or_depth="1000000" hw_kernel_support="false">
           <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0"/>
         </hw>
       </arg>

@@ -1,10 +1,10 @@
 
-set TopModule "radix_sort_separate_bucket_parallel_5"
+set TopModule "sort_top"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 1
 set CombLogicFlag 0
-set PipelineFlag 0
+set PipelineFlag 1
 set DataflowTaskPipelineFlag 1
 set TrivialPipelineFlag 0
 set noPortSwitchingFlag 0
@@ -23,7 +23,7 @@ set ResetRegisterNum 0
 set FsmEncStyle onehot
 set MaxFanout 0
 set RtlPrefix {}
-set RtlSubPrefix radix_sort_separate_bucket_parallel_5_
+set RtlSubPrefix sort_top_
 set ExtraCCFlags {}
 set ExtraCLdFlags {}
 set SynCheckOptions {}
