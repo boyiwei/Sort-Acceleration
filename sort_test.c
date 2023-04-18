@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "batch_size.h"
 
-const int data[] = {
+int data[] = {
     #include "dataset.h"
 };
 
@@ -15,9 +15,9 @@ const int data[] = {
 //};
 
 //int sorted_data[2*batch_size];
-int sorted_data[batch_size];
+//int sorted_data[batch_size];
 
-int main(void){
+int main(){
     printf("Checking results\n");
 //    radix_sort_seperate_bucket_parallel(input[1], sorted_data);
     heap_sort(data, batch_size);

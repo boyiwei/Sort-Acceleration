@@ -49,12 +49,12 @@
 		<link>
 			<name>source/heap_sort.c</name>
 			<type>1</type>
-			<location>/home/boyiw7/heap_sort.c</location>
+			<location>/home/boyiw7/sort_seperate_bucket/heap_sort.c</location>
 		</link>
 		<link>
 			<name>source/heap_sort.h</name>
 			<type>1</type>
-			<location>/home/boyiw7/heap_sort.h</location>
+			<location>/home/boyiw7/sort_seperate_bucket/heap_sort.h</location>
 		</link>
 		<link>
 			<name>source/merge_sort.c</name>
@@ -89,7 +89,7 @@
 		<link>
 			<name>testbench/batch_size.h</name>
 			<type>1</type>
-			<location>/home/boyiw7/batch_size.h</location>
+			<location>/home/boyiw7/sort_seperate_bucket/batch_size.h</location>
 		</link>
 		<link>
 			<name>testbench/dataset.h</name>

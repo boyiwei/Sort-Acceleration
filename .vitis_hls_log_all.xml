@@ -7,6 +7,13 @@
       <mgLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:42:41.023-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:40:38.691-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:34:59.850-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:30:47.511-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:21:15.579-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:59:38.076-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:59:02.285-0700"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.940-0700"/>
         <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.861-0700"/>
         <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.855-0700"/>
@@ -48,7 +55,17 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:32:57.808-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:30:29.556-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:21:01.648-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:59:24.128-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:58:44.266-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:58:02.323-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:30:56.332-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'batch_size.h'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:30:14.264-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:30:14.246-0700" type="Warning"/>
+      </csimLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>
