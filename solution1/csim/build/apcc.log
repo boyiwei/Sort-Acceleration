@@ -1,7 +1,7 @@
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Mon Apr 17 09:17:30 PDT 2023
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Mon Apr 17 11:41:54 PDT 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/4318551681748250380122
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/5066501681756914149797
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 2.18 seconds. Total CPU system time: 0.31 seconds. Total elapsed time: 2.27 seconds; peak allocated memory: 98.965 MB.
+INFO: [HLS 200-112] Total CPU user time: 2.28 seconds. Total CPU system time: 0.31 seconds. Total elapsed time: 2.39 seconds; peak allocated memory: 98.980 MB.

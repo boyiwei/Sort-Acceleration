@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'input_bucket_5_1'
+================================================================
+* Date:           Mon Apr 17 17:20:26 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sort_seperate_bucket
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.733 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       76|       76|  0.760 us|  0.760 us|   76|   76|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_20_1  |       75|       75|         3|          -|          -|    25|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      192|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       58|    -|
+|Register             |        -|     -|       53|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       53|      250|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln20_fu_120_p2    |         +|   0|  0|  12|           5|           1|
+    |add_ln23_3_fu_177_p2  |         +|   0|  0|  19|           8|           8|
+    |add_ln23_fu_167_p2    |         +|   0|  0|  19|           8|           8|
+    |bucket_pointer_d0     |         +|   0|  0|  39|          32|           1|
+    |shifted_fu_131_p2     |      ashr|   0|  0|  92|          32|          32|
+    |icmp_ln20_fu_114_p2   |      icmp|   0|  0|   9|           5|           4|
+    |ap_block_state1       |        or|   0|  0|   2|           1|           1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 192|          91|          55|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  26|          5|    1|          5|
+    |ap_done                  |   9|          2|    1|          2|
+    |bucket_pointer_address0  |  14|          3|    4|         12|
+    |j_fu_40                  |   9|          2|    5|         10|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  58|         12|   11|         29|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   4|   0|    4|          0|
+    |ap_done_reg                  |   1|   0|    1|          0|
+    |bucket_pointer_addr_reg_226  |   4|   0|    4|          0|
+    |ith_radix_reg_220            |   4|   0|    4|          0|
+    |j_fu_40                      |   5|   0|    5|          0|
+    |sorted_data_load_reg_215     |  32|   0|   32|          0|
+    |zext_ln20_reg_202            |   3|   0|   32|         29|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        |  53|   0|   82|         29|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++-------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                   |   in|    1|  ap_ctrl_hs|  input_bucket_5.1|  return value|
+|ap_rst                   |   in|    1|  ap_ctrl_hs|  input_bucket_5.1|  return value|
+|ap_start                 |   in|    1|  ap_ctrl_hs|  input_bucket_5.1|  return value|
+|ap_done                  |  out|    1|  ap_ctrl_hs|  input_bucket_5.1|  return value|
+|ap_continue              |   in|    1|  ap_ctrl_hs|  input_bucket_5.1|  return value|
+|ap_idle                  |  out|    1|  ap_ctrl_hs|  input_bucket_5.1|  return value|
+|ap_ready                 |  out|    1|  ap_ctrl_hs|  input_bucket_5.1|  return value|
+|i                        |   in|    3|     ap_none|                 i|        scalar|
+|sorted_data_address0     |  out|    4|   ap_memory|       sorted_data|         array|
+|sorted_data_ce0          |  out|    1|   ap_memory|       sorted_data|         array|
+|sorted_data_q0           |   in|   32|   ap_memory|       sorted_data|         array|
+|bucket_address0          |  out|    8|   ap_memory|            bucket|         array|
+|bucket_ce0               |  out|    1|   ap_memory|            bucket|         array|
+|bucket_we0               |  out|    1|   ap_memory|            bucket|         array|
+|bucket_d0                |  out|   32|   ap_memory|            bucket|         array|
+|bucket_pointer_address0  |  out|    4|   ap_memory|    bucket_pointer|         array|
+|bucket_pointer_ce0       |  out|    1|   ap_memory|    bucket_pointer|         array|
+|bucket_pointer_we0       |  out|    1|   ap_memory|    bucket_pointer|         array|
+|bucket_pointer_d0        |  out|   32|   ap_memory|    bucket_pointer|         array|
+|bucket_pointer_q0        |   in|   32|   ap_memory|    bucket_pointer|         array|
++-------------------------+-----+-----+------------+------------------+--------------+
+

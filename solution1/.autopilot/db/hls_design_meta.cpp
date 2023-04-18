@@ -15,4 +15,4 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("sorted_data_d0", 32, hls_out, 1, "ap_memory", "mem_din", 1),
 	Port_Property("sorted_data_q0", 32, hls_in, 1, "ap_memory", "mem_dout", 1),
 };
-const char* HLS_Design_Meta::dut_name = "radix_sort_separate_bucket_parallel_2";
+const char* HLS_Design_Meta::dut_name = "radix_sort_separate_bucket_parallel_5";

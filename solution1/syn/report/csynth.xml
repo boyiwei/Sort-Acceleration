@@ -4,9 +4,9 @@
     </ReportVersion>
     <UserAssignments>
         <unit>ns</unit>
-        <ProductFamily>zynquplus</ProductFamily>
-        <Part>xczu9eg-ffvb1156-2-e</Part>
-        <TopModelName>radix_sort_separate_bucket_parallel_2</TopModelName>
+        <ProductFamily>virtexuplus</ProductFamily>
+        <Part>xcu280-fsvh2892-2L-e</Part>
+        <TopModelName>radix_sort_separate_bucket_parallel_5</TopModelName>
         <TargetClockPeriod>10.00</TargetClockPeriod>
         <ClockUncertainty>2.70</ClockUncertainty>
         <FlowTarget>vivado</FlowTarget>
@@ -15,18 +15,18 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>3.681</EstimatedClockPeriod>
+            <EstimatedClockPeriod>3.459</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>1878</Best-caseLatency>
-            <Average-caseLatency>3030</Average-caseLatency>
-            <Worst-caseLatency>5590</Worst-caseLatency>
-            <Best-caseRealTimeLatency>18.780 us</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>30.300 us</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>55.900 us</Worst-caseRealTimeLatency>
-            <Interval-min>1879</Interval-min>
-            <Interval-max>5591</Interval-max>
+            <Best-caseLatency>2550</Best-caseLatency>
+            <Average-caseLatency>4470</Average-caseLatency>
+            <Worst-caseLatency>8694</Worst-caseLatency>
+            <Best-caseRealTimeLatency>25.500 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>44.700 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>86.940 us</Worst-caseRealTimeLatency>
+            <Interval-min>2551</Interval-min>
+            <Interval-max>8695</Interval-max>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
             <sort_procedure>
@@ -34,20 +34,20 @@
                 <TripCount>8</TripCount>
                 <Latency>
                     <range>
-                        <min>1824</min>
-                        <max>5536</max>
+                        <min>2496</min>
+                        <max>8640</max>
                     </range>
                 </Latency>
                 <AbsoluteTimeLatency>
                     <range>
-                        <min>18240</min>
-                        <max>55360</max>
+                        <min>24960</min>
+                        <max>86400</max>
                     </range>
                 </AbsoluteTimeLatency>
                 <IterationLatency>
                     <range>
-                        <min>228</min>
-                        <max>692</max>
+                        <min>312</min>
+                        <max>1080</max>
                     </range>
                 </IterationLatency>
                 <InstanceList/>
@@ -56,20 +56,20 @@
                     <TripCount>16</TripCount>
                     <Latency>
                         <range>
-                            <min>80</min>
-                            <max>544</max>
+                            <min>160</min>
+                            <max>928</max>
                         </range>
                     </Latency>
                     <AbsoluteTimeLatency>
                         <range>
-                            <min>800</min>
-                            <max>5440</max>
+                            <min>1600</min>
+                            <max>9280</max>
                         </range>
                     </AbsoluteTimeLatency>
                     <IterationLatency>
                         <range>
-                            <min>5</min>
-                            <max>34</max>
+                            <min>10</min>
+                            <max>58</max>
                         </range>
                     </IterationLatency>
                     <InstanceList/>
@@ -79,24 +79,24 @@
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>2</BRAM_18K>
-            <DSP>1</DSP>
-            <FF>493</FF>
-            <LUT>1344</LUT>
+            <BRAM_18K>5</BRAM_18K>
+            <FF>1264</FF>
+            <LUT>3440</LUT>
             <URAM>0</URAM>
+            <DSP>0</DSP>
         </Resources>
         <AvailableResources>
-            <BRAM_18K>1824</BRAM_18K>
-            <DSP>2520</DSP>
-            <FF>548160</FF>
-            <LUT>274080</LUT>
-            <URAM>0</URAM>
+            <BRAM_18K>4032</BRAM_18K>
+            <DSP>9024</DSP>
+            <FF>2607360</FF>
+            <LUT>1303680</LUT>
+            <URAM>960</URAM>
         </AvailableResources>
     </AreaEstimates>
     <InterfaceSummary>
         <RtlPorts>
             <name>ap_clk</name>
-            <Object>radix_sort_separate_bucket_parallel_2</Object>
+            <Object>radix_sort_separate_bucket_parallel_5</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -107,7 +107,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_rst</name>
-            <Object>radix_sort_separate_bucket_parallel_2</Object>
+            <Object>radix_sort_separate_bucket_parallel_5</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -118,7 +118,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_start</name>
-            <Object>radix_sort_separate_bucket_parallel_2</Object>
+            <Object>radix_sort_separate_bucket_parallel_5</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -129,7 +129,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_done</name>
-            <Object>radix_sort_separate_bucket_parallel_2</Object>
+            <Object>radix_sort_separate_bucket_parallel_5</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -140,7 +140,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_idle</name>
-            <Object>radix_sort_separate_bucket_parallel_2</Object>
+            <Object>radix_sort_separate_bucket_parallel_5</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -151,7 +151,7 @@
         </RtlPorts>
         <RtlPorts>
             <name>ap_ready</name>
-            <Object>radix_sort_separate_bucket_parallel_2</Object>
+            <Object>radix_sort_separate_bucket_parallel_5</Object>
             <Type>return value</Type>
             <Scope/>
             <IOProtocol>ap_ctrl_hs</IOProtocol>
@@ -259,72 +259,128 @@
     </InterfaceSummary>
     <RTLDesignHierarchy>
         <TopModule MAX_DEPTH="4">
-            <ModuleName>radix_sort_separate_bucket_parallel_2</ModuleName>
+            <ModuleName>radix_sort_separate_bucket_parallel_5</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_radix_sort_separate_bucket_parallel_2_Pipeline_1_fu_166</InstName>
-                    <ModuleName>radix_sort_separate_bucket_parallel_2_Pipeline_1</ModuleName>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_1_fu_256</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>166</ID>
-                    <BindInstances>empty_13_fu_56_p2</BindInstances>
+                    <ID>256</ID>
+                    <BindInstances>empty_21_fu_56_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_sort_separate_bucket_parallel_2_Pipeline_2_fu_172</InstName>
-                    <ModuleName>radix_sort_separate_bucket_parallel_2_Pipeline_2</ModuleName>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_2_fu_262</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>172</ID>
-                    <BindInstances>empty_12_fu_58_p2</BindInstances>
+                    <ID>262</ID>
+                    <BindInstances>empty_20_fu_56_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_sort_separate_bucket_parallel_2_Pipeline_initialization_fu_178</InstName>
-                    <ModuleName>radix_sort_separate_bucket_parallel_2_Pipeline_initialization</ModuleName>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_3_fu_268</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_3</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>178</ID>
-                    <BindInstances>add_ln34_fu_81_p2</BindInstances>
+                    <ID>268</ID>
+                    <BindInstances>empty_19_fu_56_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_input_bucket_parallel_2_1_fu_186</InstName>
-                    <ModuleName>input_bucket_parallel_2_1</ModuleName>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_4_fu_274</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_4</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>186</ID>
+                    <ID>274</ID>
+                    <BindInstances>empty_18_fu_58_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_initialization_fu_280</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_initialization</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>280</ID>
+                    <BindInstances>add_ln107_fu_81_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_inner_loop_initialization_fu_288</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_inner_loop_initialization</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>288</ID>
+                    <BindInstances>add_ln114_fu_123_p2 add_ln122_fu_161_p2 add_ln119_fu_171_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_input_bucket_parallel_5_fu_297</InstName>
+                    <ModuleName>input_bucket_parallel_5</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>297</ID>
                     <InstancesList>
                         <Instance>
-                            <InstName>input_bucket_1_1_U0</InstName>
-                            <ModuleName>input_bucket_1_1</ModuleName>
+                            <InstName>input_bucket_5_1_U0</InstName>
+                            <ModuleName>input_bucket_5_1</ModuleName>
                             <IsCompInst>true</IsCompInst>
-                            <ID>30</ID>
-                            <BindInstances>add_ln11_fu_124_p2 mac_muladd_4ns_5ns_9ns_9_4_1_U5 mac_muladd_4ns_5ns_9ns_9_4_1_U5 bucket_pointer_d0</BindInstances>
+                            <ID>42</ID>
+                            <BindInstances>add_ln20_fu_120_p2 bucket_pointer_d0</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>input_bucket_5_2_U0</InstName>
+                            <ModuleName>input_bucket_5_2</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>54</ID>
+                            <BindInstances>bucket_pointer_d0 add_ln20_fu_120_p2</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>input_bucket_5_3_U0</InstName>
+                            <ModuleName>input_bucket_5_3</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>66</ID>
+                            <BindInstances>bucket_pointer_d0 add_ln20_fu_120_p2</BindInstances>
                         </Instance>
                     </InstancesList>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_sort_separate_bucket_parallel_2_Pipeline_clear_bucket_pointer_fu_195</InstName>
-                    <ModuleName>radix_sort_separate_bucket_parallel_2_Pipeline_clear_bucket_pointer</ModuleName>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_clear_bucket_pointer_fu_311</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_clear_bucket_pointer</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>195</ID>
-                    <BindInstances>add_ln59_fu_78_p2</BindInstances>
+                    <ID>311</ID>
+                    <BindInstances>add_ln167_fu_110_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_sort_separate_bucket_parallel_2_Pipeline_VITIS_LOOP_45_1_fu_201</InstName>
-                    <ModuleName>radix_sort_separate_bucket_parallel_2_Pipeline_VITIS_LOOP_45_1</ModuleName>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_138_1_fu_319</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_138_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>201</ID>
-                    <BindInstances>add_ln45_fu_128_p2 add_ln47_fu_138_p2 add_ln48_fu_166_p2</BindInstances>
+                    <ID>319</ID>
+                    <BindInstances>add_ln138_fu_128_p2 add_ln140_1_fu_138_p2 add_ln141_fu_166_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_radix_sort_separate_bucket_parallel_2_Pipeline_VITIS_LOOP_50_2_fu_213</InstName>
-                    <ModuleName>radix_sort_separate_bucket_parallel_2_Pipeline_VITIS_LOOP_50_2</ModuleName>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_143_2_fu_330</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_143_2</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>213</ID>
-                    <BindInstances>bucket2_U add_ln52_fu_133_p2 add_ln53_fu_147_p2</BindInstances>
+                    <ID>330</ID>
+                    <BindInstances>add_ln143_fu_128_p2 add_ln145_fu_138_p2 add_ln146_fu_166_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_148_3_fu_341</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_148_3</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>341</ID>
+                    <BindInstances>add_ln148_fu_128_p2 add_ln150_fu_138_p2 add_ln151_fu_166_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_153_4_fu_352</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_153_4</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>352</ID>
+                    <BindInstances>bucket3_U add_ln156_fu_170_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_158_5_fu_362</InstName>
+                    <ModuleName>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_158_5</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>362</ID>
+                    <BindInstances>bucket4_U add_ln158_fu_130_p2 add_ln160_fu_140_p2 add_ln161_fu_168_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>bucket1_U bucket_pointer1_U bucket_pointer2_U i_2_fu_238_p2 add_ln44_2_fu_249_p2 add_ln44_1_fu_261_p2 empty_fu_287_p2 add_ln50_fu_296_p2 add_ln44_fu_303_p2</BindInstances>
+            <BindInstances>bucket0_U bucket1_U bucket2_U bucket_pointer0_U bucket_pointer1_U bucket_pointer2_U bucket_pointer3_U sorted_data0_U sorted_data1_U sorted_data2_U i_2_fu_386_p2 add_ln137_1_fu_402_p2 add_ln140_fu_441_p2 empty_fu_463_p2 empty_22_fu_479_p2 empty_23_fu_495_p2 add_ln153_fu_504_p2 add_ln158_fu_511_p2 add_ln137_fu_521_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>radix_sort_separate_bucket_parallel_2_Pipeline_1</Name>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_1</Name>
             <Loops>
                 <Loop1/>
             </Loops>
@@ -332,7 +388,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>1.430</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.336</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>18</Best-caseLatency>
@@ -361,28 +417,28 @@
             <AreaEstimates>
                 <Resources>
                     <FF>7</FF>
-                    <AVAIL_FF>548160</AVAIL_FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
                     <LUT>49</LUT>
-                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_13_fu_56_p2" SOURCE="" URAM="0" VARIABLE="empty_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_21_fu_56_p2" SOURCE="" URAM="0" VARIABLE="empty_21"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>radix_sort_separate_bucket_parallel_2_Pipeline_2</Name>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_2</Name>
             <Loops>
                 <Loop1/>
             </Loops>
@@ -390,7 +446,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>1.430</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.336</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>18</Best-caseLatency>
@@ -419,28 +475,144 @@
             <AreaEstimates>
                 <Resources>
                     <FF>7</FF>
-                    <AVAIL_FF>548160</AVAIL_FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
                     <LUT>49</LUT>
-                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_12_fu_58_p2" SOURCE="" URAM="0" VARIABLE="empty_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_20_fu_56_p2" SOURCE="" URAM="0" VARIABLE="empty_20"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>radix_sort_separate_bucket_parallel_2_Pipeline_initialization</Name>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_3</Name>
+            <Loops>
+                <Loop1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.336</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>18</Best-caseLatency>
+                    <Average-caseLatency>18</Average-caseLatency>
+                    <Worst-caseLatency>18</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.180 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.180 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.180 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>18</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop1>
+                        <Name>Loop 1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>16</TripCount>
+                        <Latency>16</Latency>
+                        <AbsoluteTimeLatency>0.160 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>7</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>49</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_19_fu_56_p2" SOURCE="" URAM="0" VARIABLE="empty_19"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_4</Name>
+            <Loops>
+                <Loop1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.276</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>18</Best-caseLatency>
+                    <Average-caseLatency>18</Average-caseLatency>
+                    <Worst-caseLatency>18</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.180 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.180 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.180 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>18</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <Loop1>
+                        <Name>Loop 1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>16</TripCount>
+                        <Latency>16</Latency>
+                        <AbsoluteTimeLatency>0.160 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </Loop1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>7</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>49</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="Loop 1" OPTYPE="add" PRAGMA="" RTLNAME="empty_18_fu_58_p2" SOURCE="" URAM="0" VARIABLE="empty_18"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_initialization</Name>
             <Loops>
                 <initialization/>
             </Loops>
@@ -448,7 +620,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>2.474</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.398</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>52</Best-caseLatency>
@@ -477,202 +649,508 @@
             <AreaEstimates>
                 <Resources>
                     <FF>15</FF>
-                    <AVAIL_FF>548160</AVAIL_FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
                     <LUT>61</LUT>
-                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="initialization" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_81_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:34" URAM="0" VARIABLE="add_ln34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="initialization" OPTYPE="add" PRAGMA="" RTLNAME="add_ln107_fu_81_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:107" URAM="0" VARIABLE="add_ln107"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>input_bucket_1_1</Name>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_inner_loop_initialization</Name>
             <Loops>
-                <VITIS_LOOP_11_1/>
+                <inner_loop_initialization/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>3.621</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.407</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>126</Best-caseLatency>
-                    <Average-caseLatency>126</Average-caseLatency>
-                    <Worst-caseLatency>126</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>1.260 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.260 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>1.260 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>126</PipelineInitiationInterval>
+                    <Best-caseLatency>52</Best-caseLatency>
+                    <Average-caseLatency>52</Average-caseLatency>
+                    <Worst-caseLatency>52</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.520 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.520 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.520 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>52</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_11_1>
-                        <Name>VITIS_LOOP_11_1</Name>
+                    <inner_loop_initialization>
+                        <Name>inner_loop_initialization</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>25</TripCount>
-                        <Latency>125</Latency>
-                        <AbsoluteTimeLatency>1.250 us</AbsoluteTimeLatency>
-                        <IterationLatency>5</IterationLatency>
-                        <PipelineDepth>5</PipelineDepth>
-                        <PipelineType>no</PipelineType>
+                        <TripCount>50</TripCount>
+                        <Latency>50</Latency>
+                        <AbsoluteTimeLatency>0.500 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_11_1>
+                    </inner_loop_initialization>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <DSP>1</DSP>
-                    <AVAIL_DSP>2520</AVAIL_DSP>
-                    <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>55</FF>
-                    <AVAIL_FF>548160</AVAIL_FF>
+                    <FF>22</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>227</LUT>
-                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <LUT>115</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_11_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln11_fu_124_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:11" URAM="0" VARIABLE="add_ln11"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_11_1" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_4ns_5ns_9ns_9_4_1_U5" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:14" URAM="0" VARIABLE="mul_ln14"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="VITIS_LOOP_11_1" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_4ns_5ns_9ns_9_4_1_U5" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:14" URAM="0" VARIABLE="add_ln14"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_11_1" OPTYPE="add" PRAGMA="" RTLNAME="bucket_pointer_d0" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:15" URAM="0" VARIABLE="add_ln15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inner_loop_initialization" OPTYPE="add" PRAGMA="" RTLNAME="add_ln114_fu_123_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:114" URAM="0" VARIABLE="add_ln114"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inner_loop_initialization" OPTYPE="add" PRAGMA="" RTLNAME="add_ln122_fu_161_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:122" URAM="0" VARIABLE="add_ln122"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="inner_loop_initialization" OPTYPE="add" PRAGMA="" RTLNAME="add_ln119_fu_171_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:119" URAM="0" VARIABLE="add_ln119"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>input_bucket_parallel_2_1</Name>
+            <Name>input_bucket_5_1</Name>
+            <Loops>
+                <VITIS_LOOP_20_1/>
+            </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>3.621</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>2.733</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>126</Best-caseLatency>
-                    <Average-caseLatency>126</Average-caseLatency>
-                    <Worst-caseLatency>126</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>1.260 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.260 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>1.260 us</Worst-caseRealTimeLatency>
-                    <DataflowPipelineThroughput>127</DataflowPipelineThroughput>
-                    <PipelineInitiationInterval>127</PipelineInitiationInterval>
+                    <Best-caseLatency>76</Best-caseLatency>
+                    <Average-caseLatency>76</Average-caseLatency>
+                    <Worst-caseLatency>76</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.760 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.760 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.760 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>76</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_20_1>
+                        <Name>VITIS_LOOP_20_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>25</TripCount>
+                        <Latency>75</Latency>
+                        <AbsoluteTimeLatency>0.750 us</AbsoluteTimeLatency>
+                        <IterationLatency>3</IterationLatency>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_20_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>53</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>250</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln20_fu_120_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:20" URAM="0" VARIABLE="add_ln20"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="bucket_pointer_d0" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:24" URAM="0" VARIABLE="add_ln24"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>input_bucket_5_2</Name>
+            <Loops>
+                <VITIS_LOOP_20_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.733</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>46</Best-caseLatency>
+                    <Average-caseLatency>46</Average-caseLatency>
+                    <Worst-caseLatency>46</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.460 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.460 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.460 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>46</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_20_1>
+                        <Name>VITIS_LOOP_20_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>15</TripCount>
+                        <Latency>45</Latency>
+                        <AbsoluteTimeLatency>0.450 us</AbsoluteTimeLatency>
+                        <IterationLatency>3</IterationLatency>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_20_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>53</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>250</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="bucket_pointer_d0" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:24" URAM="0" VARIABLE="add_ln24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln20_fu_120_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:20" URAM="0" VARIABLE="add_ln20"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>input_bucket_5_3</Name>
+            <Loops>
+                <VITIS_LOOP_20_1/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.733</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>16</Best-caseLatency>
+                    <Average-caseLatency>16</Average-caseLatency>
+                    <Worst-caseLatency>16</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.160 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.160 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.160 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>16</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_20_1>
+                        <Name>VITIS_LOOP_20_1</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>5</TripCount>
+                        <Latency>15</Latency>
+                        <AbsoluteTimeLatency>0.150 us</AbsoluteTimeLatency>
+                        <IterationLatency>3</IterationLatency>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_20_1>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>53</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>250</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="bucket_pointer_d0" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:24" URAM="0" VARIABLE="add_ln24"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_20_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln20_fu_120_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:20" URAM="0" VARIABLE="add_ln20"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>input_bucket_parallel_5</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.733</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>76</Best-caseLatency>
+                    <Average-caseLatency>76</Average-caseLatency>
+                    <Worst-caseLatency>76</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.760 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.760 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.760 us</Worst-caseRealTimeLatency>
+                    <DataflowPipelineThroughput>77</DataflowPipelineThroughput>
+                    <PipelineInitiationInterval>77</PipelineInitiationInterval>
                     <PipelineType>dataflow</PipelineType>
                 </SummaryOfOverallLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <DSP>1</DSP>
-                    <AVAIL_DSP>2520</AVAIL_DSP>
-                    <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>55</FF>
-                    <AVAIL_FF>548160</AVAIL_FF>
+                    <FF>162</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>227</LUT>
-                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <LUT>797</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
         </Module>
         <Module>
-            <Name>radix_sort_separate_bucket_parallel_2_Pipeline_VITIS_LOOP_45_1</Name>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_138_1</Name>
             <Loops>
-                <VITIS_LOOP_45_1/>
+                <VITIS_LOOP_138_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>2.474</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.901</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>3</Best-caseLatency>
-                    <Average-caseLatency>14</Average-caseLatency>
-                    <Worst-caseLatency>26</Worst-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>11</Worst-caseLatency>
                     <Best-caseRealTimeLatency>30.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.140 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.260 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>3 ~ 26</PipelineInitiationInterval>
+                    <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.110 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ 11</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_45_1>
-                        <Name>VITIS_LOOP_45_1</Name>
+                    <VITIS_LOOP_138_1>
+                        <Name>VITIS_LOOP_138_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>
                             <range>
                                 <min>1</min>
-                                <max>24</max>
+                                <max>9</max>
                             </range>
                         </TripCount>
-                        <Latency>1 ~ 24</Latency>
-                        <AbsoluteTimeLatency>10.000 ns ~ 0.240 us</AbsoluteTimeLatency>
+                        <Latency>1 ~ 9</Latency>
+                        <AbsoluteTimeLatency>10.000 ns ~ 90.000 ns</AbsoluteTimeLatency>
                         <PipelineII>1</PipelineII>
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_45_1>
+                    </VITIS_LOOP_138_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
                     <FF>67</FF>
-                    <AVAIL_FF>548160</AVAIL_FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>160</LUT>
-                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <LUT>159</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_45_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_fu_128_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:45" URAM="0" VARIABLE="add_ln45"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_45_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln47_fu_138_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:47" URAM="0" VARIABLE="add_ln47"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_45_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln48_fu_166_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:48" URAM="0" VARIABLE="add_ln48"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_138_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln138_fu_128_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:138" URAM="0" VARIABLE="add_ln138"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_138_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln140_1_fu_138_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:140" URAM="0" VARIABLE="add_ln140_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_138_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln141_fu_166_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:141" URAM="0" VARIABLE="add_ln141"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>radix_sort_separate_bucket_parallel_2_Pipeline_VITIS_LOOP_50_2</Name>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_143_2</Name>
             <Loops>
-                <VITIS_LOOP_50_2/>
+                <VITIS_LOOP_143_2/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>2.474</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.901</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>11</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>30.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.110 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ 11</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_143_2>
+                        <Name>VITIS_LOOP_143_2</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>9</max>
+                            </range>
+                        </TripCount>
+                        <Latency>1 ~ 9</Latency>
+                        <AbsoluteTimeLatency>10.000 ns ~ 90.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_143_2>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>67</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>159</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_143_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln143_fu_128_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:143" URAM="0" VARIABLE="add_ln143"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_143_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln145_fu_138_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:145" URAM="0" VARIABLE="add_ln145"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_143_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln146_fu_166_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:146" URAM="0" VARIABLE="add_ln146"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_148_3</Name>
+            <Loops>
+                <VITIS_LOOP_148_3/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.901</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>11</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>30.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.110 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ 11</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_148_3>
+                        <Name>VITIS_LOOP_148_3</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>9</max>
+                            </range>
+                        </TripCount>
+                        <Latency>1 ~ 9</Latency>
+                        <AbsoluteTimeLatency>10.000 ns ~ 90.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_148_3>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>67</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>159</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_148_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln148_fu_128_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:148" URAM="0" VARIABLE="add_ln148"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_148_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln150_fu_138_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:150" URAM="0" VARIABLE="add_ln150"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_148_3" OPTYPE="add" PRAGMA="" RTLNAME="add_ln151_fu_166_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:151" URAM="0" VARIABLE="add_ln151"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_153_4</Name>
+            <Loops>
+                <VITIS_LOOP_153_4/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>1.895</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>3</Best-caseLatency>
@@ -685,8 +1163,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_50_2>
-                        <Name>VITIS_LOOP_50_2</Name>
+                    <VITIS_LOOP_153_4>
+                        <Name>VITIS_LOOP_153_4</Name>
                         <Slack>7.30</Slack>
                         <TripCount>1</TripCount>
                         <Latency>1</Latency>
@@ -695,36 +1173,101 @@
                         <PipelineDepth>2</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_50_2>
+                    </VITIS_LOOP_153_4>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
                     <BRAM_18K>1</BRAM_18K>
-                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
                     <FF>45</FF>
-                    <AVAIL_FF>548160</AVAIL_FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>123</LUT>
-                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <LUT>109</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket2_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:28" URAM="0" VARIABLE="bucket2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_50_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_fu_133_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:52" URAM="0" VARIABLE="add_ln52"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_50_2" OPTYPE="add" PRAGMA="" RTLNAME="add_ln53_fu_147_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:53" URAM="0" VARIABLE="add_ln53"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket3_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:92" URAM="0" VARIABLE="bucket3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_153_4" OPTYPE="add" PRAGMA="" RTLNAME="add_ln156_fu_170_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:156" URAM="0" VARIABLE="add_ln156"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>radix_sort_separate_bucket_parallel_2_Pipeline_clear_bucket_pointer</Name>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_158_5</Name>
+            <Loops>
+                <VITIS_LOOP_158_5/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <EstimatedClockPeriod>2.392</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>6</Average-caseLatency>
+                    <Worst-caseLatency>11</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>30.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>60.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.110 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3 ~ 11</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <VITIS_LOOP_158_5>
+                        <Name>VITIS_LOOP_158_5</Name>
+                        <Slack>7.30</Slack>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>9</max>
+                            </range>
+                        </TripCount>
+                        <Latency>1 ~ 9</Latency>
+                        <AbsoluteTimeLatency>10.000 ns ~ 90.000 ns</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </VITIS_LOOP_158_5>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>1</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>~0</UTIL_BRAM>
+                    <FF>67</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>159</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket4_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:93" URAM="0" VARIABLE="bucket4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_158_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_fu_130_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:158" URAM="0" VARIABLE="add_ln158"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_158_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln160_fu_140_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:160" URAM="0" VARIABLE="add_ln160"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_158_5" OPTYPE="add" PRAGMA="" RTLNAME="add_ln161_fu_168_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:161" URAM="0" VARIABLE="add_ln161"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>radix_sort_separate_bucket_parallel_5_Pipeline_clear_bucket_pointer</Name>
             <Loops>
                 <clear_bucket_pointer/>
             </Loops>
@@ -732,7 +1275,7 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>1.430</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>1.336</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>18</Best-caseLatency>
@@ -761,28 +1304,28 @@
             <AreaEstimates>
                 <Resources>
                     <FF>7</FF>
-                    <AVAIL_FF>548160</AVAIL_FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
                     <LUT>49</LUT>
-                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
-                    <AVAIL_DSP>2520</AVAIL_DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="clear_bucket_pointer" OPTYPE="add" PRAGMA="" RTLNAME="add_ln59_fu_78_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:59" URAM="0" VARIABLE="add_ln59"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="clear_bucket_pointer" OPTYPE="add" PRAGMA="" RTLNAME="add_ln167_fu_110_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:167" URAM="0" VARIABLE="add_ln167"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>radix_sort_separate_bucket_parallel_2</Name>
+            <Name>radix_sort_separate_bucket_parallel_5</Name>
             <Loops>
                 <sort_procedure>
                     <output_bucket/>
@@ -792,16 +1335,16 @@
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>3.681</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.459</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>1878</Best-caseLatency>
-                    <Average-caseLatency>3030</Average-caseLatency>
-                    <Worst-caseLatency>5590</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>18.780 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>30.300 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>55.900 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>1879 ~ 5591</PipelineInitiationInterval>
+                    <Best-caseLatency>2550</Best-caseLatency>
+                    <Average-caseLatency>4470</Average-caseLatency>
+                    <Worst-caseLatency>8694</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>25.500 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>44.700 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>86.940 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2551 ~ 8695</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
@@ -809,37 +1352,41 @@
                         <Name>sort_procedure</Name>
                         <Slack>7.30</Slack>
                         <TripCount>8</TripCount>
-                        <Latency>1824 ~ 5536</Latency>
-                        <AbsoluteTimeLatency>18.240 us ~ 55.360 us</AbsoluteTimeLatency>
+                        <Latency>2496 ~ 8640</Latency>
+                        <AbsoluteTimeLatency>24.960 us ~ 86.400 us</AbsoluteTimeLatency>
                         <IterationLatency>
                             <range>
-                                <min>228</min>
-                                <max>692</max>
+                                <min>312</min>
+                                <max>1080</max>
                             </range>
                         </IterationLatency>
-                        <PipelineDepth>228 ~ 692</PipelineDepth>
+                        <PipelineDepth>312 ~ 1080</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_input_bucket_parallel_2_1_fu_186</Instance>
-                            <Instance>grp_radix_sort_separate_bucket_parallel_2_Pipeline_clear_bucket_pointer_fu_195</Instance>
+                            <Instance>grp_radix_sort_separate_bucket_parallel_5_Pipeline_inner_loop_initialization_fu_288</Instance>
+                            <Instance>grp_input_bucket_parallel_5_fu_297</Instance>
+                            <Instance>grp_radix_sort_separate_bucket_parallel_5_Pipeline_clear_bucket_pointer_fu_311</Instance>
                         </InstanceList>
                         <output_bucket>
                             <Name>output_bucket</Name>
                             <Slack>7.30</Slack>
                             <TripCount>16</TripCount>
-                            <Latency>80 ~ 544</Latency>
-                            <AbsoluteTimeLatency>0.800 us ~ 5.440 us</AbsoluteTimeLatency>
+                            <Latency>160 ~ 928</Latency>
+                            <AbsoluteTimeLatency>1.600 us ~ 9.280 us</AbsoluteTimeLatency>
                             <IterationLatency>
                                 <range>
-                                    <min>5</min>
-                                    <max>34</max>
+                                    <min>10</min>
+                                    <max>58</max>
                                 </range>
                             </IterationLatency>
-                            <PipelineDepth>5 ~ 34</PipelineDepth>
+                            <PipelineDepth>10 ~ 58</PipelineDepth>
                             <PipelineType>no</PipelineType>
                             <InstanceList>
-                                <Instance>grp_radix_sort_separate_bucket_parallel_2_Pipeline_VITIS_LOOP_45_1_fu_201</Instance>
-                                <Instance>grp_radix_sort_separate_bucket_parallel_2_Pipeline_VITIS_LOOP_50_2_fu_213</Instance>
+                                <Instance>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_138_1_fu_319</Instance>
+                                <Instance>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_143_2_fu_330</Instance>
+                                <Instance>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_148_3_fu_341</Instance>
+                                <Instance>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_153_4_fu_352</Instance>
+                                <Instance>grp_radix_sort_separate_bucket_parallel_5_Pipeline_VITIS_LOOP_158_5_fu_362</Instance>
                             </InstanceList>
                         </output_bucket>
                     </sort_procedure>
@@ -847,38 +1394,50 @@
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>2</BRAM_18K>
-                    <AVAIL_BRAM>1824</AVAIL_BRAM>
+                    <BRAM_18K>5</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
                     <UTIL_BRAM>~0</UTIL_BRAM>
-                    <DSP>1</DSP>
-                    <AVAIL_DSP>2520</AVAIL_DSP>
-                    <UTIL_DSP>~0</UTIL_DSP>
-                    <FF>493</FF>
-                    <AVAIL_FF>548160</AVAIL_FF>
+                    <FF>1264</FF>
+                    <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1344</LUT>
-                    <AVAIL_LUT>274080</AVAIL_LUT>
+                    <LUT>3440</LUT>
+                    <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>9024</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket1_U" SOURCE="" URAM="0" VARIABLE="bucket1"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket_pointer1_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:29" URAM="0" VARIABLE="bucket_pointer1"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket_pointer2_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:30" URAM="0" VARIABLE="bucket_pointer2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="sort_procedure" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_238_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:39" URAM="0" VARIABLE="i_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_2_fu_249_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:44" URAM="0" VARIABLE="add_ln44_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_1_fu_261_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:44" URAM="0" VARIABLE="add_ln44_1"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_287_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:44" URAM="0" VARIABLE="empty"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="add_ln50_fu_296_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:50" URAM="0" VARIABLE="add_ln50"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_fu_303_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:44" URAM="0" VARIABLE="add_ln44"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket0_U" SOURCE="" URAM="0" VARIABLE="bucket0"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket1_U" SOURCE="" URAM="0" VARIABLE="bucket1"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket2_U" SOURCE="" URAM="0" VARIABLE="bucket2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket_pointer0_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:94" URAM="0" VARIABLE="bucket_pointer0"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket_pointer1_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:95" URAM="0" VARIABLE="bucket_pointer1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket_pointer2_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:96" URAM="0" VARIABLE="bucket_pointer2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="bucket_pointer3_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:97" URAM="0" VARIABLE="bucket_pointer3"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="sorted_data0_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:99" URAM="0" VARIABLE="sorted_data0"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="sorted_data1_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:100" URAM="0" VARIABLE="sorted_data1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="sorted_data2_U" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:101" URAM="0" VARIABLE="sorted_data2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="sort_procedure" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_386_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:112" URAM="0" VARIABLE="i_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="add_ln137_1_fu_402_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:137" URAM="0" VARIABLE="add_ln137_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="add_ln140_fu_441_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:140" URAM="0" VARIABLE="add_ln140"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="empty_fu_463_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:137" URAM="0" VARIABLE="empty"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="empty_22_fu_479_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:137" URAM="0" VARIABLE="empty_22"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="empty_23_fu_495_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:137" URAM="0" VARIABLE="empty_23"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="add_ln153_fu_504_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:153" URAM="0" VARIABLE="add_ln153"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="add_ln158_fu_511_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:158" URAM="0" VARIABLE="add_ln158"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_bucket" OPTYPE="add" PRAGMA="" RTLNAME="add_ln137_fu_521_p2" SOURCE="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:137" URAM="0" VARIABLE="add_ln137"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands/>
+    <UserConfigCommands>
+        <config_export vivado_clock="10"/>
+    </UserConfigCommands>
     <Args>
         <Arg ArgName="data" index="0" direction="in" srcType="int*" srcSize="32">
             <hwRefs>
@@ -1046,10 +1605,16 @@
         <Pragma type="pipeline" location="sort_seperate_bucket/radix_sort.c:70" status="warning" parentFunction="radix_sort_separate_bucket" variable="" isDirective="0" options="">
             <Msg msg_id="207-5560" msg_severity="WARNING" msg_body="Only for/while/do support the pipeline  pragma"/>
         </Pragma>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort.c:83" status="valid" parentFunction="radix_sort_separate_bucket" variable="" isDirective="0" options="min=0 max=48"/>
-        <Pragma type="dataflow" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:20" status="valid" parentFunction="input_bucket_parallel_2" variable="" isDirective="0" options=""/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:46" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=24"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:51" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=24"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort.c:83" status="valid" parentFunction="radix_sort_separate_bucket" variable="" isDirective="0" options="min=0 max=50 -1"/>
+        <Pragma type="dataflow" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:29" status="valid" parentFunction="input_bucket_parallel_2" variable="" isDirective="0" options=""/>
+        <Pragma type="dataflow" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:39" status="valid" parentFunction="input_bucket_parallel_5" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:67" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=24"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:72" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=24"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:139" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=9"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:144" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=9"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:149" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=9"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:154" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=9"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:159" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=9"/>
         <Pragma type="dataflow" location="sort_seperate_bucket/sort_top.c:12" status="valid" parentFunction="sort_top" variable="" isDirective="0" options=""/>
     </PragmaReport>
 </profile>

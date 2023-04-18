@@ -1,5 +1,8 @@
 <pragmas>
-<pragma file="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c" line="20" pragmaType="dataflow" parentfunction="input_bucket_parallel_2" disable_start_propagation="0"/>
-<pragma file="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c" line="46" pragmaType="loop_tripcount" parentfunction="radix_sort_separate_bucket_parallel_2" min="0" max="24" avg="12"/>
-<pragma file="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c" line="51" pragmaType="loop_tripcount" parentfunction="radix_sort_separate_bucket_parallel_2" min="0" max="24" avg="12"/>
+<pragma file="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c" line="39" pragmaType="dataflow" parentfunction="input_bucket_parallel_5" disable_start_propagation="0"/>
+<pragma file="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c" line="139" pragmaType="loop_tripcount" parentfunction="radix_sort_separate_bucket_parallel_5" min="0" max="9" avg="4"/>
+<pragma file="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c" line="144" pragmaType="loop_tripcount" parentfunction="radix_sort_separate_bucket_parallel_5" min="0" max="9" avg="4"/>
+<pragma file="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c" line="149" pragmaType="loop_tripcount" parentfunction="radix_sort_separate_bucket_parallel_5" min="0" max="9" avg="4"/>
+<pragma file="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c" line="154" pragmaType="loop_tripcount" parentfunction="radix_sort_separate_bucket_parallel_5" min="0" max="9" avg="4"/>
+<pragma file="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c" line="159" pragmaType="loop_tripcount" parentfunction="radix_sort_separate_bucket_parallel_5" min="0" max="9" avg="4"/>
 </pragmas>

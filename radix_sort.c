@@ -80,7 +80,7 @@ void radix_sort_separate_bucket(int data[batch_size], int sorted_data[batch_size
 		output_bucket:
 		for (int l = 0; l < 16; l++) {
 			for(int m=0; m<bucket_pointer[l]; m++){
-#pragma HLS loop_tripcount min=0 max=48
+#pragma HLS loop_tripcount min=0 max=batch_size-1
 				sorted_data[k] = bucket[l][m];
 				k = k + 1;
 			}

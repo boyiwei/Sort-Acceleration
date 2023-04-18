@@ -952,7 +952,7 @@ void radix_sort_separate_bucket(int data[50], int sorted_data[50]){
   output_bucket:
   for (int l = 0; l < 16; l++) {
    VITIS_LOOP_82_1: for(int m=0; m<bucket_pointer[l]; m++){
-#pragma HLS loop_tripcount min=0 max=48
+#pragma HLS loop_tripcount min=0 max=50 -1
  sorted_data[k] = bucket[l][m];
     k = k + 1;
    }
