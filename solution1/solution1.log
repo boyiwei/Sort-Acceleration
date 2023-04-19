@@ -11209,3 +11209,1390 @@ Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
 Tool Version Limit: 2019.12
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./sort_seperate_bucket/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name merge_sort_iterative merge_sort_iterative 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.07 seconds; current allocated memory: 1.081 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_2.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.63 seconds. CPU system time: 3.62 seconds. Elapsed time: 6.28 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'merge' into 'merge_sort_iterative' (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'input': Block partitioning with factor 100 on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'output': Block partitioning with factor 100 on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.95 seconds. CPU system time: 0.76 seconds. Elapsed time: 6.71 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.088 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.089 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_69_1' (sort_seperate_bucket/merge_sort.c:70) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_77_2' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_81_3' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_104_3' (sort_seperate_bucket/merge_sort.c:104) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_110_4' (sort_seperate_bucket/merge_sort.c:110) in function 'merge_sort_iterative' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.94 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.96 seconds; current allocated memory: 1.120 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_91_2' (sort_seperate_bucket/merge_sort.c:92:27) in function 'merge_sort_iterative' more than one sub loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_90_1' (sort_seperate_bucket/merge_sort.c:91:35) in function 'merge_sort_iterative' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:71:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:78:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:82:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.15 seconds; current allocated memory: 1.185 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'merge_sort_iterative' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_69_1'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 36, Depth = 38, loop 'VITIS_LOOP_69_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.39 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.47 seconds; current allocated memory: 1.198 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.34 seconds; current allocated memory: 1.199 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_77_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 70, loop 'VITIS_LOOP_77_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.63 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.64 seconds; current allocated memory: 1.206 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.86 seconds. CPU system time: 0 seconds. Elapsed time: 0.87 seconds; current allocated memory: 1.206 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_81_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 70, loop 'VITIS_LOOP_81_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.14 seconds; current allocated memory: 1.213 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.86 seconds. CPU system time: 0 seconds. Elapsed time: 0.87 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_104_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_104_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_104_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.13 seconds; current allocated memory: 1.218 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.4 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.218 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_110_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_110_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_110_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.45 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.47 seconds; current allocated memory: 1.224 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.94 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.95 seconds; current allocated memory: 1.224 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.87 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.89 seconds; current allocated memory: 1.227 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.1 seconds. CPU system time: 0 seconds. Elapsed time: 1.1 seconds; current allocated memory: 1.227 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' pipeline 'VITIS_LOOP_69_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_34ns_53_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_15ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32s_15ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.49 seconds; current allocated memory: 1.232 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' pipeline 'VITIS_LOOP_77_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_85_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_15ns_64_68_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.34 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.38 seconds; current allocated memory: 1.243 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' pipeline 'VITIS_LOOP_81_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_85_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_15ns_64_68_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.78 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.79 seconds; current allocated memory: 1.251 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_104_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_104_3' pipeline 'VITIS_LOOP_104_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_104_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.78 seconds. CPU system time: 0 seconds. Elapsed time: 0.78 seconds; current allocated memory: 1.257 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_110_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_110_4' pipeline 'VITIS_LOOP_110_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_110_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.55 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.56 seconds; current allocated memory: 1.267 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_64' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_65' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_66' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_67' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_68' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_69' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_70' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_71' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_72' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_73' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_74' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_75' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_76' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_77' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_78' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_79' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_80' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_81' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_82' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_83' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_84' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_85' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_86' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_87' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_88' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_89' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_90' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_91' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_92' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_93' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_94' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_95' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_96' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_97' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_98' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_99' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_39' to 'ap_memory'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./sort_seperate_bucket/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name merge_sort_iterative merge_sort_iterative 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.04 seconds. Elapsed time: 10.08 seconds; current allocated memory: 1.072 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_2.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.8 seconds. CPU system time: 3.5 seconds. Elapsed time: 6.3 seconds; current allocated memory: 1.073 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_81_3' is marked as complete unroll implied by the pipeline pragma (sort_seperate_bucket/merge_sort.c:81:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_77_2' is marked as complete unroll implied by the pipeline pragma (sort_seperate_bucket/merge_sort.c:77:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_69_1' is marked as complete unroll implied by the pipeline pragma (sort_seperate_bucket/merge_sort.c:69:22)
+INFO: [HLS 214-178] Inlining function 'merge' into 'merge_sort_iterative' (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'input': Block partitioning with factor 100 on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'output': Block partitioning with factor 100 on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.1 seconds. CPU system time: 0.79 seconds. Elapsed time: 6.89 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.074 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.080 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_105_3' (sort_seperate_bucket/merge_sort.c:105) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_111_4' (sort_seperate_bucket/merge_sort.c:111) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_91_2' (sort_seperate_bucket/merge_sort.c:93) in function 'merge_sort_iterative' for pipelining.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_69_1' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' completely: variable loop bound.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_77_2' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' completely: variable loop bound.
+WARNING: [HLS 200-932] Cannot unroll loop 'VITIS_LOOP_81_3' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' completely: variable loop bound.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.02 seconds; current allocated memory: 1.111 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_91_2' (sort_seperate_bucket/merge_sort.c:93:16) in function 'merge_sort_iterative' more than one sub loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_90_1' (sort_seperate_bucket/merge_sort.c:91:35) in function 'merge_sort_iterative' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:71:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:78:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:82:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.1 seconds; current allocated memory: 1.145 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'merge_sort_iterative' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_105_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_105_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_105_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.64 seconds. CPU system time: 0.08 seconds. Elapsed time: 0.73 seconds; current allocated memory: 1.151 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.39 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_111_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_111_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_111_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.49 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.51 seconds; current allocated memory: 1.158 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.94 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.95 seconds; current allocated memory: 1.158 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'VITIS_LOOP_91_2': contains subloop(s) that are not unrolled or flattened.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.92 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.95 seconds; current allocated memory: 1.170 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3.55 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.57 seconds; current allocated memory: 1.170 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_105_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_105_3' pipeline 'VITIS_LOOP_105_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_105_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.35 seconds; current allocated memory: 1.170 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_111_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_111_4' pipeline 'VITIS_LOOP_111_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_111_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.53 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.56 seconds; current allocated memory: 1.180 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_64' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_65' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_66' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_67' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_68' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_69' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_70' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_71' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_72' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_73' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_74' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_75' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_76' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_77' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_78' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_79' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_80' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_81' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_82' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_83' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_84' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_85' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_86' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_87' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_88' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_89' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_90' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_91' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_92' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_93' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_94' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_95' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_96' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_97' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_98' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_99' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_64' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_65' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_66' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_67' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_68' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_69' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_70' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_71' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_72' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_73' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_74' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_75' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_76' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_77' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_78' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_79' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_80' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_81' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_82' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_83' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_84' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_85' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_86' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_87' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_88' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_89' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_90' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_91' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_92' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_93' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_94' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_95' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_96' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_97' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_98' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_99' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'merge_sort_iterative' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'merge_sort_iterative' is 6300 from HDL expression: (1'b1 == ap_CS_fsm_state180)
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_34ns_53_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_85_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_15ns_32_36_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_15ns_64_68_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative'.
+INFO: [RTMG 210-278] Implementing memory 'merge_sort_iterative_temp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.57 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.65 seconds; current allocated memory: 1.203 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 3.46 seconds. CPU system time: 0.04 seconds. Elapsed time: 3.5 seconds; current allocated memory: 1.223 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 30.47 seconds. CPU system time: 0.08 seconds. Elapsed time: 30.55 seconds; current allocated memory: 1.265 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for merge_sort_iterative.
+INFO: [VLOG 209-307] Generating Verilog RTL for merge_sort_iterative.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 165.22 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 59.66 seconds. CPU system time: 4.73 seconds. Elapsed time: 64.45 seconds; current allocated memory: 197.633 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./sort_seperate_bucket/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name merge_sort_iterative merge_sort_iterative 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.07 seconds; current allocated memory: 1.081 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/merge_sort.c:93:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_2.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.63 seconds. CPU system time: 3.63 seconds. Elapsed time: 6.26 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'merge' into 'merge_sort_iterative' (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'input': Block partitioning with factor 100 on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'output': Block partitioning with factor 100 on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.68 seconds. CPU system time: 0.72 seconds. Elapsed time: 6.4 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.088 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.089 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_69_1' (sort_seperate_bucket/merge_sort.c:70) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_77_2' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_81_3' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_106_3' (sort_seperate_bucket/merge_sort.c:106) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_112_4' (sort_seperate_bucket/merge_sort.c:112) in function 'merge_sort_iterative' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.97 seconds. CPU system time: 0.02 seconds. Elapsed time: 1 seconds; current allocated memory: 1.120 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_91_2' (sort_seperate_bucket/merge_sort.c:91:26) in function 'merge_sort_iterative' more than one sub loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_90_1' (sort_seperate_bucket/merge_sort.c:91:35) in function 'merge_sort_iterative' more than one sub loop.
+WARNING: [HLS 200-941] Cannot merge loops in region 'xlx_merge_loop.for.body4.0': loop 'VITIS_LOOP_69_1' (sort_seperate_bucket/merge_sort.c:70) has an unknown trip count.
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:71:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:78:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:82:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.14 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.16 seconds; current allocated memory: 1.185 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'merge_sort_iterative' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_69_1'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 36, Depth = 38, loop 'VITIS_LOOP_69_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.39 seconds. CPU system time: 0.05 seconds. Elapsed time: 1.46 seconds; current allocated memory: 1.199 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.32 seconds; current allocated memory: 1.199 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_77_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 70, loop 'VITIS_LOOP_77_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.61 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.63 seconds; current allocated memory: 1.206 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.87 seconds. CPU system time: 0 seconds. Elapsed time: 0.87 seconds; current allocated memory: 1.206 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_81_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 70, loop 'VITIS_LOOP_81_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.15 seconds; current allocated memory: 1.213 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.89 seconds. CPU system time: 0 seconds. Elapsed time: 0.89 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_106_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_106_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_106_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.14 seconds; current allocated memory: 1.218 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.4 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.218 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_112_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_112_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_112_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.47 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.46 seconds; current allocated memory: 1.224 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.94 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.95 seconds; current allocated memory: 1.224 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.87 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.87 seconds; current allocated memory: 1.227 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.09 seconds. CPU system time: 0 seconds. Elapsed time: 1.11 seconds; current allocated memory: 1.227 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' pipeline 'VITIS_LOOP_69_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_34ns_53_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_15ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32s_15ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.232 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' pipeline 'VITIS_LOOP_77_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_85_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_15ns_64_68_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.35 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.36 seconds; current allocated memory: 1.243 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' pipeline 'VITIS_LOOP_81_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_85_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_15ns_64_68_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.78 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.8 seconds; current allocated memory: 1.251 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_106_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_106_3' pipeline 'VITIS_LOOP_106_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_106_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.76 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.77 seconds; current allocated memory: 1.258 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_112_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_112_4' pipeline 'VITIS_LOOP_112_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_112_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.52 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1.268 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_64' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_65' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_66' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_67' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_68' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_69' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_70' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_71' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_72' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_73' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_74' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_75' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_76' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_77' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_78' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_79' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_80' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_81' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_82' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_83' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_84' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_85' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_86' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_87' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_88' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_89' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_90' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_91' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_92' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_93' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_94' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_95' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_96' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_97' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_98' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_99' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_37' to 'ap_memory'.
+INFO==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: source ./sort_seperate_bucket/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name merge_sort_iterative merge_sort_iterative 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.07 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+WARNING: [HLS 207-5558] Only for-loops and functions support the dataflow (sort_seperate_bucket/merge_sort.c:93:9)
+WARNING: [HLS 214-109] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop (sort_seperate_bucket/merge_sort.c:91:66)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sort_seperate_bucket/merge_sort.c:102:26)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:93:9)
+WARNING: [HLS 200-471] Dataflow form checks found 3 issue(s) in file sort_seperate_bucket/merge_sort.c
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_2.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.63 seconds. CPU system time: 3.59 seconds. Elapsed time: 6.22 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'merge' into 'merge_sort_iterative' (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'input': Block partitioning with factor 100 on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'output': Block partitioning with factor 100 on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.93 seconds. CPU system time: 0.99 seconds. Elapsed time: 6.93 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.083 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_69_1' (sort_seperate_bucket/merge_sort.c:70) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_77_2' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_81_3' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_106_3' (sort_seperate_bucket/merge_sort.c:106) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_112_4' (sort_seperate_bucket/merge_sort.c:112) in function 'merge_sort_iterative' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.93 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.96 seconds; current allocated memory: 1.114 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_91_2' (sort_seperate_bucket/merge_sort.c:91:26) in function 'merge_sort_iterative' more than one sub loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_90_1' (sort_seperate_bucket/merge_sort.c:91:35) in function 'merge_sort_iterative' more than one sub loop.
+WARNING: [HLS 200-941] Cannot merge loops in region 'xlx_merge_loop.for.body4.0': loop 'VITIS_LOOP_69_1' (sort_seperate_bucket/merge_sort.c:70) has an unknown trip count.
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:71:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:78:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:82:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 1.11 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.13 seconds; current allocated memory: 1.179 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'merge_sort_iterative' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_69_1'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+WARNING: [HLS 200-880] The II Violation in module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' (loop 'VITIS_LOOP_69_1'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 0) between 'store' operation ('j_write_ln69', sort_seperate_bucket/merge_sort.c:69) of variable 'j', sort_seperate_bucket/merge_sort.c:70 on local variable 'j' and 'load' operation ('j', sort_seperate_bucket/merge_sort.c:69) on local variable 'j'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 36, Depth = 38, loop 'VITIS_LOOP_69_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.38 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.45 seconds; current allocated memory: 1.193 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.31 seconds. CPU system time: 0 seconds. Elapsed time: 1.31 seconds; current allocated memory: 1.194 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_77_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 70, loop 'VITIS_LOOP_77_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.62 seconds. CPU system time: 0 seconds. Elapsed time: 1.63 seconds; current allocated memory: 1.200 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.86 seconds. CPU system time: 0 seconds. Elapsed time: 0.86 seconds; current allocated memory: 1.200 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_81_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 70, loop 'VITIS_LOOP_81_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.14 seconds; current allocated memory: 1.207 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.87 seconds. CPU system time: 0 seconds. Elapsed time: 0.87 seconds; current allocated memory: 1.207 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_106_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_106_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_106_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.12 seconds; current allocated memory: 1.212 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.4 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.212 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_112_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_112_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_112_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.45 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.48 seconds; current allocated memory: 1.218 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.94 seconds. CPU system time: 0 seconds. Elapsed time: 0.94 seconds; current allocated memory: 1.218 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.86 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.87 seconds; current allocated memory: 1.221 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.08 seconds. CPU system time: 0 seconds. Elapsed time: 1.09 seconds; current allocated memory: 1.222 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' pipeline 'VITIS_LOOP_69_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_34ns_53_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_15ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32s_15ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.226 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' pipeline 'VITIS_LOOP_77_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_85_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_15ns_64_68_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.35 seconds; current allocated memory: 1.237 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' pipeline 'VITIS_LOOP_81_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_66ns_85_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_64ns_15ns_64_68_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.77 seconds. CPU system time: 0 seconds. Elapsed time: 0.77 seconds; current allocated memory: 1.245 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_106_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_106_3' pipeline 'VITIS_LOOP_106_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_106_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.74 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.78 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_112_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_112_4' pipeline 'VITIS_LOOP_112_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_1007_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_112_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.51 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.262 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_64' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_65' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_66' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_67' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_68' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_69' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_70' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_71' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_72' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_73' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_74' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_75' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_76' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_77' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_78' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_79' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_80' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_81' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_82' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_83' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_84' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_85' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_86' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_87' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_88' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_89' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_90' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_91' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_92' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_93' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_94' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_95' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_96' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_97' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_98' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_99' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_16' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_17' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_18' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_19' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_20' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_21' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_22' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_23' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_24' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_25' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_26' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_27' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_28' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_29' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_30' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_31' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_32' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_33' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_34' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_35' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_36' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_37' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_38' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_39' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_40' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_41' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_42' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_43' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_44' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_45' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_46' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_47' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_48' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_49' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_50' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_51' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_52' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_53' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_54' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_55' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_56' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_57' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_58' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_59' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_60' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_61' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_62' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_63' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_64' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_65' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_66' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_67' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_68' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_69' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_70' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_71' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_72' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_73' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_74' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_75' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_76' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_77' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_78' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_79' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_80' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_81' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_82' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_83' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_84' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_85' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_86' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_87' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_88' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_89' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_90' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_91' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_92' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_93' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_94' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_95' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_96' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_97' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_98' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_99' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'merge_sort_iterative' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'merge_sort_iterative' is 6300 from HDL expression: (1'b1 == ap_CS_fsm_state10)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative'.
+INFO: [RTMG 210-278] Implementing memory 'merge_sort_iterative_temp_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.54 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.65 seconds; current allocated memory: 1.284 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.18 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.21 seconds; current allocated memory: 1.291 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 31.01 seconds. CPU system time: 0.07 seconds. Elapsed time: 31.08 seconds; current allocated memory: 1.335 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for merge_sort_iterative.
+INFO: [VLOG 209-307] Generating Verilog RTL for merge_sort_iterative.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 155.56 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 61.51 seconds. CPU system time: 4.99 seconds. Elapsed time: 66.61 seconds; current allocated memory: 265.719 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

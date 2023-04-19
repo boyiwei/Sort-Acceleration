@@ -1,13 +1,61 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling(apcc) ../../../radix_sort_2.c in debug mode
+   Compiling(apcc) ../../../sort_test.c in debug mode
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Tue Apr 18 17:56:15 PDT 2023
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 19 13:44:26 PDT 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/13858371681865775625588
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/19835531681937066902745
 INFO: [APCC 202-1] APCC is done.
-INFO: [HLS 200-112] Total CPU user time: 2.28 seconds. Total CPU system time: 0.28 seconds. Total elapsed time: 2.43 seconds; peak allocated memory: 98.965 MB.
+INFO: [HLS 200-112] Total CPU user time: 2.22 seconds. Total CPU system time: 0.26 seconds. Total elapsed time: 2.28 seconds; peak allocated memory: 98.980 MB.
+   Compiling(apcc) ../../../heapsort.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 19 13:44:30 PDT 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/19836601681937070793101
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 2.23 seconds. Total CPU system time: 0.3 seconds. Total elapsed time: 2.32 seconds; peak allocated memory: 98.980 MB.
+   Compiling(apcc) ../../../merge_sort.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 19 13:44:34 PDT 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/19837471681937074729753
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 2.33 seconds. Total CPU system time: 0.25 seconds. Total elapsed time: 2.37 seconds; peak allocated memory: 98.980 MB.
+   Compiling(apcc) ../../../radix_sort.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 19 13:44:38 PDT 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/19838361681937078690449
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 2.22 seconds. Total CPU system time: 0.29 seconds. Total elapsed time: 2.31 seconds; peak allocated memory: 98.980 MB.
+   Compiling(apcc) ../../../radix_sort_2.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 19 13:44:42 PDT 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/19839261681937082637789
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 2.21 seconds. Total CPU system time: 0.3 seconds. Total elapsed time: 2.32 seconds; peak allocated memory: 98.980 MB.
+   Compiling(apcc) ../../../radix_sort_separate_bucket_parallel.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 19 13:44:46 PDT 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/19840151681937086568139
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 2.39 seconds. Total CPU system time: 0.31 seconds. Total elapsed time: 2.48 seconds; peak allocated memory: 98.984 MB.
+   Compiling(apcc) ../../../sort_top.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 19 13:44:50 PDT 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/19841041681937090654420
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 2.2 seconds. Total CPU system time: 0.26 seconds. Total elapsed time: 2.25 seconds; peak allocated memory: 98.980 MB.
    Generating csim.exe
 Checking results
 next_ith_radix = 1

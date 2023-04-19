@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../sort_test.c ../../../sort_top.c ../../../radix_sort_separate_bucket_parallel.c ../../../radix_sort_2.c ../../../radix_sort.c ../../../merge_sort.c ../../../heapsort.c
+HLS_SOURCES = ../../../sort_test.c ../../../heapsort.c ../../../merge_sort.c ../../../radix_sort.c ../../../radix_sort_2.c ../../../radix_sort_separate_bucket_parallel.c ../../../sort_top.c
 
 override TARGET := csim.exe
 
@@ -78,33 +78,15 @@ AUTOCC := apcc
 
 $(ObjDir)/sort_test.o: ../../../sort_test.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../sort_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/sort_test.d
 
-$(ObjDir)/sort_top.o: ../../../sort_top.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../sort_top.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/heapsort.o: ../../../heapsort.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../heapsort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/sort_top.d
-
-$(ObjDir)/radix_sort_separate_bucket_parallel.o: ../../../radix_sort_separate_bucket_parallel.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../radix_sort_separate_bucket_parallel.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/radix_sort_separate_bucket_parallel.d
-
-$(ObjDir)/radix_sort_2.o: ../../../radix_sort_2.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../radix_sort_2.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/radix_sort_2.d
-
-$(ObjDir)/radix_sort.o: ../../../radix_sort.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../radix_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/radix_sort.d
+-include $(ObjDir)/heapsort.d
 
 $(ObjDir)/merge_sort.o: ../../../merge_sort.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../merge_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
@@ -112,8 +94,26 @@ $(ObjDir)/merge_sort.o: ../../../merge_sort.c $(ObjDir)/.dir
 
 -include $(ObjDir)/merge_sort.d
 
-$(ObjDir)/heapsort.o: ../../../heapsort.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../heapsort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/radix_sort.o: ../../../radix_sort.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../radix_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/heapsort.d
+-include $(ObjDir)/radix_sort.d
+
+$(ObjDir)/radix_sort_2.o: ../../../radix_sort_2.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../radix_sort_2.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/radix_sort_2.d
+
+$(ObjDir)/radix_sort_separate_bucket_parallel.o: ../../../radix_sort_separate_bucket_parallel.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../radix_sort_separate_bucket_parallel.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/radix_sort_separate_bucket_parallel.d
+
+$(ObjDir)/sort_top.o: ../../../sort_top.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../sort_top.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/sort_top.d

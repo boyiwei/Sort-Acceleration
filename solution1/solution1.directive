@@ -5,31 +5,6 @@
                 <option name="name" value="merge_sort_iterative"/>
             </pragma>
         </directive>
-        <directive functionName="merge_sort_iterative" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="merge_sort_iterative"/>
-            </pragma>
-        </directive>
-        <directive functionName="merge_sort_iterative" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="merge_sort_iterative"/>
-            </pragma>
-        </directive>
-        <directive functionName="merge_sort_iterative" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="merge_sort_iterative"/>
-            </pragma>
-        </directive>
-        <directive functionName="merge_sort_iterative" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="merge_sort_iterative"/>
-            </pragma>
-        </directive>
-        <directive functionName="merge_sort_iterative" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="merge_sort_iterative"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

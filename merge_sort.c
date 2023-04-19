@@ -85,10 +85,12 @@ void merge(int input[batch_size], int temp[batch_size], int low, int mid, int hi
 
 void merge_sort_iterative(int input[batch_size], int output[batch_size]) {
     int temp[batch_size];
-#pragma HLS ARRAY_PARTITION variable=input type=complete
-#pragma HLS ARRAY_PARTITION variable=output type=complete
+#pragma HLS ARRAY_PARTITION variable=input type=block factor=100  // avoid size >1000
+#pragma HLS ARRAY_PARTITION variable=output type=block factor=100
     for (int step = 1; step < batch_size; step *= 2) {
         for (int low = 0; low < batch_size - step; low += 2 * step) {
+#pragma HLS LOOP_MERGE
+#pragma HLS DATAFLOW
             int mid = low + step;
             int high = mid + step - 1;
 

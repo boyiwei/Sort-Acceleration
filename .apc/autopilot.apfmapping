@@ -3,17 +3,17 @@
   <source>
     <originFiles name="sort_top.c" path="/home/boyiw7/sort_seperate_bucket/sort_top.c"/>
     <originFiles name="radix_sort_separate_bucket_parallel.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort_separate_bucket_parallel.c"/>
+    <originFiles name="radix_sort_2.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort_2.c"/>
     <originFiles name="radix_sort.h" path="/home/boyiw7/sort_seperate_bucket/radix_sort.h"/>
     <originFiles name="radix_sort.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort.c"/>
     <originFiles name="merge_sort.h" path="/home/boyiw7/sort_seperate_bucket/merge_sort.h"/>
     <originFiles name="merge_sort.c" path="/home/boyiw7/sort_seperate_bucket/merge_sort.c"/>
-    <originFiles name="batch_size.h" path="/home/boyiw7/sort_seperate_bucket/batch_size.h"/>
     <originFiles name="heapsort.c" path="/home/boyiw7/sort_seperate_bucket/heapsort.c"/>
-    <originFiles name="radix_sort_2.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort_2.c"/>
+    <originFiles name="batch_size.h" path="/home/boyiw7/sort_seperate_bucket/batch_size.h"/>
   </source>
   <testbench>
-    <originFiles name="batch_size.h" path="/home/boyiw7/sort_seperate_bucket/batch_size.h"/>
-    <originFiles name="dataset.h" path="/home/boyiw7/sort_seperate_bucket/dataset.h"/>
     <originFiles name="sort_test.c" path="/home/boyiw7/sort_seperate_bucket/sort_test.c"/>
+    <originFiles name="dataset.h" path="/home/boyiw7/sort_seperate_bucket/dataset.h"/>
+    <originFiles name="batch_size.h" path="/home/boyiw7/sort_seperate_bucket/batch_size.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

@@ -929,12 +929,18 @@ __attribute__((sdx_kernel("merge_sort_iterative", 0))) void merge_sort_iterative
 #pragma HLSDIRECTIVE TOP name=merge_sort_iterative
 # 86 "sort_seperate_bucket/merge_sort.c"
 
+#line 6 "/home/boyiw7/sort_seperate_bucket/solution1/directives.tcl"
+#pragma HLSDIRECTIVE TOP name=merge_sort_iterative
+# 86 "sort_seperate_bucket/merge_sort.c"
+
     int temp[1000000];
-#pragma HLS ARRAY_PARTITION variable=input type=complete
-#pragma HLS ARRAY_PARTITION variable=output type=complete
+#pragma HLS ARRAY_PARTITION variable=input type=block factor=100
+#pragma HLS ARRAY_PARTITION variable=output type=block factor=100
  VITIS_LOOP_90_1: for (int step = 1; step < 1000000; step *= 2) {
         VITIS_LOOP_91_2: for (int low = 0; low < 1000000 - step; low += 2 * step) {
-            int mid = low + step;
+#pragma HLS LOOP_MERGE
+#pragma HLS DATAFLOW
+ int mid = low + step;
             int high = mid + step - 1;
 
 
@@ -946,13 +952,13 @@ __attribute__((sdx_kernel("merge_sort_iterative", 0))) void merge_sort_iterative
         }
 
 
-        VITIS_LOOP_104_3: for (int i = 0; i < 1000000; i++) {
+        VITIS_LOOP_106_3: for (int i = 0; i < 1000000; i++) {
             input[i] = temp[i];
         }
     }
 
 
-    VITIS_LOOP_110_4: for (int i = 0; i < 1000000; i++) {
+    VITIS_LOOP_112_4: for (int i = 0; i < 1000000; i++) {
         output[i] = input[i];
     }
 }
@@ -963,12 +969,12 @@ void merge_sort_all(int input[1000000], int output[1000000]){
     int temp[1000000];
 #pragma HLS ARRAY_PARTITION variable=input type=complete
 #pragma HLS ARRAY_PARTITION variable=output type=complete
- VITIS_LOOP_121_1: for (int i = 0; i < 1000000; i++) {
+ VITIS_LOOP_123_1: for (int i = 0; i < 1000000; i++) {
         output[i] = input[i];
     }
 
-    VITIS_LOOP_125_2: for (int step = 1; step < 1000000; step *= 2) {
-        VITIS_LOOP_126_3: for (int low = 0; low < 1000000 - step; low += step * 2) {
+    VITIS_LOOP_127_2: for (int step = 1; step < 1000000; step *= 2) {
+        VITIS_LOOP_128_3: for (int low = 0; low < 1000000 - step; low += step * 2) {
             int mid = low + step - 1;
             int high = (mid + step) < (1000000 - 1) ? (mid + step) : (1000000 - 1);
             merge(output, temp, low, mid, high);

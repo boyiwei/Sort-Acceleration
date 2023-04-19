@@ -1,0 +1,5 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="sort_seperate_bucket/merge_sort.c:69:22" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="sort_seperate_bucket/merge_sort.c:69:22" LoopName="VITIS_LOOP_69_1" ParentFunc="merge_sort_iterative"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="sort_seperate_bucket/merge_sort.c:91:26" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="sort_seperate_bucket/merge_sort.c:91:26" LoopName="VITIS_LOOP_91_2" ParentFunc="merge_sort_iterative"/>
+</VitisHLS:BurstInfo>
+
