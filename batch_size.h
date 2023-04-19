@@ -1,1 +1,1 @@
-#define batch_size 500000
+#define batch_size 1000000

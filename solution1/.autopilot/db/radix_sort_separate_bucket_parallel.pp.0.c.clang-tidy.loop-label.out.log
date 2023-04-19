@@ -1,10 +1,10 @@
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:883:2: warning: Added loop label VITIS_LOOP_11_1:   [xilinx-label-all-loops]
- for (int j = start; j < 500000/2; j++) {
+ for (int j = start; j < 1000000/2; j++) {
  ^~~
  VITIS_LOOP_11_1: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:883:2: note: FIX-IT applied suggested code changes
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:892:2: warning: Added loop label VITIS_LOOP_20_1:   [xilinx-label-all-loops]
- for (int j = start; j < 500000/2; j++) {
+ for (int j = start; j < 1000000/2; j++) {
  ^~~
  VITIS_LOOP_20_1: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c:892:2: note: FIX-IT applied suggested code changes

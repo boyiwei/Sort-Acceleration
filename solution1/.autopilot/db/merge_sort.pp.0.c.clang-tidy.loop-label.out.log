@@ -1,5 +1,55 @@
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:879:2: warning: Added loop label VITIS_LOOP_7_1:   [xilinx-label-all-loops]
- for(int i=0; i<2*500000; i++){
+ for(int i=0; i<2*1000000; i++){
  ^~~
  VITIS_LOOP_7_1: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:879:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:910:5: warning: Added loop label VITIS_LOOP_69_1:   [xilinx-label-all-loops]
+    while (i < mid && j <= high) {
+    ^~~~~
+    VITIS_LOOP_69_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:910:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:918:5: warning: Added loop label VITIS_LOOP_77_2:   [xilinx-label-all-loops]
+    while (i < mid) {
+    ^~~~~
+    VITIS_LOOP_77_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:918:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:922:5: warning: Added loop label VITIS_LOOP_81_3:   [xilinx-label-all-loops]
+    while (j <= high) {
+    ^~~~~
+    VITIS_LOOP_81_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:922:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:935:2: warning: Added loop label VITIS_LOOP_90_1:   [xilinx-label-all-loops]
+ for (int step = 1; step < 1000000; step *= 2) {
+ ^~~
+ VITIS_LOOP_90_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:935:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:936:9: warning: Added loop label VITIS_LOOP_91_2:   [xilinx-label-all-loops]
+        for (int low = 0; low < 1000000 - step; low += 2 * step) {
+        ^~~
+        VITIS_LOOP_91_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:936:9: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:949:9: warning: Added loop label VITIS_LOOP_104_3:   [xilinx-label-all-loops]
+        for (int i = 0; i < 1000000; i++) {
+        ^~~
+        VITIS_LOOP_104_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:949:9: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:955:5: warning: Added loop label VITIS_LOOP_110_4:   [xilinx-label-all-loops]
+    for (int i = 0; i < 1000000; i++) {
+    ^~~
+    VITIS_LOOP_110_4: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:955:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:966:2: warning: Added loop label VITIS_LOOP_121_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < 1000000; i++) {
+ ^~~
+ VITIS_LOOP_121_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:966:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:970:5: warning: Added loop label VITIS_LOOP_125_2:   [xilinx-label-all-loops]
+    for (int step = 1; step < 1000000; step *= 2) {
+    ^~~
+    VITIS_LOOP_125_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:970:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:971:9: warning: Added loop label VITIS_LOOP_126_3:   [xilinx-label-all-loops]
+        for (int low = 0; low < 1000000 - step; low += step * 2) {
+        ^~~
+        VITIS_LOOP_126_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:971:9: note: FIX-IT applied suggested code changes

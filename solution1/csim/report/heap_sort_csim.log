@@ -1,0 +1,113 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling(apcc) ../../../merge_sort.c in debug mode
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Tue Apr 18 14:49:22 PDT 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/12920551681854562169165
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 2.3 seconds. Total CPU system time: 0.34 seconds. Total elapsed time: 2.42 seconds; peak allocated memory: 98.965 MB.
+   Generating csim.exe
+Checking results
+low=0, mid=1, high=1
+low=2, mid=3, high=3
+low=4, mid=5, high=5
+low=6, mid=7, high=7
+low=8, mid=9, high=9
+low=10, mid=11, high=11
+low=12, mid=13, high=13
+low=14, mid=15, high=15
+low=16, mid=17, high=17
+low=18, mid=19, high=19
+low=20, mid=21, high=21
+low=22, mid=23, high=23
+low=24, mid=25, high=25
+low=26, mid=27, high=27
+low=28, mid=29, high=29
+low=30, mid=31, high=31
+low=32, mid=33, high=33
+low=34, mid=35, high=35
+low=36, mid=37, high=37
+low=38, mid=39, high=39
+low=40, mid=41, high=41
+low=42, mid=43, high=43
+low=44, mid=45, high=45
+low=46, mid=47, high=47
+low=48, mid=49, high=49
+low=0, mid=2, high=3
+low=4, mid=6, high=7
+low=8, mid=10, high=11
+low=12, mid=14, high=15
+low=16, mid=18, high=19
+low=20, mid=22, high=23
+low=24, mid=26, high=27
+low=28, mid=30, high=31
+low=32, mid=34, high=35
+low=36, mid=38, high=39
+low=40, mid=42, high=43
+low=44, mid=46, high=47
+low=0, mid=4, high=7
+low=8, mid=12, high=15
+low=16, mid=20, high=23
+low=24, mid=28, high=31
+low=32, mid=36, high=39
+low=40, mid=44, high=47
+low=0, mid=8, high=15
+low=16, mid=24, high=31
+low=32, mid=40, high=47
+low=0, mid=16, high=31
+low=32, mid=48, high=49
+low=0, mid=32, high=49
+Sorted_results: rank 0, value= 5552231 
+Sorted_results: rank 1, value= 36006549 
+Sorted_results: rank 2, value= 65598788 
+Sorted_results: rank 3, value= 80878740 
+Sorted_results: rank 4, value= 88490000 
+Sorted_results: rank 5, value= 127352324 
+Sorted_results: rank 6, value= 186404399 
+Sorted_results: rank 7, value= 189878413 
+Sorted_results: rank 8, value= 192034506 
+Sorted_results: rank 9, value= 256088272 
+Sorted_results: rank 10, value= 325695605 
+Sorted_results: rank 11, value= 447183299 
+Sorted_results: rank 12, value= 476693086 
+Sorted_results: rank 13, value= 493744502 
+Sorted_results: rank 14, value= 516944765 
+Sorted_results: rank 15, value= 553297039 
+Sorted_results: rank 16, value= 581354734 
+Sorted_results: rank 17, value= 606445162 
+Sorted_results: rank 18, value= 690890325 
+Sorted_results: rank 19, value= 710066025 
+Sorted_results: rank 20, value= 779669220 
+Sorted_results: rank 21, value= 848570768 
+Sorted_results: rank 22, value= 876464942 
+Sorted_results: rank 23, value= 895555376 
+Sorted_results: rank 24, value= 923732607 
+Sorted_results: rank 25, value= 1040104694 
+Sorted_results: rank 26, value= 1044853451 
+Sorted_results: rank 27, value= 1046829005 
+Sorted_results: rank 28, value= 1088674490 
+Sorted_results: rank 29, value= 1203505172 
+Sorted_results: rank 30, value= 1307386113 
+Sorted_results: rank 31, value= 1320722758 
+Sorted_results: rank 32, value= 1326800232 
+Sorted_results: rank 33, value= 1356902103 
+Sorted_results: rank 34, value= 1408842592 
+Sorted_results: rank 35, value= 1542136754 
+Sorted_results: rank 36, value= 1608778821 
+Sorted_results: rank 37, value= 1646408990 
+Sorted_results: rank 38, value= 1679599905 
+Sorted_results: rank 39, value= 1700208832 
+Sorted_results: rank 40, value= 1852261356 
+Sorted_results: rank 41, value= 1859492446 
+Sorted_results: rank 42, value= 1873411667 
+Sorted_results: rank 43, value= 1910440446 
+Sorted_results: rank 44, value= 1914072138 
+Sorted_results: rank 45, value= 1922698068 
+Sorted_results: rank 46, value= 1933005737 
+Sorted_results: rank 47, value= 1974215913 
+Sorted_results: rank 48, value= 1974227909 
+Sorted_results: rank 49, value= 2026238854 
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

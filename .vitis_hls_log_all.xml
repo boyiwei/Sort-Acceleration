@@ -6,66 +6,20 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:42:41.023-0700"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:40:38.691-0700"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:34:59.850-0700"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:30:47.511-0700"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:21:15.579-0700"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:59:38.076-0700"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:59:02.285-0700"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.940-0700"/>
-        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.861-0700"/>
-        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.855-0700"/>
-        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:19:04.848-0700"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:18:07.432-0700"/>
-        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:18:07.333-0700"/>
-        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:18:07.326-0700"/>
-        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:18:07.316-0700"/>
-        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:02:41.563-0700"/>
-        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:02:41.497-0700"/>
-        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:02:41.490-0700"/>
-        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:02:41.481-0700"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.1' to 'merge_sort_1'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.867-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.2' to 'radix_sort_unified_bucket_1_2'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.864-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.2_Pipeline_output_bucket' to 'radix_sort_unified_bucket_1_2_Pipeline_output_bucket'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.858-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.2_Pipeline_input_bucket' to 'radix_sort_unified_bucket_1_2_Pipeline_input_bucket'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.852-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.2_Pipeline_bucket_pointer_initialization' to 'radix_sort_unified_bucket_1_2_Pipeline_bucket_pointer_initialization'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.847-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.2_Pipeline_initialization' to 'radix_sort_unified_bucket_1_2_Pipeline_initialization'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.842-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.2_Pipeline_1' to 'radix_sort_unified_bucket_1_2_Pipeline_1'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.837-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.1' to 'radix_sort_unified_bucket_1_1'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.830-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.1_Pipeline_output_bucket' to 'radix_sort_unified_bucket_1_1_Pipeline_output_bucket'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.817-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.1_Pipeline_input_bucket' to 'radix_sort_unified_bucket_1_1_Pipeline_input_bucket'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.812-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.1_Pipeline_bucket_pointer_initialization' to 'radix_sort_unified_bucket_1_1_Pipeline_bucket_pointer_initialization'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.807-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.1_Pipeline_initialization' to 'radix_sort_unified_bucket_1_1_Pipeline_initialization'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.801-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket.1.1_Pipeline_1' to 'radix_sort_unified_bucket_1_1_Pipeline_1'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.792-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-946] Cannot merge loops in region 'xlx_merge_loop.bucket_pointer_initialization.1': data dependence(s) between loops prevent merging.&#xA;Resolution: For help on HLS 200-946 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-946.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.630-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-946] Cannot merge loops in region 'xlx_merge_loop.bucket_pointer_initialization.0': data dependence(s) between loops prevent merging.&#xA;Resolution: For help on HLS 200-946 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-946.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.624-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'sort_procedure' (sort_seperate_bucket/radix_sort.c:24:11) in function 'radix_sort_unified_bucket.1.1' more than one sub loop.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.617-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'sort_procedure' (sort_seperate_bucket/radix_sort.c:24:11) in function 'radix_sort_unified_bucket.1.2' more than one sub loop.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-960.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:14.600-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:09.131-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-17T18:12:08.576-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-19T08:01:02.045-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-19T08:01:01.446-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-19T08:01:00.986-0700" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog>
-        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:32:57.808-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:30:29.556-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T10:21:01.648-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:59:24.128-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:58:44.266-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:58:02.323-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:30:56.332-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'batch_size.h'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:30:14.264-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-40] Cannot find design file 'heap_sort.c'" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-18T09:30:14.246-0700" type="Warning"/>
-      </csimLog>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../sort_test.c ../../../sort_top.c ../../../radix_sort_separate_bucket_parallel.c ../../../radix_sort.c ../../../merge_sort.c ../../../heap_sort.c
+HLS_SOURCES = ../../../sort_test.c ../../../sort_top.c ../../../radix_sort_separate_bucket_parallel.c ../../../radix_sort_2.c ../../../radix_sort.c ../../../merge_sort.c ../../../heapsort.c
 
 override TARGET := csim.exe
 
@@ -94,6 +94,12 @@ $(ObjDir)/radix_sort_separate_bucket_parallel.o: ../../../radix_sort_separate_bu
 
 -include $(ObjDir)/radix_sort_separate_bucket_parallel.d
 
+$(ObjDir)/radix_sort_2.o: ../../../radix_sort_2.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../radix_sort_2.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/radix_sort_2.d
+
 $(ObjDir)/radix_sort.o: ../../../radix_sort.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../radix_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
@@ -106,8 +112,8 @@ $(ObjDir)/merge_sort.o: ../../../merge_sort.c $(ObjDir)/.dir
 
 -include $(ObjDir)/merge_sort.d
 
-$(ObjDir)/heap_sort.o: ../../../heap_sort.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../heap_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/heapsort.o: ../../../heapsort.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../heapsort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/heap_sort.d
+-include $(ObjDir)/heapsort.d

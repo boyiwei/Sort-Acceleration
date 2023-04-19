@@ -873,13 +873,13 @@ extern int __overflow (FILE *, int);
 # 1 "sort_seperate_bucket/batch_size.h" 1
 # 3 "sort_seperate_bucket/merge_sort.c" 2
 
-void merge_sort(int input1[500000], int input2[500000], int sorted_data[2*500000]){
+void merge_sort(int input1[1000000], int input2[1000000], int sorted_data[2*1000000]){
  int j = 0;
  int k = 0;
- VITIS_LOOP_7_1: for(int i=0; i<2*500000; i++){
+ VITIS_LOOP_7_1: for(int i=0; i<2*1000000; i++){
   printf("i=%d, input1[%d] = %d, input2[%d]=%d\n", i, j, input1[j], k, input2[k]);
 #pragma HLS PIPELINE
- if((j<500000)&&(k<500000)){
+ if((j<1000000)&&(k<1000000)){
    if(input1[j]<input2[k]){
     sorted_data[i] = input1[j];
     j = j + 1;
@@ -892,7 +892,7 @@ void merge_sort(int input1[500000], int input2[500000], int sorted_data[2*500000
    }
   }
 
-  else if((j==500000)&&(k<500000)){
+  else if((j==1000000)&&(k<1000000)){
    sorted_data[i] = input2[k];
    k = k + 1;
   }
@@ -901,4 +901,77 @@ void merge_sort(int input1[500000], int input2[500000], int sorted_data[2*500000
    j = j + 1;
   }
  }
+}
+# 65 "sort_seperate_bucket/merge_sort.c"
+void merge(int input[1000000], int temp[1000000], int low, int mid, int high) {
+ printf("low=%d, mid=%d, high=%d\n", low, mid, high);
+    int i = low, j = mid, k = low;
+
+    VITIS_LOOP_69_1: while (i < mid && j <= high) {
+        if (input[i] <= input[j]) {
+            temp[k++] = input[i++];
+        } else {
+            temp[k++] = input[j++];
+        }
+    }
+
+    VITIS_LOOP_77_2: while (i < mid) {
+        temp[k++] = input[i++];
+    }
+
+    VITIS_LOOP_81_3: while (j <= high) {
+        temp[k++] = input[j++];
+    }
+}
+
+__attribute__((sdx_kernel("merge_sort_iterative", 0))) void merge_sort_iterative(int input[1000000], int output[1000000]) {
+#line 25 "/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=merge_sort_iterative
+# 86 "sort_seperate_bucket/merge_sort.c"
+
+    int temp[1000000];
+#pragma HLS ARRAY_PARTITION variable=input type=complete
+#pragma HLS ARRAY_PARTITION variable=output type=complete
+ VITIS_LOOP_90_1: for (int step = 1; step < 1000000; step *= 2) {
+        VITIS_LOOP_91_2: for (int low = 0; low < 1000000 - step; low += 2 * step) {
+            int mid = low + step;
+            int high = mid + step - 1;
+
+
+            if (high >= 1000000) {
+                high = 1000000 - 1;
+            }
+
+            merge(input, temp, low, mid, high);
+        }
+
+
+        VITIS_LOOP_104_3: for (int i = 0; i < 1000000; i++) {
+            input[i] = temp[i];
+        }
+    }
+
+
+    VITIS_LOOP_110_4: for (int i = 0; i < 1000000; i++) {
+        output[i] = input[i];
+    }
+}
+
+
+
+void merge_sort_all(int input[1000000], int output[1000000]){
+    int temp[1000000];
+#pragma HLS ARRAY_PARTITION variable=input type=complete
+#pragma HLS ARRAY_PARTITION variable=output type=complete
+ VITIS_LOOP_121_1: for (int i = 0; i < 1000000; i++) {
+        output[i] = input[i];
+    }
+
+    VITIS_LOOP_125_2: for (int step = 1; step < 1000000; step *= 2) {
+        VITIS_LOOP_126_3: for (int low = 0; low < 1000000 - step; low += step * 2) {
+            int mid = low + step - 1;
+            int high = (mid + step) < (1000000 - 1) ? (mid + step) : (1000000 - 1);
+            merge(output, temp, low, mid, high);
+        }
+    }
 }

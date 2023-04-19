@@ -47,14 +47,9 @@
 			<location>/home/boyiw7/sort_seperate_bucket/batch_size.h</location>
 		</link>
 		<link>
-			<name>source/heap_sort.c</name>
+			<name>source/heapsort.c</name>
 			<type>1</type>
-			<location>/home/boyiw7/sort_seperate_bucket/heap_sort.c</location>
-		</link>
-		<link>
-			<name>source/heap_sort.h</name>
-			<type>1</type>
-			<location>/home/boyiw7/sort_seperate_bucket/heap_sort.h</location>
+			<location>/home/boyiw7/sort_seperate_bucket/heapsort.c</location>
 		</link>
 		<link>
 			<name>source/merge_sort.c</name>
@@ -75,6 +70,11 @@
 			<name>source/radix_sort.h</name>
 			<type>1</type>
 			<location>/home/boyiw7/sort_seperate_bucket/radix_sort.h</location>
+		</link>
+		<link>
+			<name>source/radix_sort_2.c</name>
+			<type>1</type>
+			<location>/home/boyiw7/sort_seperate_bucket/radix_sort_2.c</location>
 		</link>
 		<link>
 			<name>source/radix_sort_separate_bucket_parallel.c</name>

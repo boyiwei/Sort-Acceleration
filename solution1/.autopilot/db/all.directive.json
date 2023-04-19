@@ -2,77 +2,92 @@
       "name": "",
       "directive": [
         {
-          "functionName": "sort_top",
+          "functionName": "merge_sort_iterative",
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/directives.tcl",
-          "sourceLine": "6",
+          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
+          "sourceLine": "25",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top"
+                "value": "merge_sort_iterative"
               }]
           }
         },
         {
-          "functionName": "sort_top",
+          "functionName": "merge_sort_iterative",
           "label": "",
           "functionLabel": "",
           "id": "2",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "23",
+          "sourceLine": "25",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top"
+                "value": "merge_sort_iterative"
               }]
           }
         },
         {
-          "functionName": "sort_top",
+          "functionName": "merge_sort_iterative",
           "label": "",
           "functionLabel": "",
           "id": "3",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "23",
+          "sourceLine": "25",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top"
+                "value": "merge_sort_iterative"
               }]
           }
         },
         {
-          "functionName": "sort_top",
+          "functionName": "merge_sort_iterative",
           "label": "",
           "functionLabel": "",
           "id": "4",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "23",
+          "sourceLine": "25",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top"
+                "value": "merge_sort_iterative"
               }]
           }
         },
         {
-          "functionName": "sort_top",
+          "functionName": "merge_sort_iterative",
           "label": "",
           "functionLabel": "",
           "id": "5",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "23",
+          "sourceLine": "25",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top"
+                "value": "merge_sort_iterative"
+              }]
+          }
+        },
+        {
+          "functionName": "merge_sort_iterative",
+          "label": "",
+          "functionLabel": "",
+          "id": "6",
+          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
+          "sourceLine": "25",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "merge_sort_iterative"
               }]
           }
         }

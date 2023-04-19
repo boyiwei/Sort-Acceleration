@@ -10437,3 +10437,775 @@ Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
 Tool Version Limit: 2019.12
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.1 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.19 seconds. CPU system time: 3.84 seconds. Elapsed time: 6.02 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'swap' into 'maxHeapify' (sort_seperate_bucket/heapsort.c:17:0)
+INFO: [HLS 214-178] Inlining function 'maxHeapify' into 'heap_sort' (sort_seperate_bucket/heapsort.c:43:0)
+INFO: [HLS 214-178] Inlining function 'swap' into 'heap_sort' (sort_seperate_bucket/heapsort.c:43:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.49 seconds. CPU system time: 0.86 seconds. Elapsed time: 4.39 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.077 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (sort_seperate_bucket/heapsort.c:17) in function 'heap_sort' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (sort_seperate_bucket/heapsort.c:17) in function 'heap_sort' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.099 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_45_1' (sort_seperate_bucket/heapsort.c:45:31) in function 'heap_sort' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_49_2' (sort_seperate_bucket/heapsort.c:49:31) in function 'heap_sort' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.108 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'heap_sort' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_1' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('arr_addr_write_ln12', sort_seperate_bucket/heapsort.c:12) of variable 'arr_load_7', sort_seperate_bucket/heapsort.c:12 on array 'arr' and 'load' operation ('arr_load', sort_seperate_bucket/heapsort.c:24) on array 'arr'.
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_1' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('arr_addr_6_write_ln13', sort_seperate_bucket/heapsort.c:13) of variable 'temp', sort_seperate_bucket/heapsort.c:11 on array 'arr' and 'load' operation ('arr_load', sort_seperate_bucket/heapsort.c:24) on array 'arr'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 5, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0.08 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.110 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_VITIS_LOOP_18_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_11' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('arr_addr_4_write_ln12', sort_seperate_bucket/heapsort.c:12) of variable 'arr_load_5', sort_seperate_bucket/heapsort.c:12 on array 'arr' and 'load' operation ('arr_load', sort_seperate_bucket/heapsort.c:24) on array 'arr'.
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_11' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('arr_addr_5_write_ln13', sort_seperate_bucket/heapsort.c:13) of variable 'temp', sort_seperate_bucket/heapsort.c:11 on array 'arr' and 'load' operation ('arr_load', sort_seperate_bucket/heapsort.c:24) on array 'arr'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 5, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.08 seconds; current allocated memory: 1.081 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.13 seconds. CPU system time: 3.48 seconds. Elapsed time: 5.68 seconds; current allocated memory: 1.081 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'swap' into 'maxHeapify' (sort_seperate_bucket/heapsort.c:17:0)
+INFO: [HLS 214-178] Inlining function 'maxHeapify' into 'heap_sort' (sort_seperate_bucket/heapsort.c:43:0)
+INFO: [HLS 214-178] Inlining function 'swap' into 'heap_sort' (sort_seperate_bucket/heapsort.c:43:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.61 seconds. CPU system time: 0.77 seconds. Elapsed time: 4.4 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.083 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (sort_seperate_bucket/heapsort.c:17) in function 'heap_sort' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (sort_seperate_bucket/heapsort.c:17) in function 'heap_sort' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.105 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'heap_sort_procedure' (sort_seperate_bucket/heapsort.c:45:6) in function 'heap_sort' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_59_1' (sort_seperate_bucket/heapsort.c:46:6) in function 'heap_sort' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'data' (sort_seperate_bucket/heapsort.c:50:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'data' (sort_seperate_bucket/heapsort.c:12:8)
+INFO: [HLS 200-472] Inferring partial write operation for 'data' (sort_seperate_bucket/heapsort.c:13:8)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.133 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'heap_sort' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_initialization' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'initialization'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'initialization'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.134 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.134 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_1' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('data_addr_6_write_ln12', sort_seperate_bucket/heapsort.c:12) of variable 'data_load_7', sort_seperate_bucket/heapsort.c:12 on array 'data' and 'load' operation ('data_load', sort_seperate_bucket/heapsort.c:24) on array 'data'.
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_1' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('data_addr_7_write_ln13', sort_seperate_bucket/heapsort.c:13) of variable 'temp', sort_seperate_bucket/heapsort.c:11 on array 'data' and 'load' operation ('data_load', sort_seperate_bucket/heapsort.c:24) on array 'data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 5, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.135 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.135 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_VITIS_LOOP_18_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.1 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.02 seconds. CPU system time: 3.65 seconds. Elapsed time: 5.64 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'swap' into 'maxHeapify' (sort_seperate_bucket/heapsort.c:17:0)
+INFO: [HLS 214-178] Inlining function 'maxHeapify' into 'heap_sort' (sort_seperate_bucket/heapsort.c:43:0)
+INFO: [HLS 214-178] Inlining function 'swap' into 'heap_sort' (sort_seperate_bucket/heapsort.c:43:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.66 seconds. CPU system time: 0.8 seconds. Elapsed time: 4.47 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.077 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (sort_seperate_bucket/heapsort.c:17) in function 'heap_sort' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (sort_seperate_bucket/heapsort.c:17) in function 'heap_sort' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.099 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'heap_sort_procedure' (sort_seperate_bucket/heapsort.c:45:6) in function 'heap_sort' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_59_1' (sort_seperate_bucket/heapsort.c:46:6) in function 'heap_sort' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'data' (sort_seperate_bucket/heapsort.c:50:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'data' (sort_seperate_bucket/heapsort.c:12:8)
+INFO: [HLS 200-472] Inferring partial write operation for 'data' (sort_seperate_bucket/heapsort.c:13:8)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.127 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'heap_sort' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_initialization' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'initialization'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'initialization'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.129 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.129 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_1' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('data_addr_6_write_ln12', sort_seperate_bucket/heapsort.c:12) of variable 'data_load_7', sort_seperate_bucket/heapsort.c:12 on array 'data' and 'load' operation ('data_load', sort_seperate_bucket/heapsort.c:24) on array 'data'.
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_1' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('data_addr_7_write_ln13', sort_seperate_bucket/heapsort.c:13) of variable 'temp', sort_seperate_bucket/heapsort.c:11 on array 'data' and 'load' operation ('data_load', sort_seperate_bucket/heapsort.c:24) on array 'data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 5, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.129 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.129 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_VITIS_LOOP_18_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.08 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2 seconds. CPU system time: 3.66 seconds. Elapsed time: 5.66 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'swap' into 'maxHeapify' (sort_seperate_bucket/heapsort.c:17:0)
+INFO: [HLS 214-178] Inlining function 'maxHeapify' into 'heap_sort' (sort_seperate_bucket/heapsort.c:43:0)
+INFO: [HLS 214-178] Inlining function 'swap' into 'heap_sort' (sort_seperate_bucket/heapsort.c:43:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.93 seconds. CPU system time: 0.76 seconds. Elapsed time: 4.69 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.077 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (sort_seperate_bucket/heapsort.c:17) in function 'heap_sort' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_1' (sort_seperate_bucket/heapsort.c:17) in function 'heap_sort' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.099 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'heap_sort_procedure' (sort_seperate_bucket/heapsort.c:45:6) in function 'heap_sort' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_59_1' (sort_seperate_bucket/heapsort.c:46:6) in function 'heap_sort' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'data' (sort_seperate_bucket/heapsort.c:50:10)
+INFO: [HLS 200-472] Inferring partial write operation for 'data' (sort_seperate_bucket/heapsort.c:12:8)
+INFO: [HLS 200-472] Inferring partial write operation for 'data' (sort_seperate_bucket/heapsort.c:13:8)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.127 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'heap_sort' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_initialization' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'initialization'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'initialization'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.08 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.129 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 1.129 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_VITIS_LOOP_18_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 1 cycles).
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('icmp' operation ('icmp_ln32', sort_seperate_bucket/heapsort.c:32)) in the first pipeline iteration (II = 2 cycles).
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_1' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('data_addr_6_write_ln12', sort_seperate_bucket/heapsort.c:12) of variable 'data_load_7', sort_seperate_bucket/heapsort.c:12 on array 'data' and 'load' operation ('data_load', sort_seperate_bucket/heapsort.c:24) on array 'data'.
+WARNING: [HLS 200-880] The II Violation in module 'heap_sort_Pipeline_VITIS_LOOP_18_1' (loop 'VITIS_LOOP_18_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('data_addr_7_write_ln13', sort_seperate_bucket/heapsort.c:13) of variable 'temp', sort_seperate_bucket/heapsort.c:11 on array 'data' and 'load' operation ('data_load', sort_seperate_bucket/heapsort.c:24) on array 'data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 5, loop 'VITIS_LOOP_18_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.129 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.129 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'heap_sort_Pipeline_VITIS_LOOP_18_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_1'.
+WARNING==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.09 seconds; current allocated memory: 1.078 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.29 seconds. CPU system time: 4.01 seconds. Elapsed time: 6.31 seconds; current allocated memory: 1.078 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'merge' into 'merge_sort_iterative' (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.74 seconds. CPU system time: 0.9 seconds. Elapsed time: 4.63 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.080 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.080 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_69_1' (sort_seperate_bucket/merge_sort.c:70) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_77_2' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_81_3' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_103_3' (sort_seperate_bucket/merge_sort.c:103) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_109_4' (sort_seperate_bucket/merge_sort.c:109) in function 'merge_sort_iterative' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.102 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_90_2' (sort_seperate_bucket/merge_sort.c:91:27) in function 'merge_sort_iterative' more than one sub loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_89_1' (sort_seperate_bucket/merge_sort.c:90:35) in function 'merge_sort_iterative' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:71:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:78:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:82:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.140 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'merge_sort_iterative' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_69_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_69_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.142 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.142 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_77_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_77_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.142 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.142 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_81_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_81_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.142 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.142 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_103_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61]==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.07 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_2.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.5 seconds. CPU system time: 3.78 seconds. Elapsed time: 6.27 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'merge' into 'merge_sort_iterative' (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'input': Complete partitioning on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 214-248] Applying array_partition to 'output': Complete partitioning on dimension 1. (sort_seperate_bucket/merge_sort.c:86:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.91 seconds. CPU system time: 0.71 seconds. Elapsed time: 4.64 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.079 GB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_69_1' (sort_seperate_bucket/merge_sort.c:70) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_77_2' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_81_3' (sort_seperate_bucket/merge_sort.c:67) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_104_3' (sort_seperate_bucket/merge_sort.c:104) in function 'merge_sort_iterative' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_110_4' (sort_seperate_bucket/merge_sort.c:110) in function 'merge_sort_iterative' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.28 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.104 GB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_91_2' (sort_seperate_bucket/merge_sort.c:92:27) in function 'merge_sort_iterative' more than one sub loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_90_1' (sort_seperate_bucket/merge_sort.c:91:35) in function 'merge_sort_iterative' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:71:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:78:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp' (sort_seperate_bucket/merge_sort.c:82:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.24 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'merge_sort_iterative' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_69_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_69_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.150 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_77_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_77_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.151 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_81_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_81_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.151 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_104_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_104_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_104_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.154 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.154 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative_Pipeline_VITIS_LOOP_110_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_110_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_110_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.156 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 1.156 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.158 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.158 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1' pipeline 'VITIS_LOOP_69_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_506_32_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_69_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.158 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2' pipeline 'VITIS_LOOP_77_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_506_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_77_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.161 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3' pipeline 'VITIS_LOOP_81_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_506_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_81_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.163 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_104_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_sort_iterative_Pipeline_VITIS_LOOP_104_3' pipeline 'VITIS_LOOP_104_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_104_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.165 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative_Pipeline_VITIS_LOOP_110_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_506_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_sort_iterative_Pipeline_VITIS_LOOP_110_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.169 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_sort_iterative' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_0' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_1' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_2' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_3' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_4' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_5' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_6' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_7' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_8' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_9' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_10' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_11' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_12' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_13' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_14' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_15' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_16' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_17' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_18' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_19' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_20' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_21' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_22' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_23' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_24' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_25' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_26' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_27' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_28' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_29' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_30' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_31' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_32' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_33' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_34' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_35' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_36' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_37' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_38' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_39' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_40' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_41' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_42' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_43' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_44' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_45' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_46' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_47' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_48' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/input_49' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_0' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_1' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_2' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_3' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_4' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_5' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_6' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_7' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_8' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_9' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_12' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_13' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_14' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_15' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_16' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_17' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_18' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_19' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_20' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_21' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_22' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_23' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_24' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_25' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_26' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_27' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_28' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_29' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_30' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_31' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_32' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_33' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_34' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_35' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_36' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_37' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_38' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_39' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_40' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_41' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_42' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_43' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'merge_sort_iterative/output_44' to 'ap_vld'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

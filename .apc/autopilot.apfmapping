@@ -7,9 +7,9 @@
     <originFiles name="radix_sort.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort.c"/>
     <originFiles name="merge_sort.h" path="/home/boyiw7/sort_seperate_bucket/merge_sort.h"/>
     <originFiles name="merge_sort.c" path="/home/boyiw7/sort_seperate_bucket/merge_sort.c"/>
-    <originFiles name="heap_sort.h" path="/home/boyiw7/sort_seperate_bucket/heap_sort.h"/>
     <originFiles name="batch_size.h" path="/home/boyiw7/sort_seperate_bucket/batch_size.h"/>
-    <originFiles name="heap_sort.c" path="/home/boyiw7/sort_seperate_bucket/heap_sort.c"/>
+    <originFiles name="heapsort.c" path="/home/boyiw7/sort_seperate_bucket/heapsort.c"/>
+    <originFiles name="radix_sort_2.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort_2.c"/>
   </source>
   <testbench>
     <originFiles name="batch_size.h" path="/home/boyiw7/sort_seperate_bucket/batch_size.h"/>
