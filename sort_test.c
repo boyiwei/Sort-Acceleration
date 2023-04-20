@@ -24,7 +24,7 @@ int main(){
     radix_sort_unified_bucket_2(data, sorted_data);
     int i;
     for(i=0; i<batch_size; i++){
-        printf("Sorted_results: rank %d, value= %d \n", i, data[i]);
+        printf("Sorted_results: rank %d, value= %d \n", i, sorted_data[i]);
     }
     return 0;
 }

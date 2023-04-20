@@ -1,5 +1,0 @@
-remark: sort_seperate_bucket/merge_sort.c:86:0: Inlining function 'merge' into 'merge_sort_iterative'
-remark: sort_seperate_bucket/merge_sort.c:86:0: Applying array_partition to 'input': Block partitioning with factor 100 on dimension 1.
-remark: sort_seperate_bucket/merge_sort.c:86:0: Applying array_partition to 'output': Block partitioning with factor 100 on dimension 1.
-remark: sort_seperate_bucket/merge_sort.c:69:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_69_1 sort_seperate_bucket/merge_sort.c:69:22 merge_sort_iterative 
-remark: sort_seperate_bucket/merge_sort.c:91:26: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_91_2 sort_seperate_bucket/merge_sort.c:91:26 merge_sort_iterative 

@@ -17,7 +17,7 @@ void radix_sort_unified_bucket_2(int data[batch_size], int sorted_data[batch_siz
 	for (int j = 0; j < batch_size; j++) {
 		sorted_data[j] = data[j];
 		int next_ith_radix = sorted_data[j] & 1;
-		printf("next_ith_radix = %d\n", next_ith_radix);
+//		printf("next_ith_radix = %d\n", next_ith_radix);
 		bucket_sizes[next_ith_radix] += 1;
 	}
 
@@ -25,7 +25,7 @@ void radix_sort_unified_bucket_2(int data[batch_size], int sorted_data[batch_siz
 	for (int i = 0; i < bit_width_bin; i++) {
 
 #pragma HLS loop_merge
-		 printf("loop %d\n", i);
+//		 printf("loop %d\n", i);
 #pragma HLS PIPELINE
 
 		int next_bucket_pointer = 0;
@@ -50,7 +50,9 @@ void radix_sort_unified_bucket_2(int data[batch_size], int sorted_data[batch_siz
 		output_bucket:
 		for (int k = 0; k < batch_size; k++) {
 			sorted_data[k] = bucket[k];
+//			printf("bucket[%d] = %d\n", k, bucket[k]);
 		}
+//		printf("-----------------------------------------");
 	}
 }
 
