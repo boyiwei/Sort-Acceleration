@@ -1,0 +1,200 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'merge_sort_parallel'" level="0">
+<item name = "Date">Thu Apr 20 09:45:23 2023
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">sort_seperate_bucket</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 3.477 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">240000095, 240000095, 2.400 sec, 2.400 sec, 10000004, 10000004, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="merge_arrays_1_1_U0">merge_arrays_1_1, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_2_U0">merge_arrays_2, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_3_U0">merge_arrays_3, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_4_U0">merge_arrays_4, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_5_U0">merge_arrays_5, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_6_U0">merge_arrays_6, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_7_U0">merge_arrays_7, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_8_U0">merge_arrays_8, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_9_U0">merge_arrays_9, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_10_U0">merge_arrays_10, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_11_U0">merge_arrays_11, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_12_U0">merge_arrays_12, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_13_U0">merge_arrays_13, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_14_U0">merge_arrays_14, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_15_U0">merge_arrays_15, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_16_U0">merge_arrays_16, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_17_U0">merge_arrays_17, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_18_U0">merge_arrays_18, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_19_U0">merge_arrays_19, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_20_U0">merge_arrays_20, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_21_U0">merge_arrays_21, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_22_U0">merge_arrays_22, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_23_U0">merge_arrays_23, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="merge_arrays_1_2_U0">merge_arrays_1_2, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 2, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 6696, 17616, -</column>
+<column name="Memory">736, -, 0, 0, 0</column>
+<column name="Multiplexer">-, -, -, -, -</column>
+<column name="Register">-, -, -, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">54, 0, ~0, 4, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">18, 0, ~0, 1, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="merge_arrays_10_U0">merge_arrays_10, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_11_U0">merge_arrays_11, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_12_U0">merge_arrays_12, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_13_U0">merge_arrays_13, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_14_U0">merge_arrays_14, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_15_U0">merge_arrays_15, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_16_U0">merge_arrays_16, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_17_U0">merge_arrays_17, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_18_U0">merge_arrays_18, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_19_U0">merge_arrays_19, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_1_1_U0">merge_arrays_1_1, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_1_2_U0">merge_arrays_1_2, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_2_U0">merge_arrays_2, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_20_U0">merge_arrays_20, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_21_U0">merge_arrays_21, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_22_U0">merge_arrays_22, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_23_U0">merge_arrays_23, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_3_U0">merge_arrays_3, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_4_U0">merge_arrays_4, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_5_U0">merge_arrays_5, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_6_U0">merge_arrays_6, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_7_U0">merge_arrays_7, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_8_U0">merge_arrays_8, 0, 0, 279, 734, 0</column>
+<column name="merge_arrays_9_U0">merge_arrays_9, 0, 0, 279, 734, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="temp_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_1_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_2_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_3_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_4_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_5_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_6_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_7_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_8_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_9_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_10_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_11_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_12_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_13_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_14_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_15_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_16_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_17_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_18_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_19_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_20_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_21_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+<column name="temp_22_U">temp_RAM_AUTO_1R1W, 32, 0, 0, 0, 10000000, 32, 1, 320000000</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, merge_sort_parallel, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, merge_sort_parallel, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, merge_sort_parallel, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, merge_sort_parallel, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, merge_sort_parallel, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, merge_sort_parallel, return value</column>
+<column name="in_r_address0">out, 24, ap_memory, in_r, array</column>
+<column name="in_r_ce0">out, 1, ap_memory, in_r, array</column>
+<column name="in_r_d0">out, 32, ap_memory, in_r, array</column>
+<column name="in_r_q0">in, 32, ap_memory, in_r, array</column>
+<column name="in_r_we0">out, 1, ap_memory, in_r, array</column>
+<column name="in_r_address1">out, 24, ap_memory, in_r, array</column>
+<column name="in_r_ce1">out, 1, ap_memory, in_r, array</column>
+<column name="in_r_d1">out, 32, ap_memory, in_r, array</column>
+<column name="in_r_q1">in, 32, ap_memory, in_r, array</column>
+<column name="in_r_we1">out, 1, ap_memory, in_r, array</column>
+<column name="out_r_address0">out, 24, ap_memory, out_r, array</column>
+<column name="out_r_ce0">out, 1, ap_memory, out_r, array</column>
+<column name="out_r_d0">out, 32, ap_memory, out_r, array</column>
+<column name="out_r_q0">in, 32, ap_memory, out_r, array</column>
+<column name="out_r_we0">out, 1, ap_memory, out_r, array</column>
+<column name="out_r_address1">out, 24, ap_memory, out_r, array</column>
+<column name="out_r_ce1">out, 1, ap_memory, out_r, array</column>
+<column name="out_r_d1">out, 32, ap_memory, out_r, array</column>
+<column name="out_r_q1">in, 32, ap_memory, out_r, array</column>
+<column name="out_r_we1">out, 1, ap_memory, out_r, array</column>
+</table>
+</item>
+</section>
+</profile>

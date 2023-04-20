@@ -3,19 +3,21 @@
   <errorLogs>
     <logs>
       <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
+      <synLog>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.1.2' to 'merge_arrays_1_2'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.203-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.23' to 'merge_arrays_23'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.201-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.22' to 'merge_arrays_22'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.199-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.21' to 'merge_arrays_21'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.198-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.20' to 'merge_arrays_20'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.196-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.19' to 'merge_arrays_19'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.195-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.18' to 'merge_arrays_18'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.193-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.17' to 'merge_arrays_17'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.191-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.16' to 'merge_arrays_16'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.190-0700" type="Warning"/>
+      </synLog>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

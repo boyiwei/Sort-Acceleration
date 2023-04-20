@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="merge_sort_iterative">
+<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="merge_sort_parallel">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

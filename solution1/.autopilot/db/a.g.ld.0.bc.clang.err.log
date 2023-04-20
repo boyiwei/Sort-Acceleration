@@ -1,0 +1,2 @@
+remark: sort_seperate_bucket/merge_sort.c:74:0: Unrolling loop 'VITIS_LOOP_83_1' (sort_seperate_bucket/merge_sort.c:83:19) in function 'merge_sort_parallel' completely with a factor of 22
+remark: sort_seperate_bucket/merge_sort.c:77:6: Applying array_partition to 'temp': Complete partitioning on dimension 1.

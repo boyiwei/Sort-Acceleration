@@ -1,0 +1,55 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/radix_sort_2.c</string>
+      <key>line</key>
+      <integer>27</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_merge_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_unified_bucket_2_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/radix_sort_2.c</string>
+      <key>line</key>
+      <integer>29</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_unified_bucket_2_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/radix_sort_2.c</string>
+      <key>line</key>
+      <integer>29</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>Only for/while/do support the pipeline  pragma</string>
+      <key>ID</key>
+      <integer>5560</integer>
+      <key>WarningOption</key>
+      <string>ignored-hls-attributes</string>
+    </dict>
+  </array>
+</dict>

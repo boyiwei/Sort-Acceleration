@@ -1,0 +1,69 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'merge_sort_parallel'" level="0">
+<item name = "Date">Thu Apr 20 09:45:14 2023
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">sort_seperate_bucket</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 3.477 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">240000095, 240000095, 2.400 sec, 2.400 sec, 10000004, 10000004, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_merge_arrays_1_1_fu_164">merge_arrays_1_1, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_2_fu_172">merge_arrays_2, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_3_fu_178">merge_arrays_3, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_4_fu_184">merge_arrays_4, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_5_fu_190">merge_arrays_5, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_6_fu_196">merge_arrays_6, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_7_fu_202">merge_arrays_7, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_8_fu_208">merge_arrays_8, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_9_fu_214">merge_arrays_9, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_10_fu_220">merge_arrays_10, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_11_fu_226">merge_arrays_11, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_12_fu_232">merge_arrays_12, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_13_fu_238">merge_arrays_13, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_14_fu_244">merge_arrays_14, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_15_fu_250">merge_arrays_15, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_16_fu_256">merge_arrays_16, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_17_fu_262">merge_arrays_17, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_18_fu_268">merge_arrays_18, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_19_fu_274">merge_arrays_19, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_20_fu_280">merge_arrays_20, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_21_fu_286">merge_arrays_21, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_22_fu_292">merge_arrays_22, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_23_fu_298">merge_arrays_23, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+<column name="grp_merge_arrays_1_2_fu_304">merge_arrays_1_2, 10000003, 10000003, 0.100 sec, 0.100 sec, 10000003, 10000003, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

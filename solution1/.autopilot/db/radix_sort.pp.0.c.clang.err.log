@@ -1,0 +1,22 @@
+sort_seperate_bucket/radix_sort.c:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_merge_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_unified_bucket_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_merge
+        ^
+sort_seperate_bucket/radix_sort.c:28:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_unified_bucket_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+sort_seperate_bucket/radix_sort.c:28:9: warning: Only for/while/do support the pipeline  pragma [-Wignored-hls-attributes]
+#pragma HLS PIPELINE
+        ^~~~~~~~~~~~
+sort_seperate_bucket/radix_sort.c:69:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_merge_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_separate_bucket_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_MERGE
+        ^
+sort_seperate_bucket/radix_sort.c:70:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_separate_bucket_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline
+        ^
+sort_seperate_bucket/radix_sort.c:83:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_separate_bucket_XLX_SEP_ PragmaOptions=min=0 max=10000000 -1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_tripcount min=0 max=10000000 -1
+        ^
+sort_seperate_bucket/radix_sort.c:70:9: warning: Only for/while/do support the pipeline  pragma [-Wignored-hls-attributes]
+#pragma HLS pipeline
+        ^~~~~~~~~~~~
+7 warnings generated.

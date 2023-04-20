@@ -12611,3 +12611,1402 @@ Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
 Tool Version Limit: 2019.12
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.08 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+WARNING: [HLS 207-5558] Only for-loops and functions support the dataflow (sort_seperate_bucket/merge_sort.c:121:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:75:9)
+WARNING: [HLS 214-109] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop (sort_seperate_bucket/merge_sort.c:119:62)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sort_seperate_bucket/merge_sort.c:130:26)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:121:9)
+WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sort_seperate_bucket/merge_sort.c
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_2.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.58 seconds. CPU system time: 3.94 seconds. Elapsed time: 6.54 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_83_1' (sort_seperate_bucket/merge_sort.c:83:19) in function 'merge_sort_parallel' completely with a factor of 4 (sort_seperate_bucket/merge_sort.c:74:0)
+INFO: [HLS 214-248] Applying array_partition to 'temp': Complete partitioning on dimension 1. (sort_seperate_bucket/merge_sort.c:77:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.62 seconds. CPU system time: 0.82 seconds. Elapsed time: 4.44 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.078 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 1.078 GB.
+INFO: [XFORM 203-712] Applying dataflow to function 'merge_sort_parallel' (sort_seperate_bucket/merge_sort.c:74:1), detected/extracted 6 process function(s): 
+	 'merge_arrays.1.1'
+	 'merge_arrays.2'
+	 'merge_arrays.3'
+	 'merge_arrays.4'
+	 'merge_arrays.5'
+	 'merge_arrays.1.2'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.5'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.4'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.3'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.1.2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.1.1'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.100 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.148 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'merge_sort_parallel' ...
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.1.1' to 'merge_arrays_1_1'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.2' to 'merge_arrays_2'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.3' to 'merge_arrays_3'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.4' to 'merge_arrays_4'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.5' to 'merge_arrays_5'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.1.2' to 'merge_arrays_1_2'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.150 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.150 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.150 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.151 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.151 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.151 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.152 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.152 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_1_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.153 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_parallel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 1.153 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_1_1' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_1_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.38 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.153 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_2' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.155 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_3' 
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.08 seconds; current allocated memory: 1.080 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+WARNING: [HLS 207-5558] Only for-loops and functions support the dataflow (sort_seperate_bucket/merge_sort.c:121:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:75:9)
+WARNING: [HLS 214-109] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop (sort_seperate_bucket/merge_sort.c:119:67)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sort_seperate_bucket/merge_sort.c:130:26)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:121:9)
+WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sort_seperate_bucket/merge_sort.c
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_2.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.49 seconds. CPU system time: 3.89 seconds. Elapsed time: 6.39 seconds; current allocated memory: 1.082 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_83_1' (sort_seperate_bucket/merge_sort.c:83:19) in function 'merge_sort_parallel' completely with a factor of 18 (sort_seperate_bucket/merge_sort.c:74:0)
+INFO: [HLS 214-248] Applying array_partition to 'temp': Complete partitioning on dimension 1. (sort_seperate_bucket/merge_sort.c:77:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.83 seconds. CPU system time: 1.05 seconds. Elapsed time: 4.87 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.083 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.085 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 1.086 GB.
+INFO: [XFORM 203-712] Applying dataflow to function 'merge_sort_parallel' (sort_seperate_bucket/merge_sort.c:74:1), detected/extracted 20 process function(s): 
+	 'merge_arrays.1.1'
+	 'merge_arrays.2'
+	 'merge_arrays.3'
+	 'merge_arrays.4'
+	 'merge_arrays.5'
+	 'merge_arrays.6'
+	 'merge_arrays.7'
+	 'merge_arrays.8'
+	 'merge_arrays.9'
+	 'merge_arrays.10'
+	 'merge_arrays.11'
+	 'merge_arrays.12'
+	 'merge_arrays.13'
+	 'merge_arrays.14'
+	 'merge_arrays.15'
+	 'merge_arrays.16'
+	 'merge_arrays.17'
+	 'merge_arrays.18'
+	 'merge_arrays.19'
+	 'merge_arrays.1.2'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.9'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.8'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.7'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.6'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.5'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.4'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.3'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.19'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.18'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.17'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.16'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.15'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.14'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.13'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.12'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.11'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.10'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.1.2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.1.1'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.110 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.24 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.292 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'merge_sort_parallel' ...
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.1.1' to 'merge_arrays_1_1'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.2' to 'merge_arrays_2'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.3' to 'merge_arrays_3'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.4' to 'merge_arrays_4'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.5' to 'merge_arrays_5'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.6' to 'merge_arrays_6'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.7' to 'merge_arrays_7'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.8' to 'merge_arrays_8'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.9' to 'merge_arrays_9'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.10' to 'merge_arrays_10'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.11' to 'merge_arrays_11'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.12' to 'merge_arrays_12'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.13' to 'merge_arrays_13'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.14' to 'merge_arrays_14'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.15' to 'merge_arrays_15'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.16' to 'merge_arrays_16'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.17' to 'merge_arrays_17'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.18' to 'merge_arrays_18'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.19' to 'merge_arrays_19'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.1.2' to 'merge_arrays_1_2'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.294 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.294 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.295 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.295 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.296 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.296 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.296 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.296 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.297 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.297 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.297 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.297 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.298 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.298 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.298 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.298 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.299 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.299 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.299 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.299 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.300 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.300 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.300 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.300 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.301 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.301 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.302 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.302 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.302 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.302 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.303 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.303 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.303 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.303 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.304 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.304 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_19' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.304 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.304 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_1_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.305 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.305 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_parallel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.305 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.68 seconds. CPU system time: 0 seconds. Elapsed time: 0.68 seconds; current allocated memory: 1.305 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_1_1' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_1_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.21 seconds. CPU system time: 0 seconds. Elapsed time: 1.21 seconds; current allocated memory: 1.306 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_2' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.307 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_3' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.309 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_4' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.311 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_5' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.313 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_6' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.315 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_7' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.316 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_8' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.318 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_9' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_9'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.320 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_10' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_10'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.322 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_11' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.324 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_12' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.325 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_13' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.327 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_14' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.329 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_15' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.331 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_16' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_16'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.333 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_17' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_17'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.335 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_18' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_18'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.336 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_19' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_19' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_19'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.338 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_1_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_1_2' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_1_2'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.07 seconds; current allocated memory: 1.075 GB.
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
+WARNING: [HLS 207-5558] Only for-loops and functions support the dataflow (sort_seperate_bucket/merge_sort.c:121:9)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:75:9)
+WARNING: [HLS 214-109] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop (sort_seperate_bucket/merge_sort.c:119:68)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sort_seperate_bucket/merge_sort.c:130:26)
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:121:9)
+WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sort_seperate_bucket/merge_sort.c
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:28:9)
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:70:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_2.c' ... 
+WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.7 seconds. CPU system time: 3.34 seconds. Elapsed time: 6.03 seconds; current allocated memory: 1.076 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_83_1' (sort_seperate_bucket/merge_sort.c:83:19) in function 'merge_sort_parallel' completely with a factor of 22 (sort_seperate_bucket/merge_sort.c:74:0)
+INFO: [HLS 214-248] Applying array_partition to 'temp': Complete partitioning on dimension 1. (sort_seperate_bucket/merge_sort.c:77:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.97 seconds. CPU system time: 1.1 seconds. Elapsed time: 5.08 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.077 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.079 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.081 GB.
+INFO: [XFORM 203-712] Applying dataflow to function 'merge_sort_parallel' (sort_seperate_bucket/merge_sort.c:74:1), detected/extracted 24 process function(s): 
+	 'merge_arrays.1.1'
+	 'merge_arrays.2'
+	 'merge_arrays.3'
+	 'merge_arrays.4'
+	 'merge_arrays.5'
+	 'merge_arrays.6'
+	 'merge_arrays.7'
+	 'merge_arrays.8'
+	 'merge_arrays.9'
+	 'merge_arrays.10'
+	 'merge_arrays.11'
+	 'merge_arrays.12'
+	 'merge_arrays.13'
+	 'merge_arrays.14'
+	 'merge_arrays.15'
+	 'merge_arrays.16'
+	 'merge_arrays.17'
+	 'merge_arrays.18'
+	 'merge_arrays.19'
+	 'merge_arrays.20'
+	 'merge_arrays.21'
+	 'merge_arrays.22'
+	 'merge_arrays.23'
+	 'merge_arrays.1.2'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.9'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.8'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.7'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.6'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.5'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.4'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.3'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.23'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.22'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.21'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.20'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.19'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.18'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.17'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.16'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.15'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.14'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.13'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.12'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.11'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.10'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.1.2'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (sort_seperate_bucket/merge_sort.c:38:6) to (sort_seperate_bucket/merge_sort.c:47:2) in function 'merge_arrays.1.1'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.105 GB.
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:52:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (sort_seperate_bucket/merge_sort.c:57:11)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.28 seconds. CPU system time: 0.1 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.326 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'merge_sort_parallel' ...
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.1.1' to 'merge_arrays_1_1'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.2' to 'merge_arrays_2'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.3' to 'merge_arrays_3'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.4' to 'merge_arrays_4'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.5' to 'merge_arrays_5'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.6' to 'merge_arrays_6'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.7' to 'merge_arrays_7'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.8' to 'merge_arrays_8'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.9' to 'merge_arrays_9'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.10' to 'merge_arrays_10'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.11' to 'merge_arrays_11'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.12' to 'merge_arrays_12'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.13' to 'merge_arrays_13'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.14' to 'merge_arrays_14'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.15' to 'merge_arrays_15'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.16' to 'merge_arrays_16'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.17' to 'merge_arrays_17'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.18' to 'merge_arrays_18'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.19' to 'merge_arrays_19'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.20' to 'merge_arrays_20'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.21' to 'merge_arrays_21'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.22' to 'merge_arrays_22'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.23' to 'merge_arrays_23'.
+WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.1.2' to 'merge_arrays_1_2'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.328 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 1.328 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.329 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.329 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.329 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.329 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.330 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.330 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.331 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.331 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.331 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.331 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.332 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.332 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.332 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.332 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.333 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.333 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.333 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.333 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.334 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.334 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.334 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.334 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.335 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.335 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.335 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.335 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.336 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.336 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.337 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.337 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.337 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.337 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.338 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.338 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_19' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.338 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.338 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_20' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.339 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.339 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.339 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.339 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.340 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.340 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.341 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.341 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_arrays_1_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'merge_arrays'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'merge_arrays'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.341 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 1.341 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'merge_sort_parallel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.341 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.85 seconds. CPU system time: 0 seconds. Elapsed time: 0.85 seconds; current allocated memory: 1.341 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_1_1' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_1_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.48 seconds. CPU system time: 0 seconds. Elapsed time: 1.5 seconds; current allocated memory: 1.342 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_2' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.344 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_3' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_4' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.347 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_5' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.349 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_6' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.351 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_7' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.353 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_8' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.354 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_9' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_9' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_9'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.356 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_10' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_10'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.358 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_11' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_11' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_11'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.360 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_12' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.362 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_13' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.364 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_14' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.365 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_15' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.367 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_16' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_16'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.369 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_17' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_17' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_17'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.371 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_18' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_18' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_18'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.373 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_19' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_19' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_19'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.374 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_20' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_20' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_20'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.376 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_21' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.378 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_22' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_22'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.380 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'merge_arrays_23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'merge_arrays_23' pipeline 'merge_arrays' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'merge_arrays_23'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.382 GB.
