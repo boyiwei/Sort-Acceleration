@@ -2,12 +2,19 @@
 <pragma file="sort_seperate_bucket/radix_sort.c" line="65" pragmaType="array_partition" parentfunction="radix_sort_unified_bucket_pingpong" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_pointer"/>
 <pragma file="sort_seperate_bucket/radix_sort.c" line="66" pragmaType="array_partition" parentfunction="radix_sort_unified_bucket_pingpong" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_sizes"/>
 <pragma file="sort_seperate_bucket/radix_sort.c" line="80" pragmaType="loop_merge" parentfunction="radix_sort_unified_bucket_pingpong" force="0"/>
-<pragma file="sort_seperate_bucket/sort_top.c" line="34" pragmaType="dataflow" parentfunction="sort_top_32" disable_start_propagation="0"/>
-<pragma file="sort_seperate_bucket/sort_top.c" line="27" pragmaType="array_partition" parentfunction="sort_top_32" dim="1" factor="0" mode="complete" dynamic="0" variable="input"/>
-<pragma file="sort_seperate_bucket/sort_top.c" line="28" pragmaType="array_partition" parentfunction="sort_top_32" dim="1" factor="0" mode="complete" dynamic="0" variable="temp0"/>
-<pragma file="sort_seperate_bucket/sort_top.c" line="29" pragmaType="array_partition" parentfunction="sort_top_32" dim="1" factor="0" mode="complete" dynamic="0" variable="temp1"/>
-<pragma file="sort_seperate_bucket/sort_top.c" line="30" pragmaType="array_partition" parentfunction="sort_top_32" dim="1" factor="0" mode="complete" dynamic="0" variable="temp2"/>
-<pragma file="sort_seperate_bucket/sort_top.c" line="31" pragmaType="array_partition" parentfunction="sort_top_32" dim="1" factor="0" mode="complete" dynamic="0" variable="temp3"/>
-<pragma file="sort_seperate_bucket/sort_top.c" line="32" pragmaType="array_partition" parentfunction="sort_top_32" dim="1" factor="0" mode="complete" dynamic="0" variable="temp4"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="124" pragmaType="dataflow" parentfunction="sort_top_64" disable_start_propagation="0"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="152" pragmaType="unroll" parentfunction="sort_top_64" factor="-1" skip_exit_check="0"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="147" pragmaType="unroll" parentfunction="sort_top_64" factor="-1" skip_exit_check="0"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="142" pragmaType="unroll" parentfunction="sort_top_64" factor="-1" skip_exit_check="0"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="137" pragmaType="unroll" parentfunction="sort_top_64" factor="-1" skip_exit_check="0"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="132" pragmaType="unroll" parentfunction="sort_top_64" factor="-1" skip_exit_check="0"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="127" pragmaType="unroll" parentfunction="sort_top_64" factor="-1" skip_exit_check="0"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="115" pragmaType="array_partition" parentfunction="sort_top_64" dim="1" factor="0" mode="complete" dynamic="0" variable="input"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="116" pragmaType="array_partition" parentfunction="sort_top_64" dim="1" factor="0" mode="complete" dynamic="0" variable="temp0"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="117" pragmaType="array_partition" parentfunction="sort_top_64" dim="1" factor="0" mode="complete" dynamic="0" variable="temp1"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="118" pragmaType="array_partition" parentfunction="sort_top_64" dim="1" factor="0" mode="complete" dynamic="0" variable="temp2"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="119" pragmaType="array_partition" parentfunction="sort_top_64" dim="1" factor="0" mode="complete" dynamic="0" variable="temp3"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="120" pragmaType="array_partition" parentfunction="sort_top_64" dim="1" factor="0" mode="complete" dynamic="0" variable="temp4"/>
+<pragma file="sort_seperate_bucket/sort_top.c" line="121" pragmaType="array_partition" parentfunction="sort_top_64" dim="1" factor="0" mode="complete" dynamic="0" variable="temp5"/>
 <pragma file="sort_seperate_bucket/merge_sort.c" line="11" pragmaType="pipeline" parentfunction="merge_sort" off="0" ii="-1" rewind="0" style=""/>
 </pragmas>

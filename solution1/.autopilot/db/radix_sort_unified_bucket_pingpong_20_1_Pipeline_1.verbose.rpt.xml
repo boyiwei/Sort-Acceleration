@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'radix_sort_unified_bucket_pingpong_20_1_Pipeline_1'" level="0">
-<item name = "Date">Sat Apr 22 14:45:37 2023
+<item name = "Date">Sat Apr 22 15:39:45 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">sort_seperate_bucket</item>
@@ -80,7 +80,7 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="empty_118_fu_278_p2">+, 0, 0, 12, 5, 1</column>
+<column name="empty_278_fu_278_p2">+, 0, 0, 12, 5, 1</column>
 <column name="exitcond116_fu_272_p2">icmp, 0, 0, 10, 5, 6</column>
 </table>
 </item>
@@ -111,36 +111,36 @@
 <column name="ap_done">out, 1, ap_ctrl_hs, radix_sort_unified_bucket_pingpong.20.1_Pipeline_1, return value</column>
 <column name="ap_idle">out, 1, ap_ctrl_hs, radix_sort_unified_bucket_pingpong.20.1_Pipeline_1, return value</column>
 <column name="ap_ready">out, 1, ap_ctrl_hs, radix_sort_unified_bucket_pingpong.20.1_Pipeline_1, return value</column>
-<column name="bucket_sizes_2625_out">out, 32, ap_vld, bucket_sizes_2625_out, pointer</column>
-<column name="bucket_sizes_2625_out_ap_vld">out, 1, ap_vld, bucket_sizes_2625_out, pointer</column>
-<column name="bucket_sizes_2624_out">out, 32, ap_vld, bucket_sizes_2624_out, pointer</column>
-<column name="bucket_sizes_2624_out_ap_vld">out, 1, ap_vld, bucket_sizes_2624_out, pointer</column>
-<column name="bucket_sizes_2623_out">out, 32, ap_vld, bucket_sizes_2623_out, pointer</column>
-<column name="bucket_sizes_2623_out_ap_vld">out, 1, ap_vld, bucket_sizes_2623_out, pointer</column>
-<column name="bucket_sizes_2622_out">out, 32, ap_vld, bucket_sizes_2622_out, pointer</column>
-<column name="bucket_sizes_2622_out_ap_vld">out, 1, ap_vld, bucket_sizes_2622_out, pointer</column>
-<column name="bucket_sizes_2621_out">out, 32, ap_vld, bucket_sizes_2621_out, pointer</column>
-<column name="bucket_sizes_2621_out_ap_vld">out, 1, ap_vld, bucket_sizes_2621_out, pointer</column>
-<column name="bucket_sizes_2620_out">out, 32, ap_vld, bucket_sizes_2620_out, pointer</column>
-<column name="bucket_sizes_2620_out_ap_vld">out, 1, ap_vld, bucket_sizes_2620_out, pointer</column>
-<column name="bucket_sizes_2619_out">out, 32, ap_vld, bucket_sizes_2619_out, pointer</column>
-<column name="bucket_sizes_2619_out_ap_vld">out, 1, ap_vld, bucket_sizes_2619_out, pointer</column>
-<column name="bucket_sizes_2618_out">out, 32, ap_vld, bucket_sizes_2618_out, pointer</column>
-<column name="bucket_sizes_2618_out_ap_vld">out, 1, ap_vld, bucket_sizes_2618_out, pointer</column>
-<column name="bucket_sizes_2617_out">out, 32, ap_vld, bucket_sizes_2617_out, pointer</column>
-<column name="bucket_sizes_2617_out_ap_vld">out, 1, ap_vld, bucket_sizes_2617_out, pointer</column>
-<column name="bucket_sizes_2616_out">out, 32, ap_vld, bucket_sizes_2616_out, pointer</column>
-<column name="bucket_sizes_2616_out_ap_vld">out, 1, ap_vld, bucket_sizes_2616_out, pointer</column>
-<column name="bucket_sizes_2615_out">out, 32, ap_vld, bucket_sizes_2615_out, pointer</column>
-<column name="bucket_sizes_2615_out_ap_vld">out, 1, ap_vld, bucket_sizes_2615_out, pointer</column>
-<column name="bucket_sizes_2614_out">out, 32, ap_vld, bucket_sizes_2614_out, pointer</column>
-<column name="bucket_sizes_2614_out_ap_vld">out, 1, ap_vld, bucket_sizes_2614_out, pointer</column>
-<column name="bucket_sizes_2613_out">out, 32, ap_vld, bucket_sizes_2613_out, pointer</column>
-<column name="bucket_sizes_2613_out_ap_vld">out, 1, ap_vld, bucket_sizes_2613_out, pointer</column>
-<column name="bucket_sizes_2612_out">out, 32, ap_vld, bucket_sizes_2612_out, pointer</column>
-<column name="bucket_sizes_2612_out_ap_vld">out, 1, ap_vld, bucket_sizes_2612_out, pointer</column>
-<column name="bucket_sizes_2611_out">out, 32, ap_vld, bucket_sizes_2611_out, pointer</column>
-<column name="bucket_sizes_2611_out_ap_vld">out, 1, ap_vld, bucket_sizes_2611_out, pointer</column>
+<column name="bucket_sizes_7265_out">out, 32, ap_vld, bucket_sizes_7265_out, pointer</column>
+<column name="bucket_sizes_7265_out_ap_vld">out, 1, ap_vld, bucket_sizes_7265_out, pointer</column>
+<column name="bucket_sizes_7264_out">out, 32, ap_vld, bucket_sizes_7264_out, pointer</column>
+<column name="bucket_sizes_7264_out_ap_vld">out, 1, ap_vld, bucket_sizes_7264_out, pointer</column>
+<column name="bucket_sizes_7263_out">out, 32, ap_vld, bucket_sizes_7263_out, pointer</column>
+<column name="bucket_sizes_7263_out_ap_vld">out, 1, ap_vld, bucket_sizes_7263_out, pointer</column>
+<column name="bucket_sizes_7262_out">out, 32, ap_vld, bucket_sizes_7262_out, pointer</column>
+<column name="bucket_sizes_7262_out_ap_vld">out, 1, ap_vld, bucket_sizes_7262_out, pointer</column>
+<column name="bucket_sizes_7261_out">out, 32, ap_vld, bucket_sizes_7261_out, pointer</column>
+<column name="bucket_sizes_7261_out_ap_vld">out, 1, ap_vld, bucket_sizes_7261_out, pointer</column>
+<column name="bucket_sizes_7260_out">out, 32, ap_vld, bucket_sizes_7260_out, pointer</column>
+<column name="bucket_sizes_7260_out_ap_vld">out, 1, ap_vld, bucket_sizes_7260_out, pointer</column>
+<column name="bucket_sizes_7259_out">out, 32, ap_vld, bucket_sizes_7259_out, pointer</column>
+<column name="bucket_sizes_7259_out_ap_vld">out, 1, ap_vld, bucket_sizes_7259_out, pointer</column>
+<column name="bucket_sizes_7258_out">out, 32, ap_vld, bucket_sizes_7258_out, pointer</column>
+<column name="bucket_sizes_7258_out_ap_vld">out, 1, ap_vld, bucket_sizes_7258_out, pointer</column>
+<column name="bucket_sizes_7257_out">out, 32, ap_vld, bucket_sizes_7257_out, pointer</column>
+<column name="bucket_sizes_7257_out_ap_vld">out, 1, ap_vld, bucket_sizes_7257_out, pointer</column>
+<column name="bucket_sizes_7256_out">out, 32, ap_vld, bucket_sizes_7256_out, pointer</column>
+<column name="bucket_sizes_7256_out_ap_vld">out, 1, ap_vld, bucket_sizes_7256_out, pointer</column>
+<column name="bucket_sizes_7255_out">out, 32, ap_vld, bucket_sizes_7255_out, pointer</column>
+<column name="bucket_sizes_7255_out_ap_vld">out, 1, ap_vld, bucket_sizes_7255_out, pointer</column>
+<column name="bucket_sizes_7254_out">out, 32, ap_vld, bucket_sizes_7254_out, pointer</column>
+<column name="bucket_sizes_7254_out_ap_vld">out, 1, ap_vld, bucket_sizes_7254_out, pointer</column>
+<column name="bucket_sizes_7253_out">out, 32, ap_vld, bucket_sizes_7253_out, pointer</column>
+<column name="bucket_sizes_7253_out_ap_vld">out, 1, ap_vld, bucket_sizes_7253_out, pointer</column>
+<column name="bucket_sizes_7252_out">out, 32, ap_vld, bucket_sizes_7252_out, pointer</column>
+<column name="bucket_sizes_7252_out_ap_vld">out, 1, ap_vld, bucket_sizes_7252_out, pointer</column>
+<column name="bucket_sizes_7251_out">out, 32, ap_vld, bucket_sizes_7251_out, pointer</column>
+<column name="bucket_sizes_7251_out_ap_vld">out, 1, ap_vld, bucket_sizes_7251_out, pointer</column>
 <column name="bucket_sizes_out">out, 32, ap_vld, bucket_sizes_out, pointer</column>
 <column name="bucket_sizes_out_ap_vld">out, 1, ap_vld, bucket_sizes_out, pointer</column>
 </table>

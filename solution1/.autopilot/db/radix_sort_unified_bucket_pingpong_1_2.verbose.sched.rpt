@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_unified_bucket_pingpong_1_2'
 ================================================================
-* Date:           Sat Apr 22 14:44:34 2023
+* Date:           Sat Apr 22 15:37:10 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  5.257 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  5.072 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
     |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
     +---------+---------+-----------+-----------+---------+---------+---------+
-    |  3125219|  3125219|  31.252 ms|  31.252 ms|  3125219|  3125219|       no|
+    |  1562727|  1562727|  15.627 ms|  15.627 ms|  1562727|  1562727|       no|
     +---------+---------+-----------+-----------+---------+---------+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- sort_procedure  |  2500192|  2500192|    312524|          -|          -|     8|        no|
+        |- sort_procedure  |  1250200|  1250200|    156275|          -|          -|     8|        no|
         +------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 ============================================================
@@ -70,7 +70,7 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 9
+* Number of FSM states : 10
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
@@ -79,226 +79,235 @@ IsGatedGlobalClock: 0
 2 --> 3 
 3 --> 4 
 4 --> 5 
-5 --> 6 9 
+5 --> 6 10 
 6 --> 7 
 7 --> 8 
-8 --> 5 
-9 --> 
+8 --> 9 
+9 --> 5 
+10 --> 
 
 * FSM state operations: 
 
 State 1 <SV = 0> <Delay = 0.38>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%i_011 = alloca i32 1"   --->   Operation 10 'alloca' 'i_011' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%bucket_num_012 = alloca i32 1"   --->   Operation 11 'alloca' 'bucket_num_012' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%bucket_pointer = alloca i32 1"   --->   Operation 12 'alloca' 'bucket_pointer' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%bucket_pointer_1040 = alloca i32 1"   --->   Operation 13 'alloca' 'bucket_pointer_1040' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%bucket_pointer_1041 = alloca i32 1"   --->   Operation 14 'alloca' 'bucket_pointer_1041' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%bucket_pointer_1042 = alloca i32 1"   --->   Operation 15 'alloca' 'bucket_pointer_1042' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%bucket_pointer_1043 = alloca i32 1"   --->   Operation 16 'alloca' 'bucket_pointer_1043' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%bucket_pointer_1044 = alloca i32 1"   --->   Operation 17 'alloca' 'bucket_pointer_1044' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%bucket_pointer_1045 = alloca i32 1"   --->   Operation 18 'alloca' 'bucket_pointer_1045' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%bucket_pointer_1046 = alloca i32 1"   --->   Operation 19 'alloca' 'bucket_pointer_1046' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%bucket_pointer_1047 = alloca i32 1"   --->   Operation 20 'alloca' 'bucket_pointer_1047' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%bucket_pointer_1048 = alloca i32 1"   --->   Operation 21 'alloca' 'bucket_pointer_1048' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%bucket_pointer_1049 = alloca i32 1"   --->   Operation 22 'alloca' 'bucket_pointer_1049' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%bucket_pointer_1050 = alloca i32 1"   --->   Operation 23 'alloca' 'bucket_pointer_1050' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%bucket_pointer_1051 = alloca i32 1"   --->   Operation 24 'alloca' 'bucket_pointer_1051' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%bucket_pointer_1052 = alloca i32 1"   --->   Operation 25 'alloca' 'bucket_pointer_1052' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%bucket_pointer_1053 = alloca i32 1"   --->   Operation 26 'alloca' 'bucket_pointer_1053' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%bucket_pointer_1054 = alloca i32 1"   --->   Operation 27 'alloca' 'bucket_pointer_1054' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%bucket_sizes = alloca i32 1"   --->   Operation 28 'alloca' 'bucket_sizes' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%bucket_sizes_1366 = alloca i32 1"   --->   Operation 29 'alloca' 'bucket_sizes_1366' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%bucket_sizes_1367 = alloca i32 1"   --->   Operation 30 'alloca' 'bucket_sizes_1367' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%bucket_sizes_1368 = alloca i32 1"   --->   Operation 31 'alloca' 'bucket_sizes_1368' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%bucket_sizes_1369 = alloca i32 1"   --->   Operation 32 'alloca' 'bucket_sizes_1369' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%bucket_sizes_1370 = alloca i32 1"   --->   Operation 33 'alloca' 'bucket_sizes_1370' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%bucket_sizes_1371 = alloca i32 1"   --->   Operation 34 'alloca' 'bucket_sizes_1371' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%bucket_sizes_1372 = alloca i32 1"   --->   Operation 35 'alloca' 'bucket_sizes_1372' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%bucket_sizes_1373 = alloca i32 1"   --->   Operation 36 'alloca' 'bucket_sizes_1373' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%bucket_sizes_1374 = alloca i32 1"   --->   Operation 37 'alloca' 'bucket_sizes_1374' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%bucket_sizes_1375 = alloca i32 1"   --->   Operation 38 'alloca' 'bucket_sizes_1375' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%bucket_sizes_1376 = alloca i32 1"   --->   Operation 39 'alloca' 'bucket_sizes_1376' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%bucket_sizes_1377 = alloca i32 1"   --->   Operation 40 'alloca' 'bucket_sizes_1377' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%bucket_sizes_1378 = alloca i32 1"   --->   Operation 41 'alloca' 'bucket_sizes_1378' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%bucket_sizes_1379 = alloca i32 1"   --->   Operation 42 'alloca' 'bucket_sizes_1379' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%bucket_sizes_1380 = alloca i32 1"   --->   Operation 43 'alloca' 'bucket_sizes_1380' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%bucket_pointer_1966_loc = alloca i64 1"   --->   Operation 44 'alloca' 'bucket_pointer_1966_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%bucket_pointer_1967_loc = alloca i64 1"   --->   Operation 45 'alloca' 'bucket_pointer_1967_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%bucket_pointer_1968_loc = alloca i64 1"   --->   Operation 46 'alloca' 'bucket_pointer_1968_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%bucket_pointer_1969_loc = alloca i64 1"   --->   Operation 47 'alloca' 'bucket_pointer_1969_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%bucket_pointer_1970_loc = alloca i64 1"   --->   Operation 48 'alloca' 'bucket_pointer_1970_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%bucket_pointer_1971_loc = alloca i64 1"   --->   Operation 49 'alloca' 'bucket_pointer_1971_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%bucket_pointer_1972_loc = alloca i64 1"   --->   Operation 50 'alloca' 'bucket_pointer_1972_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%bucket_pointer_1973_loc = alloca i64 1"   --->   Operation 51 'alloca' 'bucket_pointer_1973_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%bucket_pointer_1974_loc = alloca i64 1"   --->   Operation 52 'alloca' 'bucket_pointer_1974_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%bucket_pointer_1975_loc = alloca i64 1"   --->   Operation 53 'alloca' 'bucket_pointer_1975_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%bucket_pointer_1976_loc = alloca i64 1"   --->   Operation 54 'alloca' 'bucket_pointer_1976_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%bucket_pointer_1977_loc = alloca i64 1"   --->   Operation 55 'alloca' 'bucket_pointer_1977_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%bucket_pointer_1978_loc = alloca i64 1"   --->   Operation 56 'alloca' 'bucket_pointer_1978_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%bucket_pointer_1979_loc = alloca i64 1"   --->   Operation 57 'alloca' 'bucket_pointer_1979_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%bucket_pointer_1980_loc = alloca i64 1"   --->   Operation 58 'alloca' 'bucket_pointer_1980_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%bucket_pointer_1981_loc = alloca i64 1"   --->   Operation 59 'alloca' 'bucket_pointer_1981_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%bucket_sizes_4431_loc = alloca i64 1"   --->   Operation 60 'alloca' 'bucket_sizes_4431_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%bucket_sizes_4432_loc = alloca i64 1"   --->   Operation 61 'alloca' 'bucket_sizes_4432_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%bucket_sizes_4433_loc = alloca i64 1"   --->   Operation 62 'alloca' 'bucket_sizes_4433_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%bucket_sizes_4434_loc = alloca i64 1"   --->   Operation 63 'alloca' 'bucket_sizes_4434_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%bucket_sizes_4435_loc = alloca i64 1"   --->   Operation 64 'alloca' 'bucket_sizes_4435_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%bucket_sizes_4436_loc = alloca i64 1"   --->   Operation 65 'alloca' 'bucket_sizes_4436_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%bucket_sizes_4437_loc = alloca i64 1"   --->   Operation 66 'alloca' 'bucket_sizes_4437_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%bucket_sizes_4438_loc = alloca i64 1"   --->   Operation 67 'alloca' 'bucket_sizes_4438_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%bucket_sizes_4439_loc = alloca i64 1"   --->   Operation 68 'alloca' 'bucket_sizes_4439_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%bucket_sizes_4440_loc = alloca i64 1"   --->   Operation 69 'alloca' 'bucket_sizes_4440_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%bucket_sizes_4441_loc = alloca i64 1"   --->   Operation 70 'alloca' 'bucket_sizes_4441_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%bucket_sizes_4442_loc = alloca i64 1"   --->   Operation 71 'alloca' 'bucket_sizes_4442_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%bucket_sizes_4443_loc = alloca i64 1"   --->   Operation 72 'alloca' 'bucket_sizes_4443_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%bucket_sizes_4444_loc = alloca i64 1"   --->   Operation 73 'alloca' 'bucket_sizes_4444_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%bucket_sizes_4445_loc = alloca i64 1"   --->   Operation 74 'alloca' 'bucket_sizes_4445_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%bucket_sizes_4446_loc = alloca i64 1"   --->   Operation 75 'alloca' 'bucket_sizes_4446_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%bucket_sizes_loc = alloca i64 1"   --->   Operation 76 'alloca' 'bucket_sizes_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%bucket_sizes_4351_loc = alloca i64 1"   --->   Operation 77 'alloca' 'bucket_sizes_4351_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%bucket_sizes_4352_loc = alloca i64 1"   --->   Operation 78 'alloca' 'bucket_sizes_4352_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%bucket_sizes_4353_loc = alloca i64 1"   --->   Operation 79 'alloca' 'bucket_sizes_4353_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%bucket_sizes_4354_loc = alloca i64 1"   --->   Operation 80 'alloca' 'bucket_sizes_4354_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%bucket_sizes_4355_loc = alloca i64 1"   --->   Operation 81 'alloca' 'bucket_sizes_4355_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%bucket_sizes_4356_loc = alloca i64 1"   --->   Operation 82 'alloca' 'bucket_sizes_4356_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%bucket_sizes_4357_loc = alloca i64 1"   --->   Operation 83 'alloca' 'bucket_sizes_4357_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%bucket_sizes_4358_loc = alloca i64 1"   --->   Operation 84 'alloca' 'bucket_sizes_4358_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%bucket_sizes_4359_loc = alloca i64 1"   --->   Operation 85 'alloca' 'bucket_sizes_4359_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%bucket_sizes_4360_loc = alloca i64 1"   --->   Operation 86 'alloca' 'bucket_sizes_4360_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%bucket_sizes_4361_loc = alloca i64 1"   --->   Operation 87 'alloca' 'bucket_sizes_4361_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%bucket_sizes_4362_loc = alloca i64 1"   --->   Operation 88 'alloca' 'bucket_sizes_4362_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%bucket_sizes_4363_loc = alloca i64 1"   --->   Operation 89 'alloca' 'bucket_sizes_4363_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%bucket_sizes_4364_loc = alloca i64 1"   --->   Operation 90 'alloca' 'bucket_sizes_4364_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%bucket_sizes_4365_loc = alloca i64 1"   --->   Operation 91 'alloca' 'bucket_sizes_4365_loc' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%bucket = alloca i64 1" [sort_seperate_bucket/radix_sort.c:61]   --->   Operation 92 'alloca' 'bucket' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 93 [2/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_1, i32 %bucket_sizes_4365_loc, i32 %bucket_sizes_4364_loc, i32 %bucket_sizes_4363_loc, i32 %bucket_sizes_4362_loc, i32 %bucket_sizes_4361_loc, i32 %bucket_sizes_4360_loc, i32 %bucket_sizes_4359_loc, i32 %bucket_sizes_4358_loc, i32 %bucket_sizes_4357_loc, i32 %bucket_sizes_4356_loc, i32 %bucket_sizes_4355_loc, i32 %bucket_sizes_4354_loc, i32 %bucket_sizes_4353_loc, i32 %bucket_sizes_4352_loc, i32 %bucket_sizes_4351_loc, i32 %bucket_sizes_loc"   --->   Operation 93 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_1 : Operation 94 [1/1] (0.38ns)   --->   "%store_ln78 = store i32 0, i32 %bucket_num_012" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 94 'store' 'store_ln78' <Predicate = true> <Delay = 0.38>
-ST_1 : Operation 95 [1/1] (0.38ns)   --->   "%store_ln78 = store i4 0, i4 %i_011" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 95 'store' 'store_ln78' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%i_011 = alloca i32 1"   --->   Operation 11 'alloca' 'i_011' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%bucket_num_012 = alloca i32 1"   --->   Operation 12 'alloca' 'bucket_num_012' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%bucket_pointer = alloca i32 1"   --->   Operation 13 'alloca' 'bucket_pointer' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%bucket_pointer_2128 = alloca i32 1"   --->   Operation 14 'alloca' 'bucket_pointer_2128' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%bucket_pointer_2129 = alloca i32 1"   --->   Operation 15 'alloca' 'bucket_pointer_2129' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%bucket_pointer_2130 = alloca i32 1"   --->   Operation 16 'alloca' 'bucket_pointer_2130' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%bucket_pointer_2131 = alloca i32 1"   --->   Operation 17 'alloca' 'bucket_pointer_2131' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%bucket_pointer_2132 = alloca i32 1"   --->   Operation 18 'alloca' 'bucket_pointer_2132' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%bucket_pointer_2133 = alloca i32 1"   --->   Operation 19 'alloca' 'bucket_pointer_2133' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%bucket_pointer_2134 = alloca i32 1"   --->   Operation 20 'alloca' 'bucket_pointer_2134' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%bucket_pointer_2135 = alloca i32 1"   --->   Operation 21 'alloca' 'bucket_pointer_2135' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%bucket_pointer_2136 = alloca i32 1"   --->   Operation 22 'alloca' 'bucket_pointer_2136' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%bucket_pointer_2137 = alloca i32 1"   --->   Operation 23 'alloca' 'bucket_pointer_2137' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%bucket_pointer_2138 = alloca i32 1"   --->   Operation 24 'alloca' 'bucket_pointer_2138' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%bucket_pointer_2139 = alloca i32 1"   --->   Operation 25 'alloca' 'bucket_pointer_2139' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%bucket_pointer_2140 = alloca i32 1"   --->   Operation 26 'alloca' 'bucket_pointer_2140' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%bucket_pointer_2141 = alloca i32 1"   --->   Operation 27 'alloca' 'bucket_pointer_2141' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%bucket_pointer_2142 = alloca i32 1"   --->   Operation 28 'alloca' 'bucket_pointer_2142' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%bucket_sizes = alloca i32 1"   --->   Operation 29 'alloca' 'bucket_sizes' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%bucket_sizes_2806 = alloca i32 1"   --->   Operation 30 'alloca' 'bucket_sizes_2806' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%bucket_sizes_2807 = alloca i32 1"   --->   Operation 31 'alloca' 'bucket_sizes_2807' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%bucket_sizes_2808 = alloca i32 1"   --->   Operation 32 'alloca' 'bucket_sizes_2808' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%bucket_sizes_2809 = alloca i32 1"   --->   Operation 33 'alloca' 'bucket_sizes_2809' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%bucket_sizes_2810 = alloca i32 1"   --->   Operation 34 'alloca' 'bucket_sizes_2810' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%bucket_sizes_2811 = alloca i32 1"   --->   Operation 35 'alloca' 'bucket_sizes_2811' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%bucket_sizes_2812 = alloca i32 1"   --->   Operation 36 'alloca' 'bucket_sizes_2812' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%bucket_sizes_2813 = alloca i32 1"   --->   Operation 37 'alloca' 'bucket_sizes_2813' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%bucket_sizes_2814 = alloca i32 1"   --->   Operation 38 'alloca' 'bucket_sizes_2814' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%bucket_sizes_2815 = alloca i32 1"   --->   Operation 39 'alloca' 'bucket_sizes_2815' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%bucket_sizes_2816 = alloca i32 1"   --->   Operation 40 'alloca' 'bucket_sizes_2816' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%bucket_sizes_2817 = alloca i32 1"   --->   Operation 41 'alloca' 'bucket_sizes_2817' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%bucket_sizes_2818 = alloca i32 1"   --->   Operation 42 'alloca' 'bucket_sizes_2818' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%bucket_sizes_2819 = alloca i32 1"   --->   Operation 43 'alloca' 'bucket_sizes_2819' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%bucket_sizes_2820 = alloca i32 1"   --->   Operation 44 'alloca' 'bucket_sizes_2820' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%bucket_pointer_4046_loc = alloca i64 1"   --->   Operation 45 'alloca' 'bucket_pointer_4046_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%bucket_pointer_4047_loc = alloca i64 1"   --->   Operation 46 'alloca' 'bucket_pointer_4047_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%bucket_pointer_4048_loc = alloca i64 1"   --->   Operation 47 'alloca' 'bucket_pointer_4048_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%bucket_pointer_4049_loc = alloca i64 1"   --->   Operation 48 'alloca' 'bucket_pointer_4049_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%bucket_pointer_4050_loc = alloca i64 1"   --->   Operation 49 'alloca' 'bucket_pointer_4050_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%bucket_pointer_4051_loc = alloca i64 1"   --->   Operation 50 'alloca' 'bucket_pointer_4051_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%bucket_pointer_4052_loc = alloca i64 1"   --->   Operation 51 'alloca' 'bucket_pointer_4052_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%bucket_pointer_4053_loc = alloca i64 1"   --->   Operation 52 'alloca' 'bucket_pointer_4053_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%bucket_pointer_4054_loc = alloca i64 1"   --->   Operation 53 'alloca' 'bucket_pointer_4054_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%bucket_pointer_4055_loc = alloca i64 1"   --->   Operation 54 'alloca' 'bucket_pointer_4055_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%bucket_pointer_4056_loc = alloca i64 1"   --->   Operation 55 'alloca' 'bucket_pointer_4056_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%bucket_pointer_4057_loc = alloca i64 1"   --->   Operation 56 'alloca' 'bucket_pointer_4057_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%bucket_pointer_4058_loc = alloca i64 1"   --->   Operation 57 'alloca' 'bucket_pointer_4058_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%bucket_pointer_4059_loc = alloca i64 1"   --->   Operation 58 'alloca' 'bucket_pointer_4059_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%bucket_pointer_4060_loc = alloca i64 1"   --->   Operation 59 'alloca' 'bucket_pointer_4060_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%bucket_pointer_4061_loc = alloca i64 1"   --->   Operation 60 'alloca' 'bucket_pointer_4061_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%bucket_sizes_9071_loc = alloca i64 1"   --->   Operation 61 'alloca' 'bucket_sizes_9071_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%bucket_sizes_9072_loc = alloca i64 1"   --->   Operation 62 'alloca' 'bucket_sizes_9072_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%bucket_sizes_9073_loc = alloca i64 1"   --->   Operation 63 'alloca' 'bucket_sizes_9073_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%bucket_sizes_9074_loc = alloca i64 1"   --->   Operation 64 'alloca' 'bucket_sizes_9074_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%bucket_sizes_9075_loc = alloca i64 1"   --->   Operation 65 'alloca' 'bucket_sizes_9075_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%bucket_sizes_9076_loc = alloca i64 1"   --->   Operation 66 'alloca' 'bucket_sizes_9076_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%bucket_sizes_9077_loc = alloca i64 1"   --->   Operation 67 'alloca' 'bucket_sizes_9077_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%bucket_sizes_9078_loc = alloca i64 1"   --->   Operation 68 'alloca' 'bucket_sizes_9078_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%bucket_sizes_9079_loc = alloca i64 1"   --->   Operation 69 'alloca' 'bucket_sizes_9079_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%bucket_sizes_9080_loc = alloca i64 1"   --->   Operation 70 'alloca' 'bucket_sizes_9080_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%bucket_sizes_9081_loc = alloca i64 1"   --->   Operation 71 'alloca' 'bucket_sizes_9081_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%bucket_sizes_9082_loc = alloca i64 1"   --->   Operation 72 'alloca' 'bucket_sizes_9082_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%bucket_sizes_9083_loc = alloca i64 1"   --->   Operation 73 'alloca' 'bucket_sizes_9083_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%bucket_sizes_9084_loc = alloca i64 1"   --->   Operation 74 'alloca' 'bucket_sizes_9084_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%bucket_sizes_9085_loc = alloca i64 1"   --->   Operation 75 'alloca' 'bucket_sizes_9085_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%bucket_sizes_9086_loc = alloca i64 1"   --->   Operation 76 'alloca' 'bucket_sizes_9086_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%bucket_sizes_loc = alloca i64 1"   --->   Operation 77 'alloca' 'bucket_sizes_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%bucket_sizes_8991_loc = alloca i64 1"   --->   Operation 78 'alloca' 'bucket_sizes_8991_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%bucket_sizes_8992_loc = alloca i64 1"   --->   Operation 79 'alloca' 'bucket_sizes_8992_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%bucket_sizes_8993_loc = alloca i64 1"   --->   Operation 80 'alloca' 'bucket_sizes_8993_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%bucket_sizes_8994_loc = alloca i64 1"   --->   Operation 81 'alloca' 'bucket_sizes_8994_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%bucket_sizes_8995_loc = alloca i64 1"   --->   Operation 82 'alloca' 'bucket_sizes_8995_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%bucket_sizes_8996_loc = alloca i64 1"   --->   Operation 83 'alloca' 'bucket_sizes_8996_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%bucket_sizes_8997_loc = alloca i64 1"   --->   Operation 84 'alloca' 'bucket_sizes_8997_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%bucket_sizes_8998_loc = alloca i64 1"   --->   Operation 85 'alloca' 'bucket_sizes_8998_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%bucket_sizes_8999_loc = alloca i64 1"   --->   Operation 86 'alloca' 'bucket_sizes_8999_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%bucket_sizes_9000_loc = alloca i64 1"   --->   Operation 87 'alloca' 'bucket_sizes_9000_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%bucket_sizes_9001_loc = alloca i64 1"   --->   Operation 88 'alloca' 'bucket_sizes_9001_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%bucket_sizes_9002_loc = alloca i64 1"   --->   Operation 89 'alloca' 'bucket_sizes_9002_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%bucket_sizes_9003_loc = alloca i64 1"   --->   Operation 90 'alloca' 'bucket_sizes_9003_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%bucket_sizes_9004_loc = alloca i64 1"   --->   Operation 91 'alloca' 'bucket_sizes_9004_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%bucket_sizes_9005_loc = alloca i64 1"   --->   Operation 92 'alloca' 'bucket_sizes_9005_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%bucket = alloca i64 1" [sort_seperate_bucket/radix_sort.c:61]   --->   Operation 93 'alloca' 'bucket' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [2/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_1, i32 %bucket_sizes_9005_loc, i32 %bucket_sizes_9004_loc, i32 %bucket_sizes_9003_loc, i32 %bucket_sizes_9002_loc, i32 %bucket_sizes_9001_loc, i32 %bucket_sizes_9000_loc, i32 %bucket_sizes_8999_loc, i32 %bucket_sizes_8998_loc, i32 %bucket_sizes_8997_loc, i32 %bucket_sizes_8996_loc, i32 %bucket_sizes_8995_loc, i32 %bucket_sizes_8994_loc, i32 %bucket_sizes_8993_loc, i32 %bucket_sizes_8992_loc, i32 %bucket_sizes_8991_loc, i32 %bucket_sizes_loc"   --->   Operation 94 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 95 [1/1] (0.38ns)   --->   "%store_ln78 = store i32 0, i32 %bucket_num_012" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 95 'store' 'store_ln78' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 96 [1/1] (0.38ns)   --->   "%store_ln78 = store i4 0, i4 %i_011" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 96 'store' 'store_ln78' <Predicate = true> <Delay = 0.38>
 
 State 2 <SV = 1> <Delay = 1.02>
-ST_2 : Operation 96 [1/2] (1.02ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_1, i32 %bucket_sizes_4365_loc, i32 %bucket_sizes_4364_loc, i32 %bucket_sizes_4363_loc, i32 %bucket_sizes_4362_loc, i32 %bucket_sizes_4361_loc, i32 %bucket_sizes_4360_loc, i32 %bucket_sizes_4359_loc, i32 %bucket_sizes_4358_loc, i32 %bucket_sizes_4357_loc, i32 %bucket_sizes_4356_loc, i32 %bucket_sizes_4355_loc, i32 %bucket_sizes_4354_loc, i32 %bucket_sizes_4353_loc, i32 %bucket_sizes_4352_loc, i32 %bucket_sizes_4351_loc, i32 %bucket_sizes_loc"   --->   Operation 96 'call' 'call_ln0' <Predicate = true> <Delay = 1.02> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 97 [1/2] (1.02ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_1, i32 %bucket_sizes_9005_loc, i32 %bucket_sizes_9004_loc, i32 %bucket_sizes_9003_loc, i32 %bucket_sizes_9002_loc, i32 %bucket_sizes_9001_loc, i32 %bucket_sizes_9000_loc, i32 %bucket_sizes_8999_loc, i32 %bucket_sizes_8998_loc, i32 %bucket_sizes_8997_loc, i32 %bucket_sizes_8996_loc, i32 %bucket_sizes_8995_loc, i32 %bucket_sizes_8994_loc, i32 %bucket_sizes_8993_loc, i32 %bucket_sizes_8992_loc, i32 %bucket_sizes_8991_loc, i32 %bucket_sizes_loc"   --->   Operation 97 'call' 'call_ln0' <Predicate = true> <Delay = 1.02> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 3 <SV = 2> <Delay = 0.38>
-ST_3 : Operation 97 [1/1] (0.00ns)   --->   "%bucket_sizes_4365_loc_load = load i32 %bucket_sizes_4365_loc"   --->   Operation 97 'load' 'bucket_sizes_4365_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%bucket_sizes_4364_loc_load = load i32 %bucket_sizes_4364_loc"   --->   Operation 98 'load' 'bucket_sizes_4364_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%bucket_sizes_4363_loc_load = load i32 %bucket_sizes_4363_loc"   --->   Operation 99 'load' 'bucket_sizes_4363_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%bucket_sizes_4362_loc_load = load i32 %bucket_sizes_4362_loc"   --->   Operation 100 'load' 'bucket_sizes_4362_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%bucket_sizes_4361_loc_load = load i32 %bucket_sizes_4361_loc"   --->   Operation 101 'load' 'bucket_sizes_4361_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%bucket_sizes_4360_loc_load = load i32 %bucket_sizes_4360_loc"   --->   Operation 102 'load' 'bucket_sizes_4360_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%bucket_sizes_4359_loc_load = load i32 %bucket_sizes_4359_loc"   --->   Operation 103 'load' 'bucket_sizes_4359_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%bucket_sizes_4358_loc_load = load i32 %bucket_sizes_4358_loc"   --->   Operation 104 'load' 'bucket_sizes_4358_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%bucket_sizes_4357_loc_load = load i32 %bucket_sizes_4357_loc"   --->   Operation 105 'load' 'bucket_sizes_4357_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%bucket_sizes_4356_loc_load = load i32 %bucket_sizes_4356_loc"   --->   Operation 106 'load' 'bucket_sizes_4356_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%bucket_sizes_4355_loc_load = load i32 %bucket_sizes_4355_loc"   --->   Operation 107 'load' 'bucket_sizes_4355_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%bucket_sizes_4354_loc_load = load i32 %bucket_sizes_4354_loc"   --->   Operation 108 'load' 'bucket_sizes_4354_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 109 [1/1] (0.00ns)   --->   "%bucket_sizes_4353_loc_load = load i32 %bucket_sizes_4353_loc"   --->   Operation 109 'load' 'bucket_sizes_4353_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 110 [1/1] (0.00ns)   --->   "%bucket_sizes_4352_loc_load = load i32 %bucket_sizes_4352_loc"   --->   Operation 110 'load' 'bucket_sizes_4352_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%bucket_sizes_4351_loc_load = load i32 %bucket_sizes_4351_loc"   --->   Operation 111 'load' 'bucket_sizes_4351_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%bucket_sizes_loc_load = load i32 %bucket_sizes_loc"   --->   Operation 112 'load' 'bucket_sizes_loc_load' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 113 [2/2] (0.38ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_initialization, i32 %bucket_sizes_4365_loc_load, i32 %bucket_sizes_4364_loc_load, i32 %bucket_sizes_4363_loc_load, i32 %bucket_sizes_4362_loc_load, i32 %bucket_sizes_4361_loc_load, i32 %bucket_sizes_4360_loc_load, i32 %bucket_sizes_4359_loc_load, i32 %bucket_sizes_4358_loc_load, i32 %bucket_sizes_4357_loc_load, i32 %bucket_sizes_4356_loc_load, i32 %bucket_sizes_4355_loc_load, i32 %bucket_sizes_4354_loc_load, i32 %bucket_sizes_4353_loc_load, i32 %bucket_sizes_4352_loc_load, i32 %bucket_sizes_4351_loc_load, i32 %bucket_sizes_loc_load, i32 %bucket, i32 %input_31, i32 %bucket_sizes_1380, i32 %bucket_sizes_1379, i32 %bucket_sizes_1378, i32 %bucket_sizes_1377, i32 %bucket_sizes_1376, i32 %bucket_sizes_1375, i32 %bucket_sizes_1374, i32 %bucket_sizes_1373, i32 %bucket_sizes_1372, i32 %bucket_sizes_1371, i32 %bucket_sizes_1370, i32 %bucket_sizes_1369, i32 %bucket_sizes_1368, i32 %bucket_sizes_1367, i32 %bucket_sizes_1366, i32 %bucket_sizes"   --->   Operation 113 'call' 'call_ln0' <Predicate = true> <Delay = 0.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 98 [1/1] (0.00ns)   --->   "%bucket_sizes_9005_loc_load = load i32 %bucket_sizes_9005_loc"   --->   Operation 98 'load' 'bucket_sizes_9005_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%bucket_sizes_9004_loc_load = load i32 %bucket_sizes_9004_loc"   --->   Operation 99 'load' 'bucket_sizes_9004_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%bucket_sizes_9003_loc_load = load i32 %bucket_sizes_9003_loc"   --->   Operation 100 'load' 'bucket_sizes_9003_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%bucket_sizes_9002_loc_load = load i32 %bucket_sizes_9002_loc"   --->   Operation 101 'load' 'bucket_sizes_9002_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%bucket_sizes_9001_loc_load = load i32 %bucket_sizes_9001_loc"   --->   Operation 102 'load' 'bucket_sizes_9001_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "%bucket_sizes_9000_loc_load = load i32 %bucket_sizes_9000_loc"   --->   Operation 103 'load' 'bucket_sizes_9000_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "%bucket_sizes_8999_loc_load = load i32 %bucket_sizes_8999_loc"   --->   Operation 104 'load' 'bucket_sizes_8999_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%bucket_sizes_8998_loc_load = load i32 %bucket_sizes_8998_loc"   --->   Operation 105 'load' 'bucket_sizes_8998_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%bucket_sizes_8997_loc_load = load i32 %bucket_sizes_8997_loc"   --->   Operation 106 'load' 'bucket_sizes_8997_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%bucket_sizes_8996_loc_load = load i32 %bucket_sizes_8996_loc"   --->   Operation 107 'load' 'bucket_sizes_8996_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 108 [1/1] (0.00ns)   --->   "%bucket_sizes_8995_loc_load = load i32 %bucket_sizes_8995_loc"   --->   Operation 108 'load' 'bucket_sizes_8995_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 109 [1/1] (0.00ns)   --->   "%bucket_sizes_8994_loc_load = load i32 %bucket_sizes_8994_loc"   --->   Operation 109 'load' 'bucket_sizes_8994_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "%bucket_sizes_8993_loc_load = load i32 %bucket_sizes_8993_loc"   --->   Operation 110 'load' 'bucket_sizes_8993_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "%bucket_sizes_8992_loc_load = load i32 %bucket_sizes_8992_loc"   --->   Operation 111 'load' 'bucket_sizes_8992_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "%bucket_sizes_8991_loc_load = load i32 %bucket_sizes_8991_loc"   --->   Operation 112 'load' 'bucket_sizes_8991_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "%bucket_sizes_loc_load = load i32 %bucket_sizes_loc"   --->   Operation 113 'load' 'bucket_sizes_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 114 [2/2] (0.38ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_initialization, i32 %bucket_sizes_9005_loc_load, i32 %bucket_sizes_9004_loc_load, i32 %bucket_sizes_9003_loc_load, i32 %bucket_sizes_9002_loc_load, i32 %bucket_sizes_9001_loc_load, i32 %bucket_sizes_9000_loc_load, i32 %bucket_sizes_8999_loc_load, i32 %bucket_sizes_8998_loc_load, i32 %bucket_sizes_8997_loc_load, i32 %bucket_sizes_8996_loc_load, i32 %bucket_sizes_8995_loc_load, i32 %bucket_sizes_8994_loc_load, i32 %bucket_sizes_8993_loc_load, i32 %bucket_sizes_8992_loc_load, i32 %bucket_sizes_8991_loc_load, i32 %bucket_sizes_loc_load, i32 %bucket, i32 %input_63, i32 %bucket_sizes_2820, i32 %bucket_sizes_2819, i32 %bucket_sizes_2818, i32 %bucket_sizes_2817, i32 %bucket_sizes_2816, i32 %bucket_sizes_2815, i32 %bucket_sizes_2814, i32 %bucket_sizes_2813, i32 %bucket_sizes_2812, i32 %bucket_sizes_2811, i32 %bucket_sizes_2810, i32 %bucket_sizes_2809, i32 %bucket_sizes_2808, i32 %bucket_sizes_2807, i32 %bucket_sizes_2806, i32 %bucket_sizes"   --->   Operation 114 'call' 'call_ln0' <Predicate = true> <Delay = 0.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 114 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_31, void @empty_31, i32 0, i32 0, void @empty_15, i32 4294967295, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0"   --->   Operation 114 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_4 : Operation 115 [1/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_initialization, i32 %bucket_sizes_4365_loc_load, i32 %bucket_sizes_4364_loc_load, i32 %bucket_sizes_4363_loc_load, i32 %bucket_sizes_4362_loc_load, i32 %bucket_sizes_4361_loc_load, i32 %bucket_sizes_4360_loc_load, i32 %bucket_sizes_4359_loc_load, i32 %bucket_sizes_4358_loc_load, i32 %bucket_sizes_4357_loc_load, i32 %bucket_sizes_4356_loc_load, i32 %bucket_sizes_4355_loc_load, i32 %bucket_sizes_4354_loc_load, i32 %bucket_sizes_4353_loc_load, i32 %bucket_sizes_4352_loc_load, i32 %bucket_sizes_4351_loc_load, i32 %bucket_sizes_loc_load, i32 %bucket, i32 %input_31, i32 %bucket_sizes_1380, i32 %bucket_sizes_1379, i32 %bucket_sizes_1378, i32 %bucket_sizes_1377, i32 %bucket_sizes_1376, i32 %bucket_sizes_1375, i32 %bucket_sizes_1374, i32 %bucket_sizes_1373, i32 %bucket_sizes_1372, i32 %bucket_sizes_1371, i32 %bucket_sizes_1370, i32 %bucket_sizes_1369, i32 %bucket_sizes_1368, i32 %bucket_sizes_1367, i32 %bucket_sizes_1366, i32 %bucket_sizes"   --->   Operation 115 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_4 : Operation 116 [1/1] (0.00ns)   --->   "%br_ln78 = br void %bucket_pointer_initialization" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 116 'br' 'br_ln78' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_63, void @empty_53, i32 0, i32 0, void @empty_28, i32 4294967295, i32 0, void @empty_28, void @empty_28, void @empty_28, i32 0, i32 0, i32 0, i32 0, void @empty_28, void @empty_28, i32 4294967295, i32 0"   --->   Operation 115 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 116 [1/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_initialization, i32 %bucket_sizes_9005_loc_load, i32 %bucket_sizes_9004_loc_load, i32 %bucket_sizes_9003_loc_load, i32 %bucket_sizes_9002_loc_load, i32 %bucket_sizes_9001_loc_load, i32 %bucket_sizes_9000_loc_load, i32 %bucket_sizes_8999_loc_load, i32 %bucket_sizes_8998_loc_load, i32 %bucket_sizes_8997_loc_load, i32 %bucket_sizes_8996_loc_load, i32 %bucket_sizes_8995_loc_load, i32 %bucket_sizes_8994_loc_load, i32 %bucket_sizes_8993_loc_load, i32 %bucket_sizes_8992_loc_load, i32 %bucket_sizes_8991_loc_load, i32 %bucket_sizes_loc_load, i32 %bucket, i32 %input_63, i32 %bucket_sizes_2820, i32 %bucket_sizes_2819, i32 %bucket_sizes_2818, i32 %bucket_sizes_2817, i32 %bucket_sizes_2816, i32 %bucket_sizes_2815, i32 %bucket_sizes_2814, i32 %bucket_sizes_2813, i32 %bucket_sizes_2812, i32 %bucket_sizes_2811, i32 %bucket_sizes_2810, i32 %bucket_sizes_2809, i32 %bucket_sizes_2808, i32 %bucket_sizes_2807, i32 %bucket_sizes_2806, i32 %bucket_sizes"   --->   Operation 116 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%br_ln78 = br void %bucket_pointer_initialization" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 117 'br' 'br_ln78' <Predicate = true> <Delay = 0.00>
 
-State 5 <SV = 4> <Delay = 1.09>
-ST_5 : Operation 117 [1/1] (0.00ns)   --->   "%i = load i4 %i_011"   --->   Operation 117 'load' 'i' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 118 [1/1] (0.65ns)   --->   "%icmp_ln78 = icmp_eq  i4 %i, i4 8" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 118 'icmp' 'icmp_ln78' <Predicate = true> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 119 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8"   --->   Operation 119 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 120 [1/1] (0.70ns)   --->   "%i_42 = add i4 %i, i4 1" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 120 'add' 'i_42' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%br_ln78 = br i1 %icmp_ln78, void %xlx_merge_loop.bucket_pointer_initialization.31_begin, void %for.inc79.preheader" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 121 'br' 'br_ln78' <Predicate = true> <Delay = 0.00>
-ST_5 : Operation 122 [1/1] (0.00ns)   --->   "%bucket_pointer_load = load i32 %bucket_pointer"   --->   Operation 122 'load' 'bucket_pointer_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%bucket_pointer_1040_load = load i32 %bucket_pointer_1040"   --->   Operation 123 'load' 'bucket_pointer_1040_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 124 [1/1] (0.00ns)   --->   "%bucket_pointer_1041_load = load i32 %bucket_pointer_1041"   --->   Operation 124 'load' 'bucket_pointer_1041_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 125 [1/1] (0.00ns)   --->   "%bucket_pointer_1042_load = load i32 %bucket_pointer_1042"   --->   Operation 125 'load' 'bucket_pointer_1042_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 126 [1/1] (0.00ns)   --->   "%bucket_pointer_1043_load = load i32 %bucket_pointer_1043"   --->   Operation 126 'load' 'bucket_pointer_1043_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 127 [1/1] (0.00ns)   --->   "%bucket_pointer_1044_load = load i32 %bucket_pointer_1044"   --->   Operation 127 'load' 'bucket_pointer_1044_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 128 [1/1] (0.00ns)   --->   "%bucket_pointer_1045_load = load i32 %bucket_pointer_1045"   --->   Operation 128 'load' 'bucket_pointer_1045_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 129 [1/1] (0.00ns)   --->   "%bucket_pointer_1046_load = load i32 %bucket_pointer_1046"   --->   Operation 129 'load' 'bucket_pointer_1046_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 130 [1/1] (0.00ns)   --->   "%bucket_pointer_1047_load = load i32 %bucket_pointer_1047"   --->   Operation 130 'load' 'bucket_pointer_1047_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 131 [1/1] (0.00ns)   --->   "%bucket_pointer_1048_load = load i32 %bucket_pointer_1048"   --->   Operation 131 'load' 'bucket_pointer_1048_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 132 [1/1] (0.00ns)   --->   "%bucket_pointer_1049_load = load i32 %bucket_pointer_1049"   --->   Operation 132 'load' 'bucket_pointer_1049_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 133 [1/1] (0.00ns)   --->   "%bucket_pointer_1050_load = load i32 %bucket_pointer_1050"   --->   Operation 133 'load' 'bucket_pointer_1050_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 134 [1/1] (0.00ns)   --->   "%bucket_pointer_1051_load = load i32 %bucket_pointer_1051"   --->   Operation 134 'load' 'bucket_pointer_1051_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 135 [1/1] (0.00ns)   --->   "%bucket_pointer_1052_load = load i32 %bucket_pointer_1052"   --->   Operation 135 'load' 'bucket_pointer_1052_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 136 [1/1] (0.00ns)   --->   "%bucket_pointer_1053_load = load i32 %bucket_pointer_1053"   --->   Operation 136 'load' 'bucket_pointer_1053_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 137 [1/1] (0.00ns)   --->   "%bucket_pointer_1054_load = load i32 %bucket_pointer_1054"   --->   Operation 137 'load' 'bucket_pointer_1054_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 138 [1/1] (0.00ns)   --->   "%bucket_sizes_load = load i32 %bucket_sizes"   --->   Operation 138 'load' 'bucket_sizes_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 139 [1/1] (0.00ns)   --->   "%bucket_sizes_1366_load = load i32 %bucket_sizes_1366"   --->   Operation 139 'load' 'bucket_sizes_1366_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 140 [1/1] (0.00ns)   --->   "%bucket_sizes_1367_load = load i32 %bucket_sizes_1367"   --->   Operation 140 'load' 'bucket_sizes_1367_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 141 [1/1] (0.00ns)   --->   "%bucket_sizes_1368_load = load i32 %bucket_sizes_1368"   --->   Operation 141 'load' 'bucket_sizes_1368_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 142 [1/1] (0.00ns)   --->   "%bucket_sizes_1369_load = load i32 %bucket_sizes_1369"   --->   Operation 142 'load' 'bucket_sizes_1369_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 143 [1/1] (0.00ns)   --->   "%bucket_sizes_1370_load = load i32 %bucket_sizes_1370"   --->   Operation 143 'load' 'bucket_sizes_1370_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 144 [1/1] (0.00ns)   --->   "%bucket_sizes_1371_load = load i32 %bucket_sizes_1371"   --->   Operation 144 'load' 'bucket_sizes_1371_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%bucket_sizes_1372_load = load i32 %bucket_sizes_1372"   --->   Operation 145 'load' 'bucket_sizes_1372_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 146 [1/1] (0.00ns)   --->   "%bucket_sizes_1373_load = load i32 %bucket_sizes_1373"   --->   Operation 146 'load' 'bucket_sizes_1373_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 147 [1/1] (0.00ns)   --->   "%bucket_sizes_1374_load = load i32 %bucket_sizes_1374"   --->   Operation 147 'load' 'bucket_sizes_1374_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 148 [1/1] (0.00ns)   --->   "%bucket_sizes_1375_load = load i32 %bucket_sizes_1375"   --->   Operation 148 'load' 'bucket_sizes_1375_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 149 [1/1] (0.00ns)   --->   "%bucket_sizes_1376_load = load i32 %bucket_sizes_1376"   --->   Operation 149 'load' 'bucket_sizes_1376_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 150 [1/1] (0.00ns)   --->   "%bucket_sizes_1377_load = load i32 %bucket_sizes_1377"   --->   Operation 150 'load' 'bucket_sizes_1377_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 151 [1/1] (0.00ns)   --->   "%bucket_sizes_1378_load = load i32 %bucket_sizes_1378"   --->   Operation 151 'load' 'bucket_sizes_1378_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 152 [1/1] (0.00ns)   --->   "%bucket_sizes_1379_load = load i32 %bucket_sizes_1379"   --->   Operation 152 'load' 'bucket_sizes_1379_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 153 [1/1] (0.00ns)   --->   "%bucket_sizes_1380_load = load i32 %bucket_sizes_1380"   --->   Operation 153 'load' 'bucket_sizes_1380_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 154 [2/2] (0.38ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_bucket_pointer_initialization, i32 %bucket_sizes_1380_load, i32 %bucket_sizes_1379_load, i32 %bucket_sizes_1378_load, i32 %bucket_sizes_1377_load, i32 %bucket_sizes_1376_load, i32 %bucket_sizes_1375_load, i32 %bucket_sizes_1374_load, i32 %bucket_sizes_1373_load, i32 %bucket_sizes_1372_load, i32 %bucket_sizes_1371_load, i32 %bucket_sizes_1370_load, i32 %bucket_sizes_1369_load, i32 %bucket_sizes_1368_load, i32 %bucket_sizes_1367_load, i32 %bucket_sizes_1366_load, i32 %bucket_sizes_load, i32 %bucket_pointer_1054_load, i32 %bucket_pointer_1053_load, i32 %bucket_pointer_1052_load, i32 %bucket_pointer_1051_load, i32 %bucket_pointer_1050_load, i32 %bucket_pointer_1049_load, i32 %bucket_pointer_1048_load, i32 %bucket_pointer_1047_load, i32 %bucket_pointer_1046_load, i32 %bucket_pointer_1045_load, i32 %bucket_pointer_1044_load, i32 %bucket_pointer_1043_load, i32 %bucket_pointer_1042_load, i32 %bucket_pointer_1041_load, i32 %bucket_pointer_1040_load, i32 %bucket_pointer_load, i32 %bucket_sizes_4446_loc, i32 %bucket_sizes_4445_loc, i32 %bucket_sizes_4444_loc, i32 %bucket_sizes_4443_loc, i32 %bucket_sizes_4442_loc, i32 %bucket_sizes_4441_loc, i32 %bucket_sizes_4440_loc, i32 %bucket_sizes_4439_loc, i32 %bucket_sizes_4438_loc, i32 %bucket_sizes_4437_loc, i32 %bucket_sizes_4436_loc, i32 %bucket_sizes_4435_loc, i32 %bucket_sizes_4434_loc, i32 %bucket_sizes_4433_loc, i32 %bucket_sizes_4432_loc, i32 %bucket_sizes_4431_loc, i32 %bucket_pointer_1981_loc, i32 %bucket_pointer_1980_loc, i32 %bucket_pointer_1979_loc, i32 %bucket_pointer_1978_loc, i32 %bucket_pointer_1977_loc, i32 %bucket_pointer_1976_loc, i32 %bucket_pointer_1975_loc, i32 %bucket_pointer_1974_loc, i32 %bucket_pointer_1973_loc, i32 %bucket_pointer_1972_loc, i32 %bucket_pointer_1971_loc, i32 %bucket_pointer_1970_loc, i32 %bucket_pointer_1969_loc, i32 %bucket_pointer_1968_loc, i32 %bucket_pointer_1967_loc, i32 %bucket_pointer_1966_loc"   --->   Operation 154 'call' 'call_ln0' <Predicate = (!icmp_ln78)> <Delay = 0.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_5 : Operation 155 [1/1] (0.00ns)   --->   "%empty_168 = trunc i4 %i"   --->   Operation 155 'trunc' 'empty_168' <Predicate = (!icmp_ln78)> <Delay = 0.00>
-ST_5 : Operation 156 [1/1] (0.38ns)   --->   "%store_ln78 = store i4 %i_42, i4 %i_011" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 156 'store' 'store_ln78' <Predicate = (!icmp_ln78)> <Delay = 0.38>
-ST_5 : Operation 157 [2/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_output_bucket, i32 %bucket, i32 %sorted_data"   --->   Operation 157 'call' 'call_ln0' <Predicate = (icmp_ln78)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+State 5 <SV = 4> <Delay = 1.41>
+ST_5 : Operation 118 [1/1] (0.00ns)   --->   "%i = load i4 %i_011"   --->   Operation 118 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 119 [1/1] (0.65ns)   --->   "%icmp_ln78 = icmp_eq  i4 %i, i4 8" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 119 'icmp' 'icmp_ln78' <Predicate = true> <Delay = 0.65> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.65> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 120 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8"   --->   Operation 120 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 121 [1/1] (0.70ns)   --->   "%i_74 = add i4 %i, i4 1" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 121 'add' 'i_74' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 122 [1/1] (0.00ns)   --->   "%br_ln78 = br i1 %icmp_ln78, void %xlx_merge_loop.bucket_pointer_initialization.63_begin, void %for.inc79.preheader" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 122 'br' 'br_ln78' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%bucket_num_012_load = load i32 %bucket_num_012" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 123 'load' 'bucket_num_012_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 124 [1/1] (0.00ns)   --->   "%bucket_pointer_load = load i32 %bucket_pointer"   --->   Operation 124 'load' 'bucket_pointer_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 125 [1/1] (0.00ns)   --->   "%bucket_pointer_2128_load = load i32 %bucket_pointer_2128"   --->   Operation 125 'load' 'bucket_pointer_2128_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 126 [1/1] (0.00ns)   --->   "%bucket_pointer_2129_load = load i32 %bucket_pointer_2129"   --->   Operation 126 'load' 'bucket_pointer_2129_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 127 [1/1] (0.00ns)   --->   "%bucket_pointer_2130_load = load i32 %bucket_pointer_2130"   --->   Operation 127 'load' 'bucket_pointer_2130_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 128 [1/1] (0.00ns)   --->   "%bucket_pointer_2131_load = load i32 %bucket_pointer_2131"   --->   Operation 128 'load' 'bucket_pointer_2131_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 129 [1/1] (0.00ns)   --->   "%bucket_pointer_2132_load = load i32 %bucket_pointer_2132"   --->   Operation 129 'load' 'bucket_pointer_2132_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 130 [1/1] (0.00ns)   --->   "%bucket_pointer_2133_load = load i32 %bucket_pointer_2133"   --->   Operation 130 'load' 'bucket_pointer_2133_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 131 [1/1] (0.00ns)   --->   "%bucket_pointer_2134_load = load i32 %bucket_pointer_2134"   --->   Operation 131 'load' 'bucket_pointer_2134_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 132 [1/1] (0.00ns)   --->   "%bucket_pointer_2135_load = load i32 %bucket_pointer_2135"   --->   Operation 132 'load' 'bucket_pointer_2135_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 133 [1/1] (0.00ns)   --->   "%bucket_pointer_2136_load = load i32 %bucket_pointer_2136"   --->   Operation 133 'load' 'bucket_pointer_2136_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 134 [1/1] (0.00ns)   --->   "%bucket_pointer_2137_load = load i32 %bucket_pointer_2137"   --->   Operation 134 'load' 'bucket_pointer_2137_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 135 [1/1] (0.00ns)   --->   "%bucket_pointer_2138_load = load i32 %bucket_pointer_2138"   --->   Operation 135 'load' 'bucket_pointer_2138_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 136 [1/1] (0.00ns)   --->   "%bucket_pointer_2139_load = load i32 %bucket_pointer_2139"   --->   Operation 136 'load' 'bucket_pointer_2139_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 137 [1/1] (0.00ns)   --->   "%bucket_pointer_2140_load = load i32 %bucket_pointer_2140"   --->   Operation 137 'load' 'bucket_pointer_2140_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 138 [1/1] (0.00ns)   --->   "%bucket_pointer_2141_load = load i32 %bucket_pointer_2141"   --->   Operation 138 'load' 'bucket_pointer_2141_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 139 [1/1] (0.00ns)   --->   "%bucket_pointer_2142_load = load i32 %bucket_pointer_2142"   --->   Operation 139 'load' 'bucket_pointer_2142_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 140 [1/1] (0.00ns)   --->   "%bucket_sizes_load = load i32 %bucket_sizes"   --->   Operation 140 'load' 'bucket_sizes_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 141 [1/1] (0.00ns)   --->   "%bucket_sizes_2806_load = load i32 %bucket_sizes_2806"   --->   Operation 141 'load' 'bucket_sizes_2806_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 142 [1/1] (0.00ns)   --->   "%bucket_sizes_2807_load = load i32 %bucket_sizes_2807"   --->   Operation 142 'load' 'bucket_sizes_2807_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 143 [1/1] (0.00ns)   --->   "%bucket_sizes_2808_load = load i32 %bucket_sizes_2808"   --->   Operation 143 'load' 'bucket_sizes_2808_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 144 [1/1] (0.00ns)   --->   "%bucket_sizes_2809_load = load i32 %bucket_sizes_2809"   --->   Operation 144 'load' 'bucket_sizes_2809_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%bucket_sizes_2810_load = load i32 %bucket_sizes_2810"   --->   Operation 145 'load' 'bucket_sizes_2810_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 146 [1/1] (0.00ns)   --->   "%bucket_sizes_2811_load = load i32 %bucket_sizes_2811"   --->   Operation 146 'load' 'bucket_sizes_2811_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 147 [1/1] (0.00ns)   --->   "%bucket_sizes_2812_load = load i32 %bucket_sizes_2812"   --->   Operation 147 'load' 'bucket_sizes_2812_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 148 [1/1] (0.00ns)   --->   "%bucket_sizes_2813_load = load i32 %bucket_sizes_2813"   --->   Operation 148 'load' 'bucket_sizes_2813_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 149 [1/1] (0.00ns)   --->   "%bucket_sizes_2814_load = load i32 %bucket_sizes_2814"   --->   Operation 149 'load' 'bucket_sizes_2814_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 150 [1/1] (0.00ns)   --->   "%bucket_sizes_2815_load = load i32 %bucket_sizes_2815"   --->   Operation 150 'load' 'bucket_sizes_2815_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 151 [1/1] (0.00ns)   --->   "%bucket_sizes_2816_load = load i32 %bucket_sizes_2816"   --->   Operation 151 'load' 'bucket_sizes_2816_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 152 [1/1] (0.00ns)   --->   "%bucket_sizes_2817_load = load i32 %bucket_sizes_2817"   --->   Operation 152 'load' 'bucket_sizes_2817_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 153 [1/1] (0.00ns)   --->   "%bucket_sizes_2818_load = load i32 %bucket_sizes_2818"   --->   Operation 153 'load' 'bucket_sizes_2818_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 154 [1/1] (0.00ns)   --->   "%bucket_sizes_2819_load = load i32 %bucket_sizes_2819"   --->   Operation 154 'load' 'bucket_sizes_2819_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 155 [1/1] (0.00ns)   --->   "%bucket_sizes_2820_load = load i32 %bucket_sizes_2820"   --->   Operation 155 'load' 'bucket_sizes_2820_load' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 156 [2/2] (0.38ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_bucket_pointer_initialization, i32 %bucket_sizes_2820_load, i32 %bucket_sizes_2819_load, i32 %bucket_sizes_2818_load, i32 %bucket_sizes_2817_load, i32 %bucket_sizes_2816_load, i32 %bucket_sizes_2815_load, i32 %bucket_sizes_2814_load, i32 %bucket_sizes_2813_load, i32 %bucket_sizes_2812_load, i32 %bucket_sizes_2811_load, i32 %bucket_sizes_2810_load, i32 %bucket_sizes_2809_load, i32 %bucket_sizes_2808_load, i32 %bucket_sizes_2807_load, i32 %bucket_sizes_2806_load, i32 %bucket_sizes_load, i32 %bucket_pointer_2142_load, i32 %bucket_pointer_2141_load, i32 %bucket_pointer_2140_load, i32 %bucket_pointer_2139_load, i32 %bucket_pointer_2138_load, i32 %bucket_pointer_2137_load, i32 %bucket_pointer_2136_load, i32 %bucket_pointer_2135_load, i32 %bucket_pointer_2134_load, i32 %bucket_pointer_2133_load, i32 %bucket_pointer_2132_load, i32 %bucket_pointer_2131_load, i32 %bucket_pointer_2130_load, i32 %bucket_pointer_2129_load, i32 %bucket_pointer_2128_load, i32 %bucket_pointer_load, i32 %bucket_sizes_9086_loc, i32 %bucket_sizes_9085_loc, i32 %bucket_sizes_9084_loc, i32 %bucket_sizes_9083_loc, i32 %bucket_sizes_9082_loc, i32 %bucket_sizes_9081_loc, i32 %bucket_sizes_9080_loc, i32 %bucket_sizes_9079_loc, i32 %bucket_sizes_9078_loc, i32 %bucket_sizes_9077_loc, i32 %bucket_sizes_9076_loc, i32 %bucket_sizes_9075_loc, i32 %bucket_sizes_9074_loc, i32 %bucket_sizes_9073_loc, i32 %bucket_sizes_9072_loc, i32 %bucket_sizes_9071_loc, i32 %bucket_pointer_4061_loc, i32 %bucket_pointer_4060_loc, i32 %bucket_pointer_4059_loc, i32 %bucket_pointer_4058_loc, i32 %bucket_pointer_4057_loc, i32 %bucket_pointer_4056_loc, i32 %bucket_pointer_4055_loc, i32 %bucket_pointer_4054_loc, i32 %bucket_pointer_4053_loc, i32 %bucket_pointer_4052_loc, i32 %bucket_pointer_4051_loc, i32 %bucket_pointer_4050_loc, i32 %bucket_pointer_4049_loc, i32 %bucket_pointer_4048_loc, i32 %bucket_pointer_4047_loc, i32 %bucket_pointer_4046_loc"   --->   Operation 156 'call' 'call_ln0' <Predicate = (!icmp_ln78)> <Delay = 0.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 157 [1/1] (0.88ns)   --->   "%bucket_num = sub i32 1, i32 %bucket_num_012_load" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 157 'sub' 'bucket_num' <Predicate = (!icmp_ln78)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 158 [1/1] (0.00ns)   --->   "%trunc_ln93 = trunc i32 %bucket_num" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 158 'trunc' 'trunc_ln93' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 159 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln93 = mul i19 %trunc_ln93, i19 156250" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 159 'mul' 'mul_ln93' <Predicate = (!icmp_ln78)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 160 [1/1] (0.00ns)   --->   "%empty_328 = trunc i4 %i"   --->   Operation 160 'trunc' 'empty_328' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 161 [1/1] (0.00ns)   --->   "%trunc_ln95 = trunc i32 %bucket_num_012_load" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 161 'trunc' 'trunc_ln95' <Predicate = (!icmp_ln78)> <Delay = 0.00>
+ST_5 : Operation 162 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln95 = mul i19 %trunc_ln95, i19 156250" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 162 'mul' 'mul_ln95' <Predicate = (!icmp_ln78)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 163 [1/1] (0.38ns)   --->   "%store_ln78 = store i32 %bucket_num, i32 %bucket_num_012" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 163 'store' 'store_ln78' <Predicate = (!icmp_ln78)> <Delay = 0.38>
+ST_5 : Operation 164 [1/1] (0.38ns)   --->   "%store_ln78 = store i4 %i_74, i4 %i_011" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 164 'store' 'store_ln78' <Predicate = (!icmp_ln78)> <Delay = 0.38>
+ST_5 : Operation 165 [2/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_output_bucket, i32 %bucket, i32 %sorted_data"   --->   Operation 165 'call' 'call_ln0' <Predicate = (icmp_ln78)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.63>
-ST_6 : Operation 158 [1/2] (0.63ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_bucket_pointer_initialization, i32 %bucket_sizes_1380_load, i32 %bucket_sizes_1379_load, i32 %bucket_sizes_1378_load, i32 %bucket_sizes_1377_load, i32 %bucket_sizes_1376_load, i32 %bucket_sizes_1375_load, i32 %bucket_sizes_1374_load, i32 %bucket_sizes_1373_load, i32 %bucket_sizes_1372_load, i32 %bucket_sizes_1371_load, i32 %bucket_sizes_1370_load, i32 %bucket_sizes_1369_load, i32 %bucket_sizes_1368_load, i32 %bucket_sizes_1367_load, i32 %bucket_sizes_1366_load, i32 %bucket_sizes_load, i32 %bucket_pointer_1054_load, i32 %bucket_pointer_1053_load, i32 %bucket_pointer_1052_load, i32 %bucket_pointer_1051_load, i32 %bucket_pointer_1050_load, i32 %bucket_pointer_1049_load, i32 %bucket_pointer_1048_load, i32 %bucket_pointer_1047_load, i32 %bucket_pointer_1046_load, i32 %bucket_pointer_1045_load, i32 %bucket_pointer_1044_load, i32 %bucket_pointer_1043_load, i32 %bucket_pointer_1042_load, i32 %bucket_pointer_1041_load, i32 %bucket_pointer_1040_load, i32 %bucket_pointer_load, i32 %bucket_sizes_4446_loc, i32 %bucket_sizes_4445_loc, i32 %bucket_sizes_4444_loc, i32 %bucket_sizes_4443_loc, i32 %bucket_sizes_4442_loc, i32 %bucket_sizes_4441_loc, i32 %bucket_sizes_4440_loc, i32 %bucket_sizes_4439_loc, i32 %bucket_sizes_4438_loc, i32 %bucket_sizes_4437_loc, i32 %bucket_sizes_4436_loc, i32 %bucket_sizes_4435_loc, i32 %bucket_sizes_4434_loc, i32 %bucket_sizes_4433_loc, i32 %bucket_sizes_4432_loc, i32 %bucket_sizes_4431_loc, i32 %bucket_pointer_1981_loc, i32 %bucket_pointer_1980_loc, i32 %bucket_pointer_1979_loc, i32 %bucket_pointer_1978_loc, i32 %bucket_pointer_1977_loc, i32 %bucket_pointer_1976_loc, i32 %bucket_pointer_1975_loc, i32 %bucket_pointer_1974_loc, i32 %bucket_pointer_1973_loc, i32 %bucket_pointer_1972_loc, i32 %bucket_pointer_1971_loc, i32 %bucket_pointer_1970_loc, i32 %bucket_pointer_1969_loc, i32 %bucket_pointer_1968_loc, i32 %bucket_pointer_1967_loc, i32 %bucket_pointer_1966_loc"   --->   Operation 158 'call' 'call_ln0' <Predicate = true> <Delay = 0.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 166 [1/2] (0.63ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_bucket_pointer_initialization, i32 %bucket_sizes_2820_load, i32 %bucket_sizes_2819_load, i32 %bucket_sizes_2818_load, i32 %bucket_sizes_2817_load, i32 %bucket_sizes_2816_load, i32 %bucket_sizes_2815_load, i32 %bucket_sizes_2814_load, i32 %bucket_sizes_2813_load, i32 %bucket_sizes_2812_load, i32 %bucket_sizes_2811_load, i32 %bucket_sizes_2810_load, i32 %bucket_sizes_2809_load, i32 %bucket_sizes_2808_load, i32 %bucket_sizes_2807_load, i32 %bucket_sizes_2806_load, i32 %bucket_sizes_load, i32 %bucket_pointer_2142_load, i32 %bucket_pointer_2141_load, i32 %bucket_pointer_2140_load, i32 %bucket_pointer_2139_load, i32 %bucket_pointer_2138_load, i32 %bucket_pointer_2137_load, i32 %bucket_pointer_2136_load, i32 %bucket_pointer_2135_load, i32 %bucket_pointer_2134_load, i32 %bucket_pointer_2133_load, i32 %bucket_pointer_2132_load, i32 %bucket_pointer_2131_load, i32 %bucket_pointer_2130_load, i32 %bucket_pointer_2129_load, i32 %bucket_pointer_2128_load, i32 %bucket_pointer_load, i32 %bucket_sizes_9086_loc, i32 %bucket_sizes_9085_loc, i32 %bucket_sizes_9084_loc, i32 %bucket_sizes_9083_loc, i32 %bucket_sizes_9082_loc, i32 %bucket_sizes_9081_loc, i32 %bucket_sizes_9080_loc, i32 %bucket_sizes_9079_loc, i32 %bucket_sizes_9078_loc, i32 %bucket_sizes_9077_loc, i32 %bucket_sizes_9076_loc, i32 %bucket_sizes_9075_loc, i32 %bucket_sizes_9074_loc, i32 %bucket_sizes_9073_loc, i32 %bucket_sizes_9072_loc, i32 %bucket_sizes_9071_loc, i32 %bucket_pointer_4061_loc, i32 %bucket_pointer_4060_loc, i32 %bucket_pointer_4059_loc, i32 %bucket_pointer_4058_loc, i32 %bucket_pointer_4057_loc, i32 %bucket_pointer_4056_loc, i32 %bucket_pointer_4055_loc, i32 %bucket_pointer_4054_loc, i32 %bucket_pointer_4053_loc, i32 %bucket_pointer_4052_loc, i32 %bucket_pointer_4051_loc, i32 %bucket_pointer_4050_loc, i32 %bucket_pointer_4049_loc, i32 %bucket_pointer_4048_loc, i32 %bucket_pointer_4047_loc, i32 %bucket_pointer_4046_loc"   --->   Operation 166 'call' 'call_ln0' <Predicate = true> <Delay = 0.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 167 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln93 = mul i19 %trunc_ln93, i19 156250" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 167 'mul' 'mul_ln93' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 168 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln95 = mul i19 %trunc_ln95, i19 156250" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 168 'mul' 'mul_ln95' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
-State 7 <SV = 6> <Delay = 5.25>
-ST_7 : Operation 159 [1/1] (0.00ns)   --->   "%bucket_num_012_load = load i32 %bucket_num_012" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 159 'load' 'bucket_num_012_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 160 [1/1] (0.00ns)   --->   "%bucket_sizes_4446_loc_load = load i32 %bucket_sizes_4446_loc"   --->   Operation 160 'load' 'bucket_sizes_4446_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 161 [1/1] (0.00ns)   --->   "%bucket_sizes_4445_loc_load = load i32 %bucket_sizes_4445_loc"   --->   Operation 161 'load' 'bucket_sizes_4445_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 162 [1/1] (0.00ns)   --->   "%bucket_sizes_4444_loc_load = load i32 %bucket_sizes_4444_loc"   --->   Operation 162 'load' 'bucket_sizes_4444_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 163 [1/1] (0.00ns)   --->   "%bucket_sizes_4443_loc_load = load i32 %bucket_sizes_4443_loc"   --->   Operation 163 'load' 'bucket_sizes_4443_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 164 [1/1] (0.00ns)   --->   "%bucket_sizes_4442_loc_load = load i32 %bucket_sizes_4442_loc"   --->   Operation 164 'load' 'bucket_sizes_4442_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 165 [1/1] (0.00ns)   --->   "%bucket_sizes_4441_loc_load = load i32 %bucket_sizes_4441_loc"   --->   Operation 165 'load' 'bucket_sizes_4441_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 166 [1/1] (0.00ns)   --->   "%bucket_sizes_4440_loc_load = load i32 %bucket_sizes_4440_loc"   --->   Operation 166 'load' 'bucket_sizes_4440_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 167 [1/1] (0.00ns)   --->   "%bucket_sizes_4439_loc_load = load i32 %bucket_sizes_4439_loc"   --->   Operation 167 'load' 'bucket_sizes_4439_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 168 [1/1] (0.00ns)   --->   "%bucket_sizes_4438_loc_load = load i32 %bucket_sizes_4438_loc"   --->   Operation 168 'load' 'bucket_sizes_4438_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 169 [1/1] (0.00ns)   --->   "%bucket_sizes_4437_loc_load = load i32 %bucket_sizes_4437_loc"   --->   Operation 169 'load' 'bucket_sizes_4437_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 170 [1/1] (0.00ns)   --->   "%bucket_sizes_4436_loc_load = load i32 %bucket_sizes_4436_loc"   --->   Operation 170 'load' 'bucket_sizes_4436_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 171 [1/1] (0.00ns)   --->   "%bucket_sizes_4435_loc_load = load i32 %bucket_sizes_4435_loc"   --->   Operation 171 'load' 'bucket_sizes_4435_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 172 [1/1] (0.00ns)   --->   "%bucket_sizes_4434_loc_load = load i32 %bucket_sizes_4434_loc"   --->   Operation 172 'load' 'bucket_sizes_4434_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 173 [1/1] (0.00ns)   --->   "%bucket_sizes_4433_loc_load = load i32 %bucket_sizes_4433_loc"   --->   Operation 173 'load' 'bucket_sizes_4433_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 174 [1/1] (0.00ns)   --->   "%bucket_sizes_4432_loc_load = load i32 %bucket_sizes_4432_loc"   --->   Operation 174 'load' 'bucket_sizes_4432_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 175 [1/1] (0.00ns)   --->   "%bucket_sizes_4431_loc_load = load i32 %bucket_sizes_4431_loc"   --->   Operation 175 'load' 'bucket_sizes_4431_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 176 [1/1] (0.00ns)   --->   "%bucket_pointer_1981_loc_load = load i32 %bucket_pointer_1981_loc"   --->   Operation 176 'load' 'bucket_pointer_1981_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 177 [1/1] (0.00ns)   --->   "%bucket_pointer_1980_loc_load = load i32 %bucket_pointer_1980_loc"   --->   Operation 177 'load' 'bucket_pointer_1980_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 178 [1/1] (0.00ns)   --->   "%bucket_pointer_1979_loc_load = load i32 %bucket_pointer_1979_loc"   --->   Operation 178 'load' 'bucket_pointer_1979_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 179 [1/1] (0.00ns)   --->   "%bucket_pointer_1978_loc_load = load i32 %bucket_pointer_1978_loc"   --->   Operation 179 'load' 'bucket_pointer_1978_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 180 [1/1] (0.00ns)   --->   "%bucket_pointer_1977_loc_load = load i32 %bucket_pointer_1977_loc"   --->   Operation 180 'load' 'bucket_pointer_1977_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 181 [1/1] (0.00ns)   --->   "%bucket_pointer_1976_loc_load = load i32 %bucket_pointer_1976_loc"   --->   Operation 181 'load' 'bucket_pointer_1976_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 182 [1/1] (0.00ns)   --->   "%bucket_pointer_1975_loc_load = load i32 %bucket_pointer_1975_loc"   --->   Operation 182 'load' 'bucket_pointer_1975_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 183 [1/1] (0.00ns)   --->   "%bucket_pointer_1974_loc_load = load i32 %bucket_pointer_1974_loc"   --->   Operation 183 'load' 'bucket_pointer_1974_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 184 [1/1] (0.00ns)   --->   "%bucket_pointer_1973_loc_load = load i32 %bucket_pointer_1973_loc"   --->   Operation 184 'load' 'bucket_pointer_1973_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 185 [1/1] (0.00ns)   --->   "%bucket_pointer_1972_loc_load = load i32 %bucket_pointer_1972_loc"   --->   Operation 185 'load' 'bucket_pointer_1972_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 186 [1/1] (0.00ns)   --->   "%bucket_pointer_1971_loc_load = load i32 %bucket_pointer_1971_loc"   --->   Operation 186 'load' 'bucket_pointer_1971_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 187 [1/1] (0.00ns)   --->   "%bucket_pointer_1970_loc_load = load i32 %bucket_pointer_1970_loc"   --->   Operation 187 'load' 'bucket_pointer_1970_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 188 [1/1] (0.00ns)   --->   "%bucket_pointer_1969_loc_load = load i32 %bucket_pointer_1969_loc"   --->   Operation 188 'load' 'bucket_pointer_1969_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 189 [1/1] (0.00ns)   --->   "%bucket_pointer_1968_loc_load = load i32 %bucket_pointer_1968_loc"   --->   Operation 189 'load' 'bucket_pointer_1968_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 190 [1/1] (0.00ns)   --->   "%bucket_pointer_1967_loc_load = load i32 %bucket_pointer_1967_loc"   --->   Operation 190 'load' 'bucket_pointer_1967_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 191 [1/1] (0.00ns)   --->   "%bucket_pointer_1966_loc_load = load i32 %bucket_pointer_1966_loc"   --->   Operation 191 'load' 'bucket_pointer_1966_loc_load' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 192 [1/1] (0.88ns)   --->   "%bucket_num = sub i32 1, i32 %bucket_num_012_load" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 192 'sub' 'bucket_num' <Predicate = true> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 193 [1/1] (0.00ns)   --->   "%trunc_ln93 = trunc i32 %bucket_num" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 193 'trunc' 'trunc_ln93' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 194 [1/1] (2.32ns)   --->   "%mul_ln93 = mul i20 %trunc_ln93, i20 312500" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 194 'mul' 'mul_ln93' <Predicate = true> <Delay = 2.32> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 195 [1/1] (0.00ns)   --->   "%mul = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %empty_168, i2 0"   --->   Operation 195 'bitconcatenate' 'mul' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 196 [1/1] (0.00ns)   --->   "%trunc_ln95 = trunc i32 %bucket_num_012_load" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 196 'trunc' 'trunc_ln95' <Predicate = true> <Delay = 0.00>
-ST_7 : Operation 197 [1/1] (2.32ns)   --->   "%mul_ln95 = mul i20 %trunc_ln95, i20 312500" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 197 'mul' 'mul_ln95' <Predicate = true> <Delay = 2.32> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_7 : Operation 198 [2/2] (2.05ns)   --->   "%call_ln93 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_input_bucket, i32 %bucket_sizes_4446_loc_load, i32 %bucket_sizes_4445_loc_load, i32 %bucket_sizes_4444_loc_load, i32 %bucket_sizes_4443_loc_load, i32 %bucket_sizes_4442_loc_load, i32 %bucket_sizes_4441_loc_load, i32 %bucket_sizes_4440_loc_load, i32 %bucket_sizes_4439_loc_load, i32 %bucket_sizes_4438_loc_load, i32 %bucket_sizes_4437_loc_load, i32 %bucket_sizes_4436_loc_load, i32 %bucket_sizes_4435_loc_load, i32 %bucket_sizes_4434_loc_load, i32 %bucket_sizes_4433_loc_load, i32 %bucket_sizes_4432_loc_load, i32 %bucket_sizes_4431_loc_load, i32 %bucket_pointer_1981_loc_load, i32 %bucket_pointer_1980_loc_load, i32 %bucket_pointer_1979_loc_load, i32 %bucket_pointer_1978_loc_load, i32 %bucket_pointer_1977_loc_load, i32 %bucket_pointer_1976_loc_load, i32 %bucket_pointer_1975_loc_load, i32 %bucket_pointer_1974_loc_load, i32 %bucket_pointer_1973_loc_load, i32 %bucket_pointer_1972_loc_load, i32 %bucket_pointer_1971_loc_load, i32 %bucket_pointer_1970_loc_load, i32 %bucket_pointer_1969_loc_load, i32 %bucket_pointer_1968_loc_load, i32 %bucket_pointer_1967_loc_load, i32 %bucket_pointer_1966_loc_load, i20 %mul_ln93, i32 %bucket, i5 %mul, i20 %mul_ln95, i32 %bucket_sizes_1380, i32 %bucket_sizes_1379, i32 %bucket_sizes_1378, i32 %bucket_sizes_1377, i32 %bucket_sizes_1376, i32 %bucket_sizes_1375, i32 %bucket_sizes_1374, i32 %bucket_sizes_1373, i32 %bucket_sizes_1372, i32 %bucket_sizes_1371, i32 %bucket_sizes_1370, i32 %bucket_sizes_1369, i32 %bucket_sizes_1368, i32 %bucket_sizes_1367, i32 %bucket_sizes_1366, i32 %bucket_sizes, i32 %bucket_pointer_1054, i32 %bucket_pointer_1053, i32 %bucket_pointer_1052, i32 %bucket_pointer_1051, i32 %bucket_pointer_1050, i32 %bucket_pointer_1049, i32 %bucket_pointer_1048, i32 %bucket_pointer_1047, i32 %bucket_pointer_1046, i32 %bucket_pointer_1045, i32 %bucket_pointer_1044, i32 %bucket_pointer_1043, i32 %bucket_pointer_1042, i32 %bucket_pointer_1041, i32 %bucket_pointer_1040, i32 %bucket_pointer" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 198 'call' 'call_ln93' <Predicate = true> <Delay = 2.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_7 : Operation 199 [1/1] (0.38ns)   --->   "%store_ln78 = store i32 %bucket_num, i32 %bucket_num_012" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 199 'store' 'store_ln78' <Predicate = true> <Delay = 0.38>
+State 7 <SV = 6> <Delay = 0.53>
+ST_7 : Operation 169 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln93 = mul i19 %trunc_ln93, i19 156250" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 169 'mul' 'mul_ln93' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 170 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln95 = mul i19 %trunc_ln95, i19 156250" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 170 'mul' 'mul_ln95' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
-State 8 <SV = 7> <Delay = 0.00>
-ST_8 : Operation 200 [1/1] (0.00ns)   --->   "%specloopname_ln62 = specloopname void @_ssdm_op_SpecLoopName, void @empty_37" [sort_seperate_bucket/radix_sort.c:62]   --->   Operation 200 'specloopname' 'specloopname_ln62' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 201 [1/2] (0.00ns)   --->   "%call_ln93 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_input_bucket, i32 %bucket_sizes_4446_loc_load, i32 %bucket_sizes_4445_loc_load, i32 %bucket_sizes_4444_loc_load, i32 %bucket_sizes_4443_loc_load, i32 %bucket_sizes_4442_loc_load, i32 %bucket_sizes_4441_loc_load, i32 %bucket_sizes_4440_loc_load, i32 %bucket_sizes_4439_loc_load, i32 %bucket_sizes_4438_loc_load, i32 %bucket_sizes_4437_loc_load, i32 %bucket_sizes_4436_loc_load, i32 %bucket_sizes_4435_loc_load, i32 %bucket_sizes_4434_loc_load, i32 %bucket_sizes_4433_loc_load, i32 %bucket_sizes_4432_loc_load, i32 %bucket_sizes_4431_loc_load, i32 %bucket_pointer_1981_loc_load, i32 %bucket_pointer_1980_loc_load, i32 %bucket_pointer_1979_loc_load, i32 %bucket_pointer_1978_loc_load, i32 %bucket_pointer_1977_loc_load, i32 %bucket_pointer_1976_loc_load, i32 %bucket_pointer_1975_loc_load, i32 %bucket_pointer_1974_loc_load, i32 %bucket_pointer_1973_loc_load, i32 %bucket_pointer_1972_loc_load, i32 %bucket_pointer_1971_loc_load, i32 %bucket_pointer_1970_loc_load, i32 %bucket_pointer_1969_loc_load, i32 %bucket_pointer_1968_loc_load, i32 %bucket_pointer_1967_loc_load, i32 %bucket_pointer_1966_loc_load, i20 %mul_ln93, i32 %bucket, i5 %mul, i20 %mul_ln95, i32 %bucket_sizes_1380, i32 %bucket_sizes_1379, i32 %bucket_sizes_1378, i32 %bucket_sizes_1377, i32 %bucket_sizes_1376, i32 %bucket_sizes_1375, i32 %bucket_sizes_1374, i32 %bucket_sizes_1373, i32 %bucket_sizes_1372, i32 %bucket_sizes_1371, i32 %bucket_sizes_1370, i32 %bucket_sizes_1369, i32 %bucket_sizes_1368, i32 %bucket_sizes_1367, i32 %bucket_sizes_1366, i32 %bucket_sizes, i32 %bucket_pointer_1054, i32 %bucket_pointer_1053, i32 %bucket_pointer_1052, i32 %bucket_pointer_1051, i32 %bucket_pointer_1050, i32 %bucket_pointer_1049, i32 %bucket_pointer_1048, i32 %bucket_pointer_1047, i32 %bucket_pointer_1046, i32 %bucket_pointer_1045, i32 %bucket_pointer_1044, i32 %bucket_pointer_1043, i32 %bucket_pointer_1042, i32 %bucket_pointer_1041, i32 %bucket_pointer_1040, i32 %bucket_pointer" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 201 'call' 'call_ln93' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_8 : Operation 202 [1/1] (0.00ns)   --->   "%br_ln78 = br void %bucket_pointer_initialization" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 202 'br' 'br_ln78' <Predicate = true> <Delay = 0.00>
+State 8 <SV = 7> <Delay = 2.05>
+ST_8 : Operation 171 [1/1] (0.00ns)   --->   "%bucket_sizes_9086_loc_load = load i32 %bucket_sizes_9086_loc"   --->   Operation 171 'load' 'bucket_sizes_9086_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 172 [1/1] (0.00ns)   --->   "%bucket_sizes_9085_loc_load = load i32 %bucket_sizes_9085_loc"   --->   Operation 172 'load' 'bucket_sizes_9085_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 173 [1/1] (0.00ns)   --->   "%bucket_sizes_9084_loc_load = load i32 %bucket_sizes_9084_loc"   --->   Operation 173 'load' 'bucket_sizes_9084_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 174 [1/1] (0.00ns)   --->   "%bucket_sizes_9083_loc_load = load i32 %bucket_sizes_9083_loc"   --->   Operation 174 'load' 'bucket_sizes_9083_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 175 [1/1] (0.00ns)   --->   "%bucket_sizes_9082_loc_load = load i32 %bucket_sizes_9082_loc"   --->   Operation 175 'load' 'bucket_sizes_9082_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 176 [1/1] (0.00ns)   --->   "%bucket_sizes_9081_loc_load = load i32 %bucket_sizes_9081_loc"   --->   Operation 176 'load' 'bucket_sizes_9081_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 177 [1/1] (0.00ns)   --->   "%bucket_sizes_9080_loc_load = load i32 %bucket_sizes_9080_loc"   --->   Operation 177 'load' 'bucket_sizes_9080_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 178 [1/1] (0.00ns)   --->   "%bucket_sizes_9079_loc_load = load i32 %bucket_sizes_9079_loc"   --->   Operation 178 'load' 'bucket_sizes_9079_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 179 [1/1] (0.00ns)   --->   "%bucket_sizes_9078_loc_load = load i32 %bucket_sizes_9078_loc"   --->   Operation 179 'load' 'bucket_sizes_9078_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 180 [1/1] (0.00ns)   --->   "%bucket_sizes_9077_loc_load = load i32 %bucket_sizes_9077_loc"   --->   Operation 180 'load' 'bucket_sizes_9077_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 181 [1/1] (0.00ns)   --->   "%bucket_sizes_9076_loc_load = load i32 %bucket_sizes_9076_loc"   --->   Operation 181 'load' 'bucket_sizes_9076_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 182 [1/1] (0.00ns)   --->   "%bucket_sizes_9075_loc_load = load i32 %bucket_sizes_9075_loc"   --->   Operation 182 'load' 'bucket_sizes_9075_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 183 [1/1] (0.00ns)   --->   "%bucket_sizes_9074_loc_load = load i32 %bucket_sizes_9074_loc"   --->   Operation 183 'load' 'bucket_sizes_9074_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 184 [1/1] (0.00ns)   --->   "%bucket_sizes_9073_loc_load = load i32 %bucket_sizes_9073_loc"   --->   Operation 184 'load' 'bucket_sizes_9073_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 185 [1/1] (0.00ns)   --->   "%bucket_sizes_9072_loc_load = load i32 %bucket_sizes_9072_loc"   --->   Operation 185 'load' 'bucket_sizes_9072_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 186 [1/1] (0.00ns)   --->   "%bucket_sizes_9071_loc_load = load i32 %bucket_sizes_9071_loc"   --->   Operation 186 'load' 'bucket_sizes_9071_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 187 [1/1] (0.00ns)   --->   "%bucket_pointer_4061_loc_load = load i32 %bucket_pointer_4061_loc"   --->   Operation 187 'load' 'bucket_pointer_4061_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 188 [1/1] (0.00ns)   --->   "%bucket_pointer_4060_loc_load = load i32 %bucket_pointer_4060_loc"   --->   Operation 188 'load' 'bucket_pointer_4060_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 189 [1/1] (0.00ns)   --->   "%bucket_pointer_4059_loc_load = load i32 %bucket_pointer_4059_loc"   --->   Operation 189 'load' 'bucket_pointer_4059_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 190 [1/1] (0.00ns)   --->   "%bucket_pointer_4058_loc_load = load i32 %bucket_pointer_4058_loc"   --->   Operation 190 'load' 'bucket_pointer_4058_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 191 [1/1] (0.00ns)   --->   "%bucket_pointer_4057_loc_load = load i32 %bucket_pointer_4057_loc"   --->   Operation 191 'load' 'bucket_pointer_4057_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 192 [1/1] (0.00ns)   --->   "%bucket_pointer_4056_loc_load = load i32 %bucket_pointer_4056_loc"   --->   Operation 192 'load' 'bucket_pointer_4056_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 193 [1/1] (0.00ns)   --->   "%bucket_pointer_4055_loc_load = load i32 %bucket_pointer_4055_loc"   --->   Operation 193 'load' 'bucket_pointer_4055_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 194 [1/1] (0.00ns)   --->   "%bucket_pointer_4054_loc_load = load i32 %bucket_pointer_4054_loc"   --->   Operation 194 'load' 'bucket_pointer_4054_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 195 [1/1] (0.00ns)   --->   "%bucket_pointer_4053_loc_load = load i32 %bucket_pointer_4053_loc"   --->   Operation 195 'load' 'bucket_pointer_4053_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 196 [1/1] (0.00ns)   --->   "%bucket_pointer_4052_loc_load = load i32 %bucket_pointer_4052_loc"   --->   Operation 196 'load' 'bucket_pointer_4052_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 197 [1/1] (0.00ns)   --->   "%bucket_pointer_4051_loc_load = load i32 %bucket_pointer_4051_loc"   --->   Operation 197 'load' 'bucket_pointer_4051_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 198 [1/1] (0.00ns)   --->   "%bucket_pointer_4050_loc_load = load i32 %bucket_pointer_4050_loc"   --->   Operation 198 'load' 'bucket_pointer_4050_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 199 [1/1] (0.00ns)   --->   "%bucket_pointer_4049_loc_load = load i32 %bucket_pointer_4049_loc"   --->   Operation 199 'load' 'bucket_pointer_4049_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 200 [1/1] (0.00ns)   --->   "%bucket_pointer_4048_loc_load = load i32 %bucket_pointer_4048_loc"   --->   Operation 200 'load' 'bucket_pointer_4048_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 201 [1/1] (0.00ns)   --->   "%bucket_pointer_4047_loc_load = load i32 %bucket_pointer_4047_loc"   --->   Operation 201 'load' 'bucket_pointer_4047_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 202 [1/1] (0.00ns)   --->   "%bucket_pointer_4046_loc_load = load i32 %bucket_pointer_4046_loc"   --->   Operation 202 'load' 'bucket_pointer_4046_loc_load' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 203 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln93 = mul i19 %trunc_ln93, i19 156250" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 203 'mul' 'mul_ln93' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 204 [1/1] (0.00ns)   --->   "%mul = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %empty_328, i2 0"   --->   Operation 204 'bitconcatenate' 'mul' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 205 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln95 = mul i19 %trunc_ln95, i19 156250" [sort_seperate_bucket/radix_sort.c:95]   --->   Operation 205 'mul' 'mul_ln95' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 206 [2/2] (2.05ns)   --->   "%call_ln93 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_input_bucket, i32 %bucket_sizes_9086_loc_load, i32 %bucket_sizes_9085_loc_load, i32 %bucket_sizes_9084_loc_load, i32 %bucket_sizes_9083_loc_load, i32 %bucket_sizes_9082_loc_load, i32 %bucket_sizes_9081_loc_load, i32 %bucket_sizes_9080_loc_load, i32 %bucket_sizes_9079_loc_load, i32 %bucket_sizes_9078_loc_load, i32 %bucket_sizes_9077_loc_load, i32 %bucket_sizes_9076_loc_load, i32 %bucket_sizes_9075_loc_load, i32 %bucket_sizes_9074_loc_load, i32 %bucket_sizes_9073_loc_load, i32 %bucket_sizes_9072_loc_load, i32 %bucket_sizes_9071_loc_load, i32 %bucket_pointer_4061_loc_load, i32 %bucket_pointer_4060_loc_load, i32 %bucket_pointer_4059_loc_load, i32 %bucket_pointer_4058_loc_load, i32 %bucket_pointer_4057_loc_load, i32 %bucket_pointer_4056_loc_load, i32 %bucket_pointer_4055_loc_load, i32 %bucket_pointer_4054_loc_load, i32 %bucket_pointer_4053_loc_load, i32 %bucket_pointer_4052_loc_load, i32 %bucket_pointer_4051_loc_load, i32 %bucket_pointer_4050_loc_load, i32 %bucket_pointer_4049_loc_load, i32 %bucket_pointer_4048_loc_load, i32 %bucket_pointer_4047_loc_load, i32 %bucket_pointer_4046_loc_load, i19 %mul_ln93, i32 %bucket, i5 %mul, i19 %mul_ln95, i32 %bucket_sizes_2820, i32 %bucket_sizes_2819, i32 %bucket_sizes_2818, i32 %bucket_sizes_2817, i32 %bucket_sizes_2816, i32 %bucket_sizes_2815, i32 %bucket_sizes_2814, i32 %bucket_sizes_2813, i32 %bucket_sizes_2812, i32 %bucket_sizes_2811, i32 %bucket_sizes_2810, i32 %bucket_sizes_2809, i32 %bucket_sizes_2808, i32 %bucket_sizes_2807, i32 %bucket_sizes_2806, i32 %bucket_sizes, i32 %bucket_pointer_2142, i32 %bucket_pointer_2141, i32 %bucket_pointer_2140, i32 %bucket_pointer_2139, i32 %bucket_pointer_2138, i32 %bucket_pointer_2137, i32 %bucket_pointer_2136, i32 %bucket_pointer_2135, i32 %bucket_pointer_2134, i32 %bucket_pointer_2133, i32 %bucket_pointer_2132, i32 %bucket_pointer_2131, i32 %bucket_pointer_2130, i32 %bucket_pointer_2129, i32 %bucket_pointer_2128, i32 %bucket_pointer" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 206 'call' 'call_ln93' <Predicate = true> <Delay = 2.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 9 <SV = 5> <Delay = 0.00>
-ST_9 : Operation 203 [1/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_output_bucket, i32 %bucket, i32 %sorted_data"   --->   Operation 203 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_9 : Operation 204 [1/1] (0.00ns)   --->   "%ret_ln108 = ret" [sort_seperate_bucket/radix_sort.c:108]   --->   Operation 204 'ret' 'ret_ln108' <Predicate = true> <Delay = 0.00>
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 207 [1/1] (0.00ns)   --->   "%specloopname_ln62 = specloopname void @_ssdm_op_SpecLoopName, void @empty_41" [sort_seperate_bucket/radix_sort.c:62]   --->   Operation 207 'specloopname' 'specloopname_ln62' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 208 [1/2] (0.00ns)   --->   "%call_ln93 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_input_bucket, i32 %bucket_sizes_9086_loc_load, i32 %bucket_sizes_9085_loc_load, i32 %bucket_sizes_9084_loc_load, i32 %bucket_sizes_9083_loc_load, i32 %bucket_sizes_9082_loc_load, i32 %bucket_sizes_9081_loc_load, i32 %bucket_sizes_9080_loc_load, i32 %bucket_sizes_9079_loc_load, i32 %bucket_sizes_9078_loc_load, i32 %bucket_sizes_9077_loc_load, i32 %bucket_sizes_9076_loc_load, i32 %bucket_sizes_9075_loc_load, i32 %bucket_sizes_9074_loc_load, i32 %bucket_sizes_9073_loc_load, i32 %bucket_sizes_9072_loc_load, i32 %bucket_sizes_9071_loc_load, i32 %bucket_pointer_4061_loc_load, i32 %bucket_pointer_4060_loc_load, i32 %bucket_pointer_4059_loc_load, i32 %bucket_pointer_4058_loc_load, i32 %bucket_pointer_4057_loc_load, i32 %bucket_pointer_4056_loc_load, i32 %bucket_pointer_4055_loc_load, i32 %bucket_pointer_4054_loc_load, i32 %bucket_pointer_4053_loc_load, i32 %bucket_pointer_4052_loc_load, i32 %bucket_pointer_4051_loc_load, i32 %bucket_pointer_4050_loc_load, i32 %bucket_pointer_4049_loc_load, i32 %bucket_pointer_4048_loc_load, i32 %bucket_pointer_4047_loc_load, i32 %bucket_pointer_4046_loc_load, i19 %mul_ln93, i32 %bucket, i5 %mul, i19 %mul_ln95, i32 %bucket_sizes_2820, i32 %bucket_sizes_2819, i32 %bucket_sizes_2818, i32 %bucket_sizes_2817, i32 %bucket_sizes_2816, i32 %bucket_sizes_2815, i32 %bucket_sizes_2814, i32 %bucket_sizes_2813, i32 %bucket_sizes_2812, i32 %bucket_sizes_2811, i32 %bucket_sizes_2810, i32 %bucket_sizes_2809, i32 %bucket_sizes_2808, i32 %bucket_sizes_2807, i32 %bucket_sizes_2806, i32 %bucket_sizes, i32 %bucket_pointer_2142, i32 %bucket_pointer_2141, i32 %bucket_pointer_2140, i32 %bucket_pointer_2139, i32 %bucket_pointer_2138, i32 %bucket_pointer_2137, i32 %bucket_pointer_2136, i32 %bucket_pointer_2135, i32 %bucket_pointer_2134, i32 %bucket_pointer_2133, i32 %bucket_pointer_2132, i32 %bucket_pointer_2131, i32 %bucket_pointer_2130, i32 %bucket_pointer_2129, i32 %bucket_pointer_2128, i32 %bucket_pointer" [sort_seperate_bucket/radix_sort.c:93]   --->   Operation 208 'call' 'call_ln93' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 209 [1/1] (0.00ns)   --->   "%br_ln78 = br void %bucket_pointer_initialization" [sort_seperate_bucket/radix_sort.c:78]   --->   Operation 209 'br' 'br_ln78' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 5> <Delay = 0.00>
+ST_10 : Operation 210 [1/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_unified_bucket_pingpong.1.2_Pipeline_output_bucket, i32 %bucket, i32 %sorted_data"   --->   Operation 210 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 211 [1/1] (0.00ns)   --->   "%ret_ln108 = ret" [sort_seperate_bucket/radix_sort.c:108]   --->   Operation 211 'ret' 'ret_ln108' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -317,33 +326,35 @@ The critical path consists of the following:
 
  <State 3>: 0.387ns
 The critical path consists of the following:
-	'load' operation ('bucket_sizes_4365_loc_load') on local variable 'bucket_sizes_4365_loc' [88]  (0 ns)
+	'load' operation ('bucket_sizes_9005_loc_load') on local variable 'bucket_sizes_9005_loc' [88]  (0 ns)
 	'call' operation ('call_ln0') to 'radix_sort_unified_bucket_pingpong.1.2_Pipeline_initialization' [104]  (0.387 ns)
 
  <State 4>: 0ns
 The critical path consists of the following:
 
- <State 5>: 1.09ns
+ <State 5>: 1.42ns
 The critical path consists of the following:
-	'load' operation ('i') on local variable 'i' [109]  (0 ns)
-	'add' operation ('i', sort_seperate_bucket/radix_sort.c:78) [112]  (0.708 ns)
-	'store' operation ('store_ln78', sort_seperate_bucket/radix_sort.c:78) of variable 'i', sort_seperate_bucket/radix_sort.c:78 on local variable 'i' [191]  (0.387 ns)
+	'load' operation ('bucket_num_012_load', sort_seperate_bucket/radix_sort.c:95) on local variable 'bucket_num' [115]  (0 ns)
+	'sub' operation ('bucket_num', sort_seperate_bucket/radix_sort.c:95) [182]  (0.88 ns)
+	'mul' operation of DSP[184] ('mul_ln93', sort_seperate_bucket/radix_sort.c:93) [184]  (0.535 ns)
 
  <State 6>: 0.637ns
 The critical path consists of the following:
 	'call' operation ('call_ln0') to 'radix_sort_unified_bucket_pingpong.1.2_Pipeline_bucket_pointer_initialization' [149]  (0.637 ns)
 
- <State 7>: 5.26ns
+ <State 7>: 0.535ns
 The critical path consists of the following:
-	'load' operation ('bucket_num_012_load', sort_seperate_bucket/radix_sort.c:95) on local variable 'bucket_num' [115]  (0 ns)
-	'sub' operation ('bucket_num', sort_seperate_bucket/radix_sort.c:95) [182]  (0.88 ns)
-	'mul' operation ('mul_ln93', sort_seperate_bucket/radix_sort.c:93) [184]  (2.32 ns)
-	'call' operation ('call_ln93', sort_seperate_bucket/radix_sort.c:93) to 'radix_sort_unified_bucket_pingpong.1.2_Pipeline_input_bucket' [189]  (2.06 ns)
+	'mul' operation of DSP[184] ('mul_ln93', sort_seperate_bucket/radix_sort.c:93) [184]  (0.535 ns)
 
- <State 8>: 0ns
+ <State 8>: 2.05ns
 The critical path consists of the following:
+	'load' operation ('bucket_sizes_9086_loc_load') on local variable 'bucket_sizes_9086_loc' [150]  (0 ns)
+	'call' operation ('call_ln93', sort_seperate_bucket/radix_sort.c:93) to 'radix_sort_unified_bucket_pingpong.1.2_Pipeline_input_bucket' [189]  (2.05 ns)
 
  <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
 The critical path consists of the following:
 
 
@@ -364,6 +375,7 @@ N/A
 	State 7
 	State 8
 	State 9
+	State 10
 
 
 ============================================================

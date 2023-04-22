@@ -23,7 +23,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="35" bw="19" op_0_bw="32">
+<Node id="35" bw="18" op_0_bw="32">
 <![CDATA[
 newFuncRoot:0 %j = alloca i32 1
 
@@ -40,7 +40,7 @@ newFuncRoot:0 %j = alloca i32 1
 
 <Node id="36" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_8, void @empty_31, i32 0, i32 0, void @empty_15, i32 4294967295, i32 0, void @empty_15, void @empty_15, void @empty_15, i32 0, i32 0, i32 0, i32 0, void @empty_15, void @empty_15, i32 4294967295, i32 0
+newFuncRoot:1 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_8, void @empty_53, i32 0, i32 0, void @empty_28, i32 4294967295, i32 0, void @empty_28, void @empty_28, void @empty_28, i32 0, i32 0, i32 0, i32 0, void @empty_28, void @empty_28, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -533,9 +533,9 @@ newFuncRoot:33 %store_ln0 = store i32 %bucket_sizes_reload_read, i32 %bucket_siz
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="69" bw="0" op_0_bw="19" op_1_bw="19">
+<Node id="69" bw="0" op_0_bw="18" op_1_bw="18">
 <![CDATA[
-newFuncRoot:34 %store_ln0 = store i19 0, i19 %j
+newFuncRoot:34 %store_ln0 = store i18 0, i18 %j
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -563,9 +563,9 @@ newFuncRoot:35 %br_ln0 = br void %for.inc
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="72" bw="19" op_0_bw="19" op_1_bw="0">
+<Node id="72" bw="18" op_0_bw="18" op_1_bw="0">
 <![CDATA[
-for.inc:0 %j_2 = load i19 %j
+for.inc:0 %j_2 = load i18 %j
 
 ]]></Node>
 <StgValue><ssdm name="j_2"/></StgValue>
@@ -593,9 +593,9 @@ for.inc:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="74" bw="1" op_0_bw="19" op_1_bw="19">
+<Node id="74" bw="1" op_0_bw="18" op_1_bw="18">
 <![CDATA[
-for.inc:2 %icmp_ln71 = icmp_eq  i19 %j_2, i19 312500
+for.inc:2 %icmp_ln71 = icmp_eq  i18 %j_2, i18 156250
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln71"/></StgValue>
@@ -610,7 +610,7 @@ for.inc:2 %icmp_ln71 = icmp_eq  i19 %j_2, i19 312500
 
 <Node id="75" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 312500, i64 312500, i64 312500
+for.inc:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 156250, i64 156250, i64 156250
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -623,9 +623,9 @@ for.inc:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 312500
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="76" bw="19" op_0_bw="19" op_1_bw="19">
+<Node id="76" bw="18" op_0_bw="18" op_1_bw="18">
 <![CDATA[
-for.inc:4 %add_ln71 = add i19 %j_2, i19 1
+for.inc:4 %add_ln71 = add i18 %j_2, i18 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln71"/></StgValue>
@@ -654,9 +654,9 @@ for.inc:5 %br_ln71 = br i1 %icmp_ln71, void %for.inc.split, void %bucket_pointer
 </and_exp></or_exp>
 </condition>
 
-<Node id="95" bw="64" op_0_bw="19">
+<Node id="95" bw="64" op_0_bw="18">
 <![CDATA[
-for.inc.split:16 %j_cast = zext i19 %j_2
+for.inc.split:16 %j_cast = zext i18 %j_2
 
 ]]></Node>
 <StgValue><ssdm name="j_cast"/></StgValue>
@@ -670,7 +670,7 @@ for.inc.split:16 %j_cast = zext i19 %j_2
 </and_exp></or_exp>
 </condition>
 
-<Node id="101" bw="19" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="101" bw="18" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
 for.inc.split:22 %input_8_addr = getelementptr i32 %input_8, i64 0, i64 %j_cast
 
@@ -686,9 +686,9 @@ for.inc.split:22 %input_8_addr = getelementptr i32 %input_8, i64 0, i64 %j_cast
 </and_exp></or_exp>
 </condition>
 
-<Node id="102" bw="32" op_0_bw="19">
+<Node id="102" bw="32" op_0_bw="18">
 <![CDATA[
-for.inc.split:23 %input_8_load = load i19 %input_8_addr
+for.inc.split:23 %input_8_load = load i18 %input_8_addr
 
 ]]></Node>
 <StgValue><ssdm name="input_8_load"/></StgValue>
@@ -702,9 +702,9 @@ for.inc.split:23 %input_8_load = load i19 %input_8_addr
 </and_exp></or_exp>
 </condition>
 
-<Node id="157" bw="0" op_0_bw="19" op_1_bw="19" op_2_bw="0" op_3_bw="0">
+<Node id="157" bw="0" op_0_bw="18" op_1_bw="18" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-arrayidx11.exit:0 %store_ln71 = store i19 %add_ln71, i19 %j
+arrayidx11.exit:0 %store_ln71 = store i18 %add_ln71, i18 %j
 
 ]]></Node>
 <StgValue><ssdm name="store_ln71"/></StgValue>
@@ -992,9 +992,9 @@ for.inc.split:15 %bucket_sizes_47_out_load = load i32 %bucket_sizes_47_out
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="96" bw="20" op_0_bw="19">
+<Node id="96" bw="19" op_0_bw="18">
 <![CDATA[
-for.inc.split:17 %zext_ln72 = zext i19 %j_2
+for.inc.split:17 %zext_ln72 = zext i18 %j_2
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln72"/></StgValue>
@@ -1007,9 +1007,9 @@ for.inc.split:17 %zext_ln72 = zext i19 %j_2
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="97" bw="20" op_0_bw="20" op_1_bw="20">
+<Node id="97" bw="19" op_0_bw="19" op_1_bw="19">
 <![CDATA[
-for.inc.split:18 %add_ln72 = add i20 %zext_ln72, i20 312500
+for.inc.split:18 %add_ln72 = add i19 %zext_ln72, i19 156250
 
 ]]></Node>
 <StgValue><ssdm name="add_ln72"/></StgValue>
@@ -1022,9 +1022,9 @@ for.inc.split:18 %add_ln72 = add i20 %zext_ln72, i20 312500
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="98" bw="64" op_0_bw="20">
+<Node id="98" bw="64" op_0_bw="19">
 <![CDATA[
-for.inc.split:19 %zext_ln72_1 = zext i20 %add_ln72
+for.inc.split:19 %zext_ln72_1 = zext i19 %add_ln72
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln72_1"/></StgValue>
@@ -1037,7 +1037,7 @@ for.inc.split:19 %zext_ln72_1 = zext i20 %add_ln72
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="99" bw="20" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="99" bw="19" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
 for.inc.split:20 %bucket_addr = getelementptr i32 %bucket, i64 0, i64 %zext_ln72_1
 
@@ -1054,7 +1054,7 @@ for.inc.split:20 %bucket_addr = getelementptr i32 %bucket, i64 0, i64 %zext_ln72
 
 <Node id="100" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc.split:21 %specloopname_ln63 = specloopname void @_ssdm_op_SpecLoopName, void @empty_27
+for.inc.split:21 %specloopname_ln63 = specloopname void @_ssdm_op_SpecLoopName, void @empty_71
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln63"/></StgValue>
@@ -1067,9 +1067,9 @@ for.inc.split:21 %specloopname_ln63 = specloopname void @_ssdm_op_SpecLoopName, 
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="102" bw="32" op_0_bw="19">
+<Node id="102" bw="32" op_0_bw="18">
 <![CDATA[
-for.inc.split:23 %input_8_load = load i19 %input_8_addr
+for.inc.split:23 %input_8_load = load i18 %input_8_addr
 
 ]]></Node>
 <StgValue><ssdm name="input_8_load"/></StgValue>
@@ -1082,9 +1082,9 @@ for.inc.split:23 %input_8_load = load i19 %input_8_addr
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="103" bw="0" op_0_bw="32" op_1_bw="20">
+<Node id="103" bw="0" op_0_bw="32" op_1_bw="19">
 <![CDATA[
-for.inc.split:24 %store_ln72 = store i32 %input_8_load, i20 %bucket_addr
+for.inc.split:24 %store_ln72 = store i32 %input_8_load, i19 %bucket_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln72"/></StgValue>

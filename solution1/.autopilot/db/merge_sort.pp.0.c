@@ -891,13 +891,13 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 # 4 "sort_seperate_bucket/merge_sort.c" 2
 
 
-void merge_sort(int input1[312500], int input2[312500], int sorted_data[2*312500]){
+void merge_sort(int input1[156250], int input2[156250], int sorted_data[2*156250]){
  int j = 0;
  int k = 0;
- VITIS_LOOP_9_1: for(int i=0; i<2*312500; i++){
+ VITIS_LOOP_9_1: for(int i=0; i<2*156250; i++){
   printf("i=%d, input1[%d] = %d, input2[%d]=%d\n", i, j, input1[j], k, input2[k]);
 #pragma HLS PIPELINE
- if((j<312500)&&(k<312500)){
+ if((j<156250)&&(k<156250)){
    if(input1[j]<input2[k]){
     sorted_data[i] = input1[j];
     j = j + 1;
@@ -910,7 +910,7 @@ void merge_sort(int input1[312500], int input2[312500], int sorted_data[2*312500
    }
   }
 
-  else if((j==312500)&&(k<312500)){
+  else if((j==156250)&&(k<156250)){
    sorted_data[i] = input2[k];
    k = k + 1;
   }
@@ -922,17 +922,17 @@ void merge_sort(int input1[312500], int input2[312500], int sorted_data[2*312500
 }
 
 
-void merge_arrays(int in[312500], int width, int out[312500]){
+void merge_arrays(int in[156250], int width, int out[156250]){
  int f1 = 0;
  int f2 = width;
  int i2 = width;
  int i3 = 2 * width;
- if(i2 >= 312500)
-  i2 = 312500;
- if(i3 >= 312500)
-  i3 = 312500;
+ if(i2 >= 156250)
+  i2 = 156250;
+ if(i3 >= 156250)
+  i3 = 156250;
  merge_arrays:
- for(int i=0; i<312500; i++){
+ for(int i=0; i<156250; i++){
 #pragma HLS PIPELINE II=1
  int t1 = in[f1];
   int t2 = (f2==i3)?0:in[f2];
@@ -949,20 +949,20 @@ void merge_arrays(int in[312500], int width, int out[312500]){
    f1 = i3;
    i2 += 2*width;
    i3 += 2*width;
-   if(i2>=312500)
-    i2 = 312500;
-   if(i3 >= 312500)
-    i3 = 312500;
+   if(i2>=156250)
+    i2 = 156250;
+   if(i3 >= 156250)
+    i3 = 156250;
    f2 = i2;
   }
  }
 }
 
 
-void merge_sort_parallel(int in[312500], int out[312500]){
+void merge_sort_parallel(int in[156250], int out[156250]){
 #pragma HLS DATAFLOW
 
- int temp[24 -1][312500];
+ int temp[24 -1][156250];
 #pragma HLS ARRAY_PARTITION variable=temp type=complete dim=1
  int width = 1;
  merge_arrays(in, width, temp[0]);
@@ -978,7 +978,7 @@ void merge_sort_parallel(int in[312500], int out[312500]){
 
 
 
-void merge(int input[312500], int temp[312500], int low, int mid, int high) {
+void merge(int input[156250], int temp[156250], int low, int mid, int high) {
  printf("low=%d, mid=%d, high=%d\n", low, mid, high);
     int i = low, j = mid, k = low;
 
@@ -999,33 +999,33 @@ void merge(int input[312500], int temp[312500], int low, int mid, int high) {
     }
 }
 
-void merge_sort_iterative(int input[312500], int output[312500]) {
-    int temp[312500];
+void merge_sort_iterative(int input[156250], int output[156250]) {
+    int temp[156250];
 #pragma HLS ARRAY_PARTITION variable=input type=block factor=100
 #pragma HLS ARRAY_PARTITION variable=output type=block factor=100
- VITIS_LOOP_118_1: for (int step = 1; step < 312500; step *= 2) {
-        VITIS_LOOP_119_2: for (int low = 0; low < 312500 - step; low += 2 * step) {
+ VITIS_LOOP_118_1: for (int step = 1; step < 156250; step *= 2) {
+        VITIS_LOOP_119_2: for (int low = 0; low < 156250 - step; low += 2 * step) {
 #pragma HLS LOOP_MERGE
 #pragma HLS DATAFLOW
  int mid = low + step;
             int high = mid + step - 1;
 
 
-            if (high >= 312500) {
-                high = 312500 - 1;
+            if (high >= 156250) {
+                high = 156250 - 1;
             }
 
             merge(input, temp, low, mid, high);
         }
 
 
-        VITIS_LOOP_134_3: for (int i = 0; i < 312500; i++) {
+        VITIS_LOOP_134_3: for (int i = 0; i < 156250; i++) {
             input[i] = temp[i];
         }
     }
 
 
-    VITIS_LOOP_140_4: for (int i = 0; i < 312500; i++) {
+    VITIS_LOOP_140_4: for (int i = 0; i < 156250; i++) {
         output[i] = input[i];
     }
 }

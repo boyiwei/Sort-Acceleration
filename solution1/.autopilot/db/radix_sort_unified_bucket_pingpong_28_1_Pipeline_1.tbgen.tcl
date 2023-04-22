@@ -13,39 +13,39 @@ set hasInterrupt 0
 set C_modelName {radix_sort_unified_bucket_pingpong.28.1_Pipeline_1}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ bucket_sizes_1465_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1464_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1463_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1462_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1461_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1460_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1459_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1458_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1457_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1456_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1455_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1454_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1453_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1452_out int 32 regular {pointer 1}  }
-	{ bucket_sizes_1451_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6105_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6104_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6103_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6102_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6101_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6100_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6099_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6098_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6097_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6096_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6095_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6094_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6093_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6092_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_6091_out int 32 regular {pointer 1}  }
 	{ bucket_sizes_out int 32 regular {pointer 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "bucket_sizes_1465_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1464_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1463_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1462_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1461_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1460_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1459_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1458_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1457_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1456_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1455_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1454_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1453_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1452_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "bucket_sizes_1451_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+	{ "Name" : "bucket_sizes_6105_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6104_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6103_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6102_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6101_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6100_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6099_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6098_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6097_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6096_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6095_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6094_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6093_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6092_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_6091_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
  	{ "Name" : "bucket_sizes_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
 set portNum 38
@@ -56,36 +56,36 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ bucket_sizes_1465_out sc_out sc_lv 32 signal 0 } 
-	{ bucket_sizes_1465_out_ap_vld sc_out sc_logic 1 outvld 0 } 
-	{ bucket_sizes_1464_out sc_out sc_lv 32 signal 1 } 
-	{ bucket_sizes_1464_out_ap_vld sc_out sc_logic 1 outvld 1 } 
-	{ bucket_sizes_1463_out sc_out sc_lv 32 signal 2 } 
-	{ bucket_sizes_1463_out_ap_vld sc_out sc_logic 1 outvld 2 } 
-	{ bucket_sizes_1462_out sc_out sc_lv 32 signal 3 } 
-	{ bucket_sizes_1462_out_ap_vld sc_out sc_logic 1 outvld 3 } 
-	{ bucket_sizes_1461_out sc_out sc_lv 32 signal 4 } 
-	{ bucket_sizes_1461_out_ap_vld sc_out sc_logic 1 outvld 4 } 
-	{ bucket_sizes_1460_out sc_out sc_lv 32 signal 5 } 
-	{ bucket_sizes_1460_out_ap_vld sc_out sc_logic 1 outvld 5 } 
-	{ bucket_sizes_1459_out sc_out sc_lv 32 signal 6 } 
-	{ bucket_sizes_1459_out_ap_vld sc_out sc_logic 1 outvld 6 } 
-	{ bucket_sizes_1458_out sc_out sc_lv 32 signal 7 } 
-	{ bucket_sizes_1458_out_ap_vld sc_out sc_logic 1 outvld 7 } 
-	{ bucket_sizes_1457_out sc_out sc_lv 32 signal 8 } 
-	{ bucket_sizes_1457_out_ap_vld sc_out sc_logic 1 outvld 8 } 
-	{ bucket_sizes_1456_out sc_out sc_lv 32 signal 9 } 
-	{ bucket_sizes_1456_out_ap_vld sc_out sc_logic 1 outvld 9 } 
-	{ bucket_sizes_1455_out sc_out sc_lv 32 signal 10 } 
-	{ bucket_sizes_1455_out_ap_vld sc_out sc_logic 1 outvld 10 } 
-	{ bucket_sizes_1454_out sc_out sc_lv 32 signal 11 } 
-	{ bucket_sizes_1454_out_ap_vld sc_out sc_logic 1 outvld 11 } 
-	{ bucket_sizes_1453_out sc_out sc_lv 32 signal 12 } 
-	{ bucket_sizes_1453_out_ap_vld sc_out sc_logic 1 outvld 12 } 
-	{ bucket_sizes_1452_out sc_out sc_lv 32 signal 13 } 
-	{ bucket_sizes_1452_out_ap_vld sc_out sc_logic 1 outvld 13 } 
-	{ bucket_sizes_1451_out sc_out sc_lv 32 signal 14 } 
-	{ bucket_sizes_1451_out_ap_vld sc_out sc_logic 1 outvld 14 } 
+	{ bucket_sizes_6105_out sc_out sc_lv 32 signal 0 } 
+	{ bucket_sizes_6105_out_ap_vld sc_out sc_logic 1 outvld 0 } 
+	{ bucket_sizes_6104_out sc_out sc_lv 32 signal 1 } 
+	{ bucket_sizes_6104_out_ap_vld sc_out sc_logic 1 outvld 1 } 
+	{ bucket_sizes_6103_out sc_out sc_lv 32 signal 2 } 
+	{ bucket_sizes_6103_out_ap_vld sc_out sc_logic 1 outvld 2 } 
+	{ bucket_sizes_6102_out sc_out sc_lv 32 signal 3 } 
+	{ bucket_sizes_6102_out_ap_vld sc_out sc_logic 1 outvld 3 } 
+	{ bucket_sizes_6101_out sc_out sc_lv 32 signal 4 } 
+	{ bucket_sizes_6101_out_ap_vld sc_out sc_logic 1 outvld 4 } 
+	{ bucket_sizes_6100_out sc_out sc_lv 32 signal 5 } 
+	{ bucket_sizes_6100_out_ap_vld sc_out sc_logic 1 outvld 5 } 
+	{ bucket_sizes_6099_out sc_out sc_lv 32 signal 6 } 
+	{ bucket_sizes_6099_out_ap_vld sc_out sc_logic 1 outvld 6 } 
+	{ bucket_sizes_6098_out sc_out sc_lv 32 signal 7 } 
+	{ bucket_sizes_6098_out_ap_vld sc_out sc_logic 1 outvld 7 } 
+	{ bucket_sizes_6097_out sc_out sc_lv 32 signal 8 } 
+	{ bucket_sizes_6097_out_ap_vld sc_out sc_logic 1 outvld 8 } 
+	{ bucket_sizes_6096_out sc_out sc_lv 32 signal 9 } 
+	{ bucket_sizes_6096_out_ap_vld sc_out sc_logic 1 outvld 9 } 
+	{ bucket_sizes_6095_out sc_out sc_lv 32 signal 10 } 
+	{ bucket_sizes_6095_out_ap_vld sc_out sc_logic 1 outvld 10 } 
+	{ bucket_sizes_6094_out sc_out sc_lv 32 signal 11 } 
+	{ bucket_sizes_6094_out_ap_vld sc_out sc_logic 1 outvld 11 } 
+	{ bucket_sizes_6093_out sc_out sc_lv 32 signal 12 } 
+	{ bucket_sizes_6093_out_ap_vld sc_out sc_logic 1 outvld 12 } 
+	{ bucket_sizes_6092_out sc_out sc_lv 32 signal 13 } 
+	{ bucket_sizes_6092_out_ap_vld sc_out sc_logic 1 outvld 13 } 
+	{ bucket_sizes_6091_out sc_out sc_lv 32 signal 14 } 
+	{ bucket_sizes_6091_out_ap_vld sc_out sc_logic 1 outvld 14 } 
 	{ bucket_sizes_out sc_out sc_lv 32 signal 15 } 
 	{ bucket_sizes_out_ap_vld sc_out sc_logic 1 outvld 15 } 
 }
@@ -96,36 +96,36 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1465_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1465_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1465_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1465_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1464_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1464_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1464_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1464_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1463_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1463_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1463_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1463_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1462_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1462_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1462_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1462_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1461_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1461_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1461_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1461_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1460_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1460_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1460_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1460_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1459_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1459_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1459_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1459_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1458_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1458_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1458_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1458_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1457_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1457_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1457_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1457_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1456_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1456_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1456_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1456_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1455_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1455_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1455_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1455_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1454_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1454_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1454_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1454_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1453_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1453_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1453_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1453_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1452_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1452_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1452_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1452_out", "role": "ap_vld" }} , 
- 	{ "name": "bucket_sizes_1451_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1451_out", "role": "default" }} , 
- 	{ "name": "bucket_sizes_1451_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_1451_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6105_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6105_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6105_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6105_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6104_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6104_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6104_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6104_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6103_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6103_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6103_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6103_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6102_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6102_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6102_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6102_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6101_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6101_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6101_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6101_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6100_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6100_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6100_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6100_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6099_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6099_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6099_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6099_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6098_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6098_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6098_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6098_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6097_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6097_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6097_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6097_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6096_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6096_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6096_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6096_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6095_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6095_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6095_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6095_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6094_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6094_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6094_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6094_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6093_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6093_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6093_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6093_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6092_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6092_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6092_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6092_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_6091_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_6091_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_6091_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_6091_out", "role": "ap_vld" }} , 
  	{ "name": "bucket_sizes_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_out", "role": "default" }} , 
  	{ "name": "bucket_sizes_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_out", "role": "ap_vld" }}  ]}
 
@@ -145,21 +145,21 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "bucket_sizes_1465_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1464_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1463_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1462_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1461_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1460_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1459_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1458_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1457_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1456_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1455_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1454_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1453_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1452_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1451_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6105_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6104_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6103_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6102_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6101_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6100_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6099_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6098_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6097_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6096_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6095_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6094_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6093_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6092_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6091_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "bucket_sizes_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "Loop 1", "PipelineType" : "NotSupport"}]},
@@ -168,21 +168,21 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	radix_sort_unified_bucket_pingpong_28_1_Pipeline_1 {
-		bucket_sizes_1465_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1464_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1463_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1462_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1461_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1460_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1459_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1458_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1457_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1456_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1455_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1454_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1453_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1452_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1451_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6105_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6104_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6103_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6102_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6101_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6100_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6099_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6098_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6097_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6096_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6095_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6094_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6093_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6092_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6091_out {Type O LastRead -1 FirstWrite 0}
 		bucket_sizes_out {Type O LastRead -1 FirstWrite 0}}}
 
 set hasDtUnsupportedChannel 0
@@ -196,20 +196,20 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	bucket_sizes_1465_out { ap_vld {  { bucket_sizes_1465_out out_data 1 32 }  { bucket_sizes_1465_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1464_out { ap_vld {  { bucket_sizes_1464_out out_data 1 32 }  { bucket_sizes_1464_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1463_out { ap_vld {  { bucket_sizes_1463_out out_data 1 32 }  { bucket_sizes_1463_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1462_out { ap_vld {  { bucket_sizes_1462_out out_data 1 32 }  { bucket_sizes_1462_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1461_out { ap_vld {  { bucket_sizes_1461_out out_data 1 32 }  { bucket_sizes_1461_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1460_out { ap_vld {  { bucket_sizes_1460_out out_data 1 32 }  { bucket_sizes_1460_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1459_out { ap_vld {  { bucket_sizes_1459_out out_data 1 32 }  { bucket_sizes_1459_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1458_out { ap_vld {  { bucket_sizes_1458_out out_data 1 32 }  { bucket_sizes_1458_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1457_out { ap_vld {  { bucket_sizes_1457_out out_data 1 32 }  { bucket_sizes_1457_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1456_out { ap_vld {  { bucket_sizes_1456_out out_data 1 32 }  { bucket_sizes_1456_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1455_out { ap_vld {  { bucket_sizes_1455_out out_data 1 32 }  { bucket_sizes_1455_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1454_out { ap_vld {  { bucket_sizes_1454_out out_data 1 32 }  { bucket_sizes_1454_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1453_out { ap_vld {  { bucket_sizes_1453_out out_data 1 32 }  { bucket_sizes_1453_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1452_out { ap_vld {  { bucket_sizes_1452_out out_data 1 32 }  { bucket_sizes_1452_out_ap_vld out_vld 1 1 } } }
-	bucket_sizes_1451_out { ap_vld {  { bucket_sizes_1451_out out_data 1 32 }  { bucket_sizes_1451_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6105_out { ap_vld {  { bucket_sizes_6105_out out_data 1 32 }  { bucket_sizes_6105_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6104_out { ap_vld {  { bucket_sizes_6104_out out_data 1 32 }  { bucket_sizes_6104_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6103_out { ap_vld {  { bucket_sizes_6103_out out_data 1 32 }  { bucket_sizes_6103_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6102_out { ap_vld {  { bucket_sizes_6102_out out_data 1 32 }  { bucket_sizes_6102_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6101_out { ap_vld {  { bucket_sizes_6101_out out_data 1 32 }  { bucket_sizes_6101_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6100_out { ap_vld {  { bucket_sizes_6100_out out_data 1 32 }  { bucket_sizes_6100_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6099_out { ap_vld {  { bucket_sizes_6099_out out_data 1 32 }  { bucket_sizes_6099_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6098_out { ap_vld {  { bucket_sizes_6098_out out_data 1 32 }  { bucket_sizes_6098_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6097_out { ap_vld {  { bucket_sizes_6097_out out_data 1 32 }  { bucket_sizes_6097_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6096_out { ap_vld {  { bucket_sizes_6096_out out_data 1 32 }  { bucket_sizes_6096_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6095_out { ap_vld {  { bucket_sizes_6095_out out_data 1 32 }  { bucket_sizes_6095_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6094_out { ap_vld {  { bucket_sizes_6094_out out_data 1 32 }  { bucket_sizes_6094_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6093_out { ap_vld {  { bucket_sizes_6093_out out_data 1 32 }  { bucket_sizes_6093_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6092_out { ap_vld {  { bucket_sizes_6092_out out_data 1 32 }  { bucket_sizes_6092_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_6091_out { ap_vld {  { bucket_sizes_6091_out out_data 1 32 }  { bucket_sizes_6091_out_ap_vld out_vld 1 1 } } }
 	bucket_sizes_out { ap_vld {  { bucket_sizes_out out_data 1 32 }  { bucket_sizes_out_ap_vld out_vld 1 1 } } }
 }

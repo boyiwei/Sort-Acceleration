@@ -23,7 +23,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="3" bw="19" op_0_bw="32">
+<Node id="3" bw="18" op_0_bw="32">
 <![CDATA[
 newFuncRoot:0 %k = alloca i32 1
 
@@ -38,9 +38,9 @@ newFuncRoot:0 %k = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="4" bw="0" op_0_bw="19" op_1_bw="19">
+<Node id="4" bw="0" op_0_bw="18" op_1_bw="18">
 <![CDATA[
-newFuncRoot:1 %store_ln0 = store i19 0, i19 %k
+newFuncRoot:1 %store_ln0 = store i18 0, i18 %k
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -68,12 +68,12 @@ newFuncRoot:2 %br_ln0 = br void %for.inc79
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="7" bw="19" op_0_bw="19" op_1_bw="0">
+<Node id="7" bw="18" op_0_bw="18" op_1_bw="0">
 <![CDATA[
-for.inc79:0 %k_32 = load i19 %k
+for.inc79:0 %k_64 = load i18 %k
 
 ]]></Node>
-<StgValue><ssdm name="k_32"/></StgValue>
+<StgValue><ssdm name="k_64"/></StgValue>
 </operation>
 
 <operation id="9" st_id="1" stage="1" lat="1">
@@ -98,9 +98,9 @@ for.inc79:1 %specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 42
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="9" bw="1" op_0_bw="19" op_1_bw="19">
+<Node id="9" bw="1" op_0_bw="18" op_1_bw="18">
 <![CDATA[
-for.inc79:2 %icmp_ln105 = icmp_eq  i19 %k_32, i19 312500
+for.inc79:2 %icmp_ln105 = icmp_eq  i18 %k_64, i18 156250
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln105"/></StgValue>
@@ -115,7 +115,7 @@ for.inc79:2 %icmp_ln105 = icmp_eq  i19 %k_32, i19 312500
 
 <Node id="10" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.inc79:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 312500, i64 312500, i64 312500
+for.inc79:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 156250, i64 156250, i64 156250
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -128,9 +128,9 @@ for.inc79:3 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 3125
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="19" op_0_bw="19" op_1_bw="19">
+<Node id="11" bw="18" op_0_bw="18" op_1_bw="18">
 <![CDATA[
-for.inc79:4 %add_ln105 = add i19 %k_32, i19 1
+for.inc79:4 %add_ln105 = add i18 %k_64, i18 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln105"/></StgValue>
@@ -159,9 +159,9 @@ for.inc79:5 %br_ln105 = br i1 %icmp_ln105, void %for.inc79.split, void %for.end8
 </and_exp></or_exp>
 </condition>
 
-<Node id="15" bw="20" op_0_bw="19">
+<Node id="15" bw="19" op_0_bw="18">
 <![CDATA[
-for.inc79.split:1 %zext_ln106 = zext i19 %k_32
+for.inc79.split:1 %zext_ln106 = zext i18 %k_64
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln106"/></StgValue>
@@ -175,9 +175,9 @@ for.inc79.split:1 %zext_ln106 = zext i19 %k_32
 </and_exp></or_exp>
 </condition>
 
-<Node id="16" bw="20" op_0_bw="20" op_1_bw="20">
+<Node id="16" bw="19" op_0_bw="19" op_1_bw="19">
 <![CDATA[
-for.inc79.split:2 %add_ln106 = add i20 %zext_ln106, i20 312500
+for.inc79.split:2 %add_ln106 = add i19 %zext_ln106, i19 156250
 
 ]]></Node>
 <StgValue><ssdm name="add_ln106"/></StgValue>
@@ -191,12 +191,12 @@ for.inc79.split:2 %add_ln106 = add i20 %zext_ln106, i20 312500
 </and_exp></or_exp>
 </condition>
 
-<Node id="17" bw="64" op_0_bw="20">
+<Node id="17" bw="64" op_0_bw="19">
 <![CDATA[
-for.inc79.split:3 %zext_ln106_32 = zext i20 %add_ln106
+for.inc79.split:3 %zext_ln106_64 = zext i19 %add_ln106
 
 ]]></Node>
-<StgValue><ssdm name="zext_ln106_32"/></StgValue>
+<StgValue><ssdm name="zext_ln106_64"/></StgValue>
 </operation>
 
 <operation id="17" st_id="1" stage="1" lat="1">
@@ -207,9 +207,9 @@ for.inc79.split:3 %zext_ln106_32 = zext i20 %add_ln106
 </and_exp></or_exp>
 </condition>
 
-<Node id="18" bw="20" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="18" bw="19" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-for.inc79.split:4 %bucket_addr = getelementptr i32 %bucket, i64 0, i64 %zext_ln106_32
+for.inc79.split:4 %bucket_addr = getelementptr i32 %bucket, i64 0, i64 %zext_ln106_64
 
 ]]></Node>
 <StgValue><ssdm name="bucket_addr"/></StgValue>
@@ -223,9 +223,9 @@ for.inc79.split:4 %bucket_addr = getelementptr i32 %bucket, i64 0, i64 %zext_ln1
 </and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="32" op_0_bw="20">
+<Node id="20" bw="32" op_0_bw="19">
 <![CDATA[
-for.inc79.split:6 %bucket_load = load i20 %bucket_addr
+for.inc79.split:6 %bucket_load = load i19 %bucket_addr
 
 ]]></Node>
 <StgValue><ssdm name="bucket_load"/></StgValue>
@@ -239,9 +239,9 @@ for.inc79.split:6 %bucket_load = load i20 %bucket_addr
 </and_exp></or_exp>
 </condition>
 
-<Node id="23" bw="0" op_0_bw="19" op_1_bw="19" op_2_bw="0" op_3_bw="0">
+<Node id="23" bw="0" op_0_bw="18" op_1_bw="18" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc79.split:9 %store_ln105 = store i19 %add_ln105, i19 %k
+for.inc79.split:9 %store_ln105 = store i18 %add_ln105, i18 %k
 
 ]]></Node>
 <StgValue><ssdm name="store_ln105"/></StgValue>
@@ -273,9 +273,9 @@ for.end81.exitStub:0 %ret_ln0 = ret
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="14" bw="64" op_0_bw="19">
+<Node id="14" bw="64" op_0_bw="18">
 <![CDATA[
-for.inc79.split:0 %k_cast = zext i19 %k_32
+for.inc79.split:0 %k_cast = zext i18 %k_64
 
 ]]></Node>
 <StgValue><ssdm name="k_cast"/></StgValue>
@@ -290,7 +290,7 @@ for.inc79.split:0 %k_cast = zext i19 %k_32
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc79.split:5 %specloopname_ln105 = specloopname void @_ssdm_op_SpecLoopName, void @empty_34
+for.inc79.split:5 %specloopname_ln105 = specloopname void @_ssdm_op_SpecLoopName, void @empty_66
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln105"/></StgValue>
@@ -303,9 +303,9 @@ for.inc79.split:5 %specloopname_ln105 = specloopname void @_ssdm_op_SpecLoopName
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="32" op_0_bw="20">
+<Node id="20" bw="32" op_0_bw="19">
 <![CDATA[
-for.inc79.split:6 %bucket_load = load i20 %bucket_addr
+for.inc79.split:6 %bucket_load = load i19 %bucket_addr
 
 ]]></Node>
 <StgValue><ssdm name="bucket_load"/></StgValue>
@@ -318,7 +318,7 @@ for.inc79.split:6 %bucket_load = load i20 %bucket_addr
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="19" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="21" bw="18" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
 for.inc79.split:7 %sorted_data_addr = getelementptr i32 %sorted_data, i64 0, i64 %k_cast
 
@@ -333,9 +333,9 @@ for.inc79.split:7 %sorted_data_addr = getelementptr i32 %sorted_data, i64 0, i64
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="0" op_0_bw="32" op_1_bw="19">
+<Node id="22" bw="0" op_0_bw="32" op_1_bw="18">
 <![CDATA[
-for.inc79.split:8 %store_ln106 = store i32 %bucket_load, i19 %sorted_data_addr
+for.inc79.split:8 %store_ln106 = store i32 %bucket_load, i18 %sorted_data_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln106"/></StgValue>

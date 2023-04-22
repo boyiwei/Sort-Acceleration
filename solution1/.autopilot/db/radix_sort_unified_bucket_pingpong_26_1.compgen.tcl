@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler sort_top_32_radix_sort_unified_bucket_pingpong_26_1_bucket_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler sort_top_64_radix_sort_unified_bucket_pingpong_26_1_bucket_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -23,7 +23,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename input_25 \
     op interface \
-    ports { input_25_address0 { O 19 vector } input_25_ce0 { O 1 bit } input_25_q0 { I 32 vector } } \
+    ports { input_25_address0 { O 18 vector } input_25_ce0 { O 1 bit } input_25_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_25'"
@@ -42,7 +42,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename sorted_data \
     op interface \
-    ports { sorted_data_address0 { O 19 vector } sorted_data_ce0 { O 1 bit } sorted_data_we0 { O 1 bit } sorted_data_d0 { O 32 vector } } \
+    ports { sorted_data_address0 { O 18 vector } sorted_data_ce0 { O 1 bit } sorted_data_we0 { O 1 bit } sorted_data_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'sorted_data'"

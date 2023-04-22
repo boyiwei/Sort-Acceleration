@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_unified_bucket_pingpong_12_1_Pipeline_input_bucket'
 ================================================================
-* Date:           Sat Apr 22 14:45:21 2023
+* Date:           Sat Apr 22 15:39:20 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  5.078 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  5.072 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
     |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
     +---------+---------+----------+----------+--------+--------+---------+
-    |   312502|   312502|  3.125 ms|  3.125 ms|  312502|  312502|       no|
+    |   156252|   156252|  1.563 ms|  1.563 ms|  156252|  156252|       no|
     +---------+---------+----------+----------+--------+--------+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
         |    Loop Name   |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
         +----------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |- input_bucket  |   312500|   312500|         2|          1|          1|  312500|       yes|
+        |- input_bucket  |   156250|   156250|         2|          1|          1|  156250|       yes|
         +----------------+---------+---------+----------+-----------+-----------+--------+----------+
 
 
@@ -54,14 +54,14 @@
 |         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
 +---------------------+---------+------+---------+---------+-----+
 |DSP                  |        -|     -|        -|        -|    -|
-|Expression           |        -|     -|        0|      327|    -|
+|Expression           |        -|     -|        0|      323|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
 |Instance             |        -|     -|        0|      130|    -|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|      502|    -|
-|Register             |        -|     -|      143|        -|    -|
+|Register             |        -|     -|      141|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|     0|      143|      959|    0|
+|Total                |        0|     0|      141|      955|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -96,18 +96,18 @@
     +--------------------------+----------+----+---+----+------------+------------+
     |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------+----------+----+---+----+------------+------------+
-    |add_ln92_fu_675_p2        |         +|   0|  0|  26|          19|           1|
-    |add_ln93_fu_685_p2        |         +|   0|  0|  27|          20|          20|
-    |add_ln95_fu_836_p2        |         +|   0|  0|  27|          20|          20|
+    |add_ln92_fu_675_p2        |         +|   0|  0|  25|          18|           1|
+    |add_ln93_fu_685_p2        |         +|   0|  0|  26|          19|          19|
+    |add_ln95_fu_836_p2        |         +|   0|  0|  26|          19|          19|
     |bucket_pointer_fu_856_p2  |         +|   0|  0|  39|          32|           1|
     |bucket_sizes_fu_1070_p2   |         +|   0|  0|  39|          32|           1|
     |shifted_fu_785_p2         |      ashr|   0|  0|  92|          32|          32|
     |addr_cmp_fu_771_p2        |      icmp|   0|  0|  29|          64|          64|
-    |icmp_ln92_fu_669_p2       |      icmp|   0|  0|  14|          19|          19|
+    |icmp_ln92_fu_669_p2       |      icmp|   0|  0|  13|          18|          18|
     |reuse_select_fu_776_p3    |    select|   0|  0|  32|           1|          32|
     |ap_enable_pp0             |       xor|   0|  0|   2|           1|           2|
     +--------------------------+----------+----+---+----+------------+------------+
-    |Total                     |          |   0|  0| 327|         240|         192|
+    |Total                     |          |   0|  0| 323|         236|         189|
     +--------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -116,44 +116,44 @@
     +---------------------------+----+-----------+-----+-----------+
     |ap_done_int                |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1    |   9|          2|    1|          2|
-    |ap_sig_allocacmp_j         |   9|          2|   19|         38|
-    |bucket_pointer_1788_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1789_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1790_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1791_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1792_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1793_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1794_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1795_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1796_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1797_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1798_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1799_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1800_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1801_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1802_out_o  |  14|          3|   32|         96|
-    |bucket_pointer_1803_out_o  |  14|          3|   32|         96|
-    |bucket_sizes_4028_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4029_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4030_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4031_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4032_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4033_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4034_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4035_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4036_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4037_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4038_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4039_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4040_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4041_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4042_out_o    |  14|          3|   32|         96|
-    |bucket_sizes_4043_out_o    |  14|          3|   32|         96|
-    |j_28_fu_216                |   9|          2|   19|         38|
+    |ap_sig_allocacmp_j         |   9|          2|   18|         36|
+    |bucket_pointer_3868_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3869_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3870_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3871_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3872_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3873_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3874_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3875_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3876_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3877_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3878_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3879_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3880_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3881_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3882_out_o  |  14|          3|   32|         96|
+    |bucket_pointer_3883_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_8668_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8669_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8670_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8671_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8672_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8673_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8674_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8675_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8676_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8677_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8678_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8679_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8680_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8681_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8682_out_o    |  14|          3|   32|         96|
+    |bucket_sizes_8683_out_o    |  14|          3|   32|         96|
+    |j_60_fu_216                |   9|          2|   18|         36|
     |reuse_addr_reg_fu_208      |   9|          2|   64|        128|
     |reuse_reg_fu_212           |   9|          2|   32|         64|
     +---------------------------+----+-----------+-----+-----------+
-    |Total                      | 502|        108| 1160|       3344|
+    |Total                      | 502|        108| 1158|       3340|
     +---------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -163,13 +163,13 @@
     |ap_CS_fsm                |   1|   0|    1|          0|
     |ap_done_reg              |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
-    |j_28_fu_216              |  19|   0|   19|          0|
+    |j_60_fu_216              |  18|   0|   18|          0|
     |mul_cast_cast_reg_1198   |   5|   0|   32|         27|
     |reuse_addr_reg_fu_208    |  64|   0|   64|          0|
     |reuse_reg_fu_212         |  32|   0|   32|          0|
-    |zext_ln93_28_reg_1206    |  20|   0|   64|         44|
+    |zext_ln93_60_reg_1206    |  19|   0|   64|         45|
     +-------------------------+----+----+-----+-----------+
-    |Total                    | 143|   0|  214|         71|
+    |Total                    | 141|   0|  213|         72|
     +-------------------------+----+----+-----+-----------+
 
 
@@ -187,143 +187,143 @@
 |ap_done                           |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.12.1_Pipeline_input_bucket|  return value|
 |ap_idle                           |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.12.1_Pipeline_input_bucket|  return value|
 |ap_ready                          |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.12.1_Pipeline_input_bucket|  return value|
-|bucket_sizes_4011_reload          |   in|   32|     ap_none|                                       bucket_sizes_4011_reload|        scalar|
-|bucket_sizes_4010_reload          |   in|   32|     ap_none|                                       bucket_sizes_4010_reload|        scalar|
-|bucket_sizes_4009_reload          |   in|   32|     ap_none|                                       bucket_sizes_4009_reload|        scalar|
-|bucket_sizes_4008_reload          |   in|   32|     ap_none|                                       bucket_sizes_4008_reload|        scalar|
-|bucket_sizes_4007_reload          |   in|   32|     ap_none|                                       bucket_sizes_4007_reload|        scalar|
-|bucket_sizes_4006_reload          |   in|   32|     ap_none|                                       bucket_sizes_4006_reload|        scalar|
-|bucket_sizes_4005_reload          |   in|   32|     ap_none|                                       bucket_sizes_4005_reload|        scalar|
-|bucket_sizes_4004_reload          |   in|   32|     ap_none|                                       bucket_sizes_4004_reload|        scalar|
-|bucket_sizes_4003_reload          |   in|   32|     ap_none|                                       bucket_sizes_4003_reload|        scalar|
-|bucket_sizes_4002_reload          |   in|   32|     ap_none|                                       bucket_sizes_4002_reload|        scalar|
-|bucket_sizes_4001_reload          |   in|   32|     ap_none|                                       bucket_sizes_4001_reload|        scalar|
-|bucket_sizes_4000_reload          |   in|   32|     ap_none|                                       bucket_sizes_4000_reload|        scalar|
-|bucket_sizes_3999_reload          |   in|   32|     ap_none|                                       bucket_sizes_3999_reload|        scalar|
-|bucket_sizes_3998_reload          |   in|   32|     ap_none|                                       bucket_sizes_3998_reload|        scalar|
-|bucket_sizes_3997_reload          |   in|   32|     ap_none|                                       bucket_sizes_3997_reload|        scalar|
-|bucket_sizes_3996_reload          |   in|   32|     ap_none|                                       bucket_sizes_3996_reload|        scalar|
-|bucket_pointer_1786_reload        |   in|   32|     ap_none|                                     bucket_pointer_1786_reload|        scalar|
-|bucket_pointer_1785_reload        |   in|   32|     ap_none|                                     bucket_pointer_1785_reload|        scalar|
-|bucket_pointer_1784_reload        |   in|   32|     ap_none|                                     bucket_pointer_1784_reload|        scalar|
-|bucket_pointer_1783_reload        |   in|   32|     ap_none|                                     bucket_pointer_1783_reload|        scalar|
-|bucket_pointer_1782_reload        |   in|   32|     ap_none|                                     bucket_pointer_1782_reload|        scalar|
-|bucket_pointer_1781_reload        |   in|   32|     ap_none|                                     bucket_pointer_1781_reload|        scalar|
-|bucket_pointer_1780_reload        |   in|   32|     ap_none|                                     bucket_pointer_1780_reload|        scalar|
-|bucket_pointer_1779_reload        |   in|   32|     ap_none|                                     bucket_pointer_1779_reload|        scalar|
-|bucket_pointer_1778_reload        |   in|   32|     ap_none|                                     bucket_pointer_1778_reload|        scalar|
-|bucket_pointer_1777_reload        |   in|   32|     ap_none|                                     bucket_pointer_1777_reload|        scalar|
-|bucket_pointer_1776_reload        |   in|   32|     ap_none|                                     bucket_pointer_1776_reload|        scalar|
-|bucket_pointer_1775_reload        |   in|   32|     ap_none|                                     bucket_pointer_1775_reload|        scalar|
-|bucket_pointer_1774_reload        |   in|   32|     ap_none|                                     bucket_pointer_1774_reload|        scalar|
-|bucket_pointer_1773_reload        |   in|   32|     ap_none|                                     bucket_pointer_1773_reload|        scalar|
-|bucket_pointer_1772_reload        |   in|   32|     ap_none|                                     bucket_pointer_1772_reload|        scalar|
-|bucket_pointer_1771_reload        |   in|   32|     ap_none|                                     bucket_pointer_1771_reload|        scalar|
-|mul_ln93                          |   in|   20|     ap_none|                                                       mul_ln93|        scalar|
-|bucket_address0                   |  out|   20|   ap_memory|                                                         bucket|         array|
+|bucket_sizes_8651_reload          |   in|   32|     ap_none|                                       bucket_sizes_8651_reload|        scalar|
+|bucket_sizes_8650_reload          |   in|   32|     ap_none|                                       bucket_sizes_8650_reload|        scalar|
+|bucket_sizes_8649_reload          |   in|   32|     ap_none|                                       bucket_sizes_8649_reload|        scalar|
+|bucket_sizes_8648_reload          |   in|   32|     ap_none|                                       bucket_sizes_8648_reload|        scalar|
+|bucket_sizes_8647_reload          |   in|   32|     ap_none|                                       bucket_sizes_8647_reload|        scalar|
+|bucket_sizes_8646_reload          |   in|   32|     ap_none|                                       bucket_sizes_8646_reload|        scalar|
+|bucket_sizes_8645_reload          |   in|   32|     ap_none|                                       bucket_sizes_8645_reload|        scalar|
+|bucket_sizes_8644_reload          |   in|   32|     ap_none|                                       bucket_sizes_8644_reload|        scalar|
+|bucket_sizes_8643_reload          |   in|   32|     ap_none|                                       bucket_sizes_8643_reload|        scalar|
+|bucket_sizes_8642_reload          |   in|   32|     ap_none|                                       bucket_sizes_8642_reload|        scalar|
+|bucket_sizes_8641_reload          |   in|   32|     ap_none|                                       bucket_sizes_8641_reload|        scalar|
+|bucket_sizes_8640_reload          |   in|   32|     ap_none|                                       bucket_sizes_8640_reload|        scalar|
+|bucket_sizes_8639_reload          |   in|   32|     ap_none|                                       bucket_sizes_8639_reload|        scalar|
+|bucket_sizes_8638_reload          |   in|   32|     ap_none|                                       bucket_sizes_8638_reload|        scalar|
+|bucket_sizes_8637_reload          |   in|   32|     ap_none|                                       bucket_sizes_8637_reload|        scalar|
+|bucket_sizes_8636_reload          |   in|   32|     ap_none|                                       bucket_sizes_8636_reload|        scalar|
+|bucket_pointer_3866_reload        |   in|   32|     ap_none|                                     bucket_pointer_3866_reload|        scalar|
+|bucket_pointer_3865_reload        |   in|   32|     ap_none|                                     bucket_pointer_3865_reload|        scalar|
+|bucket_pointer_3864_reload        |   in|   32|     ap_none|                                     bucket_pointer_3864_reload|        scalar|
+|bucket_pointer_3863_reload        |   in|   32|     ap_none|                                     bucket_pointer_3863_reload|        scalar|
+|bucket_pointer_3862_reload        |   in|   32|     ap_none|                                     bucket_pointer_3862_reload|        scalar|
+|bucket_pointer_3861_reload        |   in|   32|     ap_none|                                     bucket_pointer_3861_reload|        scalar|
+|bucket_pointer_3860_reload        |   in|   32|     ap_none|                                     bucket_pointer_3860_reload|        scalar|
+|bucket_pointer_3859_reload        |   in|   32|     ap_none|                                     bucket_pointer_3859_reload|        scalar|
+|bucket_pointer_3858_reload        |   in|   32|     ap_none|                                     bucket_pointer_3858_reload|        scalar|
+|bucket_pointer_3857_reload        |   in|   32|     ap_none|                                     bucket_pointer_3857_reload|        scalar|
+|bucket_pointer_3856_reload        |   in|   32|     ap_none|                                     bucket_pointer_3856_reload|        scalar|
+|bucket_pointer_3855_reload        |   in|   32|     ap_none|                                     bucket_pointer_3855_reload|        scalar|
+|bucket_pointer_3854_reload        |   in|   32|     ap_none|                                     bucket_pointer_3854_reload|        scalar|
+|bucket_pointer_3853_reload        |   in|   32|     ap_none|                                     bucket_pointer_3853_reload|        scalar|
+|bucket_pointer_3852_reload        |   in|   32|     ap_none|                                     bucket_pointer_3852_reload|        scalar|
+|bucket_pointer_3851_reload        |   in|   32|     ap_none|                                     bucket_pointer_3851_reload|        scalar|
+|mul_ln93                          |   in|   19|     ap_none|                                                       mul_ln93|        scalar|
+|bucket_address0                   |  out|   19|   ap_memory|                                                         bucket|         array|
 |bucket_ce0                        |  out|    1|   ap_memory|                                                         bucket|         array|
 |bucket_we0                        |  out|    1|   ap_memory|                                                         bucket|         array|
 |bucket_d0                         |  out|   32|   ap_memory|                                                         bucket|         array|
-|bucket_address1                   |  out|   20|   ap_memory|                                                         bucket|         array|
+|bucket_address1                   |  out|   19|   ap_memory|                                                         bucket|         array|
 |bucket_ce1                        |  out|    1|   ap_memory|                                                         bucket|         array|
 |bucket_q1                         |   in|   32|   ap_memory|                                                         bucket|         array|
 |mul_cast                          |   in|    5|     ap_none|                                                       mul_cast|        scalar|
-|mul_ln95                          |   in|   20|     ap_none|                                                       mul_ln95|        scalar|
-|bucket_sizes_4043_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4043_out|       pointer|
-|bucket_sizes_4043_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4043_out|       pointer|
-|bucket_sizes_4043_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4043_out|       pointer|
-|bucket_sizes_4042_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4042_out|       pointer|
-|bucket_sizes_4042_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4042_out|       pointer|
-|bucket_sizes_4042_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4042_out|       pointer|
-|bucket_sizes_4041_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4041_out|       pointer|
-|bucket_sizes_4041_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4041_out|       pointer|
-|bucket_sizes_4041_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4041_out|       pointer|
-|bucket_sizes_4040_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4040_out|       pointer|
-|bucket_sizes_4040_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4040_out|       pointer|
-|bucket_sizes_4040_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4040_out|       pointer|
-|bucket_sizes_4039_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4039_out|       pointer|
-|bucket_sizes_4039_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4039_out|       pointer|
-|bucket_sizes_4039_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4039_out|       pointer|
-|bucket_sizes_4038_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4038_out|       pointer|
-|bucket_sizes_4038_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4038_out|       pointer|
-|bucket_sizes_4038_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4038_out|       pointer|
-|bucket_sizes_4037_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4037_out|       pointer|
-|bucket_sizes_4037_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4037_out|       pointer|
-|bucket_sizes_4037_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4037_out|       pointer|
-|bucket_sizes_4036_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4036_out|       pointer|
-|bucket_sizes_4036_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4036_out|       pointer|
-|bucket_sizes_4036_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4036_out|       pointer|
-|bucket_sizes_4035_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4035_out|       pointer|
-|bucket_sizes_4035_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4035_out|       pointer|
-|bucket_sizes_4035_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4035_out|       pointer|
-|bucket_sizes_4034_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4034_out|       pointer|
-|bucket_sizes_4034_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4034_out|       pointer|
-|bucket_sizes_4034_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4034_out|       pointer|
-|bucket_sizes_4033_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4033_out|       pointer|
-|bucket_sizes_4033_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4033_out|       pointer|
-|bucket_sizes_4033_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4033_out|       pointer|
-|bucket_sizes_4032_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4032_out|       pointer|
-|bucket_sizes_4032_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4032_out|       pointer|
-|bucket_sizes_4032_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4032_out|       pointer|
-|bucket_sizes_4031_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4031_out|       pointer|
-|bucket_sizes_4031_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4031_out|       pointer|
-|bucket_sizes_4031_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4031_out|       pointer|
-|bucket_sizes_4030_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4030_out|       pointer|
-|bucket_sizes_4030_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4030_out|       pointer|
-|bucket_sizes_4030_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4030_out|       pointer|
-|bucket_sizes_4029_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4029_out|       pointer|
-|bucket_sizes_4029_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4029_out|       pointer|
-|bucket_sizes_4029_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4029_out|       pointer|
-|bucket_sizes_4028_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_4028_out|       pointer|
-|bucket_sizes_4028_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_4028_out|       pointer|
-|bucket_sizes_4028_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_4028_out|       pointer|
-|bucket_pointer_1803_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1803_out|       pointer|
-|bucket_pointer_1803_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1803_out|       pointer|
-|bucket_pointer_1803_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1803_out|       pointer|
-|bucket_pointer_1802_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1802_out|       pointer|
-|bucket_pointer_1802_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1802_out|       pointer|
-|bucket_pointer_1802_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1802_out|       pointer|
-|bucket_pointer_1801_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1801_out|       pointer|
-|bucket_pointer_1801_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1801_out|       pointer|
-|bucket_pointer_1801_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1801_out|       pointer|
-|bucket_pointer_1800_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1800_out|       pointer|
-|bucket_pointer_1800_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1800_out|       pointer|
-|bucket_pointer_1800_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1800_out|       pointer|
-|bucket_pointer_1799_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1799_out|       pointer|
-|bucket_pointer_1799_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1799_out|       pointer|
-|bucket_pointer_1799_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1799_out|       pointer|
-|bucket_pointer_1798_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1798_out|       pointer|
-|bucket_pointer_1798_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1798_out|       pointer|
-|bucket_pointer_1798_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1798_out|       pointer|
-|bucket_pointer_1797_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1797_out|       pointer|
-|bucket_pointer_1797_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1797_out|       pointer|
-|bucket_pointer_1797_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1797_out|       pointer|
-|bucket_pointer_1796_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1796_out|       pointer|
-|bucket_pointer_1796_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1796_out|       pointer|
-|bucket_pointer_1796_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1796_out|       pointer|
-|bucket_pointer_1795_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1795_out|       pointer|
-|bucket_pointer_1795_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1795_out|       pointer|
-|bucket_pointer_1795_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1795_out|       pointer|
-|bucket_pointer_1794_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1794_out|       pointer|
-|bucket_pointer_1794_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1794_out|       pointer|
-|bucket_pointer_1794_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1794_out|       pointer|
-|bucket_pointer_1793_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1793_out|       pointer|
-|bucket_pointer_1793_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1793_out|       pointer|
-|bucket_pointer_1793_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1793_out|       pointer|
-|bucket_pointer_1792_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1792_out|       pointer|
-|bucket_pointer_1792_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1792_out|       pointer|
-|bucket_pointer_1792_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1792_out|       pointer|
-|bucket_pointer_1791_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1791_out|       pointer|
-|bucket_pointer_1791_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1791_out|       pointer|
-|bucket_pointer_1791_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1791_out|       pointer|
-|bucket_pointer_1790_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1790_out|       pointer|
-|bucket_pointer_1790_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1790_out|       pointer|
-|bucket_pointer_1790_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1790_out|       pointer|
-|bucket_pointer_1789_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1789_out|       pointer|
-|bucket_pointer_1789_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1789_out|       pointer|
-|bucket_pointer_1789_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1789_out|       pointer|
-|bucket_pointer_1788_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_1788_out|       pointer|
-|bucket_pointer_1788_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_1788_out|       pointer|
-|bucket_pointer_1788_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_1788_out|       pointer|
+|mul_ln95                          |   in|   19|     ap_none|                                                       mul_ln95|        scalar|
+|bucket_sizes_8683_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8683_out|       pointer|
+|bucket_sizes_8683_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8683_out|       pointer|
+|bucket_sizes_8683_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8683_out|       pointer|
+|bucket_sizes_8682_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8682_out|       pointer|
+|bucket_sizes_8682_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8682_out|       pointer|
+|bucket_sizes_8682_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8682_out|       pointer|
+|bucket_sizes_8681_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8681_out|       pointer|
+|bucket_sizes_8681_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8681_out|       pointer|
+|bucket_sizes_8681_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8681_out|       pointer|
+|bucket_sizes_8680_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8680_out|       pointer|
+|bucket_sizes_8680_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8680_out|       pointer|
+|bucket_sizes_8680_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8680_out|       pointer|
+|bucket_sizes_8679_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8679_out|       pointer|
+|bucket_sizes_8679_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8679_out|       pointer|
+|bucket_sizes_8679_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8679_out|       pointer|
+|bucket_sizes_8678_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8678_out|       pointer|
+|bucket_sizes_8678_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8678_out|       pointer|
+|bucket_sizes_8678_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8678_out|       pointer|
+|bucket_sizes_8677_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8677_out|       pointer|
+|bucket_sizes_8677_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8677_out|       pointer|
+|bucket_sizes_8677_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8677_out|       pointer|
+|bucket_sizes_8676_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8676_out|       pointer|
+|bucket_sizes_8676_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8676_out|       pointer|
+|bucket_sizes_8676_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8676_out|       pointer|
+|bucket_sizes_8675_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8675_out|       pointer|
+|bucket_sizes_8675_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8675_out|       pointer|
+|bucket_sizes_8675_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8675_out|       pointer|
+|bucket_sizes_8674_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8674_out|       pointer|
+|bucket_sizes_8674_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8674_out|       pointer|
+|bucket_sizes_8674_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8674_out|       pointer|
+|bucket_sizes_8673_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8673_out|       pointer|
+|bucket_sizes_8673_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8673_out|       pointer|
+|bucket_sizes_8673_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8673_out|       pointer|
+|bucket_sizes_8672_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8672_out|       pointer|
+|bucket_sizes_8672_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8672_out|       pointer|
+|bucket_sizes_8672_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8672_out|       pointer|
+|bucket_sizes_8671_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8671_out|       pointer|
+|bucket_sizes_8671_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8671_out|       pointer|
+|bucket_sizes_8671_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8671_out|       pointer|
+|bucket_sizes_8670_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8670_out|       pointer|
+|bucket_sizes_8670_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8670_out|       pointer|
+|bucket_sizes_8670_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8670_out|       pointer|
+|bucket_sizes_8669_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8669_out|       pointer|
+|bucket_sizes_8669_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8669_out|       pointer|
+|bucket_sizes_8669_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8669_out|       pointer|
+|bucket_sizes_8668_out_i           |   in|   32|     ap_ovld|                                          bucket_sizes_8668_out|       pointer|
+|bucket_sizes_8668_out_o           |  out|   32|     ap_ovld|                                          bucket_sizes_8668_out|       pointer|
+|bucket_sizes_8668_out_o_ap_vld    |  out|    1|     ap_ovld|                                          bucket_sizes_8668_out|       pointer|
+|bucket_pointer_3883_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3883_out|       pointer|
+|bucket_pointer_3883_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3883_out|       pointer|
+|bucket_pointer_3883_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3883_out|       pointer|
+|bucket_pointer_3882_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3882_out|       pointer|
+|bucket_pointer_3882_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3882_out|       pointer|
+|bucket_pointer_3882_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3882_out|       pointer|
+|bucket_pointer_3881_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3881_out|       pointer|
+|bucket_pointer_3881_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3881_out|       pointer|
+|bucket_pointer_3881_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3881_out|       pointer|
+|bucket_pointer_3880_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3880_out|       pointer|
+|bucket_pointer_3880_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3880_out|       pointer|
+|bucket_pointer_3880_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3880_out|       pointer|
+|bucket_pointer_3879_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3879_out|       pointer|
+|bucket_pointer_3879_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3879_out|       pointer|
+|bucket_pointer_3879_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3879_out|       pointer|
+|bucket_pointer_3878_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3878_out|       pointer|
+|bucket_pointer_3878_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3878_out|       pointer|
+|bucket_pointer_3878_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3878_out|       pointer|
+|bucket_pointer_3877_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3877_out|       pointer|
+|bucket_pointer_3877_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3877_out|       pointer|
+|bucket_pointer_3877_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3877_out|       pointer|
+|bucket_pointer_3876_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3876_out|       pointer|
+|bucket_pointer_3876_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3876_out|       pointer|
+|bucket_pointer_3876_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3876_out|       pointer|
+|bucket_pointer_3875_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3875_out|       pointer|
+|bucket_pointer_3875_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3875_out|       pointer|
+|bucket_pointer_3875_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3875_out|       pointer|
+|bucket_pointer_3874_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3874_out|       pointer|
+|bucket_pointer_3874_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3874_out|       pointer|
+|bucket_pointer_3874_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3874_out|       pointer|
+|bucket_pointer_3873_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3873_out|       pointer|
+|bucket_pointer_3873_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3873_out|       pointer|
+|bucket_pointer_3873_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3873_out|       pointer|
+|bucket_pointer_3872_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3872_out|       pointer|
+|bucket_pointer_3872_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3872_out|       pointer|
+|bucket_pointer_3872_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3872_out|       pointer|
+|bucket_pointer_3871_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3871_out|       pointer|
+|bucket_pointer_3871_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3871_out|       pointer|
+|bucket_pointer_3871_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3871_out|       pointer|
+|bucket_pointer_3870_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3870_out|       pointer|
+|bucket_pointer_3870_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3870_out|       pointer|
+|bucket_pointer_3870_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3870_out|       pointer|
+|bucket_pointer_3869_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3869_out|       pointer|
+|bucket_pointer_3869_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3869_out|       pointer|
+|bucket_pointer_3869_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3869_out|       pointer|
+|bucket_pointer_3868_out_i         |   in|   32|     ap_ovld|                                        bucket_pointer_3868_out|       pointer|
+|bucket_pointer_3868_out_o         |  out|   32|     ap_ovld|                                        bucket_pointer_3868_out|       pointer|
+|bucket_pointer_3868_out_o_ap_vld  |  out|    1|     ap_ovld|                                        bucket_pointer_3868_out|       pointer|
 +----------------------------------+-----+-----+------------+---------------------------------------------------------------+--------------+
 

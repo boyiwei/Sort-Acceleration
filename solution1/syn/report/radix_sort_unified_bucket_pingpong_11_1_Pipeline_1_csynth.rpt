@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_unified_bucket_pingpong_11_1_Pipeline_1'
 ================================================================
-* Date:           Sat Apr 22 14:45:18 2023
+* Date:           Sat Apr 22 15:39:16 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -89,7 +89,7 @@
     +-----------------------+----------+----+---+----+------------+------------+
     |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-----------------------+----------+----+---+----+------------+------------+
-    |empty_158_fu_278_p2    |         +|   0|  0|  12|           5|           1|
+    |empty_318_fu_278_p2    |         +|   0|  0|  12|           5|           1|
     |exitcond116_fu_272_p2  |      icmp|   0|  0|  10|           5|           6|
     +-----------------------+----------+----+---+----+------------+------------+
     |Total                  |          |   0|  0|  22|          10|           7|
@@ -132,36 +132,36 @@
 |ap_done                       |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.11.1_Pipeline_1|  return value|
 |ap_idle                       |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.11.1_Pipeline_1|  return value|
 |ap_ready                      |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.11.1_Pipeline_1|  return value|
-|bucket_sizes_4075_out         |  out|   32|      ap_vld|                               bucket_sizes_4075_out|       pointer|
-|bucket_sizes_4075_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4075_out|       pointer|
-|bucket_sizes_4074_out         |  out|   32|      ap_vld|                               bucket_sizes_4074_out|       pointer|
-|bucket_sizes_4074_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4074_out|       pointer|
-|bucket_sizes_4073_out         |  out|   32|      ap_vld|                               bucket_sizes_4073_out|       pointer|
-|bucket_sizes_4073_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4073_out|       pointer|
-|bucket_sizes_4072_out         |  out|   32|      ap_vld|                               bucket_sizes_4072_out|       pointer|
-|bucket_sizes_4072_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4072_out|       pointer|
-|bucket_sizes_4071_out         |  out|   32|      ap_vld|                               bucket_sizes_4071_out|       pointer|
-|bucket_sizes_4071_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4071_out|       pointer|
-|bucket_sizes_4070_out         |  out|   32|      ap_vld|                               bucket_sizes_4070_out|       pointer|
-|bucket_sizes_4070_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4070_out|       pointer|
-|bucket_sizes_4069_out         |  out|   32|      ap_vld|                               bucket_sizes_4069_out|       pointer|
-|bucket_sizes_4069_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4069_out|       pointer|
-|bucket_sizes_4068_out         |  out|   32|      ap_vld|                               bucket_sizes_4068_out|       pointer|
-|bucket_sizes_4068_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4068_out|       pointer|
-|bucket_sizes_4067_out         |  out|   32|      ap_vld|                               bucket_sizes_4067_out|       pointer|
-|bucket_sizes_4067_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4067_out|       pointer|
-|bucket_sizes_4066_out         |  out|   32|      ap_vld|                               bucket_sizes_4066_out|       pointer|
-|bucket_sizes_4066_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4066_out|       pointer|
-|bucket_sizes_4065_out         |  out|   32|      ap_vld|                               bucket_sizes_4065_out|       pointer|
-|bucket_sizes_4065_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4065_out|       pointer|
-|bucket_sizes_4064_out         |  out|   32|      ap_vld|                               bucket_sizes_4064_out|       pointer|
-|bucket_sizes_4064_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4064_out|       pointer|
-|bucket_sizes_4063_out         |  out|   32|      ap_vld|                               bucket_sizes_4063_out|       pointer|
-|bucket_sizes_4063_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4063_out|       pointer|
-|bucket_sizes_4062_out         |  out|   32|      ap_vld|                               bucket_sizes_4062_out|       pointer|
-|bucket_sizes_4062_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4062_out|       pointer|
-|bucket_sizes_4061_out         |  out|   32|      ap_vld|                               bucket_sizes_4061_out|       pointer|
-|bucket_sizes_4061_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_4061_out|       pointer|
+|bucket_sizes_8715_out         |  out|   32|      ap_vld|                               bucket_sizes_8715_out|       pointer|
+|bucket_sizes_8715_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8715_out|       pointer|
+|bucket_sizes_8714_out         |  out|   32|      ap_vld|                               bucket_sizes_8714_out|       pointer|
+|bucket_sizes_8714_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8714_out|       pointer|
+|bucket_sizes_8713_out         |  out|   32|      ap_vld|                               bucket_sizes_8713_out|       pointer|
+|bucket_sizes_8713_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8713_out|       pointer|
+|bucket_sizes_8712_out         |  out|   32|      ap_vld|                               bucket_sizes_8712_out|       pointer|
+|bucket_sizes_8712_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8712_out|       pointer|
+|bucket_sizes_8711_out         |  out|   32|      ap_vld|                               bucket_sizes_8711_out|       pointer|
+|bucket_sizes_8711_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8711_out|       pointer|
+|bucket_sizes_8710_out         |  out|   32|      ap_vld|                               bucket_sizes_8710_out|       pointer|
+|bucket_sizes_8710_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8710_out|       pointer|
+|bucket_sizes_8709_out         |  out|   32|      ap_vld|                               bucket_sizes_8709_out|       pointer|
+|bucket_sizes_8709_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8709_out|       pointer|
+|bucket_sizes_8708_out         |  out|   32|      ap_vld|                               bucket_sizes_8708_out|       pointer|
+|bucket_sizes_8708_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8708_out|       pointer|
+|bucket_sizes_8707_out         |  out|   32|      ap_vld|                               bucket_sizes_8707_out|       pointer|
+|bucket_sizes_8707_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8707_out|       pointer|
+|bucket_sizes_8706_out         |  out|   32|      ap_vld|                               bucket_sizes_8706_out|       pointer|
+|bucket_sizes_8706_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8706_out|       pointer|
+|bucket_sizes_8705_out         |  out|   32|      ap_vld|                               bucket_sizes_8705_out|       pointer|
+|bucket_sizes_8705_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8705_out|       pointer|
+|bucket_sizes_8704_out         |  out|   32|      ap_vld|                               bucket_sizes_8704_out|       pointer|
+|bucket_sizes_8704_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8704_out|       pointer|
+|bucket_sizes_8703_out         |  out|   32|      ap_vld|                               bucket_sizes_8703_out|       pointer|
+|bucket_sizes_8703_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8703_out|       pointer|
+|bucket_sizes_8702_out         |  out|   32|      ap_vld|                               bucket_sizes_8702_out|       pointer|
+|bucket_sizes_8702_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8702_out|       pointer|
+|bucket_sizes_8701_out         |  out|   32|      ap_vld|                               bucket_sizes_8701_out|       pointer|
+|bucket_sizes_8701_out_ap_vld  |  out|    1|      ap_vld|                               bucket_sizes_8701_out|       pointer|
 |bucket_sizes_out              |  out|   32|      ap_vld|                                    bucket_sizes_out|       pointer|
 |bucket_sizes_out_ap_vld       |  out|    1|      ap_vld|                                    bucket_sizes_out|       pointer|
 +------------------------------+-----+-----+------------+----------------------------------------------------+--------------+

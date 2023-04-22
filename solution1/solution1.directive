@@ -1,33 +1,38 @@
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
     <sourceFile name="">
-        <directive functionName="sort_top_32" label="" functionLabel="">
+        <directive functionName="sort_top_64" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_32"/>
+                <option name="name" value="sort_top_64"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_32" label="" functionLabel="">
+        <directive functionName="sort_top_64" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_32"/>
+                <option name="name" value="sort_top_64"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_32" label="" functionLabel="">
+        <directive functionName="sort_top_64" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_32"/>
+                <option name="name" value="sort_top_64"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_32" label="" functionLabel="">
+        <directive functionName="sort_top_64" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_32"/>
+                <option name="name" value="sort_top_64"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_32" label="" functionLabel="">
+        <directive functionName="sort_top_64" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_32"/>
+                <option name="name" value="sort_top_64"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_32" label="" functionLabel="">
+        <directive functionName="sort_top_64" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_32"/>
+                <option name="name" value="sort_top_64"/>
+            </pragma>
+        </directive>
+        <directive functionName="sort_top_64" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="sort_top_64"/>
             </pragma>
         </directive>
     </sourceFile>

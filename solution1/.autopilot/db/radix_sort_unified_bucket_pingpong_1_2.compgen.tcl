@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler sort_top_32_radix_sort_unified_bucket_pingpong_1_2_bucket_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
+	::AP::rtl_comp_handler sort_top_64_radix_sort_unified_bucket_pingpong_1_2_bucket_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
 
@@ -16,17 +16,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6177 \
-    name input_31 \
+    id 12353 \
+    name input_63 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename input_31 \
+    corename input_63 \
     op interface \
-    ports { input_31_address0 { O 19 vector } input_31_ce0 { O 1 bit } input_31_q0 { I 32 vector } } \
+    ports { input_63_address0 { O 18 vector } input_63_ce0 { O 1 bit } input_63_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_31'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_63'"
 }
 }
 
@@ -35,14 +35,14 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 6178 \
+    id 12354 \
     name sorted_data \
     reset_level 1 \
     sync_rst true \
     dir O \
     corename sorted_data \
     op interface \
-    ports { sorted_data_address0 { O 19 vector } sorted_data_ce0 { O 1 bit } sorted_data_we0 { O 1 bit } sorted_data_d0 { O 32 vector } } \
+    ports { sorted_data_address0 { O 18 vector } sorted_data_ce0 { O 1 bit } sorted_data_we0 { O 1 bit } sorted_data_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'sorted_data'"

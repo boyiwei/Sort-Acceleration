@@ -13,8 +13,8 @@ set hasInterrupt 0
 set C_modelName {radix_sort_unified_bucket_pingpong.28.1}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ input_27 int 32 regular {array 312500 { 1 3 } 1 1 }  }
-	{ sorted_data int 32 regular {array 312500 { 0 3 } 0 1 }  }
+	{ input_27 int 32 regular {array 156250 { 1 3 } 1 1 }  }
+	{ sorted_data int 32 regular {array 156250 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "input_27", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
@@ -29,10 +29,10 @@ set portList {
 	{ ap_continue sc_in sc_logic 1 continue -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ input_27_address0 sc_out sc_lv 19 signal 0 } 
+	{ input_27_address0 sc_out sc_lv 18 signal 0 } 
 	{ input_27_ce0 sc_out sc_logic 1 signal 0 } 
 	{ input_27_q0 sc_in sc_lv 32 signal 0 } 
-	{ sorted_data_address0 sc_out sc_lv 19 signal 1 } 
+	{ sorted_data_address0 sc_out sc_lv 18 signal 1 } 
 	{ sorted_data_ce0 sc_out sc_logic 1 signal 1 } 
 	{ sorted_data_we0 sc_out sc_logic 1 signal 1 } 
 	{ sorted_data_d0 sc_out sc_lv 32 signal 1 } 
@@ -45,10 +45,10 @@ set NewPortList {[
  	{ "name": "ap_continue", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "continue", "bundle":{"name": "ap_continue", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "input_27_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":19, "type": "signal", "bundle":{"name": "input_27", "role": "address0" }} , 
+ 	{ "name": "input_27_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "input_27", "role": "address0" }} , 
  	{ "name": "input_27_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "input_27", "role": "ce0" }} , 
  	{ "name": "input_27_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "input_27", "role": "q0" }} , 
- 	{ "name": "sorted_data_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":19, "type": "signal", "bundle":{"name": "sorted_data", "role": "address0" }} , 
+ 	{ "name": "sorted_data_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "sorted_data", "role": "address0" }} , 
  	{ "name": "sorted_data_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "sorted_data", "role": "ce0" }} , 
  	{ "name": "sorted_data_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "sorted_data", "role": "we0" }} , 
  	{ "name": "sorted_data_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "sorted_data", "role": "d0" }}  ]}
@@ -60,7 +60,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3125219", "EstimateLatencyMax" : "3125219",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1562727", "EstimateLatencyMax" : "1562727",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -74,10 +74,10 @@ set RtlHierarchyInfo {[
 					{"ID" : "4", "SubInstance" : "grp_radix_sort_unified_bucket_pingpong_28_1_Pipeline_initialization_fu_400", "Port" : "input_27", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "sorted_data", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "10", "SubInstance" : "grp_radix_sort_unified_bucket_pingpong_28_1_Pipeline_output_bucket_fu_507", "Port" : "sorted_data", "Inst_start_state" : "5", "Inst_end_state" : "9"}]}],
+					{"ID" : "10", "SubInstance" : "grp_radix_sort_unified_bucket_pingpong_28_1_Pipeline_output_bucket_fu_507", "Port" : "sorted_data", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
 			{"Name" : "sort_procedure", "PipelineType" : "no",
-				"LoopDec" : {"FSMBitwidth" : "9", "FirstState" : "ap_ST_fsm_state5", "LastState" : ["ap_ST_fsm_state8"], "QuitState" : ["ap_ST_fsm_state5"], "PreState" : ["ap_ST_fsm_state4"], "PostState" : ["ap_ST_fsm_state9"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
+				"LoopDec" : {"FSMBitwidth" : "10", "FirstState" : "ap_ST_fsm_state5", "LastState" : ["ap_ST_fsm_state9"], "QuitState" : ["ap_ST_fsm_state5"], "PreState" : ["ap_ST_fsm_state4"], "PostState" : ["ap_ST_fsm_state10"], "OneDepthLoop" : "0", "OneStateBlock": ""}}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.bucket_U", "Parent" : "0"},
 	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_radix_sort_unified_bucket_pingpong_28_1_Pipeline_1_fu_380", "Parent" : "0", "Child" : ["3"],
 		"CDFG" : "radix_sort_unified_bucket_pingpong_28_1_Pipeline_1",
@@ -94,21 +94,21 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "bucket_sizes_1465_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1464_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1463_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1462_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1461_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1460_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1459_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1458_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1457_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1456_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1455_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1454_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1453_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1452_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1451_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6105_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6104_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6103_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6102_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6101_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6100_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6099_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6098_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6097_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6096_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6095_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6094_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6093_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6092_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6091_out", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "bucket_sizes_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "Loop 1", "PipelineType" : "NotSupport"}]},
@@ -119,7 +119,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "312502", "EstimateLatencyMax" : "312502",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "156252", "EstimateLatencyMax" : "156252",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -128,40 +128,40 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "bucket_sizes_1465_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1464_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1463_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1462_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1461_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1460_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1459_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1458_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1457_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1456_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1455_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1454_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1453_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1452_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1451_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6105_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6104_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6103_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6102_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6101_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6100_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6099_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6098_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6097_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6096_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6095_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6094_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6093_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6092_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6091_reload", "Type" : "None", "Direction" : "I"},
 			{"Name" : "bucket_sizes_reload", "Type" : "None", "Direction" : "I"},
 			{"Name" : "bucket", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "input_27", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1497_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1496_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1495_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1494_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1493_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1492_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1491_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1490_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1489_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1488_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1487_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1486_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1485_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1484_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1483_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1482_out", "Type" : "OVld", "Direction" : "IO"}],
+			{"Name" : "bucket_sizes_6137_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6136_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6135_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6134_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6133_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6132_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6131_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6130_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6129_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6128_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6127_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6126_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6125_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6124_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6123_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6122_out", "Type" : "OVld", "Direction" : "IO"}],
 		"Loop" : [
 			{"Name" : "initialization", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
@@ -182,70 +182,70 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "bucket_sizes_1529", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1528", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1527", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1526", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1525", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1524", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1523", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1522", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1521", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1520", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1519", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1518", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1517", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1516", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1515", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1498", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_665", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_664", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_663", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_662", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_661", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_660", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_659", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_658", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_657", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_656", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_655", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_654", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_653", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_652", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_651", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6169", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6168", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6167", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6166", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6165", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6164", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6163", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6162", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6161", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6160", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6159", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6158", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6157", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6156", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6155", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6138", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2745", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2744", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2743", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2742", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2741", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2740", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2739", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2738", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2737", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2736", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2735", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2734", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2733", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2732", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2731", "Type" : "None", "Direction" : "I"},
 			{"Name" : "bucket_pointer", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1546_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1545_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1544_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1543_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1542_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1541_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1540_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1539_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1538_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1537_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1536_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1535_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1534_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1533_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1532_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_sizes_1531_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_681_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_680_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_679_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_678_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_677_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_676_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_675_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_674_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_673_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_672_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_671_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_670_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_669_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_668_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_667_out", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "bucket_pointer_666_out", "Type" : "Vld", "Direction" : "O"}],
+			{"Name" : "bucket_sizes_6186_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6185_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6184_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6183_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6182_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6181_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6180_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6179_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6178_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6177_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6176_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6175_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6174_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6173_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6172_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_6171_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2761_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2760_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2759_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2758_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2757_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2756_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2755_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2754_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2753_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2752_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2751_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2750_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2749_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2748_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2747_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_2746_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "bucket_pointer_initialization", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
@@ -257,7 +257,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "312502", "EstimateLatencyMax" : "312502",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "156252", "EstimateLatencyMax" : "156252",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -278,7 +278,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "312502", "EstimateLatencyMax" : "312502",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "156252", "EstimateLatencyMax" : "156252",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -287,82 +287,82 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "bucket_sizes_1546_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1545_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1544_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1543_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1542_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1541_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1540_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1539_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1538_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1537_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1536_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1535_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1534_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1533_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1532_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1531_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_681_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_680_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_679_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_678_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_677_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_676_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_675_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_674_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_673_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_672_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_671_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_670_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_669_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_668_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_667_reload", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_pointer_666_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6186_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6185_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6184_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6183_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6182_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6181_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6180_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6179_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6178_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6177_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6176_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6175_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6174_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6173_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6172_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_6171_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2761_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2760_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2759_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2758_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2757_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2756_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2755_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2754_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2753_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2752_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2751_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2750_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2749_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2748_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2747_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_2746_reload", "Type" : "None", "Direction" : "I"},
 			{"Name" : "mul_ln93", "Type" : "None", "Direction" : "I"},
 			{"Name" : "bucket", "Type" : "Memory", "Direction" : "IO"},
 			{"Name" : "mul_cast", "Type" : "None", "Direction" : "I"},
 			{"Name" : "mul_ln95", "Type" : "None", "Direction" : "I"},
-			{"Name" : "bucket_sizes_1578_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1577_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1576_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1575_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1574_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1573_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1572_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1571_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1570_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1569_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1568_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1567_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1566_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1565_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1564_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_sizes_1563_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_698_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_697_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_696_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_695_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_694_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_693_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_692_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_691_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_690_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_689_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_688_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_687_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_686_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_685_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_684_out", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "bucket_pointer_683_out", "Type" : "OVld", "Direction" : "IO"}],
+			{"Name" : "bucket_sizes_6218_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6217_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6216_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6215_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6214_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6213_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6212_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6211_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6210_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6209_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6208_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6207_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6206_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6205_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6204_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_sizes_6203_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2778_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2777_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2776_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2775_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2774_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2773_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2772_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2771_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2770_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2769_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2768_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2767_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2766_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2765_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2764_out", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "bucket_pointer_2763_out", "Type" : "OVld", "Direction" : "IO"}],
 		"Loop" : [
 			{"Name" : "input_bucket", "PipelineType" : "UPC",
 				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
 	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_sort_unified_bucket_pingpong_28_1_Pipeline_input_bucket_fu_514.mux_164_32_1_1_U5330", "Parent" : "12"},
 	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_sort_unified_bucket_pingpong_28_1_Pipeline_input_bucket_fu_514.mux_164_32_1_1_U5331", "Parent" : "12"},
 	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_sort_unified_bucket_pingpong_28_1_Pipeline_input_bucket_fu_514.flow_control_loop_pipe_sequential_init_U", "Parent" : "12"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_20s_20ns_20_1_1_U5402", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_20s_20ns_20_1_1_U5403", "Parent" : "0"}]}
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_19s_18ns_19_4_1_U5402", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_19s_18ns_19_4_1_U5403", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -370,206 +370,206 @@ set ArgLastReadFirstWriteLatency {
 		input_27 {Type I LastRead 0 FirstWrite -1}
 		sorted_data {Type O LastRead -1 FirstWrite 1}}
 	radix_sort_unified_bucket_pingpong_28_1_Pipeline_1 {
-		bucket_sizes_1465_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1464_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1463_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1462_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1461_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1460_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1459_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1458_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1457_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1456_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1455_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1454_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1453_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1452_out {Type O LastRead -1 FirstWrite 0}
-		bucket_sizes_1451_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6105_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6104_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6103_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6102_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6101_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6100_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6099_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6098_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6097_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6096_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6095_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6094_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6093_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6092_out {Type O LastRead -1 FirstWrite 0}
+		bucket_sizes_6091_out {Type O LastRead -1 FirstWrite 0}
 		bucket_sizes_out {Type O LastRead -1 FirstWrite 0}}
 	radix_sort_unified_bucket_pingpong_28_1_Pipeline_initialization {
-		bucket_sizes_1465_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1464_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1463_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1462_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1461_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1460_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1459_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1458_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1457_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1456_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1455_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1454_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1453_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1452_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1451_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6105_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6104_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6103_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6102_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6101_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6100_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6099_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6098_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6097_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6096_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6095_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6094_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6093_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6092_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6091_reload {Type I LastRead 0 FirstWrite -1}
 		bucket_sizes_reload {Type I LastRead 0 FirstWrite -1}
 		bucket {Type O LastRead -1 FirstWrite 1}
 		input_27 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1497_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1496_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1495_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1494_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1493_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1492_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1491_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1490_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1489_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1488_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1487_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1486_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1485_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1484_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1483_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1482_out {Type IO LastRead 1 FirstWrite 0}}
+		bucket_sizes_6137_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6136_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6135_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6134_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6133_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6132_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6131_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6130_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6129_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6128_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6127_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6126_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6125_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6124_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6123_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6122_out {Type IO LastRead 1 FirstWrite 0}}
 	radix_sort_unified_bucket_pingpong_28_1_Pipeline_bucket_pointer_initialization {
-		bucket_sizes_1529 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1528 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1527 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1526 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1525 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1524 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1523 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1522 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1521 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1520 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1519 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1518 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1517 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1516 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1515 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1498 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_665 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_664 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_663 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_662 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_661 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_660 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_659 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_658 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_657 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_656 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_655 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_654 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_653 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_652 {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_651 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6169 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6168 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6167 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6166 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6165 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6164 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6163 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6162 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6161 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6160 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6159 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6158 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6157 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6156 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6155 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6138 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2745 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2744 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2743 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2742 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2741 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2740 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2739 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2738 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2737 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2736 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2735 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2734 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2733 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2732 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2731 {Type I LastRead 0 FirstWrite -1}
 		bucket_pointer {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1546_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1545_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1544_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1543_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1542_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1541_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1540_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1539_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1538_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1537_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1536_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1535_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1534_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1533_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1532_out {Type O LastRead -1 FirstWrite 1}
-		bucket_sizes_1531_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_681_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_680_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_679_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_678_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_677_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_676_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_675_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_674_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_673_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_672_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_671_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_670_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_669_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_668_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_667_out {Type O LastRead -1 FirstWrite 1}
-		bucket_pointer_666_out {Type O LastRead -1 FirstWrite 1}}
+		bucket_sizes_6186_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6185_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6184_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6183_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6182_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6181_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6180_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6179_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6178_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6177_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6176_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6175_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6174_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6173_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6172_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_6171_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2761_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2760_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2759_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2758_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2757_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2756_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2755_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2754_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2753_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2752_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2751_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2750_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2749_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2748_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2747_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_2746_out {Type O LastRead -1 FirstWrite 1}}
 	radix_sort_unified_bucket_pingpong_28_1_Pipeline_output_bucket {
 		bucket {Type I LastRead 0 FirstWrite -1}
 		sorted_data {Type O LastRead -1 FirstWrite 1}}
 	radix_sort_unified_bucket_pingpong_28_1_Pipeline_input_bucket {
-		bucket_sizes_1546_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1545_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1544_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1543_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1542_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1541_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1540_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1539_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1538_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1537_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1536_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1535_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1534_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1533_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1532_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1531_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_681_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_680_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_679_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_678_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_677_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_676_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_675_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_674_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_673_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_672_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_671_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_670_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_669_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_668_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_667_reload {Type I LastRead 0 FirstWrite -1}
-		bucket_pointer_666_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6186_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6185_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6184_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6183_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6182_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6181_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6180_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6179_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6178_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6177_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6176_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6175_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6174_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6173_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6172_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_6171_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2761_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2760_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2759_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2758_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2757_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2756_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2755_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2754_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2753_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2752_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2751_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2750_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2749_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2748_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2747_reload {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_2746_reload {Type I LastRead 0 FirstWrite -1}
 		mul_ln93 {Type I LastRead 0 FirstWrite -1}
 		bucket {Type IO LastRead 0 FirstWrite 1}
 		mul_cast {Type I LastRead 0 FirstWrite -1}
 		mul_ln95 {Type I LastRead 0 FirstWrite -1}
-		bucket_sizes_1578_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1577_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1576_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1575_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1574_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1573_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1572_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1571_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1570_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1569_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1568_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1567_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1566_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1565_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1564_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_sizes_1563_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_698_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_697_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_696_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_695_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_694_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_693_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_692_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_691_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_690_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_689_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_688_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_687_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_686_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_685_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_684_out {Type IO LastRead 1 FirstWrite 0}
-		bucket_pointer_683_out {Type IO LastRead 1 FirstWrite 0}}}
+		bucket_sizes_6218_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6217_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6216_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6215_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6214_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6213_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6212_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6211_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6210_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6209_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6208_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6207_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6206_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6205_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6204_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_sizes_6203_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2778_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2777_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2776_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2775_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2774_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2773_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2772_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2771_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2770_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2769_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2768_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2767_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2766_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2765_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2764_out {Type IO LastRead 1 FirstWrite 0}
+		bucket_pointer_2763_out {Type IO LastRead 1 FirstWrite 0}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3125219", "Max" : "3125219"}
-	, {"Name" : "Interval", "Min" : "3125219", "Max" : "3125219"}
+	{"Name" : "Latency", "Min" : "1562727", "Max" : "1562727"}
+	, {"Name" : "Interval", "Min" : "1562727", "Max" : "1562727"}
 ]}
 
 set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	input_27 { ap_memory {  { input_27_address0 mem_address 1 19 }  { input_27_ce0 mem_ce 1 1 }  { input_27_q0 mem_dout 0 32 } } }
-	sorted_data { ap_memory {  { sorted_data_address0 mem_address 1 19 }  { sorted_data_ce0 mem_ce 1 1 }  { sorted_data_we0 mem_we 1 1 }  { sorted_data_d0 mem_din 1 32 } } }
+	input_27 { ap_memory {  { input_27_address0 mem_address 1 18 }  { input_27_ce0 mem_ce 1 1 }  { input_27_q0 mem_dout 0 32 } } }
+	sorted_data { ap_memory {  { sorted_data_address0 mem_address 1 18 }  { sorted_data_ce0 mem_ce 1 1 }  { sorted_data_we0 mem_we 1 1 }  { sorted_data_d0 mem_din 1 32 } } }
 }

@@ -1,5 +1,5 @@
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:897:2: warning: Added loop label VITIS_LOOP_9_1:   [xilinx-label-all-loops]
- for(int i=0; i<2*312500; i++){
+ for(int i=0; i<2*156250; i++){
  ^~~
  VITIS_LOOP_9_1: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:897:2: note: FIX-IT applied suggested code changes
@@ -24,22 +24,22 @@
     VITIS_LOOP_109_3: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:997:5: note: FIX-IT applied suggested code changes
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1006:2: warning: Added loop label VITIS_LOOP_118_1:   [xilinx-label-all-loops]
- for (int step = 1; step < 312500; step *= 2) {
+ for (int step = 1; step < 156250; step *= 2) {
  ^~~
  VITIS_LOOP_118_1: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1006:2: note: FIX-IT applied suggested code changes
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1007:9: warning: Added loop label VITIS_LOOP_119_2:   [xilinx-label-all-loops]
-        for (int low = 0; low < 312500 - step; low += 2 * step) {
+        for (int low = 0; low < 156250 - step; low += 2 * step) {
         ^~~
         VITIS_LOOP_119_2: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1007:9: note: FIX-IT applied suggested code changes
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1022:9: warning: Added loop label VITIS_LOOP_134_3:   [xilinx-label-all-loops]
-        for (int i = 0; i < 312500; i++) {
+        for (int i = 0; i < 156250; i++) {
         ^~~
         VITIS_LOOP_134_3: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1022:9: note: FIX-IT applied suggested code changes
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1028:5: warning: Added loop label VITIS_LOOP_140_4:   [xilinx-label-all-loops]
-    for (int i = 0; i < 312500; i++) {
+    for (int i = 0; i < 156250; i++) {
     ^~~
     VITIS_LOOP_140_4: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1028:5: note: FIX-IT applied suggested code changes

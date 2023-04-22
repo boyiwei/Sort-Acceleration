@@ -11,14 +11,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4635 \
-    name bucket_sizes_1900_out \
+    name bucket_sizes_6540_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1900_out \
+    corename dc_bucket_sizes_6540_out \
     op interface \
-    ports { bucket_sizes_1900_out { O 32 vector } bucket_sizes_1900_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6540_out { O 32 vector } bucket_sizes_6540_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -26,14 +26,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4636 \
-    name bucket_sizes_1899_out \
+    name bucket_sizes_6539_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1899_out \
+    corename dc_bucket_sizes_6539_out \
     op interface \
-    ports { bucket_sizes_1899_out { O 32 vector } bucket_sizes_1899_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6539_out { O 32 vector } bucket_sizes_6539_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -41,14 +41,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4637 \
-    name bucket_sizes_1898_out \
+    name bucket_sizes_6538_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1898_out \
+    corename dc_bucket_sizes_6538_out \
     op interface \
-    ports { bucket_sizes_1898_out { O 32 vector } bucket_sizes_1898_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6538_out { O 32 vector } bucket_sizes_6538_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -56,14 +56,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4638 \
-    name bucket_sizes_1897_out \
+    name bucket_sizes_6537_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1897_out \
+    corename dc_bucket_sizes_6537_out \
     op interface \
-    ports { bucket_sizes_1897_out { O 32 vector } bucket_sizes_1897_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6537_out { O 32 vector } bucket_sizes_6537_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -71,14 +71,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4639 \
-    name bucket_sizes_1896_out \
+    name bucket_sizes_6536_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1896_out \
+    corename dc_bucket_sizes_6536_out \
     op interface \
-    ports { bucket_sizes_1896_out { O 32 vector } bucket_sizes_1896_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6536_out { O 32 vector } bucket_sizes_6536_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -86,14 +86,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4640 \
-    name bucket_sizes_1895_out \
+    name bucket_sizes_6535_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1895_out \
+    corename dc_bucket_sizes_6535_out \
     op interface \
-    ports { bucket_sizes_1895_out { O 32 vector } bucket_sizes_1895_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6535_out { O 32 vector } bucket_sizes_6535_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -101,14 +101,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4641 \
-    name bucket_sizes_1894_out \
+    name bucket_sizes_6534_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1894_out \
+    corename dc_bucket_sizes_6534_out \
     op interface \
-    ports { bucket_sizes_1894_out { O 32 vector } bucket_sizes_1894_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6534_out { O 32 vector } bucket_sizes_6534_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -116,14 +116,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4642 \
-    name bucket_sizes_1893_out \
+    name bucket_sizes_6533_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1893_out \
+    corename dc_bucket_sizes_6533_out \
     op interface \
-    ports { bucket_sizes_1893_out { O 32 vector } bucket_sizes_1893_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6533_out { O 32 vector } bucket_sizes_6533_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -131,14 +131,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4643 \
-    name bucket_sizes_1892_out \
+    name bucket_sizes_6532_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1892_out \
+    corename dc_bucket_sizes_6532_out \
     op interface \
-    ports { bucket_sizes_1892_out { O 32 vector } bucket_sizes_1892_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6532_out { O 32 vector } bucket_sizes_6532_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -146,14 +146,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4644 \
-    name bucket_sizes_1891_out \
+    name bucket_sizes_6531_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1891_out \
+    corename dc_bucket_sizes_6531_out \
     op interface \
-    ports { bucket_sizes_1891_out { O 32 vector } bucket_sizes_1891_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6531_out { O 32 vector } bucket_sizes_6531_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -161,14 +161,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4645 \
-    name bucket_sizes_1890_out \
+    name bucket_sizes_6530_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1890_out \
+    corename dc_bucket_sizes_6530_out \
     op interface \
-    ports { bucket_sizes_1890_out { O 32 vector } bucket_sizes_1890_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6530_out { O 32 vector } bucket_sizes_6530_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -176,14 +176,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4646 \
-    name bucket_sizes_1889_out \
+    name bucket_sizes_6529_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1889_out \
+    corename dc_bucket_sizes_6529_out \
     op interface \
-    ports { bucket_sizes_1889_out { O 32 vector } bucket_sizes_1889_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6529_out { O 32 vector } bucket_sizes_6529_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -191,14 +191,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4647 \
-    name bucket_sizes_1888_out \
+    name bucket_sizes_6528_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1888_out \
+    corename dc_bucket_sizes_6528_out \
     op interface \
-    ports { bucket_sizes_1888_out { O 32 vector } bucket_sizes_1888_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6528_out { O 32 vector } bucket_sizes_6528_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -206,14 +206,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4648 \
-    name bucket_sizes_1887_out \
+    name bucket_sizes_6527_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1887_out \
+    corename dc_bucket_sizes_6527_out \
     op interface \
-    ports { bucket_sizes_1887_out { O 32 vector } bucket_sizes_1887_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6527_out { O 32 vector } bucket_sizes_6527_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -221,14 +221,14 @@ eval "cg_default_interface_gen_dc { \
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 4649 \
-    name bucket_sizes_1886_out \
+    name bucket_sizes_6526_out \
     type other \
     dir O \
     reset_level 1 \
     sync_rst true \
-    corename dc_bucket_sizes_1886_out \
+    corename dc_bucket_sizes_6526_out \
     op interface \
-    ports { bucket_sizes_1886_out { O 32 vector } bucket_sizes_1886_out_ap_vld { O 1 bit } } \
+    ports { bucket_sizes_6526_out { O 32 vector } bucket_sizes_6526_out_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -312,14 +312,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # flow_control definition:
-set InstName sort_top_32_flow_control_loop_pipe_sequential_init_U
-set CompName sort_top_32_flow_control_loop_pipe_sequential_init
+set InstName sort_top_64_flow_control_loop_pipe_sequential_init_U
+set CompName sort_top_64_flow_control_loop_pipe_sequential_init
 set name flow_control_loop_pipe_sequential_init
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \
     name ${name} \
-    prefix sort_top_32_ \
+    prefix sort_top_64_ \
 }"
 } else {
 puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control, check your platform lib"
