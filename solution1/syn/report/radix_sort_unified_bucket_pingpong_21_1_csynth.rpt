@@ -1,0 +1,237 @@
+
+
+================================================================
+== Vitis HLS Report for 'radix_sort_unified_bucket_pingpong_21_1'
+================================================================
+* Date:           Sat Apr 22 14:45:41 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sort_seperate_bucket
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.257 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  3125219|  3125219|  31.252 ms|  31.252 ms|  3125219|  3125219|       no|
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+        |                                                                                           |                                                                                |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+        |                                          Instance                                         |                                     Module                                     |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+        +-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+        |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_1_fu_380                              |radix_sort_unified_bucket_pingpong_21_1_Pipeline_1                              |       18|       18|  0.180 us|  0.180 us|      18|      18|       no|
+        |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_initialization_fu_400                 |radix_sort_unified_bucket_pingpong_21_1_Pipeline_initialization                 |   312502|   312502|  3.125 ms|  3.125 ms|  312502|  312502|       no|
+        |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_bucket_pointer_initialization_fu_439  |radix_sort_unified_bucket_pingpong_21_1_Pipeline_bucket_pointer_initialization  |       18|       18|  0.180 us|  0.180 us|      18|      18|       no|
+        |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_output_bucket_fu_507                  |radix_sort_unified_bucket_pingpong_21_1_Pipeline_output_bucket                  |   312502|   312502|  3.125 ms|  3.125 ms|  312502|  312502|       no|
+        |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_input_bucket_fu_514                   |radix_sort_unified_bucket_pingpong_21_1_Pipeline_input_bucket                   |   312502|   312502|  3.125 ms|  3.125 ms|  312502|  312502|       no|
+        +-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- sort_procedure  |  2500192|  2500192|    312524|          -|          -|     8|        no|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       62|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     4|     1296|     2050|    -|
+|Memory               |       16|     -|        0|        0|    0|
+|Multiplexer          |        -|     -|        -|      302|    -|
+|Register             |        -|     -|     1121|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |       16|     4|     2417|     2414|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        1|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+---------+----+------+-----+-----+
+    |                                          Instance                                         |                                     Module                                     | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+---------+----+------+-----+-----+
+    |mul_20s_20ns_20_1_1_U4051                                                                  |mul_20s_20ns_20_1_1                                                             |        0|   2|     0|   10|    0|
+    |mul_20s_20ns_20_1_1_U4052                                                                  |mul_20s_20ns_20_1_1                                                             |        0|   2|     0|   10|    0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_1_fu_380                              |radix_sort_unified_bucket_pingpong_21_1_Pipeline_1                              |        0|   0|     7|   49|    0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_bucket_pointer_initialization_fu_439  |radix_sort_unified_bucket_pingpong_21_1_Pipeline_bucket_pointer_initialization  |        0|   0|  1064|  484|    0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_initialization_fu_400                 |radix_sort_unified_bucket_pingpong_21_1_Pipeline_initialization                 |        0|   0|    41|  433|    0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_input_bucket_fu_514                   |radix_sort_unified_bucket_pingpong_21_1_Pipeline_input_bucket                   |        0|   0|   143|  959|    0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_output_bucket_fu_507                  |radix_sort_unified_bucket_pingpong_21_1_Pipeline_output_bucket                  |        0|   0|    41|  105|    0|
+    +-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+---------+----+------+-----+-----+
+    |Total                                                                                      |                                                                                |        0|   4|  1296| 2050|    0|
+    +-------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------+--------------------------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
+    |  Memory  |                            Module                            | BRAM_18K| FF| LUT| URAM|  Words | Bits| Banks| W*Bits*Banks|
+    +----------+--------------------------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
+    |bucket_U  |radix_sort_unified_bucket_pingpong_21_1_bucket_RAM_AUTO_1R1W  |       16|  0|   0|    0|  625000|   32|     1|     20000000|
+    +----------+--------------------------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
+    |Total     |                                                              |       16|  0|   0|    0|  625000|   32|     1|     20000000|
+    +----------+--------------------------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |i_29_fu_669_p2        |         +|   0|  0|  12|           4|           1|
+    |bucket_num_fu_943_p2  |         -|   0|  0|  39|           1|          32|
+    |icmp_ln78_fu_663_p2   |      icmp|   0|  0|   9|           4|           5|
+    |ap_block_state1       |        or|   0|  0|   2|           1|           1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0|  62|          10|          39|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  54|         10|    1|         10|
+    |ap_done                  |   9|          2|    1|          2|
+    |bucket_address0          |  20|          4|   20|         80|
+    |bucket_ce0               |  20|          4|    1|          4|
+    |bucket_ce1               |   9|          2|    1|          2|
+    |bucket_d0                |  14|          3|   32|         96|
+    |bucket_num_012_fu_52     |   9|          2|   32|         64|
+    |bucket_sizes_781_fu_124  |   9|          2|   32|         64|
+    |bucket_sizes_782_fu_128  |   9|          2|   32|         64|
+    |bucket_sizes_783_fu_132  |   9|          2|   32|         64|
+    |bucket_sizes_784_fu_136  |   9|          2|   32|         64|
+    |bucket_sizes_785_fu_140  |   9|          2|   32|         64|
+    |bucket_sizes_786_fu_144  |   9|          2|   32|         64|
+    |bucket_sizes_787_fu_148  |   9|          2|   32|         64|
+    |bucket_sizes_788_fu_152  |   9|          2|   32|         64|
+    |bucket_sizes_789_fu_156  |   9|          2|   32|         64|
+    |bucket_sizes_790_fu_160  |   9|          2|   32|         64|
+    |bucket_sizes_791_fu_164  |   9|          2|   32|         64|
+    |bucket_sizes_792_fu_168  |   9|          2|   32|         64|
+    |bucket_sizes_793_fu_172  |   9|          2|   32|         64|
+    |bucket_sizes_794_fu_176  |   9|          2|   32|         64|
+    |bucket_sizes_795_fu_180  |   9|          2|   32|         64|
+    |bucket_sizes_fu_120      |   9|          2|   32|         64|
+    |bucket_we0               |  14|          3|    1|          3|
+    |i_011_fu_48              |   9|          2|    4|          8|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 302|         64|  605|       1293|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                                  Name                                                  | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                                               |   9|   0|    9|          0|
+    |ap_done_reg                                                                                             |   1|   0|    1|          0|
+    |bucket_num_012_fu_52                                                                                    |  32|   0|   32|          0|
+    |bucket_pointer_598_fu_60                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_599_fu_64                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_600_fu_68                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_601_fu_72                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_602_fu_76                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_603_fu_80                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_604_fu_84                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_605_fu_88                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_606_fu_92                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_607_fu_96                                                                                |  32|   0|   32|          0|
+    |bucket_pointer_608_fu_100                                                                               |  32|   0|   32|          0|
+    |bucket_pointer_609_fu_104                                                                               |  32|   0|   32|          0|
+    |bucket_pointer_610_fu_108                                                                               |  32|   0|   32|          0|
+    |bucket_pointer_611_fu_112                                                                               |  32|   0|   32|          0|
+    |bucket_pointer_612_fu_116                                                                               |  32|   0|   32|          0|
+    |bucket_pointer_fu_56                                                                                    |  32|   0|   32|          0|
+    |bucket_sizes_781_fu_124                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_782_fu_128                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_783_fu_132                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_784_fu_136                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_785_fu_140                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_786_fu_144                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_787_fu_148                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_788_fu_152                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_789_fu_156                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_790_fu_160                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_791_fu_164                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_792_fu_168                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_793_fu_172                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_794_fu_176                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_795_fu_180                                                                                 |  32|   0|   32|          0|
+    |bucket_sizes_fu_120                                                                                     |  32|   0|   32|          0|
+    |empty_116_reg_1641                                                                                      |   3|   0|    3|          0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_1_fu_380_ap_start_reg                              |   1|   0|    1|          0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_bucket_pointer_initialization_fu_439_ap_start_reg  |   1|   0|    1|          0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_initialization_fu_400_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_input_bucket_fu_514_ap_start_reg                   |   1|   0|    1|          0|
+    |grp_radix_sort_unified_bucket_pingpong_21_1_Pipeline_output_bucket_fu_507_ap_start_reg                  |   1|   0|    1|          0|
+    |i_011_fu_48                                                                                             |   4|   0|    4|          0|
+    |mul_ln93_reg_1742                                                                                       |  20|   0|   20|          0|
+    |mul_ln95_reg_1752                                                                                       |  20|   0|   20|          0|
+    |mul_reg_1747                                                                                            |   3|   0|    5|          2|
+    +--------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                                   |1121|   0| 1123|          2|
+    +--------------------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-----------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |              Source Object              |    C Type    |
++----------------------+-----+-----+------------+-----------------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.21.1|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.21.1|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.21.1|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.21.1|  return value|
+|ap_continue           |   in|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.21.1|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.21.1|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.21.1|  return value|
+|input_20_address0     |  out|   19|   ap_memory|                                 input_20|         array|
+|input_20_ce0          |  out|    1|   ap_memory|                                 input_20|         array|
+|input_20_q0           |   in|   32|   ap_memory|                                 input_20|         array|
+|sorted_data_address0  |  out|   19|   ap_memory|                              sorted_data|         array|
+|sorted_data_ce0       |  out|    1|   ap_memory|                              sorted_data|         array|
+|sorted_data_we0       |  out|    1|   ap_memory|                              sorted_data|         array|
+|sorted_data_d0        |  out|   32|   ap_memory|                              sorted_data|         array|
++----------------------+-----+-----+------------+-----------------------------------------+--------------+
+

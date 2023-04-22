@@ -878,9 +878,8 @@ extern int __overflow (FILE *, int);
 
 
 
-
-void input_bucket_2(int i, int sorted_data[10000000], int bucket[16][10000000/2], int bucket_pointer[16], int start){
- VITIS_LOOP_11_1: for (int j = start; j < 10000000/2; j++) {
+void input_bucket_2(int i, int sorted_data[312500], int bucket[16][312500/2], int bucket_pointer[16], int start){
+ VITIS_LOOP_10_1: for (int j = start; j < 312500/2; j++) {
   int shifted = sorted_data[j] >> (i * 4);
   int ith_radix = shifted & 0xf;
   bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];
@@ -888,60 +887,38 @@ void input_bucket_2(int i, int sorted_data[10000000], int bucket[16][10000000/2]
  }
 }
 
-void input_bucket_5(int i, int sorted_data[10000000], int bucket[16][10000000/5], int bucket_pointer[16], int start){
- VITIS_LOOP_20_1: for (int j = start; j < 10000000/2; j++) {
-  int shifted = sorted_data[j] >> (i * 4);
-  int ith_radix = shifted & 0xf;
-  bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];
-  bucket_pointer[ith_radix] += 1;
- }
-}
-
-void input_bucket_parallel_2(int i, int sorted_data[10000000], int bucket[2][16][10000000/2], int bucket_pointer0[16], int bucket_pointer1[16]) {
+void input_bucket_parallel_2(int i, int sorted_data[312500], int bucket[2][16][312500/2], int bucket_pointer[2][16]) {
 #pragma HLS DATAFLOW
- input_bucket_2(i, sorted_data, bucket[0], bucket_pointer0, 0);
-    input_bucket_2(i, sorted_data, bucket[1], bucket_pointer1, 10000000/2);
+ input_bucket_2(i, sorted_data, bucket[0], bucket_pointer[0], 0);
+    input_bucket_2(i, sorted_data, bucket[1], bucket_pointer[1], 312500/2);
 }
 
-
-void input_bucket_parallel_5(int i,
-  int sorted_data0[10000000/5], int sorted_data1[10000000/5], int sorted_data2[10000000/5], int sorted_data3[10000000/5], int sorted_data4[10000000/5],
-  int bucket0[16][10000000/5], int bucket1[16][10000000/5], int bucket2[16][10000000/5], int bucket3[16][10000000/5], int bucket4[16][10000000/5],
-  int bucket_pointer0[16], int bucket_pointer1[16], int bucket_pointer2[16], int bucket_pointer3[16], int bucket_pointer4[16]) {
-#pragma HLS DATAFLOW
- input_bucket_5(i, sorted_data0, bucket0, bucket_pointer0, 0);
-    input_bucket_5(i, sorted_data1, bucket1, bucket_pointer1, 10000000/5);
-    input_bucket_5(i, sorted_data2, bucket2, bucket_pointer2, 2*10000000/5);
-    input_bucket_5(i, sorted_data3, bucket3, bucket_pointer3, 3*10000000/5);
-    input_bucket_5(i, sorted_data4, bucket4, bucket_pointer4, 4*10000000/5);
-}
-
-
-void radix_sort_separate_bucket_parallel_2(int data[10000000], int sorted_data[10000000]){
- int bucket[2][16][10000000/2];
- int bucket_pointer0[16] = {0};
- int bucket_pointer1[16] = {0};
+void radix_sort_separate_bucket_parallel_2(int data[312500], int sorted_data[312500]){
+ int bucket[2][16][312500/2];
+ int bucket_pointer[2][16] = {0};
+#pragma HLS ARRAY_PARTITION variable=bucket type=complete dim=1
+#pragma HLS ARRAY_PARTITION variable=bucket_pointer type=complete dim=1
  int k = 0;
 
  initialization:
- for(int j=0; j<10000000; j++){
+ for(int j=0; j<312500; j++){
   sorted_data[j] = data[j];
  }
 
  sort_procedure:
  for(int i=0; i<32/4; i++){
 
-  input_bucket_parallel_2(i, sorted_data, bucket, bucket_pointer0, bucket_pointer1);
+  input_bucket_parallel_2(i, sorted_data, bucket, bucket_pointer);
 
   output_bucket:
   for (int l = 0; l < 16; l++) {
-   VITIS_LOOP_66_1: for(int m1=0; m1<bucket_pointer0[l]; m1++){
-#pragma HLS loop_tripcount min=0 max=10000000/2-1
+   VITIS_LOOP_43_1: for(int m1=0; m1<bucket_pointer[0][l]; m1++){
+#pragma HLS loop_tripcount min=0 max=312500/2-1
  sorted_data[k] = bucket[0][l][m1];
     k = k + 1;
    }
-   VITIS_LOOP_71_2: for(int m2=0; m2<bucket_pointer1[l]; m2++){
-#pragma HLS loop_tripcount min=0 max=10000000/2-1
+   VITIS_LOOP_48_2: for(int m2=0; m2<bucket_pointer[1][l]; m2++){
+#pragma HLS loop_tripcount min=0 max=312500/2-1
  sorted_data[k] = bucket[1][l][m2];
     k = k + 1;
    }
@@ -950,54 +927,81 @@ void radix_sort_separate_bucket_parallel_2(int data[10000000], int sorted_data[1
 
   clear_bucket_pointer:
   for(int n=0; n<16; n++){
-   bucket_pointer0[n] = 0;
-   bucket_pointer1[n] = 0;
+   bucket_pointer[0][n] = 0;
+   bucket_pointer[1][n] = 0;
   }
   k = 0;
  }
 }
 
-void radix_sort_separate_bucket_parallel_5(int data[10000000], int sorted_data[10000000]){
- int bucket0[16][10000000/5];
- int bucket1[16][10000000/5];
- int bucket2[16][10000000/5];
- int bucket3[16][10000000/5];
- int bucket4[16][10000000/5];
+
+
+
+void input_bucket_5(int i, int sorted_data[312500], int bucket[16][312500/5], int bucket_pointer[16], int start){
+ VITIS_LOOP_69_1: for (int j = start; j < 312500/2; j++) {
+  int shifted = sorted_data[j] >> (i * 4);
+  int ith_radix = shifted & 0xf;
+  bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];
+  bucket_pointer[ith_radix] += 1;
+ }
+}
+
+void input_bucket_parallel_5(int i,
+  int sorted_data0[312500/5], int sorted_data1[312500/5], int sorted_data2[312500/5], int sorted_data3[312500/5], int sorted_data4[312500/5],
+  int bucket0[16][312500/5], int bucket1[16][312500/5], int bucket2[16][312500/5], int bucket3[16][312500/5], int bucket4[16][312500/5],
+  int bucket_pointer0[16], int bucket_pointer1[16], int bucket_pointer2[16], int bucket_pointer3[16], int bucket_pointer4[16]) {
+#pragma HLS DATAFLOW
+ input_bucket_5(i, sorted_data0, bucket0, bucket_pointer0, 0);
+    input_bucket_5(i, sorted_data1, bucket1, bucket_pointer1, 312500/5);
+    input_bucket_5(i, sorted_data2, bucket2, bucket_pointer2, 2*312500/5);
+    input_bucket_5(i, sorted_data3, bucket3, bucket_pointer3, 3*312500/5);
+    input_bucket_5(i, sorted_data4, bucket4, bucket_pointer4, 4*312500/5);
+}
+
+
+
+
+void radix_sort_separate_bucket_parallel_5(int data[312500], int sorted_data[312500]){
+ int bucket0[16][312500/5];
+ int bucket1[16][312500/5];
+ int bucket2[16][312500/5];
+ int bucket3[16][312500/5];
+ int bucket4[16][312500/5];
  int bucket_pointer0[16] = {0};
  int bucket_pointer1[16] = {0};
  int bucket_pointer2[16] = {0};
  int bucket_pointer3[16] = {0};
  int bucket_pointer4[16] = {0};
- int sorted_data0[10000000/5];
- int sorted_data1[10000000/5];
- int sorted_data2[10000000/5];
- int sorted_data3[10000000/5];
- int sorted_data4[10000000/5];
+ int sorted_data0[312500/5];
+ int sorted_data1[312500/5];
+ int sorted_data2[312500/5];
+ int sorted_data3[312500/5];
+ int sorted_data4[312500/5];
  int k = 0;
 
  initialization:
- for(int j=0; j<10000000; j++){
+ for(int j=0; j<312500; j++){
   sorted_data[j] = data[j];
  }
 
  sort_procedure:
  for(int i=0; i<32/4; i++){
   inner_loop_initialization:
-  for(int j=0; j<10000000; j++){
-   if (j >= 0 && j < 10000000 / 5) {
+  for(int j=0; j<312500; j++){
+   if (j >= 0 && j < 312500 / 5) {
     sorted_data0[j] = sorted_data[j];
    }
-   else if (j >= 10000000 / 5 && j < 2 * 10000000 / 5) {
-    sorted_data1[j - 10000000 / 5] = sorted_data[j];
+   else if (j >= 312500 / 5 && j < 2 * 312500 / 5) {
+    sorted_data1[j - 312500 / 5] = sorted_data[j];
    }
-   else if (j >= 2 * 10000000 / 5 && j < 3 * 10000000 / 5) {
-    sorted_data2[j - 2 * 10000000 / 5] = sorted_data[j];
+   else if (j >= 2 * 312500 / 5 && j < 3 * 312500 / 5) {
+    sorted_data2[j - 2 * 312500 / 5] = sorted_data[j];
    }
-   else if (j >= 3 * 10000000 / 5 && j < 4 * 10000000 / 5) {
-    sorted_data3[j - 3 * 10000000 / 5] = sorted_data[j];
+   else if (j >= 3 * 312500 / 5 && j < 4 * 312500 / 5) {
+    sorted_data3[j - 3 * 312500 / 5] = sorted_data[j];
    }
-   else if (j >= 4 * 10000000 / 5 && j < 10000000) {
-    sorted_data4[j - 4 * 10000000 / 5] = sorted_data[j];
+   else if (j >= 4 * 312500 / 5 && j < 312500) {
+    sorted_data4[j - 4 * 312500 / 5] = sorted_data[j];
    }
   }
   input_bucket_parallel_5(i,
@@ -1007,28 +1011,28 @@ void radix_sort_separate_bucket_parallel_5(int data[10000000], int sorted_data[1
 
   output_bucket:
   for (int l = 0; l < 16; l++) {
-   VITIS_LOOP_138_1: for(int m0=0; m0<bucket_pointer0[l]; m0++){
-#pragma HLS loop_tripcount min=0 max=10000000/5-1
+   VITIS_LOOP_142_1: for(int m0=0; m0<bucket_pointer0[l]; m0++){
+#pragma HLS loop_tripcount min=0 max=312500/5-1
  sorted_data[k] = bucket0[l][m0];
     k = k + 1;
    }
-   VITIS_LOOP_143_2: for(int m1=0; m1<bucket_pointer1[l]; m1++){
-#pragma HLS loop_tripcount min=0 max=10000000/5-1
+   VITIS_LOOP_147_2: for(int m1=0; m1<bucket_pointer1[l]; m1++){
+#pragma HLS loop_tripcount min=0 max=312500/5-1
  sorted_data[k] = bucket1[l][m1];
     k = k + 1;
    }
-   VITIS_LOOP_148_3: for(int m2=0; m2<bucket_pointer2[l]; m2++){
-#pragma HLS loop_tripcount min=0 max=10000000/5-1
+   VITIS_LOOP_152_3: for(int m2=0; m2<bucket_pointer2[l]; m2++){
+#pragma HLS loop_tripcount min=0 max=312500/5-1
  sorted_data[k] = bucket2[l][m2];
     k = k + 1;
    }
-   VITIS_LOOP_153_4: for(int m3=0; m3<bucket_pointer3[l]; m3++){
-#pragma HLS loop_tripcount min=0 max=10000000/5-1
+   VITIS_LOOP_157_4: for(int m3=0; m3<bucket_pointer3[l]; m3++){
+#pragma HLS loop_tripcount min=0 max=312500/5-1
  sorted_data[k] = bucket3[l][m3];
     k = k + 1;
    }
-   VITIS_LOOP_158_5: for(int m4=0; m4<bucket_pointer2[l]; m4++){
-#pragma HLS loop_tripcount min=0 max=10000000/5-1
+   VITIS_LOOP_162_5: for(int m4=0; m4<bucket_pointer2[l]; m4++){
+#pragma HLS loop_tripcount min=0 max=312500/5-1
  sorted_data[k] = bucket4[l][m4];
     k = k + 1;
    }

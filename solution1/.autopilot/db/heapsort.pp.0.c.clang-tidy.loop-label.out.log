@@ -4,7 +4,7 @@
  VITIS_LOOP_18_1: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c:1942:2: note: FIX-IT applied suggested code changes
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c:1983:5: warning: Added loop label VITIS_LOOP_59_1:   [xilinx-label-all-loops]
-    for (j = 10000000 - 1; j >= 0; j--) {
+    for (j = 312500 - 1; j >= 0; j--) {
     ^~~
     VITIS_LOOP_59_1: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c:1983:5: note: FIX-IT applied suggested code changes

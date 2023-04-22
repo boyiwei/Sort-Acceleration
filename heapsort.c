@@ -71,26 +71,3 @@ void heap_sort(int input[batch_size], int output[batch_size]) {
 	}
 }
 
-//// Top-level function for HLS synthesis
-//void heap_sort_hls(int *input_array, int *output_array, int batch_size) {
-//#pragma HLS INTERFACE m_axi depth=1024 port=input_array offset=slave bundle=gmem
-//#pragma HLS INTERFACE m_axi depth=1024 port=output_array offset=slave bundle=gmem
-//#pragma HLS INTERFACE s_axilite port=batch_size bundle=control
-//#pragma HLS INTERFACE s_axilite port=return bundle=control
-//
-//    // Copy input data to local memory
-//    int data[1024];
-//    for (int i = 0; i < batch_size; i++) {
-//#pragma HLS pipeline
-//        data[i] = input_array[i];
-//    }
-//
-//    // Perform heap sort on the data
-//    heapSort(data, batch_size);
-//
-//    // Copy sorted data back to output array
-//    for (int i = 0; i < batch_size; i++) {
-//#pragma HLS pipeline
-//        output_array[i] = data[i];
-//    }
-//}

@@ -8,15 +8,38 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.1.2' to 'merge_arrays_1_2'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.203-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.23' to 'merge_arrays_23'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.201-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.22' to 'merge_arrays_22'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.199-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.21' to 'merge_arrays_21'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.198-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.20' to 'merge_arrays_20'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.196-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.19' to 'merge_arrays_19'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.195-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.18' to 'merge_arrays_18'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.193-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.17' to 'merge_arrays_17'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.191-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_arrays.16' to 'merge_arrays_16'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-20T09:45:07.190-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.1' to 'merge_sort_1'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:26.657-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.61' to 'merge_sort_61'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.739-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.60' to 'merge_sort_60'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.733-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.59' to 'merge_sort_59'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.727-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.58' to 'merge_sort_58'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.721-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.57' to 'merge_sort_57'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.715-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.56' to 'merge_sort_56'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.709-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.55' to 'merge_sort_55'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.702-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.54' to 'merge_sort_54'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.696-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.53' to 'merge_sort_53'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.689-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.52' to 'merge_sort_52'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.683-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.51' to 'merge_sort_51'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.677-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.50' to 'merge_sort_50'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.673-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.49' to 'merge_sort_49'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.667-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.48' to 'merge_sort_48'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.661-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.47' to 'merge_sort_47'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.657-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.46' to 'merge_sort_46'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.650-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.45' to 'merge_sort_45'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.644-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.44' to 'merge_sort_44'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.638-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.43' to 'merge_sort_43'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.632-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.42' to 'merge_sort_42'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.625-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.41' to 'merge_sort_41'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.620-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.40' to 'merge_sort_40'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.614-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.39' to 'merge_sort_39'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.608-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.38' to 'merge_sort_38'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.602-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.37' to 'merge_sort_37'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.596-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.36' to 'merge_sort_36'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.590-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.35' to 'merge_sort_35'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.584-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.34' to 'merge_sort_34'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.579-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.33' to 'merge_sort_33'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.573-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.32' to 'merge_sort_32'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.567-0700" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'radix_sort_unified_bucket_pingpong.1.2' to 'radix_sort_unified_bucket_pingpong_1_2'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T14:43:25.561-0700" type="Warning"/>
       </synLog>
     </logs>
   </warningLogs>

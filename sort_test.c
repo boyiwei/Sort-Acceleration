@@ -21,7 +21,7 @@ int main(){
     printf("Checking results\n");
 //    radix_sort_seperate_bucket_parallel(input[1], sorted_data);
 //    heap_sort(data, batch_size);
-    merge_sort_parallel(data, sorted_data);
+    radix_sort_unified_bucket_pingpong(data, sorted_data);
     int i;
     for(i=0; i<batch_size; i++){
         printf("Sorted_results: rank %d, value= %d \n", i, sorted_data[i]);

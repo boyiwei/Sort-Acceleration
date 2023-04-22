@@ -1,5 +1,5 @@
 
-set TopModule "merge_sort_parallel"
+set TopModule "sort_top_32"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 1
@@ -23,7 +23,7 @@ set ResetRegisterNum 0
 set FsmEncStyle onehot
 set MaxFanout 0
 set RtlPrefix {}
-set RtlSubPrefix merge_sort_parallel_
+set RtlSubPrefix sort_top_32_
 set ExtraCCFlags {}
 set ExtraCLdFlags {}
 set SynCheckOptions {}

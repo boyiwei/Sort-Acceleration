@@ -11,7 +11,7 @@ Diagnostics:
     FilePath:        sort_seperate_bucket/merge_sort.c
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-6] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop'
-    FileOffset:      '119:68'
+    FileOffset:      '119:66'
     FilePath:        sort_seperate_bucket/merge_sort.c
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-10] Either use an argument of the function or declare the variable inside the dataflow loop body'

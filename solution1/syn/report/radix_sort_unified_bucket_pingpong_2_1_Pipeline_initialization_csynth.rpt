@@ -1,0 +1,235 @@
+
+
+================================================================
+== Vitis HLS Report for 'radix_sort_unified_bucket_pingpong_2_1_Pipeline_initialization'
+================================================================
+* Date:           Sat Apr 22 14:45:01 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sort_seperate_bucket
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.008 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   312502|   312502|  3.125 ms|  3.125 ms|  312502|  312502|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- initialization  |   312500|   312500|         2|          1|          1|  312500|       yes|
+        +------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|      108|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|       65|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      260|    -|
+|Register             |        -|     -|       41|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       41|      433|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+----------------+---------+----+---+----+-----+
+    |       Instance      |     Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +---------------------+----------------+---------+----+---+----+-----+
+    |mux_164_32_1_1_U212  |mux_164_32_1_1  |        0|   0|  0|  65|    0|
+    +---------------------+----------------+---------+----+---+----+-----+
+    |Total                |                |        0|   0|  0|  65|    0|
+    +---------------------+----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln71_fu_373_p2      |         +|   0|  0|  26|          19|           1|
+    |add_ln72_fu_456_p2      |         +|   0|  0|  27|          20|          19|
+    |bucket_sizes_fu_509_p2  |         +|   0|  0|  39|          32|           1|
+    |icmp_ln71_fu_367_p2     |      icmp|   0|  0|  14|          19|          19|
+    |ap_enable_pp0           |       xor|   0|  0|   2|           1|           2|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 108|          91|          42|
+    +------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_j_21    |   9|          2|   19|         38|
+    |bucket_sizes_2787_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2788_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2789_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2790_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2791_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2792_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2793_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2794_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2795_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2796_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2797_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2798_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2799_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2800_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2801_out_o  |  14|          3|   32|         96|
+    |bucket_sizes_2802_out_o  |  14|          3|   32|         96|
+    |j_fu_136                 |   9|          2|   19|         38|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 260|         56|  552|       1616|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |j_21_reg_618             |  19|   0|   19|          0|
+    |j_fu_136                 |  19|   0|   19|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  41|   0|   41|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+----------------------------------------------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |                          Source Object                         |    C Type    |
++--------------------------------+-----+-----+------------+----------------------------------------------------------------+--------------+
+|ap_clk                          |   in|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.2.1_Pipeline_initialization|  return value|
+|ap_rst                          |   in|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.2.1_Pipeline_initialization|  return value|
+|ap_start                        |   in|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.2.1_Pipeline_initialization|  return value|
+|ap_done                         |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.2.1_Pipeline_initialization|  return value|
+|ap_idle                         |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.2.1_Pipeline_initialization|  return value|
+|ap_ready                        |  out|    1|  ap_ctrl_hs|  radix_sort_unified_bucket_pingpong.2.1_Pipeline_initialization|  return value|
+|bucket_sizes_2770_reload        |   in|   32|     ap_none|                                        bucket_sizes_2770_reload|        scalar|
+|bucket_sizes_2769_reload        |   in|   32|     ap_none|                                        bucket_sizes_2769_reload|        scalar|
+|bucket_sizes_2768_reload        |   in|   32|     ap_none|                                        bucket_sizes_2768_reload|        scalar|
+|bucket_sizes_2767_reload        |   in|   32|     ap_none|                                        bucket_sizes_2767_reload|        scalar|
+|bucket_sizes_2766_reload        |   in|   32|     ap_none|                                        bucket_sizes_2766_reload|        scalar|
+|bucket_sizes_2765_reload        |   in|   32|     ap_none|                                        bucket_sizes_2765_reload|        scalar|
+|bucket_sizes_2764_reload        |   in|   32|     ap_none|                                        bucket_sizes_2764_reload|        scalar|
+|bucket_sizes_2763_reload        |   in|   32|     ap_none|                                        bucket_sizes_2763_reload|        scalar|
+|bucket_sizes_2762_reload        |   in|   32|     ap_none|                                        bucket_sizes_2762_reload|        scalar|
+|bucket_sizes_2761_reload        |   in|   32|     ap_none|                                        bucket_sizes_2761_reload|        scalar|
+|bucket_sizes_2760_reload        |   in|   32|     ap_none|                                        bucket_sizes_2760_reload|        scalar|
+|bucket_sizes_2759_reload        |   in|   32|     ap_none|                                        bucket_sizes_2759_reload|        scalar|
+|bucket_sizes_2758_reload        |   in|   32|     ap_none|                                        bucket_sizes_2758_reload|        scalar|
+|bucket_sizes_2757_reload        |   in|   32|     ap_none|                                        bucket_sizes_2757_reload|        scalar|
+|bucket_sizes_2756_reload        |   in|   32|     ap_none|                                        bucket_sizes_2756_reload|        scalar|
+|bucket_sizes_reload             |   in|   32|     ap_none|                                             bucket_sizes_reload|        scalar|
+|bucket_address0                 |  out|   20|   ap_memory|                                                          bucket|         array|
+|bucket_ce0                      |  out|    1|   ap_memory|                                                          bucket|         array|
+|bucket_we0                      |  out|    1|   ap_memory|                                                          bucket|         array|
+|bucket_d0                       |  out|   32|   ap_memory|                                                          bucket|         array|
+|input_1_address0                |  out|   19|   ap_memory|                                                         input_1|         array|
+|input_1_ce0                     |  out|    1|   ap_memory|                                                         input_1|         array|
+|input_1_q0                      |   in|   32|   ap_memory|                                                         input_1|         array|
+|bucket_sizes_2802_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2802_out|       pointer|
+|bucket_sizes_2802_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2802_out|       pointer|
+|bucket_sizes_2802_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2802_out|       pointer|
+|bucket_sizes_2801_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2801_out|       pointer|
+|bucket_sizes_2801_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2801_out|       pointer|
+|bucket_sizes_2801_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2801_out|       pointer|
+|bucket_sizes_2800_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2800_out|       pointer|
+|bucket_sizes_2800_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2800_out|       pointer|
+|bucket_sizes_2800_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2800_out|       pointer|
+|bucket_sizes_2799_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2799_out|       pointer|
+|bucket_sizes_2799_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2799_out|       pointer|
+|bucket_sizes_2799_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2799_out|       pointer|
+|bucket_sizes_2798_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2798_out|       pointer|
+|bucket_sizes_2798_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2798_out|       pointer|
+|bucket_sizes_2798_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2798_out|       pointer|
+|bucket_sizes_2797_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2797_out|       pointer|
+|bucket_sizes_2797_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2797_out|       pointer|
+|bucket_sizes_2797_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2797_out|       pointer|
+|bucket_sizes_2796_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2796_out|       pointer|
+|bucket_sizes_2796_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2796_out|       pointer|
+|bucket_sizes_2796_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2796_out|       pointer|
+|bucket_sizes_2795_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2795_out|       pointer|
+|bucket_sizes_2795_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2795_out|       pointer|
+|bucket_sizes_2795_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2795_out|       pointer|
+|bucket_sizes_2794_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2794_out|       pointer|
+|bucket_sizes_2794_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2794_out|       pointer|
+|bucket_sizes_2794_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2794_out|       pointer|
+|bucket_sizes_2793_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2793_out|       pointer|
+|bucket_sizes_2793_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2793_out|       pointer|
+|bucket_sizes_2793_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2793_out|       pointer|
+|bucket_sizes_2792_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2792_out|       pointer|
+|bucket_sizes_2792_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2792_out|       pointer|
+|bucket_sizes_2792_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2792_out|       pointer|
+|bucket_sizes_2791_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2791_out|       pointer|
+|bucket_sizes_2791_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2791_out|       pointer|
+|bucket_sizes_2791_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2791_out|       pointer|
+|bucket_sizes_2790_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2790_out|       pointer|
+|bucket_sizes_2790_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2790_out|       pointer|
+|bucket_sizes_2790_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2790_out|       pointer|
+|bucket_sizes_2789_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2789_out|       pointer|
+|bucket_sizes_2789_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2789_out|       pointer|
+|bucket_sizes_2789_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2789_out|       pointer|
+|bucket_sizes_2788_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2788_out|       pointer|
+|bucket_sizes_2788_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2788_out|       pointer|
+|bucket_sizes_2788_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2788_out|       pointer|
+|bucket_sizes_2787_out_i         |   in|   32|     ap_ovld|                                           bucket_sizes_2787_out|       pointer|
+|bucket_sizes_2787_out_o         |  out|   32|     ap_ovld|                                           bucket_sizes_2787_out|       pointer|
+|bucket_sizes_2787_out_o_ap_vld  |  out|    1|     ap_ovld|                                           bucket_sizes_2787_out|       pointer|
++--------------------------------+-----+-----+------------+----------------------------------------------------------------+--------------+
+

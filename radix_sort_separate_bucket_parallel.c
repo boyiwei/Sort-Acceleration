@@ -6,7 +6,6 @@
 #define bit_width_qua bit_width_bin/2
 
 
-
 void input_bucket_2(int i, int sorted_data[batch_size], int bucket[16][batch_size/2], int bucket_pointer[16], int start){
 	for (int j = start; j < batch_size/2; j++) {
 		int shifted = sorted_data[j] >> (i * 4);
@@ -16,6 +15,56 @@ void input_bucket_2(int i, int sorted_data[batch_size], int bucket[16][batch_siz
 	}
 }
 
+void input_bucket_parallel_2(int i, int sorted_data[batch_size], int bucket[2][16][batch_size/2], int bucket_pointer[2][16]) {
+    #pragma HLS DATAFLOW
+    input_bucket_2(i, sorted_data, bucket[0], bucket_pointer[0], 0);
+    input_bucket_2(i, sorted_data, bucket[1], bucket_pointer[1], batch_size/2);
+}
+
+void radix_sort_separate_bucket_parallel_2(int data[batch_size], int sorted_data[batch_size]){
+	int bucket[2][16][batch_size/2]; // Be careful that batch_size can't be an odd number.
+	int bucket_pointer[2][16] = {0};
+#pragma HLS ARRAY_PARTITION variable=bucket type=complete dim=1 // If dim=0, means partition all elements completely
+#pragma HLS ARRAY_PARTITION variable=bucket_pointer type=complete dim=1
+	int k = 0;
+
+	initialization:
+	for(int j=0; j<batch_size; j++){
+		sorted_data[j] = data[j];
+	}
+
+	sort_procedure:
+	for(int i=0; i<bit_width_hex; i++){
+
+		input_bucket_parallel_2(i, sorted_data, bucket, bucket_pointer);
+
+		output_bucket:
+		for (int l = 0; l < 16; l++) {
+			for(int m1=0; m1<bucket_pointer[0][l]; m1++){
+#pragma HLS loop_tripcount min=0 max=batch_size/2-1 // depends on the size of batch_size/n
+				sorted_data[k] = bucket[0][l][m1];
+				k = k + 1;
+			}
+			for(int m2=0; m2<bucket_pointer[1][l]; m2++){
+#pragma HLS loop_tripcount min=0 max=batch_size/2-1
+				sorted_data[k] = bucket[1][l][m2];
+				k = k + 1;
+			}
+		}
+		// printf("k = %d\n", k);
+
+		clear_bucket_pointer:
+		for(int n=0; n<16; n++){
+			bucket_pointer[0][n] = 0;
+			bucket_pointer[1][n] = 0;
+		}
+		k = 0;
+	}
+}
+
+
+//-----------------------------------------------------------------------section line----------------------------------------------------------------------------------------
+
 void input_bucket_5(int i, int sorted_data[batch_size], int bucket[16][batch_size/5], int bucket_pointer[16], int start){
 	for (int j = start; j < batch_size/2; j++) {
 		int shifted = sorted_data[j] >> (i * 4);
@@ -24,13 +73,6 @@ void input_bucket_5(int i, int sorted_data[batch_size], int bucket[16][batch_siz
 		bucket_pointer[ith_radix] += 1;
 	}
 }
-
-void input_bucket_parallel_2(int i, int sorted_data[batch_size], int bucket[2][16][batch_size/2], int bucket_pointer0[16], int bucket_pointer1[16]) {
-    #pragma HLS DATAFLOW
-    input_bucket_2(i, sorted_data, bucket[0], bucket_pointer0, 0);
-    input_bucket_2(i, sorted_data, bucket[1], bucket_pointer1, batch_size/2);
-}
-
 
 void input_bucket_parallel_5(int i,
 		int sorted_data0[batch_size/5], int sorted_data1[batch_size/5], int sorted_data2[batch_size/5], int sorted_data3[batch_size/5], int sorted_data4[batch_size/5],
@@ -45,45 +87,7 @@ void input_bucket_parallel_5(int i,
 }
 
 
-void radix_sort_separate_bucket_parallel_2(int data[batch_size], int sorted_data[batch_size]){
-	int bucket[2][16][batch_size/2]; // Be careful that batch_size can't be an odd number.
-	int bucket_pointer0[16] = {0};
-	int bucket_pointer1[16] = {0};
-	int k = 0;
 
-	initialization:
-	for(int j=0; j<batch_size; j++){
-		sorted_data[j] = data[j];
-	}
-
-	sort_procedure:
-	for(int i=0; i<bit_width_hex; i++){
-
-		input_bucket_parallel_2(i, sorted_data, bucket, bucket_pointer0, bucket_pointer1);
-
-		output_bucket:
-		for (int l = 0; l < 16; l++) {
-			for(int m1=0; m1<bucket_pointer0[l]; m1++){
-#pragma HLS loop_tripcount min=0 max=batch_size/2-1 // depends on the size of batch_size/n
-				sorted_data[k] = bucket[0][l][m1];
-				k = k + 1;
-			}
-			for(int m2=0; m2<bucket_pointer1[l]; m2++){
-#pragma HLS loop_tripcount min=0 max=batch_size/2-1
-				sorted_data[k] = bucket[1][l][m2];
-				k = k + 1;
-			}
-		}
-		// printf("k = %d\n", k);
-
-		clear_bucket_pointer:
-		for(int n=0; n<16; n++){
-			bucket_pointer0[n] = 0;
-			bucket_pointer1[n] = 0;
-		}
-		k = 0;
-	}
-}
 
 void radix_sort_separate_bucket_parallel_5(int data[batch_size], int sorted_data[batch_size]){
 	int bucket0[16][batch_size/5]; // Be careful that batch_size can't be an odd number.

@@ -2,7 +2,7 @@
       "name": "",
       "directive": [
         {
-          "functionName": "merge_sort_parallel",
+          "functionName": "sort_top_32",
           "label": "",
           "functionLabel": "",
           "id": "1",
@@ -12,12 +12,12 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "merge_sort_parallel"
+                "value": "sort_top_32"
               }]
           }
         },
         {
-          "functionName": "merge_sort_parallel",
+          "functionName": "sort_top_32",
           "label": "",
           "functionLabel": "",
           "id": "2",
@@ -27,12 +27,12 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "merge_sort_parallel"
+                "value": "sort_top_32"
               }]
           }
         },
         {
-          "functionName": "merge_sort_parallel",
+          "functionName": "sort_top_32",
           "label": "",
           "functionLabel": "",
           "id": "3",
@@ -42,12 +42,12 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "merge_sort_parallel"
+                "value": "sort_top_32"
               }]
           }
         },
         {
-          "functionName": "merge_sort_parallel",
+          "functionName": "sort_top_32",
           "label": "",
           "functionLabel": "",
           "id": "4",
@@ -57,12 +57,12 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "merge_sort_parallel"
+                "value": "sort_top_32"
               }]
           }
         },
         {
-          "functionName": "merge_sort_parallel",
+          "functionName": "sort_top_32",
           "label": "",
           "functionLabel": "",
           "id": "5",
@@ -72,12 +72,12 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "merge_sort_parallel"
+                "value": "sort_top_32"
               }]
           }
         },
         {
-          "functionName": "merge_sort_parallel",
+          "functionName": "sort_top_32",
           "label": "",
           "functionLabel": "",
           "id": "6",
@@ -87,7 +87,7 @@
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "merge_sort_parallel"
+                "value": "sort_top_32"
               }]
           }
         }
