@@ -2,41 +2,18 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog>
-        <logs message="ERROR: [HLS 200-1715] Encountered problem during source synthesis" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:36.880-0700"/>
-        <logs message="ERROR: [HLS 214-135] Syn check fail!" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:36.869-0700"/>
-        <logs message="ERROR: [HLS 214-143] in function 'radix_sort_unified_bucket_pingpong': Arrays must be specified with a constant size (sort_seperate_bucket/radix_sort.c:61:2)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:36.862-0700"/>
-      </synLog>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-23T10:56:42.058-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-23T10:34:18.761-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-23T10:32:03.103-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-23T10:32:02.942-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-23T10:32:02.937-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-23T10:32:02.922-0700"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog>
-        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sort_seperate_bucket/sort_top.c&#xA;Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-471.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.767-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-169] There are a total of 6 such instances of non-canonical statements in the dataflow region (sort_seperate_bucket/sort_top.c:83:9)&#xA;Resolution: For help on HLS 214-169 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-169.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.405-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/sort_top.c:83:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.378-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-169] There are a total of 5 such instances of non-canonical statements in the dataflow region (sort_seperate_bucket/sort_top.c:35:9)&#xA;Resolution: For help on HLS 214-169 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-169.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.373-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/sort_top.c:35:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.367-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:27.679-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5570] because option is invalid, the pragma LOOP_TRIPCOUNT is ignored (sort_seperate_bucket/radix_sort.c:137:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:26.287-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5566] expression is not an integer constant expression (sort_seperate_bucket/radix_sort.c:137:38)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:25.462-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:124:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:25.444-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:81:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:25.432-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:30:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:25.418-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sort_seperate_bucket/merge_sort.c&#xA;Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-471.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.896-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:121:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.635-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sort_seperate_bucket/merge_sort.c:130:26)&#xA;Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.630-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-109] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop (sort_seperate_bucket/merge_sort.c:119:65)&#xA;Resolution: For help on HLS 214-109 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-109.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.626-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:75:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.621-0700" type="Warning"/>
-        <logs message="WARNING: [HLS 207-5558] Only for-loops and functions support the dataflow (sort_seperate_bucket/merge_sort.c:121:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.614-0700" type="Warning"/>
-      </synLog>
-      <simLog/>
-      <mgLog/>
-      <packageLog/>
       <csimLog/>
     </logs>
   </warningLogs>

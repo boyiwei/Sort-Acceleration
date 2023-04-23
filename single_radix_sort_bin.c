@@ -3,7 +3,7 @@
 #define bit_width_bin 32
 
 
-void radix_sort_unified_bucket_2(int data[dataset_size], int sorted_data[dataset_size])
+void single_radix_sort_bin(int data[dataset_size], int sorted_data[dataset_size])
 {
 
 	int bucket[dataset_size]; // a unified bucket. In this function we only need one bucket with 16 pointer in it.

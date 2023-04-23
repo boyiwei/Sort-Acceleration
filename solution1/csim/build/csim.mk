@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../sort_test.c ../../../heapsort.c ../../../merge_sort.c ../../../radix_sort.c ../../../radix_sort_2.c ../../../radix_sort_separate_bucket_parallel.c ../../../sort_top.c
+HLS_SOURCES = ../../../sort_test.c ../../../heapsort.c ../../../merge_sort.c ../../../multi_heap_kmerge.c ../../../multi_heap_loser.c ../../../multi_radix_bin_kmerge.c ../../../multi_radix_bin_loser.c ../../../multi_radix_hex_kmerge.c ../../../multi_radix_hex_loser.c ../../../multi_radix_oct_kmerge.c ../../../multi_radix_oct_loser.c ../../../radix_sort.c ../../../radix_sort_separate_bucket_parallel.c ../../../single_heap_sort.c ../../../single_merge_sort.c ../../../single_radix_sort_bin.c ../../../single_radix_sort_hex.c ../../../single_radix_sort_oct.c ../../../sort_top.c
 
 override TARGET := csim.exe
 
@@ -78,7 +78,7 @@ AUTOCC := apcc
 
 $(ObjDir)/sort_test.o: ../../../sort_test.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../sort_test.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(AUTOCC) -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/sort_test.d
 
@@ -94,23 +94,95 @@ $(ObjDir)/merge_sort.o: ../../../merge_sort.c $(ObjDir)/.dir
 
 -include $(ObjDir)/merge_sort.d
 
+$(ObjDir)/multi_heap_kmerge.o: ../../../multi_heap_kmerge.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multi_heap_kmerge.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multi_heap_kmerge.d
+
+$(ObjDir)/multi_heap_loser.o: ../../../multi_heap_loser.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multi_heap_loser.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multi_heap_loser.d
+
+$(ObjDir)/multi_radix_bin_kmerge.o: ../../../multi_radix_bin_kmerge.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multi_radix_bin_kmerge.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multi_radix_bin_kmerge.d
+
+$(ObjDir)/multi_radix_bin_loser.o: ../../../multi_radix_bin_loser.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multi_radix_bin_loser.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multi_radix_bin_loser.d
+
+$(ObjDir)/multi_radix_hex_kmerge.o: ../../../multi_radix_hex_kmerge.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multi_radix_hex_kmerge.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multi_radix_hex_kmerge.d
+
+$(ObjDir)/multi_radix_hex_loser.o: ../../../multi_radix_hex_loser.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multi_radix_hex_loser.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multi_radix_hex_loser.d
+
+$(ObjDir)/multi_radix_oct_kmerge.o: ../../../multi_radix_oct_kmerge.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multi_radix_oct_kmerge.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multi_radix_oct_kmerge.d
+
+$(ObjDir)/multi_radix_oct_loser.o: ../../../multi_radix_oct_loser.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../multi_radix_oct_loser.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/multi_radix_oct_loser.d
+
 $(ObjDir)/radix_sort.o: ../../../radix_sort.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../radix_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/radix_sort.d
 
-$(ObjDir)/radix_sort_2.o: ../../../radix_sort_2.c $(ObjDir)/.dir
-	$(Echo) "   Compiling(apcc) ../../../radix_sort_2.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/radix_sort_2.d
-
 $(ObjDir)/radix_sort_separate_bucket_parallel.o: ../../../radix_sort_separate_bucket_parallel.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../radix_sort_separate_bucket_parallel.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/radix_sort_separate_bucket_parallel.d
+
+$(ObjDir)/single_heap_sort.o: ../../../single_heap_sort.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../single_heap_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/single_heap_sort.d
+
+$(ObjDir)/single_merge_sort.o: ../../../single_merge_sort.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../single_merge_sort.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/single_merge_sort.d
+
+$(ObjDir)/single_radix_sort_bin.o: ../../../single_radix_sort_bin.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../single_radix_sort_bin.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/single_radix_sort_bin.d
+
+$(ObjDir)/single_radix_sort_hex.o: ../../../single_radix_sort_hex.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../single_radix_sort_hex.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/single_radix_sort_hex.d
+
+$(ObjDir)/single_radix_sort_oct.o: ../../../single_radix_sort_oct.c $(ObjDir)/.dir
+	$(Echo) "   Compiling(apcc) ../../../single_radix_sort_oct.c in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(AUTOCC) -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/single_radix_sort_oct.d
 
 $(ObjDir)/sort_top.o: ../../../sort_top.c $(ObjDir)/.dir
 	$(Echo) "   Compiling(apcc) ../../../sort_top.c in $(BuildMode) mode" $(AVE_DIR_DLOG)

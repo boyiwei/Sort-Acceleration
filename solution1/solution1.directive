@@ -5,31 +5,6 @@
                 <option name="name" value="radix_sort_unified_bucket_pingpong"/>
             </pragma>
         </directive>
-        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
-            </pragma>
-        </directive>
-        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
-            </pragma>
-        </directive>
-        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
-            </pragma>
-        </directive>
-        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
-            </pragma>
-        </directive>
-        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
-            </pragma>
-        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

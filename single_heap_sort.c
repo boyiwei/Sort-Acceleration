@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "dataset_size.h"
 
-int batch_size = dataset_size;
+
 
 // Function to swap two elements
 void swap(int *x, int *y) {
@@ -12,7 +12,7 @@ void swap(int *x, int *y) {
 }
 
 // Function to heapify a subtree rooted at index i
-void maxHeapify(int arr[batch_size], int n, int i) {
+void maxHeapify(int arr[dataset_size], int n, int i) {
 	while (1) {
 	        int largest = i;
 	        int left = 2 * i + 1;
@@ -38,23 +38,23 @@ void maxHeapify(int arr[batch_size], int n, int i) {
 
 
 // Main function to do heap sort
-void heap_sort(int input[batch_size], int output[batch_size]) {
-	int data[batch_size];
+void single_heap_sort(int input[dataset_size], int output[dataset_size]) {
+	int data[dataset_size];
 	int i = 0;
 	int j = 0;
 	initialization:
-	for(i=0; i<batch_size; i++){
+	for(i=0; i<dataset_size; i++){
 #pragma HLS PIPELINE
 		data[i] = input[i];
 	}
 
 	heap_sort_procedure:
     // Build max heap
-    for (i = batch_size / 2 - 1; i >= 0; i--)
-        maxHeapify(data, batch_size, i);
+    for (i = dataset_size / 2 - 1; i >= 0; i--)
+        maxHeapify(data, dataset_size, i);
 
     // Extract elements from heap
-    for (j = batch_size - 1; j >= 0; j--) {
+    for (j = dataset_size - 1; j >= 0; j--) {
         // Move the current root to the end
         swap(&data[0], &data[j]);
 
@@ -63,7 +63,7 @@ void heap_sort(int input[batch_size], int output[batch_size]) {
     }
 
     output_data:
-	for(j=0; j<batch_size; j++){
+	for(j=0; j<dataset_size; j++){
 #pragma HLS PIPELINE
 		output[j] = data[j];
 	}

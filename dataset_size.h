@@ -1,1 +1,1 @@
-#define dataset_size 1000000
+#define dataset_size 640

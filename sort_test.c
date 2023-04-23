@@ -1,9 +1,12 @@
 #include <stdio.h>
-#include "batch_size.h"
+#include "dataset_size.h"
+
+#define batch_size dataset_size/64
 
 void radix_sort_64_test(){
 	int dataset[] = {
-#include "/home/boyiw7/dataset_gen/dataset_1M_1.h"
+//#include "/home/boyiw7/dataset_gen/dataset_1M_1.h"
+#include "dataset.h"
 	};
 
 	int input[64][batch_size] = {0};
@@ -16,7 +19,7 @@ void radix_sort_64_test(){
 		}
 	}
 	printf("All done before\n");
-	sort_top_64(input, output);
+	multi_radix_hex_kmerge(input, output);
 	for(i=0; i<64*batch_size; i++){
 	        printf("Sorted_results: rank %d, value= %d \n", i, output[i]);
 	    }
