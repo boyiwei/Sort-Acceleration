@@ -21,9 +21,9 @@ hardware architecture.
 
 This project is built in Xilinx Vitis HLS 2022.2 and has been verified on Xilinx Alveo U280 Data Ceter Accelerator Card.
 
-##2. Usage
+## 2. Usage
 
-###2.1 To create a project in Xilinx Vitis HLS
+### 2.1 To create a project in Xilinx Vitis HLS
 
 Directly clone this github repo to your folder and open Vitis HLS. Select "Create a new project"
 Open the folder in which you cloned this repo. Then you'll be able to see the overview of this project.
@@ -32,7 +32,7 @@ Please notice that we did not include our dataset file for they are too big. The
 and add them to the project's testbench category.
 
 
-###2.2 Explanation for each file
+### 2.2 Explanation for each file
 1. merge_sort.c contains HLS code for merge sort algorithm. Including k-way merge sort module and single merge sort module.
 2. radix_sort.c contains HLS code for radix sort. It has "unified_bucket" and "separate_bucket" versions.
 3. radix_sort_2.c is the binary version of "unified_bucket" radix sort.
