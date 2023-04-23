@@ -33,11 +33,11 @@ and add them to the project's testbench category.
 
 
 ### 2.2 Explanation for each file
-1. merge_sort.c contains HLS code for merge sort algorithm. Including k-way merge sort module and single merge sort module.
-2. radix_sort.c contains HLS code for radix sort. It has "unified_bucket" and "separate_bucket" versions.
-3. radix_sort_2.c is the binary version of "unified_bucket" radix sort.
-4. radix_sort_separate_bucket_parallel.c is the optimized version for "separate_bucket" radix sort. In which we want to apply ping-pong buffer during the sorting process.
-5. heap_sort.h contains heap sort module.
-6. sort_top.c is the top level of hybrid sorting algorithms. In which we have 16, 32, 64 input parallel sorting paradigm.
-7. sort_test.c is the testbench file to validate the accuracy of the sorting algorithms.
-8. batch_size.h defines the size of the input data bach (or data array).
+1. ```merge_sort.c``` contains HLS code for merge sort algorithm. Including k-way merge sort module and single merge sort module.
+2. ```radix_sort.c``` contains HLS code for radix sort. It has "unified_bucket" and "separate_bucket" versions.
+3. ```radix_sort_2.c``` is the binary version of "unified_bucket" radix sort.
+4. ```radix_sort_separate_bucket_parallel.c``` is the optimized version for "separate_bucket" radix sort. In which we want to apply ping-pong buffer during the sorting process.
+5. ```heap_sort.h``` contains heap sort module.
+6. ```sort_top.c``` is the top level of hybrid sorting algorithms. In which we have 16, 32, 64 input parallel sorting paradigm.
+7. ```sort_test.c``` is the testbench file to validate the accuracy of the sorting algorithms.
+8. ```batch_size.h``` defines the size of the input data bach (or data array).
