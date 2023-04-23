@@ -875,11 +875,11 @@ extern int __overflow (FILE *, int);
 # 1 "sort_seperate_bucket/batch_size.h" 1
 # 3 "sort_seperate_bucket/radix_sort.h" 2
 
-void radix_sort_seperate_bucket(int data[156250], int sorted_data[156250]);
+void radix_sort_seperate_bucket(int data[15625], int sorted_data[15625]);
 
-void radix_sort_unified_bucket_pingpong(int data[156250], int sorted_data[156250]);
+void radix_sort_unified_bucket_pingpong(int data[15625], int sorted_data[15625]);
 
-void radix_sort_unified_bucket(int data[156250], int sorted_data[156250]);
+void radix_sort_unified_bucket(int data[15625], int sorted_data[15625]);
 # 3 "sort_seperate_bucket/sort_top.c" 2
 # 1 "sort_seperate_bucket/merge_sort.h" 1
 
@@ -887,17 +887,17 @@ void radix_sort_unified_bucket(int data[156250], int sorted_data[156250]);
 # 3 "sort_seperate_bucket/merge_sort.h" 2
 
 
-void merge_sort(int input1[156250], int input2[156250], int sorted_data[2*156250]);
+void merge_sort(int input1[15625], int input2[15625], int sorted_data[2*15625]);
 # 4 "sort_seperate_bucket/sort_top.c" 2
 # 1 "sort_seperate_bucket/batch_size.h" 1
 # 5 "sort_seperate_bucket/sort_top.c" 2
 
 
 
-void sort_top_2(int input[2][156250], int output[2*156250]){
- printf("batch_size = %d\n", 156250/2);
- int half_sorted0[156250];
- int half_sorted1[156250];
+void sort_top_2(int input[2][15625], int output[2*15625]){
+ printf("batch_size = %d\n", 15625/2);
+ int half_sorted0[15625];
+ int half_sorted1[15625];
 
 #pragma HLS DATAFLOW
 
@@ -907,12 +907,12 @@ void sort_top_2(int input[2][156250], int output[2*156250]){
  merge_sort(half_sorted0, half_sorted1, output);
 }
 
-void sort_top_32(int input[32][156250], int output[32*156250]){
- int temp0[32][156250];
- int temp1[16][2*156250];
- int temp2[8][4*156250];
- int temp3[4][8*156250];
- int temp4[2][16*156250];
+void sort_top_32(int input[32][15625], int output[32*15625]){
+ int temp0[32][15625];
+ int temp1[16][2*15625];
+ int temp2[8][4*15625];
+ int temp3[4][8*15625];
+ int temp4[2][16*15625];
 #pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
 #pragma HLS ARRAY_PARTITION variable=temp0 type=complete dim=1
 #pragma HLS ARRAY_PARTITION variable=temp1 type=complete dim=1
@@ -920,94 +920,45 @@ void sort_top_32(int input[32][156250], int output[32*156250]){
 #pragma HLS ARRAY_PARTITION variable=temp3 type=complete dim=1
 #pragma HLS ARRAY_PARTITION variable=temp4 type=complete dim=1
 
+ int i = 0;
 #pragma HLS DATAFLOW
 
- radix_sort_unified_bucket_pingpong(input[0], temp0[0]);
- radix_sort_unified_bucket_pingpong(input[1], temp0[1]);
- radix_sort_unified_bucket_pingpong(input[2], temp0[2]);
- radix_sort_unified_bucket_pingpong(input[3], temp0[3]);
- radix_sort_unified_bucket_pingpong(input[4], temp0[4]);
- radix_sort_unified_bucket_pingpong(input[5], temp0[5]);
- radix_sort_unified_bucket_pingpong(input[6], temp0[6]);
- radix_sort_unified_bucket_pingpong(input[7], temp0[7]);
- radix_sort_unified_bucket_pingpong(input[8], temp0[8]);
- radix_sort_unified_bucket_pingpong(input[9], temp0[9]);
- radix_sort_unified_bucket_pingpong(input[10], temp0[10]);
- radix_sort_unified_bucket_pingpong(input[11], temp0[11]);
- radix_sort_unified_bucket_pingpong(input[12], temp0[12]);
- radix_sort_unified_bucket_pingpong(input[13], temp0[13]);
- radix_sort_unified_bucket_pingpong(input[14], temp0[14]);
- radix_sort_unified_bucket_pingpong(input[15], temp0[15]);
- radix_sort_unified_bucket_pingpong(input[16], temp0[16]);
- radix_sort_unified_bucket_pingpong(input[17], temp0[17]);
- radix_sort_unified_bucket_pingpong(input[18], temp0[18]);
- radix_sort_unified_bucket_pingpong(input[19], temp0[19]);
- radix_sort_unified_bucket_pingpong(input[20], temp0[20]);
- radix_sort_unified_bucket_pingpong(input[21], temp0[21]);
- radix_sort_unified_bucket_pingpong(input[22], temp0[22]);
- radix_sort_unified_bucket_pingpong(input[23], temp0[23]);
- radix_sort_unified_bucket_pingpong(input[24], temp0[24]);
- radix_sort_unified_bucket_pingpong(input[25], temp0[25]);
- radix_sort_unified_bucket_pingpong(input[26], temp0[26]);
- radix_sort_unified_bucket_pingpong(input[27], temp0[27]);
- radix_sort_unified_bucket_pingpong(input[28], temp0[28]);
- radix_sort_unified_bucket_pingpong(input[29], temp0[29]);
- radix_sort_unified_bucket_pingpong(input[30], temp0[30]);
- radix_sort_unified_bucket_pingpong(input[31], temp0[31]);
+ VITIS_LOOP_37_1: for(i=0; i<32; i++){
+#pragma HLS UNROLL
+ radix_sort_unified_bucket_pingpong(input[i], temp0[i]);
+ }
 
- merge_sort(temp0[0], temp0[1], temp1[0]);
- merge_sort(temp0[2], temp0[3], temp1[1]);
- merge_sort(temp0[4], temp0[5], temp1[2]);
- merge_sort(temp0[6], temp0[7], temp1[3]);
- merge_sort(temp0[8], temp0[9], temp1[4]);
- merge_sort(temp0[10], temp0[11], temp1[5]);
- merge_sort(temp0[12], temp0[13], temp1[6]);
- merge_sort(temp0[14], temp0[15], temp1[7]);
- merge_sort(temp0[16], temp0[17], temp1[8]);
- merge_sort(temp0[18], temp0[19], temp1[9]);
- merge_sort(temp0[20], temp0[21], temp1[10]);
- merge_sort(temp0[22], temp0[23], temp1[11]);
- merge_sort(temp0[24], temp0[25], temp1[12]);
- merge_sort(temp0[26], temp0[27], temp1[13]);
- merge_sort(temp0[28], temp0[29], temp1[14]);
- merge_sort(temp0[30], temp0[31], temp1[15]);
+ VITIS_LOOP_42_2: for(i=0; i<16; i++){
+#pragma HLS UNROLL
+ merge_sort(temp0[2*i], temp0[2*i+1], temp1[i]);
+ }
 
- merge_sort(temp1[0], temp1[1], temp2[0]);
- merge_sort(temp1[2], temp1[3], temp2[1]);
- merge_sort(temp1[4], temp1[5], temp2[2]);
- merge_sort(temp1[6], temp1[7], temp2[3]);
- merge_sort(temp1[8], temp1[9], temp2[4]);
- merge_sort(temp1[10], temp1[11], temp2[5]);
- merge_sort(temp1[12], temp1[13], temp2[6]);
- merge_sort(temp1[14], temp1[15], temp2[7]);
+ VITIS_LOOP_47_3: for(i=0; i<8; i++){
+#pragma HLS UNROLL
+ merge_sort(temp1[2*i], temp1[2*i+1], temp2[i]);
+ }
 
- merge_sort(temp2[0], temp2[1], temp3[0]);
- merge_sort(temp2[2], temp2[3], temp3[1]);
- merge_sort(temp2[4], temp2[5], temp3[2]);
- merge_sort(temp2[6], temp2[7], temp3[3]);
+ VITIS_LOOP_52_4: for(i=0; i<4; i++){
+#pragma HLS UNROLL
+ merge_sort(temp2[2*i], temp2[2*i+1], temp3[i]);
+ }
 
- merge_sort(temp3[0], temp3[1], temp4[0]);
- merge_sort(temp3[2], temp3[3], temp4[1]);
+ VITIS_LOOP_57_5: for(i=0; i<2; i++){
+#pragma HLS UNROLL
+ merge_sort(temp3[2*i], temp3[2*i+1], temp4[i]);
+ }
 
  merge_sort(temp4[0], temp4[1], output);
 
 }
 
-__attribute__((sdx_kernel("sort_top_64", 0))) void sort_top_64(int input[64][156250], int output[64*156250]){
-#line 25 "/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl"
-#pragma HLSDIRECTIVE TOP name=sort_top_64
-# 107 "sort_seperate_bucket/sort_top.c"
-
-#line 6 "/home/boyiw7/sort_seperate_bucket/solution1/directives.tcl"
-#pragma HLSDIRECTIVE TOP name=sort_top_64
-# 107 "sort_seperate_bucket/sort_top.c"
-
- int temp0[64][156250];
- int temp1[32][2*156250];
- int temp2[16][4*156250];
- int temp3[8][8*156250];
- int temp4[4][16*156250];
- int temp5[2][32*156250];
+void sort_top_64(int input[64][15625], int output[64*15625]){
+ int temp0[64][15625];
+ int temp1[32][2*15625];
+ int temp2[16][4*15625];
+ int temp3[8][8*15625];
+ int temp4[4][16*15625];
+ int temp5[2][32*15625];
 
 #pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
 #pragma HLS ARRAY_PARTITION variable=temp0 type=complete dim=1
@@ -1020,32 +971,32 @@ __attribute__((sdx_kernel("sort_top_64", 0))) void sort_top_64(int input[64][156
 int i;
 #pragma HLS DATAFLOW
 
-VITIS_LOOP_126_1: for(i=0; i<64; i++){
+VITIS_LOOP_85_1: for(i=0; i<64; i++){
 #pragma HLS UNROLL
  radix_sort_unified_bucket_pingpong(input[i], temp0[i]);
 }
 
-VITIS_LOOP_131_2: for(i=0; i<32; i++){
+VITIS_LOOP_90_2: for(i=0; i<32; i++){
 #pragma HLS UNROLL
  merge_sort(temp0[2*i], temp0[2*i+1], temp1[i]);
 }
 
-VITIS_LOOP_136_3: for(i=0; i<16; i++){
+VITIS_LOOP_95_3: for(i=0; i<16; i++){
 #pragma HLS UNROLL
  merge_sort(temp1[2*i], temp1[2*i+1], temp2[i]);
 }
 
-VITIS_LOOP_141_4: for(i=0; i<8; i++){
+VITIS_LOOP_100_4: for(i=0; i<8; i++){
 #pragma HLS UNROLL
  merge_sort(temp2[2*i], temp2[2*i+1], temp3[i]);
 }
 
-VITIS_LOOP_146_5: for(i=0; i<4; i++){
+VITIS_LOOP_105_5: for(i=0; i<4; i++){
 #pragma HLS UNROLL
  merge_sort(temp3[2*i], temp3[2*i+1], temp4[i]);
 }
 
-VITIS_LOOP_151_6: for(i=0; i<2; i++){
+VITIS_LOOP_110_6: for(i=0; i<2; i++){
 #pragma HLS UNROLL
  merge_sort(temp4[2*i], temp4[2*i+1], temp5[i]);
 }

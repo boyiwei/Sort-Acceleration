@@ -1,38 +1,33 @@
 <AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
     <sourceFile name="">
-        <directive functionName="sort_top_64" label="" functionLabel="">
+        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_64"/>
+                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_64" label="" functionLabel="">
+        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_64"/>
+                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_64" label="" functionLabel="">
+        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_64"/>
+                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_64" label="" functionLabel="">
+        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_64"/>
+                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_64" label="" functionLabel="">
+        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_64"/>
+                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
             </pragma>
         </directive>
-        <directive functionName="sort_top_64" label="" functionLabel="">
+        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
             <pragma name="TOP">
-                <option name="name" value="sort_top_64"/>
-            </pragma>
-        </directive>
-        <directive functionName="sort_top_64" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="sort_top_64"/>
+                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
             </pragma>
         </directive>
     </sourceFile>

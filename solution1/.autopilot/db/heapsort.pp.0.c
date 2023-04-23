@@ -1938,7 +1938,7 @@ void swap(int *x, int *y) {
 }
 
 
-void maxHeapify(int arr[156250], int n, int i) {
+void maxHeapify(int arr[15625], int n, int i) {
  VITIS_LOOP_18_1: while (1) {
          int largest = i;
          int left = 2 * i + 1;
@@ -1964,23 +1964,23 @@ void maxHeapify(int arr[156250], int n, int i) {
 
 
 
-void heap_sort(int input[156250], int output[156250]) {
- int data[156250];
+void heap_sort(int input[15625], int output[15625]) {
+ int data[15625];
  int i = 0;
  int j = 0;
  initialization:
- for(i=0; i<156250; i++){
+ for(i=0; i<15625; i++){
 #pragma HLS PIPELINE
  data[i] = input[i];
  }
 
  heap_sort_procedure:
 
-    for (i = 156250 / 2 - 1; i >= 0; i--)
-        maxHeapify(data, 156250, i);
+    for (i = 15625 / 2 - 1; i >= 0; i--)
+        maxHeapify(data, 15625, i);
 
 
-    VITIS_LOOP_59_1: for (j = 156250 - 1; j >= 0; j--) {
+    VITIS_LOOP_59_1: for (j = 15625 - 1; j >= 0; j--) {
 
         swap(&data[0], &data[j]);
 
@@ -1989,7 +1989,7 @@ void heap_sort(int input[156250], int output[156250]) {
     }
 
     output_data:
- for(j=0; j<156250; j++){
+ for(j=0; j<15625; j++){
 #pragma HLS PIPELINE
  output[j] = data[j];
  }

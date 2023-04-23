@@ -870,25 +870,24 @@ extern void funlockfile (FILE *__stream) __attribute__ ((__nothrow__ ));
 extern int __uflow (FILE *);
 extern int __overflow (FILE *, int);
 # 2 "sort_seperate_bucket/radix_sort.c" 2
-# 1 "sort_seperate_bucket/batch_size.h" 1
-# 3 "sort_seperate_bucket/radix_sort.c" 2
 
 
 
 
 
 
-void radix_sort_unified_bucket(int data[156250], int sorted_data[156250])
+
+void radix_sort_unified_bucket(int batch_size, int data[], int sorted_data[])
 {
 
- int bucket[156250];
+ int bucket[batch_size];
  int bucket_pointer[16];
  int bucket_sizes[16] = {0};
 #pragma HLS ARRAY_PARTITION variable=bucket_pointer type=complete
 #pragma HLS ARRAY_PARTITION variable=bucket_sizes type=complete
 
  initialization:
- for (int j = 0; j < 156250; j++) {
+ for (int j = 0; j < batch_size; j++) {
   sorted_data[j] = data[j];
   int next_ith_radix = sorted_data[j] & 0xf;
   bucket_sizes[next_ith_radix] += 1;
@@ -910,7 +909,7 @@ void radix_sort_unified_bucket(int data[156250], int sorted_data[156250])
   }
 
   input_bucket:
-  for (int j = 0; j < 156250; j++) {
+  for (int j = 0; j < batch_size; j++) {
    int shifted = sorted_data[j] >> (i * 4);
    int ith_radix = shifted & 0xf;
    bucket[bucket_pointer[ith_radix]] = sorted_data[j];
@@ -921,16 +920,20 @@ void radix_sort_unified_bucket(int data[156250], int sorted_data[156250])
   }
 
   output_bucket:
-  for (int k = 0; k < 156250; k++) {
+  for (int k = 0; k < batch_size; k++) {
    sorted_data[k] = bucket[k];
   }
  }
 }
 
-void radix_sort_unified_bucket_pingpong(int data[156250], int sorted_data[156250])
+__attribute__((sdx_kernel("radix_sort_unified_bucket_pingpong", 0))) void radix_sort_unified_bucket_pingpong(int batch_size, int data[], int sorted_data[])
 {
+#line 34 "/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=radix_sort_unified_bucket_pingpong
+# 59 "sort_seperate_bucket/radix_sort.c"
 
- int bucket[2][156250];
+
+ int bucket[2][batch_size];
  int bucket_pointer[16];
  int bucket_sizes[16] = {0};
 
@@ -940,7 +943,7 @@ void radix_sort_unified_bucket_pingpong(int data[156250], int sorted_data[156250
 
 
  initialization:
- for (int j = 0; j < 156250; j++) {
+ for (int j = 0; j < batch_size; j++) {
   bucket[1-bucket_num][j] = data[j];
   int next_ith_radix = bucket[1-bucket_num][j] & 0xf;
   bucket_sizes[next_ith_radix] += 1;
@@ -961,7 +964,7 @@ void radix_sort_unified_bucket_pingpong(int data[156250], int sorted_data[156250
   }
 
   input_bucket:
-  for (int j = 0; j < 156250; j++) {
+  for (int j = 0; j < batch_size; j++) {
    int shifted = bucket[1-bucket_num][j] >> (i * 4);
    int ith_radix = shifted & 0xf;
    bucket[bucket_num][bucket_pointer[ith_radix]] = bucket[1-bucket_num][j];
@@ -974,18 +977,18 @@ void radix_sort_unified_bucket_pingpong(int data[156250], int sorted_data[156250
  }
 
  output_bucket:
- for (int k = 0; k < 156250; k++) {
+ for (int k = 0; k < batch_size; k++) {
   sorted_data[k] = bucket[1-bucket_num][k];
  }
 }
 
-void radix_sort_separate_bucket(int data[156250], int sorted_data[156250]){
- int bucket[16][156250];
+void radix_sort_separate_bucket(int batch_size, int data[], int sorted_data[]){
+ int bucket[16][batch_size];
  int bucket_pointer[16] = {0};
  int k = 0;
 
  initialization:
- for(int j=0; j<156250; j++){
+ for(int j=0; j<batch_size; j++){
   sorted_data[j] = data[j];
  }
 
@@ -996,7 +999,7 @@ void radix_sort_separate_bucket(int data[156250], int sorted_data[156250]){
 #pragma HLS pipeline
 
  input_bucket:
-  for (int j = 0; j < 156250; j++) {
+  for (int j = 0; j < batch_size; j++) {
    int shifted = sorted_data[j] >> (i * 4);
    int ith_radix = shifted & 0xf;
    bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];
@@ -1006,7 +1009,7 @@ void radix_sort_separate_bucket(int data[156250], int sorted_data[156250]){
   output_bucket:
   for (int l = 0; l < 16; l++) {
    VITIS_LOOP_136_1: for(int m=0; m<bucket_pointer[l]; m++){
-#pragma HLS loop_tripcount min=0 max=156250 -1
+#pragma HLS loop_tripcount min=0 max=batch_size-1
  sorted_data[k] = bucket[l][m];
     k = k + 1;
    }

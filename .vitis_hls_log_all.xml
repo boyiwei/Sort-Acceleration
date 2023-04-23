@@ -2,74 +2,42 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="ERROR: [HLS 200-1715] Encountered problem during source synthesis" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:36.880-0700"/>
+        <logs message="ERROR: [HLS 214-135] Syn check fail!" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:36.869-0700"/>
+        <logs message="ERROR: [HLS 214-143] in function 'radix_sort_unified_bucket_pingpong': Arrays must be specified with a constant size (sort_seperate_bucket/radix_sort.c:61:2)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:36.862-0700"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.1' to 'merge_sort_1'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:50.218-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.125' to 'merge_sort_125'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.279-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.124' to 'merge_sort_124'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.266-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.123' to 'merge_sort_123'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.256-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.122' to 'merge_sort_122'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.244-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.121' to 'merge_sort_121'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.233-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.120' to 'merge_sort_120'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.221-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.119' to 'merge_sort_119'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.210-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.118' to 'merge_sort_118'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.198-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.117' to 'merge_sort_117'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.187-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.116' to 'merge_sort_116'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.175-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.115' to 'merge_sort_115'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.164-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.114' to 'merge_sort_114'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.152-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.113' to 'merge_sort_113'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.141-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.112' to 'merge_sort_112'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.129-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.111' to 'merge_sort_111'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.118-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.110' to 'merge_sort_110'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.106-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.109' to 'merge_sort_109'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.095-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.108' to 'merge_sort_108'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.083-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.107' to 'merge_sort_107'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.072-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.106' to 'merge_sort_106'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.063-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.105' to 'merge_sort_105'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.050-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.104' to 'merge_sort_104'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.036-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.103' to 'merge_sort_103'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.024-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.102' to 'merge_sort_102'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.015-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.101' to 'merge_sort_101'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:48.004-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.100' to 'merge_sort_100'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.992-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.99' to 'merge_sort_99'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.980-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.98' to 'merge_sort_98'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.969-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.97' to 'merge_sort_97'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.958-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.96' to 'merge_sort_96'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.947-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.95' to 'merge_sort_95'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.936-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.94' to 'merge_sort_94'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.924-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.93' to 'merge_sort_93'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.913-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.92' to 'merge_sort_92'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.902-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.91' to 'merge_sort_91'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.891-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.90' to 'merge_sort_90'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.880-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.89' to 'merge_sort_89'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.869-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.88' to 'merge_sort_88'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.858-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.87' to 'merge_sort_87'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.847-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.86' to 'merge_sort_86'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.836-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.85' to 'merge_sort_85'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.825-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.84' to 'merge_sort_84'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.813-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.83' to 'merge_sort_83'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.802-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.82' to 'merge_sort_82'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.791-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.81' to 'merge_sort_81'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.780-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.80' to 'merge_sort_80'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.770-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.79' to 'merge_sort_79'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.758-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.78' to 'merge_sort_78'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.746-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.77' to 'merge_sort_77'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.737-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.76' to 'merge_sort_76'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.724-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.75' to 'merge_sort_75'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.713-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.74' to 'merge_sort_74'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.701-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.73' to 'merge_sort_73'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.690-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.72' to 'merge_sort_72'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.679-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.71' to 'merge_sort_71'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.667-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.70' to 'merge_sort_70'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.655-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.69' to 'merge_sort_69'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.644-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.68' to 'merge_sort_68'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.630-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.67' to 'merge_sort_67'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.618-0700" type="Warning"/>
-        <logs message="WARNING: [SYN 201-103] Legalizing function name 'merge_sort.66' to 'merge_sort_66'." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T15:32:47.606-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sort_seperate_bucket/sort_top.c&#xA;Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-471.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.767-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-169] There are a total of 6 such instances of non-canonical statements in the dataflow region (sort_seperate_bucket/sort_top.c:83:9)&#xA;Resolution: For help on HLS 214-169 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-169.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.405-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/sort_top.c:83:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.378-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-169] There are a total of 5 such instances of non-canonical statements in the dataflow region (sort_seperate_bucket/sort_top.c:35:9)&#xA;Resolution: For help on HLS 214-169 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-169.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.373-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/sort_top.c:35:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:30.367-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:27.679-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5570] because option is invalid, the pragma LOOP_TRIPCOUNT is ignored (sort_seperate_bucket/radix_sort.c:137:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:26.287-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5566] expression is not an integer constant expression (sort_seperate_bucket/radix_sort.c:137:38)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:25.462-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:124:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:25.444-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:81:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:25.432-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:30:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:25.418-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sort_seperate_bucket/merge_sort.c&#xA;Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-471.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.896-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:121:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.635-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sort_seperate_bucket/merge_sort.c:130:26)&#xA;Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.630-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-109] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop (sort_seperate_bucket/merge_sort.c:119:65)&#xA;Resolution: For help on HLS 214-109 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-109.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.626-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:75:9)&#xA;Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.621-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5558] Only for-loops and functions support the dataflow (sort_seperate_bucket/merge_sort.c:121:9)" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-04-22T21:39:24.614-0700" type="Warning"/>
       </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

@@ -1,30 +1,30 @@
 #include <stdio.h>
 #include "batch_size.h"
 
-int data[] = {
-    #include "dataset_1M_1.h"
-};
+void radix_sort_64_test(){
+	int dataset[] = {
+#include "/home/boyiw7/dataset_gen/dataset_1M_1.h"
+	};
 
-//int input[2][batch_size]={
-//		{
-//		#include "dataset.h"
-//},
-//		{
-//		#include "dataset.h"
-//		}
-//};
+	int input[64][batch_size] = {0};
+	int output[64*batch_size];
+	int i;
+	int j;
+	for(i=0; i<64; i++){
+		for(j=0; j<batch_size; j++){
+			input[i][j] = dataset[i*batch_size+j];
+		}
+	}
+	printf("All done before\n");
+	sort_top_64(input, output);
+	for(i=0; i<64*batch_size; i++){
+	        printf("Sorted_results: rank %d, value= %d \n", i, output[i]);
+	    }
+}
 
-//int sorted_data[2*batch_size];
-int sorted_data[batch_size];
 
 int main(){
-    printf("Checking results\n");
-//    radix_sort_seperate_bucket_parallel(input[1], sorted_data);
-//    heap_sort(data, batch_size);
-    radix_sort_unified_bucket_pingpong(data, sorted_data);
-    int i;
-    for(i=0; i<batch_size; i++){
-        printf("Sorted_results: rank %d, value= %d \n", i, sorted_data[i]);
-    }
+	printf("--------------------------\n");
+	radix_sort_64_test();
     return 0;
 }

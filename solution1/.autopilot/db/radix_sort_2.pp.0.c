@@ -878,15 +878,15 @@ extern int __overflow (FILE *, int);
 
 
 
-void radix_sort_unified_bucket_2(int data[156250], int sorted_data[156250])
+void radix_sort_unified_bucket_2(int data[15625], int sorted_data[15625])
 {
 
- int bucket[156250];
+ int bucket[15625];
  int bucket_pointer[2];
  int bucket_sizes[2] = {0};
 
  initialization:
- for (int j = 0; j < 156250; j++) {
+ for (int j = 0; j < 15625; j++) {
   sorted_data[j] = data[j];
   int next_ith_radix = sorted_data[j] & 1;
 
@@ -909,7 +909,7 @@ void radix_sort_unified_bucket_2(int data[156250], int sorted_data[156250])
   }
 
   input_bucket:
-  for (int j = 0; j < 156250; j++) {
+  for (int j = 0; j < 15625; j++) {
    int shifted = sorted_data[j] >> i;
    int ith_radix = shifted & 1;
    bucket[bucket_pointer[ith_radix]] = sorted_data[j];
@@ -920,7 +920,7 @@ void radix_sort_unified_bucket_2(int data[156250], int sorted_data[156250])
   }
 
   output_bucket:
-  for (int k = 0; k < 156250; k++) {
+  for (int k = 0; k < 15625; k++) {
    sorted_data[k] = bucket[k];
 
   }

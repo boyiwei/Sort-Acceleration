@@ -2,107 +2,92 @@
       "name": "",
       "directive": [
         {
-          "functionName": "sort_top_64",
+          "functionName": "radix_sort_unified_bucket_pingpong",
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/directives.tcl",
-          "sourceLine": "6",
+          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
+          "sourceLine": "34",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top_64"
+                "value": "radix_sort_unified_bucket_pingpong"
               }]
           }
         },
         {
-          "functionName": "sort_top_64",
+          "functionName": "radix_sort_unified_bucket_pingpong",
           "label": "",
           "functionLabel": "",
           "id": "2",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "25",
+          "sourceLine": "34",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top_64"
+                "value": "radix_sort_unified_bucket_pingpong"
               }]
           }
         },
         {
-          "functionName": "sort_top_64",
+          "functionName": "radix_sort_unified_bucket_pingpong",
           "label": "",
           "functionLabel": "",
           "id": "3",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "25",
+          "sourceLine": "34",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top_64"
+                "value": "radix_sort_unified_bucket_pingpong"
               }]
           }
         },
         {
-          "functionName": "sort_top_64",
+          "functionName": "radix_sort_unified_bucket_pingpong",
           "label": "",
           "functionLabel": "",
           "id": "4",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "25",
+          "sourceLine": "34",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top_64"
+                "value": "radix_sort_unified_bucket_pingpong"
               }]
           }
         },
         {
-          "functionName": "sort_top_64",
+          "functionName": "radix_sort_unified_bucket_pingpong",
           "label": "",
           "functionLabel": "",
           "id": "5",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "25",
+          "sourceLine": "34",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top_64"
+                "value": "radix_sort_unified_bucket_pingpong"
               }]
           }
         },
         {
-          "functionName": "sort_top_64",
+          "functionName": "radix_sort_unified_bucket_pingpong",
           "label": "",
           "functionLabel": "",
           "id": "6",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "25",
+          "sourceLine": "34",
           "pragma": {
             "name": "TOP",
             "option": [{
                 "name": "name",
-                "value": "sort_top_64"
-              }]
-          }
-        },
-        {
-          "functionName": "sort_top_64",
-          "label": "",
-          "functionLabel": "",
-          "id": "7",
-          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "25",
-          "pragma": {
-            "name": "TOP",
-            "option": [{
-                "name": "name",
-                "value": "sort_top_64"
+                "value": "radix_sort_unified_bucket_pingpong"
               }]
           }
         }

@@ -121,7 +121,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>34</integer>
+      <integer>35</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -135,29 +135,13 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl</string>
+      <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>25</integer>
+      <integer>38</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=sort_top_64_XLX_SEP_ PragmaOptions=name=sort_top_64_XLX_SEP_</string>
-      <key>ID</key>
-      <integer>5471</integer>
-      <key>WarningOption</key>
-      <string>dump-hls-pragmas</string>
-    </dict>
-    <dict>
-      <key>level</key>
-      <string>warning</string>
-      <key>filename</key>
-      <string>/home/boyiw7/sort_seperate_bucket/solution1/directives.tcl</string>
-      <key>line</key>
-      <integer>6</integer>
-      <key>column</key>
-      <integer>9</integer>
-      <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=sort_top_64_XLX_SEP_ PragmaOptions=name=sort_top_64_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sort_top_32_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -169,7 +153,71 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>115</integer>
+      <integer>43</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sort_top_32_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/sort_top.c</string>
+      <key>line</key>
+      <integer>48</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sort_top_32_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/sort_top.c</string>
+      <key>line</key>
+      <integer>53</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sort_top_32_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/sort_top.c</string>
+      <key>line</key>
+      <integer>58</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=sort_top_32_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/sort_top.c</string>
+      <key>line</key>
+      <integer>74</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -185,7 +233,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>116</integer>
+      <integer>75</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -201,7 +249,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>117</integer>
+      <integer>76</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -217,7 +265,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>118</integer>
+      <integer>77</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -233,7 +281,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>119</integer>
+      <integer>78</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -249,7 +297,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>120</integer>
+      <integer>79</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -265,7 +313,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>121</integer>
+      <integer>80</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -281,7 +329,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>124</integer>
+      <integer>83</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -297,7 +345,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>127</integer>
+      <integer>86</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -313,7 +361,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>132</integer>
+      <integer>91</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -329,7 +377,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>137</integer>
+      <integer>96</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -345,7 +393,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>142</integer>
+      <integer>101</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -361,7 +409,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>147</integer>
+      <integer>106</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -377,7 +425,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/sort_top.c</string>
       <key>line</key>
-      <integer>152</integer>
+      <integer>111</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

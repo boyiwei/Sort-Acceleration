@@ -13,6 +13,9 @@ sort_seperate_bucket/radix_sort.c:30:9: warning: HLS pragma dump _XLX_SEP_ Pragm
 sort_seperate_bucket/radix_sort.c:30:9: warning: Only for/while/do support the pipeline  pragma [-Wignored-hls-attributes]
 #pragma HLS PIPELINE
         ^~~~~~~~~~~~
+/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:34:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=radix_sort_unified_bucket_pingpong_XLX_SEP_ PragmaOptions=name=radix_sort_unified_bucket_pingpong_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=radix_sort_unified_bucket_pingpong
+        ^
 sort_seperate_bucket/radix_sort.c:65:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_unified_bucket_pingpong_XLX_SEP_ PragmaOptions=variable=bucket_pointer type=complete_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS ARRAY_PARTITION variable=bucket_pointer type=complete
         ^
@@ -34,10 +37,16 @@ sort_seperate_bucket/radix_sort.c:123:9: warning: HLS pragma dump _XLX_SEP_ Prag
 sort_seperate_bucket/radix_sort.c:124:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_separate_bucket_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS pipeline
         ^
-sort_seperate_bucket/radix_sort.c:137:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_separate_bucket_XLX_SEP_ PragmaOptions=min=0 max=156250 -1_XLX_SEP_ [-Wdump-hls-pragmas]
-#pragma HLS loop_tripcount min=0 max=156250 -1
+sort_seperate_bucket/radix_sort.c:137:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_separate_bucket_XLX_SEP_ PragmaOptions=min=0 max=batch_size-1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS loop_tripcount min=0 max=batch_size-1
         ^
 sort_seperate_bucket/radix_sort.c:124:9: warning: Only for/while/do support the pipeline  pragma [-Wignored-hls-attributes]
 #pragma HLS pipeline
         ^~~~~~~~~~~~
-14 warnings generated.
+sort_seperate_bucket/radix_sort.c:137:38: warning: expression is not an integer constant expression [-Wignored-hls-pragmas]
+#pragma HLS loop_tripcount min=0 max=batch_size-1
+                                     ^~~~~~~~~~~~
+sort_seperate_bucket/radix_sort.c:137:9: warning: because option is invalid, the pragma LOOP_TRIPCOUNT is ignored [-Wignored-hls-pragmas]
+#pragma HLS loop_tripcount min=0 max=batch_size-1
+        ^
+17 warnings generated.
