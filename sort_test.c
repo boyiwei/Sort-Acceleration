@@ -2,7 +2,7 @@
 #include "batch_size.h"
 
 int data[] = {
-    #include "dataset.h"
+    #include "dataset_1M_1.h"
 };
 
 //int input[2][batch_size]={
