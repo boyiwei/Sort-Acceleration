@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "dataset_size.h"
 
+int batch_size = dataset_size;
 
 // Function to swap two elements
 void swap(int *x, int *y) {

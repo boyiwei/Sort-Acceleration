@@ -20,7 +20,6 @@ add_files sort_seperate_bucket/multi_radix_oct_kmerge.c
 add_files sort_seperate_bucket/multi_radix_oct_loser.c
 add_files sort_seperate_bucket/radix_sort.c
 add_files sort_seperate_bucket/radix_sort.h
-add_files sort_seperate_bucket/radix_sort_2.c
 add_files sort_seperate_bucket/radix_sort_separate_bucket_parallel.c
 add_files sort_seperate_bucket/single_heap_sort.c
 add_files sort_seperate_bucket/single_merge_sort.c
