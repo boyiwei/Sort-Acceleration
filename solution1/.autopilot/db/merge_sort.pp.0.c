@@ -872,6 +872,26 @@ extern int __overflow (FILE *, int);
 # 2 "sort_seperate_bucket/merge_sort.c" 2
 # 1 "sort_seperate_bucket/batch_size.h" 1
 # 3 "sort_seperate_bucket/merge_sort.c" 2
+# 1 "sort_seperate_bucket/merge_sort.h" 1
+
+# 1 "sort_seperate_bucket/dataset_size.h" 1
+# 3 "sort_seperate_bucket/merge_sort.h" 2
+
+
+void merge_sort(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+
+void merge_sort_batch0(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+
+void merge_sort_batch1(int input1[2*10000000/64], int input2[2*10000000/64], int sorted_data[4*10000000/64]);
+
+void merge_sort_batch2(int input1[4*10000000/64], int input2[4*10000000/64], int sorted_data[8*10000000/64]);
+
+void merge_sort_batch3(int input1[8*10000000/64], int input2[8*10000000/64], int sorted_data[16*10000000/64]);
+
+void merge_sort_batch4(int input1[16*10000000/64], int input2[16*10000000/64], int sorted_data[32*10000000/64]);
+
+void merge_sort_batch5(int input1[32*10000000/64], int input2[32*10000000/64], int sorted_data[64*10000000/64]);
+# 4 "sort_seperate_bucket/merge_sort.c" 2
 # 1 "/usr/include/assert.h" 1 3 4
 # 69 "/usr/include/assert.h" 3 4
 extern void __assert_fail (const char *__assertion, const char *__file,
@@ -888,16 +908,16 @@ extern void __assert_perror_fail (int __errnum, const char *__file,
 
 extern void __assert (const char *__assertion, const char *__file, int __line)
      __attribute__ ((__nothrow__ )) __attribute__ ((__noreturn__));
-# 4 "sort_seperate_bucket/merge_sort.c" 2
+# 5 "sort_seperate_bucket/merge_sort.c" 2
 
 
-void merge_sort(int input1[15625], int input2[15625], int sorted_data[2*15625]){
+void merge_sort(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]){
  int j = 0;
  int k = 0;
- VITIS_LOOP_9_1: for(int i=0; i<2*15625; i++){
+ VITIS_LOOP_10_1: for(int i=0; i<2*10000000/64; i++){
   printf("i=%d, input1[%d] = %d, input2[%d]=%d\n", i, j, input1[j], k, input2[k]);
 #pragma HLS PIPELINE
- if((j<15625)&&(k<15625)){
+ if((j<10000000/64)&&(k<10000000/64)){
    if(input1[j]<input2[k]){
     sorted_data[i] = input1[j];
     j = j + 1;
@@ -910,7 +930,7 @@ void merge_sort(int input1[15625], int input2[15625], int sorted_data[2*15625]){
    }
   }
 
-  else if((j==15625)&&(k<15625)){
+  else if((j==10000000/64)&&(k<10000000/64)){
    sorted_data[i] = input2[k];
    k = k + 1;
   }
@@ -922,17 +942,17 @@ void merge_sort(int input1[15625], int input2[15625], int sorted_data[2*15625]){
 }
 
 
-void merge_arrays(int in[15625], int width, int out[15625]){
+void merge_arrays(int in[10000000/64], int width, int out[10000000/64]){
  int f1 = 0;
  int f2 = width;
  int i2 = width;
  int i3 = 2 * width;
- if(i2 >= 15625)
-  i2 = 15625;
- if(i3 >= 15625)
-  i3 = 15625;
+ if(i2 >= 10000000/64)
+  i2 = 10000000/64;
+ if(i3 >= 10000000/64)
+  i3 = 10000000/64;
  merge_arrays:
- for(int i=0; i<15625; i++){
+ for(int i=0; i<10000000/64; i++){
 #pragma HLS PIPELINE II=1
  int t1 = in[f1];
   int t2 = (f2==i3)?0:in[f2];
@@ -941,7 +961,7 @@ void merge_arrays(int in[15625], int width, int out[15625]){
    f1++;
   }
   else{
-   ((void) sizeof ((f2<i3) ? 1 : 0), __extension__ ({ if (f2<i3) ; else __assert_fail ("f2<i3", "sort_seperate_bucket/merge_sort.c", 56, __extension__ __PRETTY_FUNCTION__); }));
+   ((void) sizeof ((f2<i3) ? 1 : 0), __extension__ ({ if (f2<i3) ; else __assert_fail ("f2<i3", "sort_seperate_bucket/merge_sort.c", 57, __extension__ __PRETTY_FUNCTION__); }));
    out[i] = t2;
    f2++;
   }
@@ -949,26 +969,26 @@ void merge_arrays(int in[15625], int width, int out[15625]){
    f1 = i3;
    i2 += 2*width;
    i3 += 2*width;
-   if(i2>=15625)
-    i2 = 15625;
-   if(i3 >= 15625)
-    i3 = 15625;
+   if(i2>=10000000/64)
+    i2 = 10000000/64;
+   if(i3 >= 10000000/64)
+    i3 = 10000000/64;
    f2 = i2;
   }
  }
 }
 
 
-void merge_sort_parallel(int in[15625], int out[15625]){
+void merge_sort_parallel(int in[10000000/64], int out[10000000/64]){
 #pragma HLS DATAFLOW
 
- int temp[24 -1][15625];
+ int temp[24 -1][10000000/64];
 #pragma HLS ARRAY_PARTITION variable=temp type=complete dim=1
  int width = 1;
  merge_arrays(in, width, temp[0]);
  width *= 2;
 
- VITIS_LOOP_83_1: for(int stage=1; stage<24 -1;stage++){
+ VITIS_LOOP_84_1: for(int stage=1; stage<24 -1;stage++){
 #pragma HLS UNROLL
  merge_arrays(temp[stage-1], width, temp[stage]);
   width *= 2;
@@ -978,54 +998,171 @@ void merge_sort_parallel(int in[15625], int out[15625]){
 
 
 
-void merge(int input[15625], int temp[15625], int low, int mid, int high) {
- printf("low=%d, mid=%d, high=%d\n", low, mid, high);
-    int i = low, j = mid, k = low;
 
-    VITIS_LOOP_97_1: while (i < mid && j <= high) {
-        if (input[i] <= input[j]) {
-            temp[k++] = input[i++];
-        } else {
-            temp[k++] = input[j++];
+
+void merge_sort_batch0(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]){
+    int j = 0;
+    int k = 0;
+    VITIS_LOOP_99_1: for(int i=0; i<2*10000000/64; i++){
+#pragma HLS PIPELINE
+ if((j<10000000/64)&&(k<10000000/64)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
         }
-    }
 
-    VITIS_LOOP_105_2: while (i < mid) {
-        temp[k++] = input[i++];
-    }
-
-    VITIS_LOOP_109_3: while (j <= high) {
-        temp[k++] = input[j++];
+        else if((j==10000000/64)&&(k<10000000/64)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
     }
 }
 
-void merge_sort_iterative(int input[15625], int output[15625]) {
-    int temp[15625];
-#pragma HLS ARRAY_PARTITION variable=input type=block factor=100
-#pragma HLS ARRAY_PARTITION variable=output type=block factor=100
- VITIS_LOOP_118_1: for (int step = 1; step < 15625; step *= 2) {
-        VITIS_LOOP_119_2: for (int low = 0; low < 15625 - step; low += 2 * step) {
-#pragma HLS LOOP_MERGE
-#pragma HLS DATAFLOW
- int mid = low + step;
-            int high = mid + step - 1;
 
-
-            if (high >= 15625) {
-                high = 15625 - 1;
+void merge_sort_batch1(int input1[2*10000000/64], int input2[2*10000000/64], int sorted_data[4*10000000/64]){
+    int j = 0;
+    int k = 0;
+    VITIS_LOOP_127_1: for(int i=0; i<4*10000000/64; i++){
+#pragma HLS PIPELINE
+ if((j<2*10000000/64)&&(k<2*10000000/64)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
             }
-
-            merge(input, temp, low, mid, high);
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
         }
 
-
-        VITIS_LOOP_134_3: for (int i = 0; i < 15625; i++) {
-            input[i] = temp[i];
+        else if((j==2*10000000/64)&&(k<2*10000000/64)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
         }
     }
+}
 
 
-    VITIS_LOOP_140_4: for (int i = 0; i < 15625; i++) {
-        output[i] = input[i];
+void merge_sort_batch2(int input1[4*10000000/64], int input2[4*10000000/64], int sorted_data[8*10000000/64]){
+    int j = 0;
+    int k = 0;
+    VITIS_LOOP_155_1: for(int i=0; i<8*10000000/64; i++){
+#pragma HLS PIPELINE
+ if((j<4*10000000/64)&&(k<4*10000000/64)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
+        }
+
+        else if((j==4*10000000/64)&&(k<4*10000000/64)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
+    }
+}
+
+
+void merge_sort_batch3(int input1[8*10000000/64], int input2[8*10000000/64], int sorted_data[16*10000000/64]){
+    int j = 0;
+    int k = 0;
+    VITIS_LOOP_183_1: for(int i=0; i<16*10000000/64; i++){
+#pragma HLS PIPELINE
+ if((j<8*10000000/64)&&(k<8*10000000/64)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
+        }
+
+        else if((j==8*10000000/64)&&(k<8*10000000/64)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
+    }
+}
+
+
+void merge_sort_batch4(int input1[16*10000000/64], int input2[16*10000000/64], int sorted_data[32*10000000/64]){
+    int j = 0;
+    int k = 0;
+    VITIS_LOOP_211_1: for(int i=0; i<32*10000000/64; i++){
+#pragma HLS PIPELINE
+ if((j<16*10000000/64)&&(k<16*10000000/64)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
+        }
+
+        else if((j==16*10000000/64)&&(k<16*10000000/64)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
+    }
+}
+
+
+void merge_sort_batch5(int input1[32*10000000/64], int input2[32*10000000/64], int sorted_data[10000000]){
+    int j = 0;
+    int k = 0;
+    VITIS_LOOP_239_1: for(int i=0; i<10000000; i++){
+#pragma HLS PIPELINE
+ if((j<32*10000000/64)&&(k<32*10000000/64)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
+        }
+
+        else if((j==32*10000000/64)&&(k<32*10000000/64)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
     }
 }

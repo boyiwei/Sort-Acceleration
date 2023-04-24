@@ -1,0 +1,147 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'radix_sort_bin_batch_37_1_Pipeline_bucket_pointer_initialization'" level="0">
+<item name = "Date">Mon Apr 24 09:08:58 2023
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">sort_seperate_bucket</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 1.654 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4, 4, 40.000 ns, 40.000 ns, 4, 4, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- bucket_pointer_initialization">2, 2, 1, 1, 1, 2, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 186, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 9, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 72, -</column>
+<column name="Register">-, -, 165, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_21_32_1_1_U1268">mux_21_32_1_1, 0, 0, 0, 9, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln33_fu_161_p2">+, 0, 0, 9, 2, 1</column>
+<column name="next_bucket_pointer_33_fu_196_p2">+, 0, 0, 39, 32, 32</column>
+<column name="icmp_ln33_fu_155_p2">icmp, 0, 0, 8, 2, 3</column>
+<column name="bucket_sizes_263_fu_226_p3">select, 0, 0, 32, 1, 32</column>
+<column name="bucket_sizes_264_fu_218_p3">select, 0, 0, 32, 1, 1</column>
+<column name="select_ln34_97_fu_210_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln34_fu_202_p3">select, 0, 0, 32, 1, 32</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="bucket_pointer_162_fu_54">9, 2, 32, 64</column>
+<column name="bucket_pointer_163_fu_58">9, 2, 32, 64</column>
+<column name="bucket_sizes_262_fu_66">9, 2, 32, 64</column>
+<column name="bucket_sizes_fu_62">9, 2, 32, 64</column>
+<column name="m_fu_50">9, 2, 2, 4</column>
+<column name="next_bucket_pointer_fu_46">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="bucket_pointer_162_fu_54">32, 0, 32, 0</column>
+<column name="bucket_pointer_163_fu_58">32, 0, 32, 0</column>
+<column name="bucket_sizes_262_fu_66">32, 0, 32, 0</column>
+<column name="bucket_sizes_fu_62">32, 0, 32, 0</column>
+<column name="m_fu_50">2, 0, 2, 0</column>
+<column name="next_bucket_pointer_fu_46">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, radix_sort_bin_batch.37.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, radix_sort_bin_batch.37.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, radix_sort_bin_batch.37.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, radix_sort_bin_batch.37.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, radix_sort_bin_batch.37.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, radix_sort_bin_batch.37.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="bucket_sizes_486">in, 32, ap_none, bucket_sizes_486, scalar</column>
+<column name="bucket_sizes_485">in, 32, ap_none, bucket_sizes_485, scalar</column>
+<column name="bucket_pointer_321">in, 32, ap_none, bucket_pointer_321, scalar</column>
+<column name="bucket_pointer">in, 32, ap_none, bucket_pointer, scalar</column>
+<column name="bucket_sizes_488_out">out, 32, ap_vld, bucket_sizes_488_out, pointer</column>
+<column name="bucket_sizes_488_out_ap_vld">out, 1, ap_vld, bucket_sizes_488_out, pointer</column>
+<column name="bucket_sizes_487_out">out, 32, ap_vld, bucket_sizes_487_out, pointer</column>
+<column name="bucket_sizes_487_out_ap_vld">out, 1, ap_vld, bucket_sizes_487_out, pointer</column>
+<column name="bucket_pointer_324_out">out, 32, ap_vld, bucket_pointer_324_out, pointer</column>
+<column name="bucket_pointer_324_out_ap_vld">out, 1, ap_vld, bucket_pointer_324_out, pointer</column>
+<column name="bucket_pointer_323_out">out, 32, ap_vld, bucket_pointer_323_out, pointer</column>
+<column name="bucket_pointer_323_out_ap_vld">out, 1, ap_vld, bucket_pointer_323_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

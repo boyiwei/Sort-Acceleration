@@ -1,0 +1,9 @@
+In file included from sort_seperate_bucket/merge_sort.c:3:
+In file included from sort_seperate_bucket/merge_sort.h:2:
+sort_seperate_bucket/dataset_size.h:2:9: warning: 'batch_size' macro redefined [-Wmacro-redefined]
+#define batch_size dataset_size/64
+        ^
+sort_seperate_bucket/batch_size.h:1:9: note: previous definition is here
+#define batch_size 15625
+        ^
+1 warning generated.

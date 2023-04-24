@@ -22,33 +22,33 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>250002</Best-caseLatency>
-<Average-caseLatency>250002</Average-caseLatency>
-<Worst-caseLatency>250002</Worst-caseLatency>
-<Best-caseRealTimeLatency>2.500 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>2.500 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>2.500 ms</Worst-caseRealTimeLatency>
-<Interval-min>250002</Interval-min>
-<Interval-max>250002</Interval-max>
+<Best-caseLatency>2500002</Best-caseLatency>
+<Average-caseLatency>2500002</Average-caseLatency>
+<Worst-caseLatency>2500002</Worst-caseLatency>
+<Best-caseRealTimeLatency>25.000 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>25.000 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>25.000 ms</Worst-caseRealTimeLatency>
+<Interval-min>2500002</Interval-min>
+<Interval-max>2500002</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_146_1>
+<VITIS_LOOP_183_1>
 <Slack>7.30</Slack>
-<TripCount>250000</TripCount>
-<Latency>250000</Latency>
-<AbsoluteTimeLatency>2500000</AbsoluteTimeLatency>
+<TripCount>2500000</TripCount>
+<Latency>2500000</Latency>
+<AbsoluteTimeLatency>25000000</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>2</PipelineDepth>
 <InstanceList>
 </InstanceList>
-</VITIS_LOOP_146_1>
+</VITIS_LOOP_183_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
-<FF>169</FF>
-<LUT>434</LUT>
+<FF>177</FF>
+<LUT>440</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -141,19 +141,19 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp4_3_address0</name>
-<Object>multi_radix_hex_kmerge_temp4_3</Object>
+<name>multi_radix_bin_kmerge_temp4_3_address0</name>
+<Object>multi_radix_bin_kmerge_temp4_3</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>18</Bits>
+<Bits>22</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp4_3_ce0</name>
-<Object>multi_radix_hex_kmerge_temp4_3</Object>
+<name>multi_radix_bin_kmerge_temp4_3_ce0</name>
+<Object>multi_radix_bin_kmerge_temp4_3</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -163,8 +163,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp4_3_we0</name>
-<Object>multi_radix_hex_kmerge_temp4_3</Object>
+<name>multi_radix_bin_kmerge_temp4_3_we0</name>
+<Object>multi_radix_bin_kmerge_temp4_3</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -174,8 +174,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp4_3_d0</name>
-<Object>multi_radix_hex_kmerge_temp4_3</Object>
+<name>multi_radix_bin_kmerge_temp4_3_d0</name>
+<Object>multi_radix_bin_kmerge_temp4_3</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -185,19 +185,19 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp3_6_address0</name>
-<Object>multi_radix_hex_kmerge_temp3_6</Object>
+<name>multi_radix_bin_kmerge_temp3_6_address0</name>
+<Object>multi_radix_bin_kmerge_temp3_6</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>17</Bits>
+<Bits>21</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp3_6_ce0</name>
-<Object>multi_radix_hex_kmerge_temp3_6</Object>
+<name>multi_radix_bin_kmerge_temp3_6_ce0</name>
+<Object>multi_radix_bin_kmerge_temp3_6</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -207,8 +207,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp3_6_q0</name>
-<Object>multi_radix_hex_kmerge_temp3_6</Object>
+<name>multi_radix_bin_kmerge_temp3_6_q0</name>
+<Object>multi_radix_bin_kmerge_temp3_6</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -218,19 +218,19 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp3_7_address0</name>
-<Object>multi_radix_hex_kmerge_temp3_7</Object>
+<name>multi_radix_bin_kmerge_temp3_7_address0</name>
+<Object>multi_radix_bin_kmerge_temp3_7</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>17</Bits>
+<Bits>21</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp3_7_ce0</name>
-<Object>multi_radix_hex_kmerge_temp3_7</Object>
+<name>multi_radix_bin_kmerge_temp3_7_ce0</name>
+<Object>multi_radix_bin_kmerge_temp3_7</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -240,8 +240,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>multi_radix_hex_kmerge_temp3_7_q0</name>
-<Object>multi_radix_hex_kmerge_temp3_7</Object>
+<name>multi_radix_bin_kmerge_temp3_7_q0</name>
+<Object>multi_radix_bin_kmerge_temp3_7</Object>
 <Type>array</Type>
 <Scope>global</Scope>
 <IOProtocol>ap_memory</IOProtocol>

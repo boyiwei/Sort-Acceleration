@@ -1,0 +1,61 @@
+sort_seperate_bucket/multi_radix_bin_kmerge.c:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_bin_batch_XLX_SEP_ PragmaOptions=variable=bucket_pointer type=complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=bucket_pointer type=complete
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_bin_batch_XLX_SEP_ PragmaOptions=variable=bucket_sizes type=complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=bucket_sizes type=complete
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:29:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_merge_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_bin_batch_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_MERGE
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=radix_sort_bin_batch_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:30:9: warning: Only for/while/do support the pipeline  pragma [-Wignored-hls-attributes]
+#pragma HLS PIPELINE
+        ^~~~~~~~~~~~
+/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:48:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=name=multi_radix_bin_kmerge_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=multi_radix_bin_kmerge
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:68:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=variable=input type=complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:69:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=variable=temp0 type=complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=temp0 type=complete dim=1
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:70:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=variable=temp1 type=complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=temp1 type=complete dim=1
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:71:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=variable=temp2 type=complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=temp2 type=complete dim=1
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:72:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=variable=temp3 type=complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=temp3 type=complete dim=1
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:73:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=variable=temp4 type=complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=temp4 type=complete dim=1
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:74:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=variable=temp5 type=complete dim=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=temp5 type=complete dim=1
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:77:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:80:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:85:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:90:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:95:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:100:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+sort_seperate_bucket/multi_radix_bin_kmerge.c:105:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=multi_radix_bin_kmerge_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+20 warnings generated.

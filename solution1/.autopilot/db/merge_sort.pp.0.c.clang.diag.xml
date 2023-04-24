@@ -9,7 +9,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>11</integer>
+      <integer>12</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -25,7 +25,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>48</integer>
+      <integer>49</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,7 +41,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>75</integer>
+      <integer>76</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +57,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>78</integer>
+      <integer>79</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -73,7 +73,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>84</integer>
+      <integer>85</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -89,11 +89,11 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>116</integer>
+      <integer>100</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=variable=input type=block factor=100_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_batch0_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -105,11 +105,11 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>117</integer>
+      <integer>128</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=variable=output type=block factor=100_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_batch1_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -121,11 +121,11 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>120</integer>
+      <integer>156</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_merge_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_batch2_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -137,11 +137,11 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>121</integer>
+      <integer>184</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_iterative_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_batch3_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -153,15 +153,31 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>121</integer>
+      <integer>212</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>Only for-loops and functions support the dataflow</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_batch4_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
-      <integer>5558</integer>
+      <integer>5471</integer>
       <key>WarningOption</key>
-      <string>ignored-hls-dataflow-attribute</string>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/merge_sort.c</string>
+      <key>line</key>
+      <integer>240</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_batch5_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
     </dict>
   </array>
 </dict>

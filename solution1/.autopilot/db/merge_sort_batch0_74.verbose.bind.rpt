@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'merge_sort_batch0_74'
 ================================================================
-* Date:           Sun Apr 23 22:15:25 2023
+* Date:           Mon Apr 24 09:04:09 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -25,24 +25,24 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    31252|    31252|  0.313 ms|  0.313 ms|  31252|  31252|       no|
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   312502|   312502|  3.125 ms|  3.125 ms|  312502|  312502|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
-        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
-        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
-        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
-        |- VITIS_LOOP_62_1  |    31250|    31250|         2|          1|          1|  31250|       yes|
-        +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_99_1  |   312500|   312500|         2|          1|          1|  312500|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
 
 ============================================================
 + Verbose Summary: Synthesis Manager
@@ -88,68 +88,68 @@ State 1 <SV = 0> <Delay = 1.55>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%k = alloca i32 1"   --->   Operation 6 'alloca' 'k' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 7 'alloca' 'j' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 8 [1/1] (0.45ns)   --->   "%store_ln62 = store i32 0, i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 8 'store' 'store_ln62' <Predicate = true> <Delay = 0.45>
-ST_1 : Operation 9 [1/1] (0.41ns)   --->   "%store_ln62 = store i32 0, i32 %k" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 9 'store' 'store_ln62' <Predicate = true> <Delay = 0.41>
-ST_1 : Operation 10 [1/1] (0.38ns)   --->   "%store_ln62 = store i15 0, i15 %i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 10 'store' 'store_ln62' <Predicate = true> <Delay = 0.38>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln62 = br void %for.body.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 11 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_180 = load i15 %i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 12 'load' 'i_180' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%k_218 = load i32 %k" [sort_seperate_bucket/multi_radix_hex_kmerge.c:77]   --->   Operation 13 'load' 'k_218' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%j_220 = load i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:81]   --->   Operation 14 'load' 'j_220' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 15 [1/1] (0.66ns)   --->   "%icmp_ln62 = icmp_eq  i15 %i_180, i15 31250" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 15 'icmp' 'icmp_ln62' <Predicate = true> <Delay = 0.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 31250, i64 31250, i64 31250"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 17 [1/1] (0.77ns)   --->   "%add_ln62 = add i15 %i_180, i15 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 17 'add' 'add_ln62' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln62 = br i1 %icmp_ln62, void %for.body.split.i, void %merge_sort_batch0.74.exit" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 18 'br' 'br_ln62' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln62 = zext i15 %i_180" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 19 'zext' 'zext_ln62' <Predicate = (!icmp_ln62)> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specpipeline_ln63 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_25" [sort_seperate_bucket/multi_radix_hex_kmerge.c:63]   --->   Operation 20 'specpipeline' 'specpipeline_ln63' <Predicate = (!icmp_ln62)> <Delay = 0.00>
-ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln60 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [sort_seperate_bucket/multi_radix_hex_kmerge.c:60]   --->   Operation 21 'specloopname' 'specloopname_ln60' <Predicate = (!icmp_ln62)> <Delay = 0.00>
-ST_1 : Operation 22 [1/1] (0.85ns)   --->   "%icmp_ln64 = icmp_slt  i32 %j_220, i32 15625" [sort_seperate_bucket/multi_radix_hex_kmerge.c:64]   --->   Operation 22 'icmp' 'icmp_ln64' <Predicate = (!icmp_ln62)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 23 [1/1] (0.85ns)   --->   "%icmp_ln64_21 = icmp_slt  i32 %k_218, i32 15625" [sort_seperate_bucket/multi_radix_hex_kmerge.c:64]   --->   Operation 23 'icmp' 'icmp_ln64_21' <Predicate = (!icmp_ln62)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 24 [1/1] (0.12ns)   --->   "%and_ln64 = and i1 %icmp_ln64, i1 %icmp_ln64_21" [sort_seperate_bucket/multi_radix_hex_kmerge.c:64]   --->   Operation 24 'and' 'and_ln64' <Predicate = (!icmp_ln62)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp1_10_addr = getelementptr i32 %multi_radix_hex_kmerge_temp1_10, i64 0, i64 %zext_ln62" [sort_seperate_bucket/multi_radix_hex_kmerge.c:80]   --->   Operation 25 'getelementptr' 'multi_radix_hex_kmerge_temp1_10_addr' <Predicate = (!icmp_ln62)> <Delay = 0.00>
-ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln64 = br i1 %and_ln64, void %if.else16.i, void %if.then.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:64]   --->   Operation 26 'br' 'br_ln64' <Predicate = (!icmp_ln62)> <Delay = 0.00>
-ST_1 : Operation 27 [1/1] (0.85ns)   --->   "%icmp_ln75 = icmp_eq  i32 %j_220, i32 15625" [sort_seperate_bucket/multi_radix_hex_kmerge.c:75]   --->   Operation 27 'icmp' 'icmp_ln75' <Predicate = (!icmp_ln62 & !and_ln64)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 28 [1/1] (0.12ns)   --->   "%and_ln75 = and i1 %icmp_ln75, i1 %icmp_ln64_21" [sort_seperate_bucket/multi_radix_hex_kmerge.c:75]   --->   Operation 28 'and' 'and_ln75' <Predicate = (!icmp_ln62 & !and_ln64)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln75 = br i1 %and_ln75, void %if.else26.i, void %if.then20.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:75]   --->   Operation 29 'br' 'br_ln75' <Predicate = (!icmp_ln62 & !and_ln64)> <Delay = 0.00>
-ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln80 = zext i32 %j_220" [sort_seperate_bucket/multi_radix_hex_kmerge.c:80]   --->   Operation 30 'zext' 'zext_ln80' <Predicate = (!icmp_ln62 & !and_ln64 & !and_ln75)> <Delay = 0.00>
-ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp0_20_addr_1 = getelementptr i32 %multi_radix_hex_kmerge_temp0_20, i64 0, i64 %zext_ln80" [sort_seperate_bucket/multi_radix_hex_kmerge.c:80]   --->   Operation 31 'getelementptr' 'multi_radix_hex_kmerge_temp0_20_addr_1' <Predicate = (!icmp_ln62 & !and_ln64 & !and_ln75)> <Delay = 0.00>
-ST_1 : Operation 32 [2/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp0_20_load_1 = load i14 %multi_radix_hex_kmerge_temp0_20_addr_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:80]   --->   Operation 32 'load' 'multi_radix_hex_kmerge_temp0_20_load_1' <Predicate = (!icmp_ln62 & !and_ln64 & !and_ln75)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15625> <RAM>
-ST_1 : Operation 33 [1/1] (0.88ns)   --->   "%j_222 = add i32 %j_220, i32 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:81]   --->   Operation 33 'add' 'j_222' <Predicate = (!icmp_ln62 & !and_ln64 & !and_ln75)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 34 [1/1] (0.45ns)   --->   "%store_ln81 = store i32 %j_222, i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:81]   --->   Operation 34 'store' 'store_ln81' <Predicate = (!icmp_ln62 & !and_ln64 & !and_ln75)> <Delay = 0.45>
-ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln76 = zext i32 %k_218" [sort_seperate_bucket/multi_radix_hex_kmerge.c:76]   --->   Operation 35 'zext' 'zext_ln76' <Predicate = (!icmp_ln62 & !and_ln64 & and_ln75)> <Delay = 0.00>
-ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp0_21_addr_1 = getelementptr i32 %multi_radix_hex_kmerge_temp0_21, i64 0, i64 %zext_ln76" [sort_seperate_bucket/multi_radix_hex_kmerge.c:76]   --->   Operation 36 'getelementptr' 'multi_radix_hex_kmerge_temp0_21_addr_1' <Predicate = (!icmp_ln62 & !and_ln64 & and_ln75)> <Delay = 0.00>
-ST_1 : Operation 37 [2/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp0_21_load_1 = load i14 %multi_radix_hex_kmerge_temp0_21_addr_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:76]   --->   Operation 37 'load' 'multi_radix_hex_kmerge_temp0_21_load_1' <Predicate = (!icmp_ln62 & !and_ln64 & and_ln75)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15625> <RAM>
-ST_1 : Operation 38 [1/1] (0.88ns)   --->   "%k_220 = add i32 %k_218, i32 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:77]   --->   Operation 38 'add' 'k_220' <Predicate = (!icmp_ln62 & !and_ln64 & and_ln75)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 39 [1/1] (0.45ns)   --->   "%store_ln78 = store i32 15625, i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:78]   --->   Operation 39 'store' 'store_ln78' <Predicate = (!icmp_ln62 & !and_ln64 & and_ln75)> <Delay = 0.45>
-ST_1 : Operation 40 [1/1] (0.41ns)   --->   "%store_ln78 = store i32 %k_220, i32 %k" [sort_seperate_bucket/multi_radix_hex_kmerge.c:78]   --->   Operation 40 'store' 'store_ln78' <Predicate = (!icmp_ln62 & !and_ln64 & and_ln75)> <Delay = 0.41>
-ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln65 = zext i32 %j_220" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 41 'zext' 'zext_ln65' <Predicate = (!icmp_ln62 & and_ln64)> <Delay = 0.00>
-ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp0_20_addr = getelementptr i32 %multi_radix_hex_kmerge_temp0_20, i64 0, i64 %zext_ln65" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 42 'getelementptr' 'multi_radix_hex_kmerge_temp0_20_addr' <Predicate = (!icmp_ln62 & and_ln64)> <Delay = 0.00>
-ST_1 : Operation 43 [2/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp0_20_load = load i14 %multi_radix_hex_kmerge_temp0_20_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 43 'load' 'multi_radix_hex_kmerge_temp0_20_load' <Predicate = (!icmp_ln62 & and_ln64)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15625> <RAM>
-ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln65_21 = zext i32 %k_218" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 44 'zext' 'zext_ln65_21' <Predicate = (!icmp_ln62 & and_ln64)> <Delay = 0.00>
-ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp0_21_addr = getelementptr i32 %multi_radix_hex_kmerge_temp0_21, i64 0, i64 %zext_ln65_21" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 45 'getelementptr' 'multi_radix_hex_kmerge_temp0_21_addr' <Predicate = (!icmp_ln62 & and_ln64)> <Delay = 0.00>
-ST_1 : Operation 46 [2/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp0_21_load = load i14 %multi_radix_hex_kmerge_temp0_21_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 46 'load' 'multi_radix_hex_kmerge_temp0_21_load' <Predicate = (!icmp_ln62 & and_ln64)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15625> <RAM>
-ST_1 : Operation 47 [1/1] (0.38ns)   --->   "%store_ln62 = store i15 %add_ln62, i15 %i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 47 'store' 'store_ln62' <Predicate = (!icmp_ln62)> <Delay = 0.38>
-ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln62 = br void %for.body.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 48 'br' 'br_ln62' <Predicate = (!icmp_ln62)> <Delay = 0.00>
-ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%ret_ln62 = ret" [sort_seperate_bucket/multi_radix_hex_kmerge.c:62]   --->   Operation 67 'ret' 'ret_ln62' <Predicate = (icmp_ln62)> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.45ns)   --->   "%store_ln99 = store i32 0, i32 %j" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 8 'store' 'store_ln99' <Predicate = true> <Delay = 0.45>
+ST_1 : Operation 9 [1/1] (0.41ns)   --->   "%store_ln99 = store i32 0, i32 %k" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 9 'store' 'store_ln99' <Predicate = true> <Delay = 0.41>
+ST_1 : Operation 10 [1/1] (0.38ns)   --->   "%store_ln99 = store i19 0, i19 %i" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 10 'store' 'store_ln99' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln99 = br void %for.body.i" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 11 'br' 'br_ln99' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_180 = load i19 %i" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 12 'load' 'i_180' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%k_218 = load i32 %k" [sort_seperate_bucket/merge_sort.c:114]   --->   Operation 13 'load' 'k_218' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%j_220 = load i32 %j" [sort_seperate_bucket/merge_sort.c:118]   --->   Operation 14 'load' 'j_220' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.71ns)   --->   "%icmp_ln99 = icmp_eq  i19 %i_180, i19 312500" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 15 'icmp' 'icmp_ln99' <Predicate = true> <Delay = 0.71> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 312500, i64 312500, i64 312500"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.80ns)   --->   "%add_ln99 = add i19 %i_180, i19 1" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 17 'add' 'add_ln99' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln99 = br i1 %icmp_ln99, void %for.body.split.i, void %merge_sort_batch0.74.exit" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 18 'br' 'br_ln99' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln99 = zext i19 %i_180" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 19 'zext' 'zext_ln99' <Predicate = (!icmp_ln99)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specpipeline_ln100 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_25" [sort_seperate_bucket/merge_sort.c:100]   --->   Operation 20 'specpipeline' 'specpipeline_ln100' <Predicate = (!icmp_ln99)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln97 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [sort_seperate_bucket/merge_sort.c:97]   --->   Operation 21 'specloopname' 'specloopname_ln97' <Predicate = (!icmp_ln99)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.85ns)   --->   "%icmp_ln101 = icmp_slt  i32 %j_220, i32 156250" [sort_seperate_bucket/merge_sort.c:101]   --->   Operation 22 'icmp' 'icmp_ln101' <Predicate = (!icmp_ln99)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.85ns)   --->   "%icmp_ln101_21 = icmp_slt  i32 %k_218, i32 156250" [sort_seperate_bucket/merge_sort.c:101]   --->   Operation 23 'icmp' 'icmp_ln101_21' <Predicate = (!icmp_ln99)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.12ns)   --->   "%and_ln101 = and i1 %icmp_ln101, i1 %icmp_ln101_21" [sort_seperate_bucket/merge_sort.c:101]   --->   Operation 24 'and' 'and_ln101' <Predicate = (!icmp_ln99)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%multi_radix_bin_kmerge_temp1_10_addr = getelementptr i32 %multi_radix_bin_kmerge_temp1_10, i64 0, i64 %zext_ln99" [sort_seperate_bucket/merge_sort.c:117]   --->   Operation 25 'getelementptr' 'multi_radix_bin_kmerge_temp1_10_addr' <Predicate = (!icmp_ln99)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln101 = br i1 %and_ln101, void %if.else16.i, void %if.then.i" [sort_seperate_bucket/merge_sort.c:101]   --->   Operation 26 'br' 'br_ln101' <Predicate = (!icmp_ln99)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.85ns)   --->   "%icmp_ln112 = icmp_eq  i32 %j_220, i32 156250" [sort_seperate_bucket/merge_sort.c:112]   --->   Operation 27 'icmp' 'icmp_ln112' <Predicate = (!icmp_ln99 & !and_ln101)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.12ns)   --->   "%and_ln112 = and i1 %icmp_ln112, i1 %icmp_ln101_21" [sort_seperate_bucket/merge_sort.c:112]   --->   Operation 28 'and' 'and_ln112' <Predicate = (!icmp_ln99 & !and_ln101)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln112 = br i1 %and_ln112, void %if.else26.i, void %if.then20.i" [sort_seperate_bucket/merge_sort.c:112]   --->   Operation 29 'br' 'br_ln112' <Predicate = (!icmp_ln99 & !and_ln101)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln117 = zext i32 %j_220" [sort_seperate_bucket/merge_sort.c:117]   --->   Operation 30 'zext' 'zext_ln117' <Predicate = (!icmp_ln99 & !and_ln101 & !and_ln112)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%multi_radix_bin_kmerge_temp0_20_addr_1 = getelementptr i32 %multi_radix_bin_kmerge_temp0_20, i64 0, i64 %zext_ln117" [sort_seperate_bucket/merge_sort.c:117]   --->   Operation 31 'getelementptr' 'multi_radix_bin_kmerge_temp0_20_addr_1' <Predicate = (!icmp_ln99 & !and_ln101 & !and_ln112)> <Delay = 0.00>
+ST_1 : Operation 32 [2/2] (1.24ns)   --->   "%multi_radix_bin_kmerge_temp0_20_load_1 = load i18 %multi_radix_bin_kmerge_temp0_20_addr_1" [sort_seperate_bucket/merge_sort.c:117]   --->   Operation 32 'load' 'multi_radix_bin_kmerge_temp0_20_load_1' <Predicate = (!icmp_ln99 & !and_ln101 & !and_ln112)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 156250> <RAM>
+ST_1 : Operation 33 [1/1] (0.88ns)   --->   "%j_222 = add i32 %j_220, i32 1" [sort_seperate_bucket/merge_sort.c:118]   --->   Operation 33 'add' 'j_222' <Predicate = (!icmp_ln99 & !and_ln101 & !and_ln112)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.45ns)   --->   "%store_ln118 = store i32 %j_222, i32 %j" [sort_seperate_bucket/merge_sort.c:118]   --->   Operation 34 'store' 'store_ln118' <Predicate = (!icmp_ln99 & !and_ln101 & !and_ln112)> <Delay = 0.45>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln113 = zext i32 %k_218" [sort_seperate_bucket/merge_sort.c:113]   --->   Operation 35 'zext' 'zext_ln113' <Predicate = (!icmp_ln99 & !and_ln101 & and_ln112)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%multi_radix_bin_kmerge_temp0_21_addr_1 = getelementptr i32 %multi_radix_bin_kmerge_temp0_21, i64 0, i64 %zext_ln113" [sort_seperate_bucket/merge_sort.c:113]   --->   Operation 36 'getelementptr' 'multi_radix_bin_kmerge_temp0_21_addr_1' <Predicate = (!icmp_ln99 & !and_ln101 & and_ln112)> <Delay = 0.00>
+ST_1 : Operation 37 [2/2] (1.24ns)   --->   "%multi_radix_bin_kmerge_temp0_21_load_1 = load i18 %multi_radix_bin_kmerge_temp0_21_addr_1" [sort_seperate_bucket/merge_sort.c:113]   --->   Operation 37 'load' 'multi_radix_bin_kmerge_temp0_21_load_1' <Predicate = (!icmp_ln99 & !and_ln101 & and_ln112)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 156250> <RAM>
+ST_1 : Operation 38 [1/1] (0.88ns)   --->   "%k_220 = add i32 %k_218, i32 1" [sort_seperate_bucket/merge_sort.c:114]   --->   Operation 38 'add' 'k_220' <Predicate = (!icmp_ln99 & !and_ln101 & and_ln112)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.45ns)   --->   "%store_ln115 = store i32 156250, i32 %j" [sort_seperate_bucket/merge_sort.c:115]   --->   Operation 39 'store' 'store_ln115' <Predicate = (!icmp_ln99 & !and_ln101 & and_ln112)> <Delay = 0.45>
+ST_1 : Operation 40 [1/1] (0.41ns)   --->   "%store_ln115 = store i32 %k_220, i32 %k" [sort_seperate_bucket/merge_sort.c:115]   --->   Operation 40 'store' 'store_ln115' <Predicate = (!icmp_ln99 & !and_ln101 & and_ln112)> <Delay = 0.41>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln102 = zext i32 %j_220" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 41 'zext' 'zext_ln102' <Predicate = (!icmp_ln99 & and_ln101)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%multi_radix_bin_kmerge_temp0_20_addr = getelementptr i32 %multi_radix_bin_kmerge_temp0_20, i64 0, i64 %zext_ln102" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 42 'getelementptr' 'multi_radix_bin_kmerge_temp0_20_addr' <Predicate = (!icmp_ln99 & and_ln101)> <Delay = 0.00>
+ST_1 : Operation 43 [2/2] (1.24ns)   --->   "%multi_radix_bin_kmerge_temp0_20_load = load i18 %multi_radix_bin_kmerge_temp0_20_addr" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 43 'load' 'multi_radix_bin_kmerge_temp0_20_load' <Predicate = (!icmp_ln99 & and_ln101)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 156250> <RAM>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln102_21 = zext i32 %k_218" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 44 'zext' 'zext_ln102_21' <Predicate = (!icmp_ln99 & and_ln101)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%multi_radix_bin_kmerge_temp0_21_addr = getelementptr i32 %multi_radix_bin_kmerge_temp0_21, i64 0, i64 %zext_ln102_21" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 45 'getelementptr' 'multi_radix_bin_kmerge_temp0_21_addr' <Predicate = (!icmp_ln99 & and_ln101)> <Delay = 0.00>
+ST_1 : Operation 46 [2/2] (1.24ns)   --->   "%multi_radix_bin_kmerge_temp0_21_load = load i18 %multi_radix_bin_kmerge_temp0_21_addr" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 46 'load' 'multi_radix_bin_kmerge_temp0_21_load' <Predicate = (!icmp_ln99 & and_ln101)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 156250> <RAM>
+ST_1 : Operation 47 [1/1] (0.38ns)   --->   "%store_ln99 = store i19 %add_ln99, i19 %i" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 47 'store' 'store_ln99' <Predicate = (!icmp_ln99)> <Delay = 0.38>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln99 = br void %for.body.i" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 48 'br' 'br_ln99' <Predicate = (!icmp_ln99)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%ret_ln99 = ret" [sort_seperate_bucket/merge_sort.c:99]   --->   Operation 67 'ret' 'ret_ln99' <Predicate = (icmp_ln99)> <Delay = 0.00>
 
 State 2 <SV = 1> <Delay = 3.35>
-ST_2 : Operation 49 [1/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp0_20_load_1 = load i14 %multi_radix_hex_kmerge_temp0_20_addr_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:80]   --->   Operation 49 'load' 'multi_radix_hex_kmerge_temp0_20_load_1' <Predicate = (!and_ln64 & !and_ln75)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15625> <RAM>
-ST_2 : Operation 50 [1/1] (1.24ns)   --->   "%store_ln80 = store i32 %multi_radix_hex_kmerge_temp0_20_load_1, i15 %multi_radix_hex_kmerge_temp1_10_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:80]   --->   Operation 50 'store' 'store_ln80' <Predicate = (!and_ln64 & !and_ln75)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31250> <RAM>
-ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 51 'br' 'br_ln0' <Predicate = (!and_ln64 & !and_ln75)> <Delay = 0.00>
-ST_2 : Operation 52 [1/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp0_21_load_1 = load i14 %multi_radix_hex_kmerge_temp0_21_addr_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:76]   --->   Operation 52 'load' 'multi_radix_hex_kmerge_temp0_21_load_1' <Predicate = (!and_ln64 & and_ln75)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15625> <RAM>
-ST_2 : Operation 53 [1/1] (1.24ns)   --->   "%store_ln76 = store i32 %multi_radix_hex_kmerge_temp0_21_load_1, i15 %multi_radix_hex_kmerge_temp1_10_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:76]   --->   Operation 53 'store' 'store_ln76' <Predicate = (!and_ln64 & and_ln75)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31250> <RAM>
-ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln78 = br void %for.inc.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:78]   --->   Operation 54 'br' 'br_ln78' <Predicate = (!and_ln64 & and_ln75)> <Delay = 0.00>
-ST_2 : Operation 55 [1/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp0_20_load = load i14 %multi_radix_hex_kmerge_temp0_20_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 55 'load' 'multi_radix_hex_kmerge_temp0_20_load' <Predicate = (and_ln64)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15625> <RAM>
-ST_2 : Operation 56 [1/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp0_21_load = load i14 %multi_radix_hex_kmerge_temp0_21_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 56 'load' 'multi_radix_hex_kmerge_temp0_21_load' <Predicate = (and_ln64)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15625> <RAM>
-ST_2 : Operation 57 [1/1] (0.85ns)   --->   "%icmp_ln65 = icmp_slt  i32 %multi_radix_hex_kmerge_temp0_20_load, i32 %multi_radix_hex_kmerge_temp0_21_load" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 57 'icmp' 'icmp_ln65' <Predicate = (and_ln64)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln65 = br i1 %icmp_ln65, void %if.else.i, void %if.then6.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:65]   --->   Operation 58 'br' 'br_ln65' <Predicate = (and_ln64)> <Delay = 0.00>
-ST_2 : Operation 59 [1/1] (1.24ns)   --->   "%store_ln70 = store i32 %multi_radix_hex_kmerge_temp0_21_load, i15 %multi_radix_hex_kmerge_temp1_10_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:70]   --->   Operation 59 'store' 'store_ln70' <Predicate = (and_ln64 & !icmp_ln65)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31250> <RAM>
-ST_2 : Operation 60 [1/1] (0.88ns)   --->   "%k_219 = add i32 %k_218, i32 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:71]   --->   Operation 60 'add' 'k_219' <Predicate = (and_ln64 & !icmp_ln65)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 61 [1/1] (0.41ns)   --->   "%store_ln71 = store i32 %k_219, i32 %k" [sort_seperate_bucket/multi_radix_hex_kmerge.c:71]   --->   Operation 61 'store' 'store_ln71' <Predicate = (and_ln64 & !icmp_ln65)> <Delay = 0.41>
-ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 62 'br' 'br_ln0' <Predicate = (and_ln64 & !icmp_ln65)> <Delay = 0.00>
-ST_2 : Operation 63 [1/1] (1.24ns)   --->   "%store_ln66 = store i32 %multi_radix_hex_kmerge_temp0_20_load, i15 %multi_radix_hex_kmerge_temp1_10_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:66]   --->   Operation 63 'store' 'store_ln66' <Predicate = (and_ln64 & icmp_ln65)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31250> <RAM>
-ST_2 : Operation 64 [1/1] (0.88ns)   --->   "%j_221 = add i32 %j_220, i32 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:67]   --->   Operation 64 'add' 'j_221' <Predicate = (and_ln64 & icmp_ln65)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 65 [1/1] (0.45ns)   --->   "%store_ln68 = store i32 %j_221, i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:68]   --->   Operation 65 'store' 'store_ln68' <Predicate = (and_ln64 & icmp_ln65)> <Delay = 0.45>
-ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln68 = br void %for.inc.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:68]   --->   Operation 66 'br' 'br_ln68' <Predicate = (and_ln64 & icmp_ln65)> <Delay = 0.00>
+ST_2 : Operation 49 [1/2] (1.24ns)   --->   "%multi_radix_bin_kmerge_temp0_20_load_1 = load i18 %multi_radix_bin_kmerge_temp0_20_addr_1" [sort_seperate_bucket/merge_sort.c:117]   --->   Operation 49 'load' 'multi_radix_bin_kmerge_temp0_20_load_1' <Predicate = (!and_ln101 & !and_ln112)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 156250> <RAM>
+ST_2 : Operation 50 [1/1] (1.24ns)   --->   "%store_ln117 = store i32 %multi_radix_bin_kmerge_temp0_20_load_1, i19 %multi_radix_bin_kmerge_temp1_10_addr" [sort_seperate_bucket/merge_sort.c:117]   --->   Operation 50 'store' 'store_ln117' <Predicate = (!and_ln101 & !and_ln112)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 312500> <RAM>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 51 'br' 'br_ln0' <Predicate = (!and_ln101 & !and_ln112)> <Delay = 0.00>
+ST_2 : Operation 52 [1/2] (1.24ns)   --->   "%multi_radix_bin_kmerge_temp0_21_load_1 = load i18 %multi_radix_bin_kmerge_temp0_21_addr_1" [sort_seperate_bucket/merge_sort.c:113]   --->   Operation 52 'load' 'multi_radix_bin_kmerge_temp0_21_load_1' <Predicate = (!and_ln101 & and_ln112)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 156250> <RAM>
+ST_2 : Operation 53 [1/1] (1.24ns)   --->   "%store_ln113 = store i32 %multi_radix_bin_kmerge_temp0_21_load_1, i19 %multi_radix_bin_kmerge_temp1_10_addr" [sort_seperate_bucket/merge_sort.c:113]   --->   Operation 53 'store' 'store_ln113' <Predicate = (!and_ln101 & and_ln112)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 312500> <RAM>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln115 = br void %for.inc.i" [sort_seperate_bucket/merge_sort.c:115]   --->   Operation 54 'br' 'br_ln115' <Predicate = (!and_ln101 & and_ln112)> <Delay = 0.00>
+ST_2 : Operation 55 [1/2] (1.24ns)   --->   "%multi_radix_bin_kmerge_temp0_20_load = load i18 %multi_radix_bin_kmerge_temp0_20_addr" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 55 'load' 'multi_radix_bin_kmerge_temp0_20_load' <Predicate = (and_ln101)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 156250> <RAM>
+ST_2 : Operation 56 [1/2] (1.24ns)   --->   "%multi_radix_bin_kmerge_temp0_21_load = load i18 %multi_radix_bin_kmerge_temp0_21_addr" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 56 'load' 'multi_radix_bin_kmerge_temp0_21_load' <Predicate = (and_ln101)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 156250> <RAM>
+ST_2 : Operation 57 [1/1] (0.85ns)   --->   "%icmp_ln102 = icmp_slt  i32 %multi_radix_bin_kmerge_temp0_20_load, i32 %multi_radix_bin_kmerge_temp0_21_load" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 57 'icmp' 'icmp_ln102' <Predicate = (and_ln101)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln102 = br i1 %icmp_ln102, void %if.else.i, void %if.then6.i" [sort_seperate_bucket/merge_sort.c:102]   --->   Operation 58 'br' 'br_ln102' <Predicate = (and_ln101)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (1.24ns)   --->   "%store_ln107 = store i32 %multi_radix_bin_kmerge_temp0_21_load, i19 %multi_radix_bin_kmerge_temp1_10_addr" [sort_seperate_bucket/merge_sort.c:107]   --->   Operation 59 'store' 'store_ln107' <Predicate = (and_ln101 & !icmp_ln102)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 312500> <RAM>
+ST_2 : Operation 60 [1/1] (0.88ns)   --->   "%k_219 = add i32 %k_218, i32 1" [sort_seperate_bucket/merge_sort.c:108]   --->   Operation 60 'add' 'k_219' <Predicate = (and_ln101 & !icmp_ln102)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.41ns)   --->   "%store_ln108 = store i32 %k_219, i32 %k" [sort_seperate_bucket/merge_sort.c:108]   --->   Operation 61 'store' 'store_ln108' <Predicate = (and_ln101 & !icmp_ln102)> <Delay = 0.41>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 62 'br' 'br_ln0' <Predicate = (and_ln101 & !icmp_ln102)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (1.24ns)   --->   "%store_ln103 = store i32 %multi_radix_bin_kmerge_temp0_20_load, i19 %multi_radix_bin_kmerge_temp1_10_addr" [sort_seperate_bucket/merge_sort.c:103]   --->   Operation 63 'store' 'store_ln103' <Predicate = (and_ln101 & icmp_ln102)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 312500> <RAM>
+ST_2 : Operation 64 [1/1] (0.88ns)   --->   "%j_221 = add i32 %j_220, i32 1" [sort_seperate_bucket/merge_sort.c:104]   --->   Operation 64 'add' 'j_221' <Predicate = (and_ln101 & icmp_ln102)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (0.45ns)   --->   "%store_ln105 = store i32 %j_221, i32 %j" [sort_seperate_bucket/merge_sort.c:105]   --->   Operation 65 'store' 'store_ln105' <Predicate = (and_ln101 & icmp_ln102)> <Delay = 0.45>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln105 = br void %for.inc.i" [sort_seperate_bucket/merge_sort.c:105]   --->   Operation 66 'br' 'br_ln105' <Predicate = (and_ln101 & icmp_ln102)> <Delay = 0.00>
 
 
 ============================================================
@@ -163,9 +163,9 @@ STG Binding:
 - Is pipelined: 0
 - Is top level: 0
 Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
-Port [ multi_radix_hex_kmerge_temp0_20]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ multi_radix_hex_kmerge_temp0_21]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
-Port [ multi_radix_hex_kmerge_temp1_10]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ multi_radix_bin_kmerge_temp0_20]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ multi_radix_bin_kmerge_temp0_21]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=1; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ multi_radix_bin_kmerge_temp1_10]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=1; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
 ---------------- STG Properties END ------------------
 
 ---------------- Datapath Model BEGIN ----------------
@@ -175,93 +175,93 @@ Port [ multi_radix_hex_kmerge_temp1_10]:  wired=1; compound=1; hidden=0; nouse=0
 i                                      (alloca           ) [ 010]
 k                                      (alloca           ) [ 011]
 j                                      (alloca           ) [ 011]
-store_ln62                             (store            ) [ 000]
-store_ln62                             (store            ) [ 000]
-store_ln62                             (store            ) [ 000]
-br_ln62                                (br               ) [ 000]
+store_ln99                             (store            ) [ 000]
+store_ln99                             (store            ) [ 000]
+store_ln99                             (store            ) [ 000]
+br_ln99                                (br               ) [ 000]
 i_180                                  (load             ) [ 000]
 k_218                                  (load             ) [ 011]
 j_220                                  (load             ) [ 011]
-icmp_ln62                              (icmp             ) [ 010]
+icmp_ln99                              (icmp             ) [ 010]
 empty                                  (speclooptripcount) [ 000]
-add_ln62                               (add              ) [ 000]
-br_ln62                                (br               ) [ 000]
-zext_ln62                              (zext             ) [ 000]
-specpipeline_ln63                      (specpipeline     ) [ 000]
-specloopname_ln60                      (specloopname     ) [ 000]
-icmp_ln64                              (icmp             ) [ 000]
-icmp_ln64_21                           (icmp             ) [ 000]
-and_ln64                               (and              ) [ 011]
-multi_radix_hex_kmerge_temp1_10_addr   (getelementptr    ) [ 011]
-br_ln64                                (br               ) [ 000]
-icmp_ln75                              (icmp             ) [ 000]
-and_ln75                               (and              ) [ 011]
-br_ln75                                (br               ) [ 000]
-zext_ln80                              (zext             ) [ 000]
-multi_radix_hex_kmerge_temp0_20_addr_1 (getelementptr    ) [ 011]
+add_ln99                               (add              ) [ 000]
+br_ln99                                (br               ) [ 000]
+zext_ln99                              (zext             ) [ 000]
+specpipeline_ln100                     (specpipeline     ) [ 000]
+specloopname_ln97                      (specloopname     ) [ 000]
+icmp_ln101                             (icmp             ) [ 000]
+icmp_ln101_21                          (icmp             ) [ 000]
+and_ln101                              (and              ) [ 011]
+multi_radix_bin_kmerge_temp1_10_addr   (getelementptr    ) [ 011]
+br_ln101                               (br               ) [ 000]
+icmp_ln112                             (icmp             ) [ 000]
+and_ln112                              (and              ) [ 011]
+br_ln112                               (br               ) [ 000]
+zext_ln117                             (zext             ) [ 000]
+multi_radix_bin_kmerge_temp0_20_addr_1 (getelementptr    ) [ 011]
 j_222                                  (add              ) [ 000]
-store_ln81                             (store            ) [ 000]
-zext_ln76                              (zext             ) [ 000]
-multi_radix_hex_kmerge_temp0_21_addr_1 (getelementptr    ) [ 011]
+store_ln118                            (store            ) [ 000]
+zext_ln113                             (zext             ) [ 000]
+multi_radix_bin_kmerge_temp0_21_addr_1 (getelementptr    ) [ 011]
 k_220                                  (add              ) [ 000]
-store_ln78                             (store            ) [ 000]
-store_ln78                             (store            ) [ 000]
-zext_ln65                              (zext             ) [ 000]
-multi_radix_hex_kmerge_temp0_20_addr   (getelementptr    ) [ 011]
-zext_ln65_21                           (zext             ) [ 000]
-multi_radix_hex_kmerge_temp0_21_addr   (getelementptr    ) [ 011]
-store_ln62                             (store            ) [ 000]
-br_ln62                                (br               ) [ 000]
-multi_radix_hex_kmerge_temp0_20_load_1 (load             ) [ 000]
-store_ln80                             (store            ) [ 000]
+store_ln115                            (store            ) [ 000]
+store_ln115                            (store            ) [ 000]
+zext_ln102                             (zext             ) [ 000]
+multi_radix_bin_kmerge_temp0_20_addr   (getelementptr    ) [ 011]
+zext_ln102_21                          (zext             ) [ 000]
+multi_radix_bin_kmerge_temp0_21_addr   (getelementptr    ) [ 011]
+store_ln99                             (store            ) [ 000]
+br_ln99                                (br               ) [ 000]
+multi_radix_bin_kmerge_temp0_20_load_1 (load             ) [ 000]
+store_ln117                            (store            ) [ 000]
 br_ln0                                 (br               ) [ 000]
-multi_radix_hex_kmerge_temp0_21_load_1 (load             ) [ 000]
-store_ln76                             (store            ) [ 000]
-br_ln78                                (br               ) [ 000]
-multi_radix_hex_kmerge_temp0_20_load   (load             ) [ 000]
-multi_radix_hex_kmerge_temp0_21_load   (load             ) [ 000]
-icmp_ln65                              (icmp             ) [ 011]
-br_ln65                                (br               ) [ 000]
-store_ln70                             (store            ) [ 000]
+multi_radix_bin_kmerge_temp0_21_load_1 (load             ) [ 000]
+store_ln113                            (store            ) [ 000]
+br_ln115                               (br               ) [ 000]
+multi_radix_bin_kmerge_temp0_20_load   (load             ) [ 000]
+multi_radix_bin_kmerge_temp0_21_load   (load             ) [ 000]
+icmp_ln102                             (icmp             ) [ 011]
+br_ln102                               (br               ) [ 000]
+store_ln107                            (store            ) [ 000]
 k_219                                  (add              ) [ 000]
-store_ln71                             (store            ) [ 000]
+store_ln108                            (store            ) [ 000]
 br_ln0                                 (br               ) [ 000]
-store_ln66                             (store            ) [ 000]
+store_ln103                            (store            ) [ 000]
 j_221                                  (add              ) [ 000]
-store_ln68                             (store            ) [ 000]
-br_ln68                                (br               ) [ 000]
-ret_ln62                               (ret              ) [ 000]
+store_ln105                            (store            ) [ 000]
+br_ln105                               (br               ) [ 000]
+ret_ln99                               (ret              ) [ 000]
 </LifeTime>
 
 <model>
 
 <comp_list>
-<comp id="0" class="1000" name="multi_radix_hex_kmerge_temp0_20">
+<comp id="0" class="1000" name="multi_radix_bin_kmerge_temp0_20">
 <pin_list>
 <pin id="1" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="multi_radix_hex_kmerge_temp0_20"/><MemPortTyVec>1 3 </MemPortTyVec>
+<StgValue><ssdm name="multi_radix_bin_kmerge_temp0_20"/><MemPortTyVec>1 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="2" class="1000" name="multi_radix_hex_kmerge_temp0_21">
+<comp id="2" class="1000" name="multi_radix_bin_kmerge_temp0_21">
 <pin_list>
 <pin id="3" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="multi_radix_hex_kmerge_temp0_21"/><MemPortTyVec>1 3 </MemPortTyVec>
+<StgValue><ssdm name="multi_radix_bin_kmerge_temp0_21"/><MemPortTyVec>1 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
 
-<comp id="4" class="1000" name="multi_radix_hex_kmerge_temp1_10">
+<comp id="4" class="1000" name="multi_radix_bin_kmerge_temp1_10">
 <pin_list>
 <pin id="5" dir="1" index="0" bw="1" slack="0"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="multi_radix_hex_kmerge_temp1_10"/><MemPortTyVec>0 3 </MemPortTyVec>
+<StgValue><ssdm name="multi_radix_bin_kmerge_temp1_10"/><MemPortTyVec>0 3 </MemPortTyVec>
 </StgValue>
 </bind>
 </comp>
@@ -395,7 +395,7 @@ ret_ln62                               (ret              ) [ 000]
 <comp id="34" class="1004" name="i_fu_34">
 <pin_list>
 <pin id="35" dir="0" index="0" bw="1" slack="0"/>
-<pin id="36" dir="1" index="1" bw="15" slack="0"/>
+<pin id="36" dir="1" index="1" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -425,111 +425,111 @@ ret_ln62                               (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="46" class="1004" name="multi_radix_hex_kmerge_temp1_10_addr_gep_fu_46">
+<comp id="46" class="1004" name="multi_radix_bin_kmerge_temp1_10_addr_gep_fu_46">
 <pin_list>
 <pin id="47" dir="0" index="0" bw="32" slack="0"/>
 <pin id="48" dir="0" index="1" bw="1" slack="0"/>
-<pin id="49" dir="0" index="2" bw="15" slack="0"/>
-<pin id="50" dir="1" index="3" bw="15" slack="1"/>
+<pin id="49" dir="0" index="2" bw="19" slack="0"/>
+<pin id="50" dir="1" index="3" bw="19" slack="1"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="multi_radix_hex_kmerge_temp1_10_addr/1 "/>
+<opset="multi_radix_bin_kmerge_temp1_10_addr/1 "/>
 </bind>
 </comp>
 
-<comp id="53" class="1004" name="multi_radix_hex_kmerge_temp0_20_addr_1_gep_fu_53">
+<comp id="53" class="1004" name="multi_radix_bin_kmerge_temp0_20_addr_1_gep_fu_53">
 <pin_list>
 <pin id="54" dir="0" index="0" bw="32" slack="0"/>
 <pin id="55" dir="0" index="1" bw="1" slack="0"/>
 <pin id="56" dir="0" index="2" bw="32" slack="0"/>
-<pin id="57" dir="1" index="3" bw="14" slack="0"/>
+<pin id="57" dir="1" index="3" bw="18" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="multi_radix_hex_kmerge_temp0_20_addr_1/1 "/>
+<opset="multi_radix_bin_kmerge_temp0_20_addr_1/1 "/>
 </bind>
 </comp>
 
 <comp id="60" class="1004" name="grp_access_fu_60">
 <pin_list>
-<pin id="61" dir="0" index="0" bw="14" slack="0"/>
+<pin id="61" dir="0" index="0" bw="18" slack="0"/>
 <pin id="62" dir="0" index="1" bw="32" slack="2147483647"/>
 <pin id="63" dir="0" index="2" bw="0" slack="2147483647"/>
 <pin id="64" dir="1" index="3" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="multi_radix_hex_kmerge_temp0_20_load_1/1 multi_radix_hex_kmerge_temp0_20_load/1 "/>
+<opset="multi_radix_bin_kmerge_temp0_20_load_1/1 multi_radix_bin_kmerge_temp0_20_load/1 "/>
 </bind>
 </comp>
 
-<comp id="66" class="1004" name="multi_radix_hex_kmerge_temp0_21_addr_1_gep_fu_66">
+<comp id="66" class="1004" name="multi_radix_bin_kmerge_temp0_21_addr_1_gep_fu_66">
 <pin_list>
 <pin id="67" dir="0" index="0" bw="32" slack="0"/>
 <pin id="68" dir="0" index="1" bw="1" slack="0"/>
 <pin id="69" dir="0" index="2" bw="32" slack="0"/>
-<pin id="70" dir="1" index="3" bw="14" slack="0"/>
+<pin id="70" dir="1" index="3" bw="18" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="multi_radix_hex_kmerge_temp0_21_addr_1/1 "/>
+<opset="multi_radix_bin_kmerge_temp0_21_addr_1/1 "/>
 </bind>
 </comp>
 
 <comp id="73" class="1004" name="grp_access_fu_73">
 <pin_list>
-<pin id="74" dir="0" index="0" bw="14" slack="0"/>
+<pin id="74" dir="0" index="0" bw="18" slack="0"/>
 <pin id="75" dir="0" index="1" bw="32" slack="2147483647"/>
 <pin id="76" dir="0" index="2" bw="0" slack="2147483647"/>
 <pin id="77" dir="1" index="3" bw="32" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
-<opset="multi_radix_hex_kmerge_temp0_21_load_1/1 multi_radix_hex_kmerge_temp0_21_load/1 "/>
+<opset="multi_radix_bin_kmerge_temp0_21_load_1/1 multi_radix_bin_kmerge_temp0_21_load/1 "/>
 </bind>
 </comp>
 
-<comp id="79" class="1004" name="multi_radix_hex_kmerge_temp0_20_addr_gep_fu_79">
+<comp id="79" class="1004" name="multi_radix_bin_kmerge_temp0_20_addr_gep_fu_79">
 <pin_list>
 <pin id="80" dir="0" index="0" bw="32" slack="0"/>
 <pin id="81" dir="0" index="1" bw="1" slack="0"/>
 <pin id="82" dir="0" index="2" bw="32" slack="0"/>
-<pin id="83" dir="1" index="3" bw="14" slack="0"/>
+<pin id="83" dir="1" index="3" bw="18" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="multi_radix_hex_kmerge_temp0_20_addr/1 "/>
+<opset="multi_radix_bin_kmerge_temp0_20_addr/1 "/>
 </bind>
 </comp>
 
-<comp id="87" class="1004" name="multi_radix_hex_kmerge_temp0_21_addr_gep_fu_87">
+<comp id="87" class="1004" name="multi_radix_bin_kmerge_temp0_21_addr_gep_fu_87">
 <pin_list>
 <pin id="88" dir="0" index="0" bw="32" slack="0"/>
 <pin id="89" dir="0" index="1" bw="1" slack="0"/>
 <pin id="90" dir="0" index="2" bw="32" slack="0"/>
-<pin id="91" dir="1" index="3" bw="14" slack="0"/>
+<pin id="91" dir="1" index="3" bw="18" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
-<opset="multi_radix_hex_kmerge_temp0_21_addr/1 "/>
+<opset="multi_radix_bin_kmerge_temp0_21_addr/1 "/>
 </bind>
 </comp>
 
 <comp id="95" class="1004" name="grp_access_fu_95">
 <pin_list>
-<pin id="96" dir="0" index="0" bw="15" slack="1"/>
+<pin id="96" dir="0" index="0" bw="19" slack="1"/>
 <pin id="97" dir="0" index="1" bw="32" slack="0"/>
 <pin id="98" dir="0" index="2" bw="0" slack="2147483647"/>
 <pin id="99" dir="1" index="3" bw="32" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln80/2 store_ln76/2 store_ln70/2 store_ln66/2 "/>
+<opset="store_ln117/2 store_ln113/2 store_ln107/2 store_ln103/2 "/>
 </bind>
 </comp>
 
-<comp id="102" class="1004" name="store_ln62_store_fu_102">
+<comp id="102" class="1004" name="store_ln99_store_fu_102">
 <pin_list>
 <pin id="103" dir="0" index="0" bw="1" slack="0"/>
 <pin id="104" dir="0" index="1" bw="32" slack="0"/>
@@ -537,11 +537,11 @@ ret_ln62                               (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln62/1 "/>
+<opset="store_ln99/1 "/>
 </bind>
 </comp>
 
-<comp id="107" class="1004" name="store_ln62_store_fu_107">
+<comp id="107" class="1004" name="store_ln99_store_fu_107">
 <pin_list>
 <pin id="108" dir="0" index="0" bw="1" slack="0"/>
 <pin id="109" dir="0" index="1" bw="32" slack="0"/>
@@ -549,26 +549,26 @@ ret_ln62                               (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln62/1 "/>
+<opset="store_ln99/1 "/>
 </bind>
 </comp>
 
-<comp id="112" class="1004" name="store_ln62_store_fu_112">
+<comp id="112" class="1004" name="store_ln99_store_fu_112">
 <pin_list>
 <pin id="113" dir="0" index="0" bw="1" slack="0"/>
-<pin id="114" dir="0" index="1" bw="15" slack="0"/>
+<pin id="114" dir="0" index="1" bw="19" slack="0"/>
 <pin id="115" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln62/1 "/>
+<opset="store_ln99/1 "/>
 </bind>
 </comp>
 
 <comp id="117" class="1004" name="i_180_load_fu_117">
 <pin_list>
-<pin id="118" dir="0" index="0" bw="15" slack="0"/>
-<pin id="119" dir="1" index="1" bw="15" slack="0"/>
+<pin id="118" dir="0" index="0" bw="19" slack="0"/>
+<pin id="119" dir="1" index="1" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -598,66 +598,66 @@ ret_ln62                               (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="126" class="1004" name="icmp_ln62_fu_126">
+<comp id="126" class="1004" name="icmp_ln99_fu_126">
 <pin_list>
-<pin id="127" dir="0" index="0" bw="15" slack="0"/>
-<pin id="128" dir="0" index="1" bw="12" slack="0"/>
+<pin id="127" dir="0" index="0" bw="19" slack="0"/>
+<pin id="128" dir="0" index="1" bw="19" slack="0"/>
 <pin id="129" dir="1" index="2" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln62/1 "/>
+<opset="icmp_ln99/1 "/>
 </bind>
 </comp>
 
-<comp id="132" class="1004" name="add_ln62_fu_132">
+<comp id="132" class="1004" name="add_ln99_fu_132">
 <pin_list>
-<pin id="133" dir="0" index="0" bw="15" slack="0"/>
+<pin id="133" dir="0" index="0" bw="19" slack="0"/>
 <pin id="134" dir="0" index="1" bw="1" slack="0"/>
-<pin id="135" dir="1" index="2" bw="15" slack="0"/>
+<pin id="135" dir="1" index="2" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
-<opset="add_ln62/1 "/>
+<opset="add_ln99/1 "/>
 </bind>
 </comp>
 
-<comp id="138" class="1004" name="zext_ln62_fu_138">
+<comp id="138" class="1004" name="zext_ln99_fu_138">
 <pin_list>
-<pin id="139" dir="0" index="0" bw="15" slack="0"/>
+<pin id="139" dir="0" index="0" bw="19" slack="0"/>
 <pin id="140" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln62/1 "/>
+<opset="zext_ln99/1 "/>
 </bind>
 </comp>
 
-<comp id="143" class="1004" name="icmp_ln64_fu_143">
+<comp id="143" class="1004" name="icmp_ln101_fu_143">
 <pin_list>
 <pin id="144" dir="0" index="0" bw="32" slack="0"/>
-<pin id="145" dir="0" index="1" bw="15" slack="0"/>
+<pin id="145" dir="0" index="1" bw="19" slack="0"/>
 <pin id="146" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln64/1 "/>
+<opset="icmp_ln101/1 "/>
 </bind>
 </comp>
 
-<comp id="149" class="1004" name="icmp_ln64_21_fu_149">
+<comp id="149" class="1004" name="icmp_ln101_21_fu_149">
 <pin_list>
 <pin id="150" dir="0" index="0" bw="32" slack="0"/>
-<pin id="151" dir="0" index="1" bw="15" slack="0"/>
+<pin id="151" dir="0" index="1" bw="19" slack="0"/>
 <pin id="152" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln64_21/1 "/>
+<opset="icmp_ln101_21/1 "/>
 </bind>
 </comp>
 
-<comp id="155" class="1004" name="and_ln64_fu_155">
+<comp id="155" class="1004" name="and_ln101_fu_155">
 <pin_list>
 <pin id="156" dir="0" index="0" bw="1" slack="0"/>
 <pin id="157" dir="0" index="1" bw="1" slack="0"/>
@@ -665,23 +665,23 @@ ret_ln62                               (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="and_ln64/1 "/>
+<opset="and_ln101/1 "/>
 </bind>
 </comp>
 
-<comp id="161" class="1004" name="icmp_ln75_fu_161">
+<comp id="161" class="1004" name="icmp_ln112_fu_161">
 <pin_list>
 <pin id="162" dir="0" index="0" bw="32" slack="0"/>
-<pin id="163" dir="0" index="1" bw="15" slack="0"/>
+<pin id="163" dir="0" index="1" bw="19" slack="0"/>
 <pin id="164" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln75/1 "/>
+<opset="icmp_ln112/1 "/>
 </bind>
 </comp>
 
-<comp id="167" class="1004" name="and_ln75_fu_167">
+<comp id="167" class="1004" name="and_ln112_fu_167">
 <pin_list>
 <pin id="168" dir="0" index="0" bw="1" slack="0"/>
 <pin id="169" dir="0" index="1" bw="1" slack="0"/>
@@ -689,18 +689,18 @@ ret_ln62                               (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="and(23) " fcode="and"/>
-<opset="and_ln75/1 "/>
+<opset="and_ln112/1 "/>
 </bind>
 </comp>
 
-<comp id="173" class="1004" name="zext_ln80_fu_173">
+<comp id="173" class="1004" name="zext_ln117_fu_173">
 <pin_list>
 <pin id="174" dir="0" index="0" bw="32" slack="0"/>
 <pin id="175" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln80/1 "/>
+<opset="zext_ln117/1 "/>
 </bind>
 </comp>
 
@@ -716,7 +716,7 @@ ret_ln62                               (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="184" class="1004" name="store_ln81_store_fu_184">
+<comp id="184" class="1004" name="store_ln118_store_fu_184">
 <pin_list>
 <pin id="185" dir="0" index="0" bw="32" slack="0"/>
 <pin id="186" dir="0" index="1" bw="32" slack="0"/>
@@ -724,18 +724,18 @@ ret_ln62                               (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln81/1 "/>
+<opset="store_ln118/1 "/>
 </bind>
 </comp>
 
-<comp id="189" class="1004" name="zext_ln76_fu_189">
+<comp id="189" class="1004" name="zext_ln113_fu_189">
 <pin_list>
 <pin id="190" dir="0" index="0" bw="32" slack="0"/>
 <pin id="191" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln76/1 "/>
+<opset="zext_ln113/1 "/>
 </bind>
 </comp>
 
@@ -751,19 +751,19 @@ ret_ln62                               (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="200" class="1004" name="store_ln78_store_fu_200">
+<comp id="200" class="1004" name="store_ln115_store_fu_200">
 <pin_list>
-<pin id="201" dir="0" index="0" bw="15" slack="0"/>
+<pin id="201" dir="0" index="0" bw="19" slack="0"/>
 <pin id="202" dir="0" index="1" bw="32" slack="0"/>
 <pin id="203" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln78/1 "/>
+<opset="store_ln115/1 "/>
 </bind>
 </comp>
 
-<comp id="205" class="1004" name="store_ln78_store_fu_205">
+<comp id="205" class="1004" name="store_ln115_store_fu_205">
 <pin_list>
 <pin id="206" dir="0" index="0" bw="32" slack="0"/>
 <pin id="207" dir="0" index="1" bw="32" slack="0"/>
@@ -771,45 +771,45 @@ ret_ln62                               (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln78/1 "/>
+<opset="store_ln115/1 "/>
 </bind>
 </comp>
 
-<comp id="210" class="1004" name="zext_ln65_fu_210">
+<comp id="210" class="1004" name="zext_ln102_fu_210">
 <pin_list>
 <pin id="211" dir="0" index="0" bw="32" slack="0"/>
 <pin id="212" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln65/1 "/>
+<opset="zext_ln102/1 "/>
 </bind>
 </comp>
 
-<comp id="215" class="1004" name="zext_ln65_21_fu_215">
+<comp id="215" class="1004" name="zext_ln102_21_fu_215">
 <pin_list>
 <pin id="216" dir="0" index="0" bw="32" slack="0"/>
 <pin id="217" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="zext(34) " fcode="zext"/>
-<opset="zext_ln65_21/1 "/>
+<opset="zext_ln102_21/1 "/>
 </bind>
 </comp>
 
-<comp id="220" class="1004" name="store_ln62_store_fu_220">
+<comp id="220" class="1004" name="store_ln99_store_fu_220">
 <pin_list>
-<pin id="221" dir="0" index="0" bw="15" slack="0"/>
-<pin id="222" dir="0" index="1" bw="15" slack="0"/>
+<pin id="221" dir="0" index="0" bw="19" slack="0"/>
+<pin id="222" dir="0" index="1" bw="19" slack="0"/>
 <pin id="223" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln62/1 "/>
+<opset="store_ln99/1 "/>
 </bind>
 </comp>
 
-<comp id="225" class="1004" name="icmp_ln65_fu_225">
+<comp id="225" class="1004" name="icmp_ln102_fu_225">
 <pin_list>
 <pin id="226" dir="0" index="0" bw="32" slack="0"/>
 <pin id="227" dir="0" index="1" bw="32" slack="0"/>
@@ -817,7 +817,7 @@ ret_ln62                               (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
-<opset="icmp_ln65/2 "/>
+<opset="icmp_ln102/2 "/>
 </bind>
 </comp>
 
@@ -833,7 +833,7 @@ ret_ln62                               (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="236" class="1004" name="store_ln71_store_fu_236">
+<comp id="236" class="1004" name="store_ln108_store_fu_236">
 <pin_list>
 <pin id="237" dir="0" index="0" bw="32" slack="0"/>
 <pin id="238" dir="0" index="1" bw="32" slack="1"/>
@@ -841,7 +841,7 @@ ret_ln62                               (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln71/2 "/>
+<opset="store_ln108/2 "/>
 </bind>
 </comp>
 
@@ -857,7 +857,7 @@ ret_ln62                               (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="246" class="1004" name="store_ln68_store_fu_246">
+<comp id="246" class="1004" name="store_ln105_store_fu_246">
 <pin_list>
 <pin id="247" dir="0" index="0" bw="32" slack="0"/>
 <pin id="248" dir="0" index="1" bw="32" slack="1"/>
@@ -865,14 +865,14 @@ ret_ln62                               (ret              ) [ 000]
 </pin_list>
 <bind>
 <opcode="store(28) " fcode="store"/>
-<opset="store_ln68/2 "/>
+<opset="store_ln105/2 "/>
 </bind>
 </comp>
 
 <comp id="251" class="1005" name="i_reg_251">
 <pin_list>
-<pin id="252" dir="0" index="0" bw="15" slack="0"/>
-<pin id="253" dir="1" index="1" bw="15" slack="0"/>
+<pin id="252" dir="0" index="0" bw="19" slack="0"/>
+<pin id="253" dir="1" index="1" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opset="i "/>
@@ -919,73 +919,73 @@ ret_ln62                               (ret              ) [ 000]
 </bind>
 </comp>
 
-<comp id="288" class="1005" name="and_ln64_reg_288">
+<comp id="288" class="1005" name="and_ln101_reg_288">
 <pin_list>
 <pin id="289" dir="0" index="0" bw="1" slack="1"/>
 <pin id="290" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="and_ln64 "/>
+<opset="and_ln101 "/>
 </bind>
 </comp>
 
-<comp id="292" class="1005" name="multi_radix_hex_kmerge_temp1_10_addr_reg_292">
+<comp id="292" class="1005" name="multi_radix_bin_kmerge_temp1_10_addr_reg_292">
 <pin_list>
-<pin id="293" dir="0" index="0" bw="15" slack="1"/>
-<pin id="294" dir="1" index="1" bw="15" slack="1"/>
+<pin id="293" dir="0" index="0" bw="19" slack="1"/>
+<pin id="294" dir="1" index="1" bw="19" slack="1"/>
 </pin_list>
 <bind>
-<opset="multi_radix_hex_kmerge_temp1_10_addr "/>
+<opset="multi_radix_bin_kmerge_temp1_10_addr "/>
 </bind>
 </comp>
 
-<comp id="297" class="1005" name="and_ln75_reg_297">
+<comp id="297" class="1005" name="and_ln112_reg_297">
 <pin_list>
 <pin id="298" dir="0" index="0" bw="1" slack="1"/>
 <pin id="299" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<opset="and_ln75 "/>
+<opset="and_ln112 "/>
 </bind>
 </comp>
 
-<comp id="301" class="1005" name="multi_radix_hex_kmerge_temp0_20_addr_1_reg_301">
+<comp id="301" class="1005" name="multi_radix_bin_kmerge_temp0_20_addr_1_reg_301">
 <pin_list>
-<pin id="302" dir="0" index="0" bw="14" slack="1"/>
-<pin id="303" dir="1" index="1" bw="14" slack="1"/>
+<pin id="302" dir="0" index="0" bw="18" slack="1"/>
+<pin id="303" dir="1" index="1" bw="18" slack="1"/>
 </pin_list>
 <bind>
-<opset="multi_radix_hex_kmerge_temp0_20_addr_1 "/>
+<opset="multi_radix_bin_kmerge_temp0_20_addr_1 "/>
 </bind>
 </comp>
 
-<comp id="306" class="1005" name="multi_radix_hex_kmerge_temp0_21_addr_1_reg_306">
+<comp id="306" class="1005" name="multi_radix_bin_kmerge_temp0_21_addr_1_reg_306">
 <pin_list>
-<pin id="307" dir="0" index="0" bw="14" slack="1"/>
-<pin id="308" dir="1" index="1" bw="14" slack="1"/>
+<pin id="307" dir="0" index="0" bw="18" slack="1"/>
+<pin id="308" dir="1" index="1" bw="18" slack="1"/>
 </pin_list>
 <bind>
-<opset="multi_radix_hex_kmerge_temp0_21_addr_1 "/>
+<opset="multi_radix_bin_kmerge_temp0_21_addr_1 "/>
 </bind>
 </comp>
 
-<comp id="311" class="1005" name="multi_radix_hex_kmerge_temp0_20_addr_reg_311">
+<comp id="311" class="1005" name="multi_radix_bin_kmerge_temp0_20_addr_reg_311">
 <pin_list>
-<pin id="312" dir="0" index="0" bw="14" slack="1"/>
-<pin id="313" dir="1" index="1" bw="14" slack="1"/>
+<pin id="312" dir="0" index="0" bw="18" slack="1"/>
+<pin id="313" dir="1" index="1" bw="18" slack="1"/>
 </pin_list>
 <bind>
-<opset="multi_radix_hex_kmerge_temp0_20_addr "/>
+<opset="multi_radix_bin_kmerge_temp0_20_addr "/>
 </bind>
 </comp>
 
-<comp id="316" class="1005" name="multi_radix_hex_kmerge_temp0_21_addr_reg_316">
+<comp id="316" class="1005" name="multi_radix_bin_kmerge_temp0_21_addr_reg_316">
 <pin_list>
-<pin id="317" dir="0" index="0" bw="14" slack="1"/>
-<pin id="318" dir="1" index="1" bw="14" slack="1"/>
+<pin id="317" dir="0" index="0" bw="18" slack="1"/>
+<pin id="318" dir="1" index="1" bw="18" slack="1"/>
 </pin_list>
 <bind>
-<opset="multi_radix_hex_kmerge_temp0_21_addr "/>
+<opset="multi_radix_bin_kmerge_temp0_21_addr "/>
 </bind>
 </comp>
 
@@ -1181,57 +1181,57 @@ ret_ln62                               (ret              ) [ 000]
 
 * FSMD analyzer results:
   - Output states:
-	Port: multi_radix_hex_kmerge_temp1_10 | {2 }
+	Port: multi_radix_bin_kmerge_temp1_10 | {2 }
  - Input state : 
-	Port: merge_sort_batch0.74 : multi_radix_hex_kmerge_temp0_20 | {1 2 }
-	Port: merge_sort_batch0.74 : multi_radix_hex_kmerge_temp0_21 | {1 2 }
+	Port: merge_sort_batch0.74 : multi_radix_bin_kmerge_temp0_20 | {1 2 }
+	Port: merge_sort_batch0.74 : multi_radix_bin_kmerge_temp0_21 | {1 2 }
   - Chain level:
 	State 1
-		store_ln62 : 1
-		store_ln62 : 1
-		store_ln62 : 1
+		store_ln99 : 1
+		store_ln99 : 1
+		store_ln99 : 1
 		i_180 : 1
 		k_218 : 1
 		j_220 : 1
-		icmp_ln62 : 2
-		add_ln62 : 2
-		br_ln62 : 3
-		zext_ln62 : 2
-		icmp_ln64 : 2
-		icmp_ln64_21 : 2
-		and_ln64 : 3
-		multi_radix_hex_kmerge_temp1_10_addr : 3
-		br_ln64 : 3
-		icmp_ln75 : 2
-		and_ln75 : 3
-		br_ln75 : 3
-		zext_ln80 : 2
-		multi_radix_hex_kmerge_temp0_20_addr_1 : 3
-		multi_radix_hex_kmerge_temp0_20_load_1 : 4
+		icmp_ln99 : 2
+		add_ln99 : 2
+		br_ln99 : 3
+		zext_ln99 : 2
+		icmp_ln101 : 2
+		icmp_ln101_21 : 2
+		and_ln101 : 3
+		multi_radix_bin_kmerge_temp1_10_addr : 3
+		br_ln101 : 3
+		icmp_ln112 : 2
+		and_ln112 : 3
+		br_ln112 : 3
+		zext_ln117 : 2
+		multi_radix_bin_kmerge_temp0_20_addr_1 : 3
+		multi_radix_bin_kmerge_temp0_20_load_1 : 4
 		j_222 : 2
-		store_ln81 : 3
-		zext_ln76 : 2
-		multi_radix_hex_kmerge_temp0_21_addr_1 : 3
-		multi_radix_hex_kmerge_temp0_21_load_1 : 4
+		store_ln118 : 3
+		zext_ln113 : 2
+		multi_radix_bin_kmerge_temp0_21_addr_1 : 3
+		multi_radix_bin_kmerge_temp0_21_load_1 : 4
 		k_220 : 2
-		store_ln78 : 1
-		store_ln78 : 3
-		zext_ln65 : 2
-		multi_radix_hex_kmerge_temp0_20_addr : 3
-		multi_radix_hex_kmerge_temp0_20_load : 4
-		zext_ln65_21 : 2
-		multi_radix_hex_kmerge_temp0_21_addr : 3
-		multi_radix_hex_kmerge_temp0_21_load : 4
-		store_ln62 : 3
+		store_ln115 : 1
+		store_ln115 : 3
+		zext_ln102 : 2
+		multi_radix_bin_kmerge_temp0_20_addr : 3
+		multi_radix_bin_kmerge_temp0_20_load : 4
+		zext_ln102_21 : 2
+		multi_radix_bin_kmerge_temp0_21_addr : 3
+		multi_radix_bin_kmerge_temp0_21_load : 4
+		store_ln99 : 3
 	State 2
-		store_ln80 : 1
-		store_ln76 : 1
-		icmp_ln65 : 1
-		br_ln65 : 2
-		store_ln70 : 1
-		store_ln71 : 1
-		store_ln66 : 1
-		store_ln68 : 1
+		store_ln117 : 1
+		store_ln113 : 1
+		icmp_ln102 : 1
+		br_ln102 : 2
+		store_ln107 : 1
+		store_ln108 : 1
+		store_ln103 : 1
+		store_ln105 : 1
 
 
 ============================================================
@@ -1239,32 +1239,32 @@ ret_ln62                               (ret              ) [ 000]
 ============================================================
 
 * Functional unit list:
-|----------|---------------------|---------|---------|
-| Operation|   Functional Unit   |    FF   |   LUT   |
-|----------|---------------------|---------|---------|
-|          |   add_ln62_fu_132   |    0    |    22   |
-|          |     j_222_fu_178    |    0    |    39   |
-|    add   |     k_220_fu_194    |    0    |    39   |
-|          |     k_219_fu_231    |    0    |    39   |
-|          |     j_221_fu_241    |    0    |    39   |
-|----------|---------------------|---------|---------|
-|          |   icmp_ln62_fu_126  |    0    |    12   |
-|          |   icmp_ln64_fu_143  |    0    |    20   |
-|   icmp   | icmp_ln64_21_fu_149 |    0    |    20   |
-|          |   icmp_ln75_fu_161  |    0    |    20   |
-|          |   icmp_ln65_fu_225  |    0    |    20   |
-|----------|---------------------|---------|---------|
-|    and   |   and_ln64_fu_155   |    0    |    2    |
-|          |   and_ln75_fu_167   |    0    |    2    |
-|----------|---------------------|---------|---------|
-|          |   zext_ln62_fu_138  |    0    |    0    |
-|          |   zext_ln80_fu_173  |    0    |    0    |
-|   zext   |   zext_ln76_fu_189  |    0    |    0    |
-|          |   zext_ln65_fu_210  |    0    |    0    |
-|          | zext_ln65_21_fu_215 |    0    |    0    |
-|----------|---------------------|---------|---------|
-|   Total  |                     |    0    |   274   |
-|----------|---------------------|---------|---------|
+|----------|----------------------|---------|---------|
+| Operation|    Functional Unit   |    FF   |   LUT   |
+|----------|----------------------|---------|---------|
+|          |    add_ln99_fu_132   |    0    |    26   |
+|          |     j_222_fu_178     |    0    |    39   |
+|    add   |     k_220_fu_194     |    0    |    39   |
+|          |     k_219_fu_231     |    0    |    39   |
+|          |     j_221_fu_241     |    0    |    39   |
+|----------|----------------------|---------|---------|
+|          |   icmp_ln99_fu_126   |    0    |    14   |
+|          |   icmp_ln101_fu_143  |    0    |    20   |
+|   icmp   | icmp_ln101_21_fu_149 |    0    |    20   |
+|          |   icmp_ln112_fu_161  |    0    |    20   |
+|          |   icmp_ln102_fu_225  |    0    |    20   |
+|----------|----------------------|---------|---------|
+|    and   |   and_ln101_fu_155   |    0    |    2    |
+|          |   and_ln112_fu_167   |    0    |    2    |
+|----------|----------------------|---------|---------|
+|          |   zext_ln99_fu_138   |    0    |    0    |
+|          |   zext_ln117_fu_173  |    0    |    0    |
+|   zext   |   zext_ln113_fu_189  |    0    |    0    |
+|          |   zext_ln102_fu_210  |    0    |    0    |
+|          | zext_ln102_21_fu_215 |    0    |    0    |
+|----------|----------------------|---------|---------|
+|   Total  |                      |    0    |   280   |
+|----------|----------------------|---------|---------|
 
 Memories:
 N/A
@@ -1273,31 +1273,31 @@ N/A
 +----------------------------------------------+--------+
 |                                              |   FF   |
 +----------------------------------------------+--------+
-|               and_ln64_reg_288               |    1   |
-|               and_ln75_reg_297               |    1   |
-|                   i_reg_251                  |   15   |
+|               and_ln101_reg_288              |    1   |
+|               and_ln112_reg_297              |    1   |
+|                   i_reg_251                  |   19   |
 |                 j_220_reg_280                |   32   |
 |                   j_reg_266                  |   32   |
 |                 k_218_reg_275                |   32   |
 |                   k_reg_258                  |   32   |
-|multi_radix_hex_kmerge_temp0_20_addr_1_reg_301|   14   |
-| multi_radix_hex_kmerge_temp0_20_addr_reg_311 |   14   |
-|multi_radix_hex_kmerge_temp0_21_addr_1_reg_306|   14   |
-| multi_radix_hex_kmerge_temp0_21_addr_reg_316 |   14   |
-| multi_radix_hex_kmerge_temp1_10_addr_reg_292 |   15   |
+|multi_radix_bin_kmerge_temp0_20_addr_1_reg_301|   18   |
+| multi_radix_bin_kmerge_temp0_20_addr_reg_311 |   18   |
+|multi_radix_bin_kmerge_temp0_21_addr_1_reg_306|   18   |
+| multi_radix_bin_kmerge_temp0_21_addr_reg_316 |   18   |
+| multi_radix_bin_kmerge_temp1_10_addr_reg_292 |   19   |
 +----------------------------------------------+--------+
-|                     Total                    |   216  |
+|                     Total                    |   240  |
 +----------------------------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |------------------|------|------|------|--------||---------||---------|
 |       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |------------------|------|------|------|--------||---------||---------|
-| grp_access_fu_60 |  p0  |   4  |  14  |   56   ||    20   |
-| grp_access_fu_73 |  p0  |   4  |  14  |   56   ||    20   |
+| grp_access_fu_60 |  p0  |   4  |  18  |   72   ||    20   |
+| grp_access_fu_73 |  p0  |   4  |  18  |   72   ||    20   |
 | grp_access_fu_95 |  p1  |   2  |  32  |   64   ||    9    |
 |------------------|------|------|------|--------||---------||---------|
-|       Total      |      |      |      |   176  || 1.29243 ||    49   |
+|       Total      |      |      |      |   208  || 1.29243 ||    49   |
 |------------------|------|------|------|--------||---------||---------|
 
 
@@ -1306,10 +1306,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    -   |    0   |   274  |
+|  Function |    -   |    0   |   280  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    1   |    -   |   49   |
-|  Register |    -   |   216  |    -   |
+|  Register |    -   |   240  |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    1   |   216  |   323  |
+|   Total   |    1   |   240  |   329  |
 +-----------+--------+--------+--------+

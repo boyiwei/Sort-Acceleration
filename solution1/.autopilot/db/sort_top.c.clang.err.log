@@ -1,0 +1,16 @@
+In file included from sort_seperate_bucket/sort_top.c:3:
+In file included from sort_seperate_bucket/merge_sort.h:2:
+sort_seperate_bucket/dataset_size.h:2:9: warning: 'batch_size' macro redefined [-Wmacro-redefined]
+#define batch_size dataset_size/64
+        ^
+sort_seperate_bucket/batch_size.h:1:9: note: previous definition is here
+#define batch_size 15625
+        ^
+In file included from sort_seperate_bucket/sort_top.c:4:
+sort_seperate_bucket/batch_size.h:1:9: warning: 'batch_size' macro redefined [-Wmacro-redefined]
+#define batch_size 15625
+        ^
+sort_seperate_bucket/dataset_size.h:2:9: note: previous definition is here
+#define batch_size dataset_size/64
+        ^
+2 warnings generated.

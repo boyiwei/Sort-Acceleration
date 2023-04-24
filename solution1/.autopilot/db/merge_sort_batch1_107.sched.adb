@@ -16,7 +16,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>multi_radix_hex_kmerge_temp2_12</name>
+						<name>multi_radix_bin_kmerge_temp2_12</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -41,7 +41,7 @@
 				</Value>
 				<direction>1</direction>
 				<if_type>1</if_type>
-				<array_size>62500</array_size>
+				<array_size>625000</array_size>
 				<bit_vecs class_id="7" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -52,7 +52,43 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>multi_radix_hex_kmerge_temp1_24</name>
+						<name>multi_radix_bin_kmerge_temp1_24</name>
+						<fileName></fileName>
+						<fileDirectory></fileDirectory>
+						<lineNumber>0</lineNumber>
+						<contextFuncName></contextFuncName>
+						<contextNormFuncName></contextNormFuncName>
+						<inlineStackInfo>
+							<count>0</count>
+							<item_version>0</item_version>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>0</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>32</bitwidth>
+				</Value>
+				<direction>0</direction>
+				<if_type>1</if_type>
+				<array_size>312500</array_size>
+				<bit_vecs>
+					<count>0</count>
+					<item_version>0</item_version>
+				</bit_vecs>
+			</item>
+			<item class_id_reference="3" object_id="_3">
+				<Value>
+					<Obj>
+						<type>1</type>
+						<id>3</id>
+						<name>multi_radix_bin_kmerge_temp1_25</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -77,43 +113,7 @@
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
-				<array_size>31250</array_size>
-				<bit_vecs>
-					<count>0</count>
-					<item_version>0</item_version>
-				</bit_vecs>
-			</item>
-			<item class_id_reference="3" object_id="_3">
-				<Value>
-					<Obj>
-						<type>1</type>
-						<id>3</id>
-						<name>multi_radix_hex_kmerge_temp1_25</name>
-						<fileName></fileName>
-						<fileDirectory></fileDirectory>
-						<lineNumber>0</lineNumber>
-						<contextFuncName></contextFuncName>
-						<contextNormFuncName></contextNormFuncName>
-						<inlineStackInfo>
-							<count>0</count>
-							<item_version>0</item_version>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>1885414944</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>32</bitwidth>
-				</Value>
-				<direction>0</direction>
-				<if_type>1</if_type>
-				<array_size>31250</array_size>
+				<array_size>312500</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -149,7 +149,7 @@
 						<coreId>108</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -188,7 +188,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>448</coreId>
+						<coreId>108</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -230,7 +230,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3118576400</coreId>
+						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -254,10 +254,10 @@
 					<Obj>
 						<type>0</type>
 						<id>7</id>
-						<name>j_write_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>j_write_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -270,10 +270,10 @@
 									<item_version>0</item_version>
 									<item class_id="13" tracking_level="0" version="0">
 										<first class_id="14" tracking_level="0" version="0">
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3118985136</coreId>
+						<coreId>108</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -311,10 +311,10 @@
 					<Obj>
 						<type>0</type>
 						<id>8</id>
-						<name>k_write_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>k_write_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -327,10 +327,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -343,7 +343,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3111743488</coreId>
+						<coreId>267</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -368,10 +368,10 @@
 					<Obj>
 						<type>0</type>
 						<id>9</id>
-						<name>i_write_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>i_write_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -384,10 +384,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -400,7 +400,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3395858576</coreId>
+						<coreId>266</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -425,10 +425,10 @@
 					<Obj>
 						<type>0</type>
 						<id>10</id>
-						<name>br_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>br_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -441,10 +441,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -457,7 +457,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3117824320</coreId>
+						<coreId>3416284584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -482,9 +482,9 @@
 						<type>0</type>
 						<id>12</id>
 						<name>i_151</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -497,10 +497,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -513,10 +513,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3118498624</coreId>
+						<coreId>3223551288</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -539,9 +539,9 @@
 						<type>0</type>
 						<id>13</id>
 						<name>k_131</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>105</lineNumber>
+						<lineNumber>142</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -554,10 +554,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>105</second>
+										<second>142</second>
 									</item>
 								</second>
 							</item>
@@ -570,7 +570,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>45</coreId>
+						<coreId>3542691552</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -596,9 +596,9 @@
 						<type>0</type>
 						<id>14</id>
 						<name>j_133</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>109</lineNumber>
+						<lineNumber>146</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -611,10 +611,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>109</second>
+										<second>146</second>
 									</item>
 								</second>
 							</item>
@@ -627,7 +627,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3102304656</coreId>
+						<coreId>3223889888</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -652,10 +652,10 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>icmp_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>icmp_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -668,10 +668,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -684,7 +684,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3118322640</coreId>
+						<coreId>272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -700,7 +700,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.67</m_delay>
+				<m_delay>0.72</m_delay>
 				<m_topoIndex>11</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -709,10 +709,10 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>add_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>add_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -725,10 +725,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -741,10 +741,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3102304656</coreId>
+						<coreId>3403983768</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -757,7 +757,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.78</m_delay>
+				<m_delay>0.80</m_delay>
 				<m_topoIndex>12</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -766,10 +766,10 @@
 					<Obj>
 						<type>0</type>
 						<id>18</id>
-						<name>br_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>br_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -782,10 +782,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -798,7 +798,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3102304656</coreId>
+						<coreId>3539467712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -824,10 +824,10 @@
 					<Obj>
 						<type>0</type>
 						<id>20</id>
-						<name>zext_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>zext_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -840,10 +840,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -856,7 +856,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091722744</coreId>
+						<coreId>3399585312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -880,10 +880,10 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>icmp_ln92</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>icmp_ln129</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>129</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -896,10 +896,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>92</second>
+										<second>129</second>
 									</item>
 								</second>
 							</item>
@@ -912,7 +912,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3107237808</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -937,10 +937,10 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>icmp_ln92_8</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>icmp_ln129_8</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>129</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -953,10 +953,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>92</second>
+										<second>129</second>
 									</item>
 								</second>
 							</item>
@@ -969,7 +969,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3094586592</coreId>
+						<coreId>3362938272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -994,10 +994,10 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>and_ln92</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>and_ln129</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>129</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1010,10 +1010,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>92</second>
+										<second>129</second>
 									</item>
 								</second>
 							</item>
@@ -1026,7 +1026,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3117138256</coreId>
+						<coreId>3412987376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1051,10 +1051,10 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>multi_radix_hex_kmerge_temp2_12_addr</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp2_12_addr</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>108</lineNumber>
+						<lineNumber>145</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1067,10 +1067,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>108</second>
+										<second>145</second>
 									</item>
 								</second>
 							</item>
@@ -1083,10 +1083,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091722432</coreId>
+						<coreId>3412987376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1109,10 +1109,10 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>br_ln92</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>br_ln129</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>92</lineNumber>
+						<lineNumber>129</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1125,10 +1125,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>92</second>
+										<second>129</second>
 									</item>
 								</second>
 							</item>
@@ -1141,7 +1141,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3278654416</coreId>
+						<coreId>3412987376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1167,10 +1167,10 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>icmp_ln103</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>icmp_ln140</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>103</lineNumber>
+						<lineNumber>140</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1183,10 +1183,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>103</second>
+										<second>140</second>
 									</item>
 								</second>
 							</item>
@@ -1199,7 +1199,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091722432</coreId>
+						<coreId>3362938272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1224,10 +1224,10 @@
 					<Obj>
 						<type>0</type>
 						<id>30</id>
-						<name>and_ln103</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>and_ln140</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>103</lineNumber>
+						<lineNumber>140</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1240,10 +1240,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>103</second>
+										<second>140</second>
 									</item>
 								</second>
 							</item>
@@ -1256,7 +1256,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3105922864</coreId>
+						<coreId>3421219408</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1281,10 +1281,10 @@
 					<Obj>
 						<type>0</type>
 						<id>31</id>
-						<name>br_ln103</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>br_ln140</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>103</lineNumber>
+						<lineNumber>140</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1297,10 +1297,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>103</second>
+										<second>140</second>
 									</item>
 								</second>
 							</item>
@@ -1313,7 +1313,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091722432</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1339,10 +1339,10 @@
 					<Obj>
 						<type>0</type>
 						<id>33</id>
-						<name>zext_ln108</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>zext_ln145</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>108</lineNumber>
+						<lineNumber>145</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1355,10 +1355,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>108</second>
+										<second>145</second>
 									</item>
 								</second>
 							</item>
@@ -1371,7 +1371,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3285481808</coreId>
+						<coreId>3399112752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1395,10 +1395,10 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>multi_radix_hex_kmerge_temp1_24_addr_1</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp1_24_addr_1</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>108</lineNumber>
+						<lineNumber>145</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1411,10 +1411,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>108</second>
+										<second>145</second>
 									</item>
 								</second>
 							</item>
@@ -1427,10 +1427,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091722432</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>15</bitwidth>
+					<bitwidth>19</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1453,10 +1453,10 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>multi_radix_hex_kmerge_temp1_24_load_1</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp1_24_load_1</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>108</lineNumber>
+						<lineNumber>145</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1469,10 +1469,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>108</second>
+										<second>145</second>
 									</item>
 								</second>
 							</item>
@@ -1485,7 +1485,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3271182528</coreId>
+						<coreId>3399112752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1509,10 +1509,10 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>multi_radix_hex_kmerge_temp2_12_addr_write_ln108</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp2_12_addr_write_ln145</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>108</lineNumber>
+						<lineNumber>145</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1525,10 +1525,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>108</second>
+										<second>145</second>
 									</item>
 								</second>
 							</item>
@@ -1541,7 +1541,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091722432</coreId>
+						<coreId>3399112752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1567,9 +1567,9 @@
 						<type>0</type>
 						<id>37</id>
 						<name>j_135</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>109</lineNumber>
+						<lineNumber>146</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1582,10 +1582,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>109</second>
+										<second>146</second>
 									</item>
 								</second>
 							</item>
@@ -1598,7 +1598,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091722432</coreId>
+						<coreId>3399112752</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1623,10 +1623,10 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>j_write_ln109</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>j_write_ln146</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>109</lineNumber>
+						<lineNumber>146</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1639,10 +1639,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>109</second>
+										<second>146</second>
 									</item>
 								</second>
 							</item>
@@ -1655,7 +1655,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3097723904</coreId>
+						<coreId>3409668624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1700,7 +1700,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091347536</coreId>
+						<coreId>3370064976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1724,10 +1724,10 @@
 					<Obj>
 						<type>0</type>
 						<id>41</id>
-						<name>zext_ln104</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>zext_ln141</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>141</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1740,10 +1740,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>104</second>
+										<second>141</second>
 									</item>
 								</second>
 							</item>
@@ -1756,7 +1756,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091348144</coreId>
+						<coreId>3408437520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1780,10 +1780,10 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>multi_radix_hex_kmerge_temp1_25_addr_1</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp1_25_addr_1</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>141</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1796,10 +1796,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>104</second>
+										<second>141</second>
 									</item>
 								</second>
 							</item>
@@ -1812,10 +1812,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3411477312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>15</bitwidth>
+					<bitwidth>19</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1838,10 +1838,10 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>multi_radix_hex_kmerge_temp1_25_load_1</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp1_25_load_1</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>141</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1854,10 +1854,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>104</second>
+										<second>141</second>
 									</item>
 								</second>
 							</item>
@@ -1870,7 +1870,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3267288976</coreId>
+						<coreId>3411476848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1894,10 +1894,10 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>multi_radix_hex_kmerge_temp2_12_addr_write_ln104</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp2_12_addr_write_ln141</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>104</lineNumber>
+						<lineNumber>141</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1910,10 +1910,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>104</second>
+										<second>141</second>
 									</item>
 								</second>
 							</item>
@@ -1926,7 +1926,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091722432</coreId>
+						<coreId>3411476936</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1952,9 +1952,9 @@
 						<type>0</type>
 						<id>45</id>
 						<name>k_133</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>105</lineNumber>
+						<lineNumber>142</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -1967,10 +1967,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>105</second>
+										<second>142</second>
 									</item>
 								</second>
 							</item>
@@ -1983,7 +1983,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091347536</coreId>
+						<coreId>3397272088</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2008,10 +2008,10 @@
 					<Obj>
 						<type>0</type>
 						<id>46</id>
-						<name>j_write_ln106</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>j_write_ln143</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>106</lineNumber>
+						<lineNumber>143</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2024,10 +2024,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>106</second>
+										<second>143</second>
 									</item>
 								</second>
 							</item>
@@ -2040,7 +2040,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3094586592</coreId>
+						<coreId>3372826560</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2067,10 +2067,10 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>k_write_ln106</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>k_write_ln143</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>106</lineNumber>
+						<lineNumber>143</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2083,10 +2083,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>106</second>
+										<second>143</second>
 									</item>
 								</second>
 							</item>
@@ -2099,7 +2099,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3234811136</coreId>
+						<coreId>3377151136</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2126,10 +2126,10 @@
 					<Obj>
 						<type>0</type>
 						<id>48</id>
-						<name>br_ln106</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>br_ln143</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>106</lineNumber>
+						<lineNumber>143</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2142,10 +2142,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>106</second>
+										<second>143</second>
 									</item>
 								</second>
 							</item>
@@ -2158,7 +2158,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091722432</coreId>
+						<coreId>3377151136</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2182,10 +2182,10 @@
 					<Obj>
 						<type>0</type>
 						<id>50</id>
-						<name>zext_ln93</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>zext_ln130</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>130</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2198,10 +2198,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>93</second>
+										<second>130</second>
 									</item>
 								</second>
 							</item>
@@ -2214,7 +2214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3094586592</coreId>
+						<coreId>3377151136</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2238,10 +2238,10 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>multi_radix_hex_kmerge_temp1_24_addr</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp1_24_addr</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>130</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2254,10 +2254,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>93</second>
+										<second>130</second>
 									</item>
 								</second>
 							</item>
@@ -2270,10 +2270,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3116341136</coreId>
+						<coreId>3377151136</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>15</bitwidth>
+					<bitwidth>19</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2296,10 +2296,10 @@
 					<Obj>
 						<type>0</type>
 						<id>52</id>
-						<name>multi_radix_hex_kmerge_temp1_24_load</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp1_24_load</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>130</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2312,10 +2312,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>93</second>
+										<second>130</second>
 									</item>
 								</second>
 							</item>
@@ -2328,7 +2328,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3094586592</coreId>
+						<coreId>3421219408</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2352,10 +2352,10 @@
 					<Obj>
 						<type>0</type>
 						<id>53</id>
-						<name>zext_ln93_8</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>zext_ln130_8</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>130</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2368,10 +2368,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>93</second>
+										<second>130</second>
 									</item>
 								</second>
 							</item>
@@ -2384,7 +2384,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3094586592</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2408,10 +2408,10 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>multi_radix_hex_kmerge_temp1_25_addr</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp1_25_addr</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>130</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2424,10 +2424,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>93</second>
+										<second>130</second>
 									</item>
 								</second>
 							</item>
@@ -2440,10 +2440,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091704880</coreId>
+						<coreId>3392737008</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>15</bitwidth>
+					<bitwidth>19</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2466,10 +2466,10 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>multi_radix_hex_kmerge_temp1_25_load</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp1_25_load</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>130</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2482,10 +2482,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>93</second>
+										<second>130</second>
 									</item>
 								</second>
 							</item>
@@ -2498,7 +2498,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3105204656</coreId>
+						<coreId>3398204800</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2522,10 +2522,10 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>icmp_ln93</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>icmp_ln130</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>130</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2538,10 +2538,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>93</second>
+										<second>130</second>
 									</item>
 								</second>
 							</item>
@@ -2554,7 +2554,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3094586592</coreId>
+						<coreId>3394859760</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2579,10 +2579,10 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>br_ln93</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>br_ln130</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>93</lineNumber>
+						<lineNumber>130</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2595,10 +2595,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>93</second>
+										<second>130</second>
 									</item>
 								</second>
 							</item>
@@ -2611,7 +2611,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3105205264</coreId>
+						<coreId>3400143024</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2637,10 +2637,10 @@
 					<Obj>
 						<type>0</type>
 						<id>59</id>
-						<name>multi_radix_hex_kmerge_temp2_12_addr_write_ln98</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp2_12_addr_write_ln135</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>98</lineNumber>
+						<lineNumber>135</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2653,10 +2653,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>98</second>
+										<second>135</second>
 									</item>
 								</second>
 							</item>
@@ -2669,7 +2669,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3091821824</coreId>
+						<coreId>3395236576</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2695,9 +2695,9 @@
 						<type>0</type>
 						<id>60</id>
 						<name>k_132</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>99</lineNumber>
+						<lineNumber>136</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2710,10 +2710,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>99</second>
+										<second>136</second>
 									</item>
 								</second>
 							</item>
@@ -2726,7 +2726,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3094586592</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2751,10 +2751,10 @@
 					<Obj>
 						<type>0</type>
 						<id>61</id>
-						<name>k_write_ln99</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>k_write_ln136</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>99</lineNumber>
+						<lineNumber>136</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2767,10 +2767,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>99</second>
+										<second>136</second>
 									</item>
 								</second>
 							</item>
@@ -2783,7 +2783,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3272911040</coreId>
+						<coreId>320</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2828,7 +2828,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3280408240</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2852,10 +2852,10 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>multi_radix_hex_kmerge_temp2_12_addr_write_ln94</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>multi_radix_bin_kmerge_temp2_12_addr_write_ln131</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>94</lineNumber>
+						<lineNumber>131</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2868,10 +2868,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>94</second>
+										<second>131</second>
 									</item>
 								</second>
 							</item>
@@ -2884,7 +2884,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3107238368</coreId>
+						<coreId>3388645328</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2910,9 +2910,9 @@
 						<type>0</type>
 						<id>65</id>
 						<name>j_134</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>95</lineNumber>
+						<lineNumber>132</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2925,10 +2925,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>95</second>
+										<second>132</second>
 									</item>
 								</second>
 							</item>
@@ -2941,7 +2941,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3278584496</coreId>
+						<coreId>3536108400</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2966,10 +2966,10 @@
 					<Obj>
 						<type>0</type>
 						<id>66</id>
-						<name>j_write_ln96</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>j_write_ln133</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>96</lineNumber>
+						<lineNumber>133</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -2982,10 +2982,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>96</second>
+										<second>133</second>
 									</item>
 								</second>
 							</item>
@@ -2998,7 +2998,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3386721648</coreId>
+						<coreId>3379989376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3025,10 +3025,10 @@
 					<Obj>
 						<type>0</type>
 						<id>67</id>
-						<name>br_ln96</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>br_ln133</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>96</lineNumber>
+						<lineNumber>133</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -3041,10 +3041,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>96</second>
+										<second>133</second>
 									</item>
 								</second>
 							</item>
@@ -3057,7 +3057,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3115718896</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3081,10 +3081,10 @@
 					<Obj>
 						<type>0</type>
 						<id>69</id>
-						<name>i_write_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>i_write_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -3097,10 +3097,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -3113,7 +3113,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3267289280</coreId>
+						<coreId>3548363216</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3140,10 +3140,10 @@
 					<Obj>
 						<type>0</type>
 						<id>70</id>
-						<name>br_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>br_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -3156,10 +3156,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -3172,7 +3172,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3107709488</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3196,10 +3196,10 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>_ln90</name>
-						<fileName>sort_seperate_bucket/multi_radix_hex_kmerge.c</fileName>
+						<name>_ln127</name>
+						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
-						<lineNumber>90</lineNumber>
+						<lineNumber>127</lineNumber>
 						<contextFuncName>merge_sort_batch1</contextFuncName>
 						<contextNormFuncName>merge_sort_batch1</contextNormFuncName>
 						<inlineStackInfo>
@@ -3212,10 +3212,10 @@
 									<item_version>0</item_version>
 									<item>
 										<first>
-											<first>sort_seperate_bucket/multi_radix_hex_kmerge.c</first>
+											<first>sort_seperate_bucket/merge_sort.c</first>
 											<second>merge_sort_batch1</second>
 										</first>
-										<second>90</second>
+										<second>127</second>
 									</item>
 								</second>
 							</item>
@@ -3228,7 +3228,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3234811744</coreId>
+						<coreId>3358391312</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3304,7 +3304,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3118676304</coreId>
+						<coreId>3422362264</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3335,10 +3335,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3117978224</coreId>
+						<coreId>3420111264</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -3366,13 +3366,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3100255456</coreId>
+						<coreId>3386180640</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>62500</content>
+				<content>625000</content>
 			</item>
 			<item class_id_reference="16" object_id="_64">
 				<Value>
@@ -3400,7 +3400,7 @@
 						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -3428,13 +3428,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3234811744</coreId>
+						<coreId>6775156</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>31250</content>
+				<content>312500</content>
 			</item>
 			<item class_id_reference="16" object_id="_66">
 				<Value>
@@ -3459,7 +3459,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3262198432</coreId>
+						<coreId>3358391624</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -3493,7 +3493,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3108928448</coreId>
+					<coreId>997420912</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3530,7 +3530,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3116285392</coreId>
+					<coreId>1916886893</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3566,7 +3566,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3113877056</coreId>
+					<coreId>3223289128</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3602,7 +3602,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1916886893</coreId>
+					<coreId>3223307664</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3635,7 +3635,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3117082624</coreId>
+					<coreId>3399112752</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3672,7 +3672,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3091722432</coreId>
+					<coreId>3402281376</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3710,7 +3710,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3088755104</coreId>
+					<coreId>3377151136</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3748,7 +3748,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3094586592</coreId>
+					<coreId>3400143024</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3782,7 +3782,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3118640880</coreId>
+					<coreId>3388645328</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3816,7 +3816,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3259721224</coreId>
+					<coreId>3398431840</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3848,7 +3848,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3099354592</coreId>
+					<coreId>3358391312</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -4775,8 +4775,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>62502</mMinLatency>
-			<mMaxLatency>62502</mMaxLatency>
+			<mMinLatency>625002</mMinLatency>
+			<mMaxLatency>625002</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -4805,8 +4805,8 @@
 		</item>
 		<item class_id_reference="22" object_id="_207">
 			<mId>3</mId>
-			<mTag>VITIS_LOOP_90_1</mTag>
-			<mNormTag>VITIS_LOOP_90_1</mNormTag>
+			<mTag>VITIS_LOOP_127_1</mTag>
+			<mNormTag>VITIS_LOOP_127_1</mNormTag>
 			<mType>1</mType>
 			<sub_regions>
 				<count>0</count>
@@ -4827,10 +4827,10 @@
 			</basic_blocks>
 			<mII>1</mII>
 			<mDepth>2</mDepth>
-			<mMinTripCount>62500</mMinTripCount>
-			<mMaxTripCount>62500</mMaxTripCount>
-			<mMinLatency>62500</mMinLatency>
-			<mMaxLatency>62500</mMaxLatency>
+			<mMinTripCount>625000</mMinTripCount>
+			<mMaxTripCount>625000</mMaxTripCount>
+			<mMinLatency>625000</mMinLatency>
+			<mMaxLatency>625000</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -5341,7 +5341,7 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="33" tracking_level="1" version="0" object_id="_209">
-			<region_name>VITIS_LOOP_90_1</region_name>
+			<region_name>VITIS_LOOP_127_1</region_name>
 			<basic_blocks>
 				<count>9</count>
 				<item_version>0</item_version>

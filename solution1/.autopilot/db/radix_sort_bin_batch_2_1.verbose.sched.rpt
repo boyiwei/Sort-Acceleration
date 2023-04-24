@@ -1,0 +1,220 @@
+
+
+================================================================
+== Vitis HLS Report for 'radix_sort_bin_batch_2_1'
+================================================================
+* Date:           Mon Apr 24 08:59:35 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sort_seperate_bucket
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.966 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  5312859|  5312859|  53.129 ms|  53.129 ms|  5312859|  5312859|       no|
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- sort_procedure  |  5000352|  5000352|    156261|          -|          -|    32|        no|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 8 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 3 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.38>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 9 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%bucket_num = alloca i32 1"   --->   Operation 10 'alloca' 'bucket_num' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%bucket_pointer = alloca i32 1"   --->   Operation 11 'alloca' 'bucket_pointer' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%bucket_pointer_259 = alloca i32 1"   --->   Operation 12 'alloca' 'bucket_pointer_259' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%bucket_sizes = alloca i32 1"   --->   Operation 13 'alloca' 'bucket_sizes' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%bucket_sizes_417 = alloca i32 1"   --->   Operation 14 'alloca' 'bucket_sizes_417' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%bucket_pointer_513_loc = alloca i64 1"   --->   Operation 15 'alloca' 'bucket_pointer_513_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%bucket_pointer_514_loc = alloca i64 1"   --->   Operation 16 'alloca' 'bucket_pointer_514_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%bucket_sizes_772_loc = alloca i64 1"   --->   Operation 17 'alloca' 'bucket_sizes_772_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%bucket_sizes_773_loc = alloca i64 1"   --->   Operation 18 'alloca' 'bucket_sizes_773_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%bucket = alloca i64 1" [sort_seperate_bucket/multi_radix_bin_kmerge.c:10]   --->   Operation 19 'alloca' 'bucket' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [2/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_bin_batch.2.1_Pipeline_initialization, i32 %bucket, i32 %input_1, i32 %bucket_sizes_417, i32 %bucket_sizes"   --->   Operation 20 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 21 [1/1] (0.38ns)   --->   "%store_ln27 = store i32 0, i32 %bucket_num" [sort_seperate_bucket/multi_radix_bin_kmerge.c:27]   --->   Operation 21 'store' 'store_ln27' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 22 [1/1] (0.38ns)   --->   "%store_ln27 = store i6 0, i6 %i" [sort_seperate_bucket/multi_radix_bin_kmerge.c:27]   --->   Operation 22 'store' 'store_ln27' <Predicate = true> <Delay = 0.38>
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_1, void @empty_26, i32 0, i32 0, void @empty_25, i32 4294967295, i32 0, void @empty_25, void @empty_25, void @empty_25, i32 0, i32 0, i32 0, i32 0, void @empty_25, void @empty_25, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_bin_batch.2.1_Pipeline_initialization, i32 %bucket, i32 %input_1, i32 %bucket_sizes_417, i32 %bucket_sizes"   --->   Operation 24 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln27 = br void %bucket_pointer_initialization.i" [sort_seperate_bucket/multi_radix_bin_kmerge.c:27]   --->   Operation 25 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.41>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%i_103 = load i6 %i" [sort_seperate_bucket/multi_radix_bin_kmerge.c:11]   --->   Operation 26 'load' 'i_103' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.61ns)   --->   "%icmp_ln27 = icmp_eq  i6 %i_103, i6 32" [sort_seperate_bucket/multi_radix_bin_kmerge.c:27]   --->   Operation 27 'icmp' 'icmp_ln27' <Predicate = true> <Delay = 0.61> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32"   --->   Operation 28 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.70ns)   --->   "%i_104 = add i6 %i_103, i6 1" [sort_seperate_bucket/multi_radix_bin_kmerge.c:27]   --->   Operation 29 'add' 'i_104' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln27 = br i1 %icmp_ln27, void %xlx_merge_loop.bucket_pointer_initialization.1_begin, void %for.inc79.i.preheader" [sort_seperate_bucket/multi_radix_bin_kmerge.c:27]   --->   Operation 30 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%bucket_num_load = load i32 %bucket_num" [sort_seperate_bucket/multi_radix_bin_kmerge.c:43]   --->   Operation 31 'load' 'bucket_num_load' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%bucket_pointer_load = load i32 %bucket_pointer"   --->   Operation 32 'load' 'bucket_pointer_load' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%bucket_pointer_259_load = load i32 %bucket_pointer_259"   --->   Operation 33 'load' 'bucket_pointer_259_load' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%bucket_sizes_load = load i32 %bucket_sizes"   --->   Operation 34 'load' 'bucket_sizes_load' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%bucket_sizes_417_load = load i32 %bucket_sizes_417"   --->   Operation 35 'load' 'bucket_sizes_417_load' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%trunc_ln11 = trunc i6 %i_103" [sort_seperate_bucket/multi_radix_bin_kmerge.c:11]   --->   Operation 36 'trunc' 'trunc_ln11' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 37 [2/2] (0.38ns)   --->   "%call_ln0 = call void @radix_sort_bin_batch.2.1_Pipeline_bucket_pointer_initialization, i32 %bucket_sizes_417_load, i32 %bucket_sizes_load, i32 %bucket_pointer_259_load, i32 %bucket_pointer_load, i32 %bucket_sizes_773_loc, i32 %bucket_sizes_772_loc, i32 %bucket_pointer_514_loc, i32 %bucket_pointer_513_loc"   --->   Operation 37 'call' 'call_ln0' <Predicate = (!icmp_ln27)> <Delay = 0.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 38 [1/1] (0.88ns)   --->   "%bucket_num_52 = sub i32 1, i32 %bucket_num_load" [sort_seperate_bucket/multi_radix_bin_kmerge.c:43]   --->   Operation 38 'sub' 'bucket_num_52' <Predicate = (!icmp_ln27)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%trunc_ln41 = trunc i32 %bucket_num_52" [sort_seperate_bucket/multi_radix_bin_kmerge.c:41]   --->   Operation 39 'trunc' 'trunc_ln41' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 40 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln41 = mul i19 %trunc_ln41, i19 156250" [sort_seperate_bucket/multi_radix_bin_kmerge.c:41]   --->   Operation 40 'mul' 'mul_ln41' <Predicate = (!icmp_ln27)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln43 = trunc i32 %bucket_num_load" [sort_seperate_bucket/multi_radix_bin_kmerge.c:43]   --->   Operation 41 'trunc' 'trunc_ln43' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 42 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln43 = mul i19 %trunc_ln43, i19 156250" [sort_seperate_bucket/multi_radix_bin_kmerge.c:43]   --->   Operation 42 'mul' 'mul_ln43' <Predicate = (!icmp_ln27)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 43 [1/1] (0.38ns)   --->   "%store_ln27 = store i32 %bucket_num_52, i32 %bucket_num" [sort_seperate_bucket/multi_radix_bin_kmerge.c:27]   --->   Operation 43 'store' 'store_ln27' <Predicate = (!icmp_ln27)> <Delay = 0.38>
+ST_3 : Operation 44 [1/1] (0.38ns)   --->   "%store_ln27 = store i6 %i_104, i6 %i" [sort_seperate_bucket/multi_radix_bin_kmerge.c:27]   --->   Operation 44 'store' 'store_ln27' <Predicate = (!icmp_ln27)> <Delay = 0.38>
+ST_3 : Operation 45 [2/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_bin_batch.2.1_Pipeline_output_bucket, i32 %bucket, i32 %multi_radix_bin_kmerge_temp0_1"   --->   Operation 45 'call' 'call_ln0' <Predicate = (icmp_ln27)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.53>
+ST_4 : Operation 46 [1/2] (0.34ns)   --->   "%call_ln0 = call void @radix_sort_bin_batch.2.1_Pipeline_bucket_pointer_initialization, i32 %bucket_sizes_417_load, i32 %bucket_sizes_load, i32 %bucket_pointer_259_load, i32 %bucket_pointer_load, i32 %bucket_sizes_773_loc, i32 %bucket_sizes_772_loc, i32 %bucket_pointer_514_loc, i32 %bucket_pointer_513_loc"   --->   Operation 46 'call' 'call_ln0' <Predicate = true> <Delay = 0.34> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 47 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln41 = mul i19 %trunc_ln41, i19 156250" [sort_seperate_bucket/multi_radix_bin_kmerge.c:41]   --->   Operation 47 'mul' 'mul_ln41' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 48 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln43 = mul i19 %trunc_ln43, i19 156250" [sort_seperate_bucket/multi_radix_bin_kmerge.c:43]   --->   Operation 48 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 0.53>
+ST_5 : Operation 49 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln41 = mul i19 %trunc_ln41, i19 156250" [sort_seperate_bucket/multi_radix_bin_kmerge.c:41]   --->   Operation 49 'mul' 'mul_ln41' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 50 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln43 = mul i19 %trunc_ln43, i19 156250" [sort_seperate_bucket/multi_radix_bin_kmerge.c:43]   --->   Operation 50 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 2.05>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%bucket_sizes_773_loc_load = load i32 %bucket_sizes_773_loc"   --->   Operation 51 'load' 'bucket_sizes_773_loc_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%bucket_sizes_772_loc_load = load i32 %bucket_sizes_772_loc"   --->   Operation 52 'load' 'bucket_sizes_772_loc_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 53 [1/1] (0.00ns)   --->   "%bucket_pointer_514_loc_load = load i32 %bucket_pointer_514_loc"   --->   Operation 53 'load' 'bucket_pointer_514_loc_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 54 [1/1] (0.00ns)   --->   "%bucket_pointer_513_loc_load = load i32 %bucket_pointer_513_loc"   --->   Operation 54 'load' 'bucket_pointer_513_loc_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 55 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln41 = mul i19 %trunc_ln41, i19 156250" [sort_seperate_bucket/multi_radix_bin_kmerge.c:41]   --->   Operation 55 'mul' 'mul_ln41' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 56 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln43 = mul i19 %trunc_ln43, i19 156250" [sort_seperate_bucket/multi_radix_bin_kmerge.c:43]   --->   Operation 56 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 57 [2/2] (2.05ns)   --->   "%call_ln41 = call void @radix_sort_bin_batch.2.1_Pipeline_input_bucket, i32 %bucket_sizes_773_loc_load, i32 %bucket_sizes_772_loc_load, i32 %bucket_pointer_514_loc_load, i32 %bucket_pointer_513_loc_load, i19 %mul_ln41, i32 %bucket, i5 %trunc_ln11, i19 %mul_ln43, i32 %bucket_sizes_417, i32 %bucket_sizes, i32 %bucket_pointer_259, i32 %bucket_pointer" [sort_seperate_bucket/multi_radix_bin_kmerge.c:41]   --->   Operation 57 'call' 'call_ln41' <Predicate = true> <Delay = 2.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 58 [1/1] (0.00ns)   --->   "%specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_71" [sort_seperate_bucket/multi_radix_bin_kmerge.c:11]   --->   Operation 58 'specloopname' 'specloopname_ln11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 59 [1/2] (0.00ns)   --->   "%call_ln41 = call void @radix_sort_bin_batch.2.1_Pipeline_input_bucket, i32 %bucket_sizes_773_loc_load, i32 %bucket_sizes_772_loc_load, i32 %bucket_pointer_514_loc_load, i32 %bucket_pointer_513_loc_load, i19 %mul_ln41, i32 %bucket, i5 %trunc_ln11, i19 %mul_ln43, i32 %bucket_sizes_417, i32 %bucket_sizes, i32 %bucket_pointer_259, i32 %bucket_pointer" [sort_seperate_bucket/multi_radix_bin_kmerge.c:41]   --->   Operation 59 'call' 'call_ln41' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "%br_ln27 = br void %bucket_pointer_initialization.i" [sort_seperate_bucket/multi_radix_bin_kmerge.c:27]   --->   Operation 60 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 3> <Delay = 0.00>
+ST_8 : Operation 61 [1/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_bin_batch.2.1_Pipeline_output_bucket, i32 %bucket, i32 %multi_radix_bin_kmerge_temp0_1"   --->   Operation 61 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 62 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 62 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0.387ns
+The critical path consists of the following:
+	'alloca' operation ('bucket_num') [4]  (0 ns)
+	'store' operation ('store_ln27', sort_seperate_bucket/multi_radix_bin_kmerge.c:27) of constant 0 on local variable 'bucket_num' [16]  (0.387 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.42ns
+The critical path consists of the following:
+	'load' operation ('bucket_num_load', sort_seperate_bucket/multi_radix_bin_kmerge.c:43) on local variable 'bucket_num' [26]  (0 ns)
+	'sub' operation ('bucket_num', sort_seperate_bucket/multi_radix_bin_kmerge.c:43) [38]  (0.88 ns)
+	'mul' operation of DSP[40] ('mul_ln41', sort_seperate_bucket/multi_radix_bin_kmerge.c:41) [40]  (0.535 ns)
+
+ <State 4>: 0.535ns
+The critical path consists of the following:
+	'mul' operation of DSP[40] ('mul_ln41', sort_seperate_bucket/multi_radix_bin_kmerge.c:41) [40]  (0.535 ns)
+
+ <State 5>: 0.535ns
+The critical path consists of the following:
+	'mul' operation of DSP[40] ('mul_ln41', sort_seperate_bucket/multi_radix_bin_kmerge.c:41) [40]  (0.535 ns)
+
+ <State 6>: 2.05ns
+The critical path consists of the following:
+	'load' operation ('bucket_sizes_773_loc_load') on local variable 'bucket_sizes_773_loc' [34]  (0 ns)
+	'call' operation ('call_ln41', sort_seperate_bucket/multi_radix_bin_kmerge.c:41) to 'radix_sort_bin_batch.2.1_Pipeline_input_bucket' [43]  (2.05 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

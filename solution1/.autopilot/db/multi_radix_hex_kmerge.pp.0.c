@@ -877,29 +877,36 @@ extern int __overflow (FILE *, int);
 # 1 "sort_seperate_bucket/dataset_size.h" 1
 # 3 "sort_seperate_bucket/multi_radix_hex_kmerge.h" 2
 
-void radix_sort_batch(int input[1000000/64], int output[1000000/64]);
+void radix_sort_batch(int input[10000000/64], int output[10000000/64]);
 
-void merge_sort_batch0(int input1[1000000/64], int input2[1000000/64], int sorted_data[2*1000000/64]);
-
-void merge_sort_batch1(int input1[2*1000000/64], int input2[2*1000000/64], int sorted_data[4*1000000/64]);
-
-void merge_sort_batch2(int input1[4*1000000/64], int input2[4*1000000/64], int sorted_data[8*1000000/64]);
-
-void merge_sort_batch3(int input1[8*1000000/64], int input2[8*1000000/64], int sorted_data[16*1000000/64]);
-
-void merge_sort_batch4(int input1[16*1000000/64], int input2[16*1000000/64], int sorted_data[32*1000000/64]);
-
-void merge_sort_batch5(int input1[32*1000000/64], int input2[32*1000000/64], int sorted_data[1000000]);
-
-__attribute__((sdx_kernel("multi_radix_hex_kmerge", 0))) void multi_radix_hex_kmerge(int input[64][1000000/64], int output[1000000]);
+void multi_radix_hex_kmerge(int input[64][10000000/64], int output[10000000]);
 # 4 "sort_seperate_bucket/multi_radix_hex_kmerge.c" 2
+# 1 "sort_seperate_bucket/merge_sort.h" 1
+
+# 1 "sort_seperate_bucket/dataset_size.h" 1
+# 3 "sort_seperate_bucket/merge_sort.h" 2
+
+
+void merge_sort(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+
+void merge_sort_batch0(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+
+void merge_sort_batch1(int input1[2*10000000/64], int input2[2*10000000/64], int sorted_data[4*10000000/64]);
+
+void merge_sort_batch2(int input1[4*10000000/64], int input2[4*10000000/64], int sorted_data[8*10000000/64]);
+
+void merge_sort_batch3(int input1[8*10000000/64], int input2[8*10000000/64], int sorted_data[16*10000000/64]);
+
+void merge_sort_batch4(int input1[16*10000000/64], int input2[16*10000000/64], int sorted_data[32*10000000/64]);
+
+void merge_sort_batch5(int input1[32*10000000/64], int input2[32*10000000/64], int sorted_data[64*10000000/64]);
+# 5 "sort_seperate_bucket/multi_radix_hex_kmerge.c" 2
 
 
 
 
-
-void radix_sort_batch(int input[1000000/64], int output[1000000/64]){
-    int bucket[2][1000000/64];
+void radix_sort_batch(int input[10000000/64], int output[10000000/64]){
+    int bucket[2][10000000/64];
     int bucket_pointer[16];
     int bucket_sizes[16] = {0};
 
@@ -909,7 +916,7 @@ void radix_sort_batch(int input[1000000/64], int output[1000000/64]){
 
 
     initialization:
-    for (int j = 0; j < 1000000/64; j++) {
+    for (int j = 0; j < 10000000/64; j++) {
         bucket[1-bucket_num][j] = input[j];
         int next_ith_radix = bucket[1-bucket_num][j] & 0xf;
         bucket_sizes[next_ith_radix] += 1;
@@ -929,7 +936,7 @@ void radix_sort_batch(int input[1000000/64], int output[1000000/64]){
         }
 
         input_bucket:
-        for (int j = 0; j < 1000000/64; j++) {
+        for (int j = 0; j < 10000000/64; j++) {
             int shifted = bucket[1-bucket_num][j] >> (i * 4);
             int ith_radix = shifted & 0xf;
             bucket[bucket_num][bucket_pointer[ith_radix]] = bucket[1-bucket_num][j];
@@ -942,192 +949,19 @@ void radix_sort_batch(int input[1000000/64], int output[1000000/64]){
     }
 
     output_bucket:
-    for (int k = 0; k < 1000000/64; k++) {
+    for (int k = 0; k < 10000000/64; k++) {
         output[k] = bucket[1-bucket_num][k];
     }
 }
 
 
-void merge_sort_batch0(int input1[1000000/64], int input2[1000000/64], int sorted_data[2*1000000/64]){
-    int j = 0;
-    int k = 0;
-    VITIS_LOOP_62_1: for(int i=0; i<2*1000000/64; i++){
-#pragma HLS PIPELINE
- if((j<1000000/64)&&(k<1000000/64)){
-            if(input1[j]<input2[k]){
-                sorted_data[i] = input1[j];
-                j = j + 1;
-            }
-            else{
-                sorted_data[i] = input2[k];
-                k = k + 1;
-            }
-        }
-
-        else if((j==1000000/64)&&(k<1000000/64)){
-            sorted_data[i] = input2[k];
-            k = k + 1;
-        }
-        else{
-            sorted_data[i] = input1[j];
-            j = j + 1;
-        }
-    }
-}
-
-
-void merge_sort_batch1(int input1[2*1000000/64], int input2[2*1000000/64], int sorted_data[4*1000000/64]){
-    int j = 0;
-    int k = 0;
-    VITIS_LOOP_90_1: for(int i=0; i<4*1000000/64; i++){
-#pragma HLS PIPELINE
- if((j<2*1000000/64)&&(k<2*1000000/64)){
-            if(input1[j]<input2[k]){
-                sorted_data[i] = input1[j];
-                j = j + 1;
-            }
-            else{
-                sorted_data[i] = input2[k];
-                k = k + 1;
-            }
-        }
-
-        else if((j==2*1000000/64)&&(k<2*1000000/64)){
-            sorted_data[i] = input2[k];
-            k = k + 1;
-        }
-        else{
-            sorted_data[i] = input1[j];
-            j = j + 1;
-        }
-    }
-}
-
-
-void merge_sort_batch2(int input1[4*1000000/64], int input2[4*1000000/64], int sorted_data[8*1000000/64]){
-    int j = 0;
-    int k = 0;
-    VITIS_LOOP_118_1: for(int i=0; i<8*1000000/64; i++){
-#pragma HLS PIPELINE
- if((j<4*1000000/64)&&(k<4*1000000/64)){
-            if(input1[j]<input2[k]){
-                sorted_data[i] = input1[j];
-                j = j + 1;
-            }
-            else{
-                sorted_data[i] = input2[k];
-                k = k + 1;
-            }
-        }
-
-        else if((j==4*1000000/64)&&(k<4*1000000/64)){
-            sorted_data[i] = input2[k];
-            k = k + 1;
-        }
-        else{
-            sorted_data[i] = input1[j];
-            j = j + 1;
-        }
-    }
-}
-
-
-void merge_sort_batch3(int input1[8*1000000/64], int input2[8*1000000/64], int sorted_data[16*1000000/64]){
-    int j = 0;
-    int k = 0;
-    VITIS_LOOP_146_1: for(int i=0; i<16*1000000/64; i++){
-#pragma HLS PIPELINE
- if((j<8*1000000/64)&&(k<8*1000000/64)){
-            if(input1[j]<input2[k]){
-                sorted_data[i] = input1[j];
-                j = j + 1;
-            }
-            else{
-                sorted_data[i] = input2[k];
-                k = k + 1;
-            }
-        }
-
-        else if((j==8*1000000/64)&&(k<8*1000000/64)){
-            sorted_data[i] = input2[k];
-            k = k + 1;
-        }
-        else{
-            sorted_data[i] = input1[j];
-            j = j + 1;
-        }
-    }
-}
-
-
-void merge_sort_batch4(int input1[16*1000000/64], int input2[16*1000000/64], int sorted_data[32*1000000/64]){
-    int j = 0;
-    int k = 0;
-    VITIS_LOOP_174_1: for(int i=0; i<32*1000000/64; i++){
-#pragma HLS PIPELINE
- if((j<16*1000000/64)&&(k<16*1000000/64)){
-            if(input1[j]<input2[k]){
-                sorted_data[i] = input1[j];
-                j = j + 1;
-            }
-            else{
-                sorted_data[i] = input2[k];
-                k = k + 1;
-            }
-        }
-
-        else if((j==16*1000000/64)&&(k<16*1000000/64)){
-            sorted_data[i] = input2[k];
-            k = k + 1;
-        }
-        else{
-            sorted_data[i] = input1[j];
-            j = j + 1;
-        }
-    }
-}
-
-
-void merge_sort_batch5(int input1[32*1000000/64], int input2[32*1000000/64], int sorted_data[1000000]){
-    int j = 0;
-    int k = 0;
-    VITIS_LOOP_202_1: for(int i=0; i<1000000; i++){
-#pragma HLS PIPELINE
- if((j<32*1000000/64)&&(k<32*1000000/64)){
-            if(input1[j]<input2[k]){
-                sorted_data[i] = input1[j];
-                j = j + 1;
-            }
-            else{
-                sorted_data[i] = input2[k];
-                k = k + 1;
-            }
-        }
-
-        else if((j==32*1000000/64)&&(k<32*1000000/64)){
-            sorted_data[i] = input2[k];
-            k = k + 1;
-        }
-        else{
-            sorted_data[i] = input1[j];
-            j = j + 1;
-        }
-    }
-}
-
-
-
-__attribute__((sdx_kernel("multi_radix_hex_kmerge", 0))) void multi_radix_hex_kmerge(int input[64][1000000/64], int output[1000000]){
-#line 47 "/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl"
-#pragma HLSDIRECTIVE TOP name=multi_radix_hex_kmerge
-# 228 "sort_seperate_bucket/multi_radix_hex_kmerge.c"
-
-    static int temp0[64][1000000/64];
-    static int temp1[32][2*1000000/64];
-    static int temp2[16][4*1000000/64];
-    static int temp3[8][8*1000000/64];
-    static int temp4[4][16*1000000/64];
-    static int temp5[2][32*1000000/64];
+void multi_radix_hex_kmerge(int input[64][10000000/64], int output[10000000]){
+    static int temp0[64][10000000/64];
+    static int temp1[32][2*10000000/64];
+    static int temp2[16][4*10000000/64];
+    static int temp3[8][8*10000000/64];
+    static int temp4[4][16*10000000/64];
+    static int temp5[2][32*10000000/64];
 
 #pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
 #pragma HLS ARRAY_PARTITION variable=temp0 type=complete dim=1
@@ -1140,32 +974,32 @@ __attribute__((sdx_kernel("multi_radix_hex_kmerge", 0))) void multi_radix_hex_km
  int i;
 #pragma HLS DATAFLOW
 
- VITIS_LOOP_247_1: for(i=0; i<64; i++){
+ VITIS_LOOP_78_1: for(i=0; i<64; i++){
 #pragma HLS UNROLL
  radix_sort_batch(input[i], temp0[i]);
     }
 
-    VITIS_LOOP_252_2: for(i=0; i<32; i++){
+    VITIS_LOOP_83_2: for(i=0; i<32; i++){
 #pragma HLS UNROLL
  merge_sort_batch0(temp0[2*i], temp0[2*i+1], temp1[i]);
     }
 
-    VITIS_LOOP_257_3: for(i=0; i<16; i++){
+    VITIS_LOOP_88_3: for(i=0; i<16; i++){
 #pragma HLS UNROLL
  merge_sort_batch1(temp1[2*i], temp1[2*i+1], temp2[i]);
     }
 
-    VITIS_LOOP_262_4: for(i=0; i<8; i++){
+    VITIS_LOOP_93_4: for(i=0; i<8; i++){
 #pragma HLS UNROLL
  merge_sort_batch2(temp2[2*i], temp2[2*i+1], temp3[i]);
     }
 
-    VITIS_LOOP_267_5: for(i=0; i<4; i++){
+    VITIS_LOOP_98_5: for(i=0; i<4; i++){
 #pragma HLS UNROLL
  merge_sort_batch3(temp3[2*i], temp3[2*i+1], temp4[i]);
     }
 
-    VITIS_LOOP_272_6: for(i=0; i<2; i++){
+    VITIS_LOOP_103_6: for(i=0; i<2; i++){
 #pragma HLS UNROLL
  merge_sort_batch4(temp4[2*i], temp4[2*i+1], temp5[i]);
     }

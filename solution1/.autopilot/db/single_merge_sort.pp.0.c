@@ -891,17 +891,17 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 # 4 "sort_seperate_bucket/single_merge_sort.c" 2
 
 
-void single_merge_arrays(int in[1000000], int width, int out[1000000]){
+void single_merge_arrays(int in[10000000], int width, int out[10000000]){
     int f1 = 0;
     int f2 = width;
     int i2 = width;
     int i3 = 2 * width;
-    if(i2 >= 1000000)
-        i2 = 1000000;
-    if(i3 >= 1000000)
-        i3 = 1000000;
+    if(i2 >= 10000000)
+        i2 = 10000000;
+    if(i3 >= 10000000)
+        i3 = 10000000;
     merge_arrays:
-    for(int i=0; i<1000000; i++){
+    for(int i=0; i<10000000; i++){
 #pragma HLS PIPELINE II=1
  int t1 = in[f1];
         int t2 = (f2==i3)?0:in[f2];
@@ -918,20 +918,20 @@ void single_merge_arrays(int in[1000000], int width, int out[1000000]){
             f1 = i3;
             i2 += 2*width;
             i3 += 2*width;
-            if(i2>=1000000)
-                i2 = 1000000;
-            if(i3 >= 1000000)
-                i3 = 1000000;
+            if(i2>=10000000)
+                i2 = 10000000;
+            if(i3 >= 10000000)
+                i3 = 10000000;
             f2 = i2;
         }
     }
 }
 
 
-void single_merge_sort_parallel(int in[1000000], int out[1000000]){
+void single_merge_sort_parallel(int in[10000000], int out[10000000]){
 #pragma HLS DATAFLOW
 
- int temp[24 -1][1000000];
+ int temp[24 -1][10000000];
 #pragma HLS ARRAY_PARTITION variable=temp type=complete dim=1
  int width = 1;
     single_merge_arrays(in, width, temp[0]);
