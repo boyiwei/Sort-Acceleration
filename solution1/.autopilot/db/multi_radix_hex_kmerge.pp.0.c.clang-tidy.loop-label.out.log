@@ -1,0 +1,60 @@
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:954:5: warning: Added loop label VITIS_LOOP_62_1:   [xilinx-label-all-loops]
+    for(int i=0; i<2*1000000/64; i++){
+    ^~~
+    VITIS_LOOP_62_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:954:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:982:5: warning: Added loop label VITIS_LOOP_90_1:   [xilinx-label-all-loops]
+    for(int i=0; i<4*1000000/64; i++){
+    ^~~
+    VITIS_LOOP_90_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:982:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1010:5: warning: Added loop label VITIS_LOOP_118_1:   [xilinx-label-all-loops]
+    for(int i=0; i<8*1000000/64; i++){
+    ^~~
+    VITIS_LOOP_118_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1010:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1038:5: warning: Added loop label VITIS_LOOP_146_1:   [xilinx-label-all-loops]
+    for(int i=0; i<16*1000000/64; i++){
+    ^~~
+    VITIS_LOOP_146_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1038:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1066:5: warning: Added loop label VITIS_LOOP_174_1:   [xilinx-label-all-loops]
+    for(int i=0; i<32*1000000/64; i++){
+    ^~~
+    VITIS_LOOP_174_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1066:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1094:5: warning: Added loop label VITIS_LOOP_202_1:   [xilinx-label-all-loops]
+    for(int i=0; i<1000000; i++){
+    ^~~
+    VITIS_LOOP_202_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1094:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1143:2: warning: Added loop label VITIS_LOOP_247_1:   [xilinx-label-all-loops]
+ for(i=0; i<64; i++){
+ ^~~
+ VITIS_LOOP_247_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1143:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1148:5: warning: Added loop label VITIS_LOOP_252_2:   [xilinx-label-all-loops]
+    for(i=0; i<32; i++){
+    ^~~
+    VITIS_LOOP_252_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1148:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1153:5: warning: Added loop label VITIS_LOOP_257_3:   [xilinx-label-all-loops]
+    for(i=0; i<16; i++){
+    ^~~
+    VITIS_LOOP_257_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1153:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1158:5: warning: Added loop label VITIS_LOOP_262_4:   [xilinx-label-all-loops]
+    for(i=0; i<8; i++){
+    ^~~
+    VITIS_LOOP_262_4: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1158:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1163:5: warning: Added loop label VITIS_LOOP_267_5:   [xilinx-label-all-loops]
+    for(i=0; i<4; i++){
+    ^~~
+    VITIS_LOOP_267_5: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1163:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1168:5: warning: Added loop label VITIS_LOOP_272_6:   [xilinx-label-all-loops]
+    for(i=0; i<2; i++){
+    ^~~
+    VITIS_LOOP_272_6: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_kmerge.pp.0.c:1168:5: note: FIX-IT applied suggested code changes

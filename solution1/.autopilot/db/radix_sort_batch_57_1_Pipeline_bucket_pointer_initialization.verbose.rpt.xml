@@ -1,0 +1,299 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'radix_sort_batch_57_1_Pipeline_bucket_pointer_initialization'" level="0">
+<item name = "Date">Sun Apr 23 22:22:27 2023
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">sort_seperate_bucket</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 1.760 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">18, 18, 0.180 us, 0.180 us, 18, 18, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- bucket_pointer_initialization">16, 16, 1, 1, 1, 16, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 95, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 0, 65, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 324, -</column>
+<column name="Register">-, -, 1064, -, -</column>
+<specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mux_164_32_1_1_U10862">mux_164_32_1_1, 0, 0, 0, 65, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln33_fu_922_p2">+, 0, 0, 12, 5, 1</column>
+<column name="next_bucket_pointer_fu_1018_p2">+, 0, 0, 39, 32, 32</column>
+<column name="ap_condition_505">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_508">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_511">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_514">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_517">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_520">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_523">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_526">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_529">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_532">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_535">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_538">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_541">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_544">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_547">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_550">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln33_fu_916_p2">icmp, 0, 0, 10, 5, 6</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_done_int">9, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
+<column name="bucket_pointer_341_fu_192">9, 2, 32, 64</column>
+<column name="bucket_pointer_342_fu_196">9, 2, 32, 64</column>
+<column name="bucket_pointer_343_fu_200">9, 2, 32, 64</column>
+<column name="bucket_pointer_344_fu_204">9, 2, 32, 64</column>
+<column name="bucket_pointer_345_fu_208">9, 2, 32, 64</column>
+<column name="bucket_pointer_346_fu_212">9, 2, 32, 64</column>
+<column name="bucket_pointer_347_fu_216">9, 2, 32, 64</column>
+<column name="bucket_pointer_348_fu_220">9, 2, 32, 64</column>
+<column name="bucket_pointer_349_fu_224">9, 2, 32, 64</column>
+<column name="bucket_pointer_350_fu_228">9, 2, 32, 64</column>
+<column name="bucket_pointer_351_fu_232">9, 2, 32, 64</column>
+<column name="bucket_pointer_352_fu_236">9, 2, 32, 64</column>
+<column name="bucket_pointer_353_fu_240">9, 2, 32, 64</column>
+<column name="bucket_pointer_354_fu_244">9, 2, 32, 64</column>
+<column name="bucket_pointer_355_fu_248">9, 2, 32, 64</column>
+<column name="bucket_pointer_356_fu_252">9, 2, 32, 64</column>
+<column name="bucket_pointer_357_fu_256">9, 2, 32, 64</column>
+<column name="bucket_sizes_436_fu_264">9, 2, 32, 64</column>
+<column name="bucket_sizes_437_fu_268">9, 2, 32, 64</column>
+<column name="bucket_sizes_438_fu_272">9, 2, 32, 64</column>
+<column name="bucket_sizes_439_fu_276">9, 2, 32, 64</column>
+<column name="bucket_sizes_440_fu_280">9, 2, 32, 64</column>
+<column name="bucket_sizes_441_fu_284">9, 2, 32, 64</column>
+<column name="bucket_sizes_442_fu_288">9, 2, 32, 64</column>
+<column name="bucket_sizes_443_fu_292">9, 2, 32, 64</column>
+<column name="bucket_sizes_444_fu_296">9, 2, 32, 64</column>
+<column name="bucket_sizes_445_fu_300">9, 2, 32, 64</column>
+<column name="bucket_sizes_446_fu_304">9, 2, 32, 64</column>
+<column name="bucket_sizes_447_fu_308">9, 2, 32, 64</column>
+<column name="bucket_sizes_448_fu_312">9, 2, 32, 64</column>
+<column name="bucket_sizes_449_fu_316">9, 2, 32, 64</column>
+<column name="bucket_sizes_450_fu_320">9, 2, 32, 64</column>
+<column name="bucket_sizes_fu_260">9, 2, 32, 64</column>
+<column name="m_fu_188">9, 2, 5, 10</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="bucket_pointer_341_fu_192">32, 0, 32, 0</column>
+<column name="bucket_pointer_342_fu_196">32, 0, 32, 0</column>
+<column name="bucket_pointer_343_fu_200">32, 0, 32, 0</column>
+<column name="bucket_pointer_344_fu_204">32, 0, 32, 0</column>
+<column name="bucket_pointer_345_fu_208">32, 0, 32, 0</column>
+<column name="bucket_pointer_346_fu_212">32, 0, 32, 0</column>
+<column name="bucket_pointer_347_fu_216">32, 0, 32, 0</column>
+<column name="bucket_pointer_348_fu_220">32, 0, 32, 0</column>
+<column name="bucket_pointer_349_fu_224">32, 0, 32, 0</column>
+<column name="bucket_pointer_350_fu_228">32, 0, 32, 0</column>
+<column name="bucket_pointer_351_fu_232">32, 0, 32, 0</column>
+<column name="bucket_pointer_352_fu_236">32, 0, 32, 0</column>
+<column name="bucket_pointer_353_fu_240">32, 0, 32, 0</column>
+<column name="bucket_pointer_354_fu_244">32, 0, 32, 0</column>
+<column name="bucket_pointer_355_fu_248">32, 0, 32, 0</column>
+<column name="bucket_pointer_356_fu_252">32, 0, 32, 0</column>
+<column name="bucket_pointer_357_fu_256">32, 0, 32, 0</column>
+<column name="bucket_sizes_436_fu_264">32, 0, 32, 0</column>
+<column name="bucket_sizes_437_fu_268">32, 0, 32, 0</column>
+<column name="bucket_sizes_438_fu_272">32, 0, 32, 0</column>
+<column name="bucket_sizes_439_fu_276">32, 0, 32, 0</column>
+<column name="bucket_sizes_440_fu_280">32, 0, 32, 0</column>
+<column name="bucket_sizes_441_fu_284">32, 0, 32, 0</column>
+<column name="bucket_sizes_442_fu_288">32, 0, 32, 0</column>
+<column name="bucket_sizes_443_fu_292">32, 0, 32, 0</column>
+<column name="bucket_sizes_444_fu_296">32, 0, 32, 0</column>
+<column name="bucket_sizes_445_fu_300">32, 0, 32, 0</column>
+<column name="bucket_sizes_446_fu_304">32, 0, 32, 0</column>
+<column name="bucket_sizes_447_fu_308">32, 0, 32, 0</column>
+<column name="bucket_sizes_448_fu_312">32, 0, 32, 0</column>
+<column name="bucket_sizes_449_fu_316">32, 0, 32, 0</column>
+<column name="bucket_sizes_450_fu_320">32, 0, 32, 0</column>
+<column name="bucket_sizes_fu_260">32, 0, 32, 0</column>
+<column name="m_fu_188">5, 0, 5, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, radix_sort_batch.57.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, radix_sort_batch.57.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, radix_sort_batch.57.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, radix_sort_batch.57.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, radix_sort_batch.57.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, radix_sort_batch.57.1_Pipeline_bucket_pointer_initialization, return value</column>
+<column name="bucket_sizes_1530">in, 32, ap_none, bucket_sizes_1530, scalar</column>
+<column name="bucket_sizes_1529">in, 32, ap_none, bucket_sizes_1529, scalar</column>
+<column name="bucket_sizes_1528">in, 32, ap_none, bucket_sizes_1528, scalar</column>
+<column name="bucket_sizes_1527">in, 32, ap_none, bucket_sizes_1527, scalar</column>
+<column name="bucket_sizes_1526">in, 32, ap_none, bucket_sizes_1526, scalar</column>
+<column name="bucket_sizes_1525">in, 32, ap_none, bucket_sizes_1525, scalar</column>
+<column name="bucket_sizes_1524">in, 32, ap_none, bucket_sizes_1524, scalar</column>
+<column name="bucket_sizes_1523">in, 32, ap_none, bucket_sizes_1523, scalar</column>
+<column name="bucket_sizes_1522">in, 32, ap_none, bucket_sizes_1522, scalar</column>
+<column name="bucket_sizes_1521">in, 32, ap_none, bucket_sizes_1521, scalar</column>
+<column name="bucket_sizes_1520">in, 32, ap_none, bucket_sizes_1520, scalar</column>
+<column name="bucket_sizes_1519">in, 32, ap_none, bucket_sizes_1519, scalar</column>
+<column name="bucket_sizes_1518">in, 32, ap_none, bucket_sizes_1518, scalar</column>
+<column name="bucket_sizes_1517">in, 32, ap_none, bucket_sizes_1517, scalar</column>
+<column name="bucket_sizes_1516">in, 32, ap_none, bucket_sizes_1516, scalar</column>
+<column name="bucket_sizes_1515">in, 32, ap_none, bucket_sizes_1515, scalar</column>
+<column name="bucket_pointer_665">in, 32, ap_none, bucket_pointer_665, scalar</column>
+<column name="bucket_pointer_664">in, 32, ap_none, bucket_pointer_664, scalar</column>
+<column name="bucket_pointer_663">in, 32, ap_none, bucket_pointer_663, scalar</column>
+<column name="bucket_pointer_662">in, 32, ap_none, bucket_pointer_662, scalar</column>
+<column name="bucket_pointer_661">in, 32, ap_none, bucket_pointer_661, scalar</column>
+<column name="bucket_pointer_660">in, 32, ap_none, bucket_pointer_660, scalar</column>
+<column name="bucket_pointer_659">in, 32, ap_none, bucket_pointer_659, scalar</column>
+<column name="bucket_pointer_658">in, 32, ap_none, bucket_pointer_658, scalar</column>
+<column name="bucket_pointer_657">in, 32, ap_none, bucket_pointer_657, scalar</column>
+<column name="bucket_pointer_656">in, 32, ap_none, bucket_pointer_656, scalar</column>
+<column name="bucket_pointer_655">in, 32, ap_none, bucket_pointer_655, scalar</column>
+<column name="bucket_pointer_654">in, 32, ap_none, bucket_pointer_654, scalar</column>
+<column name="bucket_pointer_653">in, 32, ap_none, bucket_pointer_653, scalar</column>
+<column name="bucket_pointer_652">in, 32, ap_none, bucket_pointer_652, scalar</column>
+<column name="bucket_pointer_651">in, 32, ap_none, bucket_pointer_651, scalar</column>
+<column name="bucket_pointer">in, 32, ap_none, bucket_pointer, scalar</column>
+<column name="bucket_sizes_1546_out">out, 32, ap_vld, bucket_sizes_1546_out, pointer</column>
+<column name="bucket_sizes_1546_out_ap_vld">out, 1, ap_vld, bucket_sizes_1546_out, pointer</column>
+<column name="bucket_sizes_1545_out">out, 32, ap_vld, bucket_sizes_1545_out, pointer</column>
+<column name="bucket_sizes_1545_out_ap_vld">out, 1, ap_vld, bucket_sizes_1545_out, pointer</column>
+<column name="bucket_sizes_1544_out">out, 32, ap_vld, bucket_sizes_1544_out, pointer</column>
+<column name="bucket_sizes_1544_out_ap_vld">out, 1, ap_vld, bucket_sizes_1544_out, pointer</column>
+<column name="bucket_sizes_1543_out">out, 32, ap_vld, bucket_sizes_1543_out, pointer</column>
+<column name="bucket_sizes_1543_out_ap_vld">out, 1, ap_vld, bucket_sizes_1543_out, pointer</column>
+<column name="bucket_sizes_1542_out">out, 32, ap_vld, bucket_sizes_1542_out, pointer</column>
+<column name="bucket_sizes_1542_out_ap_vld">out, 1, ap_vld, bucket_sizes_1542_out, pointer</column>
+<column name="bucket_sizes_1541_out">out, 32, ap_vld, bucket_sizes_1541_out, pointer</column>
+<column name="bucket_sizes_1541_out_ap_vld">out, 1, ap_vld, bucket_sizes_1541_out, pointer</column>
+<column name="bucket_sizes_1540_out">out, 32, ap_vld, bucket_sizes_1540_out, pointer</column>
+<column name="bucket_sizes_1540_out_ap_vld">out, 1, ap_vld, bucket_sizes_1540_out, pointer</column>
+<column name="bucket_sizes_1539_out">out, 32, ap_vld, bucket_sizes_1539_out, pointer</column>
+<column name="bucket_sizes_1539_out_ap_vld">out, 1, ap_vld, bucket_sizes_1539_out, pointer</column>
+<column name="bucket_sizes_1538_out">out, 32, ap_vld, bucket_sizes_1538_out, pointer</column>
+<column name="bucket_sizes_1538_out_ap_vld">out, 1, ap_vld, bucket_sizes_1538_out, pointer</column>
+<column name="bucket_sizes_1537_out">out, 32, ap_vld, bucket_sizes_1537_out, pointer</column>
+<column name="bucket_sizes_1537_out_ap_vld">out, 1, ap_vld, bucket_sizes_1537_out, pointer</column>
+<column name="bucket_sizes_1536_out">out, 32, ap_vld, bucket_sizes_1536_out, pointer</column>
+<column name="bucket_sizes_1536_out_ap_vld">out, 1, ap_vld, bucket_sizes_1536_out, pointer</column>
+<column name="bucket_sizes_1535_out">out, 32, ap_vld, bucket_sizes_1535_out, pointer</column>
+<column name="bucket_sizes_1535_out_ap_vld">out, 1, ap_vld, bucket_sizes_1535_out, pointer</column>
+<column name="bucket_sizes_1534_out">out, 32, ap_vld, bucket_sizes_1534_out, pointer</column>
+<column name="bucket_sizes_1534_out_ap_vld">out, 1, ap_vld, bucket_sizes_1534_out, pointer</column>
+<column name="bucket_sizes_1533_out">out, 32, ap_vld, bucket_sizes_1533_out, pointer</column>
+<column name="bucket_sizes_1533_out_ap_vld">out, 1, ap_vld, bucket_sizes_1533_out, pointer</column>
+<column name="bucket_sizes_1532_out">out, 32, ap_vld, bucket_sizes_1532_out, pointer</column>
+<column name="bucket_sizes_1532_out_ap_vld">out, 1, ap_vld, bucket_sizes_1532_out, pointer</column>
+<column name="bucket_sizes_1531_out">out, 32, ap_vld, bucket_sizes_1531_out, pointer</column>
+<column name="bucket_sizes_1531_out_ap_vld">out, 1, ap_vld, bucket_sizes_1531_out, pointer</column>
+<column name="bucket_pointer_681_out">out, 32, ap_vld, bucket_pointer_681_out, pointer</column>
+<column name="bucket_pointer_681_out_ap_vld">out, 1, ap_vld, bucket_pointer_681_out, pointer</column>
+<column name="bucket_pointer_680_out">out, 32, ap_vld, bucket_pointer_680_out, pointer</column>
+<column name="bucket_pointer_680_out_ap_vld">out, 1, ap_vld, bucket_pointer_680_out, pointer</column>
+<column name="bucket_pointer_679_out">out, 32, ap_vld, bucket_pointer_679_out, pointer</column>
+<column name="bucket_pointer_679_out_ap_vld">out, 1, ap_vld, bucket_pointer_679_out, pointer</column>
+<column name="bucket_pointer_678_out">out, 32, ap_vld, bucket_pointer_678_out, pointer</column>
+<column name="bucket_pointer_678_out_ap_vld">out, 1, ap_vld, bucket_pointer_678_out, pointer</column>
+<column name="bucket_pointer_677_out">out, 32, ap_vld, bucket_pointer_677_out, pointer</column>
+<column name="bucket_pointer_677_out_ap_vld">out, 1, ap_vld, bucket_pointer_677_out, pointer</column>
+<column name="bucket_pointer_676_out">out, 32, ap_vld, bucket_pointer_676_out, pointer</column>
+<column name="bucket_pointer_676_out_ap_vld">out, 1, ap_vld, bucket_pointer_676_out, pointer</column>
+<column name="bucket_pointer_675_out">out, 32, ap_vld, bucket_pointer_675_out, pointer</column>
+<column name="bucket_pointer_675_out_ap_vld">out, 1, ap_vld, bucket_pointer_675_out, pointer</column>
+<column name="bucket_pointer_674_out">out, 32, ap_vld, bucket_pointer_674_out, pointer</column>
+<column name="bucket_pointer_674_out_ap_vld">out, 1, ap_vld, bucket_pointer_674_out, pointer</column>
+<column name="bucket_pointer_673_out">out, 32, ap_vld, bucket_pointer_673_out, pointer</column>
+<column name="bucket_pointer_673_out_ap_vld">out, 1, ap_vld, bucket_pointer_673_out, pointer</column>
+<column name="bucket_pointer_672_out">out, 32, ap_vld, bucket_pointer_672_out, pointer</column>
+<column name="bucket_pointer_672_out_ap_vld">out, 1, ap_vld, bucket_pointer_672_out, pointer</column>
+<column name="bucket_pointer_671_out">out, 32, ap_vld, bucket_pointer_671_out, pointer</column>
+<column name="bucket_pointer_671_out_ap_vld">out, 1, ap_vld, bucket_pointer_671_out, pointer</column>
+<column name="bucket_pointer_670_out">out, 32, ap_vld, bucket_pointer_670_out, pointer</column>
+<column name="bucket_pointer_670_out_ap_vld">out, 1, ap_vld, bucket_pointer_670_out, pointer</column>
+<column name="bucket_pointer_669_out">out, 32, ap_vld, bucket_pointer_669_out, pointer</column>
+<column name="bucket_pointer_669_out_ap_vld">out, 1, ap_vld, bucket_pointer_669_out, pointer</column>
+<column name="bucket_pointer_668_out">out, 32, ap_vld, bucket_pointer_668_out, pointer</column>
+<column name="bucket_pointer_668_out_ap_vld">out, 1, ap_vld, bucket_pointer_668_out, pointer</column>
+<column name="bucket_pointer_667_out">out, 32, ap_vld, bucket_pointer_667_out, pointer</column>
+<column name="bucket_pointer_667_out_ap_vld">out, 1, ap_vld, bucket_pointer_667_out, pointer</column>
+<column name="bucket_pointer_666_out">out, 32, ap_vld, bucket_pointer_666_out, pointer</column>
+<column name="bucket_pointer_666_out_ap_vld">out, 1, ap_vld, bucket_pointer_666_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,103 @@
+---
+MainSourceFile:  /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_37_1:  '
+    FileOffset:      37
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          24192
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_37_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_42_2:  '
+    FileOffset:      42
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          24294
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_42_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_47_3:  '
+    FileOffset:      47
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          24388
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_47_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_52_4:  '
+    FileOffset:      52
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          24481
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_52_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_57_5:  '
+    FileOffset:      57
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          24574
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_57_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_85_1:  '
+    FileOffset:      85
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          25392
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_85_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_90_2:  '
+    FileOffset:      90
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          25492
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_90_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_95_3:  '
+    FileOffset:      95
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          25584
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_95_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_100_4:  '
+    FileOffset:      100
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          25676
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_100_4: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_105_5:  '
+    FileOffset:      105
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          25767
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_105_5: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_110_6:  '
+    FileOffset:      110
+    FilePath:        /home/boyiw7/sort_seperate_bucket/sort_top.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c
+        Offset:          25858
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_110_6: '
+...

@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vitis HLS Report for 'merge_sort_batch2_116'
+================================================================
+* Date:           Sun Apr 23 22:16:58 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sort_seperate_bucket
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.355 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   125002|   125002|  1.250 ms|  1.250 ms|  125002|  125002|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_118_1  |   125000|   125000|         2|          1|          1|  125000|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.55>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%k = alloca i32 1"   --->   Operation 6 'alloca' 'k' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 7 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.45ns)   --->   "%store_ln118 = store i32 0, i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 8 'store' 'store_ln118' <Predicate = true> <Delay = 0.45>
+ST_1 : Operation 9 [1/1] (0.41ns)   --->   "%store_ln118 = store i32 0, i32 %k" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 9 'store' 'store_ln118' <Predicate = true> <Delay = 0.41>
+ST_1 : Operation 10 [1/1] (0.38ns)   --->   "%store_ln118 = store i17 0, i17 %i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 10 'store' 'store_ln118' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln118 = br void %for.body.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 11 'br' 'br_ln118' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_136 = load i17 %i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 12 'load' 'i_136' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%k_86 = load i32 %k" [sort_seperate_bucket/multi_radix_hex_kmerge.c:133]   --->   Operation 13 'load' 'k_86' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%j_88 = load i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:137]   --->   Operation 14 'load' 'j_88' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.68ns)   --->   "%icmp_ln118 = icmp_eq  i17 %i_136, i17 125000" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 15 'icmp' 'icmp_ln118' <Predicate = true> <Delay = 0.68> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 125000, i64 125000, i64 125000"   --->   Operation 16 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.79ns)   --->   "%add_ln118 = add i17 %i_136, i17 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 17 'add' 'add_ln118' <Predicate = true> <Delay = 0.79> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.79> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln118 = br i1 %icmp_ln118, void %for.body.split.i, void %merge_sort_batch2.116.exit" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 18 'br' 'br_ln118' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln118 = zext i17 %i_136" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 19 'zext' 'zext_ln118' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specpipeline_ln119 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_25" [sort_seperate_bucket/multi_radix_hex_kmerge.c:119]   --->   Operation 20 'specpipeline' 'specpipeline_ln119' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln116 = specloopname void @_ssdm_op_SpecLoopName, void @empty_64" [sort_seperate_bucket/multi_radix_hex_kmerge.c:116]   --->   Operation 21 'specloopname' 'specloopname_ln116' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.85ns)   --->   "%icmp_ln120 = icmp_slt  i32 %j_88, i32 62500" [sort_seperate_bucket/multi_radix_hex_kmerge.c:120]   --->   Operation 22 'icmp' 'icmp_ln120' <Predicate = (!icmp_ln118)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.85ns)   --->   "%icmp_ln120_1 = icmp_slt  i32 %k_86, i32 62500" [sort_seperate_bucket/multi_radix_hex_kmerge.c:120]   --->   Operation 23 'icmp' 'icmp_ln120_1' <Predicate = (!icmp_ln118)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.12ns)   --->   "%and_ln120 = and i1 %icmp_ln120, i1 %icmp_ln120_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:120]   --->   Operation 24 'and' 'and_ln120' <Predicate = (!icmp_ln118)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp3_6_addr = getelementptr i32 %multi_radix_hex_kmerge_temp3_6, i64 0, i64 %zext_ln118" [sort_seperate_bucket/multi_radix_hex_kmerge.c:136]   --->   Operation 25 'getelementptr' 'multi_radix_hex_kmerge_temp3_6_addr' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln120 = br i1 %and_ln120, void %if.else16.i, void %if.then.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:120]   --->   Operation 26 'br' 'br_ln120' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.85ns)   --->   "%icmp_ln131 = icmp_eq  i32 %j_88, i32 62500" [sort_seperate_bucket/multi_radix_hex_kmerge.c:131]   --->   Operation 27 'icmp' 'icmp_ln131' <Predicate = (!icmp_ln118 & !and_ln120)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.12ns)   --->   "%and_ln131 = and i1 %icmp_ln131, i1 %icmp_ln120_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:131]   --->   Operation 28 'and' 'and_ln131' <Predicate = (!icmp_ln118 & !and_ln120)> <Delay = 0.12> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln131 = br i1 %and_ln131, void %if.else26.i, void %if.then20.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:131]   --->   Operation 29 'br' 'br_ln131' <Predicate = (!icmp_ln118 & !and_ln120)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln136 = zext i32 %j_88" [sort_seperate_bucket/multi_radix_hex_kmerge.c:136]   --->   Operation 30 'zext' 'zext_ln136' <Predicate = (!icmp_ln118 & !and_ln120 & !and_ln131)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp2_12_addr_1 = getelementptr i32 %multi_radix_hex_kmerge_temp2_12, i64 0, i64 %zext_ln136" [sort_seperate_bucket/multi_radix_hex_kmerge.c:136]   --->   Operation 31 'getelementptr' 'multi_radix_hex_kmerge_temp2_12_addr_1' <Predicate = (!icmp_ln118 & !and_ln120 & !and_ln131)> <Delay = 0.00>
+ST_1 : Operation 32 [2/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp2_12_load_1 = load i16 %multi_radix_hex_kmerge_temp2_12_addr_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:136]   --->   Operation 32 'load' 'multi_radix_hex_kmerge_temp2_12_load_1' <Predicate = (!icmp_ln118 & !and_ln120 & !and_ln131)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 62500> <RAM>
+ST_1 : Operation 33 [1/1] (0.88ns)   --->   "%j_90 = add i32 %j_88, i32 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:137]   --->   Operation 33 'add' 'j_90' <Predicate = (!icmp_ln118 & !and_ln120 & !and_ln131)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.45ns)   --->   "%store_ln137 = store i32 %j_90, i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:137]   --->   Operation 34 'store' 'store_ln137' <Predicate = (!icmp_ln118 & !and_ln120 & !and_ln131)> <Delay = 0.45>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln132 = zext i32 %k_86" [sort_seperate_bucket/multi_radix_hex_kmerge.c:132]   --->   Operation 35 'zext' 'zext_ln132' <Predicate = (!icmp_ln118 & !and_ln120 & and_ln131)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp2_13_addr_1 = getelementptr i32 %multi_radix_hex_kmerge_temp2_13, i64 0, i64 %zext_ln132" [sort_seperate_bucket/multi_radix_hex_kmerge.c:132]   --->   Operation 36 'getelementptr' 'multi_radix_hex_kmerge_temp2_13_addr_1' <Predicate = (!icmp_ln118 & !and_ln120 & and_ln131)> <Delay = 0.00>
+ST_1 : Operation 37 [2/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp2_13_load_1 = load i16 %multi_radix_hex_kmerge_temp2_13_addr_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:132]   --->   Operation 37 'load' 'multi_radix_hex_kmerge_temp2_13_load_1' <Predicate = (!icmp_ln118 & !and_ln120 & and_ln131)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 62500> <RAM>
+ST_1 : Operation 38 [1/1] (0.88ns)   --->   "%k_88 = add i32 %k_86, i32 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:133]   --->   Operation 38 'add' 'k_88' <Predicate = (!icmp_ln118 & !and_ln120 & and_ln131)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.45ns)   --->   "%store_ln134 = store i32 62500, i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:134]   --->   Operation 39 'store' 'store_ln134' <Predicate = (!icmp_ln118 & !and_ln120 & and_ln131)> <Delay = 0.45>
+ST_1 : Operation 40 [1/1] (0.41ns)   --->   "%store_ln134 = store i32 %k_88, i32 %k" [sort_seperate_bucket/multi_radix_hex_kmerge.c:134]   --->   Operation 40 'store' 'store_ln134' <Predicate = (!icmp_ln118 & !and_ln120 & and_ln131)> <Delay = 0.41>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln121 = zext i32 %j_88" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 41 'zext' 'zext_ln121' <Predicate = (!icmp_ln118 & and_ln120)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp2_12_addr = getelementptr i32 %multi_radix_hex_kmerge_temp2_12, i64 0, i64 %zext_ln121" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 42 'getelementptr' 'multi_radix_hex_kmerge_temp2_12_addr' <Predicate = (!icmp_ln118 & and_ln120)> <Delay = 0.00>
+ST_1 : Operation 43 [2/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp2_12_load = load i16 %multi_radix_hex_kmerge_temp2_12_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 43 'load' 'multi_radix_hex_kmerge_temp2_12_load' <Predicate = (!icmp_ln118 & and_ln120)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 62500> <RAM>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%zext_ln121_1 = zext i32 %k_86" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 44 'zext' 'zext_ln121_1' <Predicate = (!icmp_ln118 & and_ln120)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%multi_radix_hex_kmerge_temp2_13_addr = getelementptr i32 %multi_radix_hex_kmerge_temp2_13, i64 0, i64 %zext_ln121_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 45 'getelementptr' 'multi_radix_hex_kmerge_temp2_13_addr' <Predicate = (!icmp_ln118 & and_ln120)> <Delay = 0.00>
+ST_1 : Operation 46 [2/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp2_13_load = load i16 %multi_radix_hex_kmerge_temp2_13_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 46 'load' 'multi_radix_hex_kmerge_temp2_13_load' <Predicate = (!icmp_ln118 & and_ln120)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 62500> <RAM>
+ST_1 : Operation 47 [1/1] (0.38ns)   --->   "%store_ln118 = store i17 %add_ln118, i17 %i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 47 'store' 'store_ln118' <Predicate = (!icmp_ln118)> <Delay = 0.38>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%br_ln118 = br void %for.body.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 48 'br' 'br_ln118' <Predicate = (!icmp_ln118)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%ret_ln118 = ret" [sort_seperate_bucket/multi_radix_hex_kmerge.c:118]   --->   Operation 67 'ret' 'ret_ln118' <Predicate = (icmp_ln118)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.35>
+ST_2 : Operation 49 [1/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp2_12_load_1 = load i16 %multi_radix_hex_kmerge_temp2_12_addr_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:136]   --->   Operation 49 'load' 'multi_radix_hex_kmerge_temp2_12_load_1' <Predicate = (!and_ln120 & !and_ln131)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 62500> <RAM>
+ST_2 : Operation 50 [1/1] (1.24ns)   --->   "%store_ln136 = store i32 %multi_radix_hex_kmerge_temp2_12_load_1, i17 %multi_radix_hex_kmerge_temp3_6_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:136]   --->   Operation 50 'store' 'store_ln136' <Predicate = (!and_ln120 & !and_ln131)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 125000> <RAM>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 51 'br' 'br_ln0' <Predicate = (!and_ln120 & !and_ln131)> <Delay = 0.00>
+ST_2 : Operation 52 [1/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp2_13_load_1 = load i16 %multi_radix_hex_kmerge_temp2_13_addr_1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:132]   --->   Operation 52 'load' 'multi_radix_hex_kmerge_temp2_13_load_1' <Predicate = (!and_ln120 & and_ln131)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 62500> <RAM>
+ST_2 : Operation 53 [1/1] (1.24ns)   --->   "%store_ln132 = store i32 %multi_radix_hex_kmerge_temp2_13_load_1, i17 %multi_radix_hex_kmerge_temp3_6_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:132]   --->   Operation 53 'store' 'store_ln132' <Predicate = (!and_ln120 & and_ln131)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 125000> <RAM>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%br_ln134 = br void %for.inc.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:134]   --->   Operation 54 'br' 'br_ln134' <Predicate = (!and_ln120 & and_ln131)> <Delay = 0.00>
+ST_2 : Operation 55 [1/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp2_12_load = load i16 %multi_radix_hex_kmerge_temp2_12_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 55 'load' 'multi_radix_hex_kmerge_temp2_12_load' <Predicate = (and_ln120)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 62500> <RAM>
+ST_2 : Operation 56 [1/2] (1.24ns)   --->   "%multi_radix_hex_kmerge_temp2_13_load = load i16 %multi_radix_hex_kmerge_temp2_13_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 56 'load' 'multi_radix_hex_kmerge_temp2_13_load' <Predicate = (and_ln120)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 62500> <RAM>
+ST_2 : Operation 57 [1/1] (0.85ns)   --->   "%icmp_ln121 = icmp_slt  i32 %multi_radix_hex_kmerge_temp2_12_load, i32 %multi_radix_hex_kmerge_temp2_13_load" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 57 'icmp' 'icmp_ln121' <Predicate = (and_ln120)> <Delay = 0.85> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.85> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%br_ln121 = br i1 %icmp_ln121, void %if.else.i, void %if.then6.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:121]   --->   Operation 58 'br' 'br_ln121' <Predicate = (and_ln120)> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (1.24ns)   --->   "%store_ln126 = store i32 %multi_radix_hex_kmerge_temp2_13_load, i17 %multi_radix_hex_kmerge_temp3_6_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:126]   --->   Operation 59 'store' 'store_ln126' <Predicate = (and_ln120 & !icmp_ln121)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 125000> <RAM>
+ST_2 : Operation 60 [1/1] (0.88ns)   --->   "%k_87 = add i32 %k_86, i32 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:127]   --->   Operation 60 'add' 'k_87' <Predicate = (and_ln120 & !icmp_ln121)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.41ns)   --->   "%store_ln127 = store i32 %k_87, i32 %k" [sort_seperate_bucket/multi_radix_hex_kmerge.c:127]   --->   Operation 61 'store' 'store_ln127' <Predicate = (and_ln120 & !icmp_ln121)> <Delay = 0.41>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i"   --->   Operation 62 'br' 'br_ln0' <Predicate = (and_ln120 & !icmp_ln121)> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (1.24ns)   --->   "%store_ln122 = store i32 %multi_radix_hex_kmerge_temp2_12_load, i17 %multi_radix_hex_kmerge_temp3_6_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:122]   --->   Operation 63 'store' 'store_ln122' <Predicate = (and_ln120 & icmp_ln121)> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 125000> <RAM>
+ST_2 : Operation 64 [1/1] (0.88ns)   --->   "%j_89 = add i32 %j_88, i32 1" [sort_seperate_bucket/multi_radix_hex_kmerge.c:123]   --->   Operation 64 'add' 'j_89' <Predicate = (and_ln120 & icmp_ln121)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [1/1] (0.45ns)   --->   "%store_ln124 = store i32 %j_89, i32 %j" [sort_seperate_bucket/multi_radix_hex_kmerge.c:124]   --->   Operation 65 'store' 'store_ln124' <Predicate = (and_ln120 & icmp_ln121)> <Delay = 0.45>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%br_ln124 = br void %for.inc.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:124]   --->   Operation 66 'br' 'br_ln124' <Predicate = (and_ln120 & icmp_ln121)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.56ns
+The critical path consists of the following:
+	'alloca' operation ('j') [6]  (0 ns)
+	'load' operation ('j', sort_seperate_bucket/multi_radix_hex_kmerge.c:137) on local variable 'j' [14]  (0 ns)
+	'add' operation ('j', sort_seperate_bucket/multi_radix_hex_kmerge.c:137) [37]  (0.88 ns)
+	'store' operation ('store_ln137', sort_seperate_bucket/multi_radix_hex_kmerge.c:137) of variable 'j', sort_seperate_bucket/multi_radix_hex_kmerge.c:137 on local variable 'j' [38]  (0.453 ns)
+	blocking operation 0.223 ns on control path)
+
+ <State 2>: 3.36ns
+The critical path consists of the following:
+	'load' operation ('multi_radix_hex_kmerge_temp2_12_load', sort_seperate_bucket/multi_radix_hex_kmerge.c:121) on array 'multi_radix_hex_kmerge_temp2_12' [52]  (1.25 ns)
+	'store' operation ('store_ln122', sort_seperate_bucket/multi_radix_hex_kmerge.c:122) of variable 'multi_radix_hex_kmerge_temp2_12_load', sort_seperate_bucket/multi_radix_hex_kmerge.c:121 on array 'multi_radix_hex_kmerge_temp3_6' [64]  (1.25 ns)
+	blocking operation 0.859 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,85 @@
+---
+MainSourceFile:  /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_9_1:  '
+    FileOffset:      9
+    FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+        Offset:          23369
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_9_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_83_1:  '
+    FileOffset:      83
+    FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+        Offset:          24930
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_83_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_97_1:  '
+    FileOffset:      97
+    FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+        Offset:          25270
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_97_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_105_2:  '
+    FileOffset:      105
+    FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+        Offset:          25447
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_105_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_109_3:  '
+    FileOffset:      109
+    FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+        Offset:          25508
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_109_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_118_1:  '
+    FileOffset:      118
+    FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+        Offset:          25787
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_118_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_119_2:  '
+    FileOffset:      119
+    FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+        Offset:          25841
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_119_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_134_3:  '
+    FileOffset:      134
+    FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+        Offset:          26156
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_134_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_140_4:  '
+    FileOffset:      140
+    FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
+        Offset:          26244
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_140_4: '
+...

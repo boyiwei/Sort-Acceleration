@@ -1,0 +1,55 @@
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:926:2: warning: Added loop label VITIS_LOOP_37_1:   [xilinx-label-all-loops]
+ for(i=0; i<32; i++){
+ ^~~
+ VITIS_LOOP_37_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:926:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:931:2: warning: Added loop label VITIS_LOOP_42_2:   [xilinx-label-all-loops]
+ for(i=0; i<16; i++){
+ ^~~
+ VITIS_LOOP_42_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:931:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:936:2: warning: Added loop label VITIS_LOOP_47_3:   [xilinx-label-all-loops]
+ for(i=0; i<8; i++){
+ ^~~
+ VITIS_LOOP_47_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:936:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:941:2: warning: Added loop label VITIS_LOOP_52_4:   [xilinx-label-all-loops]
+ for(i=0; i<4; i++){
+ ^~~
+ VITIS_LOOP_52_4: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:941:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:946:2: warning: Added loop label VITIS_LOOP_57_5:   [xilinx-label-all-loops]
+ for(i=0; i<2; i++){
+ ^~~
+ VITIS_LOOP_57_5: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:946:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:974:1: warning: Added loop label VITIS_LOOP_85_1:   [xilinx-label-all-loops]
+for(i=0; i<64; i++){
+^~~
+VITIS_LOOP_85_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:974:1: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:979:1: warning: Added loop label VITIS_LOOP_90_2:   [xilinx-label-all-loops]
+for(i=0; i<32; i++){
+^~~
+VITIS_LOOP_90_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:979:1: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:984:1: warning: Added loop label VITIS_LOOP_95_3:   [xilinx-label-all-loops]
+for(i=0; i<16; i++){
+^~~
+VITIS_LOOP_95_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:984:1: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:989:1: warning: Added loop label VITIS_LOOP_100_4:   [xilinx-label-all-loops]
+for(i=0; i<8; i++){
+^~~
+VITIS_LOOP_100_4: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:989:1: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:994:1: warning: Added loop label VITIS_LOOP_105_5:   [xilinx-label-all-loops]
+for(i=0; i<4; i++){
+^~~
+VITIS_LOOP_105_5: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:994:1: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:999:1: warning: Added loop label VITIS_LOOP_110_6:   [xilinx-label-all-loops]
+for(i=0; i<2; i++){
+^~~
+VITIS_LOOP_110_6: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c:999:1: note: FIX-IT applied suggested code changes
