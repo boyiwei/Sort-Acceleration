@@ -1,5 +1,0 @@
-<pragmas>
-<pragma file="sort_seperate_bucket/radix_sort.c" line="65" pragmaType="array_partition" parentfunction="radix_sort_unified_bucket_pingpong" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_pointer"/>
-<pragma file="sort_seperate_bucket/radix_sort.c" line="66" pragmaType="array_partition" parentfunction="radix_sort_unified_bucket_pingpong" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_sizes"/>
-<pragma file="sort_seperate_bucket/radix_sort.c" line="80" pragmaType="loop_merge" parentfunction="radix_sort_unified_bucket_pingpong" force="0"/>
-</pragmas>

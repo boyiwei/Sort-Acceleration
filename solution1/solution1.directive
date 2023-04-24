@@ -1,10 +1,2 @@
-<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
-    <sourceFile name="">
-        <directive functionName="radix_sort_unified_bucket_pingpong" label="" functionLabel="">
-            <pragma name="TOP">
-                <option name="name" value="radix_sort_unified_bucket_pingpong"/>
-            </pragma>
-        </directive>
-    </sourceFile>
-</AutoPilot:ProjectResources>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView"/>

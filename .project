@@ -42,11 +42,6 @@
 			<location>/home/boyiw7/sort_seperate_bucket/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/batch_size.h</name>
-			<type>1</type>
-			<location>/home/boyiw7/sort_seperate_bucket/batch_size.h</location>
-		</link>
-		<link>
 			<name>source/dataset_size.h</name>
 			<type>1</type>
 			<location>/home/boyiw7/sort_seperate_bucket/dataset_size.h</location>
@@ -90,6 +85,11 @@
 			<name>source/multi_radix_hex_kmerge.c</name>
 			<type>1</type>
 			<location>/home/boyiw7/sort_seperate_bucket/multi_radix_hex_kmerge.c</location>
+		</link>
+		<link>
+			<name>source/multi_radix_hex_kmerge.h</name>
+			<type>1</type>
+			<location>/home/boyiw7/sort_seperate_bucket/multi_radix_hex_kmerge.h</location>
 		</link>
 		<link>
 			<name>source/multi_radix_hex_loser.c</name>

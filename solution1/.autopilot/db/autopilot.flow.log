@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/boyiw7/sort_seperate_bucket/solution1 opened at Sat Apr 22 21:39:05 PDT 2023
+INFO-FLOW: Workspace /home/boyiw7/sort_seperate_bucket/solution1 opened at Sun Apr 23 22:02:06 PDT 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xcu280-fsvh2892-2L-e 
@@ -7,7 +7,7 @@ DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.2/lib
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
-Command       create_platform done; 5.53 sec.
+Command       create_platform done; 5.32 sec.
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -24,7 +24,7 @@ Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/D
 Command       ap_source done; 0.18 sec.
 Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 5.78 sec.
+Command     set_part done; 5.58 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
@@ -36,7 +36,7 @@ Execute     config_export -rtl=verilog
 Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
 INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
 Execute     config_export -vivado_clock=10 
-Command   open_solution done; 5.95 sec.
+Command   open_solution done; 5.73 sec.
 Execute   set_part xcu280-fsvh2892-2L-e 
 INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
 Execute     create_platform xcu280-fsvh2892-2L-e -board  
@@ -49,295 +49,20 @@ Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scr
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.13 sec.
+Command       ap_source done; 0.11 sec.
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.16 sec.
+Command     ap_source done; 0.15 sec.
 Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.26 sec.
+Command   set_part done; 0.24 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
 Execute   csynth_design 
-INFO: [HLS 200-1510] Running: csynth_design 
-Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.11 seconds; current allocated memory: 1.076 GB.
-INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/heapsort.c' ... 
-INFO-FLOW: Compiling one TU...
-INFO-FLOW: Handling sort_seperate_bucket/heapsort.c as C
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: Running: GCC PP 39
-INFO-FLOW: Source preprocessing
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang sort_seperate_bucket/heapsort.c -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.c.clang.err.log 
-Command       ap_eval done; 0.27 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
-Execute       set_directive_top radix_sort_unified_bucket_pingpong -name=radix_sort_unified_bucket_pingpong 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
-INFO-FLOW: Source syntax check for synthesis
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.28 sec.
-Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.11 sec.
-INFO-FLOW: Running: clang-tidy CDT preprocess 39
-Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.11 sec.
-Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c std=gnu99 -target fpga  
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
-INFO-FLOW: Calling xilinx-label-all-loops ... 
-INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
-Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c std=gnu99 -target fpga  
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c.clang-tidy.loop-label.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c.clang-tidy.loop-label.err.log 
-Command         ap_eval done; 0.12 sec.
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 0.16 sec.
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c.xilinx-dataflow-lawyer.diag.yml /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c.xilinx-dataflow-lawyer.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c.xilinx-dataflow-lawyer.err.log 
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: compiling source code to llvm bc
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.pp.0.c.clang.err.log 
-Command       ap_eval done; 0.29 sec.
-INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/merge_sort.c' ... 
-INFO-FLOW: Compiling one TU...
-INFO-FLOW: Handling sort_seperate_bucket/merge_sort.c as C
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: Running: GCC PP 39
-INFO-FLOW: Source preprocessing
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang sort_seperate_bucket/merge_sort.c -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.c.clang.err.log 
-Command       ap_eval done; 0.23 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
-Execute       set_directive_top radix_sort_unified_bucket_pingpong -name=radix_sort_unified_bucket_pingpong 
-INFO-FLOW: Source syntax check for synthesis
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.23 sec.
-WARNING: [HLS 207-5558] Only for-loops and functions support the dataflow (sort_seperate_bucket/merge_sort.c:121:9)
-Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Running: clang-tidy CDT preprocess 39
-Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c std=gnu99 -target fpga  
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
-INFO-FLOW: Calling xilinx-label-all-loops ... 
-INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
-Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c std=gnu99 -target fpga  
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c.clang-tidy.loop-label.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c.clang-tidy.loop-label.err.log 
-Command       clang_tidy done; 0.13 sec.
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c.xilinx-dataflow-lawyer.diag.yml /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c.xilinx-dataflow-lawyer.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c.xilinx-dataflow-lawyer.err.log 
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:75:9)
-WARNING: [HLS 214-109] As the loop counter is not increased by 1, the compiler may not successfully process the dataflow loop (sort_seperate_bucket/merge_sort.c:119:65)
-WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (sort_seperate_bucket/merge_sort.c:130:26)
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/merge_sort.c:121:9)
-Execute       send_msg_by_id WARNING @200-471@%s%s 4 sort_seperate_bucket/merge_sort.c 
-WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sort_seperate_bucket/merge_sort.c
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: compiling source code to llvm bc
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c.clang.err.log 
-Command       ap_eval done; 0.22 sec.
-INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort.c' ... 
-INFO-FLOW: Compiling one TU...
-INFO-FLOW: Handling sort_seperate_bucket/radix_sort.c as C
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: Running: GCC PP 39
-INFO-FLOW: Source preprocessing
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang sort_seperate_bucket/radix_sort.c -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.c.clang.err.log 
-Command       ap_eval done; 0.21 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
-Execute       set_directive_top radix_sort_unified_bucket_pingpong -name=radix_sort_unified_bucket_pingpong 
-INFO-FLOW: Source syntax check for synthesis
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.25 sec.
-WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:30:9)
-WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:81:9)
-WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort.c:124:9)
-WARNING: [HLS 207-5566] expression is not an integer constant expression (sort_seperate_bucket/radix_sort.c:137:38)
-WARNING: [HLS 207-5570] because option is invalid, the pragma LOOP_TRIPCOUNT is ignored (sort_seperate_bucket/radix_sort.c:137:9)
-Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.12 sec.
-INFO-FLOW: Running: clang-tidy CDT preprocess 39
-Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c std=gnu99 -target fpga  
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
-INFO-FLOW: Calling xilinx-label-all-loops ... 
-INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
-Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c std=gnu99 -target fpga  
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c.clang-tidy.loop-label.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c.clang-tidy.loop-label.err.log 
-Command       clang_tidy done; 0.11 sec.
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c.xilinx-dataflow-lawyer.diag.yml /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c.xilinx-dataflow-lawyer.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c.xilinx-dataflow-lawyer.err.log 
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: compiling source code to llvm bc
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.pp.0.c.clang.err.log 
-Command       ap_eval done; 0.28 sec.
-INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_2.c' ... 
-INFO-FLOW: Compiling one TU...
-INFO-FLOW: Handling sort_seperate_bucket/radix_sort_2.c as C
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: Running: GCC PP 39
-INFO-FLOW: Source preprocessing
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang sort_seperate_bucket/radix_sort_2.c -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.c.clang.err.log 
-Command       ap_eval done; 0.26 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
-Execute       set_directive_top radix_sort_unified_bucket_pingpong -name=radix_sort_unified_bucket_pingpong 
-INFO-FLOW: Source syntax check for synthesis
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.27 sec.
-WARNING: [HLS 207-5560] Only for/while/do support the pipeline  pragma (sort_seperate_bucket/radix_sort_2.c:29:9)
-Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Running: clang-tidy CDT preprocess 39
-Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c std=gnu99 -target fpga  
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
-INFO-FLOW: Calling xilinx-label-all-loops ... 
-INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
-Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c std=gnu99 -target fpga  
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c.clang-tidy.loop-label.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c.clang-tidy.loop-label.err.log 
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c.xilinx-dataflow-lawyer.diag.yml /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c.xilinx-dataflow-lawyer.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c.xilinx-dataflow-lawyer.err.log 
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: compiling source code to llvm bc
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.pp.0.c.clang.err.log 
-Command       ap_eval done; 0.27 sec.
-INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/radix_sort_separate_bucket_parallel.c' ... 
-INFO-FLOW: Compiling one TU...
-INFO-FLOW: Handling sort_seperate_bucket/radix_sort_separate_bucket_parallel.c as C
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: Running: GCC PP 39
-INFO-FLOW: Source preprocessing
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang sort_seperate_bucket/radix_sort_separate_bucket_parallel.c -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.c.clang.err.log 
-Command       ap_eval done; 0.26 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
-Execute       set_directive_top radix_sort_unified_bucket_pingpong -name=radix_sort_unified_bucket_pingpong 
-INFO-FLOW: Source syntax check for synthesis
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.3 sec.
-Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Running: clang-tidy CDT preprocess 39
-Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c std=gnu99 -target fpga  
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
-INFO-FLOW: Calling xilinx-label-all-loops ... 
-INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
-Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c std=gnu99 -target fpga  
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c.clang-tidy.loop-label.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c.clang-tidy.loop-label.err.log 
-Command       clang_tidy done; 0.16 sec.
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c.xilinx-dataflow-lawyer.diag.yml /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c.xilinx-dataflow-lawyer.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c.xilinx-dataflow-lawyer.err.log 
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: compiling source code to llvm bc
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.pp.0.c.clang.err.log 
-Command       ap_eval done; 0.29 sec.
-INFO: [HLS 200-10] Analyzing design file 'sort_seperate_bucket/sort_top.c' ... 
-INFO-FLOW: Compiling one TU...
-INFO-FLOW: Handling sort_seperate_bucket/sort_top.c as C
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: Running: GCC PP 39
-INFO-FLOW: Source preprocessing
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang sort_seperate_bucket/sort_top.c -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tools/Xilinx/Vitis_HLS/2022.2/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.c.clang.err.log 
-Command       ap_eval done; 0.26 sec.
-INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
-Execute       set_directive_top radix_sort_unified_bucket_pingpong -name=radix_sort_unified_bucket_pingpong 
-INFO-FLOW: Source syntax check for synthesis
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/clang.err.log 
-Command       ap_eval done; 0.27 sec.
-Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/.systemc_flag -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Running: clang-tidy CDT preprocess 39
-Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c std=gnu99 -target fpga  -directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/all.directive.json -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c std=gnu99 -target fpga  
-INFO-FLOW: exec /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
-INFO-FLOW: Calling xilinx-label-all-loops ... 
-INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
-Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c std=gnu99 -target fpga  
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c.clang-tidy.loop-label.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c.clang-tidy.loop-label.err.log 
-Command       clang_tidy done; 0.17 sec.
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c.xilinx-dataflow-lawyer.diag.yml /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c -- -std=gnu99 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c.xilinx-dataflow-lawyer.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c.xilinx-dataflow-lawyer.err.log 
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/sort_top.c:35:9)
-WARNING: [HLS 214-169] There are a total of 5 such instances of non-canonical statements in the dataflow region (sort_seperate_bucket/sort_top.c:35:9)
-WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (sort_seperate_bucket/sort_top.c:83:9)
-WARNING: [HLS 214-169] There are a total of 6 such instances of non-canonical statements in the dataflow region (sort_seperate_bucket/sort_top.c:83:9)
-Execute       send_msg_by_id WARNING @200-471@%s%s 4 sort_seperate_bucket/sort_top.c 
-WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file sort_seperate_bucket/sort_top.c
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-INFO-FLOW: compiling source code to llvm bc
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -std=gnu99 -fgnu89-inline -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I /tools/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.pp.0.c.clang.err.log 
-Command       ap_eval done; 0.28 sec.
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.43 seconds. CPU system time: 5.08 seconds. Elapsed time: 8.64 seconds; current allocated memory: 1.077 GB.
-INFO-FLOW: Linking Debug ...
-INFO-FLOW: Linking dut bc code.
-Execute       run_link_or_opt -out /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.g.bc" "/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.g.bc" "/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.g.bc" "/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.g.bc" "/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.g.bc" "/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.g.bc"  
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/heapsort.g.bc /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.g.bc /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort.g.bc /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_2.g.bc /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/radix_sort_separate_bucket_parallel.g.bc /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/sort_top.g.bc -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.0.bc > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
-INFO-FLOW: 
-Execute       run_link_or_opt -opt -out /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
-Command         ap_eval done; 0.11 sec.
-INFO-FLOW: 
-Command       run_link_or_opt done; 0.11 sec.
-INFO-FLOW: Linking math bc lib
-Execute       run_link_or_opt -out /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc 
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsm_39.bc /tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libhlsmc++_39.bc -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command         ap_eval done; 4.08 sec.
-INFO-FLOW: 
-Command       run_link_or_opt done; 4.08 sec.
-Execute       run_link_or_opt -opt -out /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=radix_sort_unified_bucket_pingpong -reflow-float-conversion 
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=radix_sort_unified_bucket_pingpong -reflow-float-conversion -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command         ap_eval done; 1.24 sec.
-INFO-FLOW: 
-Command       run_link_or_opt done; 1.26 sec.
-Execute       run_link_or_opt -out /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc 
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tools/Xilinx/Vitis_HLS/2022.2/lnx64/lib/libfloatconversion_39.bc -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
-Command         ap_eval done; 0.11 sec.
-INFO-FLOW: 
-Command       run_link_or_opt done; 0.11 sec.
-Execute       run_link_or_opt -opt -out /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=radix_sort_unified_bucket_pingpong 
-Execute         ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=radix_sort_unified_bucket_pingpong -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
-INFO-FLOW: 
-Execute       send_msg_by_id INFO @200-777@%s Vivado 
-INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
-Execute       is_m_axi_addr64 
-INFO-FLOW: Doing LTO.
-Execute       ap_eval exec -ignorestderr /tools/Xilinx/Vitis_HLS/2022.2/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=radix_sort_unified_bucket_pingpong -mllvm -hls-db-dir -mllvm /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 -device-name-info=xcu280-fsvh2892-2L-e > /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command       ap_eval done; error code: 1; 0.32 sec.
-ERROR: [HLS 214-143] in function 'radix_sort_unified_bucket_pingpong': Arrays must be specified with a constant size (sort_seperate_bucket/radix_sort.c:61:2)
-ERROR: [HLS 214-135] Syn check fail!
-Execute       send_msg_by_id ERROR @200-1715@ 
-ERROR: [HLS 200-1715] Encountered problem during source synthesis
-INFO-FLOW: Error in clang_39: 
-INFO-FLOW: Caught error in elaborate: Pre-synthesis failed.
-    while executing
-"AP::ap_link_39 [::AP::get_bc_list  $dbgInfo] $skip_transform $LLVMFlags $dbgInfo"
-    (procedure "AP::compile_dut_files_39" line 19)
-    invoked from within
-"AP::compile_dut_files_39 $dut_files $dbgInfo $skip_cdt $skip_transform"
-    (procedure "AP::compile" line 103)
-    invoked from within
-"AP::compile 1 $skip_cdt $skip_transform"
-    (procedure "ap_internal_elaborate" line 83)
-    invoked from within
-"ap_internal_elaborate "
-Command     elaborate done; error code: 2; 14.76 sec.
-INFO-FLOW: Caught error in csynth_design: Pre-synthesis failed.
-    while executing
-"ap_internal_csynth_design "
-Command   csynth_design done; error code: 2; 14.78 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 8.67 seconds. CPU system time: 5.96 seconds. Elapsed time: 14.78 seconds; current allocated memory: 2.578 MB.
-Command ap_source done; error code: 1; 31.14 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace /home/boyiw7/sort_seperate_bucket/solution1 opened at Sun Apr 23 10:24:42 PDT 2023
+INFO-FLOW: Workspace /home/boyiw7/sort_seperate_bucket/solution1 opened at Sun Apr 23 22:03:49 PDT 2023
 Execute     ap_set_clock -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     set_part xcu280-fsvh2892-2L-e 
@@ -346,85 +71,7 @@ DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.2/lib
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
-Command       create_platform done; 3.32 sec.
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 3.45 sec.
-Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
-INFO: [HLS 200-1505] Using flow_target 'vivado'
-Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
-INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-Execute     config_export -format=ip_catalog 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
-INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
-Execute     config_export -rtl=verilog 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
-INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
-Execute     config_export -vivado_clock=10 
-Command   open_solution done; 3.54 sec.
-Execute   set_part xcu280-fsvh2892-2L-e 
-INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
-Execute     create_platform xcu280-fsvh2892-2L-e -board  
-Execute     source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.15 sec.
-Execute   create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
-Execute   source ./sort_seperate_bucket/solution1/directives.tcl 
-INFO: [HLS 200-1510] Running: source ./sort_seperate_bucket/solution1/directives.tcl
-Execute     set_directive_top -name radix_sort_unified_bucket_pingpong radix_sort_unified_bucket_pingpong 
-INFO: [HLS 200-1510] Running: set_directive_top -name radix_sort_unified_bucket_pingpong radix_sort_unified_bucket_pingpong 
-Execute   csim_design -quiet 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     source csim/.lst_opt.tcl 
-Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO-FLOW: Caught error in csim_design: 4
-    while executing
-"ap_internal_csim_design "
-Command   csim_design done; error code: 2; 64.6 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 60.21 seconds. CPU system time: 5.68 seconds. Elapsed time: 64.6 seconds; current allocated memory: 0.000 MB.
-Command ap_source done; error code: 1; 78.43 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace /home/boyiw7/sort_seperate_bucket/solution1 opened at Sun Apr 23 10:31:37 PDT 2023
-Execute     ap_set_clock -name default -period 10 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xcu280-fsvh2892-2L-e 
-Execute       create_platform xcu280-fsvh2892-2L-e -board  
-DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
-DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data/parts/arch.xml
-DBG:HLSDevice: init success
-INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
-Command       create_platform done; 5.1 sec.
+Command       create_platform done; 5 sec.
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -441,7 +88,7 @@ Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/D
 Command       ap_source done; 0.18 sec.
 Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 5.34 sec.
+Command     set_part done; 5.23 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
@@ -453,7 +100,7 @@ Execute     config_export -rtl=verilog
 Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
 INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
 Execute     config_export -vivado_clock=10 
-Command   open_solution done; 5.5 sec.
+Command   open_solution done; 5.39 sec.
 Execute   set_part xcu280-fsvh2892-2L-e 
 INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
 Execute     create_platform xcu280-fsvh2892-2L-e -board  
@@ -466,198 +113,29 @@ Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scr
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.13 sec.
+Command       ap_source done; 0.14 sec.
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
 Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.16 sec.
+Command     ap_source done; 0.17 sec.
 Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.25 sec.
+Command   set_part done; 0.28 sec.
 Execute   create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
-Execute   source ./sort_seperate_bucket/solution1/directives.tcl 
-INFO: [HLS 200-1510] Running: source ./sort_seperate_bucket/solution1/directives.tcl
-Execute     set_directive_top -name radix_sort_unified_bucket_pingpong radix_sort_unified_bucket_pingpong 
-INFO: [HLS 200-1510] Running: set_directive_top -name radix_sort_unified_bucket_pingpong radix_sort_unified_bucket_pingpong 
 Execute   csim_design -quiet 
 INFO: [HLS 200-1510] Running: csim_design -quiet 
 INFO: [SIM 211-2] *************** CSIM start ***************
 INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 Execute     source csim/.lst_opt.tcl 
 Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+Execute     source run_sim.tcl 
+Command     ap_source done; 38.59 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO-FLOW: Caught error in csim_design: 4
-    while executing
-"ap_internal_csim_design "
-Command   csim_design done; error code: 2; 9.4 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 8.49 seconds. CPU system time: 1.04 seconds. Elapsed time: 9.4 seconds; current allocated memory: 0.000 MB.
-Command ap_source done; error code: 1; 25.42 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace /home/boyiw7/sort_seperate_bucket/solution1 opened at Sun Apr 23 10:33:30 PDT 2023
-Execute     ap_set_clock -name default -period 10 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xcu280-fsvh2892-2L-e 
-Execute       create_platform xcu280-fsvh2892-2L-e -board  
-DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
-DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data/parts/arch.xml
-DBG:HLSDevice: init success
-INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
-Command       create_platform done; 4.66 sec.
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.13 sec.
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.17 sec.
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 4.89 sec.
-Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
-INFO: [HLS 200-1505] Using flow_target 'vivado'
-Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
-INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-Execute     config_export -format=ip_catalog 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
-INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
-Execute     config_export -rtl=verilog 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
-INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
-Execute     config_export -vivado_clock=10 
-Command   open_solution done; 5.05 sec.
-Execute   set_part xcu280-fsvh2892-2L-e 
-INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
-Execute     create_platform xcu280-fsvh2892-2L-e -board  
-Execute     source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.12 sec.
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.16 sec.
-Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.26 sec.
-Execute   create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
-Execute   source ./sort_seperate_bucket/solution1/directives.tcl 
-INFO: [HLS 200-1510] Running: source ./sort_seperate_bucket/solution1/directives.tcl
-Execute     set_directive_top -name radix_sort_unified_bucket_pingpong radix_sort_unified_bucket_pingpong 
-INFO: [HLS 200-1510] Running: set_directive_top -name radix_sort_unified_bucket_pingpong radix_sort_unified_bucket_pingpong 
-Execute   csim_design -quiet 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     source csim/.lst_opt.tcl 
-Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO-FLOW: Caught error in csim_design: 4
-    while executing
-"ap_internal_csim_design "
-Command   csim_design done; error code: 2; 33.21 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 31.01 seconds. CPU system time: 2.87 seconds. Elapsed time: 33.21 seconds; current allocated memory: 0.000 MB.
-Command ap_source done; error code: 1; 48.74 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace /home/boyiw7/sort_seperate_bucket/solution1 opened at Sun Apr 23 10:56:25 PDT 2023
-Execute     ap_set_clock -name default -period 10 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     set_part xcu280-fsvh2892-2L-e 
-Execute       create_platform xcu280-fsvh2892-2L-e -board  
-DBG:HLSDevice: Trying to load device library: /tools/Xilinx/Vitis_HLS/2022.2/lib/lnx64.o/libxv_hlsvwrap.so
-DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tools/Xilinx/Vivado/2022.2/data/parts/arch.xml
-DBG:HLSDevice: init success
-INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
-Command       create_platform done; 4.81 sec.
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.13 sec.
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.17 sec.
-Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 5.03 sec.
-Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
-INFO: [HLS 200-1505] Using flow_target 'vivado'
-Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
-INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-Execute     config_export -format=ip_catalog 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
-INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
-Execute     config_export -rtl=verilog 
-Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=10 
-INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=10
-Execute     config_export -vivado_clock=10 
-Command   open_solution done; 5.19 sec.
-Execute   set_part xcu280-fsvh2892-2L-e 
-INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
-Execute     create_platform xcu280-fsvh2892-2L-e -board  
-Execute     source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute         source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/saxilite.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/util.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfft.gen 
-Command       ap_source done; 0.13 sec.
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xfir.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute       source /tools/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.16 sec.
-Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.27 sec.
-Execute   create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 10 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 10 
-Execute   source ./sort_seperate_bucket/solution1/directives.tcl 
-INFO: [HLS 200-1510] Running: source ./sort_seperate_bucket/solution1/directives.tcl
-Execute     set_directive_top -name radix_sort_unified_bucket_pingpong radix_sort_unified_bucket_pingpong 
-INFO: [HLS 200-1510] Running: set_directive_top -name radix_sort_unified_bucket_pingpong radix_sort_unified_bucket_pingpong 
-Execute   csim_design -quiet 
-INFO: [HLS 200-1510] Running: csim_design -quiet 
-INFO: [SIM 211-2] *************** CSIM start ***************
-INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
-Execute     source csim/.lst_opt.tcl 
-Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
-ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
-INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO-FLOW: Caught error in csim_design: 4
-    while executing
-"ap_internal_csim_design "
-Command   csim_design done; error code: 2; 0.56 sec.
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.19 seconds. CPU system time: 0.35 seconds. Elapsed time: 0.56 seconds; current allocated memory: 0.000 MB.
-Command ap_source done; error code: 1; 16.25 sec.
+Command   csim_design done; 83.53 sec.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 42.7 seconds. CPU system time: 4.35 seconds. Elapsed time: 83.53 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; 99.43 sec.
 Execute cleanup_all 

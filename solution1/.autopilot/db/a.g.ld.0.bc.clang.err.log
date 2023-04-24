@@ -1,2 +1,0 @@
-error: sort_seperate_bucket/radix_sort.c:61:2: in function 'radix_sort_unified_bucket_pingpong': Arrays must be specified with a constant size
-error: Syn check fail!
