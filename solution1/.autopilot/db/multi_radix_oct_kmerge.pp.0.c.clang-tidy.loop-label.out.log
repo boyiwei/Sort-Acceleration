@@ -1,0 +1,30 @@
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:981:2: warning: Added loop label VITIS_LOOP_78_1:   [xilinx-label-all-loops]
+ for(i=0; i<64; i++){
+ ^~~
+ VITIS_LOOP_78_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:981:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:986:5: warning: Added loop label VITIS_LOOP_83_2:   [xilinx-label-all-loops]
+    for(i=0; i<32; i++){
+    ^~~
+    VITIS_LOOP_83_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:986:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:991:5: warning: Added loop label VITIS_LOOP_88_3:   [xilinx-label-all-loops]
+    for(i=0; i<16; i++){
+    ^~~
+    VITIS_LOOP_88_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:991:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:996:5: warning: Added loop label VITIS_LOOP_93_4:   [xilinx-label-all-loops]
+    for(i=0; i<8; i++){
+    ^~~
+    VITIS_LOOP_93_4: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:996:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:1001:5: warning: Added loop label VITIS_LOOP_98_5:   [xilinx-label-all-loops]
+    for(i=0; i<4; i++){
+    ^~~
+    VITIS_LOOP_98_5: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:1001:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:1006:5: warning: Added loop label VITIS_LOOP_103_6:   [xilinx-label-all-loops]
+    for(i=0; i<2; i++){
+    ^~~
+    VITIS_LOOP_103_6: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_kmerge.pp.0.c:1006:5: note: FIX-IT applied suggested code changes

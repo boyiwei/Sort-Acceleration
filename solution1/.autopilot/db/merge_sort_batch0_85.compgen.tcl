@@ -11,17 +11,17 @@ if {${::AESL::PGuard_autoexp_gen}} {
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 2306 \
-    name multi_radix_bin_kmerge_temp0_42 \
+    id 6786 \
+    name multi_radix_oct_kmerge_temp0_42 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename multi_radix_bin_kmerge_temp0_42 \
+    corename multi_radix_oct_kmerge_temp0_42 \
     op interface \
-    ports { multi_radix_bin_kmerge_temp0_42_address0 { O 18 vector } multi_radix_bin_kmerge_temp0_42_ce0 { O 1 bit } multi_radix_bin_kmerge_temp0_42_q0 { I 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp0_42_address0 { O 17 vector } multi_radix_oct_kmerge_temp0_42_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_42_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_bin_kmerge_temp0_42'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp0_42'"
 }
 }
 
@@ -30,17 +30,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 2307 \
-    name multi_radix_bin_kmerge_temp0_43 \
+    id 6787 \
+    name multi_radix_oct_kmerge_temp0_43 \
     reset_level 1 \
     sync_rst true \
     dir I \
-    corename multi_radix_bin_kmerge_temp0_43 \
+    corename multi_radix_oct_kmerge_temp0_43 \
     op interface \
-    ports { multi_radix_bin_kmerge_temp0_43_address0 { O 18 vector } multi_radix_bin_kmerge_temp0_43_ce0 { O 1 bit } multi_radix_bin_kmerge_temp0_43_q0 { I 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp0_43_address0 { O 17 vector } multi_radix_oct_kmerge_temp0_43_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_43_q0 { I 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_bin_kmerge_temp0_43'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp0_43'"
 }
 }
 
@@ -49,17 +49,17 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 2308 \
-    name multi_radix_bin_kmerge_temp1_21 \
+    id 6788 \
+    name multi_radix_oct_kmerge_temp1_21 \
     reset_level 1 \
     sync_rst true \
     dir O \
-    corename multi_radix_bin_kmerge_temp1_21 \
+    corename multi_radix_oct_kmerge_temp1_21 \
     op interface \
-    ports { multi_radix_bin_kmerge_temp1_21_address0 { O 19 vector } multi_radix_bin_kmerge_temp1_21_ce0 { O 1 bit } multi_radix_bin_kmerge_temp1_21_we0 { O 1 bit } multi_radix_bin_kmerge_temp1_21_d0 { O 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp1_21_address0 { O 18 vector } multi_radix_oct_kmerge_temp1_21_ce0 { O 1 bit } multi_radix_oct_kmerge_temp1_21_we0 { O 1 bit } multi_radix_oct_kmerge_temp1_21_d0 { O 32 vector } } \
 } "
 } else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_bin_kmerge_temp1_21'"
+puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp1_21'"
 }
 }
 
@@ -129,14 +129,14 @@ if {${::AESL::PGuard_autoexp_gen}} {
 
 
 # flow_control definition:
-set InstName multi_radix_bin_kmerge_flow_control_loop_pipe_U
-set CompName multi_radix_bin_kmerge_flow_control_loop_pipe
+set InstName multi_radix_oct_kmerge_flow_control_loop_pipe_U
+set CompName multi_radix_oct_kmerge_flow_control_loop_pipe
 set name flow_control_loop_pipe
 if {${::AESL::PGuard_autocg_gen} && ${::AESL::PGuard_autocg_ipmgen}} {
 if {[info proc ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control] == "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control"} {
 eval "::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control { \
     name ${name} \
-    prefix multi_radix_bin_kmerge_ \
+    prefix multi_radix_oct_kmerge_ \
 }"
 } else {
 puts "@W \[IMPL-107\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_UPC_flow_control, check your platform lib"

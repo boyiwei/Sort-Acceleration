@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_bin_kmerge.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_bin_kmerge.pp.0.c
-        Offset:          26537
+        Offset:          26211
         Length:          0
         ReplacementText: 'VITIS_LOOP_79_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_bin_kmerge.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_bin_kmerge.pp.0.c
-        Offset:          26631
+        Offset:          26305
         Length:          0
         ReplacementText: 'VITIS_LOOP_84_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_bin_kmerge.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_bin_kmerge.pp.0.c
-        Offset:          26738
+        Offset:          26412
         Length:          0
         ReplacementText: 'VITIS_LOOP_89_3: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,7 +34,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_bin_kmerge.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_bin_kmerge.pp.0.c
-        Offset:          26845
+        Offset:          26519
         Length:          0
         ReplacementText: 'VITIS_LOOP_94_4: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -43,7 +43,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_bin_kmerge.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_bin_kmerge.pp.0.c
-        Offset:          26951
+        Offset:          26625
         Length:          0
         ReplacementText: 'VITIS_LOOP_99_5: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_bin_kmerge.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_bin_kmerge.pp.0.c
-        Offset:          27057
+        Offset:          26731
         Length:          0
         ReplacementText: 'VITIS_LOOP_104_6: '
 ...

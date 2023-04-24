@@ -16,7 +16,7 @@
 					<Obj class_id="5" tracking_level="0" version="0">
 						<type>1</type>
 						<id>1</id>
-						<name>multi_radix_bin_kmerge_temp4_2</name>
+						<name>multi_radix_oct_kmerge_temp4_2</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -41,7 +41,7 @@
 				</Value>
 				<direction>1</direction>
 				<if_type>1</if_type>
-				<array_size>2500000</array_size>
+				<array_size>1250000</array_size>
 				<bit_vecs class_id="7" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -52,7 +52,7 @@
 					<Obj>
 						<type>1</type>
 						<id>2</id>
-						<name>multi_radix_bin_kmerge_temp3_4</name>
+						<name>multi_radix_oct_kmerge_temp3_4</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -77,7 +77,7 @@
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
-				<array_size>1250000</array_size>
+				<array_size>625000</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -88,7 +88,7 @@
 					<Obj>
 						<type>1</type>
 						<id>3</id>
-						<name>multi_radix_bin_kmerge_temp3_5</name>
+						<name>multi_radix_oct_kmerge_temp3_5</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
 						<lineNumber>0</lineNumber>
@@ -106,14 +106,14 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1885414944</coreId>
+						<coreId>54</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
-				<array_size>1250000</array_size>
+				<array_size>625000</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -149,7 +149,7 @@
 						<coreId>108</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -188,7 +188,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>108</coreId>
+						<coreId>3240184056</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -230,7 +230,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
+						<coreId>3240725904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -286,7 +286,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>108</coreId>
+						<coreId>3239317744</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -343,7 +343,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>267</coreId>
+						<coreId>3417088656</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -400,7 +400,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>266</coreId>
+						<coreId>3408167472</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -457,7 +457,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>108</coreId>
+						<coreId>67</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -513,10 +513,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3231629408</coreId>
+						<coreId>3239371328</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -570,7 +570,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3227047920</coreId>
+						<coreId>3504579528</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -627,7 +627,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3231915408</coreId>
+						<coreId>3553300128</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -684,7 +684,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3224413408</coreId>
+						<coreId>3239823968</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -700,7 +700,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.74</m_delay>
+				<m_delay>0.73</m_delay>
 				<m_topoIndex>11</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -741,10 +741,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3555195600</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -757,7 +757,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.82</m_delay>
+				<m_delay>0.81</m_delay>
 				<m_topoIndex>12</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -798,7 +798,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3411053624</coreId>
+						<coreId>3239799712</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -856,7 +856,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3357029912</coreId>
+						<coreId>3420929520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -912,7 +912,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3380619024</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -969,7 +969,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3399150000</coreId>
+						<coreId>3403080304</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1026,7 +1026,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3399150000</coreId>
+						<coreId>3239294672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1051,7 +1051,7 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>multi_radix_bin_kmerge_temp4_2_addr</name>
+						<name>multi_radix_oct_kmerge_temp4_2_addr</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>201</lineNumber>
@@ -1083,10 +1083,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3399150000</coreId>
+						<coreId>3418912544</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1141,7 +1141,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3399150000</coreId>
+						<coreId>3239294672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1199,7 +1199,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3399150000</coreId>
+						<coreId>3239759056</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1256,7 +1256,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3227661296</coreId>
+						<coreId>3239294672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -1313,7 +1313,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3514344512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1371,7 +1371,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3422418864</coreId>
+						<coreId>3514344512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1395,7 +1395,7 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>multi_radix_bin_kmerge_temp3_4_addr_1</name>
+						<name>multi_radix_oct_kmerge_temp3_4_addr_1</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>201</lineNumber>
@@ -1427,10 +1427,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3422418864</coreId>
+						<coreId>3371462272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>21</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1453,7 +1453,7 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>multi_radix_bin_kmerge_temp3_4_load_1</name>
+						<name>multi_radix_oct_kmerge_temp3_4_load_1</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>201</lineNumber>
@@ -1485,7 +1485,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3399150312</coreId>
+						<coreId>542329928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1509,7 +1509,7 @@
 					<Obj>
 						<type>0</type>
 						<id>36</id>
-						<name>multi_radix_bin_kmerge_temp4_2_addr_write_ln201</name>
+						<name>multi_radix_oct_kmerge_temp4_2_addr_write_ln201</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>201</lineNumber>
@@ -1541,7 +1541,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3368891312</coreId>
+						<coreId>3387956512</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1598,7 +1598,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3387801088</coreId>
+						<coreId>3508894248</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1655,7 +1655,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3381106176</coreId>
+						<coreId>3371462272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1700,7 +1700,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3397186256</coreId>
+						<coreId>3224257232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1756,7 +1756,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3383731728</coreId>
+						<coreId>1397508187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -1780,7 +1780,7 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>multi_radix_bin_kmerge_temp3_5_addr_1</name>
+						<name>multi_radix_oct_kmerge_temp3_5_addr_1</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>197</lineNumber>
@@ -1812,10 +1812,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3383731728</coreId>
+						<coreId>3371462272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>21</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1838,7 +1838,7 @@
 					<Obj>
 						<type>0</type>
 						<id>43</id>
-						<name>multi_radix_bin_kmerge_temp3_5_load_1</name>
+						<name>multi_radix_oct_kmerge_temp3_5_load_1</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>197</lineNumber>
@@ -1870,7 +1870,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3383731728</coreId>
+						<coreId>3371462272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -1894,7 +1894,7 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>multi_radix_bin_kmerge_temp4_2_addr_write_ln197</name>
+						<name>multi_radix_oct_kmerge_temp4_2_addr_write_ln197</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>197</lineNumber>
@@ -1926,7 +1926,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3397186256</coreId>
+						<coreId>3520643376</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -1983,7 +1983,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3393515424</coreId>
+						<coreId>3387094824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2040,7 +2040,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3355634224</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2099,7 +2099,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3386348384</coreId>
+						<coreId>3371462272</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2158,7 +2158,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>320</coreId>
+						<coreId>1330007625</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2214,7 +2214,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3386348384</coreId>
+						<coreId>3387094384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2238,7 +2238,7 @@
 					<Obj>
 						<type>0</type>
 						<id>51</id>
-						<name>multi_radix_bin_kmerge_temp3_4_addr</name>
+						<name>multi_radix_oct_kmerge_temp3_4_addr</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>186</lineNumber>
@@ -2270,10 +2270,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3386348384</coreId>
+						<coreId>3555813728</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>21</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2296,7 +2296,7 @@
 					<Obj>
 						<type>0</type>
 						<id>52</id>
-						<name>multi_radix_bin_kmerge_temp3_4_load</name>
+						<name>multi_radix_oct_kmerge_temp3_4_load</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>186</lineNumber>
@@ -2328,7 +2328,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3386348384</coreId>
+						<coreId>3385044976</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2384,7 +2384,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3378736816</coreId>
+						<coreId>3500961760</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -2408,7 +2408,7 @@
 					<Obj>
 						<type>0</type>
 						<id>54</id>
-						<name>multi_radix_bin_kmerge_temp3_5_addr</name>
+						<name>multi_radix_oct_kmerge_temp3_5_addr</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>186</lineNumber>
@@ -2440,10 +2440,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3363820896</coreId>
+						<coreId>3355613824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>21</bitwidth>
+					<bitwidth>20</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -2466,7 +2466,7 @@
 					<Obj>
 						<type>0</type>
 						<id>55</id>
-						<name>multi_radix_bin_kmerge_temp3_5_load</name>
+						<name>multi_radix_oct_kmerge_temp3_5_load</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>186</lineNumber>
@@ -2498,7 +2498,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3221484432</coreId>
+						<coreId>3500962384</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2554,7 +2554,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3381760304</coreId>
+						<coreId>3355613824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>1</bitwidth>
@@ -2611,7 +2611,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>0</coreId>
+						<coreId>3382196672</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2637,7 +2637,7 @@
 					<Obj>
 						<type>0</type>
 						<id>59</id>
-						<name>multi_radix_bin_kmerge_temp4_2_addr_write_ln191</name>
+						<name>multi_radix_oct_kmerge_temp4_2_addr_write_ln191</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>191</lineNumber>
@@ -2669,7 +2669,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3384004144</coreId>
+						<coreId>3355613824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2726,7 +2726,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3384312880</coreId>
+						<coreId>3387629680</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2783,7 +2783,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3383731600</coreId>
+						<coreId>3371949088</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2828,7 +2828,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3409833536</coreId>
+						<coreId>3383441600</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2852,7 +2852,7 @@
 					<Obj>
 						<type>0</type>
 						<id>64</id>
-						<name>multi_radix_bin_kmerge_temp4_2_addr_write_ln187</name>
+						<name>multi_radix_oct_kmerge_temp4_2_addr_write_ln187</name>
 						<fileName>sort_seperate_bucket/merge_sort.c</fileName>
 						<fileDirectory>/home/boyiw7</fileDirectory>
 						<lineNumber>187</lineNumber>
@@ -2884,7 +2884,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3409833536</coreId>
+						<coreId>3542606848</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -2941,7 +2941,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3409833536</coreId>
+						<coreId>3355613824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -2998,7 +2998,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3409833536</coreId>
+						<coreId>432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3057,7 +3057,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3393515424</coreId>
+						<coreId>3355613824</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3113,7 +3113,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>320</coreId>
+						<coreId>3371462584</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3172,7 +3172,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3224806336</coreId>
+						<coreId>3554610592</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3228,7 +3228,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3222762072</coreId>
+						<coreId>3532091904</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>0</bitwidth>
@@ -3304,7 +3304,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>42</coreId>
+						<coreId>3412287232</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
@@ -3335,10 +3335,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3396165808</coreId>
+						<coreId>3238944432</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -3366,13 +3366,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3396165808</coreId>
+						<coreId>542329928</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>2500000</content>
+				<content>1250000</content>
 			</item>
 			<item class_id_reference="16" object_id="_64">
 				<Value>
@@ -3397,10 +3397,10 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3408282592</coreId>
+						<coreId>0</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>22</bitwidth>
+					<bitwidth>21</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -3428,13 +3428,13 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>1601463659</coreId>
+						<coreId>3355613520</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>1250000</content>
+				<content>625000</content>
 			</item>
 			<item class_id_reference="16" object_id="_66">
 				<Value>
@@ -3459,7 +3459,7 @@
 						<coreName></coreName>
 						<isStorage>0</isStorage>
 						<storageDepth>0</storageDepth>
-						<coreId>3387853296</coreId>
+						<coreId>1397508187</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
 					<bitwidth>64</bitwidth>
@@ -3493,7 +3493,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3550907712</coreId>
+					<coreId>3365202944</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3530,7 +3530,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3231137488</coreId>
+					<coreId>44</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3566,7 +3566,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3413817744</coreId>
+					<coreId>54</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3602,7 +3602,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3420769056</coreId>
+					<coreId>51</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3635,7 +3635,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>1916886893</coreId>
+					<coreId>3516389856</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3672,7 +3672,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3231570288</coreId>
+					<coreId>3371462272</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3710,7 +3710,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>0</coreId>
+					<coreId>3555814192</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3748,7 +3748,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3386348696</coreId>
+					<coreId>70</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3782,7 +3782,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3409833536</coreId>
+					<coreId>3355613824</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3816,7 +3816,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3222977056</coreId>
+					<coreId>3373875120</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -3848,7 +3848,7 @@
 					<coreName></coreName>
 					<isStorage>0</isStorage>
 					<storageDepth>0</storageDepth>
-					<coreId>3410639008</coreId>
+					<coreId>3384498624</coreId>
 					<rtlModuleName></rtlModuleName>
 				</Obj>
 				<node_objs>
@@ -4775,8 +4775,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>2500002</mMinLatency>
-			<mMaxLatency>2500002</mMaxLatency>
+			<mMinLatency>1250002</mMinLatency>
+			<mMaxLatency>1250002</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -4827,10 +4827,10 @@
 			</basic_blocks>
 			<mII>1</mII>
 			<mDepth>2</mDepth>
-			<mMinTripCount>2500000</mMinTripCount>
-			<mMaxTripCount>2500000</mMaxTripCount>
-			<mMinLatency>2500000</mMinLatency>
-			<mMaxLatency>2500000</mMaxLatency>
+			<mMinTripCount>1250000</mMinTripCount>
+			<mMaxTripCount>1250000</mMaxTripCount>
+			<mMinLatency>1250000</mMinLatency>
+			<mMaxLatency>1250000</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>

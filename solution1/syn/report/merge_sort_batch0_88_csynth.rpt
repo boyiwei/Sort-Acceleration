@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'merge_sort_batch0_88'
 ================================================================
-* Date:           Mon Apr 24 09:10:53 2023
+* Date:           Mon Apr 24 11:06:44 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
     |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
     +---------+---------+----------+----------+--------+--------+---------+
-    |   312502|   312502|  3.125 ms|  3.125 ms|  312502|  312502|       no|
+    |   156252|   156252|  1.563 ms|  1.563 ms|  156252|  156252|       no|
     +---------+---------+----------+----------+--------+--------+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
-        |- VITIS_LOOP_99_1  |   312500|   312500|         2|          1|          1|  312500|       yes|
+        |- VITIS_LOOP_99_1  |   156250|   156250|         2|          1|          1|  156250|       yes|
         +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
 
 
@@ -54,14 +54,14 @@
 |         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
 +---------------------+---------+------+---------+---------+-----+
 |DSP                  |        -|     -|        -|        -|    -|
-|Expression           |        -|     -|        0|      296|    -|
+|Expression           |        -|     -|        0|      294|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
 |Instance             |        -|     -|        -|        -|    -|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|      140|    -|
-|Register             |        -|     -|      171|        -|    -|
+|Register             |        -|     -|      169|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|     0|      171|      436|    0|
+|Total                |        0|     0|      169|      434|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -89,7 +89,7 @@
     +---------------------------+----------+----+---+----+------------+------------+
     |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+----+---+----+------------+------------+
-    |add_ln99_fu_132_p2         |         +|   0|  0|  26|          19|           1|
+    |add_ln99_fu_132_p2         |         +|   0|  0|  25|          18|           1|
     |j_179_fu_241_p2            |         +|   0|  0|  39|          32|           1|
     |j_180_fu_178_p2            |         +|   0|  0|  39|          32|           1|
     |k_177_fu_231_p2            |         +|   0|  0|  39|          32|           1|
@@ -102,15 +102,15 @@
     |ap_condition_282           |       and|   0|  0|   2|           1|           1|
     |ap_condition_288           |       and|   0|  0|   2|           1|           1|
     |ap_condition_292           |       and|   0|  0|   2|           1|           1|
-    |icmp_ln101_7_fu_149_p2     |      icmp|   0|  0|  20|          32|          18|
-    |icmp_ln101_fu_143_p2       |      icmp|   0|  0|  20|          32|          18|
+    |icmp_ln101_7_fu_149_p2     |      icmp|   0|  0|  20|          32|          17|
+    |icmp_ln101_fu_143_p2       |      icmp|   0|  0|  20|          32|          17|
     |icmp_ln102_fu_225_p2       |      icmp|   0|  0|  20|          32|          32|
-    |icmp_ln112_fu_161_p2       |      icmp|   0|  0|  20|          32|          18|
-    |icmp_ln99_fu_126_p2        |      icmp|   0|  0|  14|          19|          19|
+    |icmp_ln112_fu_161_p2       |      icmp|   0|  0|  20|          32|          17|
+    |icmp_ln99_fu_126_p2        |      icmp|   0|  0|  13|          18|          18|
     |ap_block_pp0_stage0_11001  |        or|   0|  0|   2|           1|           1|
     |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
     +---------------------------+----------+----+---+----+------------+------------+
-    |Total                      |          |   0|  0| 296|         304|         121|
+    |Total                      |          |   0|  0| 294|         302|         117|
     +---------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -119,17 +119,17 @@
     +------------------------------------------+----+-----------+-----+-----------+
     |ap_done_int                               |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1                   |   9|          2|    1|          2|
-    |ap_sig_allocacmp_i_166                    |   9|          2|   19|         38|
+    |ap_sig_allocacmp_i_166                    |   9|          2|   18|         36|
     |ap_sig_allocacmp_j_178                    |  14|          3|   32|         96|
     |ap_sig_allocacmp_k_176                    |  14|          3|   32|         96|
-    |i_fu_34                                   |   9|          2|   19|         38|
+    |i_fu_34                                   |   9|          2|   18|         36|
     |j_fu_42                                   |  20|          4|   32|        128|
     |k_fu_38                                   |  14|          3|   32|         96|
-    |multi_radix_bin_kmerge_temp0_48_address0  |  14|          3|   18|         54|
-    |multi_radix_bin_kmerge_temp0_49_address0  |  14|          3|   18|         54|
-    |multi_radix_bin_kmerge_temp1_24_d0        |  14|          3|   32|         96|
+    |multi_radix_oct_kmerge_temp0_48_address0  |  14|          3|   17|         51|
+    |multi_radix_oct_kmerge_temp0_49_address0  |  14|          3|   17|         51|
+    |multi_radix_oct_kmerge_temp1_24_d0        |  14|          3|   32|         96|
     +------------------------------------------+----+-----------+-----+-----------+
-    |Total                                     | 140|         30|  236|        700|
+    |Total                                     | 140|         30|  232|        690|
     +------------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -141,14 +141,14 @@
     |ap_CS_fsm                                     |   1|   0|    1|          0|
     |ap_done_reg                                   |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1                       |   1|   0|    1|          0|
-    |i_fu_34                                       |  19|   0|   19|          0|
+    |i_fu_34                                       |  18|   0|   18|          0|
     |j_178_reg_280                                 |  32|   0|   32|          0|
     |j_fu_42                                       |  32|   0|   32|          0|
     |k_176_reg_275                                 |  32|   0|   32|          0|
     |k_fu_38                                       |  32|   0|   32|          0|
-    |multi_radix_bin_kmerge_temp1_24_addr_reg_292  |  19|   0|   19|          0|
+    |multi_radix_oct_kmerge_temp1_24_addr_reg_292  |  18|   0|   18|          0|
     +----------------------------------------------+----+----+-----+-----------+
-    |Total                                         | 171|   0|  171|          0|
+    |Total                                         | 169|   0|  169|          0|
     +----------------------------------------------+----+----+-----+-----------+
 
 
@@ -167,15 +167,15 @@
 |ap_continue                               |   in|    1|  ap_ctrl_hs|             merge_sort_batch0.88|  return value|
 |ap_idle                                   |  out|    1|  ap_ctrl_hs|             merge_sort_batch0.88|  return value|
 |ap_ready                                  |  out|    1|  ap_ctrl_hs|             merge_sort_batch0.88|  return value|
-|multi_radix_bin_kmerge_temp0_48_address0  |  out|   18|   ap_memory|  multi_radix_bin_kmerge_temp0_48|         array|
-|multi_radix_bin_kmerge_temp0_48_ce0       |  out|    1|   ap_memory|  multi_radix_bin_kmerge_temp0_48|         array|
-|multi_radix_bin_kmerge_temp0_48_q0        |   in|   32|   ap_memory|  multi_radix_bin_kmerge_temp0_48|         array|
-|multi_radix_bin_kmerge_temp0_49_address0  |  out|   18|   ap_memory|  multi_radix_bin_kmerge_temp0_49|         array|
-|multi_radix_bin_kmerge_temp0_49_ce0       |  out|    1|   ap_memory|  multi_radix_bin_kmerge_temp0_49|         array|
-|multi_radix_bin_kmerge_temp0_49_q0        |   in|   32|   ap_memory|  multi_radix_bin_kmerge_temp0_49|         array|
-|multi_radix_bin_kmerge_temp1_24_address0  |  out|   19|   ap_memory|  multi_radix_bin_kmerge_temp1_24|         array|
-|multi_radix_bin_kmerge_temp1_24_ce0       |  out|    1|   ap_memory|  multi_radix_bin_kmerge_temp1_24|         array|
-|multi_radix_bin_kmerge_temp1_24_we0       |  out|    1|   ap_memory|  multi_radix_bin_kmerge_temp1_24|         array|
-|multi_radix_bin_kmerge_temp1_24_d0        |  out|   32|   ap_memory|  multi_radix_bin_kmerge_temp1_24|         array|
+|multi_radix_oct_kmerge_temp0_48_address0  |  out|   17|   ap_memory|  multi_radix_oct_kmerge_temp0_48|         array|
+|multi_radix_oct_kmerge_temp0_48_ce0       |  out|    1|   ap_memory|  multi_radix_oct_kmerge_temp0_48|         array|
+|multi_radix_oct_kmerge_temp0_48_q0        |   in|   32|   ap_memory|  multi_radix_oct_kmerge_temp0_48|         array|
+|multi_radix_oct_kmerge_temp0_49_address0  |  out|   17|   ap_memory|  multi_radix_oct_kmerge_temp0_49|         array|
+|multi_radix_oct_kmerge_temp0_49_ce0       |  out|    1|   ap_memory|  multi_radix_oct_kmerge_temp0_49|         array|
+|multi_radix_oct_kmerge_temp0_49_q0        |   in|   32|   ap_memory|  multi_radix_oct_kmerge_temp0_49|         array|
+|multi_radix_oct_kmerge_temp1_24_address0  |  out|   18|   ap_memory|  multi_radix_oct_kmerge_temp1_24|         array|
+|multi_radix_oct_kmerge_temp1_24_ce0       |  out|    1|   ap_memory|  multi_radix_oct_kmerge_temp1_24|         array|
+|multi_radix_oct_kmerge_temp1_24_we0       |  out|    1|   ap_memory|  multi_radix_oct_kmerge_temp1_24|         array|
+|multi_radix_oct_kmerge_temp1_24_d0        |  out|   32|   ap_memory|  multi_radix_oct_kmerge_temp1_24|         array|
 +------------------------------------------+-----+-----+------------+---------------------------------+--------------+
 

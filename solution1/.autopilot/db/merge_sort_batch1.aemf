@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1682352669603">
-  <ports id="1" name="multi_radix_bin_kmerge_temp2_15" type="PortType" coreName="RAM" coreId="2147483647" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="625000">
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1682359634015">
+  <ports id="1" name="multi_radix_oct_kmerge_temp2_15" type="PortType" coreName="RAM" coreId="2147483647" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="312500">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <ports id="2" name="multi_radix_bin_kmerge_temp1_30" type="PortType" coreName="RAM" coreId="3621216858" bitwidth="32" iftype="IfTypeRegister" arraysize="312500">
+  <ports id="2" name="multi_radix_oct_kmerge_temp1_30" type="PortType" coreName="RAM" coreId="3621216858" bitwidth="32" iftype="IfTypeRegister" arraysize="156250">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="3" name="multi_radix_bin_kmerge_temp1_31" type="PortType" coreName="RAM" coreId="1885414944" bitwidth="32" iftype="IfTypeRegister" arraysize="312500">
+  <ports id="3" name="multi_radix_oct_kmerge_temp1_31" type="PortType" coreName="RAM" coreId="1885414944" bitwidth="32" iftype="IfTypeRegister" arraysize="156250">
     <dataOutputObjs>getelementptr</dataOutputObjs>
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
@@ -119,7 +119,7 @@
   <edges id="226" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
   <blocks id="11" name="entry" type="BlockType">
     <controlOutputObjs>for.body.i</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="i" coreId="108" bitwidth="20" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="i" originalName="i" coreId="108" bitwidth="19" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -132,7 +132,7 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="j" originalName="j" coreId="3421939168" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="j" originalName="j" coreId="4294967295" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
       <dataOutputObjs>store</dataOutputObjs>
       <dataOutputObjs>load</dataOutputObjs>
       <dataOutputObjs>store</dataOutputObjs>
@@ -140,22 +140,22 @@
       <dataOutputObjs>store</dataOutputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="j_write_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3373339088" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.45" m_topoIndex="4" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="j_write_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.45" m_topoIndex="4" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="k_write_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3386175648" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.41" m_topoIndex="5" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="k_write_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.41" m_topoIndex="5" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_write_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3410258656" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="6" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="i_write_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="6" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
       <dataInputObjs>alloca</dataInputObjs>
       <constName>empty</constName>
     </node_objs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3373339088" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="br_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
       <controlInputObjs>for.body.i</controlInputObjs>
     </node_objs>
@@ -166,7 +166,7 @@
   <blocks id="73" name="merge_sort_batch1.exit" type="BlockType">
     <controlInputObjs>for.body.i</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3409710192" contextFuncName="merge_sort_batch1" opcode="ret" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="72" name="_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3225980160" contextFuncName="merge_sort_batch1" opcode="ret" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
     </node_objs>
     <fileValidLineNumbers fileName="sort_seperate_bucket/merge_sort.c">
@@ -181,14 +181,14 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>merge_sort_batch1.exit</controlOutputObjs>
       <controlOutputObjs>for.body.split.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_159" lineNumber="127" originalName="i" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3382770672" contextFuncName="merge_sort_batch1" bitwidth="20" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="i_159" lineNumber="127" originalName="i" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" bitwidth="19" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="k_155" lineNumber="142" originalName="k" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3380112656" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="k_155" lineNumber="142" originalName="k" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="142" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -197,7 +197,7 @@
         <dataOutputObjs>zext</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="j_157" lineNumber="146" originalName="j" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3375003680" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="j_157" lineNumber="146" originalName="j" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="146" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>alloca</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -207,19 +207,19 @@
         <dataOutputObjs>zext</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="icmp_ln127_fu_126_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="merge_sort_batch1" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.72" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="icmp_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="icmp_ln127_fu_126_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="merge_sort_batch1" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.71" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="add_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="add_ln127_fu_132_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="merge_sort_batch1" bitwidth="20" opcode="add" m_display="0" m_delay="0.8" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="add_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="add_ln127_fu_132_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="merge_sort_batch1" bitwidth="19" opcode="add" m_display="0" m_delay="0.8" m_topoIndex="12" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3400892368" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3226009472" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>for.body.split.i</controlInputObjs>
@@ -236,7 +236,7 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>if.then.i</controlOutputObjs>
       <controlOutputObjs>if.else16.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="zext_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln127_fu_138_p1" coreId="3369966192" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="zext_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln127_fu_138_p1" coreId="3226009472" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
@@ -260,17 +260,17 @@
         <dataInputObjs>icmp</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="multi_radix_bin_kmerge_temp2_15_addr" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3377269952" contextFuncName="merge_sort_batch1" bitwidth="20" opcode="getelementptr" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="multi_radix_oct_kmerge_temp2_15_addr" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3234468416" contextFuncName="merge_sort_batch1" bitwidth="19" opcode="getelementptr" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="145" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>zext</dataInputObjs>
-        <dataOutputObjs>multi_radix_bin_kmerge_temp2_15</dataOutputObjs>
+        <dataOutputObjs>multi_radix_oct_kmerge_temp2_15</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="br_ln129" lineNumber="129" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3553064624" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="br_ln129" lineNumber="129" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3231643520" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="129" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>and</dataInputObjs>
         <controlInputObjs>if.else16.i</controlInputObjs>
@@ -299,7 +299,7 @@
         <dataInputObjs>icmp</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln140" lineNumber="140" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3394016832" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="br_ln140" lineNumber="140" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="140" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>and</dataInputObjs>
         <controlInputObjs>if.else26.i</controlInputObjs>
@@ -313,24 +313,24 @@
       <controlInputObjs>if.else16.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="zext_ln145" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln145_fu_173_p1" coreId="3222136096" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="zext_ln145" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln145_fu_173_p1" coreId="3233534256" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="145" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="multi_radix_bin_kmerge_temp1_30_addr_1" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3372887248" contextFuncName="merge_sort_batch1" bitwidth="19" opcode="getelementptr" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="multi_radix_oct_kmerge_temp1_30_addr_1" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" bitwidth="18" opcode="getelementptr" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="145" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
-        <dataInputObjs>multi_radix_bin_kmerge_temp1_30</dataInputObjs>
+        <dataInputObjs>multi_radix_oct_kmerge_temp1_30</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="multi_radix_bin_kmerge_temp1_30_load_1" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.24" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="multi_radix_oct_kmerge_temp1_30_load_1" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.24" m_topoIndex="25" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="145" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="multi_radix_bin_kmerge_temp2_15_addr_write_ln145" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.24" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="multi_radix_oct_kmerge_temp2_15_addr_write_ln145" lineNumber="145" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.24" m_topoIndex="43" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="145" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
@@ -341,12 +341,12 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="j_write_ln146" lineNumber="146" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3413883152" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.45" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="j_write_ln146" lineNumber="146" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.45" m_topoIndex="27" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="146" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln0" coreId="3360593072" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="br_ln0" coreId="3417091488" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
         <controlInputObjs>for.inc.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="sort_seperate_bucket/merge_sort.c">
@@ -358,24 +358,24 @@
       <controlInputObjs>if.else16.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="zext_ln141" lineNumber="141" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln141_fu_189_p1" coreId="3402018512" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="zext_ln141" lineNumber="141" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln141_fu_189_p1" coreId="3417091488" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="141" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="multi_radix_bin_kmerge_temp1_31_addr_1" lineNumber="141" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3402018512" contextFuncName="merge_sort_batch1" bitwidth="19" opcode="getelementptr" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="multi_radix_oct_kmerge_temp1_31_addr_1" lineNumber="141" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3233868688" contextFuncName="merge_sort_batch1" bitwidth="18" opcode="getelementptr" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="141" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
-        <dataInputObjs>multi_radix_bin_kmerge_temp1_31</dataInputObjs>
+        <dataInputObjs>multi_radix_oct_kmerge_temp1_31</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="multi_radix_bin_kmerge_temp1_31_load_1" lineNumber="141" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.24" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="multi_radix_oct_kmerge_temp1_31_load_1" lineNumber="141" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.24" m_topoIndex="30" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="141" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="multi_radix_bin_kmerge_temp2_15_addr_write_ln141" lineNumber="141" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.24" m_topoIndex="45" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="multi_radix_oct_kmerge_temp2_15_addr_write_ln141" lineNumber="141" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.24" m_topoIndex="45" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="141" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
@@ -386,17 +386,17 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="j_write_ln143" lineNumber="143" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3366423984" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.45" m_topoIndex="32" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="j_write_ln143" lineNumber="143" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.45" m_topoIndex="32" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="143" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>alloca</dataInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="k_write_ln143" lineNumber="143" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3366423984" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.41" m_topoIndex="33" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="k_write_ln143" lineNumber="143" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.41" m_topoIndex="33" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="143" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="br_ln143" lineNumber="143" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3366423984" contextFuncName="merge_sort_batch1" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="br_ln143" lineNumber="143" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="143" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <controlInputObjs>for.inc.i</controlInputObjs>
       </node_objs>
@@ -411,37 +411,37 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>if.then6.i</controlOutputObjs>
       <controlOutputObjs>if.else.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="zext_ln130" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln130_fu_210_p1" coreId="3386348560" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="zext_ln130" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln130_fu_210_p1" coreId="3417091488" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="130" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="multi_radix_bin_kmerge_temp1_30_addr" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3386348560" contextFuncName="merge_sort_batch1" bitwidth="19" opcode="getelementptr" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="multi_radix_oct_kmerge_temp1_30_addr" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3417091488" contextFuncName="merge_sort_batch1" bitwidth="18" opcode="getelementptr" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="130" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
-        <dataInputObjs>multi_radix_bin_kmerge_temp1_30</dataInputObjs>
+        <dataInputObjs>multi_radix_oct_kmerge_temp1_30</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="multi_radix_bin_kmerge_temp1_30_load" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.24" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="multi_radix_oct_kmerge_temp1_30_load" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.24" m_topoIndex="36" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="130" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="zext_ln130_16" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln130_16_fu_215_p1" coreId="3409710192" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="zext_ln130_16" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." rtlName="zext_ln130_16_fu_215_p1" coreId="3417091488" contextFuncName="merge_sort_batch1" bitwidth="64" opcode="zext" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="130" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="multi_radix_bin_kmerge_temp1_31_addr" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3409710192" contextFuncName="merge_sort_batch1" bitwidth="19" opcode="getelementptr" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="multi_radix_oct_kmerge_temp1_31_addr" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="0" contextFuncName="merge_sort_batch1" bitwidth="18" opcode="getelementptr" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="130" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
-        <dataInputObjs>multi_radix_bin_kmerge_temp1_31</dataInputObjs>
+        <dataInputObjs>multi_radix_oct_kmerge_temp1_31</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="multi_radix_bin_kmerge_temp1_31_load" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.24" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="multi_radix_oct_kmerge_temp1_31_load" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" bitwidth="32" opcode="load" nodeLatency="1" m_display="0" m_delay="1.24" m_topoIndex="39" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="130" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>getelementptr</dataInputObjs>
         <dataOutputObjs>icmp</dataOutputObjs>
@@ -453,7 +453,7 @@
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>br</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="br_ln130" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3409710192" contextFuncName="merge_sort_batch1" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="br_ln130" lineNumber="130" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3222222416" contextFuncName="merge_sort_batch1" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="130" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>icmp</dataInputObjs>
         <controlInputObjs>if.else.i</controlInputObjs>
@@ -467,7 +467,7 @@
       <controlInputObjs>if.then.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="multi_radix_bin_kmerge_temp2_15_addr_write_ln135" lineNumber="135" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.24" m_topoIndex="49" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="multi_radix_oct_kmerge_temp2_15_addr_write_ln135" lineNumber="135" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.24" m_topoIndex="49" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="135" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
@@ -478,12 +478,12 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="k_write_ln136" lineNumber="136" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3409710192" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.41" m_topoIndex="51" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="k_write_ln136" lineNumber="136" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3228345328" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.41" m_topoIndex="51" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="136" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln0" coreId="3409710192" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln0" coreId="3407550880" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
         <controlInputObjs>for.inc.i</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="sort_seperate_bucket/merge_sort.c">
@@ -495,7 +495,7 @@
       <controlInputObjs>if.then.i</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.inc.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="multi_radix_bin_kmerge_temp2_15_addr_write_ln131" lineNumber="131" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.24" m_topoIndex="53" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="multi_radix_oct_kmerge_temp2_15_addr_write_ln131" lineNumber="131" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.24" m_topoIndex="53" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="131" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>load</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
@@ -506,12 +506,12 @@
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="j_write_ln133" lineNumber="133" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3370308112" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.45" m_topoIndex="55" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="j_write_ln133" lineNumber="133" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3493252944" contextFuncName="merge_sort_batch1" opcode="store" nodeLabel="1.0" m_display="0" m_delay="0.45" m_topoIndex="55" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="133" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln133" lineNumber="133" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3410024800" contextFuncName="merge_sort_batch1" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln133" lineNumber="133" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3407550880" contextFuncName="merge_sort_batch1" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="133" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <controlInputObjs>for.inc.i</controlInputObjs>
       </node_objs>
@@ -531,12 +531,12 @@
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>for.body.i</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="i_write_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3409710192" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="i_write_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3407550880" contextFuncName="merge_sort_batch1" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="40" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <dataInputObjs>add</dataInputObjs>
         <dataInputObjs>alloca</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="br_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3409710192" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="br_ln127" lineNumber="127" fileName="sort_seperate_bucket/merge_sort.c" fileDirectory=".." coreId="3230183920" contextFuncName="merge_sort_batch1" opcode="br" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="sort_seperate_bucket/merge_sort.c" linenumber="127" fileDirectory="/home/boyiw7" functionName="merge_sort_batch1"/>
         <controlInputObjs>for.body.i</controlInputObjs>
       </node_objs>
@@ -547,29 +547,26 @@
   </regions>
   <ScheduleInfo time="0"/>
   <ScheduleInfo time="1"/>
-  <regnodes realName="multi_radix_bin_kmerge_temp1_31_addr_1_reg_306">
-    <nodeIds>42</nodeIds>
+  <regnodes realName="multi_radix_oct_kmerge_temp1_30_addr_1_reg_301">
+    <nodeIds>34</nodeIds>
   </regnodes>
-  <regnodes realName="multi_radix_bin_kmerge_temp1_30_addr_reg_311">
+  <regnodes realName="multi_radix_oct_kmerge_temp1_30_addr_reg_311">
     <nodeIds>51</nodeIds>
   </regnodes>
   <regnodes realName="i_reg_251">
     <nodeIds>4</nodeIds>
   </regnodes>
-  <regnodes realName="multi_radix_bin_kmerge_temp1_31_addr_reg_316">
+  <regnodes realName="multi_radix_oct_kmerge_temp1_31_addr_1_reg_306">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="multi_radix_oct_kmerge_temp1_31_addr_reg_316">
     <nodeIds>54</nodeIds>
   </regnodes>
   <regnodes realName="k_reg_258">
     <nodeIds>5</nodeIds>
   </regnodes>
-  <regnodes realName="multi_radix_bin_kmerge_temp2_15_addr_reg_292">
-    <nodeIds>26</nodeIds>
-  </regnodes>
   <regnodes realName="j_157_reg_280">
     <nodeIds>14</nodeIds>
-  </regnodes>
-  <regnodes realName="multi_radix_bin_kmerge_temp1_30_addr_1_reg_301">
-    <nodeIds>34</nodeIds>
   </regnodes>
   <regnodes realName="and_ln129_reg_288">
     <nodeIds>25</nodeIds>
@@ -577,17 +574,23 @@
   <regnodes realName="j_reg_266">
     <nodeIds>6</nodeIds>
   </regnodes>
+  <regnodes realName="multi_radix_oct_kmerge_temp2_15_addr_reg_292">
+    <nodeIds>26</nodeIds>
+  </regnodes>
   <regnodes realName="and_ln140_reg_297">
     <nodeIds>30</nodeIds>
   </regnodes>
   <regnodes realName="k_155_reg_275">
     <nodeIds>13</nodeIds>
   </regnodes>
-  <expressionNodes realName="multi_radix_bin_kmerge_temp1_30_addr_1_gep_fu_53">
-    <nodeIds>34</nodeIds>
+  <expressionNodes realName="multi_radix_oct_kmerge_temp1_30_addr_gep_fu_79">
+    <nodeIds>51</nodeIds>
   </expressionNodes>
   <expressionNodes realName="icmp_ln129_16_fu_149">
     <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="multi_radix_oct_kmerge_temp2_15_addr_gep_fu_46">
+    <nodeIds>26</nodeIds>
   </expressionNodes>
   <expressionNodes realName="k_157_fu_194">
     <nodeIds>45</nodeIds>
@@ -595,17 +598,14 @@
   <expressionNodes realName="zext_ln141_fu_189">
     <nodeIds>41</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="multi_radix_oct_kmerge_temp1_31_addr_gep_fu_87">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="and_ln129_fu_155">
     <nodeIds>25</nodeIds>
   </expressionNodes>
   <expressionNodes realName="j_fu_42">
     <nodeIds>6</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="multi_radix_bin_kmerge_temp1_31_addr_gep_fu_87">
-    <nodeIds>54</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="multi_radix_bin_kmerge_temp1_31_addr_1_gep_fu_66">
-    <nodeIds>42</nodeIds>
   </expressionNodes>
   <expressionNodes realName="icmp_ln129_fu_143">
     <nodeIds>23</nodeIds>
@@ -616,11 +616,11 @@
   <expressionNodes realName="j_159_fu_178">
     <nodeIds>37</nodeIds>
   </expressionNodes>
+  <expressionNodes realName="multi_radix_oct_kmerge_temp1_31_addr_1_gep_fu_66">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
   <expressionNodes realName="k_fu_38">
     <nodeIds>5</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="multi_radix_bin_kmerge_temp1_30_addr_gep_fu_79">
-    <nodeIds>51</nodeIds>
   </expressionNodes>
   <expressionNodes realName="and_ln140_fu_167">
     <nodeIds>30</nodeIds>
@@ -630,6 +630,9 @@
   </expressionNodes>
   <expressionNodes realName="k_156_fu_231">
     <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="multi_radix_oct_kmerge_temp1_30_addr_1_gep_fu_53">
+    <nodeIds>34</nodeIds>
   </expressionNodes>
   <expressionNodes realName="icmp_ln127_fu_126">
     <nodeIds>15</nodeIds>
@@ -645,9 +648,6 @@
   </expressionNodes>
   <expressionNodes realName="zext_ln145_fu_173">
     <nodeIds>33</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="multi_radix_bin_kmerge_temp2_15_addr_gep_fu_46">
-    <nodeIds>26</nodeIds>
   </expressionNodes>
   <expressionNodes realName="j_158_fu_241">
     <nodeIds>65</nodeIds>
@@ -694,33 +694,33 @@
   <ioNodes realName="store_ln146_store_fu_184">
     <nodeIds>38</nodeIds>
   </ioNodes>
-  <memoryPorts dataString="multi_radix_bin_kmerge_temp1_30">
+  <memoryPorts dataString="multi_radix_oct_kmerge_temp1_30">
     <nodeIds>35</nodeIds>
     <nodeIds>52</nodeIds>
   </memoryPorts>
-  <memoryPorts dataString="multi_radix_bin_kmerge_temp1_31">
+  <memoryPorts dataString="multi_radix_oct_kmerge_temp1_31">
     <nodeIds>43</nodeIds>
     <nodeIds>55</nodeIds>
   </memoryPorts>
-  <memoryPorts dataString="multi_radix_bin_kmerge_temp2_15">
+  <memoryPorts dataString="multi_radix_oct_kmerge_temp2_15">
     <nodeIds>36</nodeIds>
     <nodeIds>44</nodeIds>
     <nodeIds>59</nodeIds>
     <nodeIds>64</nodeIds>
   </memoryPorts>
-  <ioPorts name="multi_radix_bin_kmerge_temp1_30(p0)">
+  <ioPorts name="multi_radix_oct_kmerge_temp1_30(p0)">
     <contents name="load">
       <nodeIds>35</nodeIds>
       <nodeIds>52</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="multi_radix_bin_kmerge_temp1_31(p0)">
+  <ioPorts name="multi_radix_oct_kmerge_temp1_31(p0)">
     <contents name="load">
       <nodeIds>43</nodeIds>
       <nodeIds>55</nodeIds>
     </contents>
   </ioPorts>
-  <ioPorts name="multi_radix_bin_kmerge_temp2_15(p0)">
+  <ioPorts name="multi_radix_oct_kmerge_temp2_15(p0)">
     <contents name="store">
       <nodeIds>36</nodeIds>
       <nodeIds>44</nodeIds>
@@ -801,7 +801,7 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="merge_sort_batch1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="625002" mMaxLatency="625002">
+    <cfgRegions mId="1" mTag="merge_sort_batch1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="312502" mMaxLatency="312502">
       <subRegions>2</subRegions>
       <subRegions>3</subRegions>
       <subRegions>4</subRegions>
@@ -811,7 +811,7 @@
       <basicBlocks>11</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="VITIS_LOOP_127_1" mII="1" mDepth="2" mMinTripCount="625000" mMaxTripCount="625000" mMinLatency="625000" mMaxLatency="625000" mType="1">
+    <cfgRegions mId="3" mTag="VITIS_LOOP_127_1" mII="1" mDepth="2" mMinTripCount="312500" mMaxTripCount="312500" mMinLatency="312500" mMaxLatency="312500" mType="1">
       <basicBlocks>19</basicBlocks>
       <basicBlocks>28</basicBlocks>
       <basicBlocks>32</basicBlocks>

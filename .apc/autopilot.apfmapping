@@ -24,6 +24,7 @@
     <originFiles name="merge_sort.c" path="/home/boyiw7/sort_seperate_bucket/merge_sort.c"/>
     <originFiles name="heapsort.c" path="/home/boyiw7/sort_seperate_bucket/heapsort.c"/>
     <originFiles name="dataset_size.h" path="/home/boyiw7/sort_seperate_bucket/dataset_size.h"/>
+    <originFiles name="multi_radix_oct_kmerge.h" path="/home/boyiw7/sort_seperate_bucket/multi_radix_oct_kmerge.h"/>
   </source>
   <testbench>
     <originFiles name="sort_test.c" path="/home/boyiw7/sort_seperate_bucket/sort_test.c"/>

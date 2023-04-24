@@ -23,7 +23,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="4" bw="24" op_0_bw="32">
+<Node id="4" bw="23" op_0_bw="32">
 <![CDATA[
 entry:0 %i = alloca i32 1
 
@@ -113,9 +113,9 @@ entry:5 %store_ln239 = store i32 0, i32 %k
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="10" bw="0" op_0_bw="24" op_1_bw="24">
+<Node id="10" bw="0" op_0_bw="23" op_1_bw="23">
 <![CDATA[
-entry:6 %store_ln239 = store i24 0, i24 %i
+entry:6 %store_ln239 = store i23 0, i23 %i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln239"/></StgValue>
@@ -143,9 +143,9 @@ entry:7 %br_ln239 = br void %for.body.i
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="13" bw="24" op_0_bw="24" op_1_bw="0">
+<Node id="13" bw="23" op_0_bw="23" op_1_bw="0">
 <![CDATA[
-for.body.i:0 %i_129 = load i24 %i
+for.body.i:0 %i_129 = load i23 %i
 
 ]]></Node>
 <StgValue><ssdm name="i_129"/></StgValue>
@@ -188,9 +188,9 @@ for.body.i:2 %j_67 = load i32 %j
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="16" bw="1" op_0_bw="24" op_1_bw="24">
+<Node id="16" bw="1" op_0_bw="23" op_1_bw="23">
 <![CDATA[
-for.body.i:3 %icmp_ln239 = icmp_eq  i24 %i_129, i24 10000000
+for.body.i:3 %icmp_ln239 = icmp_eq  i23 %i_129, i23 5000000
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln239"/></StgValue>
@@ -205,7 +205,7 @@ for.body.i:3 %icmp_ln239 = icmp_eq  i24 %i_129, i24 10000000
 
 <Node id="17" bw="32" op_0_bw="32" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-for.body.i:4 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 10000000, i64 10000000, i64 10000000
+for.body.i:4 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 5000000, i64 5000000, i64 5000000
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -218,9 +218,9 @@ for.body.i:4 %empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 100
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="18" bw="24" op_0_bw="24" op_1_bw="24">
+<Node id="18" bw="23" op_0_bw="23" op_1_bw="23">
 <![CDATA[
-for.body.i:5 %add_ln239 = add i24 %i_129, i24 1
+for.body.i:5 %add_ln239 = add i23 %i_129, i23 1
 
 ]]></Node>
 <StgValue><ssdm name="add_ln239"/></StgValue>
@@ -249,9 +249,9 @@ for.body.i:6 %br_ln239 = br i1 %icmp_ln239, void %for.body.split.i, void %merge_
 </and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="64" op_0_bw="24">
+<Node id="21" bw="64" op_0_bw="23">
 <![CDATA[
-for.body.split.i:0 %zext_ln239 = zext i24 %i_129
+for.body.split.i:0 %zext_ln239 = zext i23 %i_129
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln239"/></StgValue>
@@ -299,7 +299,7 @@ for.body.split.i:2 %specloopname_ln237 = specloopname void @_ssdm_op_SpecLoopNam
 
 <Node id="24" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.split.i:3 %icmp_ln241 = icmp_slt  i32 %j_67, i32 5000000
+for.body.split.i:3 %icmp_ln241 = icmp_slt  i32 %j_67, i32 2500000
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln241"/></StgValue>
@@ -315,7 +315,7 @@ for.body.split.i:3 %icmp_ln241 = icmp_slt  i32 %j_67, i32 5000000
 
 <Node id="25" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-for.body.split.i:4 %icmp_ln241_1 = icmp_slt  i32 %k_65, i32 5000000
+for.body.split.i:4 %icmp_ln241_1 = icmp_slt  i32 %k_65, i32 2500000
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln241_1"/></StgValue>
@@ -345,7 +345,7 @@ for.body.split.i:5 %and_ln241 = and i1 %icmp_ln241, i1 %icmp_ln241_1
 </and_exp></or_exp>
 </condition>
 
-<Node id="27" bw="24" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="27" bw="23" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
 for.body.split.i:6 %output_r_addr = getelementptr i32 %output_r, i64 0, i64 %zext_ln239
 
@@ -380,7 +380,7 @@ for.body.split.i:7 %br_ln241 = br i1 %and_ln241, void %if.else16.i, void %if.the
 
 <Node id="30" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-if.else16.i:0 %icmp_ln252 = icmp_eq  i32 %j_67, i32 5000000
+if.else16.i:0 %icmp_ln252 = icmp_eq  i32 %j_67, i32 2500000
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln252"/></StgValue>
@@ -448,12 +448,12 @@ if.else26.i:0 %zext_ln257 = zext i32 %j_67
 </and_exp></or_exp>
 </condition>
 
-<Node id="35" bw="23" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="35" bw="22" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-if.else26.i:1 %multi_radix_bin_kmerge_temp5_0_addr_1 = getelementptr i32 %multi_radix_bin_kmerge_temp5_0, i64 0, i64 %zext_ln257
+if.else26.i:1 %multi_radix_oct_kmerge_temp5_0_addr_1 = getelementptr i32 %multi_radix_oct_kmerge_temp5_0, i64 0, i64 %zext_ln257
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_0_addr_1"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_0_addr_1"/></StgValue>
 </operation>
 
 <operation id="33" st_id="1" stage="2" lat="2">
@@ -466,12 +466,12 @@ if.else26.i:1 %multi_radix_bin_kmerge_temp5_0_addr_1 = getelementptr i32 %multi_
 </and_exp></or_exp>
 </condition>
 
-<Node id="36" bw="32" op_0_bw="23">
+<Node id="36" bw="32" op_0_bw="22">
 <![CDATA[
-if.else26.i:2 %multi_radix_bin_kmerge_temp5_0_load_1 = load i23 %multi_radix_bin_kmerge_temp5_0_addr_1
+if.else26.i:2 %multi_radix_oct_kmerge_temp5_0_load_1 = load i22 %multi_radix_oct_kmerge_temp5_0_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_0_load_1"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_0_load_1"/></StgValue>
 </operation>
 
 <operation id="34" st_id="1" stage="1" lat="1">
@@ -538,12 +538,12 @@ if.then20.i:0 %zext_ln253 = zext i32 %k_65
 </and_exp></or_exp>
 </condition>
 
-<Node id="43" bw="23" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="43" bw="22" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-if.then20.i:1 %multi_radix_bin_kmerge_temp5_1_addr_1 = getelementptr i32 %multi_radix_bin_kmerge_temp5_1, i64 0, i64 %zext_ln253
+if.then20.i:1 %multi_radix_oct_kmerge_temp5_1_addr_1 = getelementptr i32 %multi_radix_oct_kmerge_temp5_1, i64 0, i64 %zext_ln253
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_1_addr_1"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_1_addr_1"/></StgValue>
 </operation>
 
 <operation id="38" st_id="1" stage="2" lat="2">
@@ -556,12 +556,12 @@ if.then20.i:1 %multi_radix_bin_kmerge_temp5_1_addr_1 = getelementptr i32 %multi_
 </and_exp></or_exp>
 </condition>
 
-<Node id="44" bw="32" op_0_bw="23">
+<Node id="44" bw="32" op_0_bw="22">
 <![CDATA[
-if.then20.i:2 %multi_radix_bin_kmerge_temp5_1_load_1 = load i23 %multi_radix_bin_kmerge_temp5_1_addr_1
+if.then20.i:2 %multi_radix_oct_kmerge_temp5_1_load_1 = load i22 %multi_radix_oct_kmerge_temp5_1_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_1_load_1"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_1_load_1"/></StgValue>
 </operation>
 
 <operation id="39" st_id="1" stage="1" lat="1">
@@ -594,7 +594,7 @@ if.then20.i:4 %k_67 = add i32 %k_65, i32 1
 
 <Node id="47" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-if.then20.i:5 %store_ln255 = store i32 5000000, i32 %j
+if.then20.i:5 %store_ln255 = store i32 2500000, i32 %j
 
 ]]></Node>
 <StgValue><ssdm name="store_ln255"/></StgValue>
@@ -644,12 +644,12 @@ if.then.i:0 %zext_ln242 = zext i32 %j_67
 </and_exp></or_exp>
 </condition>
 
-<Node id="52" bw="23" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="52" bw="22" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-if.then.i:1 %multi_radix_bin_kmerge_temp5_0_addr = getelementptr i32 %multi_radix_bin_kmerge_temp5_0, i64 0, i64 %zext_ln242
+if.then.i:1 %multi_radix_oct_kmerge_temp5_0_addr = getelementptr i32 %multi_radix_oct_kmerge_temp5_0, i64 0, i64 %zext_ln242
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_0_addr"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_0_addr"/></StgValue>
 </operation>
 
 <operation id="44" st_id="1" stage="2" lat="2">
@@ -661,12 +661,12 @@ if.then.i:1 %multi_radix_bin_kmerge_temp5_0_addr = getelementptr i32 %multi_radi
 </and_exp></or_exp>
 </condition>
 
-<Node id="53" bw="32" op_0_bw="23">
+<Node id="53" bw="32" op_0_bw="22">
 <![CDATA[
-if.then.i:2 %multi_radix_bin_kmerge_temp5_0_load = load i23 %multi_radix_bin_kmerge_temp5_0_addr
+if.then.i:2 %multi_radix_oct_kmerge_temp5_0_load = load i22 %multi_radix_oct_kmerge_temp5_0_addr
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_0_load"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_0_load"/></StgValue>
 </operation>
 
 <operation id="45" st_id="1" stage="1" lat="1">
@@ -695,12 +695,12 @@ if.then.i:3 %zext_ln242_1 = zext i32 %k_65
 </and_exp></or_exp>
 </condition>
 
-<Node id="55" bw="23" op_0_bw="32" op_1_bw="64" op_2_bw="64">
+<Node id="55" bw="22" op_0_bw="32" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-if.then.i:4 %multi_radix_bin_kmerge_temp5_1_addr = getelementptr i32 %multi_radix_bin_kmerge_temp5_1, i64 0, i64 %zext_ln242_1
+if.then.i:4 %multi_radix_oct_kmerge_temp5_1_addr = getelementptr i32 %multi_radix_oct_kmerge_temp5_1, i64 0, i64 %zext_ln242_1
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_1_addr"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_1_addr"/></StgValue>
 </operation>
 
 <operation id="47" st_id="1" stage="2" lat="2">
@@ -712,12 +712,12 @@ if.then.i:4 %multi_radix_bin_kmerge_temp5_1_addr = getelementptr i32 %multi_radi
 </and_exp></or_exp>
 </condition>
 
-<Node id="56" bw="32" op_0_bw="23">
+<Node id="56" bw="32" op_0_bw="22">
 <![CDATA[
-if.then.i:5 %multi_radix_bin_kmerge_temp5_1_load = load i23 %multi_radix_bin_kmerge_temp5_1_addr
+if.then.i:5 %multi_radix_oct_kmerge_temp5_1_load = load i22 %multi_radix_oct_kmerge_temp5_1_addr
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_1_load"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_1_load"/></StgValue>
 </operation>
 
 <operation id="48" st_id="1" stage="1" lat="1">
@@ -728,9 +728,9 @@ if.then.i:5 %multi_radix_bin_kmerge_temp5_1_load = load i23 %multi_radix_bin_kme
 </and_exp></or_exp>
 </condition>
 
-<Node id="70" bw="0" op_0_bw="24" op_1_bw="24" op_2_bw="0" op_3_bw="0">
+<Node id="70" bw="0" op_0_bw="23" op_1_bw="23" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-for.inc.i:0 %store_ln239 = store i24 %add_ln239, i24 %i
+for.inc.i:0 %store_ln239 = store i23 %add_ln239, i23 %i
 
 ]]></Node>
 <StgValue><ssdm name="store_ln239"/></StgValue>
@@ -780,12 +780,12 @@ merge_sort_batch5.1.exit:0 %ret_ln0 = ret
 </and_exp></or_exp>
 </condition>
 
-<Node id="36" bw="32" op_0_bw="23">
+<Node id="36" bw="32" op_0_bw="22">
 <![CDATA[
-if.else26.i:2 %multi_radix_bin_kmerge_temp5_0_load_1 = load i23 %multi_radix_bin_kmerge_temp5_0_addr_1
+if.else26.i:2 %multi_radix_oct_kmerge_temp5_0_load_1 = load i22 %multi_radix_oct_kmerge_temp5_0_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_0_load_1"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_0_load_1"/></StgValue>
 </operation>
 
 <operation id="51" st_id="2" stage="1" lat="1">
@@ -797,9 +797,9 @@ if.else26.i:2 %multi_radix_bin_kmerge_temp5_0_load_1 = load i23 %multi_radix_bin
 </and_exp></or_exp>
 </condition>
 
-<Node id="37" bw="0" op_0_bw="32" op_1_bw="24">
+<Node id="37" bw="0" op_0_bw="32" op_1_bw="23">
 <![CDATA[
-if.else26.i:3 %store_ln257 = store i32 %multi_radix_bin_kmerge_temp5_0_load_1, i24 %output_r_addr
+if.else26.i:3 %store_ln257 = store i32 %multi_radix_oct_kmerge_temp5_0_load_1, i23 %output_r_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln257"/></StgValue>
@@ -831,12 +831,12 @@ if.else26.i:6 %br_ln0 = br void %for.inc.i
 </and_exp></or_exp>
 </condition>
 
-<Node id="44" bw="32" op_0_bw="23">
+<Node id="44" bw="32" op_0_bw="22">
 <![CDATA[
-if.then20.i:2 %multi_radix_bin_kmerge_temp5_1_load_1 = load i23 %multi_radix_bin_kmerge_temp5_1_addr_1
+if.then20.i:2 %multi_radix_oct_kmerge_temp5_1_load_1 = load i22 %multi_radix_oct_kmerge_temp5_1_addr_1
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_1_load_1"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_1_load_1"/></StgValue>
 </operation>
 
 <operation id="54" st_id="2" stage="1" lat="1">
@@ -848,9 +848,9 @@ if.then20.i:2 %multi_radix_bin_kmerge_temp5_1_load_1 = load i23 %multi_radix_bin
 </and_exp></or_exp>
 </condition>
 
-<Node id="45" bw="0" op_0_bw="32" op_1_bw="24">
+<Node id="45" bw="0" op_0_bw="32" op_1_bw="23">
 <![CDATA[
-if.then20.i:3 %store_ln253 = store i32 %multi_radix_bin_kmerge_temp5_1_load_1, i24 %output_r_addr
+if.then20.i:3 %store_ln253 = store i32 %multi_radix_oct_kmerge_temp5_1_load_1, i23 %output_r_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln253"/></StgValue>
@@ -881,12 +881,12 @@ if.then20.i:7 %br_ln255 = br void %for.inc.i
 </and_exp></or_exp>
 </condition>
 
-<Node id="53" bw="32" op_0_bw="23">
+<Node id="53" bw="32" op_0_bw="22">
 <![CDATA[
-if.then.i:2 %multi_radix_bin_kmerge_temp5_0_load = load i23 %multi_radix_bin_kmerge_temp5_0_addr
+if.then.i:2 %multi_radix_oct_kmerge_temp5_0_load = load i22 %multi_radix_oct_kmerge_temp5_0_addr
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_0_load"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_0_load"/></StgValue>
 </operation>
 
 <operation id="57" st_id="2" stage="1" lat="2">
@@ -897,12 +897,12 @@ if.then.i:2 %multi_radix_bin_kmerge_temp5_0_load = load i23 %multi_radix_bin_kme
 </and_exp></or_exp>
 </condition>
 
-<Node id="56" bw="32" op_0_bw="23">
+<Node id="56" bw="32" op_0_bw="22">
 <![CDATA[
-if.then.i:5 %multi_radix_bin_kmerge_temp5_1_load = load i23 %multi_radix_bin_kmerge_temp5_1_addr
+if.then.i:5 %multi_radix_oct_kmerge_temp5_1_load = load i22 %multi_radix_oct_kmerge_temp5_1_addr
 
 ]]></Node>
-<StgValue><ssdm name="multi_radix_bin_kmerge_temp5_1_load"/></StgValue>
+<StgValue><ssdm name="multi_radix_oct_kmerge_temp5_1_load"/></StgValue>
 </operation>
 
 <operation id="58" st_id="2" stage="1" lat="1">
@@ -915,7 +915,7 @@ if.then.i:5 %multi_radix_bin_kmerge_temp5_1_load = load i23 %multi_radix_bin_kme
 
 <Node id="57" bw="1" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-if.then.i:6 %icmp_ln242 = icmp_slt  i32 %multi_radix_bin_kmerge_temp5_0_load, i32 %multi_radix_bin_kmerge_temp5_1_load
+if.then.i:6 %icmp_ln242 = icmp_slt  i32 %multi_radix_oct_kmerge_temp5_0_load, i32 %multi_radix_oct_kmerge_temp5_1_load
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln242"/></StgValue>
@@ -946,9 +946,9 @@ if.then.i:7 %br_ln242 = br i1 %icmp_ln242, void %if.else.i, void %if.then6.i
 </and_exp></or_exp>
 </condition>
 
-<Node id="60" bw="0" op_0_bw="32" op_1_bw="24">
+<Node id="60" bw="0" op_0_bw="32" op_1_bw="23">
 <![CDATA[
-if.else.i:0 %store_ln247 = store i32 %multi_radix_bin_kmerge_temp5_1_load, i24 %output_r_addr
+if.else.i:0 %store_ln247 = store i32 %multi_radix_oct_kmerge_temp5_1_load, i23 %output_r_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln247"/></StgValue>
@@ -1014,9 +1014,9 @@ if.else.i:3 %br_ln0 = br void %for.inc.i
 </and_exp></or_exp>
 </condition>
 
-<Node id="65" bw="0" op_0_bw="32" op_1_bw="24">
+<Node id="65" bw="0" op_0_bw="32" op_1_bw="23">
 <![CDATA[
-if.then6.i:0 %store_ln243 = store i32 %multi_radix_bin_kmerge_temp5_0_load, i24 %output_r_addr
+if.then6.i:0 %store_ln243 = store i32 %multi_radix_oct_kmerge_temp5_0_load, i23 %output_r_addr
 
 ]]></Node>
 <StgValue><ssdm name="store_ln243"/></StgValue>

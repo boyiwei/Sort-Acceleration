@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
-        Offset:          24328
+        Offset:          24304
         Length:          0
         ReplacementText: 'VITIS_LOOP_10_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
-        Offset:          26003
+        Offset:          25960
         Length:          0
         ReplacementText: 'VITIS_LOOP_84_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
-        Offset:          26315
+        Offset:          26269
         Length:          0
         ReplacementText: 'VITIS_LOOP_99_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,7 +34,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
-        Offset:          27013
+        Offset:          26959
         Length:          0
         ReplacementText: 'VITIS_LOOP_127_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -43,7 +43,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
-        Offset:          27719
+        Offset:          27657
         Length:          0
         ReplacementText: 'VITIS_LOOP_155_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -52,7 +52,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
-        Offset:          28426
+        Offset:          28356
         Length:          0
         ReplacementText: 'VITIS_LOOP_183_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -61,7 +61,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
-        Offset:          29136
+        Offset:          29058
         Length:          0
         ReplacementText: 'VITIS_LOOP_211_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -70,7 +70,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/merge_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c
-        Offset:          29844
+        Offset:          29758
         Length:          0
         ReplacementText: 'VITIS_LOOP_239_1: '
 ...

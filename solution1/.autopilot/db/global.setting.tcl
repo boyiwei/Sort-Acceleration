@@ -1,5 +1,5 @@
 
-set TopModule "multi_radix_bin_kmerge"
+set TopModule "multi_radix_oct_kmerge"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 1
@@ -23,7 +23,7 @@ set ResetRegisterNum 0
 set FsmEncStyle onehot
 set MaxFanout 0
 set RtlPrefix {}
-set RtlSubPrefix multi_radix_bin_kmerge_
+set RtlSubPrefix multi_radix_oct_kmerge_
 set ExtraCCFlags {}
 set ExtraCLdFlags {}
 set SynCheckOptions {}
@@ -42,7 +42,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xcu280:-fsvh2892:-2L-e
-set SourceFiles {sc {} c {../heapsort.c ../merge_sort.c ../multi_heap_kmerge.c ../multi_heap_loser.c ../multi_radix_bin_kmerge.c ../multi_radix_bin_loser.c ../multi_radix_hex_kmerge.c ../multi_radix_hex_loser.c ../multi_radix_oct_kmerge.c ../multi_radix_oct_loser.c ../radix_sort.c ../radix_sort_separate_bucket_parallel.c ../single_heap_sort.c ../single_merge_sort.c ../single_radix_sort_bin.c ../single_radix_sort_hex.c ../single_radix_sort_oct.c ../sort_top.c}}
+set SourceFiles {sc {} c {../sort_top.c ../single_radix_sort_oct.c ../single_radix_sort_hex.c ../single_radix_sort_bin.c ../single_merge_sort.c ../single_heap_sort.c ../radix_sort_separate_bucket_parallel.c ../radix_sort.c ../multi_radix_oct_loser.c ../multi_radix_oct_kmerge.c ../multi_radix_hex_loser.c ../multi_radix_hex_kmerge.c ../multi_radix_bin_loser.c ../multi_radix_bin_kmerge.c ../multi_heap_loser.c ../multi_heap_kmerge.c ../merge_sort.c ../heapsort.c}}
 set SourceFlags {sc {} c {{} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {}}}
 set DirectiveFile /home/boyiw7/sort_seperate_bucket/solution1/solution1.directive
 set TBFiles {verilog {../batch_size.h ../dataset.h ../../dataset_gen/dataset_10M_1.h ../../dataset_gen/dataset_10M_2.h ../../dataset_gen/dataset_10M_3.h ../../dataset_gen/dataset_1M_1.h ../../dataset_gen/dataset_1M_2.h ../../dataset_gen/dataset_1M_3.h ../../dataset_gen/dataset_5M_1.h ../../dataset_gen/dataset_5M_2.h ../../dataset_gen/dataset_5M_3.h ../sort_test.c} bc {../batch_size.h ../dataset.h ../../dataset_gen/dataset_10M_1.h ../../dataset_gen/dataset_10M_2.h ../../dataset_gen/dataset_10M_3.h ../../dataset_gen/dataset_1M_1.h ../../dataset_gen/dataset_1M_2.h ../../dataset_gen/dataset_1M_3.h ../../dataset_gen/dataset_5M_1.h ../../dataset_gen/dataset_5M_2.h ../../dataset_gen/dataset_5M_3.h ../sort_test.c} sc {../batch_size.h ../dataset.h ../../dataset_gen/dataset_10M_1.h ../../dataset_gen/dataset_10M_2.h ../../dataset_gen/dataset_10M_3.h ../../dataset_gen/dataset_1M_1.h ../../dataset_gen/dataset_1M_2.h ../../dataset_gen/dataset_1M_3.h ../../dataset_gen/dataset_5M_1.h ../../dataset_gen/dataset_5M_2.h ../../dataset_gen/dataset_5M_3.h ../sort_test.c} vhdl {../batch_size.h ../dataset.h ../../dataset_gen/dataset_10M_1.h ../../dataset_gen/dataset_10M_2.h ../../dataset_gen/dataset_10M_3.h ../../dataset_gen/dataset_1M_1.h ../../dataset_gen/dataset_1M_2.h ../../dataset_gen/dataset_1M_3.h ../../dataset_gen/dataset_5M_1.h ../../dataset_gen/dataset_5M_2.h ../../dataset_gen/dataset_5M_3.h ../sort_test.c} c {} cas {../batch_size.h ../dataset.h ../../dataset_gen/dataset_10M_1.h ../../dataset_gen/dataset_10M_2.h ../../dataset_gen/dataset_10M_3.h ../../dataset_gen/dataset_1M_1.h ../../dataset_gen/dataset_1M_2.h ../../dataset_gen/dataset_1M_3.h ../../dataset_gen/dataset_5M_1.h ../../dataset_gen/dataset_5M_2.h ../../dataset_gen/dataset_5M_3.h ../sort_test.c}}

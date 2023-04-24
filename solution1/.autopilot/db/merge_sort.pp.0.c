@@ -878,19 +878,19 @@ extern int __overflow (FILE *, int);
 # 3 "sort_seperate_bucket/merge_sort.h" 2
 
 
-void merge_sort(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+void merge_sort(int input1[5000000/64], int input2[5000000/64], int sorted_data[2*5000000/64]);
 
-void merge_sort_batch0(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+void merge_sort_batch0(int input1[5000000/64], int input2[5000000/64], int sorted_data[2*5000000/64]);
 
-void merge_sort_batch1(int input1[2*10000000/64], int input2[2*10000000/64], int sorted_data[4*10000000/64]);
+void merge_sort_batch1(int input1[2*5000000/64], int input2[2*5000000/64], int sorted_data[4*5000000/64]);
 
-void merge_sort_batch2(int input1[4*10000000/64], int input2[4*10000000/64], int sorted_data[8*10000000/64]);
+void merge_sort_batch2(int input1[4*5000000/64], int input2[4*5000000/64], int sorted_data[8*5000000/64]);
 
-void merge_sort_batch3(int input1[8*10000000/64], int input2[8*10000000/64], int sorted_data[16*10000000/64]);
+void merge_sort_batch3(int input1[8*5000000/64], int input2[8*5000000/64], int sorted_data[16*5000000/64]);
 
-void merge_sort_batch4(int input1[16*10000000/64], int input2[16*10000000/64], int sorted_data[32*10000000/64]);
+void merge_sort_batch4(int input1[16*5000000/64], int input2[16*5000000/64], int sorted_data[32*5000000/64]);
 
-void merge_sort_batch5(int input1[32*10000000/64], int input2[32*10000000/64], int sorted_data[64*10000000/64]);
+void merge_sort_batch5(int input1[32*5000000/64], int input2[32*5000000/64], int sorted_data[64*5000000/64]);
 # 4 "sort_seperate_bucket/merge_sort.c" 2
 # 1 "/usr/include/assert.h" 1 3 4
 # 69 "/usr/include/assert.h" 3 4
@@ -911,13 +911,13 @@ extern void __assert (const char *__assertion, const char *__file, int __line)
 # 5 "sort_seperate_bucket/merge_sort.c" 2
 
 
-void merge_sort(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]){
+void merge_sort(int input1[5000000/64], int input2[5000000/64], int sorted_data[2*5000000/64]){
  int j = 0;
  int k = 0;
- VITIS_LOOP_10_1: for(int i=0; i<2*10000000/64; i++){
+ VITIS_LOOP_10_1: for(int i=0; i<2*5000000/64; i++){
   printf("i=%d, input1[%d] = %d, input2[%d]=%d\n", i, j, input1[j], k, input2[k]);
 #pragma HLS PIPELINE
- if((j<10000000/64)&&(k<10000000/64)){
+ if((j<5000000/64)&&(k<5000000/64)){
    if(input1[j]<input2[k]){
     sorted_data[i] = input1[j];
     j = j + 1;
@@ -930,7 +930,7 @@ void merge_sort(int input1[10000000/64], int input2[10000000/64], int sorted_dat
    }
   }
 
-  else if((j==10000000/64)&&(k<10000000/64)){
+  else if((j==5000000/64)&&(k<5000000/64)){
    sorted_data[i] = input2[k];
    k = k + 1;
   }
@@ -942,17 +942,17 @@ void merge_sort(int input1[10000000/64], int input2[10000000/64], int sorted_dat
 }
 
 
-void merge_arrays(int in[10000000/64], int width, int out[10000000/64]){
+void merge_arrays(int in[5000000/64], int width, int out[5000000/64]){
  int f1 = 0;
  int f2 = width;
  int i2 = width;
  int i3 = 2 * width;
- if(i2 >= 10000000/64)
-  i2 = 10000000/64;
- if(i3 >= 10000000/64)
-  i3 = 10000000/64;
+ if(i2 >= 5000000/64)
+  i2 = 5000000/64;
+ if(i3 >= 5000000/64)
+  i3 = 5000000/64;
  merge_arrays:
- for(int i=0; i<10000000/64; i++){
+ for(int i=0; i<5000000/64; i++){
 #pragma HLS PIPELINE II=1
  int t1 = in[f1];
   int t2 = (f2==i3)?0:in[f2];
@@ -969,20 +969,20 @@ void merge_arrays(int in[10000000/64], int width, int out[10000000/64]){
    f1 = i3;
    i2 += 2*width;
    i3 += 2*width;
-   if(i2>=10000000/64)
-    i2 = 10000000/64;
-   if(i3 >= 10000000/64)
-    i3 = 10000000/64;
+   if(i2>=5000000/64)
+    i2 = 5000000/64;
+   if(i3 >= 5000000/64)
+    i3 = 5000000/64;
    f2 = i2;
   }
  }
 }
 
 
-void merge_sort_parallel(int in[10000000/64], int out[10000000/64]){
+void merge_sort_parallel(int in[5000000/64], int out[5000000/64]){
 #pragma HLS DATAFLOW
 
- int temp[24 -1][10000000/64];
+ int temp[24 -1][5000000/64];
 #pragma HLS ARRAY_PARTITION variable=temp type=complete dim=1
  int width = 1;
  merge_arrays(in, width, temp[0]);
@@ -1000,12 +1000,12 @@ void merge_sort_parallel(int in[10000000/64], int out[10000000/64]){
 
 
 
-void merge_sort_batch0(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]){
+void merge_sort_batch0(int input1[5000000/64], int input2[5000000/64], int sorted_data[2*5000000/64]){
     int j = 0;
     int k = 0;
-    VITIS_LOOP_99_1: for(int i=0; i<2*10000000/64; i++){
+    VITIS_LOOP_99_1: for(int i=0; i<2*5000000/64; i++){
 #pragma HLS PIPELINE
- if((j<10000000/64)&&(k<10000000/64)){
+ if((j<5000000/64)&&(k<5000000/64)){
             if(input1[j]<input2[k]){
                 sorted_data[i] = input1[j];
                 j = j + 1;
@@ -1016,7 +1016,7 @@ void merge_sort_batch0(int input1[10000000/64], int input2[10000000/64], int sor
             }
         }
 
-        else if((j==10000000/64)&&(k<10000000/64)){
+        else if((j==5000000/64)&&(k<5000000/64)){
             sorted_data[i] = input2[k];
             k = k + 1;
         }
@@ -1028,12 +1028,12 @@ void merge_sort_batch0(int input1[10000000/64], int input2[10000000/64], int sor
 }
 
 
-void merge_sort_batch1(int input1[2*10000000/64], int input2[2*10000000/64], int sorted_data[4*10000000/64]){
+void merge_sort_batch1(int input1[2*5000000/64], int input2[2*5000000/64], int sorted_data[4*5000000/64]){
     int j = 0;
     int k = 0;
-    VITIS_LOOP_127_1: for(int i=0; i<4*10000000/64; i++){
+    VITIS_LOOP_127_1: for(int i=0; i<4*5000000/64; i++){
 #pragma HLS PIPELINE
- if((j<2*10000000/64)&&(k<2*10000000/64)){
+ if((j<2*5000000/64)&&(k<2*5000000/64)){
             if(input1[j]<input2[k]){
                 sorted_data[i] = input1[j];
                 j = j + 1;
@@ -1044,7 +1044,7 @@ void merge_sort_batch1(int input1[2*10000000/64], int input2[2*10000000/64], int
             }
         }
 
-        else if((j==2*10000000/64)&&(k<2*10000000/64)){
+        else if((j==2*5000000/64)&&(k<2*5000000/64)){
             sorted_data[i] = input2[k];
             k = k + 1;
         }
@@ -1056,12 +1056,12 @@ void merge_sort_batch1(int input1[2*10000000/64], int input2[2*10000000/64], int
 }
 
 
-void merge_sort_batch2(int input1[4*10000000/64], int input2[4*10000000/64], int sorted_data[8*10000000/64]){
+void merge_sort_batch2(int input1[4*5000000/64], int input2[4*5000000/64], int sorted_data[8*5000000/64]){
     int j = 0;
     int k = 0;
-    VITIS_LOOP_155_1: for(int i=0; i<8*10000000/64; i++){
+    VITIS_LOOP_155_1: for(int i=0; i<8*5000000/64; i++){
 #pragma HLS PIPELINE
- if((j<4*10000000/64)&&(k<4*10000000/64)){
+ if((j<4*5000000/64)&&(k<4*5000000/64)){
             if(input1[j]<input2[k]){
                 sorted_data[i] = input1[j];
                 j = j + 1;
@@ -1072,7 +1072,7 @@ void merge_sort_batch2(int input1[4*10000000/64], int input2[4*10000000/64], int
             }
         }
 
-        else if((j==4*10000000/64)&&(k<4*10000000/64)){
+        else if((j==4*5000000/64)&&(k<4*5000000/64)){
             sorted_data[i] = input2[k];
             k = k + 1;
         }
@@ -1084,12 +1084,12 @@ void merge_sort_batch2(int input1[4*10000000/64], int input2[4*10000000/64], int
 }
 
 
-void merge_sort_batch3(int input1[8*10000000/64], int input2[8*10000000/64], int sorted_data[16*10000000/64]){
+void merge_sort_batch3(int input1[8*5000000/64], int input2[8*5000000/64], int sorted_data[16*5000000/64]){
     int j = 0;
     int k = 0;
-    VITIS_LOOP_183_1: for(int i=0; i<16*10000000/64; i++){
+    VITIS_LOOP_183_1: for(int i=0; i<16*5000000/64; i++){
 #pragma HLS PIPELINE
- if((j<8*10000000/64)&&(k<8*10000000/64)){
+ if((j<8*5000000/64)&&(k<8*5000000/64)){
             if(input1[j]<input2[k]){
                 sorted_data[i] = input1[j];
                 j = j + 1;
@@ -1100,7 +1100,7 @@ void merge_sort_batch3(int input1[8*10000000/64], int input2[8*10000000/64], int
             }
         }
 
-        else if((j==8*10000000/64)&&(k<8*10000000/64)){
+        else if((j==8*5000000/64)&&(k<8*5000000/64)){
             sorted_data[i] = input2[k];
             k = k + 1;
         }
@@ -1112,12 +1112,12 @@ void merge_sort_batch3(int input1[8*10000000/64], int input2[8*10000000/64], int
 }
 
 
-void merge_sort_batch4(int input1[16*10000000/64], int input2[16*10000000/64], int sorted_data[32*10000000/64]){
+void merge_sort_batch4(int input1[16*5000000/64], int input2[16*5000000/64], int sorted_data[32*5000000/64]){
     int j = 0;
     int k = 0;
-    VITIS_LOOP_211_1: for(int i=0; i<32*10000000/64; i++){
+    VITIS_LOOP_211_1: for(int i=0; i<32*5000000/64; i++){
 #pragma HLS PIPELINE
- if((j<16*10000000/64)&&(k<16*10000000/64)){
+ if((j<16*5000000/64)&&(k<16*5000000/64)){
             if(input1[j]<input2[k]){
                 sorted_data[i] = input1[j];
                 j = j + 1;
@@ -1128,7 +1128,7 @@ void merge_sort_batch4(int input1[16*10000000/64], int input2[16*10000000/64], i
             }
         }
 
-        else if((j==16*10000000/64)&&(k<16*10000000/64)){
+        else if((j==16*5000000/64)&&(k<16*5000000/64)){
             sorted_data[i] = input2[k];
             k = k + 1;
         }
@@ -1140,12 +1140,12 @@ void merge_sort_batch4(int input1[16*10000000/64], int input2[16*10000000/64], i
 }
 
 
-void merge_sort_batch5(int input1[32*10000000/64], int input2[32*10000000/64], int sorted_data[10000000]){
+void merge_sort_batch5(int input1[32*5000000/64], int input2[32*5000000/64], int sorted_data[5000000]){
     int j = 0;
     int k = 0;
-    VITIS_LOOP_239_1: for(int i=0; i<10000000; i++){
+    VITIS_LOOP_239_1: for(int i=0; i<5000000; i++){
 #pragma HLS PIPELINE
- if((j<32*10000000/64)&&(k<32*10000000/64)){
+ if((j<32*5000000/64)&&(k<32*5000000/64)){
             if(input1[j]<input2[k]){
                 sorted_data[i] = input1[j];
                 j = j + 1;
@@ -1156,7 +1156,7 @@ void merge_sort_batch5(int input1[32*10000000/64], int input2[32*10000000/64], i
             }
         }
 
-        else if((j==32*10000000/64)&&(k<32*10000000/64)){
+        else if((j==32*5000000/64)&&(k<32*5000000/64)){
             sorted_data[i] = input2[k];
             k = k + 1;
         }
