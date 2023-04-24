@@ -77,6 +77,11 @@
 			<location>/home/boyiw7/sort_seperate_bucket/multi_radix_bin_kmerge.c</location>
 		</link>
 		<link>
+			<name>source/multi_radix_bin_kmerge.h</name>
+			<type>1</type>
+			<location>/home/boyiw7/sort_seperate_bucket/multi_radix_bin_kmerge.h</location>
+		</link>
+		<link>
 			<name>source/multi_radix_bin_loser.c</name>
 			<type>1</type>
 			<location>/home/boyiw7/sort_seperate_bucket/multi_radix_bin_loser.c</location>

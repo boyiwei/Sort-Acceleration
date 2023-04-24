@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "dataset_size.h"
 #include "multi_radix_hex_kmerge.h"
+#include "multi_radix_bin_kmerge.h"
 
 
 //void multi_radix_hex_kmerge_test(){
@@ -39,7 +40,7 @@ int main(){
             input[i][j] = dataset[i*batch_size+j];
         }
     }
-    multi_radix_hex_kmerge(input, output);
+    multi_radix_bin_kmerge(input, output);
     for(i=0; i<64*batch_size; i++){
         printf("Sorted_results: rank %d, value= %d \n", i, output[i]);
     }

@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "batch_size.h"
+#include "merge_sort.h"
 #include "assert.h"
 #define STAGES 24
 
@@ -88,62 +89,175 @@ void merge_sort_parallel(int in[batch_size], int out[batch_size]){
 	merge_arrays(temp[STAGES-2], width, out);
 }
 
-//-------------------original merge sort algorithm ---------------------------------------//
 
-void merge(int input[batch_size], int temp[batch_size], int low, int mid, int high) {
-	printf("low=%d, mid=%d, high=%d\n", low, mid, high);
-    int i = low, j = mid, k = low;
+//----functions for k-way merge tree------------------------------
 
-    while (i < mid && j <= high) {
-        if (input[i] <= input[j]) {
-            temp[k++] = input[i++];
-        } else {
-            temp[k++] = input[j++];
-        }
-    }
 
-    while (i < mid) {
-        temp[k++] = input[i++];
-    }
-
-    while (j <= high) {
-        temp[k++] = input[j++];
-    }
-}
-
-void merge_sort_iterative(int input[batch_size], int output[batch_size]) {
-    int temp[batch_size];
-#pragma HLS ARRAY_PARTITION variable=input type=block factor=100  // avoid size >1000
-#pragma HLS ARRAY_PARTITION variable=output type=block factor=100
-    for (int step = 1; step < batch_size; step *= 2) {
-        for (int low = 0; low < batch_size - step; low += 2 * step) {
-#pragma HLS LOOP_MERGE
-#pragma HLS DATAFLOW
-            int mid = low + step;
-            int high = mid + step - 1;
-
-            // Handling the case when the last segment has a smaller size
-            if (high >= batch_size) {
-                high = batch_size - 1;
+void merge_sort_batch0(int input1[batch_size], int input2[batch_size], int sorted_data[2*batch_size]){
+    int j = 0;
+    int k = 0;
+    for(int i=0; i<2*batch_size; i++){
+#pragma HLS PIPELINE
+        if((j<batch_size)&&(k<batch_size)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
             }
-
-            merge(input, temp, low, mid, high);
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
         }
 
-        // Copy the result back to the input array
-        for (int i = 0; i < batch_size; i++) {
-            input[i] = temp[i];
+        else if((j==batch_size)&&(k<batch_size)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
         }
-    }
-
-    // Copy the final result to the output array
-    for (int i = 0; i < batch_size; i++) {
-        output[i] = input[i];
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
     }
 }
 
-//-------------------original merge sort algorithm ---------------------------------------//
+
+void merge_sort_batch1(int input1[2*batch_size], int input2[2*batch_size], int sorted_data[4*batch_size]){
+    int j = 0;
+    int k = 0;
+    for(int i=0; i<4*batch_size; i++){
+#pragma HLS PIPELINE
+        if((j<2*batch_size)&&(k<2*batch_size)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
+        }
+
+        else if((j==2*batch_size)&&(k<2*batch_size)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
+    }
+}
 
 
+void merge_sort_batch2(int input1[4*batch_size], int input2[4*batch_size], int sorted_data[8*batch_size]){
+    int j = 0;
+    int k = 0;
+    for(int i=0; i<8*batch_size; i++){
+#pragma HLS PIPELINE
+        if((j<4*batch_size)&&(k<4*batch_size)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
+        }
+
+        else if((j==4*batch_size)&&(k<4*batch_size)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
+    }
+}
+
+
+void merge_sort_batch3(int input1[8*batch_size], int input2[8*batch_size], int sorted_data[16*batch_size]){
+    int j = 0;
+    int k = 0;
+    for(int i=0; i<16*batch_size; i++){
+#pragma HLS PIPELINE
+        if((j<8*batch_size)&&(k<8*batch_size)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
+        }
+
+        else if((j==8*batch_size)&&(k<8*batch_size)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
+    }
+}
+
+
+void merge_sort_batch4(int input1[16*batch_size], int input2[16*batch_size], int sorted_data[32*batch_size]){
+    int j = 0;
+    int k = 0;
+    for(int i=0; i<32*batch_size; i++){
+#pragma HLS PIPELINE
+        if((j<16*batch_size)&&(k<16*batch_size)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
+        }
+
+        else if((j==16*batch_size)&&(k<16*batch_size)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
+    }
+}
+
+
+void merge_sort_batch5(int input1[32*batch_size], int input2[32*batch_size], int sorted_data[dataset_size]){
+    int j = 0;
+    int k = 0;
+    for(int i=0; i<dataset_size; i++){
+#pragma HLS PIPELINE
+        if((j<32*batch_size)&&(k<32*batch_size)){
+            if(input1[j]<input2[k]){
+                sorted_data[i] = input1[j];
+                j = j + 1;
+            }
+            else{
+                sorted_data[i] = input2[k];
+                k = k + 1;
+            }
+        }
+
+        else if((j==32*batch_size)&&(k<32*batch_size)){
+            sorted_data[i] = input2[k];
+            k = k + 1;
+        }
+        else{
+            sorted_data[i] = input1[j];
+            j = j + 1;
+        }
+    }
+}
 
 

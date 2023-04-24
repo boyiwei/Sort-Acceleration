@@ -23,6 +23,7 @@
     <originFiles name="single_radix_sort_oct.c" path="/home/boyiw7/sort_seperate_bucket/single_radix_sort_oct.c"/>
     <originFiles name="sort_top.c" path="/home/boyiw7/sort_seperate_bucket/sort_top.c"/>
     <originFiles name="multi_radix_hex_kmerge.h" path="/home/boyiw7/sort_seperate_bucket/multi_radix_hex_kmerge.h"/>
+    <originFiles name="multi_radix_bin_kmerge.h" path="/home/boyiw7/sort_seperate_bucket/multi_radix_bin_kmerge.h"/>
   </source>
   <testbench>
     <originFiles name="batch_size.h" path="/home/boyiw7/sort_seperate_bucket/batch_size.h"/>

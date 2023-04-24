@@ -12,6 +12,7 @@ add_files sort_seperate_bucket/merge_sort.h
 add_files sort_seperate_bucket/multi_heap_kmerge.c
 add_files sort_seperate_bucket/multi_heap_loser.c
 add_files sort_seperate_bucket/multi_radix_bin_kmerge.c
+add_files sort_seperate_bucket/multi_radix_bin_kmerge.h
 add_files sort_seperate_bucket/multi_radix_bin_loser.c
 add_files sort_seperate_bucket/multi_radix_hex_kmerge.c
 add_files sort_seperate_bucket/multi_radix_hex_kmerge.h

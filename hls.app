@@ -32,6 +32,7 @@
         <file name="sort_seperate_bucket/multi_radix_hex_kmerge.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/multi_radix_hex_kmerge.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/multi_radix_bin_loser.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="sort_seperate_bucket/multi_radix_bin_kmerge.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/multi_radix_bin_kmerge.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/multi_heap_loser.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/multi_heap_kmerge.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
