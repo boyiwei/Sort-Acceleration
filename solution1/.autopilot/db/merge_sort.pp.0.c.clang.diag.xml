@@ -9,7 +9,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>12</integer>
+      <integer>18</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -25,7 +25,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>49</integer>
+      <integer>55</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -41,7 +41,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>76</integer>
+      <integer>82</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -57,7 +57,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>79</integer>
+      <integer>85</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -73,7 +73,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>85</integer>
+      <integer>91</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -89,7 +89,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>100</integer>
+      <integer>106</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -105,7 +105,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>128</integer>
+      <integer>134</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -121,7 +121,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>156</integer>
+      <integer>162</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -137,7 +137,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>184</integer>
+      <integer>190</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -153,7 +153,7 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>212</integer>
+      <integer>218</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
@@ -169,11 +169,59 @@
       <key>filename</key>
       <string>sort_seperate_bucket/merge_sort.c</string>
       <key>line</key>
-      <integer>240</integer>
+      <integer>246</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
       <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=merge_sort_batch5_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/merge_sort.c</string>
+      <key>line</key>
+      <integer>277</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=loser_tree_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/merge_sort.c</string>
+      <key>line</key>
+      <integer>283</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=loser_tree_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>sort_seperate_bucket/merge_sort.c</string>
+      <key>line</key>
+      <integer>289</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=loser_tree_XLX_SEP_ PragmaOptions=_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

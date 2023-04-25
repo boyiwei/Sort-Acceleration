@@ -877,9 +877,9 @@ extern int __overflow (FILE *, int);
 # 1 "sort_seperate_bucket/dataset_size.h" 1
 # 3 "sort_seperate_bucket/multi_radix_hex_kmerge.h" 2
 
-void radix_sort_batch(int input[10000000/64], int output[10000000/64]);
+void radix_sort_hex_batch(int input[1000000/64], int output[1000000/64]);
 
-void multi_radix_hex_kmerge(int input[64][10000000/64], int output[10000000]);
+void multi_radix_hex_kmerge(int input[64][1000000/64], int output[1000000]);
 # 4 "sort_seperate_bucket/multi_radix_oct_kmerge.c" 2
 # 1 "sort_seperate_bucket/merge_sort.h" 1
 
@@ -887,26 +887,28 @@ void multi_radix_hex_kmerge(int input[64][10000000/64], int output[10000000]);
 # 3 "sort_seperate_bucket/merge_sort.h" 2
 
 
-void merge_sort(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+void merge_sort(int input1[1000000/64], int input2[1000000/64], int sorted_data[2*1000000/64]);
 
-void merge_sort_batch0(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+void merge_sort_batch0(int input1[1000000/64], int input2[1000000/64], int sorted_data[2*1000000/64]);
 
-void merge_sort_batch1(int input1[2*10000000/64], int input2[2*10000000/64], int sorted_data[4*10000000/64]);
+void merge_sort_batch1(int input1[2*1000000/64], int input2[2*1000000/64], int sorted_data[4*1000000/64]);
 
-void merge_sort_batch2(int input1[4*10000000/64], int input2[4*10000000/64], int sorted_data[8*10000000/64]);
+void merge_sort_batch2(int input1[4*1000000/64], int input2[4*1000000/64], int sorted_data[8*1000000/64]);
 
-void merge_sort_batch3(int input1[8*10000000/64], int input2[8*10000000/64], int sorted_data[16*10000000/64]);
+void merge_sort_batch3(int input1[8*1000000/64], int input2[8*1000000/64], int sorted_data[16*1000000/64]);
 
-void merge_sort_batch4(int input1[16*10000000/64], int input2[16*10000000/64], int sorted_data[32*10000000/64]);
+void merge_sort_batch4(int input1[16*1000000/64], int input2[16*1000000/64], int sorted_data[32*1000000/64]);
 
-void merge_sort_batch5(int input1[32*10000000/64], int input2[32*10000000/64], int sorted_data[64*10000000/64]);
+void merge_sort_batch5(int input1[32*1000000/64], int input2[32*1000000/64], int sorted_data[64*1000000/64]);
+
+void loser_tree(int input[64][1000000/64], int output[64 * 1000000/64]);
 # 5 "sort_seperate_bucket/multi_radix_oct_kmerge.c" 2
 
 
 
 
-void radix_sort_oct_batch(int input[10000000/64], int output[10000000/64]){
-    int bucket[2][10000000/64];
+void radix_sort_oct_batch(int input[1000000/64], int output[1000000/64]){
+    int bucket[2][1000000/64];
     int bucket_pointer[8];
     int bucket_sizes[8] = {0};
 
@@ -916,7 +918,7 @@ void radix_sort_oct_batch(int input[10000000/64], int output[10000000/64]){
 
 
     initialization:
-    for (int j = 0; j < 10000000/64; j++) {
+    for (int j = 0; j < 1000000/64; j++) {
         bucket[1-bucket_num][j] = input[j];
         int next_ith_radix = bucket[1-bucket_num][j] & 0b111;
         bucket_sizes[next_ith_radix] += 1;
@@ -936,7 +938,7 @@ void radix_sort_oct_batch(int input[10000000/64], int output[10000000/64]){
         }
 
         input_bucket:
-        for (int j = 0; j < 10000000/64; j++) {
+        for (int j = 0; j < 1000000/64; j++) {
             int shifted = bucket[1-bucket_num][j] >> (i * 3);
             int ith_radix = shifted & 0b111;
             bucket[bucket_num][bucket_pointer[ith_radix]] = bucket[1-bucket_num][j];
@@ -949,23 +951,19 @@ void radix_sort_oct_batch(int input[10000000/64], int output[10000000/64]){
     }
 
     output_bucket:
-    for (int k = 0; k < 10000000/64; k++) {
+    for (int k = 0; k < 1000000/64; k++) {
         output[k] = bucket[1-bucket_num][k];
     }
 }
 
 
-__attribute__((sdx_kernel("multi_radix_oct_kmerge", 0))) void multi_radix_oct_kmerge(int input[64][10000000/64], int output[10000000]){
-#line 49 "/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl"
-#pragma HLSDIRECTIVE TOP name=multi_radix_oct_kmerge
-# 59 "sort_seperate_bucket/multi_radix_oct_kmerge.c"
-
-    static int temp0[64][10000000/64];
-    static int temp1[32][2*10000000/64];
-    static int temp2[16][4*10000000/64];
-    static int temp3[8][8*10000000/64];
-    static int temp4[4][16*10000000/64];
-    static int temp5[2][32*10000000/64];
+void multi_radix_oct_kmerge(int input[64][1000000/64], int output[1000000]){
+    static int temp0[64][1000000/64];
+    static int temp1[32][2*1000000/64];
+    static int temp2[16][4*1000000/64];
+    static int temp3[8][8*1000000/64];
+    static int temp4[4][16*1000000/64];
+    static int temp5[2][32*1000000/64];
 
 #pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
 #pragma HLS ARRAY_PARTITION variable=temp0 type=complete dim=1

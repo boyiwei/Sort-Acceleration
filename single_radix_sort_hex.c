@@ -5,11 +5,11 @@
 
 
 
-void single_radix_sort(int data[dataset_size], int sorted_data[dataset_size])
+void single_radix_hex(int data[dataset_size], int sorted_data[dataset_size])
 // The same as function radix_sort_unified_bucket_pingpong
 {
 
-	int bucket[2][dataset_size]; // a unified ping-pong bucket.
+	static int bucket[2][dataset_size]; // a unified ping-pong bucket.
 	int bucket_pointer[16];
 	int bucket_sizes[16] = {0};
 //#pragma HLS ARRAY_PARTITION variable=bucket type=complete dim=1
@@ -56,4 +56,25 @@ void single_radix_sort(int data[dataset_size], int sorted_data[dataset_size])
 	for (int k = 0; k < dataset_size; k++) {
 		sorted_data[k] = bucket[1-bucket_num][k];
 	}
+}
+
+
+void single_radix_hex_test(){
+
+	//testbench function for single_radix_hex.
+	static int dataset[] = {
+#include "/home/boyiw7/dataset_gen/dataset_1M_1.h"
+	};
+
+	static int input[dataset_size] = {0};
+	static int output[dataset_size];
+	int i;
+	int j;
+	for(i=0; i<dataset_size; i++){
+		input[i]= dataset[i];
+	}
+	single_radix_hex(input, output);
+	for(i=0; i<dataset_size; i++){
+	        printf("Sorted_results: rank %d, value= %d \n", i, output[i]);
+	    }
 }

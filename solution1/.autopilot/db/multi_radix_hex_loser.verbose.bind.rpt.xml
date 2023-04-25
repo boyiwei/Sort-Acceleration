@@ -1,0 +1,110 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'multi_radix_hex_loser'" level="0">
+<item name = "Date">Mon Apr 24 22:40:41 2023
+</item>
+<item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
+<item name = "Project">sort_seperate_bucket</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu280-fsvh2892-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 69.151 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3156549, 3156549, 0.218 sec, 0.218 sec, 3000072, 3000072, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_radix_sort_hex_batch_1_1_fu_408">radix_sort_hex_batch_1_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_2_1_fu_416">radix_sort_hex_batch_2_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_3_1_fu_424">radix_sort_hex_batch_3_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_4_1_fu_432">radix_sort_hex_batch_4_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_5_1_fu_440">radix_sort_hex_batch_5_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_6_1_fu_448">radix_sort_hex_batch_6_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_7_1_fu_456">radix_sort_hex_batch_7_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_8_1_fu_464">radix_sort_hex_batch_8_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_9_1_fu_472">radix_sort_hex_batch_9_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_10_1_fu_480">radix_sort_hex_batch_10_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_11_1_fu_488">radix_sort_hex_batch_11_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_12_1_fu_496">radix_sort_hex_batch_12_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_13_1_fu_504">radix_sort_hex_batch_13_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_14_1_fu_512">radix_sort_hex_batch_14_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_15_1_fu_520">radix_sort_hex_batch_15_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_16_1_fu_528">radix_sort_hex_batch_16_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_17_1_fu_536">radix_sort_hex_batch_17_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_18_1_fu_544">radix_sort_hex_batch_18_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_19_1_fu_552">radix_sort_hex_batch_19_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_20_1_fu_560">radix_sort_hex_batch_20_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_21_1_fu_568">radix_sort_hex_batch_21_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_22_1_fu_576">radix_sort_hex_batch_22_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_23_1_fu_584">radix_sort_hex_batch_23_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_24_1_fu_592">radix_sort_hex_batch_24_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_25_1_fu_600">radix_sort_hex_batch_25_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_26_1_fu_608">radix_sort_hex_batch_26_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_27_1_fu_616">radix_sort_hex_batch_27_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_28_1_fu_624">radix_sort_hex_batch_28_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_29_1_fu_632">radix_sort_hex_batch_29_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_30_1_fu_640">radix_sort_hex_batch_30_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_31_1_fu_648">radix_sort_hex_batch_31_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_32_1_fu_656">radix_sort_hex_batch_32_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_33_1_fu_664">radix_sort_hex_batch_33_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_34_1_fu_672">radix_sort_hex_batch_34_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_35_1_fu_680">radix_sort_hex_batch_35_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_36_1_fu_688">radix_sort_hex_batch_36_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_37_1_fu_696">radix_sort_hex_batch_37_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_38_1_fu_704">radix_sort_hex_batch_38_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_39_1_fu_712">radix_sort_hex_batch_39_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_40_1_fu_720">radix_sort_hex_batch_40_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_41_1_fu_728">radix_sort_hex_batch_41_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_42_1_fu_736">radix_sort_hex_batch_42_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_43_1_fu_744">radix_sort_hex_batch_43_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_44_1_fu_752">radix_sort_hex_batch_44_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_45_1_fu_760">radix_sort_hex_batch_45_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_46_1_fu_768">radix_sort_hex_batch_46_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_47_1_fu_776">radix_sort_hex_batch_47_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_48_1_fu_784">radix_sort_hex_batch_48_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_49_1_fu_792">radix_sort_hex_batch_49_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_50_1_fu_800">radix_sort_hex_batch_50_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_51_1_fu_808">radix_sort_hex_batch_51_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_52_1_fu_816">radix_sort_hex_batch_52_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_53_1_fu_824">radix_sort_hex_batch_53_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_54_1_fu_832">radix_sort_hex_batch_54_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_55_1_fu_840">radix_sort_hex_batch_55_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_56_1_fu_848">radix_sort_hex_batch_56_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_57_1_fu_856">radix_sort_hex_batch_57_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_58_1_fu_864">radix_sort_hex_batch_58_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_59_1_fu_872">radix_sort_hex_batch_59_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_60_1_fu_880">radix_sort_hex_batch_60_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_61_1_fu_888">radix_sort_hex_batch_61_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_62_1_fu_896">radix_sort_hex_batch_62_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_63_1_fu_904">radix_sort_hex_batch_63_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_radix_sort_hex_batch_1_2_fu_912">radix_sort_hex_batch_1_2, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
+<column name="grp_loser_tree_1_fu_920">loser_tree_1, 3000071, 3000071, 0.207 sec, 0.207 sec, 3000071, 3000071, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

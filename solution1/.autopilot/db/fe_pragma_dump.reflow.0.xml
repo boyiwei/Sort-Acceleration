@@ -1,25 +1,12 @@
 <pragmas>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="76" pragmaType="dataflow" parentfunction="multi_radix_oct_kmerge" disable_start_propagation="0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="104" pragmaType="unroll" parentfunction="multi_radix_oct_kmerge" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="99" pragmaType="unroll" parentfunction="multi_radix_oct_kmerge" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="94" pragmaType="unroll" parentfunction="multi_radix_oct_kmerge" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="89" pragmaType="unroll" parentfunction="multi_radix_oct_kmerge" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="84" pragmaType="unroll" parentfunction="multi_radix_oct_kmerge" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="79" pragmaType="unroll" parentfunction="multi_radix_oct_kmerge" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="67" pragmaType="array_partition" parentfunction="multi_radix_oct_kmerge" dim="1" factor="0" mode="complete" dynamic="0" variable="input"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="68" pragmaType="array_partition" parentfunction="multi_radix_oct_kmerge" dim="1" factor="0" mode="complete" dynamic="0" variable="multi_radix_oct_kmerge.temp0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="69" pragmaType="array_partition" parentfunction="multi_radix_oct_kmerge" dim="1" factor="0" mode="complete" dynamic="0" variable="multi_radix_oct_kmerge.temp1"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="70" pragmaType="array_partition" parentfunction="multi_radix_oct_kmerge" dim="1" factor="0" mode="complete" dynamic="0" variable="multi_radix_oct_kmerge.temp2"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="71" pragmaType="array_partition" parentfunction="multi_radix_oct_kmerge" dim="1" factor="0" mode="complete" dynamic="0" variable="multi_radix_oct_kmerge.temp3"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="72" pragmaType="array_partition" parentfunction="multi_radix_oct_kmerge" dim="1" factor="0" mode="complete" dynamic="0" variable="multi_radix_oct_kmerge.temp4"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="73" pragmaType="array_partition" parentfunction="multi_radix_oct_kmerge" dim="1" factor="0" mode="complete" dynamic="0" variable="multi_radix_oct_kmerge.temp5"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="100" pragmaType="pipeline" parentfunction="merge_sort_batch0" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="128" pragmaType="pipeline" parentfunction="merge_sort_batch1" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="156" pragmaType="pipeline" parentfunction="merge_sort_batch2" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="184" pragmaType="pipeline" parentfunction="merge_sort_batch3" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="212" pragmaType="pipeline" parentfunction="merge_sort_batch4" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="240" pragmaType="pipeline" parentfunction="merge_sort_batch5" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="14" pragmaType="array_partition" parentfunction="radix_sort_oct_batch" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_pointer"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="15" pragmaType="array_partition" parentfunction="radix_sort_oct_batch" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_sizes"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="29" pragmaType="loop_merge" parentfunction="radix_sort_oct_batch" force="0"/>
+<pragma file="sort_seperate_bucket/merge_sort.c" line="283" pragmaType="pipeline" parentfunction="loser_tree" off="0" ii="1" rewind="0" style=""/>
+<pragma file="sort_seperate_bucket/merge_sort.c" line="289" pragmaType="unroll" parentfunction="loser_tree" factor="-1" skip_exit_check="0"/>
+<pragma file="sort_seperate_bucket/merge_sort.c" line="277" pragmaType="unroll" parentfunction="loser_tree" factor="-1" skip_exit_check="0"/>
+<pragma file="sort_seperate_bucket/multi_radix_hex_kmerge.c" line="14" pragmaType="array_partition" parentfunction="radix_sort_hex_batch" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_pointer"/>
+<pragma file="sort_seperate_bucket/multi_radix_hex_kmerge.c" line="15" pragmaType="array_partition" parentfunction="radix_sort_hex_batch" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_sizes"/>
+<pragma file="sort_seperate_bucket/multi_radix_hex_kmerge.c" line="29" pragmaType="loop_merge" parentfunction="radix_sort_hex_batch" force="0"/>
+<pragma file="sort_seperate_bucket/multi_radix_hex_loser.c" line="13" pragmaType="dataflow" parentfunction="multi_radix_hex_loser" disable_start_propagation="0"/>
+<pragma file="sort_seperate_bucket/multi_radix_hex_loser.c" line="16" pragmaType="unroll" parentfunction="multi_radix_hex_loser" factor="-1" skip_exit_check="0"/>
+<pragma file="sort_seperate_bucket/multi_radix_hex_loser.c" line="9" pragmaType="array_partition" parentfunction="multi_radix_hex_loser" dim="1" factor="0" mode="complete" dynamic="0" variable="input"/>
+<pragma file="sort_seperate_bucket/multi_radix_hex_loser.c" line="10" pragmaType="array_partition" parentfunction="multi_radix_hex_loser" dim="1" factor="0" mode="complete" dynamic="0" variable="multi_radix_hex_loser.temp0"/>
 </pragmas>

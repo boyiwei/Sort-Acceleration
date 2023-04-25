@@ -3,10 +3,10 @@ MainSourceFile:  /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge
 Diagnostics:     
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
-    FileOffset:      '76:9'
+    FileOffset:      '82:9'
     FilePath:        sort_seperate_bucket/merge_sort.c
   - DiagnosticName:  clang-diagnostic-warning
     Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
-    FileOffset:      '76:9'
+    FileOffset:      '82:9'
     FilePath:        sort_seperate_bucket/merge_sort.c
 ...

@@ -1,8 +1,14 @@
 #include <stdio.h>
-#include "batch_size.h"
+#include "dataset_size.h"
 #include "merge_sort.h"
 #include "assert.h"
 #define STAGES 24
+#define MAX_VALUE 2147483647
+
+struct data_index_pair{
+    int data;
+    int index;
+};
 
 void merge_sort(int input1[batch_size], int input2[batch_size], int sorted_data[2*batch_size]){
 	int j = 0;
@@ -259,5 +265,46 @@ void merge_sort_batch5(int input1[32*batch_size], int input2[32*batch_size], int
         }
     }
 }
+
+// ---------------------------functions for loser_tree-------------------------------------
+
+
+void loser_tree(int input[64][batch_size], int output[64 * batch_size]) {
+    struct data_index_pair loser_tree[64];
+    int current_indices[64] = {0};
+    int i;
+    for (i = 0; i < 64; i++) {
+#pragma HLS UNROLL
+        loser_tree[i].data = input[i][0];
+        loser_tree[i].index = i;
+    }
+
+    for (i = 0; i < 64 * batch_size; i++) {
+#pragma HLS PIPELINE II=1
+
+        int winner_index = 0;
+        int winner_value = MAX_VALUE;
+
+        for (int j = 0; j < 64; j++) {
+#pragma HLS UNROLL
+            if (loser_tree[j].data < winner_value) {
+                winner_value = loser_tree[j].data;
+                winner_index = j;
+            }
+        }
+
+        output[i] = winner_value;
+
+        int input_index = loser_tree[winner_index].index;
+        current_indices[input_index]++;
+
+        if (current_indices[input_index] < batch_size) {
+            loser_tree[winner_index].data = input[input_index][current_indices[input_index]];
+        } else {
+            loser_tree[winner_index].data = MAX_VALUE;
+        }
+    }
+}
+
 
 

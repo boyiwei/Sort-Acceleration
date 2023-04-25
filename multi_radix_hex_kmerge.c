@@ -6,7 +6,7 @@
 #define bit_width_hex bit_width_bin/4
 
 
-void radix_sort_batch(int input[batch_size], int output[batch_size]){
+void radix_sort_hex_batch(int input[batch_size], int output[batch_size]){
     int bucket[2][batch_size]; // a unified ping-pong bucket.
     int bucket_pointer[16];
     int bucket_sizes[16] = {0};
@@ -77,7 +77,7 @@ void multi_radix_hex_kmerge(int input[64][batch_size], int output[dataset_size])
 
     for(i=0; i<64; i++){
 #pragma HLS UNROLL
-        radix_sort_batch(input[i], temp0[i]);
+        radix_sort_hex_batch(input[i], temp0[i]);
     }
 
     for(i=0; i<32; i++){

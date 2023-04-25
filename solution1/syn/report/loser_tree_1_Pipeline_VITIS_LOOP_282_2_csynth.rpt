@@ -1,0 +1,849 @@
+
+
+================================================================
+== Vitis HLS Report for 'loser_tree_1_Pipeline_VITIS_LOOP_282_2'
+================================================================
+* Date:           Mon Apr 24 22:46:01 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sort_seperate_bucket
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  10.00 ns|  69.151 ns|     2.70 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  3000002|  3000002|  0.207 sec|  0.207 sec|  3000002|  3000002|       no|
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_282_2  |  3000000|  3000000|         4|          3|          1|  1000000|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|     3810|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|      273|    -|
+|Memory               |        0|     -|        8|        9|    -|
+|Multiplexer          |        -|     -|        -|     1569|    -|
+|Register             |        -|     -|     2276|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     2284|     5661|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------+----------------+---------+----+---+-----+-----+
+    |        Instance       |     Module     | BRAM_18K| DSP| FF| LUT | URAM|
+    +-----------------------+----------------+---------+----+---+-----+-----+
+    |mux_646_32_1_1_U12356  |mux_646_32_1_1  |        0|   0|  0|  273|    0|
+    +-----------------------+----------------+---------+----+---+-----+-----+
+    |Total                  |                |        0|   0|  0|  273|    0|
+    +-----------------------+----------------+---------+----+---+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------------------+---------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |       Memory       |                                Module                               | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------------------+---------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |loser_tree_index_U  |loser_tree_1_Pipeline_VITIS_LOOP_282_2_loser_tree_index_ROM_AUTO_1R  |        0|  8|   9|    0|    64|    6|     1|          384|
+    +--------------------+---------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total               |                                                                     |        0|  8|   9|    0|    64|    6|     1|          384|
+    +--------------------+---------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |        Variable Name        | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |add_ln282_fu_2357_p2         |         +|   0|  0|  27|          20|           1|
+    |add_ln299_fu_4180_p2         |         +|   0|  0|  39|          32|           1|
+    |addr_cmp_fu_4159_p2          |      icmp|   0|  0|  29|          64|          64|
+    |icmp_ln282_fu_2351_p2        |      icmp|   0|  0|  14|          20|          17|
+    |icmp_ln290_10_fu_2831_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_11_fu_2845_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_12_fu_2881_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_13_fu_2895_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_14_fu_2935_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_15_fu_2949_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_16_fu_2985_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_17_fu_2999_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_18_fu_3035_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_19_fu_3049_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_1_fu_2587_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_20_fu_3085_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_21_fu_3099_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_22_fu_3135_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_23_fu_3149_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_24_fu_3185_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_25_fu_3199_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_26_fu_3235_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_27_fu_3249_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_28_fu_3285_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_29_fu_3299_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_2_fu_2627_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_30_fu_3339_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_31_fu_3353_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_32_fu_3389_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_33_fu_3403_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_34_fu_3439_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_35_fu_3453_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_36_fu_3489_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_37_fu_3503_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_38_fu_3539_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_39_fu_3553_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_3_fu_2641_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_40_fu_3589_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_41_fu_3603_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_42_fu_3639_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_43_fu_3653_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_44_fu_3689_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_45_fu_3703_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_46_fu_3739_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_47_fu_3753_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_48_fu_3789_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_49_fu_3803_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_4_fu_2677_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_50_fu_3839_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_51_fu_3853_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_52_fu_3889_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_53_fu_3903_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_54_fu_3939_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_55_fu_3953_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_56_fu_3989_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_57_fu_4003_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_58_fu_4039_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_59_fu_4053_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_5_fu_2691_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_60_fu_4089_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_61_fu_4103_p2     |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_6_fu_2731_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_7_fu_2745_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_8_fu_2781_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_9_fu_2795_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln290_fu_2573_p2        |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln301_fu_4192_p2        |      icmp|   0|  0|  20|          32|          14|
+    |winner_index_fu_2555_p2      |      icmp|   0|  0|  20|          32|          32|
+    |or_ln290_10_fu_3113_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_11_fu_3163_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_12_fu_3213_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_13_fu_3263_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_14_fu_3313_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_15_fu_3367_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_16_fu_3417_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_17_fu_3467_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_18_fu_3517_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_19_fu_3567_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_1_fu_2655_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln290_20_fu_3617_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_21_fu_3667_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_22_fu_3717_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_23_fu_3767_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_24_fu_3817_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_25_fu_3867_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_26_fu_3917_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_27_fu_3967_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_28_fu_4017_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_29_fu_4067_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_2_fu_2705_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln290_30_fu_4117_p2       |        or|   0|  0|   2|           1|           1|
+    |or_ln290_3_fu_2759_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln290_4_fu_2809_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln290_5_fu_2859_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln290_6_fu_2909_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln290_7_fu_2963_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln290_8_fu_3013_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln290_9_fu_3063_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln290_fu_2601_p2          |        or|   0|  0|   2|           1|           1|
+    |output_r_d0                  |    select|   0|  0|  32|           1|          32|
+    |reuse_select_fu_4173_p3      |    select|   0|  0|  32|           1|          32|
+    |select_ln290_102_fu_3859_p3  |    select|   0|  0|   5|           1|           5|
+    |select_ln290_106_fu_3909_p3  |    select|   0|  0|   5|           1|           5|
+    |select_ln290_10_fu_2697_p3   |    select|   0|  0|   3|           1|           2|
+    |select_ln290_110_fu_3959_p3  |    select|   0|  0|   5|           1|           4|
+    |select_ln290_114_fu_4009_p3  |    select|   0|  0|   4|           1|           4|
+    |select_ln290_118_fu_4059_p3  |    select|   0|  0|   4|           1|           3|
+    |select_ln290_122_fu_4109_p3  |    select|   0|  0|   3|           1|           2|
+    |select_ln290_12_fu_2751_p3   |    select|   0|  0|   5|           1|           4|
+    |select_ln290_16_fu_2801_p3   |    select|   0|  0|   4|           1|           4|
+    |select_ln290_22_fu_2851_p3   |    select|   0|  0|   4|           1|           3|
+    |select_ln290_26_fu_2901_p3   |    select|   0|  0|   3|           1|           2|
+    |select_ln290_28_fu_2955_p3   |    select|   0|  0|   6|           1|           5|
+    |select_ln290_32_fu_3005_p3   |    select|   0|  0|   5|           1|           5|
+    |select_ln290_36_fu_3055_p3   |    select|   0|  0|   5|           1|           5|
+    |select_ln290_40_fu_3105_p3   |    select|   0|  0|   5|           1|           5|
+    |select_ln290_46_fu_3155_p3   |    select|   0|  0|   5|           1|           4|
+    |select_ln290_4_fu_2647_p3    |    select|   0|  0|   4|           1|           3|
+    |select_ln290_50_fu_3205_p3   |    select|   0|  0|   4|           1|           4|
+    |select_ln290_54_fu_3255_p3   |    select|   0|  0|   4|           1|           3|
+    |select_ln290_58_fu_3305_p3   |    select|   0|  0|   3|           1|           2|
+    |select_ln290_60_fu_3359_p3   |    select|   0|  0|   7|           1|           6|
+    |select_ln290_64_fu_3409_p3   |    select|   0|  0|   6|           1|           6|
+    |select_ln290_68_fu_3459_p3   |    select|   0|  0|   6|           1|           6|
+    |select_ln290_72_fu_3509_p3   |    select|   0|  0|   6|           1|           6|
+    |select_ln290_76_fu_3559_p3   |    select|   0|  0|   6|           1|           6|
+    |select_ln290_80_fu_3609_p3   |    select|   0|  0|   6|           1|           6|
+    |select_ln290_84_fu_3659_p3   |    select|   0|  0|   6|           1|           6|
+    |select_ln290_88_fu_3709_p3   |    select|   0|  0|   6|           1|           6|
+    |select_ln290_94_fu_3759_p3   |    select|   0|  0|   6|           1|           5|
+    |select_ln290_98_fu_3809_p3   |    select|   0|  0|   5|           1|           5|
+    |select_ln290_fu_2593_p3      |    select|   0|  0|   3|           1|           2|
+    |winner_index_10_fu_3069_p3   |    select|   0|  0|   5|           1|           5|
+    |winner_index_11_fu_3119_p3   |    select|   0|  0|   5|           1|           5|
+    |winner_index_12_fu_3169_p3   |    select|   0|  0|   5|           1|           5|
+    |winner_index_13_fu_3219_p3   |    select|   0|  0|   5|           1|           5|
+    |winner_index_14_fu_3269_p3   |    select|   0|  0|   5|           1|           5|
+    |winner_index_15_fu_3319_p3   |    select|   0|  0|   5|           1|           5|
+    |winner_index_16_fu_3373_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_17_fu_3423_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_18_fu_3473_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_19_fu_3523_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_1_fu_2607_p3    |    select|   0|  0|   2|           1|           2|
+    |winner_index_20_fu_3573_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_21_fu_3623_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_22_fu_3673_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_23_fu_3723_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_24_fu_3773_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_25_fu_3823_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_26_fu_3873_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_27_fu_3923_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_28_fu_3973_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_29_fu_4023_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_2_fu_2661_p3    |    select|   0|  0|   3|           1|           3|
+    |winner_index_30_fu_4073_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_31_fu_4123_p3   |    select|   0|  0|   6|           1|           6|
+    |winner_index_3_fu_2711_p3    |    select|   0|  0|   3|           1|           3|
+    |winner_index_4_fu_2765_p3    |    select|   0|  0|   4|           1|           4|
+    |winner_index_5_fu_2815_p3    |    select|   0|  0|   4|           1|           4|
+    |winner_index_6_fu_2865_p3    |    select|   0|  0|   4|           1|           4|
+    |winner_index_7_fu_2915_p3    |    select|   0|  0|   4|           1|           4|
+    |winner_index_8_fu_2969_p3    |    select|   0|  0|   5|           1|           5|
+    |winner_index_9_fu_3019_p3    |    select|   0|  0|   5|           1|           5|
+    |winner_value_127_fu_2565_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_128_fu_2579_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_129_fu_2619_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_130_fu_2633_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_131_fu_2669_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_132_fu_2683_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_133_fu_2723_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_134_fu_2737_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_135_fu_2773_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_136_fu_2787_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_137_fu_2823_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_138_fu_2837_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_139_fu_2873_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_140_fu_2887_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_141_fu_2927_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_142_fu_2941_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_143_fu_2977_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_144_fu_2991_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_145_fu_3027_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_146_fu_3041_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_147_fu_3077_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_148_fu_3091_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_149_fu_3127_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_150_fu_3141_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_151_fu_3177_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_152_fu_3191_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_153_fu_3227_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_154_fu_3241_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_155_fu_3277_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_156_fu_3291_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_157_fu_3331_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_158_fu_3345_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_159_fu_3381_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_160_fu_3395_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_161_fu_3431_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_162_fu_3445_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_163_fu_3481_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_164_fu_3495_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_165_fu_3531_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_166_fu_3545_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_167_fu_3581_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_168_fu_3595_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_169_fu_3631_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_170_fu_3645_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_171_fu_3681_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_172_fu_3695_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_173_fu_3731_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_174_fu_3745_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_175_fu_3781_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_176_fu_3795_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_177_fu_3831_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_178_fu_3845_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_179_fu_3881_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_180_fu_3895_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_181_fu_3931_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_182_fu_3945_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_183_fu_3981_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_184_fu_3995_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_185_fu_4031_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_186_fu_4045_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_187_fu_4081_p3  |    select|   0|  0|  32|           1|          32|
+    |winner_value_188_fu_4095_p3  |    select|   0|  0|  32|           1|          32|
+    |ap_enable_pp0                |       xor|   0|  0|   2|           1|           2|
+    +-----------------------------+----------+----+---+----+------------+------------+
+    |Total                        |          |   0|  0|3810|        2342|        4488|
+    +-----------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  20|          4|    1|          4|
+    |ap_done_int                             |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0                 |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0_reg             |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1                 |   9|          2|    1|          2|
+    |ap_sig_allocacmp_winner_value_101_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_103_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_105_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_107_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_109_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_111_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_113_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_115_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_117_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_119_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_11_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_121_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_123_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_125_load  |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_13_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_15_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_17_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_19_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_1_load    |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_21_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_23_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_25_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_27_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_29_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_31_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_33_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_35_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_37_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_39_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_3_load    |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_41_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_43_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_45_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_47_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_49_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_51_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_53_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_55_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_57_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_59_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_5_load    |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_61_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_63_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_65_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_67_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_69_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_71_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_73_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_75_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_77_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_79_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_7_load    |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_81_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_83_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_85_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_87_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_89_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_91_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_93_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_95_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_97_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_99_load   |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_9_load    |   9|          2|   32|         64|
+    |ap_sig_allocacmp_winner_value_load      |   9|          2|   32|         64|
+    |current_indices_address0                |  14|          3|    6|         18|
+    |i_fu_498                                |   9|          2|   20|         40|
+    |reuse_addr_reg_fu_490                   |   9|          2|   64|        128|
+    |reuse_reg_fu_494                        |   9|          2|   32|         64|
+    |winner_value_101_fu_706                 |  14|          3|   32|         96|
+    |winner_value_103_fu_710                 |  14|          3|   32|         96|
+    |winner_value_105_fu_714                 |  14|          3|   32|         96|
+    |winner_value_107_fu_718                 |  14|          3|   32|         96|
+    |winner_value_109_fu_722                 |  14|          3|   32|         96|
+    |winner_value_111_fu_726                 |  14|          3|   32|         96|
+    |winner_value_113_fu_730                 |  14|          3|   32|         96|
+    |winner_value_115_fu_734                 |  14|          3|   32|         96|
+    |winner_value_117_fu_738                 |  14|          3|   32|         96|
+    |winner_value_119_fu_742                 |  14|          3|   32|         96|
+    |winner_value_11_fu_526                  |  14|          3|   32|         96|
+    |winner_value_121_fu_746                 |  14|          3|   32|         96|
+    |winner_value_123_fu_750                 |  14|          3|   32|         96|
+    |winner_value_125_fu_754                 |  14|          3|   32|         96|
+    |winner_value_13_fu_530                  |  14|          3|   32|         96|
+    |winner_value_15_fu_534                  |  14|          3|   32|         96|
+    |winner_value_17_fu_538                  |  14|          3|   32|         96|
+    |winner_value_19_fu_542                  |  14|          3|   32|         96|
+    |winner_value_1_fu_506                   |  14|          3|   32|         96|
+    |winner_value_21_fu_546                  |  14|          3|   32|         96|
+    |winner_value_23_fu_550                  |  14|          3|   32|         96|
+    |winner_value_25_fu_554                  |  14|          3|   32|         96|
+    |winner_value_27_fu_558                  |  14|          3|   32|         96|
+    |winner_value_29_fu_562                  |  14|          3|   32|         96|
+    |winner_value_31_fu_566                  |  14|          3|   32|         96|
+    |winner_value_33_fu_570                  |  14|          3|   32|         96|
+    |winner_value_35_fu_574                  |  14|          3|   32|         96|
+    |winner_value_37_fu_578                  |  14|          3|   32|         96|
+    |winner_value_39_fu_582                  |  14|          3|   32|         96|
+    |winner_value_3_fu_510                   |  14|          3|   32|         96|
+    |winner_value_41_fu_586                  |  14|          3|   32|         96|
+    |winner_value_43_fu_590                  |  14|          3|   32|         96|
+    |winner_value_45_fu_594                  |  14|          3|   32|         96|
+    |winner_value_47_fu_598                  |  14|          3|   32|         96|
+    |winner_value_49_fu_602                  |  14|          3|   32|         96|
+    |winner_value_51_fu_606                  |  14|          3|   32|         96|
+    |winner_value_53_fu_610                  |  14|          3|   32|         96|
+    |winner_value_55_fu_614                  |  14|          3|   32|         96|
+    |winner_value_57_fu_618                  |  14|          3|   32|         96|
+    |winner_value_59_fu_622                  |  14|          3|   32|         96|
+    |winner_value_5_fu_514                   |  14|          3|   32|         96|
+    |winner_value_61_fu_626                  |  14|          3|   32|         96|
+    |winner_value_63_fu_630                  |  14|          3|   32|         96|
+    |winner_value_65_fu_634                  |  14|          3|   32|         96|
+    |winner_value_67_fu_638                  |  14|          3|   32|         96|
+    |winner_value_69_fu_642                  |  14|          3|   32|         96|
+    |winner_value_71_fu_646                  |  14|          3|   32|         96|
+    |winner_value_73_fu_650                  |  14|          3|   32|         96|
+    |winner_value_75_fu_654                  |  14|          3|   32|         96|
+    |winner_value_77_fu_658                  |  14|          3|   32|         96|
+    |winner_value_79_fu_662                  |  14|          3|   32|         96|
+    |winner_value_7_fu_518                   |  14|          3|   32|         96|
+    |winner_value_81_fu_666                  |  14|          3|   32|         96|
+    |winner_value_83_fu_670                  |  14|          3|   32|         96|
+    |winner_value_85_fu_674                  |  14|          3|   32|         96|
+    |winner_value_87_fu_678                  |  14|          3|   32|         96|
+    |winner_value_89_fu_682                  |  14|          3|   32|         96|
+    |winner_value_91_fu_686                  |  14|          3|   32|         96|
+    |winner_value_93_fu_690                  |  14|          3|   32|         96|
+    |winner_value_95_fu_694                  |  14|          3|   32|         96|
+    |winner_value_97_fu_698                  |  14|          3|   32|         96|
+    |winner_value_99_fu_702                  |  14|          3|   32|         96|
+    |winner_value_9_fu_522                   |  14|          3|   32|         96|
+    |winner_value_fu_502                     |  14|          3|   32|         96|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   |1569|        341| 4223|      10502|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------+----+----+-----+-----------+
+    |              Name              | FF | LUT| Bits| Const Bits|
+    +--------------------------------+----+----+-----+-----------+
+    |addr_cmp_reg_5615               |   1|   0|    1|          0|
+    |ap_CS_fsm                       |   3|   0|    3|          0|
+    |ap_done_reg                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1         |   1|   0|    1|          0|
+    |current_indices_addr_reg_5610   |   6|   0|    6|          0|
+    |i_129_reg_5572                  |  20|   0|   20|          0|
+    |i_fu_498                        |  20|   0|   20|          0|
+    |icmp_ln282_reg_5577             |   1|   0|    1|          0|
+    |icmp_ln290_61_reg_5591          |   1|   0|    1|          0|
+    |icmp_ln301_reg_5620             |   1|   0|    1|          0|
+    |input_index_reg_5605            |   6|   0|    6|          0|
+    |reuse_addr_reg_fu_490           |  64|   0|   64|          0|
+    |reuse_reg_fu_494                |  32|   0|   32|          0|
+    |winner_index_31_reg_5596        |   6|   0|    6|          0|
+    |winner_value_101_fu_706         |  32|   0|   32|          0|
+    |winner_value_103_fu_710         |  32|   0|   32|          0|
+    |winner_value_105_fu_714         |  32|   0|   32|          0|
+    |winner_value_107_fu_718         |  32|   0|   32|          0|
+    |winner_value_109_fu_722         |  32|   0|   32|          0|
+    |winner_value_111_fu_726         |  32|   0|   32|          0|
+    |winner_value_113_fu_730         |  32|   0|   32|          0|
+    |winner_value_115_fu_734         |  32|   0|   32|          0|
+    |winner_value_117_fu_738         |  32|   0|   32|          0|
+    |winner_value_119_fu_742         |  32|   0|   32|          0|
+    |winner_value_11_fu_526          |  32|   0|   32|          0|
+    |winner_value_121_fu_746         |  32|   0|   32|          0|
+    |winner_value_123_fu_750         |  32|   0|   32|          0|
+    |winner_value_125_fu_754         |  32|   0|   32|          0|
+    |winner_value_125_load_reg_5581  |  32|   0|   32|          0|
+    |winner_value_13_fu_530          |  32|   0|   32|          0|
+    |winner_value_15_fu_534          |  32|   0|   32|          0|
+    |winner_value_17_fu_538          |  32|   0|   32|          0|
+    |winner_value_188_reg_5586       |  32|   0|   32|          0|
+    |winner_value_19_fu_542          |  32|   0|   32|          0|
+    |winner_value_1_fu_506           |  32|   0|   32|          0|
+    |winner_value_21_fu_546          |  32|   0|   32|          0|
+    |winner_value_23_fu_550          |  32|   0|   32|          0|
+    |winner_value_25_fu_554          |  32|   0|   32|          0|
+    |winner_value_27_fu_558          |  32|   0|   32|          0|
+    |winner_value_29_fu_562          |  32|   0|   32|          0|
+    |winner_value_31_fu_566          |  32|   0|   32|          0|
+    |winner_value_33_fu_570          |  32|   0|   32|          0|
+    |winner_value_35_fu_574          |  32|   0|   32|          0|
+    |winner_value_37_fu_578          |  32|   0|   32|          0|
+    |winner_value_39_fu_582          |  32|   0|   32|          0|
+    |winner_value_3_fu_510           |  32|   0|   32|          0|
+    |winner_value_41_fu_586          |  32|   0|   32|          0|
+    |winner_value_43_fu_590          |  32|   0|   32|          0|
+    |winner_value_45_fu_594          |  32|   0|   32|          0|
+    |winner_value_47_fu_598          |  32|   0|   32|          0|
+    |winner_value_49_fu_602          |  32|   0|   32|          0|
+    |winner_value_51_fu_606          |  32|   0|   32|          0|
+    |winner_value_53_fu_610          |  32|   0|   32|          0|
+    |winner_value_55_fu_614          |  32|   0|   32|          0|
+    |winner_value_57_fu_618          |  32|   0|   32|          0|
+    |winner_value_59_fu_622          |  32|   0|   32|          0|
+    |winner_value_5_fu_514           |  32|   0|   32|          0|
+    |winner_value_61_fu_626          |  32|   0|   32|          0|
+    |winner_value_63_fu_630          |  32|   0|   32|          0|
+    |winner_value_65_fu_634          |  32|   0|   32|          0|
+    |winner_value_67_fu_638          |  32|   0|   32|          0|
+    |winner_value_69_fu_642          |  32|   0|   32|          0|
+    |winner_value_71_fu_646          |  32|   0|   32|          0|
+    |winner_value_73_fu_650          |  32|   0|   32|          0|
+    |winner_value_75_fu_654          |  32|   0|   32|          0|
+    |winner_value_77_fu_658          |  32|   0|   32|          0|
+    |winner_value_79_fu_662          |  32|   0|   32|          0|
+    |winner_value_7_fu_518           |  32|   0|   32|          0|
+    |winner_value_81_fu_666          |  32|   0|   32|          0|
+    |winner_value_83_fu_670          |  32|   0|   32|          0|
+    |winner_value_85_fu_674          |  32|   0|   32|          0|
+    |winner_value_87_fu_678          |  32|   0|   32|          0|
+    |winner_value_89_fu_682          |  32|   0|   32|          0|
+    |winner_value_91_fu_686          |  32|   0|   32|          0|
+    |winner_value_93_fu_690          |  32|   0|   32|          0|
+    |winner_value_95_fu_694          |  32|   0|   32|          0|
+    |winner_value_97_fu_698          |  32|   0|   32|          0|
+    |winner_value_99_fu_702          |  32|   0|   32|          0|
+    |winner_value_9_fu_522           |  32|   0|   32|          0|
+    |winner_value_fu_502             |  32|   0|   32|          0|
+    +--------------------------------+----+----+-----+-----------+
+    |Total                           |2276|   0| 2276|          0|
+    +--------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------+-----+-----+------------+----------------------------------------+--------------+
+|                RTL Ports                | Dir | Bits|  Protocol  |              Source Object             |    C Type    |
++-----------------------------------------+-----+-----+------------+----------------------------------------+--------------+
+|ap_clk                                   |   in|    1|  ap_ctrl_hs|  loser_tree.1_Pipeline_VITIS_LOOP_282_2|  return value|
+|ap_rst                                   |   in|    1|  ap_ctrl_hs|  loser_tree.1_Pipeline_VITIS_LOOP_282_2|  return value|
+|ap_start                                 |   in|    1|  ap_ctrl_hs|  loser_tree.1_Pipeline_VITIS_LOOP_282_2|  return value|
+|ap_done                                  |  out|    1|  ap_ctrl_hs|  loser_tree.1_Pipeline_VITIS_LOOP_282_2|  return value|
+|ap_idle                                  |  out|    1|  ap_ctrl_hs|  loser_tree.1_Pipeline_VITIS_LOOP_282_2|  return value|
+|ap_ready                                 |  out|    1|  ap_ctrl_hs|  loser_tree.1_Pipeline_VITIS_LOOP_282_2|  return value|
+|loser_tree_data_63                       |   in|   32|     ap_none|                      loser_tree_data_63|        scalar|
+|loser_tree_data_62                       |   in|   32|     ap_none|                      loser_tree_data_62|        scalar|
+|loser_tree_data_61                       |   in|   32|     ap_none|                      loser_tree_data_61|        scalar|
+|loser_tree_data_60                       |   in|   32|     ap_none|                      loser_tree_data_60|        scalar|
+|loser_tree_data_59                       |   in|   32|     ap_none|                      loser_tree_data_59|        scalar|
+|loser_tree_data_58                       |   in|   32|     ap_none|                      loser_tree_data_58|        scalar|
+|loser_tree_data_57                       |   in|   32|     ap_none|                      loser_tree_data_57|        scalar|
+|loser_tree_data_56                       |   in|   32|     ap_none|                      loser_tree_data_56|        scalar|
+|loser_tree_data_55                       |   in|   32|     ap_none|                      loser_tree_data_55|        scalar|
+|loser_tree_data_54                       |   in|   32|     ap_none|                      loser_tree_data_54|        scalar|
+|loser_tree_data_53                       |   in|   32|     ap_none|                      loser_tree_data_53|        scalar|
+|loser_tree_data_52                       |   in|   32|     ap_none|                      loser_tree_data_52|        scalar|
+|loser_tree_data_51                       |   in|   32|     ap_none|                      loser_tree_data_51|        scalar|
+|loser_tree_data_50                       |   in|   32|     ap_none|                      loser_tree_data_50|        scalar|
+|loser_tree_data_49                       |   in|   32|     ap_none|                      loser_tree_data_49|        scalar|
+|loser_tree_data_48                       |   in|   32|     ap_none|                      loser_tree_data_48|        scalar|
+|loser_tree_data_47                       |   in|   32|     ap_none|                      loser_tree_data_47|        scalar|
+|loser_tree_data_46                       |   in|   32|     ap_none|                      loser_tree_data_46|        scalar|
+|loser_tree_data_45                       |   in|   32|     ap_none|                      loser_tree_data_45|        scalar|
+|loser_tree_data_44                       |   in|   32|     ap_none|                      loser_tree_data_44|        scalar|
+|loser_tree_data_43                       |   in|   32|     ap_none|                      loser_tree_data_43|        scalar|
+|loser_tree_data_42                       |   in|   32|     ap_none|                      loser_tree_data_42|        scalar|
+|loser_tree_data_41                       |   in|   32|     ap_none|                      loser_tree_data_41|        scalar|
+|loser_tree_data_40                       |   in|   32|     ap_none|                      loser_tree_data_40|        scalar|
+|loser_tree_data_39                       |   in|   32|     ap_none|                      loser_tree_data_39|        scalar|
+|loser_tree_data_38                       |   in|   32|     ap_none|                      loser_tree_data_38|        scalar|
+|loser_tree_data_37                       |   in|   32|     ap_none|                      loser_tree_data_37|        scalar|
+|loser_tree_data_36                       |   in|   32|     ap_none|                      loser_tree_data_36|        scalar|
+|loser_tree_data_35                       |   in|   32|     ap_none|                      loser_tree_data_35|        scalar|
+|loser_tree_data_34                       |   in|   32|     ap_none|                      loser_tree_data_34|        scalar|
+|loser_tree_data_33                       |   in|   32|     ap_none|                      loser_tree_data_33|        scalar|
+|loser_tree_data_32                       |   in|   32|     ap_none|                      loser_tree_data_32|        scalar|
+|loser_tree_data_31                       |   in|   32|     ap_none|                      loser_tree_data_31|        scalar|
+|loser_tree_data_30                       |   in|   32|     ap_none|                      loser_tree_data_30|        scalar|
+|loser_tree_data_29                       |   in|   32|     ap_none|                      loser_tree_data_29|        scalar|
+|loser_tree_data_28                       |   in|   32|     ap_none|                      loser_tree_data_28|        scalar|
+|loser_tree_data_27                       |   in|   32|     ap_none|                      loser_tree_data_27|        scalar|
+|loser_tree_data_26                       |   in|   32|     ap_none|                      loser_tree_data_26|        scalar|
+|loser_tree_data_25                       |   in|   32|     ap_none|                      loser_tree_data_25|        scalar|
+|loser_tree_data_24                       |   in|   32|     ap_none|                      loser_tree_data_24|        scalar|
+|loser_tree_data_23                       |   in|   32|     ap_none|                      loser_tree_data_23|        scalar|
+|loser_tree_data_22                       |   in|   32|     ap_none|                      loser_tree_data_22|        scalar|
+|loser_tree_data_21                       |   in|   32|     ap_none|                      loser_tree_data_21|        scalar|
+|loser_tree_data_20                       |   in|   32|     ap_none|                      loser_tree_data_20|        scalar|
+|loser_tree_data_19                       |   in|   32|     ap_none|                      loser_tree_data_19|        scalar|
+|loser_tree_data_18                       |   in|   32|     ap_none|                      loser_tree_data_18|        scalar|
+|loser_tree_data_17                       |   in|   32|     ap_none|                      loser_tree_data_17|        scalar|
+|loser_tree_data_16                       |   in|   32|     ap_none|                      loser_tree_data_16|        scalar|
+|loser_tree_data_15                       |   in|   32|     ap_none|                      loser_tree_data_15|        scalar|
+|loser_tree_data_14                       |   in|   32|     ap_none|                      loser_tree_data_14|        scalar|
+|loser_tree_data_13                       |   in|   32|     ap_none|                      loser_tree_data_13|        scalar|
+|loser_tree_data_12                       |   in|   32|     ap_none|                      loser_tree_data_12|        scalar|
+|loser_tree_data_11                       |   in|   32|     ap_none|                      loser_tree_data_11|        scalar|
+|loser_tree_data_10                       |   in|   32|     ap_none|                      loser_tree_data_10|        scalar|
+|loser_tree_data_9                        |   in|   32|     ap_none|                       loser_tree_data_9|        scalar|
+|loser_tree_data_8                        |   in|   32|     ap_none|                       loser_tree_data_8|        scalar|
+|loser_tree_data_7                        |   in|   32|     ap_none|                       loser_tree_data_7|        scalar|
+|loser_tree_data_6                        |   in|   32|     ap_none|                       loser_tree_data_6|        scalar|
+|loser_tree_data_5                        |   in|   32|     ap_none|                       loser_tree_data_5|        scalar|
+|loser_tree_data_4                        |   in|   32|     ap_none|                       loser_tree_data_4|        scalar|
+|loser_tree_data_3                        |   in|   32|     ap_none|                       loser_tree_data_3|        scalar|
+|loser_tree_data_2                        |   in|   32|     ap_none|                       loser_tree_data_2|        scalar|
+|loser_tree_data_1                        |   in|   32|     ap_none|                       loser_tree_data_1|        scalar|
+|loser_tree_data                          |   in|   32|     ap_none|                         loser_tree_data|        scalar|
+|multi_radix_hex_loser_temp0_0_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_0|         array|
+|multi_radix_hex_loser_temp0_0_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_0|         array|
+|multi_radix_hex_loser_temp0_0_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_0|         array|
+|multi_radix_hex_loser_temp0_1_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_1|         array|
+|multi_radix_hex_loser_temp0_1_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_1|         array|
+|multi_radix_hex_loser_temp0_1_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_1|         array|
+|multi_radix_hex_loser_temp0_2_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_2|         array|
+|multi_radix_hex_loser_temp0_2_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_2|         array|
+|multi_radix_hex_loser_temp0_2_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_2|         array|
+|multi_radix_hex_loser_temp0_3_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_3|         array|
+|multi_radix_hex_loser_temp0_3_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_3|         array|
+|multi_radix_hex_loser_temp0_3_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_3|         array|
+|multi_radix_hex_loser_temp0_4_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_4|         array|
+|multi_radix_hex_loser_temp0_4_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_4|         array|
+|multi_radix_hex_loser_temp0_4_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_4|         array|
+|multi_radix_hex_loser_temp0_5_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_5|         array|
+|multi_radix_hex_loser_temp0_5_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_5|         array|
+|multi_radix_hex_loser_temp0_5_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_5|         array|
+|multi_radix_hex_loser_temp0_6_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_6|         array|
+|multi_radix_hex_loser_temp0_6_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_6|         array|
+|multi_radix_hex_loser_temp0_6_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_6|         array|
+|multi_radix_hex_loser_temp0_7_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_7|         array|
+|multi_radix_hex_loser_temp0_7_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_7|         array|
+|multi_radix_hex_loser_temp0_7_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_7|         array|
+|multi_radix_hex_loser_temp0_8_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_8|         array|
+|multi_radix_hex_loser_temp0_8_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_8|         array|
+|multi_radix_hex_loser_temp0_8_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_8|         array|
+|multi_radix_hex_loser_temp0_9_address0   |  out|   14|   ap_memory|           multi_radix_hex_loser_temp0_9|         array|
+|multi_radix_hex_loser_temp0_9_ce0        |  out|    1|   ap_memory|           multi_radix_hex_loser_temp0_9|         array|
+|multi_radix_hex_loser_temp0_9_q0         |   in|   32|   ap_memory|           multi_radix_hex_loser_temp0_9|         array|
+|multi_radix_hex_loser_temp0_10_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_10|         array|
+|multi_radix_hex_loser_temp0_10_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_10|         array|
+|multi_radix_hex_loser_temp0_10_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_10|         array|
+|multi_radix_hex_loser_temp0_11_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_11|         array|
+|multi_radix_hex_loser_temp0_11_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_11|         array|
+|multi_radix_hex_loser_temp0_11_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_11|         array|
+|multi_radix_hex_loser_temp0_12_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_12|         array|
+|multi_radix_hex_loser_temp0_12_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_12|         array|
+|multi_radix_hex_loser_temp0_12_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_12|         array|
+|multi_radix_hex_loser_temp0_13_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_13|         array|
+|multi_radix_hex_loser_temp0_13_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_13|         array|
+|multi_radix_hex_loser_temp0_13_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_13|         array|
+|multi_radix_hex_loser_temp0_14_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_14|         array|
+|multi_radix_hex_loser_temp0_14_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_14|         array|
+|multi_radix_hex_loser_temp0_14_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_14|         array|
+|multi_radix_hex_loser_temp0_15_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_15|         array|
+|multi_radix_hex_loser_temp0_15_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_15|         array|
+|multi_radix_hex_loser_temp0_15_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_15|         array|
+|multi_radix_hex_loser_temp0_16_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_16|         array|
+|multi_radix_hex_loser_temp0_16_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_16|         array|
+|multi_radix_hex_loser_temp0_16_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_16|         array|
+|multi_radix_hex_loser_temp0_17_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_17|         array|
+|multi_radix_hex_loser_temp0_17_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_17|         array|
+|multi_radix_hex_loser_temp0_17_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_17|         array|
+|multi_radix_hex_loser_temp0_18_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_18|         array|
+|multi_radix_hex_loser_temp0_18_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_18|         array|
+|multi_radix_hex_loser_temp0_18_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_18|         array|
+|multi_radix_hex_loser_temp0_19_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_19|         array|
+|multi_radix_hex_loser_temp0_19_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_19|         array|
+|multi_radix_hex_loser_temp0_19_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_19|         array|
+|multi_radix_hex_loser_temp0_20_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_20|         array|
+|multi_radix_hex_loser_temp0_20_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_20|         array|
+|multi_radix_hex_loser_temp0_20_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_20|         array|
+|multi_radix_hex_loser_temp0_21_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_21|         array|
+|multi_radix_hex_loser_temp0_21_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_21|         array|
+|multi_radix_hex_loser_temp0_21_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_21|         array|
+|multi_radix_hex_loser_temp0_22_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_22|         array|
+|multi_radix_hex_loser_temp0_22_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_22|         array|
+|multi_radix_hex_loser_temp0_22_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_22|         array|
+|multi_radix_hex_loser_temp0_23_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_23|         array|
+|multi_radix_hex_loser_temp0_23_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_23|         array|
+|multi_radix_hex_loser_temp0_23_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_23|         array|
+|multi_radix_hex_loser_temp0_24_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_24|         array|
+|multi_radix_hex_loser_temp0_24_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_24|         array|
+|multi_radix_hex_loser_temp0_24_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_24|         array|
+|multi_radix_hex_loser_temp0_25_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_25|         array|
+|multi_radix_hex_loser_temp0_25_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_25|         array|
+|multi_radix_hex_loser_temp0_25_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_25|         array|
+|multi_radix_hex_loser_temp0_26_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_26|         array|
+|multi_radix_hex_loser_temp0_26_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_26|         array|
+|multi_radix_hex_loser_temp0_26_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_26|         array|
+|multi_radix_hex_loser_temp0_27_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_27|         array|
+|multi_radix_hex_loser_temp0_27_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_27|         array|
+|multi_radix_hex_loser_temp0_27_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_27|         array|
+|multi_radix_hex_loser_temp0_28_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_28|         array|
+|multi_radix_hex_loser_temp0_28_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_28|         array|
+|multi_radix_hex_loser_temp0_28_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_28|         array|
+|multi_radix_hex_loser_temp0_29_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_29|         array|
+|multi_radix_hex_loser_temp0_29_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_29|         array|
+|multi_radix_hex_loser_temp0_29_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_29|         array|
+|multi_radix_hex_loser_temp0_30_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_30|         array|
+|multi_radix_hex_loser_temp0_30_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_30|         array|
+|multi_radix_hex_loser_temp0_30_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_30|         array|
+|multi_radix_hex_loser_temp0_31_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_31|         array|
+|multi_radix_hex_loser_temp0_31_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_31|         array|
+|multi_radix_hex_loser_temp0_31_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_31|         array|
+|multi_radix_hex_loser_temp0_32_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_32|         array|
+|multi_radix_hex_loser_temp0_32_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_32|         array|
+|multi_radix_hex_loser_temp0_32_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_32|         array|
+|multi_radix_hex_loser_temp0_33_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_33|         array|
+|multi_radix_hex_loser_temp0_33_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_33|         array|
+|multi_radix_hex_loser_temp0_33_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_33|         array|
+|multi_radix_hex_loser_temp0_34_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_34|         array|
+|multi_radix_hex_loser_temp0_34_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_34|         array|
+|multi_radix_hex_loser_temp0_34_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_34|         array|
+|multi_radix_hex_loser_temp0_35_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_35|         array|
+|multi_radix_hex_loser_temp0_35_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_35|         array|
+|multi_radix_hex_loser_temp0_35_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_35|         array|
+|multi_radix_hex_loser_temp0_36_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_36|         array|
+|multi_radix_hex_loser_temp0_36_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_36|         array|
+|multi_radix_hex_loser_temp0_36_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_36|         array|
+|multi_radix_hex_loser_temp0_37_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_37|         array|
+|multi_radix_hex_loser_temp0_37_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_37|         array|
+|multi_radix_hex_loser_temp0_37_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_37|         array|
+|multi_radix_hex_loser_temp0_38_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_38|         array|
+|multi_radix_hex_loser_temp0_38_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_38|         array|
+|multi_radix_hex_loser_temp0_38_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_38|         array|
+|multi_radix_hex_loser_temp0_39_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_39|         array|
+|multi_radix_hex_loser_temp0_39_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_39|         array|
+|multi_radix_hex_loser_temp0_39_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_39|         array|
+|multi_radix_hex_loser_temp0_40_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_40|         array|
+|multi_radix_hex_loser_temp0_40_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_40|         array|
+|multi_radix_hex_loser_temp0_40_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_40|         array|
+|multi_radix_hex_loser_temp0_41_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_41|         array|
+|multi_radix_hex_loser_temp0_41_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_41|         array|
+|multi_radix_hex_loser_temp0_41_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_41|         array|
+|multi_radix_hex_loser_temp0_42_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_42|         array|
+|multi_radix_hex_loser_temp0_42_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_42|         array|
+|multi_radix_hex_loser_temp0_42_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_42|         array|
+|multi_radix_hex_loser_temp0_43_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_43|         array|
+|multi_radix_hex_loser_temp0_43_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_43|         array|
+|multi_radix_hex_loser_temp0_43_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_43|         array|
+|multi_radix_hex_loser_temp0_44_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_44|         array|
+|multi_radix_hex_loser_temp0_44_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_44|         array|
+|multi_radix_hex_loser_temp0_44_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_44|         array|
+|multi_radix_hex_loser_temp0_45_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_45|         array|
+|multi_radix_hex_loser_temp0_45_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_45|         array|
+|multi_radix_hex_loser_temp0_45_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_45|         array|
+|multi_radix_hex_loser_temp0_46_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_46|         array|
+|multi_radix_hex_loser_temp0_46_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_46|         array|
+|multi_radix_hex_loser_temp0_46_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_46|         array|
+|multi_radix_hex_loser_temp0_47_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_47|         array|
+|multi_radix_hex_loser_temp0_47_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_47|         array|
+|multi_radix_hex_loser_temp0_47_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_47|         array|
+|multi_radix_hex_loser_temp0_48_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_48|         array|
+|multi_radix_hex_loser_temp0_48_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_48|         array|
+|multi_radix_hex_loser_temp0_48_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_48|         array|
+|multi_radix_hex_loser_temp0_49_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_49|         array|
+|multi_radix_hex_loser_temp0_49_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_49|         array|
+|multi_radix_hex_loser_temp0_49_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_49|         array|
+|multi_radix_hex_loser_temp0_50_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_50|         array|
+|multi_radix_hex_loser_temp0_50_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_50|         array|
+|multi_radix_hex_loser_temp0_50_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_50|         array|
+|multi_radix_hex_loser_temp0_51_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_51|         array|
+|multi_radix_hex_loser_temp0_51_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_51|         array|
+|multi_radix_hex_loser_temp0_51_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_51|         array|
+|multi_radix_hex_loser_temp0_52_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_52|         array|
+|multi_radix_hex_loser_temp0_52_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_52|         array|
+|multi_radix_hex_loser_temp0_52_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_52|         array|
+|multi_radix_hex_loser_temp0_53_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_53|         array|
+|multi_radix_hex_loser_temp0_53_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_53|         array|
+|multi_radix_hex_loser_temp0_53_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_53|         array|
+|multi_radix_hex_loser_temp0_54_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_54|         array|
+|multi_radix_hex_loser_temp0_54_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_54|         array|
+|multi_radix_hex_loser_temp0_54_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_54|         array|
+|multi_radix_hex_loser_temp0_55_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_55|         array|
+|multi_radix_hex_loser_temp0_55_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_55|         array|
+|multi_radix_hex_loser_temp0_55_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_55|         array|
+|multi_radix_hex_loser_temp0_56_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_56|         array|
+|multi_radix_hex_loser_temp0_56_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_56|         array|
+|multi_radix_hex_loser_temp0_56_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_56|         array|
+|multi_radix_hex_loser_temp0_57_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_57|         array|
+|multi_radix_hex_loser_temp0_57_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_57|         array|
+|multi_radix_hex_loser_temp0_57_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_57|         array|
+|multi_radix_hex_loser_temp0_58_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_58|         array|
+|multi_radix_hex_loser_temp0_58_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_58|         array|
+|multi_radix_hex_loser_temp0_58_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_58|         array|
+|multi_radix_hex_loser_temp0_59_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_59|         array|
+|multi_radix_hex_loser_temp0_59_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_59|         array|
+|multi_radix_hex_loser_temp0_59_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_59|         array|
+|multi_radix_hex_loser_temp0_60_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_60|         array|
+|multi_radix_hex_loser_temp0_60_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_60|         array|
+|multi_radix_hex_loser_temp0_60_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_60|         array|
+|multi_radix_hex_loser_temp0_61_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_61|         array|
+|multi_radix_hex_loser_temp0_61_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_61|         array|
+|multi_radix_hex_loser_temp0_61_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_61|         array|
+|multi_radix_hex_loser_temp0_62_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_62|         array|
+|multi_radix_hex_loser_temp0_62_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_62|         array|
+|multi_radix_hex_loser_temp0_62_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_62|         array|
+|multi_radix_hex_loser_temp0_63_address0  |  out|   14|   ap_memory|          multi_radix_hex_loser_temp0_63|         array|
+|multi_radix_hex_loser_temp0_63_ce0       |  out|    1|   ap_memory|          multi_radix_hex_loser_temp0_63|         array|
+|multi_radix_hex_loser_temp0_63_q0        |   in|   32|   ap_memory|          multi_radix_hex_loser_temp0_63|         array|
+|output_r_address0                        |  out|   20|   ap_memory|                                output_r|         array|
+|output_r_ce0                             |  out|    1|   ap_memory|                                output_r|         array|
+|output_r_we0                             |  out|    1|   ap_memory|                                output_r|         array|
+|output_r_d0                              |  out|   32|   ap_memory|                                output_r|         array|
+|current_indices_address0                 |  out|    6|   ap_memory|                         current_indices|         array|
+|current_indices_ce0                      |  out|    1|   ap_memory|                         current_indices|         array|
+|current_indices_we0                      |  out|    1|   ap_memory|                         current_indices|         array|
+|current_indices_d0                       |  out|   32|   ap_memory|                         current_indices|         array|
+|current_indices_q0                       |   in|   32|   ap_memory|                         current_indices|         array|
++-----------------------------------------+-----+-----+------------+----------------------------------------+--------------+
+

@@ -1,0 +1,22 @@
+---
+MainSourceFile:  /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_radix_sort_hex.pp.0.c
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_73_1:  '
+    FileOffset:      73
+    FilePath:        /home/boyiw7/sort_seperate_bucket/single_radix_sort_hex.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_radix_sort_hex.pp.0.c
+        Offset:          11506245
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_73_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_77_2:  '
+    FileOffset:      77
+    FilePath:        /home/boyiw7/sort_seperate_bucket/single_radix_sort_hex.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_radix_sort_hex.pp.0.c
+        Offset:          11506333
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_77_2: '
+...

@@ -1,0 +1,240 @@
+
+
+================================================================
+== Vitis HLS Report for 'radix_sort_hex_batch_53_1'
+================================================================
+* Date:           Mon Apr 24 22:45:19 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sort_seperate_bucket
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.044 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   156477|   156477|  1.565 ms|  1.565 ms|  156477|  156477|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------------------------------------+------------------------------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |                                                                             |                                                                  |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+        |                                   Instance                                  |                              Module                              |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+        +-----------------------------------------------------------------------------+------------------------------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+        |grp_radix_sort_hex_batch_53_1_Pipeline_1_fu_380                              |radix_sort_hex_batch_53_1_Pipeline_1                              |       18|       18|  0.180 us|  0.180 us|     18|     18|       no|
+        |grp_radix_sort_hex_batch_53_1_Pipeline_initialization_fu_400                 |radix_sort_hex_batch_53_1_Pipeline_initialization                 |    15627|    15627|  0.156 ms|  0.156 ms|  15627|  15627|       no|
+        |grp_radix_sort_hex_batch_53_1_Pipeline_bucket_pointer_initialization_fu_439  |radix_sort_hex_batch_53_1_Pipeline_bucket_pointer_initialization  |       18|       18|  0.180 us|  0.180 us|     18|     18|       no|
+        |grp_radix_sort_hex_batch_53_1_Pipeline_output_bucket_fu_507                  |radix_sort_hex_batch_53_1_Pipeline_output_bucket                  |    15627|    15627|  0.156 ms|  0.156 ms|  15627|  15627|       no|
+        |grp_radix_sort_hex_batch_53_1_Pipeline_input_bucket_fu_514                   |radix_sort_hex_batch_53_1_Pipeline_input_bucket                   |    15627|    15627|  0.156 ms|  0.156 ms|  15627|  15627|       no|
+        +-----------------------------------------------------------------------------+------------------------------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+
+        * Loop: 
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- sort_procedure  |   125200|   125200|     15650|          -|          -|     8|        no|
+        +------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     2|        -|        -|    -|
+|Expression           |        -|     -|        0|       62|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|     1266|     1989|    -|
+|Memory               |       16|     -|        0|        0|    0|
+|Multiplexer          |        -|     -|        -|      307|    -|
+|Register             |        -|     -|     1112|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |       16|     2|     2378|     2358|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        1|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|    ~0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+------+-----+-----+
+    |                                   Instance                                  |                              Module                              | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +-----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+------+-----+-----+
+    |grp_radix_sort_hex_batch_53_1_Pipeline_1_fu_380                              |radix_sort_hex_batch_53_1_Pipeline_1                              |        0|   0|     7|   49|    0|
+    |grp_radix_sort_hex_batch_53_1_Pipeline_bucket_pointer_initialization_fu_439  |radix_sort_hex_batch_53_1_Pipeline_bucket_pointer_initialization  |        0|   0|  1064|  484|    0|
+    |grp_radix_sort_hex_batch_53_1_Pipeline_initialization_fu_400                 |radix_sort_hex_batch_53_1_Pipeline_initialization                 |        0|   0|    31|  421|    0|
+    |grp_radix_sort_hex_batch_53_1_Pipeline_input_bucket_fu_514                   |radix_sort_hex_batch_53_1_Pipeline_input_bucket                   |        0|   0|   133|  942|    0|
+    |grp_radix_sort_hex_batch_53_1_Pipeline_output_bucket_fu_507                  |radix_sort_hex_batch_53_1_Pipeline_output_bucket                  |        0|   0|    31|   93|    0|
+    +-----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+------+-----+-----+
+    |Total                                                                        |                                                                  |        0|   0|  1266| 1989|    0|
+    +-----------------------------------------------------------------------------+------------------------------------------------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    +--------------------------------+-------------------------+-----------+
+    |            Instance            |          Module         | Expression|
+    +--------------------------------+-------------------------+-----------+
+    |mul_mul_15s_14ns_15_4_1_U10227  |mul_mul_15s_14ns_15_4_1  |    i0 * i1|
+    |mul_mul_15s_14ns_15_4_1_U10228  |mul_mul_15s_14ns_15_4_1  |    i0 * i1|
+    +--------------------------------+-------------------------+-----------+
+
+    * Memory: 
+    +----------+------------------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |  Memory  |                     Module                     | BRAM_18K| FF| LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +----------+------------------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |bucket_U  |radix_sort_hex_batch_53_1_bucket_RAM_AUTO_1R1W  |       16|  0|   0|    0|  31250|   32|     1|      1000000|
+    +----------+------------------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |Total     |                                                |       16|  0|   0|    0|  31250|   32|     1|      1000000|
+    +----------+------------------------------------------------+---------+---+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |i_30_fu_669_p2           |         +|   0|  0|  12|           4|           1|
+    |bucket_num_15_fu_806_p2  |         -|   0|  0|  39|           1|          32|
+    |icmp_ln27_fu_663_p2      |      icmp|   0|  0|   9|           4|           5|
+    |ap_block_state1          |        or|   0|  0|   2|           1|           1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0|  62|          10|          39|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  59|         11|    1|         11|
+    |ap_done                  |   9|          2|    1|          2|
+    |bucket_address0          |  20|          4|   15|         60|
+    |bucket_ce0               |  20|          4|    1|          4|
+    |bucket_ce1               |   9|          2|    1|          2|
+    |bucket_d0                |  14|          3|   32|         96|
+    |bucket_num_fu_52         |   9|          2|   32|         64|
+    |bucket_sizes_646_fu_124  |   9|          2|   32|         64|
+    |bucket_sizes_647_fu_128  |   9|          2|   32|         64|
+    |bucket_sizes_648_fu_132  |   9|          2|   32|         64|
+    |bucket_sizes_649_fu_136  |   9|          2|   32|         64|
+    |bucket_sizes_650_fu_140  |   9|          2|   32|         64|
+    |bucket_sizes_651_fu_144  |   9|          2|   32|         64|
+    |bucket_sizes_652_fu_148  |   9|          2|   32|         64|
+    |bucket_sizes_653_fu_152  |   9|          2|   32|         64|
+    |bucket_sizes_654_fu_156  |   9|          2|   32|         64|
+    |bucket_sizes_655_fu_160  |   9|          2|   32|         64|
+    |bucket_sizes_656_fu_164  |   9|          2|   32|         64|
+    |bucket_sizes_657_fu_168  |   9|          2|   32|         64|
+    |bucket_sizes_658_fu_172  |   9|          2|   32|         64|
+    |bucket_sizes_659_fu_176  |   9|          2|   32|         64|
+    |bucket_sizes_660_fu_180  |   9|          2|   32|         64|
+    |bucket_sizes_fu_120      |   9|          2|   32|         64|
+    |bucket_we0               |  14|          3|    1|          3|
+    |i_fu_48                  |   9|          2|    4|          8|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 307|         65|  600|       1274|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                           Name                                           | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                                 |  10|   0|   10|          0|
+    |ap_done_reg                                                                               |   1|   0|    1|          0|
+    |bucket_num_fu_52                                                                          |  32|   0|   32|          0|
+    |bucket_pointer_496_fu_60                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_497_fu_64                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_498_fu_68                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_499_fu_72                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_500_fu_76                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_501_fu_80                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_502_fu_84                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_503_fu_88                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_504_fu_92                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_505_fu_96                                                                  |  32|   0|   32|          0|
+    |bucket_pointer_506_fu_100                                                                 |  32|   0|   32|          0|
+    |bucket_pointer_507_fu_104                                                                 |  32|   0|   32|          0|
+    |bucket_pointer_508_fu_108                                                                 |  32|   0|   32|          0|
+    |bucket_pointer_509_fu_112                                                                 |  32|   0|   32|          0|
+    |bucket_pointer_510_fu_116                                                                 |  32|   0|   32|          0|
+    |bucket_pointer_fu_56                                                                      |  32|   0|   32|          0|
+    |bucket_sizes_646_fu_124                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_647_fu_128                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_648_fu_132                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_649_fu_136                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_650_fu_140                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_651_fu_144                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_652_fu_148                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_653_fu_152                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_654_fu_156                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_655_fu_160                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_656_fu_164                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_657_fu_168                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_658_fu_172                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_659_fu_176                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_660_fu_180                                                                   |  32|   0|   32|          0|
+    |bucket_sizes_fu_120                                                                       |  32|   0|   32|          0|
+    |empty_136_reg_1646                                                                        |   3|   0|    3|          0|
+    |grp_radix_sort_hex_batch_53_1_Pipeline_1_fu_380_ap_start_reg                              |   1|   0|    1|          0|
+    |grp_radix_sort_hex_batch_53_1_Pipeline_bucket_pointer_initialization_fu_439_ap_start_reg  |   1|   0|    1|          0|
+    |grp_radix_sort_hex_batch_53_1_Pipeline_initialization_fu_400_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_radix_sort_hex_batch_53_1_Pipeline_input_bucket_fu_514_ap_start_reg                   |   1|   0|    1|          0|
+    |grp_radix_sort_hex_batch_53_1_Pipeline_output_bucket_fu_507_ap_start_reg                  |   1|   0|    1|          0|
+    |i_fu_48                                                                                   |   4|   0|    4|          0|
+    |mul_i_reg_1757                                                                            |   3|   0|    5|          2|
+    |mul_ln41_reg_1752                                                                         |  15|   0|   15|          0|
+    |mul_ln43_reg_1762                                                                         |  15|   0|   15|          0|
+    +------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                     |1112|   0| 1114|          2|
+    +------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|                RTL Ports                | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++-----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                                   |   in|    1|  ap_ctrl_hs|       radix_sort_hex_batch.53.1|  return value|
+|ap_rst                                   |   in|    1|  ap_ctrl_hs|       radix_sort_hex_batch.53.1|  return value|
+|ap_start                                 |   in|    1|  ap_ctrl_hs|       radix_sort_hex_batch.53.1|  return value|
+|ap_done                                  |  out|    1|  ap_ctrl_hs|       radix_sort_hex_batch.53.1|  return value|
+|ap_continue                              |   in|    1|  ap_ctrl_hs|       radix_sort_hex_batch.53.1|  return value|
+|ap_idle                                  |  out|    1|  ap_ctrl_hs|       radix_sort_hex_batch.53.1|  return value|
+|ap_ready                                 |  out|    1|  ap_ctrl_hs|       radix_sort_hex_batch.53.1|  return value|
+|input_52_address0                        |  out|   14|   ap_memory|                        input_52|         array|
+|input_52_ce0                             |  out|    1|   ap_memory|                        input_52|         array|
+|input_52_q0                              |   in|   32|   ap_memory|                        input_52|         array|
+|multi_radix_hex_loser_temp0_52_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_52|         array|
+|multi_radix_hex_loser_temp0_52_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_52|         array|
+|multi_radix_hex_loser_temp0_52_we0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_52|         array|
+|multi_radix_hex_loser_temp0_52_d0        |  out|   32|   ap_memory|  multi_radix_hex_loser_temp0_52|         array|
++-----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+

@@ -1,0 +1,542 @@
+
+
+================================================================
+== Vitis HLS Report for 'loser_tree_1'
+================================================================
+* Date:           Mon Apr 24 22:46:04 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sort_seperate_bucket
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  10.00 ns|  69.151 ns|     2.70 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  3000071|  3000071|  0.207 sec|  0.207 sec|  3000071|  3000071|       no|
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+        |                                                    |                                        |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+        |                      Instance                      |                 Module                 |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+        +----------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+        |grp_loser_tree_1_Pipeline_1_fu_1050                 |loser_tree_1_Pipeline_1                 |       66|       66|   0.660 us|   0.660 us|       66|       66|       no|
+        |grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056  |loser_tree_1_Pipeline_VITIS_LOOP_282_2  |  3000002|  3000002|  0.207 sec|  0.207 sec|  3000002|  3000002|       no|
+        +----------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        2|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        0|     -|     2293|     5713|    -|
+|Memory               |        0|     -|       32|       33|    0|
+|Multiplexer          |        -|     -|        -|     1883|    -|
+|Register             |        -|     -|     2055|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     4380|     7631|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
+    |                      Instance                      |                 Module                 | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
+    |grp_loser_tree_1_Pipeline_1_fu_1050                 |loser_tree_1_Pipeline_1                 |        0|   0|     9|    52|    0|
+    |grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056  |loser_tree_1_Pipeline_VITIS_LOOP_282_2  |        0|   0|  2284|  5661|    0|
+    +----------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
+    |Total                                               |                                        |        0|   0|  2293|  5713|    0|
+    +----------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-------------------+--------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |       Memory      |                   Module                   | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------------+--------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |current_indices_U  |loser_tree_1_current_indices_RAM_AUTO_1R1W  |        0|  32|  33|    0|    64|   32|     1|         2048|
+    +-------------------+--------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total              |                                            |        0|  32|  33|    0|    64|   32|     1|         2048|
+    +-------------------+--------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |                   Name                  | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                |  26|          5|    1|          5|
+    |ap_done                                  |   9|          2|    1|          2|
+    |current_indices_address0                 |  14|          3|    6|         18|
+    |current_indices_ce0                      |  14|          3|    1|          3|
+    |current_indices_d0                       |  14|          3|   32|         96|
+    |current_indices_we0                      |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_0_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_0_ce0        |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_10_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_10_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_11_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_11_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_12_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_12_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_13_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_13_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_14_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_14_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_15_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_15_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_16_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_16_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_17_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_17_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_18_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_18_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_19_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_19_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_1_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_1_ce0        |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_20_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_20_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_21_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_21_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_22_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_22_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_23_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_23_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_24_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_24_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_25_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_25_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_26_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_26_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_27_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_27_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_28_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_28_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_29_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_29_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_2_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_2_ce0        |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_30_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_30_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_31_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_31_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_32_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_32_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_33_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_33_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_34_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_34_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_35_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_35_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_36_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_36_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_37_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_37_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_38_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_38_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_39_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_39_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_3_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_3_ce0        |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_40_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_40_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_41_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_41_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_42_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_42_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_43_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_43_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_44_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_44_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_45_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_45_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_46_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_46_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_47_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_47_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_48_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_48_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_49_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_49_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_4_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_4_ce0        |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_50_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_50_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_51_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_51_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_52_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_52_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_53_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_53_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_54_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_54_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_55_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_55_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_56_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_56_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_57_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_57_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_58_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_58_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_59_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_59_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_5_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_5_ce0        |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_60_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_60_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_61_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_61_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_62_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_62_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_63_address0  |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_63_ce0       |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_6_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_6_ce0        |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_7_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_7_ce0        |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_8_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_8_ce0        |  14|          3|    1|          3|
+    |multi_radix_hex_loser_temp0_9_address0   |  14|          3|   14|         42|
+    |multi_radix_hex_loser_temp0_9_ce0        |  14|          3|    1|          3|
+    +-----------------------------------------+----+-----------+-----+-----------+
+    |Total                                    |1883|        403| 1002|       3007|
+    +-----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |                               Name                              | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                        |   4|   0|    4|          0|
+    |ap_done_reg                                                      |   1|   0|    1|          0|
+    |grp_loser_tree_1_Pipeline_1_fu_1050_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056_ap_start_reg  |   1|   0|    1|          0|
+    |loser_tree_data_100_reg_1757                                     |  32|   0|   32|          0|
+    |loser_tree_data_101_reg_1762                                     |  32|   0|   32|          0|
+    |loser_tree_data_102_reg_1767                                     |  32|   0|   32|          0|
+    |loser_tree_data_103_reg_1772                                     |  32|   0|   32|          0|
+    |loser_tree_data_104_reg_1777                                     |  32|   0|   32|          0|
+    |loser_tree_data_105_reg_1782                                     |  32|   0|   32|          0|
+    |loser_tree_data_106_reg_1787                                     |  32|   0|   32|          0|
+    |loser_tree_data_107_reg_1792                                     |  32|   0|   32|          0|
+    |loser_tree_data_108_reg_1797                                     |  32|   0|   32|          0|
+    |loser_tree_data_109_reg_1802                                     |  32|   0|   32|          0|
+    |loser_tree_data_110_reg_1807                                     |  32|   0|   32|          0|
+    |loser_tree_data_111_reg_1812                                     |  32|   0|   32|          0|
+    |loser_tree_data_112_reg_1817                                     |  32|   0|   32|          0|
+    |loser_tree_data_113_reg_1822                                     |  32|   0|   32|          0|
+    |loser_tree_data_114_reg_1827                                     |  32|   0|   32|          0|
+    |loser_tree_data_115_reg_1832                                     |  32|   0|   32|          0|
+    |loser_tree_data_116_reg_1837                                     |  32|   0|   32|          0|
+    |loser_tree_data_117_reg_1842                                     |  32|   0|   32|          0|
+    |loser_tree_data_118_reg_1847                                     |  32|   0|   32|          0|
+    |loser_tree_data_119_reg_1852                                     |  32|   0|   32|          0|
+    |loser_tree_data_120_reg_1857                                     |  32|   0|   32|          0|
+    |loser_tree_data_121_reg_1862                                     |  32|   0|   32|          0|
+    |loser_tree_data_122_reg_1867                                     |  32|   0|   32|          0|
+    |loser_tree_data_123_reg_1872                                     |  32|   0|   32|          0|
+    |loser_tree_data_124_reg_1877                                     |  32|   0|   32|          0|
+    |loser_tree_data_125_reg_1882                                     |  32|   0|   32|          0|
+    |loser_tree_data_126_reg_1887                                     |  32|   0|   32|          0|
+    |loser_tree_data_127_reg_1892                                     |  32|   0|   32|          0|
+    |loser_tree_data_65_reg_1582                                      |  32|   0|   32|          0|
+    |loser_tree_data_66_reg_1587                                      |  32|   0|   32|          0|
+    |loser_tree_data_67_reg_1592                                      |  32|   0|   32|          0|
+    |loser_tree_data_68_reg_1597                                      |  32|   0|   32|          0|
+    |loser_tree_data_69_reg_1602                                      |  32|   0|   32|          0|
+    |loser_tree_data_70_reg_1607                                      |  32|   0|   32|          0|
+    |loser_tree_data_71_reg_1612                                      |  32|   0|   32|          0|
+    |loser_tree_data_72_reg_1617                                      |  32|   0|   32|          0|
+    |loser_tree_data_73_reg_1622                                      |  32|   0|   32|          0|
+    |loser_tree_data_74_reg_1627                                      |  32|   0|   32|          0|
+    |loser_tree_data_75_reg_1632                                      |  32|   0|   32|          0|
+    |loser_tree_data_76_reg_1637                                      |  32|   0|   32|          0|
+    |loser_tree_data_77_reg_1642                                      |  32|   0|   32|          0|
+    |loser_tree_data_78_reg_1647                                      |  32|   0|   32|          0|
+    |loser_tree_data_79_reg_1652                                      |  32|   0|   32|          0|
+    |loser_tree_data_80_reg_1657                                      |  32|   0|   32|          0|
+    |loser_tree_data_81_reg_1662                                      |  32|   0|   32|          0|
+    |loser_tree_data_82_reg_1667                                      |  32|   0|   32|          0|
+    |loser_tree_data_83_reg_1672                                      |  32|   0|   32|          0|
+    |loser_tree_data_84_reg_1677                                      |  32|   0|   32|          0|
+    |loser_tree_data_85_reg_1682                                      |  32|   0|   32|          0|
+    |loser_tree_data_86_reg_1687                                      |  32|   0|   32|          0|
+    |loser_tree_data_87_reg_1692                                      |  32|   0|   32|          0|
+    |loser_tree_data_88_reg_1697                                      |  32|   0|   32|          0|
+    |loser_tree_data_89_reg_1702                                      |  32|   0|   32|          0|
+    |loser_tree_data_90_reg_1707                                      |  32|   0|   32|          0|
+    |loser_tree_data_91_reg_1712                                      |  32|   0|   32|          0|
+    |loser_tree_data_92_reg_1717                                      |  32|   0|   32|          0|
+    |loser_tree_data_93_reg_1722                                      |  32|   0|   32|          0|
+    |loser_tree_data_94_reg_1727                                      |  32|   0|   32|          0|
+    |loser_tree_data_95_reg_1732                                      |  32|   0|   32|          0|
+    |loser_tree_data_96_reg_1737                                      |  32|   0|   32|          0|
+    |loser_tree_data_97_reg_1742                                      |  32|   0|   32|          0|
+    |loser_tree_data_98_reg_1747                                      |  32|   0|   32|          0|
+    |loser_tree_data_99_reg_1752                                      |  32|   0|   32|          0|
+    |loser_tree_data_reg_1577                                         |  32|   0|   32|          0|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                            |2055|   0| 2055|          0|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|                RTL Ports                | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++-----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                                   |   in|    1|  ap_ctrl_hs|                    loser_tree.1|  return value|
+|ap_rst                                   |   in|    1|  ap_ctrl_hs|                    loser_tree.1|  return value|
+|ap_start                                 |   in|    1|  ap_ctrl_hs|                    loser_tree.1|  return value|
+|ap_done                                  |  out|    1|  ap_ctrl_hs|                    loser_tree.1|  return value|
+|ap_continue                              |   in|    1|  ap_ctrl_hs|                    loser_tree.1|  return value|
+|ap_idle                                  |  out|    1|  ap_ctrl_hs|                    loser_tree.1|  return value|
+|ap_ready                                 |  out|    1|  ap_ctrl_hs|                    loser_tree.1|  return value|
+|output_r_address0                        |  out|   20|   ap_memory|                        output_r|         array|
+|output_r_ce0                             |  out|    1|   ap_memory|                        output_r|         array|
+|output_r_we0                             |  out|    1|   ap_memory|                        output_r|         array|
+|output_r_d0                              |  out|   32|   ap_memory|                        output_r|         array|
+|multi_radix_hex_loser_temp0_0_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_0|         array|
+|multi_radix_hex_loser_temp0_0_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_0|         array|
+|multi_radix_hex_loser_temp0_0_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_0|         array|
+|multi_radix_hex_loser_temp0_1_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_1|         array|
+|multi_radix_hex_loser_temp0_1_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_1|         array|
+|multi_radix_hex_loser_temp0_1_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_1|         array|
+|multi_radix_hex_loser_temp0_10_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_10|         array|
+|multi_radix_hex_loser_temp0_10_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_10|         array|
+|multi_radix_hex_loser_temp0_10_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_10|         array|
+|multi_radix_hex_loser_temp0_11_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_11|         array|
+|multi_radix_hex_loser_temp0_11_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_11|         array|
+|multi_radix_hex_loser_temp0_11_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_11|         array|
+|multi_radix_hex_loser_temp0_12_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_12|         array|
+|multi_radix_hex_loser_temp0_12_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_12|         array|
+|multi_radix_hex_loser_temp0_12_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_12|         array|
+|multi_radix_hex_loser_temp0_13_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_13|         array|
+|multi_radix_hex_loser_temp0_13_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_13|         array|
+|multi_radix_hex_loser_temp0_13_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_13|         array|
+|multi_radix_hex_loser_temp0_14_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_14|         array|
+|multi_radix_hex_loser_temp0_14_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_14|         array|
+|multi_radix_hex_loser_temp0_14_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_14|         array|
+|multi_radix_hex_loser_temp0_15_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_15|         array|
+|multi_radix_hex_loser_temp0_15_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_15|         array|
+|multi_radix_hex_loser_temp0_15_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_15|         array|
+|multi_radix_hex_loser_temp0_16_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_16|         array|
+|multi_radix_hex_loser_temp0_16_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_16|         array|
+|multi_radix_hex_loser_temp0_16_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_16|         array|
+|multi_radix_hex_loser_temp0_17_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_17|         array|
+|multi_radix_hex_loser_temp0_17_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_17|         array|
+|multi_radix_hex_loser_temp0_17_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_17|         array|
+|multi_radix_hex_loser_temp0_18_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_18|         array|
+|multi_radix_hex_loser_temp0_18_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_18|         array|
+|multi_radix_hex_loser_temp0_18_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_18|         array|
+|multi_radix_hex_loser_temp0_19_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_19|         array|
+|multi_radix_hex_loser_temp0_19_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_19|         array|
+|multi_radix_hex_loser_temp0_19_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_19|         array|
+|multi_radix_hex_loser_temp0_2_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_2|         array|
+|multi_radix_hex_loser_temp0_2_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_2|         array|
+|multi_radix_hex_loser_temp0_2_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_2|         array|
+|multi_radix_hex_loser_temp0_20_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_20|         array|
+|multi_radix_hex_loser_temp0_20_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_20|         array|
+|multi_radix_hex_loser_temp0_20_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_20|         array|
+|multi_radix_hex_loser_temp0_21_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_21|         array|
+|multi_radix_hex_loser_temp0_21_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_21|         array|
+|multi_radix_hex_loser_temp0_21_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_21|         array|
+|multi_radix_hex_loser_temp0_22_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_22|         array|
+|multi_radix_hex_loser_temp0_22_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_22|         array|
+|multi_radix_hex_loser_temp0_22_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_22|         array|
+|multi_radix_hex_loser_temp0_23_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_23|         array|
+|multi_radix_hex_loser_temp0_23_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_23|         array|
+|multi_radix_hex_loser_temp0_23_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_23|         array|
+|multi_radix_hex_loser_temp0_24_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_24|         array|
+|multi_radix_hex_loser_temp0_24_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_24|         array|
+|multi_radix_hex_loser_temp0_24_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_24|         array|
+|multi_radix_hex_loser_temp0_25_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_25|         array|
+|multi_radix_hex_loser_temp0_25_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_25|         array|
+|multi_radix_hex_loser_temp0_25_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_25|         array|
+|multi_radix_hex_loser_temp0_26_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_26|         array|
+|multi_radix_hex_loser_temp0_26_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_26|         array|
+|multi_radix_hex_loser_temp0_26_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_26|         array|
+|multi_radix_hex_loser_temp0_27_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_27|         array|
+|multi_radix_hex_loser_temp0_27_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_27|         array|
+|multi_radix_hex_loser_temp0_27_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_27|         array|
+|multi_radix_hex_loser_temp0_28_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_28|         array|
+|multi_radix_hex_loser_temp0_28_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_28|         array|
+|multi_radix_hex_loser_temp0_28_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_28|         array|
+|multi_radix_hex_loser_temp0_29_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_29|         array|
+|multi_radix_hex_loser_temp0_29_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_29|         array|
+|multi_radix_hex_loser_temp0_29_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_29|         array|
+|multi_radix_hex_loser_temp0_3_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_3|         array|
+|multi_radix_hex_loser_temp0_3_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_3|         array|
+|multi_radix_hex_loser_temp0_3_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_3|         array|
+|multi_radix_hex_loser_temp0_30_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_30|         array|
+|multi_radix_hex_loser_temp0_30_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_30|         array|
+|multi_radix_hex_loser_temp0_30_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_30|         array|
+|multi_radix_hex_loser_temp0_31_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_31|         array|
+|multi_radix_hex_loser_temp0_31_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_31|         array|
+|multi_radix_hex_loser_temp0_31_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_31|         array|
+|multi_radix_hex_loser_temp0_32_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_32|         array|
+|multi_radix_hex_loser_temp0_32_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_32|         array|
+|multi_radix_hex_loser_temp0_32_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_32|         array|
+|multi_radix_hex_loser_temp0_33_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_33|         array|
+|multi_radix_hex_loser_temp0_33_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_33|         array|
+|multi_radix_hex_loser_temp0_33_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_33|         array|
+|multi_radix_hex_loser_temp0_34_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_34|         array|
+|multi_radix_hex_loser_temp0_34_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_34|         array|
+|multi_radix_hex_loser_temp0_34_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_34|         array|
+|multi_radix_hex_loser_temp0_35_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_35|         array|
+|multi_radix_hex_loser_temp0_35_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_35|         array|
+|multi_radix_hex_loser_temp0_35_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_35|         array|
+|multi_radix_hex_loser_temp0_36_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_36|         array|
+|multi_radix_hex_loser_temp0_36_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_36|         array|
+|multi_radix_hex_loser_temp0_36_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_36|         array|
+|multi_radix_hex_loser_temp0_37_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_37|         array|
+|multi_radix_hex_loser_temp0_37_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_37|         array|
+|multi_radix_hex_loser_temp0_37_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_37|         array|
+|multi_radix_hex_loser_temp0_38_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_38|         array|
+|multi_radix_hex_loser_temp0_38_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_38|         array|
+|multi_radix_hex_loser_temp0_38_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_38|         array|
+|multi_radix_hex_loser_temp0_39_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_39|         array|
+|multi_radix_hex_loser_temp0_39_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_39|         array|
+|multi_radix_hex_loser_temp0_39_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_39|         array|
+|multi_radix_hex_loser_temp0_4_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_4|         array|
+|multi_radix_hex_loser_temp0_4_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_4|         array|
+|multi_radix_hex_loser_temp0_4_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_4|         array|
+|multi_radix_hex_loser_temp0_40_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_40|         array|
+|multi_radix_hex_loser_temp0_40_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_40|         array|
+|multi_radix_hex_loser_temp0_40_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_40|         array|
+|multi_radix_hex_loser_temp0_41_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_41|         array|
+|multi_radix_hex_loser_temp0_41_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_41|         array|
+|multi_radix_hex_loser_temp0_41_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_41|         array|
+|multi_radix_hex_loser_temp0_42_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_42|         array|
+|multi_radix_hex_loser_temp0_42_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_42|         array|
+|multi_radix_hex_loser_temp0_42_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_42|         array|
+|multi_radix_hex_loser_temp0_43_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_43|         array|
+|multi_radix_hex_loser_temp0_43_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_43|         array|
+|multi_radix_hex_loser_temp0_43_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_43|         array|
+|multi_radix_hex_loser_temp0_44_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_44|         array|
+|multi_radix_hex_loser_temp0_44_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_44|         array|
+|multi_radix_hex_loser_temp0_44_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_44|         array|
+|multi_radix_hex_loser_temp0_45_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_45|         array|
+|multi_radix_hex_loser_temp0_45_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_45|         array|
+|multi_radix_hex_loser_temp0_45_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_45|         array|
+|multi_radix_hex_loser_temp0_46_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_46|         array|
+|multi_radix_hex_loser_temp0_46_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_46|         array|
+|multi_radix_hex_loser_temp0_46_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_46|         array|
+|multi_radix_hex_loser_temp0_47_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_47|         array|
+|multi_radix_hex_loser_temp0_47_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_47|         array|
+|multi_radix_hex_loser_temp0_47_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_47|         array|
+|multi_radix_hex_loser_temp0_48_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_48|         array|
+|multi_radix_hex_loser_temp0_48_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_48|         array|
+|multi_radix_hex_loser_temp0_48_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_48|         array|
+|multi_radix_hex_loser_temp0_49_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_49|         array|
+|multi_radix_hex_loser_temp0_49_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_49|         array|
+|multi_radix_hex_loser_temp0_49_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_49|         array|
+|multi_radix_hex_loser_temp0_5_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_5|         array|
+|multi_radix_hex_loser_temp0_5_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_5|         array|
+|multi_radix_hex_loser_temp0_5_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_5|         array|
+|multi_radix_hex_loser_temp0_50_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_50|         array|
+|multi_radix_hex_loser_temp0_50_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_50|         array|
+|multi_radix_hex_loser_temp0_50_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_50|         array|
+|multi_radix_hex_loser_temp0_51_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_51|         array|
+|multi_radix_hex_loser_temp0_51_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_51|         array|
+|multi_radix_hex_loser_temp0_51_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_51|         array|
+|multi_radix_hex_loser_temp0_52_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_52|         array|
+|multi_radix_hex_loser_temp0_52_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_52|         array|
+|multi_radix_hex_loser_temp0_52_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_52|         array|
+|multi_radix_hex_loser_temp0_53_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_53|         array|
+|multi_radix_hex_loser_temp0_53_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_53|         array|
+|multi_radix_hex_loser_temp0_53_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_53|         array|
+|multi_radix_hex_loser_temp0_54_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_54|         array|
+|multi_radix_hex_loser_temp0_54_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_54|         array|
+|multi_radix_hex_loser_temp0_54_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_54|         array|
+|multi_radix_hex_loser_temp0_55_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_55|         array|
+|multi_radix_hex_loser_temp0_55_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_55|         array|
+|multi_radix_hex_loser_temp0_55_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_55|         array|
+|multi_radix_hex_loser_temp0_56_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_56|         array|
+|multi_radix_hex_loser_temp0_56_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_56|         array|
+|multi_radix_hex_loser_temp0_56_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_56|         array|
+|multi_radix_hex_loser_temp0_57_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_57|         array|
+|multi_radix_hex_loser_temp0_57_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_57|         array|
+|multi_radix_hex_loser_temp0_57_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_57|         array|
+|multi_radix_hex_loser_temp0_58_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_58|         array|
+|multi_radix_hex_loser_temp0_58_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_58|         array|
+|multi_radix_hex_loser_temp0_58_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_58|         array|
+|multi_radix_hex_loser_temp0_59_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_59|         array|
+|multi_radix_hex_loser_temp0_59_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_59|         array|
+|multi_radix_hex_loser_temp0_59_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_59|         array|
+|multi_radix_hex_loser_temp0_6_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_6|         array|
+|multi_radix_hex_loser_temp0_6_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_6|         array|
+|multi_radix_hex_loser_temp0_6_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_6|         array|
+|multi_radix_hex_loser_temp0_60_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_60|         array|
+|multi_radix_hex_loser_temp0_60_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_60|         array|
+|multi_radix_hex_loser_temp0_60_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_60|         array|
+|multi_radix_hex_loser_temp0_61_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_61|         array|
+|multi_radix_hex_loser_temp0_61_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_61|         array|
+|multi_radix_hex_loser_temp0_61_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_61|         array|
+|multi_radix_hex_loser_temp0_62_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_62|         array|
+|multi_radix_hex_loser_temp0_62_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_62|         array|
+|multi_radix_hex_loser_temp0_62_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_62|         array|
+|multi_radix_hex_loser_temp0_63_address0  |  out|   14|   ap_memory|  multi_radix_hex_loser_temp0_63|         array|
+|multi_radix_hex_loser_temp0_63_ce0       |  out|    1|   ap_memory|  multi_radix_hex_loser_temp0_63|         array|
+|multi_radix_hex_loser_temp0_63_q0        |   in|   32|   ap_memory|  multi_radix_hex_loser_temp0_63|         array|
+|multi_radix_hex_loser_temp0_7_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_7|         array|
+|multi_radix_hex_loser_temp0_7_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_7|         array|
+|multi_radix_hex_loser_temp0_7_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_7|         array|
+|multi_radix_hex_loser_temp0_8_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_8|         array|
+|multi_radix_hex_loser_temp0_8_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_8|         array|
+|multi_radix_hex_loser_temp0_8_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_8|         array|
+|multi_radix_hex_loser_temp0_9_address0   |  out|   14|   ap_memory|   multi_radix_hex_loser_temp0_9|         array|
+|multi_radix_hex_loser_temp0_9_ce0        |  out|    1|   ap_memory|   multi_radix_hex_loser_temp0_9|         array|
+|multi_radix_hex_loser_temp0_9_q0         |   in|   32|   ap_memory|   multi_radix_hex_loser_temp0_9|         array|
++-----------------------------------------+-----+-----+------------+--------------------------------+--------------+
+
