@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_hex_batch_50_1'
 ================================================================
-* Date:           Mon Apr 24 22:45:08 2023
+* Date:           Tue Apr 25 09:33:08 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -393,7 +393,7 @@ ST_3 : Operation 113 [1/1] (0.00ns)   --->   "%bucket_sizes_loc_load = load i32 
 ST_3 : Operation 114 [2/2] (0.38ns)   --->   "%call_ln0 = call void @radix_sort_hex_batch.50.1_Pipeline_initialization, i32 %bucket_sizes_2480_loc_load, i32 %bucket_sizes_2479_loc_load, i32 %bucket_sizes_2478_loc_load, i32 %bucket_sizes_2477_loc_load, i32 %bucket_sizes_2476_loc_load, i32 %bucket_sizes_2475_loc_load, i32 %bucket_sizes_2474_loc_load, i32 %bucket_sizes_2473_loc_load, i32 %bucket_sizes_2472_loc_load, i32 %bucket_sizes_2471_loc_load, i32 %bucket_sizes_2470_loc_load, i32 %bucket_sizes_2469_loc_load, i32 %bucket_sizes_2468_loc_load, i32 %bucket_sizes_2467_loc_load, i32 %bucket_sizes_2466_loc_load, i32 %bucket_sizes_loc_load, i32 %bucket, i32 %input_49, i32 %bucket_sizes_795, i32 %bucket_sizes_794, i32 %bucket_sizes_793, i32 %bucket_sizes_792, i32 %bucket_sizes_791, i32 %bucket_sizes_790, i32 %bucket_sizes_789, i32 %bucket_sizes_788, i32 %bucket_sizes_787, i32 %bucket_sizes_786, i32 %bucket_sizes_785, i32 %bucket_sizes_784, i32 %bucket_sizes_783, i32 %bucket_sizes_782, i32 %bucket_sizes_781, i32 %bucket_sizes"   --->   Operation 114 'call' 'call_ln0' <Predicate = true> <Delay = 0.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 4 <SV = 3> <Delay = 0.00>
-ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_49, void @empty_54, i32 0, i32 0, void @empty_4, i32 4294967295, i32 0, void @empty_4, void @empty_4, void @empty_4, i32 0, i32 0, i32 0, i32 0, void @empty_4, void @empty_4, i32 4294967295, i32 0"   --->   Operation 115 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_49, void @empty_70, i32 0, i32 0, void @empty_54, i32 4294967295, i32 0, void @empty_54, void @empty_54, void @empty_54, i32 0, i32 0, i32 0, i32 0, void @empty_54, void @empty_54, i32 4294967295, i32 0"   --->   Operation 115 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_4 : Operation 116 [1/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_hex_batch.50.1_Pipeline_initialization, i32 %bucket_sizes_2480_loc_load, i32 %bucket_sizes_2479_loc_load, i32 %bucket_sizes_2478_loc_load, i32 %bucket_sizes_2477_loc_load, i32 %bucket_sizes_2476_loc_load, i32 %bucket_sizes_2475_loc_load, i32 %bucket_sizes_2474_loc_load, i32 %bucket_sizes_2473_loc_load, i32 %bucket_sizes_2472_loc_load, i32 %bucket_sizes_2471_loc_load, i32 %bucket_sizes_2470_loc_load, i32 %bucket_sizes_2469_loc_load, i32 %bucket_sizes_2468_loc_load, i32 %bucket_sizes_2467_loc_load, i32 %bucket_sizes_2466_loc_load, i32 %bucket_sizes_loc_load, i32 %bucket, i32 %input_49, i32 %bucket_sizes_795, i32 %bucket_sizes_794, i32 %bucket_sizes_793, i32 %bucket_sizes_792, i32 %bucket_sizes_791, i32 %bucket_sizes_790, i32 %bucket_sizes_789, i32 %bucket_sizes_788, i32 %bucket_sizes_787, i32 %bucket_sizes_786, i32 %bucket_sizes_785, i32 %bucket_sizes_784, i32 %bucket_sizes_783, i32 %bucket_sizes_782, i32 %bucket_sizes_781, i32 %bucket_sizes"   --->   Operation 116 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_4 : Operation 117 [1/1] (0.00ns)   --->   "%br_ln27 = br void %bucket_pointer_initialization.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:27]   --->   Operation 117 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
 
@@ -495,7 +495,7 @@ ST_8 : Operation 205 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln43 =
 ST_8 : Operation 206 [2/2] (2.02ns)   --->   "%call_ln41 = call void @radix_sort_hex_batch.50.1_Pipeline_input_bucket, i32 %bucket_sizes_2561_loc_load, i32 %bucket_sizes_2560_loc_load, i32 %bucket_sizes_2559_loc_load, i32 %bucket_sizes_2558_loc_load, i32 %bucket_sizes_2557_loc_load, i32 %bucket_sizes_2556_loc_load, i32 %bucket_sizes_2555_loc_load, i32 %bucket_sizes_2554_loc_load, i32 %bucket_sizes_2553_loc_load, i32 %bucket_sizes_2552_loc_load, i32 %bucket_sizes_2551_loc_load, i32 %bucket_sizes_2550_loc_load, i32 %bucket_sizes_2549_loc_load, i32 %bucket_sizes_2548_loc_load, i32 %bucket_sizes_2547_loc_load, i32 %bucket_sizes_2546_loc_load, i32 %bucket_pointer_1136_loc_load, i32 %bucket_pointer_1135_loc_load, i32 %bucket_pointer_1134_loc_load, i32 %bucket_pointer_1133_loc_load, i32 %bucket_pointer_1132_loc_load, i32 %bucket_pointer_1131_loc_load, i32 %bucket_pointer_1130_loc_load, i32 %bucket_pointer_1129_loc_load, i32 %bucket_pointer_1128_loc_load, i32 %bucket_pointer_1127_loc_load, i32 %bucket_pointer_1126_loc_load, i32 %bucket_pointer_1125_loc_load, i32 %bucket_pointer_1124_loc_load, i32 %bucket_pointer_1123_loc_load, i32 %bucket_pointer_1122_loc_load, i32 %bucket_pointer_1121_loc_load, i15 %mul_ln41, i32 %bucket, i5 %mul_i, i15 %mul_ln43, i32 %bucket_sizes_795, i32 %bucket_sizes_794, i32 %bucket_sizes_793, i32 %bucket_sizes_792, i32 %bucket_sizes_791, i32 %bucket_sizes_790, i32 %bucket_sizes_789, i32 %bucket_sizes_788, i32 %bucket_sizes_787, i32 %bucket_sizes_786, i32 %bucket_sizes_785, i32 %bucket_sizes_784, i32 %bucket_sizes_783, i32 %bucket_sizes_782, i32 %bucket_sizes_781, i32 %bucket_sizes, i32 %bucket_pointer_612, i32 %bucket_pointer_611, i32 %bucket_pointer_610, i32 %bucket_pointer_609, i32 %bucket_pointer_608, i32 %bucket_pointer_607, i32 %bucket_pointer_606, i32 %bucket_pointer_605, i32 %bucket_pointer_604, i32 %bucket_pointer_603, i32 %bucket_pointer_602, i32 %bucket_pointer_601, i32 %bucket_pointer_600, i32 %bucket_pointer_599, i32 %bucket_pointer_598, i32 %bucket_pointer" [sort_seperate_bucket/multi_radix_hex_kmerge.c:41]   --->   Operation 206 'call' 'call_ln41' <Predicate = true> <Delay = 2.02> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 9 <SV = 8> <Delay = 0.00>
-ST_9 : Operation 207 [1/1] (0.00ns)   --->   "%specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_47" [sort_seperate_bucket/multi_radix_hex_kmerge.c:11]   --->   Operation 207 'specloopname' 'specloopname_ln11' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 207 [1/1] (0.00ns)   --->   "%specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_39" [sort_seperate_bucket/multi_radix_hex_kmerge.c:11]   --->   Operation 207 'specloopname' 'specloopname_ln11' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 208 [1/2] (0.00ns)   --->   "%call_ln41 = call void @radix_sort_hex_batch.50.1_Pipeline_input_bucket, i32 %bucket_sizes_2561_loc_load, i32 %bucket_sizes_2560_loc_load, i32 %bucket_sizes_2559_loc_load, i32 %bucket_sizes_2558_loc_load, i32 %bucket_sizes_2557_loc_load, i32 %bucket_sizes_2556_loc_load, i32 %bucket_sizes_2555_loc_load, i32 %bucket_sizes_2554_loc_load, i32 %bucket_sizes_2553_loc_load, i32 %bucket_sizes_2552_loc_load, i32 %bucket_sizes_2551_loc_load, i32 %bucket_sizes_2550_loc_load, i32 %bucket_sizes_2549_loc_load, i32 %bucket_sizes_2548_loc_load, i32 %bucket_sizes_2547_loc_load, i32 %bucket_sizes_2546_loc_load, i32 %bucket_pointer_1136_loc_load, i32 %bucket_pointer_1135_loc_load, i32 %bucket_pointer_1134_loc_load, i32 %bucket_pointer_1133_loc_load, i32 %bucket_pointer_1132_loc_load, i32 %bucket_pointer_1131_loc_load, i32 %bucket_pointer_1130_loc_load, i32 %bucket_pointer_1129_loc_load, i32 %bucket_pointer_1128_loc_load, i32 %bucket_pointer_1127_loc_load, i32 %bucket_pointer_1126_loc_load, i32 %bucket_pointer_1125_loc_load, i32 %bucket_pointer_1124_loc_load, i32 %bucket_pointer_1123_loc_load, i32 %bucket_pointer_1122_loc_load, i32 %bucket_pointer_1121_loc_load, i15 %mul_ln41, i32 %bucket, i5 %mul_i, i15 %mul_ln43, i32 %bucket_sizes_795, i32 %bucket_sizes_794, i32 %bucket_sizes_793, i32 %bucket_sizes_792, i32 %bucket_sizes_791, i32 %bucket_sizes_790, i32 %bucket_sizes_789, i32 %bucket_sizes_788, i32 %bucket_sizes_787, i32 %bucket_sizes_786, i32 %bucket_sizes_785, i32 %bucket_sizes_784, i32 %bucket_sizes_783, i32 %bucket_sizes_782, i32 %bucket_sizes_781, i32 %bucket_sizes, i32 %bucket_pointer_612, i32 %bucket_pointer_611, i32 %bucket_pointer_610, i32 %bucket_pointer_609, i32 %bucket_pointer_608, i32 %bucket_pointer_607, i32 %bucket_pointer_606, i32 %bucket_pointer_605, i32 %bucket_pointer_604, i32 %bucket_pointer_603, i32 %bucket_pointer_602, i32 %bucket_pointer_601, i32 %bucket_pointer_600, i32 %bucket_pointer_599, i32 %bucket_pointer_598, i32 %bucket_pointer" [sort_seperate_bucket/multi_radix_hex_kmerge.c:41]   --->   Operation 208 'call' 'call_ln41' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_9 : Operation 209 [1/1] (0.00ns)   --->   "%br_ln27 = br void %bucket_pointer_initialization.i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:27]   --->   Operation 209 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
 
@@ -806,7 +806,7 @@ ret_ln0                      (ret              ) [ 00000000000]
 <pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_54"/></StgValue>
+<StgValue><ssdm name="empty_70"/></StgValue>
 </bind>
 </comp>
 
@@ -815,7 +815,7 @@ ret_ln0                      (ret              ) [ 00000000000]
 <pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_4"/></StgValue>
+<StgValue><ssdm name="empty_54"/></StgValue>
 </bind>
 </comp>
 
@@ -932,7 +932,7 @@ ret_ln0                      (ret              ) [ 00000000000]
 <pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_47"/></StgValue>
+<StgValue><ssdm name="empty_39"/></StgValue>
 </bind>
 </comp>
 

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'loser_tree_1_Pipeline_1'" level="0">
-<item name = "Date">Mon Apr 24 22:40:20 2023
+<item name = "Date">Tue Apr 25 09:29:07 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">sort_seperate_bucket</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 1.299 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 1.093 ns, 2.70 ns</column>
 </table>
 </item>
 </section>

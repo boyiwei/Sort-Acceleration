@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_hex_batch_12_1_Pipeline_bucket_pointer_initialization'
 ================================================================
-* Date:           Mon Apr 24 22:34:52 2023
+* Date:           Tue Apr 25 09:23:55 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -211,7 +211,7 @@ ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%bucket_sizes_2652_load_1 = load i
 ST_2 : Operation 125 [1/1] (0.00ns)   --->   "%bucket_sizes_2653_load_1 = load i32 %bucket_sizes_2653" [sort_seperate_bucket/multi_radix_hex_kmerge.c:35]   --->   Operation 125 'load' 'bucket_sizes_2653_load_1' <Predicate = (!icmp_ln33)> <Delay = 0.00>
 ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%bucket_sizes_2654_load_1 = load i32 %bucket_sizes_2654" [sort_seperate_bucket/multi_radix_hex_kmerge.c:35]   --->   Operation 126 'load' 'bucket_sizes_2654_load_1' <Predicate = (!icmp_ln33)> <Delay = 0.00>
 ST_2 : Operation 127 [1/1] (0.00ns)   --->   "%bucket_sizes_2655_load_1 = load i32 %bucket_sizes_2655" [sort_seperate_bucket/multi_radix_hex_kmerge.c:35]   --->   Operation 127 'load' 'bucket_sizes_2655_load_1' <Predicate = (!icmp_ln33)> <Delay = 0.00>
-ST_2 : Operation 128 [1/1] (0.00ns)   --->   "%specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_41" [sort_seperate_bucket/multi_radix_hex_kmerge.c:11]   --->   Operation 128 'specloopname' 'specloopname_ln11' <Predicate = (!icmp_ln33)> <Delay = 0.00>
+ST_2 : Operation 128 [1/1] (0.00ns)   --->   "%specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_55" [sort_seperate_bucket/multi_radix_hex_kmerge.c:11]   --->   Operation 128 'specloopname' 'specloopname_ln11' <Predicate = (!icmp_ln33)> <Delay = 0.00>
 ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%trunc_ln34 = trunc i5 %m_60" [sort_seperate_bucket/multi_radix_hex_kmerge.c:34]   --->   Operation 129 'trunc' 'trunc_ln34' <Predicate = (!icmp_ln33)> <Delay = 0.00>
 ST_2 : Operation 130 [1/1] (0.49ns)   --->   "%tmp_i = mux i32 @_ssdm_op_Mux.ap_auto.16i32.i4, i32 %bucket_sizes_load_60, i32 %bucket_sizes_2641_load_1, i32 %bucket_sizes_2642_load_1, i32 %bucket_sizes_2643_load_1, i32 %bucket_sizes_2644_load_1, i32 %bucket_sizes_2645_load_1, i32 %bucket_sizes_2646_load_1, i32 %bucket_sizes_2647_load_1, i32 %bucket_sizes_2648_load_1, i32 %bucket_sizes_2649_load_1, i32 %bucket_sizes_2650_load_1, i32 %bucket_sizes_2651_load_1, i32 %bucket_sizes_2652_load_1, i32 %bucket_sizes_2653_load_1, i32 %bucket_sizes_2654_load_1, i32 %bucket_sizes_2655_load_1, i4 %trunc_ln34" [sort_seperate_bucket/multi_radix_hex_kmerge.c:35]   --->   Operation 130 'mux' 'tmp_i' <Predicate = (!icmp_ln33)> <Delay = 0.49> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 131 [1/1] (0.88ns)   --->   "%next_bucket_pointer = add i32 %tmp_i, i32 %bucket_pointer_2025" [sort_seperate_bucket/multi_radix_hex_kmerge.c:35]   --->   Operation 131 'add' 'next_bucket_pointer' <Predicate = (!icmp_ln33)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
@@ -1354,7 +1354,7 @@ ret_ln0                  (ret              ) [ 000]
 <pin id="153" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_41"/></StgValue>
+<StgValue><ssdm name="empty_55"/></StgValue>
 </bind>
 </comp>
 

@@ -558,13 +558,13 @@ set NewPortList {[
  	{ "name": "multi_radix_hex_loser_temp0_9_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "multi_radix_hex_loser_temp0_9", "role": "q0" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2", "4"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "3"],
 		"CDFG" : "loser_tree_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3000071", "EstimateLatencyMax" : "3000071",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000071", "EstimateLatencyMax" : "1000071",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -575,204 +575,200 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "output_r", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "output_r", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_0", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_1", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_10", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_10", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_10", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_11", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_11", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_11", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_12", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_12", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_12", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_13", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_13", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_13", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_14", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_14", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_14", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_15", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_15", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_15", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_16", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_16", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_16", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_17", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_17", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_17", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_18", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_18", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_18", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_19", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_19", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_19", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_2", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_20", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_20", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_20", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_21", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_21", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_21", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_22", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_22", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_22", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_23", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_23", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_23", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_24", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_24", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_24", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_25", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_25", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_25", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_26", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_26", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_26", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_27", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_27", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_27", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_28", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_28", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_28", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_29", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_29", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_29", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_3", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_3", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_3", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_30", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_30", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_30", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_31", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_31", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_31", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_32", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_32", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_32", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_33", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_33", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_33", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_34", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_34", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_34", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_35", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_35", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_35", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_36", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_36", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_36", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_37", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_37", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_37", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_38", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_38", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_38", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_39", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_39", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_39", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_4", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_4", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_4", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_40", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_40", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_40", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_41", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_41", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_41", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_42", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_42", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_42", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_43", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_43", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_43", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_44", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_44", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_44", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_45", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_45", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_45", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_46", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_46", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_46", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_47", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_47", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_47", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_48", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_48", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_48", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_49", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_49", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_49", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_5", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_5", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_5", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_50", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_50", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_50", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_51", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_51", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_51", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_52", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_52", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_52", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_53", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_53", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_53", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_54", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_54", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_54", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_55", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_55", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_55", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_56", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_56", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_56", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_57", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_57", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_57", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_58", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_58", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_58", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_59", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_59", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_59", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_6", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_6", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_6", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_60", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_60", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_60", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_61", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_61", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_61", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_62", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_62", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_62", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_63", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_63", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_63", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_7", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_7", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_7", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_8", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_8", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_8", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_9", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["0"], "DependentChan" : "0",
 				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_9", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "loser_tree_index", "Type" : "Memory", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "4", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "loser_tree_index", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.current_indices_U", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_1_fu_1050", "Parent" : "0", "Child" : ["3"],
+					{"ID" : "3", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_9", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_1_fu_1300", "Parent" : "0", "Child" : ["2"],
 		"CDFG" : "loser_tree_1_Pipeline_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -787,17 +783,80 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "current_indices", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "current_indices_63_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_62_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_61_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_60_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_59_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_58_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_57_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_56_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_55_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_54_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_53_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_52_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_51_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_50_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_49_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_48_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_47_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_46_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_45_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_44_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_43_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_42_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_41_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_40_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_39_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_38_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_37_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_36_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_35_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_34_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_33_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_32_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_31_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_30_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_29_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_28_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_27_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_26_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_25_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_24_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_23_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_22_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_21_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_20_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_19_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_18_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_17_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_16_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_15_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_14_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_13_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_12_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_11_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_10_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_9_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_8_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_7_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_6_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_5_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_4_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_3_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_2_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_1_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "Loop 1", "PipelineType" : "NotSupport"}]},
-	{"ID" : "3", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_1_fu_1050.flow_control_loop_pipe_sequential_init_U", "Parent" : "2"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Parent" : "0", "Child" : ["5", "6", "7"],
-		"CDFG" : "loser_tree_1_Pipeline_VITIS_LOOP_282_2",
+	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_1_fu_1300.flow_control_loop_pipe_sequential_init_U", "Parent" : "1"},
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Parent" : "0", "Child" : ["4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40"],
+		"CDFG" : "loser_tree_1_Pipeline_VITIS_LOOP_298_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3000002", "EstimateLatencyMax" : "3000002",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000002", "EstimateLatencyMax" : "1000002",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -806,6 +865,70 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "current_indices_63_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_62_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_61_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_60_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_59_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_58_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_57_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_56_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_55_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_54_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_53_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_52_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_51_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_50_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_49_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_48_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_47_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_46_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_45_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_44_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_43_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_42_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_41_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_40_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_39_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_38_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_37_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_36_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_35_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_34_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_33_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_32_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_31_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_30_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_29_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_28_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_27_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_26_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_25_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_24_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_23_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_22_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_21_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_20_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_19_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_18_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_17_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_16_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_15_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_14_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_13_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_12_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_11_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_10_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_9_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_8_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_7_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_6_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_5_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_4_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_3_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_2_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_1_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_reload", "Type" : "None", "Direction" : "I"},
 			{"Name" : "loser_tree_data_63", "Type" : "None", "Direction" : "I"},
 			{"Name" : "loser_tree_data_62", "Type" : "None", "Direction" : "I"},
 			{"Name" : "loser_tree_data_61", "Type" : "None", "Direction" : "I"},
@@ -934,88 +1057,246 @@ set RtlHierarchyInfo {[
 			{"Name" : "multi_radix_hex_loser_temp0_61", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "multi_radix_hex_loser_temp0_62", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "multi_radix_hex_loser_temp0_63", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "current_indices", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "loser_tree_index", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_282_2", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "3", "FirstState" : "ap_ST_fsm_pp0_stage1", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage1_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056.loser_tree_index_U", "Parent" : "4"},
-	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056.mux_646_32_1_1_U12356", "Parent" : "4"},
-	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056.flow_control_loop_pipe_sequential_init_U", "Parent" : "4"}]}
+			{"Name" : "VITIS_LOOP_298_2", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "4", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_21_32_1_1_U12419", "Parent" : "3"},
+	{"ID" : "5", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_42_32_1_1_U12420", "Parent" : "3"},
+	{"ID" : "6", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_42_32_1_1_U12421", "Parent" : "3"},
+	{"ID" : "7", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_83_32_1_1_U12422", "Parent" : "3"},
+	{"ID" : "8", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_124_32_1_1_U12423", "Parent" : "3"},
+	{"ID" : "9", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_164_32_1_1_x_U12424", "Parent" : "3"},
+	{"ID" : "10", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_205_32_1_1_U12425", "Parent" : "3"},
+	{"ID" : "11", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_245_32_1_1_U12426", "Parent" : "3"},
+	{"ID" : "12", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_285_32_1_1_U12427", "Parent" : "3"},
+	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_325_32_1_1_U12428", "Parent" : "3"},
+	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_366_32_1_1_U12429", "Parent" : "3"},
+	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_406_32_1_1_U12430", "Parent" : "3"},
+	{"ID" : "16", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_446_32_1_1_U12431", "Parent" : "3"},
+	{"ID" : "17", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_486_32_1_1_U12432", "Parent" : "3"},
+	{"ID" : "18", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_526_32_1_1_U12433", "Parent" : "3"},
+	{"ID" : "19", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_566_32_1_1_U12434", "Parent" : "3"},
+	{"ID" : "20", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_606_32_1_1_U12435", "Parent" : "3"},
+	{"ID" : "21", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12436", "Parent" : "3"},
+	{"ID" : "22", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_83_32_1_1_U12437", "Parent" : "3"},
+	{"ID" : "23", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_164_32_1_1_U12438", "Parent" : "3"},
+	{"ID" : "24", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_245_32_1_1_U12439", "Parent" : "3"},
+	{"ID" : "25", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_325_32_1_1_U12440", "Parent" : "3"},
+	{"ID" : "26", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_406_32_1_1_U12441", "Parent" : "3"},
+	{"ID" : "27", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_486_32_1_1_U12442", "Parent" : "3"},
+	{"ID" : "28", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_566_32_1_1_U12443", "Parent" : "3"},
+	{"ID" : "29", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12444", "Parent" : "3"},
+	{"ID" : "30", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_164_32_1_1_U12445", "Parent" : "3"},
+	{"ID" : "31", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_325_32_1_1_U12446", "Parent" : "3"},
+	{"ID" : "32", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_486_32_1_1_U12447", "Parent" : "3"},
+	{"ID" : "33", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12448", "Parent" : "3"},
+	{"ID" : "34", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_325_32_1_1_U12449", "Parent" : "3"},
+	{"ID" : "35", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12450", "Parent" : "3"},
+	{"ID" : "36", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12451", "Parent" : "3"},
+	{"ID" : "37", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12452", "Parent" : "3"},
+	{"ID" : "38", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12453", "Parent" : "3"},
+	{"ID" : "39", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12454", "Parent" : "3"},
+	{"ID" : "40", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.flow_control_loop_pipe_sequential_init_U", "Parent" : "3"}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	loser_tree_1 {
-		output_r {Type O LastRead -1 FirstWrite 2}
-		multi_radix_hex_loser_temp0_0 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_1 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_10 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_11 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_12 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_13 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_14 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_15 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_16 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_17 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_18 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_19 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_2 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_20 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_21 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_22 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_23 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_24 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_25 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_26 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_27 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_28 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_29 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_3 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_30 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_31 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_32 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_33 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_34 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_35 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_36 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_37 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_38 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_39 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_4 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_40 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_41 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_42 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_43 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_44 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_45 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_46 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_47 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_48 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_49 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_5 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_50 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_51 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_52 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_53 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_54 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_55 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_56 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_57 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_58 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_59 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_6 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_60 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_61 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_62 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_63 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_7 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_8 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_9 {Type I LastRead 3 FirstWrite -1}
-		loser_tree_index {Type I LastRead -1 FirstWrite -1}}
+		output_r {Type O LastRead -1 FirstWrite 1}
+		multi_radix_hex_loser_temp0_0 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_1 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_10 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_11 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_12 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_13 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_14 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_15 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_16 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_17 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_18 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_19 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_2 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_20 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_21 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_22 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_23 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_24 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_25 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_26 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_27 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_28 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_29 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_3 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_30 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_31 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_32 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_33 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_34 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_35 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_36 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_37 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_38 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_39 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_4 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_40 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_41 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_42 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_43 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_44 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_45 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_46 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_47 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_48 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_49 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_5 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_50 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_51 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_52 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_53 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_54 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_55 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_56 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_57 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_58 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_59 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_6 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_60 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_61 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_62 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_63 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_7 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_8 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_9 {Type I LastRead 1 FirstWrite -1}}
 	loser_tree_1_Pipeline_1 {
-		current_indices {Type O LastRead -1 FirstWrite 0}}
-	loser_tree_1_Pipeline_VITIS_LOOP_282_2 {
+		current_indices_63_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_62_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_61_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_60_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_59_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_58_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_57_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_56_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_55_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_54_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_53_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_52_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_51_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_50_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_49_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_48_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_47_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_46_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_45_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_44_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_43_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_42_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_41_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_40_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_39_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_38_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_37_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_36_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_35_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_34_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_33_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_32_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_31_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_30_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_29_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_28_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_27_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_26_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_25_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_24_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_23_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_22_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_21_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_20_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_19_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_18_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_17_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_16_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_15_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_14_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_13_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_12_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_11_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_10_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_9_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_8_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_7_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_6_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_5_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_4_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_3_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_2_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_1_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_out {Type O LastRead -1 FirstWrite 0}}
+	loser_tree_1_Pipeline_VITIS_LOOP_298_2 {
+		current_indices_63_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_62_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_61_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_60_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_59_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_58_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_57_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_56_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_55_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_54_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_53_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_52_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_51_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_50_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_49_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_48_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_47_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_46_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_45_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_44_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_43_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_42_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_41_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_40_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_39_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_38_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_37_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_36_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_35_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_34_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_33_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_32_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_31_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_30_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_29_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_28_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_27_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_26_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_25_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_24_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_23_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_22_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_21_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_20_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_19_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_18_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_17_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_16_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_15_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_14_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_13_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_12_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_11_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_10_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_9_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_8_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_7_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_6_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_5_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_4_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_3_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_2_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_1_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_reload {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data_63 {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data_62 {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data_61 {Type I LastRead 0 FirstWrite -1}
@@ -1080,79 +1361,77 @@ set ArgLastReadFirstWriteLatency {
 		loser_tree_data_2 {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data_1 {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data {Type I LastRead 0 FirstWrite -1}
-		multi_radix_hex_loser_temp0_0 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_1 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_2 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_3 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_4 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_5 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_6 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_7 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_8 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_9 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_10 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_11 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_12 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_13 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_14 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_15 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_16 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_17 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_18 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_19 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_20 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_21 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_22 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_23 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_24 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_25 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_26 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_27 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_28 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_29 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_30 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_31 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_32 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_33 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_34 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_35 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_36 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_37 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_38 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_39 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_40 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_41 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_42 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_43 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_44 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_45 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_46 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_47 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_48 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_49 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_50 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_51 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_52 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_53 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_54 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_55 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_56 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_57 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_58 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_59 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_60 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_61 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_62 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_63 {Type I LastRead 3 FirstWrite -1}
-		output_r {Type O LastRead -1 FirstWrite 2}
-		current_indices {Type IO LastRead 2 FirstWrite 3}
-		loser_tree_index {Type I LastRead -1 FirstWrite -1}}}
+		multi_radix_hex_loser_temp0_0 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_1 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_2 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_3 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_4 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_5 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_6 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_7 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_8 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_9 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_10 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_11 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_12 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_13 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_14 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_15 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_16 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_17 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_18 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_19 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_20 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_21 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_22 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_23 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_24 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_25 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_26 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_27 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_28 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_29 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_30 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_31 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_32 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_33 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_34 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_35 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_36 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_37 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_38 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_39 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_40 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_41 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_42 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_43 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_44 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_45 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_46 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_47 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_48 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_49 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_50 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_51 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_52 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_53 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_54 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_55 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_56 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_57 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_58 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_59 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_60 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_61 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_62 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_63 {Type I LastRead 1 FirstWrite -1}
+		output_r {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3000071", "Max" : "3000071"}
-	, {"Name" : "Interval", "Min" : "3000071", "Max" : "3000071"}
+	{"Name" : "Latency", "Min" : "1000071", "Max" : "1000071"}
+	, {"Name" : "Interval", "Min" : "1000071", "Max" : "1000071"}
 ]}
 
 set PipelineEnableSignalInfo {[

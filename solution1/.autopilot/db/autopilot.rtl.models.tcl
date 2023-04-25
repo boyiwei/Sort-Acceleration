@@ -649,17 +649,28 @@ set SynModuleInfo {
     }
   }
   {SRCNAME loser_tree.1_Pipeline_1 MODELNAME loser_tree_1_Pipeline_1 RTLNAME multi_radix_hex_loser_loser_tree_1_Pipeline_1}
-  {SRCNAME loser_tree.1_Pipeline_VITIS_LOOP_282_2 MODELNAME loser_tree_1_Pipeline_VITIS_LOOP_282_2 RTLNAME multi_radix_hex_loser_loser_tree_1_Pipeline_VITIS_LOOP_282_2
+  {SRCNAME loser_tree.1_Pipeline_VITIS_LOOP_298_2 MODELNAME loser_tree_1_Pipeline_VITIS_LOOP_298_2 RTLNAME multi_radix_hex_loser_loser_tree_1_Pipeline_VITIS_LOOP_298_2
     SUBMODULES {
+      {MODELNAME multi_radix_hex_loser_mux_21_32_1_1 RTLNAME multi_radix_hex_loser_mux_21_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_42_32_1_1 RTLNAME multi_radix_hex_loser_mux_42_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_83_32_1_1 RTLNAME multi_radix_hex_loser_mux_83_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_124_32_1_1 RTLNAME multi_radix_hex_loser_mux_124_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_164_32_1_1_x RTLNAME multi_radix_hex_loser_mux_164_32_1_1_x BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_205_32_1_1 RTLNAME multi_radix_hex_loser_mux_205_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_245_32_1_1 RTLNAME multi_radix_hex_loser_mux_245_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_285_32_1_1 RTLNAME multi_radix_hex_loser_mux_285_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_325_32_1_1 RTLNAME multi_radix_hex_loser_mux_325_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_366_32_1_1 RTLNAME multi_radix_hex_loser_mux_366_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_406_32_1_1 RTLNAME multi_radix_hex_loser_mux_406_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_446_32_1_1 RTLNAME multi_radix_hex_loser_mux_446_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_486_32_1_1 RTLNAME multi_radix_hex_loser_mux_486_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_526_32_1_1 RTLNAME multi_radix_hex_loser_mux_526_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_566_32_1_1 RTLNAME multi_radix_hex_loser_mux_566_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_hex_loser_mux_606_32_1_1 RTLNAME multi_radix_hex_loser_mux_606_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
       {MODELNAME multi_radix_hex_loser_mux_646_32_1_1 RTLNAME multi_radix_hex_loser_mux_646_32_1_1 BINDTYPE op TYPE mux IMPL auto LATENCY 0 ALLOW_PRAGMA 1}
-      {MODELNAME multi_radix_hex_loser_loser_tree_1_Pipeline_VITIS_LOOP_282_2_loser_tree_index_ROM_AUTO_1R RTLNAME multi_radix_hex_loser_loser_tree_1_Pipeline_VITIS_LOOP_282_2_loser_tree_index_ROM_AUTO_1R BINDTYPE storage TYPE rom IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }
-  {SRCNAME loser_tree.1 MODELNAME loser_tree_1 RTLNAME multi_radix_hex_loser_loser_tree_1
-    SUBMODULES {
-      {MODELNAME multi_radix_hex_loser_loser_tree_1_current_indices_RAM_AUTO_1R1W RTLNAME multi_radix_hex_loser_loser_tree_1_current_indices_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
-    }
-  }
+  {SRCNAME loser_tree.1 MODELNAME loser_tree_1 RTLNAME multi_radix_hex_loser_loser_tree_1}
   {SRCNAME multi_radix_hex_loser MODELNAME multi_radix_hex_loser RTLNAME multi_radix_hex_loser IS_TOP 1
     SUBMODULES {
       {MODELNAME multi_radix_hex_loser_multi_radix_hex_loser_temp0_0_RAM_AUTO_1R1W_memcore RTLNAME multi_radix_hex_loser_multi_radix_hex_loser_temp0_0_RAM_AUTO_1R1W_memcore BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}

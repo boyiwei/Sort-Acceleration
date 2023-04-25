@@ -6,8 +6,8 @@
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
-          "sourceLine": "49",
+          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/directives.tcl",
+          "sourceLine": "6",
           "pragma": {
             "name": "TOP",
             "option": [{
@@ -261,6 +261,21 @@
           "label": "",
           "functionLabel": "",
           "id": "18",
+          "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
+          "sourceLine": "49",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "multi_radix_hex_loser"
+              }]
+          }
+        },
+        {
+          "functionName": "multi_radix_hex_loser",
+          "label": "",
+          "functionLabel": "",
+          "id": "19",
           "sourceFile": "\/home\/boyiw7\/sort_seperate_bucket\/solution1\/csynth.tcl",
           "sourceLine": "49",
           "pragma": {

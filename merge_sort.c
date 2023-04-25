@@ -272,26 +272,65 @@ void merge_sort_batch5(int input1[32*batch_size], int input2[32*batch_size], int
 void loser_tree(int input[64][batch_size], int output[64 * batch_size]) {
     struct data_index_pair loser_tree[64];
     int current_indices[64] = {0};
+    int winner_index_stage0[32] = {0};
+    int winner_index_stage1[16] = {0};
+    int winner_index_stage2[8] = {0};
+    int winner_index_stage3[4] = {0};
+    int winner_index_stage4[2] = {0};
+#pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
+#pragma HLS ARRAY_PARTITION variable=loser_tree type=complete
+#pragma HLS ARRAY_PARTITION variable=current_indices type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage0 type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage1 type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage2 type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage3 type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage4 type=complete
+
+
     int i;
+    int j;
     for (i = 0; i < 64; i++) {
 #pragma HLS UNROLL
         loser_tree[i].data = input[i][0];
         loser_tree[i].index = i;
     }
 
-    for (i = 0; i < 64 * batch_size; i++) {
+    for (i = 0; i < 64*batch_size; i++) {
 #pragma HLS PIPELINE II=1
 
         int winner_index = 0;
         int winner_value = MAX_VALUE;
 
-        for (int j = 0; j < 64; j++) {
+        find_winner:
+			find_winner_stage0:
+			for(j=0; j<32; j++){
 #pragma HLS UNROLL
-            if (loser_tree[j].data < winner_value) {
-                winner_value = loser_tree[j].data;
-                winner_index = j;
-            }
-        }
+				winner_index_stage0[j] = loser_tree[2*j].data < loser_tree[2*j+1].data ? loser_tree[2*j].index:loser_tree[2*j+1].index;
+			}
+        	find_winner_stage1:
+			for(j=0; j<16; j++){
+#pragma HLS UNROLL
+				winner_index_stage1[j] = loser_tree[winner_index_stage0[2*j]].data < loser_tree[winner_index_stage0[2*j+1]].data ? winner_index_stage0[2*j] : winner_index_stage0[2*j+1];
+			}
+			find_winner_stage2:
+			for(j=0; j<8; j++){
+#pragma HLS UNROLL
+				winner_index_stage2[j] = loser_tree[winner_index_stage1[2*j]].data < loser_tree[winner_index_stage1[2*j+1]].data ? winner_index_stage1[2*j] : winner_index_stage1[2*j+1];
+			}
+			find_winner_stage3:
+			for(j=0; j<4; j++){
+#pragma HLS UNROLL
+				winner_index_stage3[j] = loser_tree[winner_index_stage2[2*j]].data < loser_tree[winner_index_stage2[2*j+1]].data ? winner_index_stage2[2*j] : winner_index_stage2[2*j+1];
+			}
+			find_winner_stage4:
+			for(j=0; j<2; j++){
+#pragma HLS UNROLL
+				winner_index_stage4[j] = loser_tree[winner_index_stage3[2*j]].data < loser_tree[winner_index_stage3[2*j+1]].data ? winner_index_stage3[2*j] : winner_index_stage3[2*j+1];
+			}
+
+			winner_index = loser_tree[winner_index_stage4[0]].data < loser_tree[winner_index_stage4[1]].data ? winner_index_stage4[0] : winner_index_stage4[1];
+			winner_value = loser_tree[winner_index].data;
+
 
         output[i] = winner_value;
 

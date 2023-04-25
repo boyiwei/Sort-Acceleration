@@ -1,12 +1,56 @@
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 288, 
-                   Column: 27 }
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 306, 
+                   Column: 4 }
 Function:        loser_tree
 Args:            
   - String:          'Loop '''
-  - LoopName:        VITIS_LOOP_288_3
+  - LoopName:        find_winner_stage0
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 311, 
+                   Column: 4 }
+Function:        loser_tree
+Args:            
+  - String:          'Loop '''
+  - LoopName:        find_winner_stage1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 316, 
+                   Column: 4 }
+Function:        loser_tree
+Args:            
+  - String:          'Loop '''
+  - LoopName:        find_winner_stage2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 321, 
+                   Column: 4 }
+Function:        loser_tree
+Args:            
+  - String:          'Loop '''
+  - LoopName:        find_winner_stage3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 326, 
+                   Column: 4 }
+Function:        loser_tree
+Args:            
+  - String:          'Loop '''
+  - LoopName:        find_winner_stage4
   - String:          ''' is marked as complete unroll implied by the pipeline pragma'
 ...
 --- !Passed
@@ -34,14 +78,14 @@ DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272,
 Function:        loser_tree
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_288_3
+  - LoopName:        find_winner_stage0
   - String:          ''' ('
-  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:288:27'
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:306:4'
   - String:          ') '
   - String:          'in function '''
   - String:          loser_tree
   - String:          ''' completely with a factor of '
-  - Factor:          '64'
+  - Factor:          '32'
 ...
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
@@ -51,9 +95,77 @@ DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272,
 Function:        loser_tree
 Args:            
   - String:          'Unrolling loop '''
-  - LoopName:        VITIS_LOOP_276_1
+  - LoopName:        find_winner_stage1
   - String:          ''' ('
-  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:276:23'
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:311:4'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          loser_tree
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
+                   Column: 0 }
+Function:        loser_tree
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        find_winner_stage2
+  - String:          ''' ('
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:316:4'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          loser_tree
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
+                   Column: 0 }
+Function:        loser_tree
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        find_winner_stage3
+  - String:          ''' ('
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:321:4'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          loser_tree
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
+                   Column: 0 }
+Function:        loser_tree
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        find_winner_stage4
+  - String:          ''' ('
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:326:4'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          loser_tree
+  - String:          ''' completely with a factor of '
+  - Factor:          '2'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
+                   Column: 0 }
+Function:        loser_tree
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_292_1
+  - String:          ''' ('
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:292:23'
   - String:          ') '
   - String:          'in function '''
   - String:          loser_tree
@@ -2514,14 +2626,14 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_loser.c, 
-                   Line: 7, Column: 0 }
-Function:        multi_radix_hex_loser
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 273, 
+                   Column: 28 }
+Function:        loser_tree
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          input
+  - UOName:          loser_tree.data
   - String:          ''':'
   - String:          ' '
   - Mode:            Complete
@@ -2529,48 +2641,6 @@ Args:
   - String:          ' on dimension '
   - Dim:             '1'
   - String:          .
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 0, Column: 1 }
-Function:        loser_tree
-Args:            
-  - PragmaType:      array_partition
-  - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=loser_tree.data'
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  loser_tree
-  - String:          ' '
-  - varLoc:          'sort_seperate_bucket/merge_sort.c:273:28'
-  - String:          ' '
-  - PragmaSrcLoc:    'sort_seperate_bucket/merge_sort.c:283:9'
-    DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 283, 
-                       Column: 9 }
-  - VarName:         loser_tree.data
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 283, 
-                   Column: 9 }
-Function:        loser_tree
-Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            loser_tree.data
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
 ...
 --- !Passed
 Pass:            reflow-array-partition
@@ -2582,7 +2652,45 @@ Args:
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          loser_tree.data
+  - UOName:          loser_tree.index
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 274, 
+                   Column: 9 }
+Function:        loser_tree
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          current_indices
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_loser.c, 
+                   Line: 7, Column: 0 }
+Function:        multi_radix_hex_loser
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          input
   - String:          ''':'
   - String:          ' '
   - Mode:            Complete

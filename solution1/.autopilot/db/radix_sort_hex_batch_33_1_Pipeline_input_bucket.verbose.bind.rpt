@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_hex_batch_33_1_Pipeline_input_bucket'
 ================================================================
-* Date:           Mon Apr 24 22:36:42 2023
+* Date:           Tue Apr 25 09:25:03 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -192,7 +192,7 @@ ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%bucket_pointer_2385_out_load = lo
 ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%bucket_pointer_2386_out_load = load i32 %bucket_pointer_2386_out" [sort_seperate_bucket/multi_radix_hex_kmerge.c:43]   --->   Operation 106 'load' 'bucket_pointer_2386_out_load' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%bucket_pointer_2387_out_load = load i32 %bucket_pointer_2387_out" [sort_seperate_bucket/multi_radix_hex_kmerge.c:43]   --->   Operation 107 'load' 'bucket_pointer_2387_out_load' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%bucket_pointer_2388_out_load = load i32 %bucket_pointer_2388_out" [sort_seperate_bucket/multi_radix_hex_kmerge.c:43]   --->   Operation 108 'load' 'bucket_pointer_2388_out_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_28" [sort_seperate_bucket/multi_radix_hex_kmerge.c:11]   --->   Operation 109 'specloopname' 'specloopname_ln11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_38" [sort_seperate_bucket/multi_radix_hex_kmerge.c:11]   --->   Operation 109 'specloopname' 'specloopname_ln11' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%reuse_reg_load = load i32 %reuse_reg"   --->   Operation 110 'load' 'reuse_reg_load' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%reuse_addr_reg_load = load i64 %reuse_addr_reg"   --->   Operation 111 'load' 'reuse_addr_reg_load' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 112 [1/2] (1.24ns)   --->   "%bucket_load = load i15 %bucket_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:41]   --->   Operation 112 'load' 'bucket_load' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31250> <RAM>
@@ -1354,7 +1354,7 @@ ret_ln0                         (ret              ) [ 000]
 <pin id="169" dir="1" index="0" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
-<StgValue><ssdm name="empty_28"/></StgValue>
+<StgValue><ssdm name="empty_38"/></StgValue>
 </bind>
 </comp>
 

@@ -1651,7 +1651,7 @@ entry:101 %call_ln0 = call void @radix_sort_hex_batch.21.1_Pipeline_initializati
 
 <Node id="86" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32">
 <![CDATA[
-entry:83 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_20, void @empty_54, i32 0, i32 0, void @empty_4, i32 4294967295, i32 0, void @empty_4, void @empty_4, void @empty_4, i32 0, i32 0, i32 0, i32 0, void @empty_4, void @empty_4, i32 4294967295, i32 0
+entry:83 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %input_20, void @empty_70, i32 0, i32 0, void @empty_54, i32 4294967295, i32 0, void @empty_54, void @empty_54, void @empty_54, i32 0, i32 0, i32 0, i32 0, void @empty_54, void @empty_54, i32 4294967295, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -3089,7 +3089,7 @@ xlx_merge_loop.bucket_pointer_initialization.20_begin:74 %call_ln41 = call void 
 
 <Node id="148" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-xlx_merge_loop.bucket_pointer_initialization.20_begin:33 %specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_47
+xlx_merge_loop.bucket_pointer_initialization.20_begin:33 %specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_39
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln11"/></StgValue>
@@ -3522,23 +3522,23 @@ for.inc79.i.preheader:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="406" from="input_20" to="specinterface_ln0" fromId="224" toId="115">
 </dataflow>
-<dataflow id="408" from="empty_54" to="specinterface_ln0" fromId="407" toId="115">
+<dataflow id="408" from="empty_70" to="specinterface_ln0" fromId="407" toId="115">
 </dataflow>
 <dataflow id="409" from="StgValue_329" to="specinterface_ln0" fromId="329" toId="115">
 </dataflow>
 <dataflow id="410" from="StgValue_329" to="specinterface_ln0" fromId="329" toId="115">
 </dataflow>
-<dataflow id="412" from="empty_4" to="specinterface_ln0" fromId="411" toId="115">
+<dataflow id="412" from="empty_54" to="specinterface_ln0" fromId="411" toId="115">
 </dataflow>
 <dataflow id="414" from="StgValue_413" to="specinterface_ln0" fromId="413" toId="115">
 </dataflow>
 <dataflow id="415" from="StgValue_329" to="specinterface_ln0" fromId="329" toId="115">
 </dataflow>
-<dataflow id="416" from="empty_4" to="specinterface_ln0" fromId="411" toId="115">
+<dataflow id="416" from="empty_54" to="specinterface_ln0" fromId="411" toId="115">
 </dataflow>
-<dataflow id="417" from="empty_4" to="specinterface_ln0" fromId="411" toId="115">
+<dataflow id="417" from="empty_54" to="specinterface_ln0" fromId="411" toId="115">
 </dataflow>
-<dataflow id="418" from="empty_4" to="specinterface_ln0" fromId="411" toId="115">
+<dataflow id="418" from="empty_54" to="specinterface_ln0" fromId="411" toId="115">
 </dataflow>
 <dataflow id="419" from="StgValue_329" to="specinterface_ln0" fromId="329" toId="115">
 </dataflow>
@@ -3548,9 +3548,9 @@ for.inc79.i.preheader:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="422" from="StgValue_329" to="specinterface_ln0" fromId="329" toId="115">
 </dataflow>
-<dataflow id="423" from="empty_4" to="specinterface_ln0" fromId="411" toId="115">
+<dataflow id="423" from="empty_54" to="specinterface_ln0" fromId="411" toId="115">
 </dataflow>
-<dataflow id="424" from="empty_4" to="specinterface_ln0" fromId="411" toId="115">
+<dataflow id="424" from="empty_54" to="specinterface_ln0" fromId="411" toId="115">
 </dataflow>
 <dataflow id="425" from="StgValue_413" to="specinterface_ln0" fromId="413" toId="115">
 </dataflow>
@@ -4238,7 +4238,7 @@ for.inc79.i.preheader:1 %ret_ln0 = ret
 </dataflow>
 <dataflow id="778" from="_ssdm_op_SpecLoopName" to="specloopname_ln11" fromId="777" toId="207">
 </dataflow>
-<dataflow id="780" from="empty_47" to="specloopname_ln11" fromId="779" toId="207">
+<dataflow id="780" from="empty_39" to="specloopname_ln11" fromId="779" toId="207">
 </dataflow>
 <dataflow id="781" from="radix_sort_hex_batch.21.1_Pipeline_input_bucket" to="call_ln41" fromId="707" toId="208">
 </dataflow>

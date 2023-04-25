@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_hex_batch_7_1_Pipeline_output_bucket'
 ================================================================
-* Date:           Mon Apr 24 22:34:40 2023
+* Date:           Tue Apr 25 09:23:44 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -104,7 +104,7 @@ ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 
 
 State 2 <SV = 1> <Delay = 2.49>
 ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%k_cast_i = zext i14 %k_3" [sort_seperate_bucket/multi_radix_hex_kmerge.c:53]   --->   Operation 20 'zext' 'k_cast_i' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln53 = specloopname void @_ssdm_op_SpecLoopName, void @empty_40" [sort_seperate_bucket/multi_radix_hex_kmerge.c:53]   --->   Operation 21 'specloopname' 'specloopname_ln53' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln53 = specloopname void @_ssdm_op_SpecLoopName, void @empty_45" [sort_seperate_bucket/multi_radix_hex_kmerge.c:53]   --->   Operation 21 'specloopname' 'specloopname_ln53' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 22 [1/2] (1.24ns)   --->   "%bucket_load = load i15 %bucket_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:54]   --->   Operation 22 'load' 'bucket_load' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 31250> <RAM>
 ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%multi_radix_hex_loser_temp0_6_addr = getelementptr i32 %multi_radix_hex_loser_temp0_6, i64 0, i64 %k_cast_i" [sort_seperate_bucket/multi_radix_hex_kmerge.c:54]   --->   Operation 23 'getelementptr' 'multi_radix_hex_loser_temp0_6_addr' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 24 [1/1] (1.24ns)   --->   "%store_ln54 = store i32 %bucket_load, i14 %multi_radix_hex_loser_temp0_6_addr" [sort_seperate_bucket/multi_radix_hex_kmerge.c:54]   --->   Operation 24 'store' 'store_ln54' <Predicate = true> <Delay = 1.24> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.24> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 15625> <RAM>

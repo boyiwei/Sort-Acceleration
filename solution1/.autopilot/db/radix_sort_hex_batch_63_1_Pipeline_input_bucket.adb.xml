@@ -1611,7 +1611,7 @@ for.inc61.split.i:15 %bucket_pointer_243_out_load = load i32 %bucket_pointer_243
 
 <Node id="172" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc61.split.i:20 %specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_28
+for.inc61.split.i:20 %specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_38
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln11"/></StgValue>
@@ -3783,7 +3783,7 @@ arrayidx59.case.15.i:1 %br_ln47 = br void %arrayidx59.exit.i
 </dataflow>
 <dataflow id="491" from="_ssdm_op_SpecLoopName" to="specloopname_ln11" fromId="490" toId="109">
 </dataflow>
-<dataflow id="493" from="empty_28" to="specloopname_ln11" fromId="492" toId="109">
+<dataflow id="493" from="empty_38" to="specloopname_ln11" fromId="492" toId="109">
 </dataflow>
 <dataflow id="494" from="reuse_reg" to="reuse_reg_load" fromId="6" toId="110">
 </dataflow>

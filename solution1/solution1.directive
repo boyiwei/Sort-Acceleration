@@ -90,6 +90,11 @@
                 <option name="name" value="multi_radix_hex_loser"/>
             </pragma>
         </directive>
+        <directive functionName="multi_radix_hex_loser" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="multi_radix_hex_loser"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

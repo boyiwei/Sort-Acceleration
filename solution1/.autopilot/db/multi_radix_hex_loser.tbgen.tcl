@@ -1464,13 +1464,13 @@ set NewPortList {[
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
-	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "19", "37", "55", "73", "91", "109", "127", "145", "163", "181", "199", "217", "235", "253", "271", "289", "307", "325", "343", "361", "379", "397", "415", "433", "451", "469", "487", "505", "523", "541", "559", "577", "595", "613", "631", "649", "667", "685", "703", "721", "739", "757", "775", "793", "811", "829", "847", "865", "883", "901", "919", "937", "955", "973", "991", "1009", "1027", "1045", "1063", "1081", "1099", "1117", "1135", "1153", "1161", "1162", "1163", "1164", "1165", "1166", "1167", "1168", "1169", "1170", "1171", "1172", "1173", "1174", "1175", "1176", "1177", "1178", "1179", "1180", "1181", "1182", "1183", "1184", "1185", "1186", "1187", "1188", "1189", "1190", "1191", "1192", "1193", "1194", "1195", "1196", "1197", "1198", "1199", "1200", "1201", "1202", "1203", "1204", "1205", "1206", "1207", "1208", "1209", "1210", "1211", "1212", "1213", "1214", "1215", "1216", "1217", "1218", "1219", "1220", "1221", "1222", "1223", "1224"],
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "19", "37", "55", "73", "91", "109", "127", "145", "163", "181", "199", "217", "235", "253", "271", "289", "307", "325", "343", "361", "379", "397", "415", "433", "451", "469", "487", "505", "523", "541", "559", "577", "595", "613", "631", "649", "667", "685", "703", "721", "739", "757", "775", "793", "811", "829", "847", "865", "883", "901", "919", "937", "955", "973", "991", "1009", "1027", "1045", "1063", "1081", "1099", "1117", "1135", "1153", "1194", "1195", "1196", "1197", "1198", "1199", "1200", "1201", "1202", "1203", "1204", "1205", "1206", "1207", "1208", "1209", "1210", "1211", "1212", "1213", "1214", "1215", "1216", "1217", "1218", "1219", "1220", "1221", "1222", "1223", "1224", "1225", "1226", "1227", "1228", "1229", "1230", "1231", "1232", "1233", "1234", "1235", "1236", "1237", "1238", "1239", "1240", "1241", "1242", "1243", "1244", "1245", "1246", "1247", "1248", "1249", "1250", "1251", "1252", "1253", "1254", "1255", "1256", "1257"],
 		"CDFG" : "multi_radix_hex_loser",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "Dataflow", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "1",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3156549", "EstimateLatencyMax" : "3156549",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1156549", "EstimateLatencyMax" : "1156549",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -1743,40 +1743,40 @@ set RtlHierarchyInfo {[
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "output_r"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_0", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_0"},
-					{"ID" : "1", "SubInstance" : "radix_sort_hex_batch_1_1_U0", "Port" : "multi_radix_hex_loser_temp0_0"}]},
+					{"ID" : "1", "SubInstance" : "radix_sort_hex_batch_1_1_U0", "Port" : "multi_radix_hex_loser_temp0_0"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_0"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_1", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_1"},
-					{"ID" : "19", "SubInstance" : "radix_sort_hex_batch_2_1_U0", "Port" : "multi_radix_hex_loser_temp0_1"}]},
+					{"ID" : "19", "SubInstance" : "radix_sort_hex_batch_2_1_U0", "Port" : "multi_radix_hex_loser_temp0_1"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_1"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_2", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_2"},
-					{"ID" : "37", "SubInstance" : "radix_sort_hex_batch_3_1_U0", "Port" : "multi_radix_hex_loser_temp0_2"}]},
+					{"ID" : "37", "SubInstance" : "radix_sort_hex_batch_3_1_U0", "Port" : "multi_radix_hex_loser_temp0_2"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_2"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_3", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_3"},
-					{"ID" : "55", "SubInstance" : "radix_sort_hex_batch_4_1_U0", "Port" : "multi_radix_hex_loser_temp0_3"}]},
+					{"ID" : "55", "SubInstance" : "radix_sort_hex_batch_4_1_U0", "Port" : "multi_radix_hex_loser_temp0_3"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_3"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_4", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_4"},
-					{"ID" : "73", "SubInstance" : "radix_sort_hex_batch_5_1_U0", "Port" : "multi_radix_hex_loser_temp0_4"}]},
+					{"ID" : "73", "SubInstance" : "radix_sort_hex_batch_5_1_U0", "Port" : "multi_radix_hex_loser_temp0_4"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_4"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_5", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_5"},
-					{"ID" : "91", "SubInstance" : "radix_sort_hex_batch_6_1_U0", "Port" : "multi_radix_hex_loser_temp0_5"}]},
+					{"ID" : "91", "SubInstance" : "radix_sort_hex_batch_6_1_U0", "Port" : "multi_radix_hex_loser_temp0_5"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_5"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_6", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_6"},
-					{"ID" : "109", "SubInstance" : "radix_sort_hex_batch_7_1_U0", "Port" : "multi_radix_hex_loser_temp0_6"}]},
+					{"ID" : "109", "SubInstance" : "radix_sort_hex_batch_7_1_U0", "Port" : "multi_radix_hex_loser_temp0_6"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_6"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_7", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_7"},
-					{"ID" : "127", "SubInstance" : "radix_sort_hex_batch_8_1_U0", "Port" : "multi_radix_hex_loser_temp0_7"}]},
+					{"ID" : "127", "SubInstance" : "radix_sort_hex_batch_8_1_U0", "Port" : "multi_radix_hex_loser_temp0_7"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_7"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_8", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_8"},
-					{"ID" : "145", "SubInstance" : "radix_sort_hex_batch_9_1_U0", "Port" : "multi_radix_hex_loser_temp0_8"}]},
+					{"ID" : "145", "SubInstance" : "radix_sort_hex_batch_9_1_U0", "Port" : "multi_radix_hex_loser_temp0_8"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_8"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_9", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_9"},
@@ -1791,72 +1791,72 @@ set RtlHierarchyInfo {[
 					{"ID" : "199", "SubInstance" : "radix_sort_hex_batch_12_1_U0", "Port" : "multi_radix_hex_loser_temp0_11"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_12", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_12"},
-					{"ID" : "217", "SubInstance" : "radix_sort_hex_batch_13_1_U0", "Port" : "multi_radix_hex_loser_temp0_12"}]},
+					{"ID" : "217", "SubInstance" : "radix_sort_hex_batch_13_1_U0", "Port" : "multi_radix_hex_loser_temp0_12"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_12"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_13", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_13"},
-					{"ID" : "235", "SubInstance" : "radix_sort_hex_batch_14_1_U0", "Port" : "multi_radix_hex_loser_temp0_13"}]},
+					{"ID" : "235", "SubInstance" : "radix_sort_hex_batch_14_1_U0", "Port" : "multi_radix_hex_loser_temp0_13"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_13"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_14", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_14"},
-					{"ID" : "253", "SubInstance" : "radix_sort_hex_batch_15_1_U0", "Port" : "multi_radix_hex_loser_temp0_14"}]},
+					{"ID" : "253", "SubInstance" : "radix_sort_hex_batch_15_1_U0", "Port" : "multi_radix_hex_loser_temp0_14"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_14"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_15", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_15"},
-					{"ID" : "271", "SubInstance" : "radix_sort_hex_batch_16_1_U0", "Port" : "multi_radix_hex_loser_temp0_15"}]},
+					{"ID" : "271", "SubInstance" : "radix_sort_hex_batch_16_1_U0", "Port" : "multi_radix_hex_loser_temp0_15"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_15"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_16", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_16"},
-					{"ID" : "289", "SubInstance" : "radix_sort_hex_batch_17_1_U0", "Port" : "multi_radix_hex_loser_temp0_16"}]},
+					{"ID" : "289", "SubInstance" : "radix_sort_hex_batch_17_1_U0", "Port" : "multi_radix_hex_loser_temp0_16"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_16"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_17", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_17"},
-					{"ID" : "307", "SubInstance" : "radix_sort_hex_batch_18_1_U0", "Port" : "multi_radix_hex_loser_temp0_17"}]},
+					{"ID" : "307", "SubInstance" : "radix_sort_hex_batch_18_1_U0", "Port" : "multi_radix_hex_loser_temp0_17"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_17"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_18", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_18"},
-					{"ID" : "325", "SubInstance" : "radix_sort_hex_batch_19_1_U0", "Port" : "multi_radix_hex_loser_temp0_18"}]},
+					{"ID" : "325", "SubInstance" : "radix_sort_hex_batch_19_1_U0", "Port" : "multi_radix_hex_loser_temp0_18"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_18"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_19", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_19"},
-					{"ID" : "343", "SubInstance" : "radix_sort_hex_batch_20_1_U0", "Port" : "multi_radix_hex_loser_temp0_19"}]},
+					{"ID" : "343", "SubInstance" : "radix_sort_hex_batch_20_1_U0", "Port" : "multi_radix_hex_loser_temp0_19"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_19"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_20", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_20"},
-					{"ID" : "361", "SubInstance" : "radix_sort_hex_batch_21_1_U0", "Port" : "multi_radix_hex_loser_temp0_20"}]},
+					{"ID" : "361", "SubInstance" : "radix_sort_hex_batch_21_1_U0", "Port" : "multi_radix_hex_loser_temp0_20"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_20"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_21", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_21"},
-					{"ID" : "379", "SubInstance" : "radix_sort_hex_batch_22_1_U0", "Port" : "multi_radix_hex_loser_temp0_21"}]},
+					{"ID" : "379", "SubInstance" : "radix_sort_hex_batch_22_1_U0", "Port" : "multi_radix_hex_loser_temp0_21"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_21"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_22", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "397", "SubInstance" : "radix_sort_hex_batch_23_1_U0", "Port" : "multi_radix_hex_loser_temp0_22"},
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_22"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_23", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_23"},
-					{"ID" : "415", "SubInstance" : "radix_sort_hex_batch_24_1_U0", "Port" : "multi_radix_hex_loser_temp0_23"}]},
+					{"ID" : "415", "SubInstance" : "radix_sort_hex_batch_24_1_U0", "Port" : "multi_radix_hex_loser_temp0_23"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_23"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_24", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_24"},
-					{"ID" : "433", "SubInstance" : "radix_sort_hex_batch_25_1_U0", "Port" : "multi_radix_hex_loser_temp0_24"}]},
+					{"ID" : "433", "SubInstance" : "radix_sort_hex_batch_25_1_U0", "Port" : "multi_radix_hex_loser_temp0_24"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_24"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_25", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "451", "SubInstance" : "radix_sort_hex_batch_26_1_U0", "Port" : "multi_radix_hex_loser_temp0_25"},
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_25"}]},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_25"},
+					{"ID" : "451", "SubInstance" : "radix_sort_hex_batch_26_1_U0", "Port" : "multi_radix_hex_loser_temp0_25"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_26", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "469", "SubInstance" : "radix_sort_hex_batch_27_1_U0", "Port" : "multi_radix_hex_loser_temp0_26"},
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_26"}]},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_26"},
+					{"ID" : "469", "SubInstance" : "radix_sort_hex_batch_27_1_U0", "Port" : "multi_radix_hex_loser_temp0_26"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_27", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "487", "SubInstance" : "radix_sort_hex_batch_28_1_U0", "Port" : "multi_radix_hex_loser_temp0_27"},
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_27"}]},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_27"},
+					{"ID" : "487", "SubInstance" : "radix_sort_hex_batch_28_1_U0", "Port" : "multi_radix_hex_loser_temp0_27"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_28", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_28"},
-					{"ID" : "505", "SubInstance" : "radix_sort_hex_batch_29_1_U0", "Port" : "multi_radix_hex_loser_temp0_28"}]},
+					{"ID" : "505", "SubInstance" : "radix_sort_hex_batch_29_1_U0", "Port" : "multi_radix_hex_loser_temp0_28"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_28"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_29", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "523", "SubInstance" : "radix_sort_hex_batch_30_1_U0", "Port" : "multi_radix_hex_loser_temp0_29"},
@@ -1867,84 +1867,84 @@ set RtlHierarchyInfo {[
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_30"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_31", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_31"},
-					{"ID" : "559", "SubInstance" : "radix_sort_hex_batch_32_1_U0", "Port" : "multi_radix_hex_loser_temp0_31"}]},
+					{"ID" : "559", "SubInstance" : "radix_sort_hex_batch_32_1_U0", "Port" : "multi_radix_hex_loser_temp0_31"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_31"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_32", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_32"},
-					{"ID" : "577", "SubInstance" : "radix_sort_hex_batch_33_1_U0", "Port" : "multi_radix_hex_loser_temp0_32"}]},
+					{"ID" : "577", "SubInstance" : "radix_sort_hex_batch_33_1_U0", "Port" : "multi_radix_hex_loser_temp0_32"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_32"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_33", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_33"},
-					{"ID" : "595", "SubInstance" : "radix_sort_hex_batch_34_1_U0", "Port" : "multi_radix_hex_loser_temp0_33"}]},
+					{"ID" : "595", "SubInstance" : "radix_sort_hex_batch_34_1_U0", "Port" : "multi_radix_hex_loser_temp0_33"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_33"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_34", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_34"},
-					{"ID" : "613", "SubInstance" : "radix_sort_hex_batch_35_1_U0", "Port" : "multi_radix_hex_loser_temp0_34"}]},
+					{"ID" : "613", "SubInstance" : "radix_sort_hex_batch_35_1_U0", "Port" : "multi_radix_hex_loser_temp0_34"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_34"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_35", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_35"},
-					{"ID" : "631", "SubInstance" : "radix_sort_hex_batch_36_1_U0", "Port" : "multi_radix_hex_loser_temp0_35"}]},
+					{"ID" : "631", "SubInstance" : "radix_sort_hex_batch_36_1_U0", "Port" : "multi_radix_hex_loser_temp0_35"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_35"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_36", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_36"},
-					{"ID" : "649", "SubInstance" : "radix_sort_hex_batch_37_1_U0", "Port" : "multi_radix_hex_loser_temp0_36"}]},
+					{"ID" : "649", "SubInstance" : "radix_sort_hex_batch_37_1_U0", "Port" : "multi_radix_hex_loser_temp0_36"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_36"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_37", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_37"},
-					{"ID" : "667", "SubInstance" : "radix_sort_hex_batch_38_1_U0", "Port" : "multi_radix_hex_loser_temp0_37"}]},
+					{"ID" : "667", "SubInstance" : "radix_sort_hex_batch_38_1_U0", "Port" : "multi_radix_hex_loser_temp0_37"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_37"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_38", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_38"},
-					{"ID" : "685", "SubInstance" : "radix_sort_hex_batch_39_1_U0", "Port" : "multi_radix_hex_loser_temp0_38"}]},
+					{"ID" : "685", "SubInstance" : "radix_sort_hex_batch_39_1_U0", "Port" : "multi_radix_hex_loser_temp0_38"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_38"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_39", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "703", "SubInstance" : "radix_sort_hex_batch_40_1_U0", "Port" : "multi_radix_hex_loser_temp0_39"},
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_39"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_40", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_40"},
-					{"ID" : "721", "SubInstance" : "radix_sort_hex_batch_41_1_U0", "Port" : "multi_radix_hex_loser_temp0_40"}]},
+					{"ID" : "721", "SubInstance" : "radix_sort_hex_batch_41_1_U0", "Port" : "multi_radix_hex_loser_temp0_40"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_40"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_41", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_41"},
-					{"ID" : "739", "SubInstance" : "radix_sort_hex_batch_42_1_U0", "Port" : "multi_radix_hex_loser_temp0_41"}]},
+					{"ID" : "739", "SubInstance" : "radix_sort_hex_batch_42_1_U0", "Port" : "multi_radix_hex_loser_temp0_41"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_41"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_42", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_42"},
-					{"ID" : "757", "SubInstance" : "radix_sort_hex_batch_43_1_U0", "Port" : "multi_radix_hex_loser_temp0_42"}]},
+					{"ID" : "757", "SubInstance" : "radix_sort_hex_batch_43_1_U0", "Port" : "multi_radix_hex_loser_temp0_42"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_42"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_43", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_43"},
-					{"ID" : "775", "SubInstance" : "radix_sort_hex_batch_44_1_U0", "Port" : "multi_radix_hex_loser_temp0_43"}]},
+					{"ID" : "775", "SubInstance" : "radix_sort_hex_batch_44_1_U0", "Port" : "multi_radix_hex_loser_temp0_43"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_43"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_44", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_44"},
-					{"ID" : "793", "SubInstance" : "radix_sort_hex_batch_45_1_U0", "Port" : "multi_radix_hex_loser_temp0_44"}]},
+					{"ID" : "793", "SubInstance" : "radix_sort_hex_batch_45_1_U0", "Port" : "multi_radix_hex_loser_temp0_44"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_44"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_45", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_45"},
-					{"ID" : "811", "SubInstance" : "radix_sort_hex_batch_46_1_U0", "Port" : "multi_radix_hex_loser_temp0_45"}]},
+					{"ID" : "811", "SubInstance" : "radix_sort_hex_batch_46_1_U0", "Port" : "multi_radix_hex_loser_temp0_45"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_45"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_46", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_46"},
-					{"ID" : "829", "SubInstance" : "radix_sort_hex_batch_47_1_U0", "Port" : "multi_radix_hex_loser_temp0_46"}]},
+					{"ID" : "829", "SubInstance" : "radix_sort_hex_batch_47_1_U0", "Port" : "multi_radix_hex_loser_temp0_46"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_46"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_47", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "847", "SubInstance" : "radix_sort_hex_batch_48_1_U0", "Port" : "multi_radix_hex_loser_temp0_47"},
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_47"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_48", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_48"},
-					{"ID" : "865", "SubInstance" : "radix_sort_hex_batch_49_1_U0", "Port" : "multi_radix_hex_loser_temp0_48"}]},
+					{"ID" : "865", "SubInstance" : "radix_sort_hex_batch_49_1_U0", "Port" : "multi_radix_hex_loser_temp0_48"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_48"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_49", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_49"},
 					{"ID" : "883", "SubInstance" : "radix_sort_hex_batch_50_1_U0", "Port" : "multi_radix_hex_loser_temp0_49"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_50", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "901", "SubInstance" : "radix_sort_hex_batch_51_1_U0", "Port" : "multi_radix_hex_loser_temp0_50"},
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_50"}]},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_50"},
+					{"ID" : "901", "SubInstance" : "radix_sort_hex_batch_51_1_U0", "Port" : "multi_radix_hex_loser_temp0_50"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_51", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_51"},
@@ -1955,24 +1955,24 @@ set RtlHierarchyInfo {[
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_52"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_53", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_53"},
-					{"ID" : "955", "SubInstance" : "radix_sort_hex_batch_54_1_U0", "Port" : "multi_radix_hex_loser_temp0_53"}]},
+					{"ID" : "955", "SubInstance" : "radix_sort_hex_batch_54_1_U0", "Port" : "multi_radix_hex_loser_temp0_53"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_53"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_54", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_54"},
-					{"ID" : "973", "SubInstance" : "radix_sort_hex_batch_55_1_U0", "Port" : "multi_radix_hex_loser_temp0_54"}]},
+					{"ID" : "973", "SubInstance" : "radix_sort_hex_batch_55_1_U0", "Port" : "multi_radix_hex_loser_temp0_54"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_54"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_55", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_55"},
-					{"ID" : "991", "SubInstance" : "radix_sort_hex_batch_56_1_U0", "Port" : "multi_radix_hex_loser_temp0_55"}]},
+					{"ID" : "991", "SubInstance" : "radix_sort_hex_batch_56_1_U0", "Port" : "multi_radix_hex_loser_temp0_55"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_55"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_56", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "1009", "SubInstance" : "radix_sort_hex_batch_57_1_U0", "Port" : "multi_radix_hex_loser_temp0_56"},
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_56"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_57", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_57"},
-					{"ID" : "1027", "SubInstance" : "radix_sort_hex_batch_58_1_U0", "Port" : "multi_radix_hex_loser_temp0_57"}]},
+					{"ID" : "1027", "SubInstance" : "radix_sort_hex_batch_58_1_U0", "Port" : "multi_radix_hex_loser_temp0_57"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_57"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_58", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
 					{"ID" : "1045", "SubInstance" : "radix_sort_hex_batch_59_1_U0", "Port" : "multi_radix_hex_loser_temp0_58"},
@@ -1991,15 +1991,12 @@ set RtlHierarchyInfo {[
 					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_61"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_62", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_62"},
-					{"ID" : "1117", "SubInstance" : "radix_sort_hex_batch_63_1_U0", "Port" : "multi_radix_hex_loser_temp0_62"}]},
+					{"ID" : "1117", "SubInstance" : "radix_sort_hex_batch_63_1_U0", "Port" : "multi_radix_hex_loser_temp0_62"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_62"}]},
 			{"Name" : "multi_radix_hex_loser_temp0_63", "Type" : "Memory", "Direction" : "IO",
 				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_63"},
-					{"ID" : "1135", "SubInstance" : "radix_sort_hex_batch_1_2_U0", "Port" : "multi_radix_hex_loser_temp0_63"}]},
-			{"Name" : "loser_tree_index", "Type" : "Memory", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "loser_tree_index"}]}]},
+					{"ID" : "1135", "SubInstance" : "radix_sort_hex_batch_1_2_U0", "Port" : "multi_radix_hex_loser_temp0_63"},
+					{"ID" : "1153", "SubInstance" : "loser_tree_1_U0", "Port" : "multi_radix_hex_loser_temp0_63"}]}]},
 	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.radix_sort_hex_batch_1_1_U0", "Parent" : "0", "Child" : ["2", "3", "5", "8", "11", "13", "17", "18"],
 		"CDFG" : "radix_sort_hex_batch_1_1",
 		"Protocol" : "ap_ctrl_hs",
@@ -2018,7 +2015,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_0", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "5", "SubInstance" : "grp_radix_sort_hex_batch_1_1_Pipeline_initialization_fu_400", "Port" : "input_0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_0", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1161",
+			{"Name" : "multi_radix_hex_loser_temp0_0", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1194",
 				"SubConnect" : [
 					{"ID" : "11", "SubInstance" : "grp_radix_sort_hex_batch_1_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_0", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -2327,7 +2324,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_1", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "23", "SubInstance" : "grp_radix_sort_hex_batch_2_1_Pipeline_initialization_fu_400", "Port" : "input_1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_1", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1162",
+			{"Name" : "multi_radix_hex_loser_temp0_1", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1195",
 				"SubConnect" : [
 					{"ID" : "29", "SubInstance" : "grp_radix_sort_hex_batch_2_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_1", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -2636,7 +2633,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_2", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "41", "SubInstance" : "grp_radix_sort_hex_batch_3_1_Pipeline_initialization_fu_400", "Port" : "input_2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_2", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1163",
+			{"Name" : "multi_radix_hex_loser_temp0_2", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1196",
 				"SubConnect" : [
 					{"ID" : "47", "SubInstance" : "grp_radix_sort_hex_batch_3_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_2", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -2945,7 +2942,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_3", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "59", "SubInstance" : "grp_radix_sort_hex_batch_4_1_Pipeline_initialization_fu_400", "Port" : "input_3", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_3", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1164",
+			{"Name" : "multi_radix_hex_loser_temp0_3", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1197",
 				"SubConnect" : [
 					{"ID" : "65", "SubInstance" : "grp_radix_sort_hex_batch_4_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_3", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -3254,7 +3251,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_4", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "77", "SubInstance" : "grp_radix_sort_hex_batch_5_1_Pipeline_initialization_fu_400", "Port" : "input_4", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_4", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1165",
+			{"Name" : "multi_radix_hex_loser_temp0_4", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1198",
 				"SubConnect" : [
 					{"ID" : "83", "SubInstance" : "grp_radix_sort_hex_batch_5_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_4", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -3563,7 +3560,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_5", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "95", "SubInstance" : "grp_radix_sort_hex_batch_6_1_Pipeline_initialization_fu_400", "Port" : "input_5", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_5", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1166",
+			{"Name" : "multi_radix_hex_loser_temp0_5", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1199",
 				"SubConnect" : [
 					{"ID" : "101", "SubInstance" : "grp_radix_sort_hex_batch_6_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_5", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -3872,7 +3869,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_6", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "113", "SubInstance" : "grp_radix_sort_hex_batch_7_1_Pipeline_initialization_fu_400", "Port" : "input_6", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_6", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1167",
+			{"Name" : "multi_radix_hex_loser_temp0_6", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1200",
 				"SubConnect" : [
 					{"ID" : "119", "SubInstance" : "grp_radix_sort_hex_batch_7_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_6", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -4181,7 +4178,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_7", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "131", "SubInstance" : "grp_radix_sort_hex_batch_8_1_Pipeline_initialization_fu_400", "Port" : "input_7", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_7", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1168",
+			{"Name" : "multi_radix_hex_loser_temp0_7", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1201",
 				"SubConnect" : [
 					{"ID" : "137", "SubInstance" : "grp_radix_sort_hex_batch_8_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_7", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -4490,7 +4487,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_8", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "149", "SubInstance" : "grp_radix_sort_hex_batch_9_1_Pipeline_initialization_fu_400", "Port" : "input_8", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_8", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1169",
+			{"Name" : "multi_radix_hex_loser_temp0_8", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1202",
 				"SubConnect" : [
 					{"ID" : "155", "SubInstance" : "grp_radix_sort_hex_batch_9_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_8", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -4799,7 +4796,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_9", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "167", "SubInstance" : "grp_radix_sort_hex_batch_10_1_Pipeline_initialization_fu_400", "Port" : "input_9", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_9", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1170",
+			{"Name" : "multi_radix_hex_loser_temp0_9", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1203",
 				"SubConnect" : [
 					{"ID" : "173", "SubInstance" : "grp_radix_sort_hex_batch_10_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_9", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -5108,7 +5105,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_10", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "185", "SubInstance" : "grp_radix_sort_hex_batch_11_1_Pipeline_initialization_fu_400", "Port" : "input_10", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_10", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1171",
+			{"Name" : "multi_radix_hex_loser_temp0_10", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1204",
 				"SubConnect" : [
 					{"ID" : "191", "SubInstance" : "grp_radix_sort_hex_batch_11_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_10", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -5417,7 +5414,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_11", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "203", "SubInstance" : "grp_radix_sort_hex_batch_12_1_Pipeline_initialization_fu_400", "Port" : "input_11", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_11", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1172",
+			{"Name" : "multi_radix_hex_loser_temp0_11", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1205",
 				"SubConnect" : [
 					{"ID" : "209", "SubInstance" : "grp_radix_sort_hex_batch_12_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_11", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -5726,7 +5723,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_12", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "221", "SubInstance" : "grp_radix_sort_hex_batch_13_1_Pipeline_initialization_fu_400", "Port" : "input_12", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_12", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1173",
+			{"Name" : "multi_radix_hex_loser_temp0_12", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1206",
 				"SubConnect" : [
 					{"ID" : "227", "SubInstance" : "grp_radix_sort_hex_batch_13_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_12", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -6035,7 +6032,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_13", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "239", "SubInstance" : "grp_radix_sort_hex_batch_14_1_Pipeline_initialization_fu_400", "Port" : "input_13", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_13", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1174",
+			{"Name" : "multi_radix_hex_loser_temp0_13", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1207",
 				"SubConnect" : [
 					{"ID" : "245", "SubInstance" : "grp_radix_sort_hex_batch_14_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_13", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -6344,7 +6341,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_14", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "257", "SubInstance" : "grp_radix_sort_hex_batch_15_1_Pipeline_initialization_fu_400", "Port" : "input_14", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_14", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1175",
+			{"Name" : "multi_radix_hex_loser_temp0_14", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1208",
 				"SubConnect" : [
 					{"ID" : "263", "SubInstance" : "grp_radix_sort_hex_batch_15_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_14", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -6653,7 +6650,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_15", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "275", "SubInstance" : "grp_radix_sort_hex_batch_16_1_Pipeline_initialization_fu_400", "Port" : "input_15", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_15", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1176",
+			{"Name" : "multi_radix_hex_loser_temp0_15", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1209",
 				"SubConnect" : [
 					{"ID" : "281", "SubInstance" : "grp_radix_sort_hex_batch_16_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_15", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -6962,7 +6959,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_16", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "293", "SubInstance" : "grp_radix_sort_hex_batch_17_1_Pipeline_initialization_fu_400", "Port" : "input_16", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_16", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1177",
+			{"Name" : "multi_radix_hex_loser_temp0_16", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1210",
 				"SubConnect" : [
 					{"ID" : "299", "SubInstance" : "grp_radix_sort_hex_batch_17_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_16", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -7271,7 +7268,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_17", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "311", "SubInstance" : "grp_radix_sort_hex_batch_18_1_Pipeline_initialization_fu_400", "Port" : "input_17", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_17", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1178",
+			{"Name" : "multi_radix_hex_loser_temp0_17", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1211",
 				"SubConnect" : [
 					{"ID" : "317", "SubInstance" : "grp_radix_sort_hex_batch_18_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_17", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -7580,7 +7577,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_18", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "329", "SubInstance" : "grp_radix_sort_hex_batch_19_1_Pipeline_initialization_fu_400", "Port" : "input_18", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_18", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1179",
+			{"Name" : "multi_radix_hex_loser_temp0_18", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1212",
 				"SubConnect" : [
 					{"ID" : "335", "SubInstance" : "grp_radix_sort_hex_batch_19_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_18", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -7889,7 +7886,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_19", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "347", "SubInstance" : "grp_radix_sort_hex_batch_20_1_Pipeline_initialization_fu_400", "Port" : "input_19", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_19", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1180",
+			{"Name" : "multi_radix_hex_loser_temp0_19", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1213",
 				"SubConnect" : [
 					{"ID" : "353", "SubInstance" : "grp_radix_sort_hex_batch_20_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_19", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -8198,7 +8195,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_20", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "365", "SubInstance" : "grp_radix_sort_hex_batch_21_1_Pipeline_initialization_fu_400", "Port" : "input_20", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_20", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1181",
+			{"Name" : "multi_radix_hex_loser_temp0_20", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1214",
 				"SubConnect" : [
 					{"ID" : "371", "SubInstance" : "grp_radix_sort_hex_batch_21_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_20", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -8507,7 +8504,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_21", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "383", "SubInstance" : "grp_radix_sort_hex_batch_22_1_Pipeline_initialization_fu_400", "Port" : "input_21", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_21", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1182",
+			{"Name" : "multi_radix_hex_loser_temp0_21", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1215",
 				"SubConnect" : [
 					{"ID" : "389", "SubInstance" : "grp_radix_sort_hex_batch_22_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_21", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -8816,7 +8813,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_22", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "401", "SubInstance" : "grp_radix_sort_hex_batch_23_1_Pipeline_initialization_fu_400", "Port" : "input_22", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_22", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1183",
+			{"Name" : "multi_radix_hex_loser_temp0_22", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1216",
 				"SubConnect" : [
 					{"ID" : "407", "SubInstance" : "grp_radix_sort_hex_batch_23_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_22", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -9125,7 +9122,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_23", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "419", "SubInstance" : "grp_radix_sort_hex_batch_24_1_Pipeline_initialization_fu_400", "Port" : "input_23", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_23", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1184",
+			{"Name" : "multi_radix_hex_loser_temp0_23", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1217",
 				"SubConnect" : [
 					{"ID" : "425", "SubInstance" : "grp_radix_sort_hex_batch_24_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_23", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -9434,7 +9431,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_24", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "437", "SubInstance" : "grp_radix_sort_hex_batch_25_1_Pipeline_initialization_fu_400", "Port" : "input_24", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_24", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1185",
+			{"Name" : "multi_radix_hex_loser_temp0_24", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1218",
 				"SubConnect" : [
 					{"ID" : "443", "SubInstance" : "grp_radix_sort_hex_batch_25_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_24", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -9743,7 +9740,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_25", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "455", "SubInstance" : "grp_radix_sort_hex_batch_26_1_Pipeline_initialization_fu_400", "Port" : "input_25", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_25", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1186",
+			{"Name" : "multi_radix_hex_loser_temp0_25", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1219",
 				"SubConnect" : [
 					{"ID" : "461", "SubInstance" : "grp_radix_sort_hex_batch_26_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_25", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -10052,7 +10049,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_26", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "473", "SubInstance" : "grp_radix_sort_hex_batch_27_1_Pipeline_initialization_fu_400", "Port" : "input_26", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_26", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1187",
+			{"Name" : "multi_radix_hex_loser_temp0_26", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1220",
 				"SubConnect" : [
 					{"ID" : "479", "SubInstance" : "grp_radix_sort_hex_batch_27_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_26", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -10361,7 +10358,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_27", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "491", "SubInstance" : "grp_radix_sort_hex_batch_28_1_Pipeline_initialization_fu_400", "Port" : "input_27", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_27", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1188",
+			{"Name" : "multi_radix_hex_loser_temp0_27", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1221",
 				"SubConnect" : [
 					{"ID" : "497", "SubInstance" : "grp_radix_sort_hex_batch_28_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_27", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -10670,7 +10667,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_28", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "509", "SubInstance" : "grp_radix_sort_hex_batch_29_1_Pipeline_initialization_fu_400", "Port" : "input_28", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_28", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1189",
+			{"Name" : "multi_radix_hex_loser_temp0_28", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1222",
 				"SubConnect" : [
 					{"ID" : "515", "SubInstance" : "grp_radix_sort_hex_batch_29_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_28", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -10979,7 +10976,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_29", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "527", "SubInstance" : "grp_radix_sort_hex_batch_30_1_Pipeline_initialization_fu_400", "Port" : "input_29", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_29", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1190",
+			{"Name" : "multi_radix_hex_loser_temp0_29", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1223",
 				"SubConnect" : [
 					{"ID" : "533", "SubInstance" : "grp_radix_sort_hex_batch_30_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_29", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -11288,7 +11285,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_30", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "545", "SubInstance" : "grp_radix_sort_hex_batch_31_1_Pipeline_initialization_fu_400", "Port" : "input_30", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_30", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1191",
+			{"Name" : "multi_radix_hex_loser_temp0_30", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1224",
 				"SubConnect" : [
 					{"ID" : "551", "SubInstance" : "grp_radix_sort_hex_batch_31_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_30", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -11597,7 +11594,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_31", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "563", "SubInstance" : "grp_radix_sort_hex_batch_32_1_Pipeline_initialization_fu_400", "Port" : "input_31", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_31", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1192",
+			{"Name" : "multi_radix_hex_loser_temp0_31", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1225",
 				"SubConnect" : [
 					{"ID" : "569", "SubInstance" : "grp_radix_sort_hex_batch_32_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_31", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -11906,7 +11903,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_32", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "581", "SubInstance" : "grp_radix_sort_hex_batch_33_1_Pipeline_initialization_fu_400", "Port" : "input_32", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_32", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1193",
+			{"Name" : "multi_radix_hex_loser_temp0_32", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1226",
 				"SubConnect" : [
 					{"ID" : "587", "SubInstance" : "grp_radix_sort_hex_batch_33_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_32", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -12215,7 +12212,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_33", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "599", "SubInstance" : "grp_radix_sort_hex_batch_34_1_Pipeline_initialization_fu_400", "Port" : "input_33", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_33", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1194",
+			{"Name" : "multi_radix_hex_loser_temp0_33", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1227",
 				"SubConnect" : [
 					{"ID" : "605", "SubInstance" : "grp_radix_sort_hex_batch_34_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_33", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -12524,7 +12521,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_34", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "617", "SubInstance" : "grp_radix_sort_hex_batch_35_1_Pipeline_initialization_fu_400", "Port" : "input_34", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_34", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1195",
+			{"Name" : "multi_radix_hex_loser_temp0_34", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1228",
 				"SubConnect" : [
 					{"ID" : "623", "SubInstance" : "grp_radix_sort_hex_batch_35_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_34", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -12833,7 +12830,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_35", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "635", "SubInstance" : "grp_radix_sort_hex_batch_36_1_Pipeline_initialization_fu_400", "Port" : "input_35", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_35", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1196",
+			{"Name" : "multi_radix_hex_loser_temp0_35", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1229",
 				"SubConnect" : [
 					{"ID" : "641", "SubInstance" : "grp_radix_sort_hex_batch_36_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_35", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -13142,7 +13139,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_36", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "653", "SubInstance" : "grp_radix_sort_hex_batch_37_1_Pipeline_initialization_fu_400", "Port" : "input_36", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_36", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1197",
+			{"Name" : "multi_radix_hex_loser_temp0_36", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1230",
 				"SubConnect" : [
 					{"ID" : "659", "SubInstance" : "grp_radix_sort_hex_batch_37_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_36", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -13451,7 +13448,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_37", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "671", "SubInstance" : "grp_radix_sort_hex_batch_38_1_Pipeline_initialization_fu_400", "Port" : "input_37", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_37", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1198",
+			{"Name" : "multi_radix_hex_loser_temp0_37", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1231",
 				"SubConnect" : [
 					{"ID" : "677", "SubInstance" : "grp_radix_sort_hex_batch_38_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_37", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -13760,7 +13757,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_38", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "689", "SubInstance" : "grp_radix_sort_hex_batch_39_1_Pipeline_initialization_fu_400", "Port" : "input_38", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_38", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1199",
+			{"Name" : "multi_radix_hex_loser_temp0_38", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1232",
 				"SubConnect" : [
 					{"ID" : "695", "SubInstance" : "grp_radix_sort_hex_batch_39_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_38", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -14069,7 +14066,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_39", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "707", "SubInstance" : "grp_radix_sort_hex_batch_40_1_Pipeline_initialization_fu_400", "Port" : "input_39", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_39", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1200",
+			{"Name" : "multi_radix_hex_loser_temp0_39", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1233",
 				"SubConnect" : [
 					{"ID" : "713", "SubInstance" : "grp_radix_sort_hex_batch_40_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_39", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -14378,7 +14375,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_40", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "725", "SubInstance" : "grp_radix_sort_hex_batch_41_1_Pipeline_initialization_fu_400", "Port" : "input_40", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_40", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1201",
+			{"Name" : "multi_radix_hex_loser_temp0_40", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1234",
 				"SubConnect" : [
 					{"ID" : "731", "SubInstance" : "grp_radix_sort_hex_batch_41_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_40", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -14687,7 +14684,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_41", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "743", "SubInstance" : "grp_radix_sort_hex_batch_42_1_Pipeline_initialization_fu_400", "Port" : "input_41", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_41", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1202",
+			{"Name" : "multi_radix_hex_loser_temp0_41", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1235",
 				"SubConnect" : [
 					{"ID" : "749", "SubInstance" : "grp_radix_sort_hex_batch_42_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_41", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -14996,7 +14993,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_42", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "761", "SubInstance" : "grp_radix_sort_hex_batch_43_1_Pipeline_initialization_fu_400", "Port" : "input_42", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_42", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1203",
+			{"Name" : "multi_radix_hex_loser_temp0_42", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1236",
 				"SubConnect" : [
 					{"ID" : "767", "SubInstance" : "grp_radix_sort_hex_batch_43_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_42", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -15305,7 +15302,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_43", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "779", "SubInstance" : "grp_radix_sort_hex_batch_44_1_Pipeline_initialization_fu_400", "Port" : "input_43", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_43", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1204",
+			{"Name" : "multi_radix_hex_loser_temp0_43", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1237",
 				"SubConnect" : [
 					{"ID" : "785", "SubInstance" : "grp_radix_sort_hex_batch_44_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_43", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -15614,7 +15611,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_44", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "797", "SubInstance" : "grp_radix_sort_hex_batch_45_1_Pipeline_initialization_fu_400", "Port" : "input_44", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_44", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1205",
+			{"Name" : "multi_radix_hex_loser_temp0_44", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1238",
 				"SubConnect" : [
 					{"ID" : "803", "SubInstance" : "grp_radix_sort_hex_batch_45_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_44", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -15923,7 +15920,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_45", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "815", "SubInstance" : "grp_radix_sort_hex_batch_46_1_Pipeline_initialization_fu_400", "Port" : "input_45", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_45", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1206",
+			{"Name" : "multi_radix_hex_loser_temp0_45", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1239",
 				"SubConnect" : [
 					{"ID" : "821", "SubInstance" : "grp_radix_sort_hex_batch_46_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_45", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -16232,7 +16229,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_46", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "833", "SubInstance" : "grp_radix_sort_hex_batch_47_1_Pipeline_initialization_fu_400", "Port" : "input_46", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_46", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1207",
+			{"Name" : "multi_radix_hex_loser_temp0_46", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1240",
 				"SubConnect" : [
 					{"ID" : "839", "SubInstance" : "grp_radix_sort_hex_batch_47_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_46", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -16541,7 +16538,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_47", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "851", "SubInstance" : "grp_radix_sort_hex_batch_48_1_Pipeline_initialization_fu_400", "Port" : "input_47", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_47", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1208",
+			{"Name" : "multi_radix_hex_loser_temp0_47", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1241",
 				"SubConnect" : [
 					{"ID" : "857", "SubInstance" : "grp_radix_sort_hex_batch_48_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_47", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -16850,7 +16847,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_48", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "869", "SubInstance" : "grp_radix_sort_hex_batch_49_1_Pipeline_initialization_fu_400", "Port" : "input_48", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_48", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1209",
+			{"Name" : "multi_radix_hex_loser_temp0_48", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1242",
 				"SubConnect" : [
 					{"ID" : "875", "SubInstance" : "grp_radix_sort_hex_batch_49_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_48", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -17159,7 +17156,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_49", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "887", "SubInstance" : "grp_radix_sort_hex_batch_50_1_Pipeline_initialization_fu_400", "Port" : "input_49", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_49", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1210",
+			{"Name" : "multi_radix_hex_loser_temp0_49", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1243",
 				"SubConnect" : [
 					{"ID" : "893", "SubInstance" : "grp_radix_sort_hex_batch_50_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_49", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -17468,7 +17465,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_50", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "905", "SubInstance" : "grp_radix_sort_hex_batch_51_1_Pipeline_initialization_fu_400", "Port" : "input_50", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_50", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1211",
+			{"Name" : "multi_radix_hex_loser_temp0_50", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1244",
 				"SubConnect" : [
 					{"ID" : "911", "SubInstance" : "grp_radix_sort_hex_batch_51_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_50", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -17777,7 +17774,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_51", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "923", "SubInstance" : "grp_radix_sort_hex_batch_52_1_Pipeline_initialization_fu_400", "Port" : "input_51", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_51", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1212",
+			{"Name" : "multi_radix_hex_loser_temp0_51", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1245",
 				"SubConnect" : [
 					{"ID" : "929", "SubInstance" : "grp_radix_sort_hex_batch_52_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_51", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -18086,7 +18083,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_52", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "941", "SubInstance" : "grp_radix_sort_hex_batch_53_1_Pipeline_initialization_fu_400", "Port" : "input_52", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_52", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1213",
+			{"Name" : "multi_radix_hex_loser_temp0_52", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1246",
 				"SubConnect" : [
 					{"ID" : "947", "SubInstance" : "grp_radix_sort_hex_batch_53_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_52", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -18395,7 +18392,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_53", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "959", "SubInstance" : "grp_radix_sort_hex_batch_54_1_Pipeline_initialization_fu_400", "Port" : "input_53", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_53", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1214",
+			{"Name" : "multi_radix_hex_loser_temp0_53", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1247",
 				"SubConnect" : [
 					{"ID" : "965", "SubInstance" : "grp_radix_sort_hex_batch_54_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_53", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -18704,7 +18701,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_54", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "977", "SubInstance" : "grp_radix_sort_hex_batch_55_1_Pipeline_initialization_fu_400", "Port" : "input_54", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_54", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1215",
+			{"Name" : "multi_radix_hex_loser_temp0_54", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1248",
 				"SubConnect" : [
 					{"ID" : "983", "SubInstance" : "grp_radix_sort_hex_batch_55_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_54", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -19013,7 +19010,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_55", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "995", "SubInstance" : "grp_radix_sort_hex_batch_56_1_Pipeline_initialization_fu_400", "Port" : "input_55", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_55", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1216",
+			{"Name" : "multi_radix_hex_loser_temp0_55", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1249",
 				"SubConnect" : [
 					{"ID" : "1001", "SubInstance" : "grp_radix_sort_hex_batch_56_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_55", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -19322,7 +19319,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_56", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1013", "SubInstance" : "grp_radix_sort_hex_batch_57_1_Pipeline_initialization_fu_400", "Port" : "input_56", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_56", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1217",
+			{"Name" : "multi_radix_hex_loser_temp0_56", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1250",
 				"SubConnect" : [
 					{"ID" : "1019", "SubInstance" : "grp_radix_sort_hex_batch_57_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_56", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -19631,7 +19628,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_57", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1031", "SubInstance" : "grp_radix_sort_hex_batch_58_1_Pipeline_initialization_fu_400", "Port" : "input_57", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_57", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1218",
+			{"Name" : "multi_radix_hex_loser_temp0_57", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1251",
 				"SubConnect" : [
 					{"ID" : "1037", "SubInstance" : "grp_radix_sort_hex_batch_58_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_57", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -19940,7 +19937,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_58", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1049", "SubInstance" : "grp_radix_sort_hex_batch_59_1_Pipeline_initialization_fu_400", "Port" : "input_58", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_58", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1219",
+			{"Name" : "multi_radix_hex_loser_temp0_58", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1252",
 				"SubConnect" : [
 					{"ID" : "1055", "SubInstance" : "grp_radix_sort_hex_batch_59_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_58", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -20249,7 +20246,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_59", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1067", "SubInstance" : "grp_radix_sort_hex_batch_60_1_Pipeline_initialization_fu_400", "Port" : "input_59", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_59", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1220",
+			{"Name" : "multi_radix_hex_loser_temp0_59", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1253",
 				"SubConnect" : [
 					{"ID" : "1073", "SubInstance" : "grp_radix_sort_hex_batch_60_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_59", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -20558,7 +20555,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_60", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1085", "SubInstance" : "grp_radix_sort_hex_batch_61_1_Pipeline_initialization_fu_400", "Port" : "input_60", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_60", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1221",
+			{"Name" : "multi_radix_hex_loser_temp0_60", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1254",
 				"SubConnect" : [
 					{"ID" : "1091", "SubInstance" : "grp_radix_sort_hex_batch_61_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_60", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -20867,7 +20864,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_61", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1103", "SubInstance" : "grp_radix_sort_hex_batch_62_1_Pipeline_initialization_fu_400", "Port" : "input_61", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_61", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1222",
+			{"Name" : "multi_radix_hex_loser_temp0_61", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1255",
 				"SubConnect" : [
 					{"ID" : "1109", "SubInstance" : "grp_radix_sort_hex_batch_62_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_61", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -21176,7 +21173,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_62", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1121", "SubInstance" : "grp_radix_sort_hex_batch_63_1_Pipeline_initialization_fu_400", "Port" : "input_62", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_62", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1223",
+			{"Name" : "multi_radix_hex_loser_temp0_62", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1256",
 				"SubConnect" : [
 					{"ID" : "1127", "SubInstance" : "grp_radix_sort_hex_batch_63_1_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_62", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -21485,7 +21482,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "input_63", "Type" : "Memory", "Direction" : "I",
 				"SubConnect" : [
 					{"ID" : "1139", "SubInstance" : "grp_radix_sort_hex_batch_1_2_Pipeline_initialization_fu_400", "Port" : "input_63", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_63", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1224",
+			{"Name" : "multi_radix_hex_loser_temp0_63", "Type" : "Memory", "Direction" : "O", "DependentProc" : ["1153"], "DependentChan" : "1257",
 				"SubConnect" : [
 					{"ID" : "1145", "SubInstance" : "grp_radix_sort_hex_batch_1_2_Pipeline_output_bucket_fu_507", "Port" : "multi_radix_hex_loser_temp0_63", "Inst_start_state" : "5", "Inst_end_state" : "10"}]}],
 		"Loop" : [
@@ -21776,13 +21773,13 @@ set RtlHierarchyInfo {[
 	{"ID" : "1150", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.radix_sort_hex_batch_1_2_U0.grp_radix_sort_hex_batch_1_2_Pipeline_input_bucket_fu_514.flow_control_loop_pipe_sequential_init_U", "Parent" : "1147"},
 	{"ID" : "1151", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.radix_sort_hex_batch_1_2_U0.mul_mul_15s_14ns_15_4_1_U12350", "Parent" : "1135"},
 	{"ID" : "1152", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.radix_sort_hex_batch_1_2_U0.mul_mul_15s_14ns_15_4_1_U12351", "Parent" : "1135"},
-	{"ID" : "1153", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0", "Parent" : "0", "Child" : ["1154", "1155", "1157"],
+	{"ID" : "1153", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0", "Parent" : "0", "Child" : ["1154", "1156"],
 		"CDFG" : "loser_tree_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3000071", "EstimateLatencyMax" : "3000071",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000071", "EstimateLatencyMax" : "1000071",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -21793,204 +21790,200 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "output_r", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_0", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1"], "DependentChan" : "1161",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "output_r", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_0", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1"], "DependentChan" : "1194",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_1", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["19"], "DependentChan" : "1162",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_0", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_1", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["19"], "DependentChan" : "1195",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_10", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["181"], "DependentChan" : "1171",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_1", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_10", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["181"], "DependentChan" : "1204",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_10", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_11", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["199"], "DependentChan" : "1172",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_10", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_11", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["199"], "DependentChan" : "1205",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_11", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_12", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["217"], "DependentChan" : "1173",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_11", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_12", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["217"], "DependentChan" : "1206",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_12", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_13", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["235"], "DependentChan" : "1174",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_12", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_13", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["235"], "DependentChan" : "1207",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_13", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_14", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["253"], "DependentChan" : "1175",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_13", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_14", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["253"], "DependentChan" : "1208",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_14", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_15", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["271"], "DependentChan" : "1176",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_14", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_15", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["271"], "DependentChan" : "1209",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_15", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_16", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["289"], "DependentChan" : "1177",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_15", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_16", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["289"], "DependentChan" : "1210",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_16", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_17", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["307"], "DependentChan" : "1178",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_16", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_17", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["307"], "DependentChan" : "1211",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_17", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_18", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["325"], "DependentChan" : "1179",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_17", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_18", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["325"], "DependentChan" : "1212",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_18", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_19", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["343"], "DependentChan" : "1180",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_18", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_19", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["343"], "DependentChan" : "1213",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_19", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_2", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["37"], "DependentChan" : "1163",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_19", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_2", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["37"], "DependentChan" : "1196",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_20", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["361"], "DependentChan" : "1181",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_2", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_20", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["361"], "DependentChan" : "1214",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_20", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_21", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["379"], "DependentChan" : "1182",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_20", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_21", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["379"], "DependentChan" : "1215",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_21", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_22", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["397"], "DependentChan" : "1183",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_21", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_22", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["397"], "DependentChan" : "1216",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_22", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_23", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["415"], "DependentChan" : "1184",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_22", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_23", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["415"], "DependentChan" : "1217",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_23", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_24", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["433"], "DependentChan" : "1185",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_23", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_24", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["433"], "DependentChan" : "1218",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_24", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_25", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["451"], "DependentChan" : "1186",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_24", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_25", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["451"], "DependentChan" : "1219",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_25", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_26", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["469"], "DependentChan" : "1187",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_25", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_26", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["469"], "DependentChan" : "1220",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_26", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_27", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["487"], "DependentChan" : "1188",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_26", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_27", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["487"], "DependentChan" : "1221",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_27", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_28", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["505"], "DependentChan" : "1189",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_27", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_28", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["505"], "DependentChan" : "1222",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_28", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_29", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["523"], "DependentChan" : "1190",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_28", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_29", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["523"], "DependentChan" : "1223",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_29", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_3", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["55"], "DependentChan" : "1164",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_29", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_3", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["55"], "DependentChan" : "1197",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_3", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_30", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["541"], "DependentChan" : "1191",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_3", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_30", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["541"], "DependentChan" : "1224",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_30", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_31", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["559"], "DependentChan" : "1192",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_30", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_31", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["559"], "DependentChan" : "1225",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_31", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_32", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["577"], "DependentChan" : "1193",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_31", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_32", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["577"], "DependentChan" : "1226",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_32", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_33", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["595"], "DependentChan" : "1194",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_32", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_33", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["595"], "DependentChan" : "1227",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_33", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_34", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["613"], "DependentChan" : "1195",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_33", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_34", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["613"], "DependentChan" : "1228",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_34", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_35", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["631"], "DependentChan" : "1196",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_34", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_35", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["631"], "DependentChan" : "1229",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_35", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_36", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["649"], "DependentChan" : "1197",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_35", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_36", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["649"], "DependentChan" : "1230",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_36", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_37", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["667"], "DependentChan" : "1198",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_36", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_37", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["667"], "DependentChan" : "1231",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_37", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_38", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["685"], "DependentChan" : "1199",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_37", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_38", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["685"], "DependentChan" : "1232",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_38", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_39", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["703"], "DependentChan" : "1200",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_38", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_39", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["703"], "DependentChan" : "1233",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_39", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_4", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["73"], "DependentChan" : "1165",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_39", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_4", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["73"], "DependentChan" : "1198",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_4", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_40", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["721"], "DependentChan" : "1201",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_4", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_40", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["721"], "DependentChan" : "1234",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_40", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_41", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["739"], "DependentChan" : "1202",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_40", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_41", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["739"], "DependentChan" : "1235",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_41", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_42", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["757"], "DependentChan" : "1203",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_41", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_42", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["757"], "DependentChan" : "1236",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_42", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_43", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["775"], "DependentChan" : "1204",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_42", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_43", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["775"], "DependentChan" : "1237",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_43", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_44", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["793"], "DependentChan" : "1205",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_43", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_44", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["793"], "DependentChan" : "1238",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_44", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_45", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["811"], "DependentChan" : "1206",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_44", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_45", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["811"], "DependentChan" : "1239",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_45", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_46", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["829"], "DependentChan" : "1207",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_45", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_46", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["829"], "DependentChan" : "1240",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_46", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_47", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["847"], "DependentChan" : "1208",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_46", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_47", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["847"], "DependentChan" : "1241",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_47", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_48", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["865"], "DependentChan" : "1209",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_47", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_48", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["865"], "DependentChan" : "1242",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_48", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_49", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["883"], "DependentChan" : "1210",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_48", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_49", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["883"], "DependentChan" : "1243",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_49", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_5", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["91"], "DependentChan" : "1166",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_49", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_5", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["91"], "DependentChan" : "1199",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_5", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_50", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["901"], "DependentChan" : "1211",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_5", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_50", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["901"], "DependentChan" : "1244",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_50", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_51", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["919"], "DependentChan" : "1212",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_50", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_51", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["919"], "DependentChan" : "1245",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_51", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_52", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["937"], "DependentChan" : "1213",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_51", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_52", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["937"], "DependentChan" : "1246",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_52", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_53", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["955"], "DependentChan" : "1214",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_52", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_53", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["955"], "DependentChan" : "1247",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_53", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_54", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["973"], "DependentChan" : "1215",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_53", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_54", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["973"], "DependentChan" : "1248",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_54", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_55", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["991"], "DependentChan" : "1216",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_54", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_55", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["991"], "DependentChan" : "1249",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_55", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_56", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1009"], "DependentChan" : "1217",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_55", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_56", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1009"], "DependentChan" : "1250",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_56", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_57", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1027"], "DependentChan" : "1218",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_56", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_57", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1027"], "DependentChan" : "1251",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_57", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_58", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1045"], "DependentChan" : "1219",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_57", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_58", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1045"], "DependentChan" : "1252",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_58", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_59", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1063"], "DependentChan" : "1220",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_58", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_59", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1063"], "DependentChan" : "1253",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_59", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_6", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["109"], "DependentChan" : "1167",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_59", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_6", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["109"], "DependentChan" : "1200",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_6", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_60", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1081"], "DependentChan" : "1221",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_6", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_60", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1081"], "DependentChan" : "1254",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_60", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_61", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1099"], "DependentChan" : "1222",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_60", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_61", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1099"], "DependentChan" : "1255",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_61", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_62", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1117"], "DependentChan" : "1223",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_61", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_62", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1117"], "DependentChan" : "1256",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_62", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_63", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1135"], "DependentChan" : "1224",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_62", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_63", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["1135"], "DependentChan" : "1257",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_63", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_7", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["127"], "DependentChan" : "1168",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_63", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_7", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["127"], "DependentChan" : "1201",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_7", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_8", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["145"], "DependentChan" : "1169",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_7", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_8", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["145"], "DependentChan" : "1202",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_8", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "multi_radix_hex_loser_temp0_9", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["163"], "DependentChan" : "1170",
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_8", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
+			{"Name" : "multi_radix_hex_loser_temp0_9", "Type" : "Memory", "Direction" : "I", "DependentProc" : ["163"], "DependentChan" : "1203",
 				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "multi_radix_hex_loser_temp0_9", "Inst_start_state" : "3", "Inst_end_state" : "4"}]},
-			{"Name" : "loser_tree_index", "Type" : "Memory", "Direction" : "I",
-				"SubConnect" : [
-					{"ID" : "1157", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Port" : "loser_tree_index", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
-	{"ID" : "1154", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.current_indices_U", "Parent" : "1153"},
-	{"ID" : "1155", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_1_fu_1050", "Parent" : "1153", "Child" : ["1156"],
+					{"ID" : "1156", "SubInstance" : "grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Port" : "multi_radix_hex_loser_temp0_9", "Inst_start_state" : "3", "Inst_end_state" : "4"}]}]},
+	{"ID" : "1154", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_1_fu_1300", "Parent" : "1153", "Child" : ["1155"],
 		"CDFG" : "loser_tree_1_Pipeline_1",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
@@ -22005,17 +21998,80 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "current_indices", "Type" : "Memory", "Direction" : "O"}],
+			{"Name" : "current_indices_63_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_62_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_61_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_60_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_59_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_58_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_57_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_56_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_55_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_54_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_53_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_52_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_51_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_50_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_49_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_48_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_47_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_46_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_45_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_44_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_43_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_42_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_41_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_40_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_39_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_38_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_37_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_36_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_35_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_34_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_33_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_32_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_31_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_30_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_29_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_28_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_27_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_26_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_25_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_24_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_23_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_22_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_21_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_20_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_19_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_18_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_17_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_16_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_15_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_14_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_13_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_12_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_11_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_10_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_9_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_8_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_7_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_6_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_5_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_4_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_3_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_2_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_1_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "current_indices_out", "Type" : "Vld", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "Loop 1", "PipelineType" : "NotSupport"}]},
-	{"ID" : "1156", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_1_fu_1050.flow_control_loop_pipe_sequential_init_U", "Parent" : "1155"},
-	{"ID" : "1157", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056", "Parent" : "1153", "Child" : ["1158", "1159", "1160"],
-		"CDFG" : "loser_tree_1_Pipeline_VITIS_LOOP_282_2",
+	{"ID" : "1155", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_1_fu_1300.flow_control_loop_pipe_sequential_init_U", "Parent" : "1154"},
+	{"ID" : "1156", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368", "Parent" : "1153", "Child" : ["1157", "1158", "1159", "1160", "1161", "1162", "1163", "1164", "1165", "1166", "1167", "1168", "1169", "1170", "1171", "1172", "1173", "1174", "1175", "1176", "1177", "1178", "1179", "1180", "1181", "1182", "1183", "1184", "1185", "1186", "1187", "1188", "1189", "1190", "1191", "1192", "1193"],
+		"CDFG" : "loser_tree_1_Pipeline_VITIS_LOOP_298_2",
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "3000002", "EstimateLatencyMax" : "3000002",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1000002", "EstimateLatencyMax" : "1000002",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -22024,6 +22080,70 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
+			{"Name" : "current_indices_63_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_62_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_61_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_60_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_59_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_58_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_57_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_56_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_55_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_54_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_53_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_52_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_51_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_50_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_49_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_48_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_47_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_46_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_45_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_44_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_43_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_42_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_41_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_40_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_39_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_38_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_37_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_36_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_35_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_34_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_33_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_32_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_31_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_30_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_29_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_28_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_27_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_26_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_25_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_24_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_23_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_22_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_21_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_20_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_19_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_18_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_17_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_16_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_15_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_14_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_13_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_12_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_11_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_10_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_9_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_8_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_7_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_6_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_5_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_4_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_3_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_2_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_1_reload", "Type" : "None", "Direction" : "I"},
+			{"Name" : "current_indices_reload", "Type" : "None", "Direction" : "I"},
 			{"Name" : "loser_tree_data_63", "Type" : "None", "Direction" : "I"},
 			{"Name" : "loser_tree_data_62", "Type" : "None", "Direction" : "I"},
 			{"Name" : "loser_tree_data_61", "Type" : "None", "Direction" : "I"},
@@ -22152,79 +22272,111 @@ set RtlHierarchyInfo {[
 			{"Name" : "multi_radix_hex_loser_temp0_61", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "multi_radix_hex_loser_temp0_62", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "multi_radix_hex_loser_temp0_63", "Type" : "Memory", "Direction" : "I"},
-			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"},
-			{"Name" : "current_indices", "Type" : "Memory", "Direction" : "IO"},
-			{"Name" : "loser_tree_index", "Type" : "Memory", "Direction" : "I"}],
+			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
-			{"Name" : "VITIS_LOOP_282_2", "PipelineType" : "UPC",
-				"LoopDec" : {"FSMBitwidth" : "3", "FirstState" : "ap_ST_fsm_pp0_stage1", "FirstStateIter" : "ap_enable_reg_pp0_iter0", "FirstStateBlock" : "ap_block_pp0_stage1_subdone", "LastState" : "ap_ST_fsm_pp0_stage1", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage1_subdone", "QuitState" : "ap_ST_fsm_pp0_stage1", "QuitStateIter" : "ap_enable_reg_pp0_iter0", "QuitStateBlock" : "ap_block_pp0_stage1_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
-	{"ID" : "1158", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056.loser_tree_index_U", "Parent" : "1157"},
-	{"ID" : "1159", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056.mux_646_32_1_1_U12356", "Parent" : "1157"},
-	{"ID" : "1160", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056.flow_control_loop_pipe_sequential_init_U", "Parent" : "1157"},
-	{"ID" : "1161", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_0_U", "Parent" : "0"},
-	{"ID" : "1162", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_1_U", "Parent" : "0"},
-	{"ID" : "1163", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_2_U", "Parent" : "0"},
-	{"ID" : "1164", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_3_U", "Parent" : "0"},
-	{"ID" : "1165", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_4_U", "Parent" : "0"},
-	{"ID" : "1166", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_5_U", "Parent" : "0"},
-	{"ID" : "1167", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_6_U", "Parent" : "0"},
-	{"ID" : "1168", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_7_U", "Parent" : "0"},
-	{"ID" : "1169", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_8_U", "Parent" : "0"},
-	{"ID" : "1170", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_9_U", "Parent" : "0"},
-	{"ID" : "1171", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_10_U", "Parent" : "0"},
-	{"ID" : "1172", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_11_U", "Parent" : "0"},
-	{"ID" : "1173", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_12_U", "Parent" : "0"},
-	{"ID" : "1174", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_13_U", "Parent" : "0"},
-	{"ID" : "1175", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_14_U", "Parent" : "0"},
-	{"ID" : "1176", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_15_U", "Parent" : "0"},
-	{"ID" : "1177", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_16_U", "Parent" : "0"},
-	{"ID" : "1178", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_17_U", "Parent" : "0"},
-	{"ID" : "1179", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_18_U", "Parent" : "0"},
-	{"ID" : "1180", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_19_U", "Parent" : "0"},
-	{"ID" : "1181", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_20_U", "Parent" : "0"},
-	{"ID" : "1182", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_21_U", "Parent" : "0"},
-	{"ID" : "1183", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_22_U", "Parent" : "0"},
-	{"ID" : "1184", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_23_U", "Parent" : "0"},
-	{"ID" : "1185", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_24_U", "Parent" : "0"},
-	{"ID" : "1186", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_25_U", "Parent" : "0"},
-	{"ID" : "1187", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_26_U", "Parent" : "0"},
-	{"ID" : "1188", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_27_U", "Parent" : "0"},
-	{"ID" : "1189", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_28_U", "Parent" : "0"},
-	{"ID" : "1190", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_29_U", "Parent" : "0"},
-	{"ID" : "1191", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_30_U", "Parent" : "0"},
-	{"ID" : "1192", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_31_U", "Parent" : "0"},
-	{"ID" : "1193", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_32_U", "Parent" : "0"},
-	{"ID" : "1194", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_33_U", "Parent" : "0"},
-	{"ID" : "1195", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_34_U", "Parent" : "0"},
-	{"ID" : "1196", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_35_U", "Parent" : "0"},
-	{"ID" : "1197", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_36_U", "Parent" : "0"},
-	{"ID" : "1198", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_37_U", "Parent" : "0"},
-	{"ID" : "1199", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_38_U", "Parent" : "0"},
-	{"ID" : "1200", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_39_U", "Parent" : "0"},
-	{"ID" : "1201", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_40_U", "Parent" : "0"},
-	{"ID" : "1202", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_41_U", "Parent" : "0"},
-	{"ID" : "1203", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_42_U", "Parent" : "0"},
-	{"ID" : "1204", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_43_U", "Parent" : "0"},
-	{"ID" : "1205", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_44_U", "Parent" : "0"},
-	{"ID" : "1206", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_45_U", "Parent" : "0"},
-	{"ID" : "1207", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_46_U", "Parent" : "0"},
-	{"ID" : "1208", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_47_U", "Parent" : "0"},
-	{"ID" : "1209", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_48_U", "Parent" : "0"},
-	{"ID" : "1210", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_49_U", "Parent" : "0"},
-	{"ID" : "1211", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_50_U", "Parent" : "0"},
-	{"ID" : "1212", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_51_U", "Parent" : "0"},
-	{"ID" : "1213", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_52_U", "Parent" : "0"},
-	{"ID" : "1214", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_53_U", "Parent" : "0"},
-	{"ID" : "1215", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_54_U", "Parent" : "0"},
-	{"ID" : "1216", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_55_U", "Parent" : "0"},
-	{"ID" : "1217", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_56_U", "Parent" : "0"},
-	{"ID" : "1218", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_57_U", "Parent" : "0"},
-	{"ID" : "1219", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_58_U", "Parent" : "0"},
-	{"ID" : "1220", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_59_U", "Parent" : "0"},
-	{"ID" : "1221", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_60_U", "Parent" : "0"},
-	{"ID" : "1222", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_61_U", "Parent" : "0"},
-	{"ID" : "1223", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_62_U", "Parent" : "0"},
-	{"ID" : "1224", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_63_U", "Parent" : "0"}]}
+			{"Name" : "VITIS_LOOP_298_2", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter2", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "1157", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_21_32_1_1_U12419", "Parent" : "1156"},
+	{"ID" : "1158", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_42_32_1_1_U12420", "Parent" : "1156"},
+	{"ID" : "1159", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_42_32_1_1_U12421", "Parent" : "1156"},
+	{"ID" : "1160", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_83_32_1_1_U12422", "Parent" : "1156"},
+	{"ID" : "1161", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_124_32_1_1_U12423", "Parent" : "1156"},
+	{"ID" : "1162", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_164_32_1_1_x_U12424", "Parent" : "1156"},
+	{"ID" : "1163", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_205_32_1_1_U12425", "Parent" : "1156"},
+	{"ID" : "1164", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_245_32_1_1_U12426", "Parent" : "1156"},
+	{"ID" : "1165", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_285_32_1_1_U12427", "Parent" : "1156"},
+	{"ID" : "1166", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_325_32_1_1_U12428", "Parent" : "1156"},
+	{"ID" : "1167", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_366_32_1_1_U12429", "Parent" : "1156"},
+	{"ID" : "1168", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_406_32_1_1_U12430", "Parent" : "1156"},
+	{"ID" : "1169", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_446_32_1_1_U12431", "Parent" : "1156"},
+	{"ID" : "1170", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_486_32_1_1_U12432", "Parent" : "1156"},
+	{"ID" : "1171", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_526_32_1_1_U12433", "Parent" : "1156"},
+	{"ID" : "1172", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_566_32_1_1_U12434", "Parent" : "1156"},
+	{"ID" : "1173", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_606_32_1_1_U12435", "Parent" : "1156"},
+	{"ID" : "1174", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12436", "Parent" : "1156"},
+	{"ID" : "1175", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_83_32_1_1_U12437", "Parent" : "1156"},
+	{"ID" : "1176", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_164_32_1_1_U12438", "Parent" : "1156"},
+	{"ID" : "1177", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_245_32_1_1_U12439", "Parent" : "1156"},
+	{"ID" : "1178", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_325_32_1_1_U12440", "Parent" : "1156"},
+	{"ID" : "1179", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_406_32_1_1_U12441", "Parent" : "1156"},
+	{"ID" : "1180", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_486_32_1_1_U12442", "Parent" : "1156"},
+	{"ID" : "1181", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_566_32_1_1_U12443", "Parent" : "1156"},
+	{"ID" : "1182", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12444", "Parent" : "1156"},
+	{"ID" : "1183", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_164_32_1_1_U12445", "Parent" : "1156"},
+	{"ID" : "1184", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_325_32_1_1_U12446", "Parent" : "1156"},
+	{"ID" : "1185", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_486_32_1_1_U12447", "Parent" : "1156"},
+	{"ID" : "1186", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12448", "Parent" : "1156"},
+	{"ID" : "1187", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_325_32_1_1_U12449", "Parent" : "1156"},
+	{"ID" : "1188", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12450", "Parent" : "1156"},
+	{"ID" : "1189", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12451", "Parent" : "1156"},
+	{"ID" : "1190", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12452", "Parent" : "1156"},
+	{"ID" : "1191", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12453", "Parent" : "1156"},
+	{"ID" : "1192", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.mux_646_32_1_1_U12454", "Parent" : "1156"},
+	{"ID" : "1193", "Level" : "3", "Path" : "`AUTOTB_DUT_INST.loser_tree_1_U0.grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368.flow_control_loop_pipe_sequential_init_U", "Parent" : "1156"},
+	{"ID" : "1194", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_0_U", "Parent" : "0"},
+	{"ID" : "1195", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_1_U", "Parent" : "0"},
+	{"ID" : "1196", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_2_U", "Parent" : "0"},
+	{"ID" : "1197", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_3_U", "Parent" : "0"},
+	{"ID" : "1198", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_4_U", "Parent" : "0"},
+	{"ID" : "1199", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_5_U", "Parent" : "0"},
+	{"ID" : "1200", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_6_U", "Parent" : "0"},
+	{"ID" : "1201", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_7_U", "Parent" : "0"},
+	{"ID" : "1202", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_8_U", "Parent" : "0"},
+	{"ID" : "1203", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_9_U", "Parent" : "0"},
+	{"ID" : "1204", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_10_U", "Parent" : "0"},
+	{"ID" : "1205", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_11_U", "Parent" : "0"},
+	{"ID" : "1206", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_12_U", "Parent" : "0"},
+	{"ID" : "1207", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_13_U", "Parent" : "0"},
+	{"ID" : "1208", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_14_U", "Parent" : "0"},
+	{"ID" : "1209", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_15_U", "Parent" : "0"},
+	{"ID" : "1210", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_16_U", "Parent" : "0"},
+	{"ID" : "1211", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_17_U", "Parent" : "0"},
+	{"ID" : "1212", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_18_U", "Parent" : "0"},
+	{"ID" : "1213", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_19_U", "Parent" : "0"},
+	{"ID" : "1214", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_20_U", "Parent" : "0"},
+	{"ID" : "1215", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_21_U", "Parent" : "0"},
+	{"ID" : "1216", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_22_U", "Parent" : "0"},
+	{"ID" : "1217", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_23_U", "Parent" : "0"},
+	{"ID" : "1218", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_24_U", "Parent" : "0"},
+	{"ID" : "1219", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_25_U", "Parent" : "0"},
+	{"ID" : "1220", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_26_U", "Parent" : "0"},
+	{"ID" : "1221", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_27_U", "Parent" : "0"},
+	{"ID" : "1222", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_28_U", "Parent" : "0"},
+	{"ID" : "1223", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_29_U", "Parent" : "0"},
+	{"ID" : "1224", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_30_U", "Parent" : "0"},
+	{"ID" : "1225", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_31_U", "Parent" : "0"},
+	{"ID" : "1226", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_32_U", "Parent" : "0"},
+	{"ID" : "1227", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_33_U", "Parent" : "0"},
+	{"ID" : "1228", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_34_U", "Parent" : "0"},
+	{"ID" : "1229", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_35_U", "Parent" : "0"},
+	{"ID" : "1230", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_36_U", "Parent" : "0"},
+	{"ID" : "1231", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_37_U", "Parent" : "0"},
+	{"ID" : "1232", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_38_U", "Parent" : "0"},
+	{"ID" : "1233", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_39_U", "Parent" : "0"},
+	{"ID" : "1234", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_40_U", "Parent" : "0"},
+	{"ID" : "1235", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_41_U", "Parent" : "0"},
+	{"ID" : "1236", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_42_U", "Parent" : "0"},
+	{"ID" : "1237", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_43_U", "Parent" : "0"},
+	{"ID" : "1238", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_44_U", "Parent" : "0"},
+	{"ID" : "1239", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_45_U", "Parent" : "0"},
+	{"ID" : "1240", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_46_U", "Parent" : "0"},
+	{"ID" : "1241", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_47_U", "Parent" : "0"},
+	{"ID" : "1242", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_48_U", "Parent" : "0"},
+	{"ID" : "1243", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_49_U", "Parent" : "0"},
+	{"ID" : "1244", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_50_U", "Parent" : "0"},
+	{"ID" : "1245", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_51_U", "Parent" : "0"},
+	{"ID" : "1246", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_52_U", "Parent" : "0"},
+	{"ID" : "1247", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_53_U", "Parent" : "0"},
+	{"ID" : "1248", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_54_U", "Parent" : "0"},
+	{"ID" : "1249", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_55_U", "Parent" : "0"},
+	{"ID" : "1250", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_56_U", "Parent" : "0"},
+	{"ID" : "1251", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_57_U", "Parent" : "0"},
+	{"ID" : "1252", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_58_U", "Parent" : "0"},
+	{"ID" : "1253", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_59_U", "Parent" : "0"},
+	{"ID" : "1254", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_60_U", "Parent" : "0"},
+	{"ID" : "1255", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_61_U", "Parent" : "0"},
+	{"ID" : "1256", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_62_U", "Parent" : "0"},
+	{"ID" : "1257", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.multi_radix_hex_loser_temp0_63_U", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -22293,7 +22445,7 @@ set ArgLastReadFirstWriteLatency {
 		input_61 {Type I LastRead 0 FirstWrite -1}
 		input_62 {Type I LastRead 0 FirstWrite -1}
 		input_63 {Type I LastRead 0 FirstWrite -1}
-		output_r {Type O LastRead -1 FirstWrite 2}
+		output_r {Type O LastRead -1 FirstWrite 1}
 		multi_radix_hex_loser_temp0_0 {Type IO LastRead -1 FirstWrite -1}
 		multi_radix_hex_loser_temp0_1 {Type IO LastRead -1 FirstWrite -1}
 		multi_radix_hex_loser_temp0_2 {Type IO LastRead -1 FirstWrite -1}
@@ -22357,8 +22509,7 @@ set ArgLastReadFirstWriteLatency {
 		multi_radix_hex_loser_temp0_60 {Type IO LastRead -1 FirstWrite -1}
 		multi_radix_hex_loser_temp0_61 {Type IO LastRead -1 FirstWrite -1}
 		multi_radix_hex_loser_temp0_62 {Type IO LastRead -1 FirstWrite -1}
-		multi_radix_hex_loser_temp0_63 {Type IO LastRead -1 FirstWrite -1}
-		loser_tree_index {Type I LastRead -1 FirstWrite -1}}
+		multi_radix_hex_loser_temp0_63 {Type IO LastRead -1 FirstWrite -1}}
 	radix_sort_hex_batch_1_1 {
 		input_0 {Type I LastRead 0 FirstWrite -1}
 		multi_radix_hex_loser_temp0_0 {Type O LastRead -1 FirstWrite 1}}
@@ -34648,75 +34799,201 @@ set ArgLastReadFirstWriteLatency {
 		bucket_pointer_4064_out {Type IO LastRead 1 FirstWrite 0}
 		bucket_pointer_4063_out {Type IO LastRead 1 FirstWrite 0}}
 	loser_tree_1 {
-		output_r {Type O LastRead -1 FirstWrite 2}
-		multi_radix_hex_loser_temp0_0 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_1 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_10 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_11 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_12 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_13 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_14 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_15 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_16 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_17 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_18 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_19 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_2 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_20 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_21 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_22 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_23 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_24 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_25 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_26 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_27 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_28 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_29 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_3 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_30 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_31 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_32 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_33 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_34 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_35 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_36 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_37 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_38 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_39 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_4 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_40 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_41 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_42 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_43 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_44 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_45 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_46 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_47 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_48 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_49 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_5 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_50 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_51 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_52 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_53 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_54 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_55 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_56 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_57 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_58 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_59 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_6 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_60 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_61 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_62 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_63 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_7 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_8 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_9 {Type I LastRead 3 FirstWrite -1}
-		loser_tree_index {Type I LastRead -1 FirstWrite -1}}
+		output_r {Type O LastRead -1 FirstWrite 1}
+		multi_radix_hex_loser_temp0_0 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_1 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_10 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_11 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_12 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_13 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_14 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_15 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_16 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_17 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_18 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_19 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_2 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_20 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_21 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_22 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_23 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_24 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_25 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_26 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_27 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_28 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_29 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_3 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_30 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_31 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_32 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_33 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_34 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_35 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_36 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_37 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_38 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_39 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_4 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_40 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_41 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_42 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_43 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_44 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_45 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_46 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_47 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_48 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_49 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_5 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_50 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_51 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_52 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_53 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_54 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_55 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_56 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_57 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_58 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_59 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_6 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_60 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_61 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_62 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_63 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_7 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_8 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_9 {Type I LastRead 1 FirstWrite -1}}
 	loser_tree_1_Pipeline_1 {
-		current_indices {Type O LastRead -1 FirstWrite 0}}
-	loser_tree_1_Pipeline_VITIS_LOOP_282_2 {
+		current_indices_63_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_62_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_61_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_60_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_59_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_58_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_57_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_56_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_55_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_54_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_53_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_52_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_51_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_50_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_49_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_48_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_47_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_46_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_45_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_44_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_43_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_42_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_41_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_40_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_39_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_38_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_37_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_36_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_35_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_34_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_33_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_32_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_31_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_30_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_29_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_28_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_27_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_26_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_25_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_24_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_23_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_22_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_21_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_20_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_19_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_18_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_17_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_16_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_15_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_14_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_13_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_12_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_11_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_10_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_9_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_8_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_7_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_6_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_5_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_4_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_3_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_2_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_1_out {Type O LastRead -1 FirstWrite 0}
+		current_indices_out {Type O LastRead -1 FirstWrite 0}}
+	loser_tree_1_Pipeline_VITIS_LOOP_298_2 {
+		current_indices_63_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_62_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_61_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_60_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_59_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_58_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_57_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_56_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_55_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_54_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_53_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_52_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_51_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_50_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_49_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_48_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_47_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_46_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_45_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_44_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_43_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_42_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_41_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_40_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_39_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_38_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_37_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_36_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_35_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_34_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_33_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_32_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_31_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_30_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_29_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_28_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_27_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_26_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_25_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_24_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_23_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_22_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_21_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_20_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_19_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_18_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_17_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_16_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_15_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_14_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_13_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_12_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_11_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_10_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_9_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_8_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_7_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_6_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_5_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_4_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_3_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_2_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_1_reload {Type I LastRead 0 FirstWrite -1}
+		current_indices_reload {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data_63 {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data_62 {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data_61 {Type I LastRead 0 FirstWrite -1}
@@ -34781,79 +35058,77 @@ set ArgLastReadFirstWriteLatency {
 		loser_tree_data_2 {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data_1 {Type I LastRead 0 FirstWrite -1}
 		loser_tree_data {Type I LastRead 0 FirstWrite -1}
-		multi_radix_hex_loser_temp0_0 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_1 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_2 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_3 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_4 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_5 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_6 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_7 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_8 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_9 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_10 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_11 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_12 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_13 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_14 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_15 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_16 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_17 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_18 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_19 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_20 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_21 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_22 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_23 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_24 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_25 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_26 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_27 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_28 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_29 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_30 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_31 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_32 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_33 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_34 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_35 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_36 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_37 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_38 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_39 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_40 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_41 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_42 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_43 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_44 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_45 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_46 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_47 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_48 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_49 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_50 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_51 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_52 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_53 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_54 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_55 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_56 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_57 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_58 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_59 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_60 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_61 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_62 {Type I LastRead 3 FirstWrite -1}
-		multi_radix_hex_loser_temp0_63 {Type I LastRead 3 FirstWrite -1}
-		output_r {Type O LastRead -1 FirstWrite 2}
-		current_indices {Type IO LastRead 2 FirstWrite 3}
-		loser_tree_index {Type I LastRead -1 FirstWrite -1}}}
+		multi_radix_hex_loser_temp0_0 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_1 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_2 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_3 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_4 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_5 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_6 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_7 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_8 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_9 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_10 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_11 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_12 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_13 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_14 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_15 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_16 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_17 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_18 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_19 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_20 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_21 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_22 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_23 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_24 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_25 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_26 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_27 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_28 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_29 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_30 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_31 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_32 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_33 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_34 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_35 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_36 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_37 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_38 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_39 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_40 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_41 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_42 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_43 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_44 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_45 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_46 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_47 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_48 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_49 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_50 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_51 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_52 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_53 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_54 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_55 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_56 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_57 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_58 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_59 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_60 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_61 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_62 {Type I LastRead 1 FirstWrite -1}
+		multi_radix_hex_loser_temp0_63 {Type I LastRead 1 FirstWrite -1}
+		output_r {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3156549", "Max" : "3156549"}
-	, {"Name" : "Interval", "Min" : "3000072", "Max" : "3000072"}
+	{"Name" : "Latency", "Min" : "1156549", "Max" : "1156549"}
+	, {"Name" : "Interval", "Min" : "1000072", "Max" : "1000072"}
 ]}
 
 set PipelineEnableSignalInfo {[

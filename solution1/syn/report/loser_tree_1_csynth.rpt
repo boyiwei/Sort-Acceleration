@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'loser_tree_1'
 ================================================================
-* Date:           Mon Apr 24 22:46:04 2023
+* Date:           Tue Apr 25 09:34:23 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -20,7 +20,7 @@
     +--------+----------+-----------+------------+
     |  Clock |  Target  | Estimated | Uncertainty|
     +--------+----------+-----------+------------+
-    |ap_clk  |  10.00 ns|  69.151 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  13.384 ns|     2.70 ns|
     +--------+----------+-----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
     |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
     +---------+---------+-----------+-----------+---------+---------+---------+
-    |  3000071|  3000071|  0.207 sec|  0.207 sec|  3000071|  3000071|       no|
+    |  1000071|  1000071|  13.385 ms|  13.385 ms|  1000071|  1000071|       no|
     +---------+---------+-----------+-----------+---------+---------+---------+
 
     + Detail: 
@@ -38,8 +38,8 @@
         |                                                    |                                        |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
         |                      Instance                      |                 Module                 |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
         +----------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
-        |grp_loser_tree_1_Pipeline_1_fu_1050                 |loser_tree_1_Pipeline_1                 |       66|       66|   0.660 us|   0.660 us|       66|       66|       no|
-        |grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056  |loser_tree_1_Pipeline_VITIS_LOOP_282_2  |  3000002|  3000002|  0.207 sec|  0.207 sec|  3000002|  3000002|       no|
+        |grp_loser_tree_1_Pipeline_1_fu_1300                 |loser_tree_1_Pipeline_1                 |       66|       66|   0.660 us|   0.660 us|       66|       66|       no|
+        |grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368  |loser_tree_1_Pipeline_VITIS_LOOP_298_2  |  1000002|  1000002|  13.384 ms|  13.384 ms|  1000002|  1000002|       no|
         +----------------------------------------------------+----------------------------------------+---------+---------+-----------+-----------+---------+---------+---------+
 
         * Loop: 
@@ -57,16 +57,16 @@
 |DSP                  |        -|     -|        -|        -|    -|
 |Expression           |        -|     -|        0|        2|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
-|Instance             |        0|     -|     2293|     5713|    -|
-|Memory               |        0|     -|       32|       33|    0|
-|Multiplexer          |        -|     -|        -|     1883|    -|
+|Instance             |        -|     -|     4142|    11080|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|     1827|    -|
 |Register             |        -|     -|     2055|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|     0|     4380|     7631|    0|
+|Total                |        0|     0|     6197|    12909|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
-|Utilization SLR (%)  |        0|     0|       ~0|        1|    0|
+|Utilization SLR (%)  |        0|     0|       ~0|        2|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available            |     4032|  9024|  2607360|  1303680|  960|
 +---------------------+---------+------+---------+---------+-----+
@@ -75,26 +75,20 @@
 
 + Detail: 
     * Instance: 
-    +----------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
-    |                      Instance                      |                 Module                 | BRAM_18K| DSP|  FF  |  LUT | URAM|
-    +----------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
-    |grp_loser_tree_1_Pipeline_1_fu_1050                 |loser_tree_1_Pipeline_1                 |        0|   0|     9|    52|    0|
-    |grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056  |loser_tree_1_Pipeline_VITIS_LOOP_282_2  |        0|   0|  2284|  5661|    0|
-    +----------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
-    |Total                                               |                                        |        0|   0|  2293|  5713|    0|
-    +----------------------------------------------------+----------------------------------------+---------+----+------+------+-----+
+    +----------------------------------------------------+----------------------------------------+---------+----+------+-------+-----+
+    |                      Instance                      |                 Module                 | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +----------------------------------------------------+----------------------------------------+---------+----+------+-------+-----+
+    |grp_loser_tree_1_Pipeline_1_fu_1300                 |loser_tree_1_Pipeline_1                 |        0|   0|     9|     52|    0|
+    |grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368  |loser_tree_1_Pipeline_VITIS_LOOP_298_2  |        0|   0|  4133|  11028|    0|
+    +----------------------------------------------------+----------------------------------------+---------+----+------+-------+-----+
+    |Total                                               |                                        |        0|   0|  4142|  11080|    0|
+    +----------------------------------------------------+----------------------------------------+---------+----+------+-------+-----+
 
     * DSP: 
     N/A
 
     * Memory: 
-    +-------------------+--------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |       Memory      |                   Module                   | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
-    +-------------------+--------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |current_indices_U  |loser_tree_1_current_indices_RAM_AUTO_1R1W  |        0|  32|  33|    0|    64|   32|     1|         2048|
-    +-------------------+--------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
-    |Total              |                                            |        0|  32|  33|    0|    64|   32|     1|         2048|
-    +-------------------+--------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    N/A
 
     * FIFO: 
     N/A
@@ -114,10 +108,6 @@
     +-----------------------------------------+----+-----------+-----+-----------+
     |ap_NS_fsm                                |  26|          5|    1|          5|
     |ap_done                                  |   9|          2|    1|          2|
-    |current_indices_address0                 |  14|          3|    6|         18|
-    |current_indices_ce0                      |  14|          3|    1|          3|
-    |current_indices_d0                       |  14|          3|   32|         96|
-    |current_indices_we0                      |  14|          3|    1|          3|
     |multi_radix_hex_loser_temp0_0_address0   |  14|          3|   14|         42|
     |multi_radix_hex_loser_temp0_0_ce0        |  14|          3|    1|          3|
     |multi_radix_hex_loser_temp0_10_address0  |  14|          3|   14|         42|
@@ -247,7 +237,7 @@
     |multi_radix_hex_loser_temp0_9_address0   |  14|          3|   14|         42|
     |multi_radix_hex_loser_temp0_9_ce0        |  14|          3|    1|          3|
     +-----------------------------------------+----+-----------+-----+-----------+
-    |Total                                    |1883|        403| 1002|       3007|
+    |Total                                    |1827|        391|  962|       2887|
     +-----------------------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -256,72 +246,72 @@
     +-----------------------------------------------------------------+----+----+-----+-----------+
     |ap_CS_fsm                                                        |   4|   0|    4|          0|
     |ap_done_reg                                                      |   1|   0|    1|          0|
-    |grp_loser_tree_1_Pipeline_1_fu_1050_ap_start_reg                 |   1|   0|    1|          0|
-    |grp_loser_tree_1_Pipeline_VITIS_LOOP_282_2_fu_1056_ap_start_reg  |   1|   0|    1|          0|
-    |loser_tree_data_100_reg_1757                                     |  32|   0|   32|          0|
-    |loser_tree_data_101_reg_1762                                     |  32|   0|   32|          0|
-    |loser_tree_data_102_reg_1767                                     |  32|   0|   32|          0|
-    |loser_tree_data_103_reg_1772                                     |  32|   0|   32|          0|
-    |loser_tree_data_104_reg_1777                                     |  32|   0|   32|          0|
-    |loser_tree_data_105_reg_1782                                     |  32|   0|   32|          0|
-    |loser_tree_data_106_reg_1787                                     |  32|   0|   32|          0|
-    |loser_tree_data_107_reg_1792                                     |  32|   0|   32|          0|
-    |loser_tree_data_108_reg_1797                                     |  32|   0|   32|          0|
-    |loser_tree_data_109_reg_1802                                     |  32|   0|   32|          0|
-    |loser_tree_data_110_reg_1807                                     |  32|   0|   32|          0|
-    |loser_tree_data_111_reg_1812                                     |  32|   0|   32|          0|
-    |loser_tree_data_112_reg_1817                                     |  32|   0|   32|          0|
-    |loser_tree_data_113_reg_1822                                     |  32|   0|   32|          0|
-    |loser_tree_data_114_reg_1827                                     |  32|   0|   32|          0|
-    |loser_tree_data_115_reg_1832                                     |  32|   0|   32|          0|
-    |loser_tree_data_116_reg_1837                                     |  32|   0|   32|          0|
-    |loser_tree_data_117_reg_1842                                     |  32|   0|   32|          0|
-    |loser_tree_data_118_reg_1847                                     |  32|   0|   32|          0|
-    |loser_tree_data_119_reg_1852                                     |  32|   0|   32|          0|
-    |loser_tree_data_120_reg_1857                                     |  32|   0|   32|          0|
-    |loser_tree_data_121_reg_1862                                     |  32|   0|   32|          0|
-    |loser_tree_data_122_reg_1867                                     |  32|   0|   32|          0|
-    |loser_tree_data_123_reg_1872                                     |  32|   0|   32|          0|
-    |loser_tree_data_124_reg_1877                                     |  32|   0|   32|          0|
-    |loser_tree_data_125_reg_1882                                     |  32|   0|   32|          0|
-    |loser_tree_data_126_reg_1887                                     |  32|   0|   32|          0|
-    |loser_tree_data_127_reg_1892                                     |  32|   0|   32|          0|
-    |loser_tree_data_65_reg_1582                                      |  32|   0|   32|          0|
-    |loser_tree_data_66_reg_1587                                      |  32|   0|   32|          0|
-    |loser_tree_data_67_reg_1592                                      |  32|   0|   32|          0|
-    |loser_tree_data_68_reg_1597                                      |  32|   0|   32|          0|
-    |loser_tree_data_69_reg_1602                                      |  32|   0|   32|          0|
-    |loser_tree_data_70_reg_1607                                      |  32|   0|   32|          0|
-    |loser_tree_data_71_reg_1612                                      |  32|   0|   32|          0|
-    |loser_tree_data_72_reg_1617                                      |  32|   0|   32|          0|
-    |loser_tree_data_73_reg_1622                                      |  32|   0|   32|          0|
-    |loser_tree_data_74_reg_1627                                      |  32|   0|   32|          0|
-    |loser_tree_data_75_reg_1632                                      |  32|   0|   32|          0|
-    |loser_tree_data_76_reg_1637                                      |  32|   0|   32|          0|
-    |loser_tree_data_77_reg_1642                                      |  32|   0|   32|          0|
-    |loser_tree_data_78_reg_1647                                      |  32|   0|   32|          0|
-    |loser_tree_data_79_reg_1652                                      |  32|   0|   32|          0|
-    |loser_tree_data_80_reg_1657                                      |  32|   0|   32|          0|
-    |loser_tree_data_81_reg_1662                                      |  32|   0|   32|          0|
-    |loser_tree_data_82_reg_1667                                      |  32|   0|   32|          0|
-    |loser_tree_data_83_reg_1672                                      |  32|   0|   32|          0|
-    |loser_tree_data_84_reg_1677                                      |  32|   0|   32|          0|
-    |loser_tree_data_85_reg_1682                                      |  32|   0|   32|          0|
-    |loser_tree_data_86_reg_1687                                      |  32|   0|   32|          0|
-    |loser_tree_data_87_reg_1692                                      |  32|   0|   32|          0|
-    |loser_tree_data_88_reg_1697                                      |  32|   0|   32|          0|
-    |loser_tree_data_89_reg_1702                                      |  32|   0|   32|          0|
-    |loser_tree_data_90_reg_1707                                      |  32|   0|   32|          0|
-    |loser_tree_data_91_reg_1712                                      |  32|   0|   32|          0|
-    |loser_tree_data_92_reg_1717                                      |  32|   0|   32|          0|
-    |loser_tree_data_93_reg_1722                                      |  32|   0|   32|          0|
-    |loser_tree_data_94_reg_1727                                      |  32|   0|   32|          0|
-    |loser_tree_data_95_reg_1732                                      |  32|   0|   32|          0|
-    |loser_tree_data_96_reg_1737                                      |  32|   0|   32|          0|
-    |loser_tree_data_97_reg_1742                                      |  32|   0|   32|          0|
-    |loser_tree_data_98_reg_1747                                      |  32|   0|   32|          0|
-    |loser_tree_data_99_reg_1752                                      |  32|   0|   32|          0|
-    |loser_tree_data_reg_1577                                         |  32|   0|   32|          0|
+    |grp_loser_tree_1_Pipeline_1_fu_1300_ap_start_reg                 |   1|   0|    1|          0|
+    |grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368_ap_start_reg  |   1|   0|    1|          0|
+    |loser_tree_data_129_reg_2595                                     |  32|   0|   32|          0|
+    |loser_tree_data_130_reg_2600                                     |  32|   0|   32|          0|
+    |loser_tree_data_131_reg_2605                                     |  32|   0|   32|          0|
+    |loser_tree_data_132_reg_2610                                     |  32|   0|   32|          0|
+    |loser_tree_data_133_reg_2615                                     |  32|   0|   32|          0|
+    |loser_tree_data_134_reg_2620                                     |  32|   0|   32|          0|
+    |loser_tree_data_135_reg_2625                                     |  32|   0|   32|          0|
+    |loser_tree_data_136_reg_2630                                     |  32|   0|   32|          0|
+    |loser_tree_data_137_reg_2635                                     |  32|   0|   32|          0|
+    |loser_tree_data_138_reg_2640                                     |  32|   0|   32|          0|
+    |loser_tree_data_139_reg_2645                                     |  32|   0|   32|          0|
+    |loser_tree_data_140_reg_2650                                     |  32|   0|   32|          0|
+    |loser_tree_data_141_reg_2655                                     |  32|   0|   32|          0|
+    |loser_tree_data_142_reg_2660                                     |  32|   0|   32|          0|
+    |loser_tree_data_143_reg_2665                                     |  32|   0|   32|          0|
+    |loser_tree_data_144_reg_2670                                     |  32|   0|   32|          0|
+    |loser_tree_data_145_reg_2675                                     |  32|   0|   32|          0|
+    |loser_tree_data_146_reg_2680                                     |  32|   0|   32|          0|
+    |loser_tree_data_147_reg_2685                                     |  32|   0|   32|          0|
+    |loser_tree_data_148_reg_2690                                     |  32|   0|   32|          0|
+    |loser_tree_data_149_reg_2695                                     |  32|   0|   32|          0|
+    |loser_tree_data_150_reg_2700                                     |  32|   0|   32|          0|
+    |loser_tree_data_151_reg_2705                                     |  32|   0|   32|          0|
+    |loser_tree_data_152_reg_2710                                     |  32|   0|   32|          0|
+    |loser_tree_data_153_reg_2715                                     |  32|   0|   32|          0|
+    |loser_tree_data_154_reg_2720                                     |  32|   0|   32|          0|
+    |loser_tree_data_155_reg_2725                                     |  32|   0|   32|          0|
+    |loser_tree_data_156_reg_2730                                     |  32|   0|   32|          0|
+    |loser_tree_data_157_reg_2735                                     |  32|   0|   32|          0|
+    |loser_tree_data_158_reg_2740                                     |  32|   0|   32|          0|
+    |loser_tree_data_159_reg_2745                                     |  32|   0|   32|          0|
+    |loser_tree_data_160_reg_2750                                     |  32|   0|   32|          0|
+    |loser_tree_data_161_reg_2755                                     |  32|   0|   32|          0|
+    |loser_tree_data_162_reg_2760                                     |  32|   0|   32|          0|
+    |loser_tree_data_163_reg_2765                                     |  32|   0|   32|          0|
+    |loser_tree_data_164_reg_2770                                     |  32|   0|   32|          0|
+    |loser_tree_data_165_reg_2775                                     |  32|   0|   32|          0|
+    |loser_tree_data_166_reg_2780                                     |  32|   0|   32|          0|
+    |loser_tree_data_167_reg_2785                                     |  32|   0|   32|          0|
+    |loser_tree_data_168_reg_2790                                     |  32|   0|   32|          0|
+    |loser_tree_data_169_reg_2795                                     |  32|   0|   32|          0|
+    |loser_tree_data_170_reg_2800                                     |  32|   0|   32|          0|
+    |loser_tree_data_171_reg_2805                                     |  32|   0|   32|          0|
+    |loser_tree_data_172_reg_2810                                     |  32|   0|   32|          0|
+    |loser_tree_data_173_reg_2815                                     |  32|   0|   32|          0|
+    |loser_tree_data_174_reg_2820                                     |  32|   0|   32|          0|
+    |loser_tree_data_175_reg_2825                                     |  32|   0|   32|          0|
+    |loser_tree_data_176_reg_2830                                     |  32|   0|   32|          0|
+    |loser_tree_data_177_reg_2835                                     |  32|   0|   32|          0|
+    |loser_tree_data_178_reg_2840                                     |  32|   0|   32|          0|
+    |loser_tree_data_179_reg_2845                                     |  32|   0|   32|          0|
+    |loser_tree_data_180_reg_2850                                     |  32|   0|   32|          0|
+    |loser_tree_data_181_reg_2855                                     |  32|   0|   32|          0|
+    |loser_tree_data_182_reg_2860                                     |  32|   0|   32|          0|
+    |loser_tree_data_183_reg_2865                                     |  32|   0|   32|          0|
+    |loser_tree_data_184_reg_2870                                     |  32|   0|   32|          0|
+    |loser_tree_data_185_reg_2875                                     |  32|   0|   32|          0|
+    |loser_tree_data_186_reg_2880                                     |  32|   0|   32|          0|
+    |loser_tree_data_187_reg_2885                                     |  32|   0|   32|          0|
+    |loser_tree_data_188_reg_2890                                     |  32|   0|   32|          0|
+    |loser_tree_data_189_reg_2895                                     |  32|   0|   32|          0|
+    |loser_tree_data_190_reg_2900                                     |  32|   0|   32|          0|
+    |loser_tree_data_191_reg_2905                                     |  32|   0|   32|          0|
+    |loser_tree_data_reg_2590                                         |  32|   0|   32|          0|
     +-----------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                            |2055|   0| 2055|          0|
     +-----------------------------------------------------------------+----+----+-----+-----------+

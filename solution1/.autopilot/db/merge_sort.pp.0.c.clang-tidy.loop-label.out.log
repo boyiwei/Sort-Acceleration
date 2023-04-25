@@ -38,18 +38,13 @@
     ^~~
     VITIS_LOOP_245_1: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1154:5: note: FIX-IT applied suggested code changes
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1185:5: warning: Added loop label VITIS_LOOP_276_1:   [xilinx-label-all-loops]
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1201:5: warning: Added loop label VITIS_LOOP_292_1:   [xilinx-label-all-loops]
     for (i = 0; i < 64; i++) {
     ^~~
-    VITIS_LOOP_276_1: 
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1185:5: note: FIX-IT applied suggested code changes
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1191:5: warning: Added loop label VITIS_LOOP_282_2:   [xilinx-label-all-loops]
-    for (i = 0; i < 64 * 1000000/64; i++) {
+    VITIS_LOOP_292_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1201:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1207:5: warning: Added loop label VITIS_LOOP_298_2:   [xilinx-label-all-loops]
+    for (i = 0; i < 64*1000000/64; i++) {
     ^~~
-    VITIS_LOOP_282_2: 
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1191:5: note: FIX-IT applied suggested code changes
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1197:9: warning: Added loop label VITIS_LOOP_288_3:   [xilinx-label-all-loops]
-        for (int j = 0; j < 64; j++) {
-        ^~~
-        VITIS_LOOP_288_3: 
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1197:9: note: FIX-IT applied suggested code changes
+    VITIS_LOOP_298_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/merge_sort.pp.0.c:1207:5: note: FIX-IT applied suggested code changes

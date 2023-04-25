@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'multi_radix_hex_loser'" level="0">
-<item name = "Date">Mon Apr 24 22:46:13 2023
+<item name = "Date">Tue Apr 25 09:34:38 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">sort_seperate_bucket</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 69.151 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 13.384 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3156549, 3156549, 0.218 sec, 0.218 sec, 3000072, 3000072, dataflow</column>
+<column name="">1156549, 1156549, 15.480 ms, 15.480 ms, 1000072, 1000072, dataflow</column>
 </table>
 </item>
 <item name = "Detail">
@@ -95,7 +95,7 @@
 <column name="radix_sort_hex_batch_62_1_U0">radix_sort_hex_batch_62_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
 <column name="radix_sort_hex_batch_63_1_U0">radix_sort_hex_batch_63_1, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
 <column name="radix_sort_hex_batch_1_2_U0">radix_sort_hex_batch_1_2, 156477, 156477, 1.565 ms, 1.565 ms, 156477, 156477, no</column>
-<column name="loser_tree_1_U0">loser_tree_1, 3000071, 3000071, 0.207 sec, 0.207 sec, 3000071, 3000071, no</column>
+<column name="loser_tree_1_U0">loser_tree_1, 1000071, 1000071, 13.385 ms, 13.385 ms, 1000071, 1000071, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -114,12 +114,12 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 262, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">1024, 128, 156572, 158543, 0</column>
+<column name="Instance">1024, 128, 158389, 163821, 0</column>
 <column name="Memory">1024, -, 0, 0, 0</column>
 <column name="Multiplexer">-, -, -, 576, -</column>
 <column name="Register">-, -, 64, -, -</column>
 <specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
-<specialColumn name="Utilization SLR (%)">152, 4, 18, 36, 0</specialColumn>
+<specialColumn name="Utilization SLR (%)">152, 4, 18, 37, 0</specialColumn>
 <specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
 <specialColumn name="Utilization (%)">50, 1, 6, 12, 0</specialColumn>
 </table>
@@ -128,7 +128,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="loser_tree_1_U0">loser_tree_1, 0, 0, 4380, 7631, 0</column>
+<column name="loser_tree_1_U0">loser_tree_1, 0, 0, 6197, 12909, 0</column>
 <column name="radix_sort_hex_batch_10_1_U0">radix_sort_hex_batch_10_1, 16, 2, 2378, 2358, 0</column>
 <column name="radix_sort_hex_batch_11_1_U0">radix_sort_hex_batch_11_1, 16, 2, 2378, 2358, 0</column>
 <column name="radix_sort_hex_batch_12_1_U0">radix_sort_hex_batch_12_1, 16, 2, 2378, 2358, 0</column>

@@ -1905,7 +1905,7 @@ for.inc27.split.i:15 %bucket_sizes_2160_load_1 = load i32 %bucket_sizes_2160
 
 <Node id="191" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc27.split.i:16 %specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_41
+for.inc27.split.i:16 %specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_55
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln11"/></StgValue>

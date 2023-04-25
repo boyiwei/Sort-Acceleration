@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'multi_radix_hex_loser'" level="0">
-<item name = "Date">Mon Apr 24 22:40:37 2023
+<item name = "Date">Tue Apr 25 09:29:30 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">sort_seperate_bucket</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 69.151 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 13.384 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3156549, 3156549, 0.218 sec, 0.218 sec, 3000072, 3000072, dataflow</column>
+<column name="">1156549, 1156549, 15.480 ms, 15.480 ms, 1000072, 1000072, dataflow</column>
 </table>
 </item>
 <item name = "Detail">

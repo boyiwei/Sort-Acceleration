@@ -290,7 +290,7 @@ for.inc79.split.i:0 %k_cast_i = zext i14 %k_35
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
-for.inc79.split.i:5 %specloopname_ln53 = specloopname void @_ssdm_op_SpecLoopName, void @empty_40
+for.inc79.split.i:5 %specloopname_ln53 = specloopname void @_ssdm_op_SpecLoopName, void @empty_45
 
 ]]></Node>
 <StgValue><ssdm name="specloopname_ln53"/></StgValue>
