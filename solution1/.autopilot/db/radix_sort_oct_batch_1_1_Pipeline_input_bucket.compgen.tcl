@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir IO \
     corename bucket \
     op interface \
-    ports { bucket_address0 { O 18 vector } bucket_ce0 { O 1 bit } bucket_we0 { O 1 bit } bucket_d0 { O 32 vector } bucket_address1 { O 18 vector } bucket_ce1 { O 1 bit } bucket_q1 { I 32 vector } } \
+    ports { bucket_address0 { O 19 vector } bucket_ce0 { O 1 bit } bucket_we0 { O 1 bit } bucket_d0 { O 32 vector } bucket_address1 { O 19 vector } bucket_ce1 { O 1 bit } bucket_q1 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'bucket'"
@@ -277,7 +277,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_mul_ln41 \
     op interface \
-    ports { mul_ln41 { I 18 vector } } \
+    ports { mul_ln41 { I 19 vector } } \
 } "
 }
 
@@ -307,7 +307,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_mul_ln43 \
     op interface \
-    ports { mul_ln43 { I 18 vector } } \
+    ports { mul_ln43 { I 19 vector } } \
 } "
 }
 

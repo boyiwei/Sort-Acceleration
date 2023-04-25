@@ -8,8 +8,8 @@
 module multi_radix_oct_kmerge_multi_radix_oct_kmerge_temp1_0_RAM_AUTO_1R1W
 #(parameter
     DataWidth    = 32,
-    AddressRange = 156250,
-    AddressWidth = 18,
+    AddressRange = 312500,
+    AddressWidth = 19,
     BufferCount  = 2,
     IndexWidth   = 1
 ) (

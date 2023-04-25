@@ -12,8 +12,8 @@ entity multi_radix_oct_kmerge_radix_sort_oct_batch_57_1_bucket_RAM_AUTO_1R1W is
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 18;
-        AddressRange    : integer   := 156250
+        AddressWidth    : integer   := 19;
+        AddressRange    : integer   := 312500
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

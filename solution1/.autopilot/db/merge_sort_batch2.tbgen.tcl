@@ -13,9 +13,9 @@ set hasInterrupt 0
 set C_modelName {merge_sort_batch2}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ multi_radix_oct_kmerge_temp3_7 int 32 regular {array 625000 { 0 3 } 0 1 }  }
-	{ multi_radix_oct_kmerge_temp2_14 int 32 regular {array 312500 { 1 3 } 1 1 } {global 0}  }
-	{ multi_radix_oct_kmerge_temp2_15 int 32 regular {array 312500 { 1 3 } 1 1 } {global 0}  }
+	{ multi_radix_oct_kmerge_temp3_7 int 32 regular {array 1250000 { 0 3 } 0 1 }  }
+	{ multi_radix_oct_kmerge_temp2_14 int 32 regular {array 625000 { 1 3 } 1 1 } {global 0}  }
+	{ multi_radix_oct_kmerge_temp2_15 int 32 regular {array 625000 { 1 3 } 1 1 } {global 0}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "multi_radix_oct_kmerge_temp3_7", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
@@ -31,14 +31,14 @@ set portList {
 	{ ap_continue sc_in sc_logic 1 continue -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ multi_radix_oct_kmerge_temp3_7_address0 sc_out sc_lv 20 signal 0 } 
+	{ multi_radix_oct_kmerge_temp3_7_address0 sc_out sc_lv 21 signal 0 } 
 	{ multi_radix_oct_kmerge_temp3_7_ce0 sc_out sc_logic 1 signal 0 } 
 	{ multi_radix_oct_kmerge_temp3_7_we0 sc_out sc_logic 1 signal 0 } 
 	{ multi_radix_oct_kmerge_temp3_7_d0 sc_out sc_lv 32 signal 0 } 
-	{ multi_radix_oct_kmerge_temp2_14_address0 sc_out sc_lv 19 signal 1 } 
+	{ multi_radix_oct_kmerge_temp2_14_address0 sc_out sc_lv 20 signal 1 } 
 	{ multi_radix_oct_kmerge_temp2_14_ce0 sc_out sc_logic 1 signal 1 } 
 	{ multi_radix_oct_kmerge_temp2_14_q0 sc_in sc_lv 32 signal 1 } 
-	{ multi_radix_oct_kmerge_temp2_15_address0 sc_out sc_lv 19 signal 2 } 
+	{ multi_radix_oct_kmerge_temp2_15_address0 sc_out sc_lv 20 signal 2 } 
 	{ multi_radix_oct_kmerge_temp2_15_ce0 sc_out sc_logic 1 signal 2 } 
 	{ multi_radix_oct_kmerge_temp2_15_q0 sc_in sc_lv 32 signal 2 } 
 }
@@ -50,14 +50,14 @@ set NewPortList {[
  	{ "name": "ap_continue", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "continue", "bundle":{"name": "ap_continue", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "multi_radix_oct_kmerge_temp3_7_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp3_7", "role": "address0" }} , 
+ 	{ "name": "multi_radix_oct_kmerge_temp3_7_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":21, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp3_7", "role": "address0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp3_7_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp3_7", "role": "ce0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp3_7_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp3_7", "role": "we0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp3_7_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp3_7", "role": "d0" }} , 
- 	{ "name": "multi_radix_oct_kmerge_temp2_14_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":19, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp2_14", "role": "address0" }} , 
+ 	{ "name": "multi_radix_oct_kmerge_temp2_14_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp2_14", "role": "address0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp2_14_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp2_14", "role": "ce0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp2_14_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp2_14", "role": "q0" }} , 
- 	{ "name": "multi_radix_oct_kmerge_temp2_15_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":19, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp2_15", "role": "address0" }} , 
+ 	{ "name": "multi_radix_oct_kmerge_temp2_15_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":20, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp2_15", "role": "address0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp2_15_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp2_15", "role": "ce0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp2_15_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp2_15", "role": "q0" }}  ]}
 
@@ -68,7 +68,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "625002", "EstimateLatencyMax" : "625002",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1250002", "EstimateLatencyMax" : "1250002",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -95,8 +95,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "625002", "Max" : "625002"}
-	, {"Name" : "Interval", "Min" : "625002", "Max" : "625002"}
+	{"Name" : "Latency", "Min" : "1250002", "Max" : "1250002"}
+	, {"Name" : "Interval", "Min" : "1250002", "Max" : "1250002"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -104,7 +104,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	multi_radix_oct_kmerge_temp3_7 { ap_memory {  { multi_radix_oct_kmerge_temp3_7_address0 mem_address 1 20 }  { multi_radix_oct_kmerge_temp3_7_ce0 mem_ce 1 1 }  { multi_radix_oct_kmerge_temp3_7_we0 mem_we 1 1 }  { multi_radix_oct_kmerge_temp3_7_d0 mem_din 1 32 } } }
-	multi_radix_oct_kmerge_temp2_14 { ap_memory {  { multi_radix_oct_kmerge_temp2_14_address0 mem_address 1 19 }  { multi_radix_oct_kmerge_temp2_14_ce0 mem_ce 1 1 }  { multi_radix_oct_kmerge_temp2_14_q0 in_data 0 32 } } }
-	multi_radix_oct_kmerge_temp2_15 { ap_memory {  { multi_radix_oct_kmerge_temp2_15_address0 mem_address 1 19 }  { multi_radix_oct_kmerge_temp2_15_ce0 mem_ce 1 1 }  { multi_radix_oct_kmerge_temp2_15_q0 in_data 0 32 } } }
+	multi_radix_oct_kmerge_temp3_7 { ap_memory {  { multi_radix_oct_kmerge_temp3_7_address0 mem_address 1 21 }  { multi_radix_oct_kmerge_temp3_7_ce0 mem_ce 1 1 }  { multi_radix_oct_kmerge_temp3_7_we0 mem_we 1 1 }  { multi_radix_oct_kmerge_temp3_7_d0 mem_din 1 32 } } }
+	multi_radix_oct_kmerge_temp2_14 { ap_memory {  { multi_radix_oct_kmerge_temp2_14_address0 mem_address 1 20 }  { multi_radix_oct_kmerge_temp2_14_ce0 mem_ce 1 1 }  { multi_radix_oct_kmerge_temp2_14_q0 in_data 0 32 } } }
+	multi_radix_oct_kmerge_temp2_15 { ap_memory {  { multi_radix_oct_kmerge_temp2_15_address0 mem_address 1 20 }  { multi_radix_oct_kmerge_temp2_15_ce0 mem_ce 1 1 }  { multi_radix_oct_kmerge_temp2_15_q0 in_data 0 32 } } }
 }

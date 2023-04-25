@@ -36,14 +36,14 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-output  [20:0] multi_radix_oct_kmerge_temp4_1_address0;
+output  [21:0] multi_radix_oct_kmerge_temp4_1_address0;
 output   multi_radix_oct_kmerge_temp4_1_ce0;
 output   multi_radix_oct_kmerge_temp4_1_we0;
 output  [31:0] multi_radix_oct_kmerge_temp4_1_d0;
-output  [19:0] multi_radix_oct_kmerge_temp3_2_address0;
+output  [20:0] multi_radix_oct_kmerge_temp3_2_address0;
 output   multi_radix_oct_kmerge_temp3_2_ce0;
 input  [31:0] multi_radix_oct_kmerge_temp3_2_q0;
-output  [19:0] multi_radix_oct_kmerge_temp3_3_address0;
+output  [20:0] multi_radix_oct_kmerge_temp3_3_address0;
 output   multi_radix_oct_kmerge_temp3_3_ce0;
 input  [31:0] multi_radix_oct_kmerge_temp3_3_q0;
 
@@ -51,9 +51,9 @@ reg ap_idle;
 reg multi_radix_oct_kmerge_temp4_1_ce0;
 reg multi_radix_oct_kmerge_temp4_1_we0;
 reg[31:0] multi_radix_oct_kmerge_temp4_1_d0;
-reg[19:0] multi_radix_oct_kmerge_temp3_2_address0;
+reg[20:0] multi_radix_oct_kmerge_temp3_2_address0;
 reg multi_radix_oct_kmerge_temp3_2_ce0;
-reg[19:0] multi_radix_oct_kmerge_temp3_3_address0;
+reg[20:0] multi_radix_oct_kmerge_temp3_3_address0;
 reg multi_radix_oct_kmerge_temp3_3_ce0;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
@@ -74,7 +74,7 @@ reg    ap_block_pp0_stage0_11001;
 reg   [31:0] j_79_reg_280;
 wire   [0:0] and_ln185_fu_155_p2;
 reg   [0:0] and_ln185_reg_288;
-reg   [20:0] multi_radix_oct_kmerge_temp4_1_addr_reg_292;
+reg   [21:0] multi_radix_oct_kmerge_temp4_1_addr_reg_292;
 wire   [0:0] and_ln196_fu_167_p2;
 reg   [0:0] and_ln196_reg_297;
 wire   [63:0] zext_ln183_fu_138_p1;
@@ -83,10 +83,10 @@ wire   [63:0] zext_ln201_fu_173_p1;
 wire   [63:0] zext_ln197_fu_189_p1;
 wire   [63:0] zext_ln186_fu_210_p1;
 wire   [63:0] zext_ln186_2_fu_215_p1;
-reg   [20:0] i_fu_34;
-wire   [20:0] add_ln183_fu_132_p2;
+reg   [21:0] i_fu_34;
+wire   [21:0] add_ln183_fu_132_p2;
 wire    ap_loop_init;
-reg   [20:0] ap_sig_allocacmp_i_133;
+reg   [21:0] ap_sig_allocacmp_i_133;
 reg   [31:0] k_fu_38;
 wire   [31:0] k_78_fu_231_p2;
 wire   [31:0] k_79_fu_194_p2;
@@ -172,7 +172,7 @@ always @ (posedge ap_clk) begin
         if ((icmp_ln183_fu_126_p2 == 1'd0)) begin
             i_fu_34 <= add_ln183_fu_132_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_34 <= 21'd0;
+            i_fu_34 <= 22'd0;
         end
     end
 end
@@ -180,7 +180,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((1'b1 == ap_condition_292)) begin
-            j_fu_42 <= 32'd625000;
+            j_fu_42 <= 32'd1250000;
         end else if ((1'b1 == ap_condition_288)) begin
             j_fu_42 <= j_81_fu_178_p2;
         end else if (((ap_start_int == 1'b1) & (ap_loop_init == 1'b1))) begin
@@ -265,7 +265,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_i_133 = 21'd0;
+        ap_sig_allocacmp_i_133 = 22'd0;
     end else begin
         ap_sig_allocacmp_i_133 = i_fu_34;
     end
@@ -380,7 +380,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln183_fu_132_p2 = (ap_sig_allocacmp_i_133 + 21'd1);
+assign add_ln183_fu_132_p2 = (ap_sig_allocacmp_i_133 + 22'd1);
 
 assign and_ln185_fu_155_p2 = (icmp_ln185_fu_143_p2 & icmp_ln185_2_fu_149_p2);
 
@@ -434,15 +434,15 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln183_fu_126_p2 = ((ap_sig_allocacmp_i_133 == 21'd1250000) ? 1'b1 : 1'b0);
+assign icmp_ln183_fu_126_p2 = ((ap_sig_allocacmp_i_133 == 22'd2500000) ? 1'b1 : 1'b0);
 
-assign icmp_ln185_2_fu_149_p2 = (($signed(ap_sig_allocacmp_k_77) < $signed(32'd625000)) ? 1'b1 : 1'b0);
+assign icmp_ln185_2_fu_149_p2 = (($signed(ap_sig_allocacmp_k_77) < $signed(32'd1250000)) ? 1'b1 : 1'b0);
 
-assign icmp_ln185_fu_143_p2 = (($signed(ap_sig_allocacmp_j_79) < $signed(32'd625000)) ? 1'b1 : 1'b0);
+assign icmp_ln185_fu_143_p2 = (($signed(ap_sig_allocacmp_j_79) < $signed(32'd1250000)) ? 1'b1 : 1'b0);
 
 assign icmp_ln186_fu_225_p2 = (($signed(multi_radix_oct_kmerge_temp3_2_q0) < $signed(multi_radix_oct_kmerge_temp3_3_q0)) ? 1'b1 : 1'b0);
 
-assign icmp_ln196_fu_161_p2 = ((ap_sig_allocacmp_j_79 == 32'd625000) ? 1'b1 : 1'b0);
+assign icmp_ln196_fu_161_p2 = ((ap_sig_allocacmp_j_79 == 32'd1250000) ? 1'b1 : 1'b0);
 
 assign j_80_fu_241_p2 = (j_79_reg_280 + 32'd1);
 

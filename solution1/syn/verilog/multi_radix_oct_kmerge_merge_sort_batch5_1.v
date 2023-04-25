@@ -36,14 +36,14 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-output  [22:0] output_r_address0;
+output  [23:0] output_r_address0;
 output   output_r_ce0;
 output   output_r_we0;
 output  [31:0] output_r_d0;
-output  [21:0] multi_radix_oct_kmerge_temp5_0_address0;
+output  [22:0] multi_radix_oct_kmerge_temp5_0_address0;
 output   multi_radix_oct_kmerge_temp5_0_ce0;
 input  [31:0] multi_radix_oct_kmerge_temp5_0_q0;
-output  [21:0] multi_radix_oct_kmerge_temp5_1_address0;
+output  [22:0] multi_radix_oct_kmerge_temp5_1_address0;
 output   multi_radix_oct_kmerge_temp5_1_ce0;
 input  [31:0] multi_radix_oct_kmerge_temp5_1_q0;
 
@@ -51,9 +51,9 @@ reg ap_idle;
 reg output_r_ce0;
 reg output_r_we0;
 reg[31:0] output_r_d0;
-reg[21:0] multi_radix_oct_kmerge_temp5_0_address0;
+reg[22:0] multi_radix_oct_kmerge_temp5_0_address0;
 reg multi_radix_oct_kmerge_temp5_0_ce0;
-reg[21:0] multi_radix_oct_kmerge_temp5_1_address0;
+reg[22:0] multi_radix_oct_kmerge_temp5_1_address0;
 reg multi_radix_oct_kmerge_temp5_1_ce0;
 
 (* fsm_encoding = "none" *) reg   [0:0] ap_CS_fsm;
@@ -74,7 +74,7 @@ reg    ap_block_pp0_stage0_11001;
 reg   [31:0] j_67_reg_284;
 wire   [0:0] and_ln241_fu_159_p2;
 reg   [0:0] and_ln241_reg_292;
-reg   [22:0] output_r_addr_reg_296;
+reg   [23:0] output_r_addr_reg_296;
 wire   [0:0] and_ln252_fu_171_p2;
 reg   [0:0] and_ln252_reg_301;
 wire   [63:0] zext_ln239_fu_142_p1;
@@ -83,10 +83,10 @@ wire   [63:0] zext_ln257_fu_177_p1;
 wire   [63:0] zext_ln253_fu_193_p1;
 wire   [63:0] zext_ln242_fu_214_p1;
 wire   [63:0] zext_ln242_1_fu_219_p1;
-reg   [22:0] i_fu_38;
-wire   [22:0] add_ln239_fu_136_p2;
+reg   [23:0] i_fu_38;
+wire   [23:0] add_ln239_fu_136_p2;
 wire    ap_loop_init;
-reg   [22:0] ap_sig_allocacmp_i_129;
+reg   [23:0] ap_sig_allocacmp_i_129;
 reg   [31:0] k_fu_42;
 wire   [31:0] k_66_fu_235_p2;
 wire   [31:0] k_67_fu_198_p2;
@@ -172,7 +172,7 @@ always @ (posedge ap_clk) begin
         if ((icmp_ln239_fu_130_p2 == 1'd0)) begin
             i_fu_38 <= add_ln239_fu_136_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            i_fu_38 <= 23'd0;
+            i_fu_38 <= 24'd0;
         end
     end
 end
@@ -180,7 +180,7 @@ end
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         if ((1'b1 == ap_condition_292)) begin
-            j_fu_46 <= 32'd2500000;
+            j_fu_46 <= 32'd5000000;
         end else if ((1'b1 == ap_condition_288)) begin
             j_fu_46 <= j_69_fu_182_p2;
         end else if (((ap_start_int == 1'b1) & (ap_loop_init == 1'b1))) begin
@@ -265,7 +265,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (ap_start_int == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_i_129 = 23'd0;
+        ap_sig_allocacmp_i_129 = 24'd0;
     end else begin
         ap_sig_allocacmp_i_129 = i_fu_38;
     end
@@ -380,7 +380,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln239_fu_136_p2 = (ap_sig_allocacmp_i_129 + 23'd1);
+assign add_ln239_fu_136_p2 = (ap_sig_allocacmp_i_129 + 24'd1);
 
 assign and_ln241_fu_159_p2 = (icmp_ln241_fu_147_p2 & icmp_ln241_1_fu_153_p2);
 
@@ -434,15 +434,15 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign icmp_ln239_fu_130_p2 = ((ap_sig_allocacmp_i_129 == 23'd5000000) ? 1'b1 : 1'b0);
+assign icmp_ln239_fu_130_p2 = ((ap_sig_allocacmp_i_129 == 24'd10000000) ? 1'b1 : 1'b0);
 
-assign icmp_ln241_1_fu_153_p2 = (($signed(ap_sig_allocacmp_k_65) < $signed(32'd2500000)) ? 1'b1 : 1'b0);
+assign icmp_ln241_1_fu_153_p2 = (($signed(ap_sig_allocacmp_k_65) < $signed(32'd5000000)) ? 1'b1 : 1'b0);
 
-assign icmp_ln241_fu_147_p2 = (($signed(ap_sig_allocacmp_j_67) < $signed(32'd2500000)) ? 1'b1 : 1'b0);
+assign icmp_ln241_fu_147_p2 = (($signed(ap_sig_allocacmp_j_67) < $signed(32'd5000000)) ? 1'b1 : 1'b0);
 
 assign icmp_ln242_fu_229_p2 = (($signed(multi_radix_oct_kmerge_temp5_0_q0) < $signed(multi_radix_oct_kmerge_temp5_1_q0)) ? 1'b1 : 1'b0);
 
-assign icmp_ln252_fu_165_p2 = ((ap_sig_allocacmp_j_67 == 32'd2500000) ? 1'b1 : 1'b0);
+assign icmp_ln252_fu_165_p2 = ((ap_sig_allocacmp_j_67 == 32'd5000000) ? 1'b1 : 1'b0);
 
 assign j_68_fu_245_p2 = (j_67_reg_284 + 32'd1);
 

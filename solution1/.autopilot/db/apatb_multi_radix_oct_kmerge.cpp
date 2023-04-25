@@ -1101,7 +1101,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port0.param = { __xlx_apatb_param_input_0 };
-  port0.depth = { 78125 };
+  port0.depth = { 156250 };
   port0.offset = {  };
   port0.hasWrite = { false };
 
@@ -1125,7 +1125,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port1.param = { __xlx_apatb_param_input_1 };
-  port1.depth = { 78125 };
+  port1.depth = { 156250 };
   port1.offset = {  };
   port1.hasWrite = { false };
 
@@ -1149,7 +1149,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port2.param = { __xlx_apatb_param_input_2 };
-  port2.depth = { 78125 };
+  port2.depth = { 156250 };
   port2.offset = {  };
   port2.hasWrite = { false };
 
@@ -1173,7 +1173,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port3.param = { __xlx_apatb_param_input_3 };
-  port3.depth = { 78125 };
+  port3.depth = { 156250 };
   port3.offset = {  };
   port3.hasWrite = { false };
 
@@ -1197,7 +1197,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port4.param = { __xlx_apatb_param_input_4 };
-  port4.depth = { 78125 };
+  port4.depth = { 156250 };
   port4.offset = {  };
   port4.hasWrite = { false };
 
@@ -1221,7 +1221,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port5.param = { __xlx_apatb_param_input_5 };
-  port5.depth = { 78125 };
+  port5.depth = { 156250 };
   port5.offset = {  };
   port5.hasWrite = { false };
 
@@ -1245,7 +1245,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port6.param = { __xlx_apatb_param_input_6 };
-  port6.depth = { 78125 };
+  port6.depth = { 156250 };
   port6.offset = {  };
   port6.hasWrite = { false };
 
@@ -1269,7 +1269,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port7.param = { __xlx_apatb_param_input_7 };
-  port7.depth = { 78125 };
+  port7.depth = { 156250 };
   port7.offset = {  };
   port7.hasWrite = { false };
 
@@ -1293,7 +1293,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port8.param = { __xlx_apatb_param_input_8 };
-  port8.depth = { 78125 };
+  port8.depth = { 156250 };
   port8.offset = {  };
   port8.hasWrite = { false };
 
@@ -1317,7 +1317,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port9.param = { __xlx_apatb_param_input_9 };
-  port9.depth = { 78125 };
+  port9.depth = { 156250 };
   port9.offset = {  };
   port9.hasWrite = { false };
 
@@ -1341,7 +1341,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port10.param = { __xlx_apatb_param_input_10 };
-  port10.depth = { 78125 };
+  port10.depth = { 156250 };
   port10.offset = {  };
   port10.hasWrite = { false };
 
@@ -1365,7 +1365,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port11.param = { __xlx_apatb_param_input_11 };
-  port11.depth = { 78125 };
+  port11.depth = { 156250 };
   port11.offset = {  };
   port11.hasWrite = { false };
 
@@ -1389,7 +1389,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port12.param = { __xlx_apatb_param_input_12 };
-  port12.depth = { 78125 };
+  port12.depth = { 156250 };
   port12.offset = {  };
   port12.hasWrite = { false };
 
@@ -1413,7 +1413,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port13.param = { __xlx_apatb_param_input_13 };
-  port13.depth = { 78125 };
+  port13.depth = { 156250 };
   port13.offset = {  };
   port13.hasWrite = { false };
 
@@ -1437,7 +1437,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port14.param = { __xlx_apatb_param_input_14 };
-  port14.depth = { 78125 };
+  port14.depth = { 156250 };
   port14.offset = {  };
   port14.hasWrite = { false };
 
@@ -1461,7 +1461,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port15.param = { __xlx_apatb_param_input_15 };
-  port15.depth = { 78125 };
+  port15.depth = { 156250 };
   port15.offset = {  };
   port15.hasWrite = { false };
 
@@ -1485,7 +1485,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port16.param = { __xlx_apatb_param_input_16 };
-  port16.depth = { 78125 };
+  port16.depth = { 156250 };
   port16.offset = {  };
   port16.hasWrite = { false };
 
@@ -1509,7 +1509,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port17.param = { __xlx_apatb_param_input_17 };
-  port17.depth = { 78125 };
+  port17.depth = { 156250 };
   port17.offset = {  };
   port17.hasWrite = { false };
 
@@ -1533,7 +1533,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port18.param = { __xlx_apatb_param_input_18 };
-  port18.depth = { 78125 };
+  port18.depth = { 156250 };
   port18.offset = {  };
   port18.hasWrite = { false };
 
@@ -1557,7 +1557,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port19.param = { __xlx_apatb_param_input_19 };
-  port19.depth = { 78125 };
+  port19.depth = { 156250 };
   port19.offset = {  };
   port19.hasWrite = { false };
 
@@ -1581,7 +1581,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port20.param = { __xlx_apatb_param_input_20 };
-  port20.depth = { 78125 };
+  port20.depth = { 156250 };
   port20.offset = {  };
   port20.hasWrite = { false };
 
@@ -1605,7 +1605,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port21.param = { __xlx_apatb_param_input_21 };
-  port21.depth = { 78125 };
+  port21.depth = { 156250 };
   port21.offset = {  };
   port21.hasWrite = { false };
 
@@ -1629,7 +1629,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port22.param = { __xlx_apatb_param_input_22 };
-  port22.depth = { 78125 };
+  port22.depth = { 156250 };
   port22.offset = {  };
   port22.hasWrite = { false };
 
@@ -1653,7 +1653,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port23.param = { __xlx_apatb_param_input_23 };
-  port23.depth = { 78125 };
+  port23.depth = { 156250 };
   port23.offset = {  };
   port23.hasWrite = { false };
 
@@ -1677,7 +1677,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port24.param = { __xlx_apatb_param_input_24 };
-  port24.depth = { 78125 };
+  port24.depth = { 156250 };
   port24.offset = {  };
   port24.hasWrite = { false };
 
@@ -1701,7 +1701,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port25.param = { __xlx_apatb_param_input_25 };
-  port25.depth = { 78125 };
+  port25.depth = { 156250 };
   port25.offset = {  };
   port25.hasWrite = { false };
 
@@ -1725,7 +1725,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port26.param = { __xlx_apatb_param_input_26 };
-  port26.depth = { 78125 };
+  port26.depth = { 156250 };
   port26.offset = {  };
   port26.hasWrite = { false };
 
@@ -1749,7 +1749,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port27.param = { __xlx_apatb_param_input_27 };
-  port27.depth = { 78125 };
+  port27.depth = { 156250 };
   port27.offset = {  };
   port27.hasWrite = { false };
 
@@ -1773,7 +1773,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port28.param = { __xlx_apatb_param_input_28 };
-  port28.depth = { 78125 };
+  port28.depth = { 156250 };
   port28.offset = {  };
   port28.hasWrite = { false };
 
@@ -1797,7 +1797,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port29.param = { __xlx_apatb_param_input_29 };
-  port29.depth = { 78125 };
+  port29.depth = { 156250 };
   port29.offset = {  };
   port29.hasWrite = { false };
 
@@ -1821,7 +1821,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port30.param = { __xlx_apatb_param_input_30 };
-  port30.depth = { 78125 };
+  port30.depth = { 156250 };
   port30.offset = {  };
   port30.hasWrite = { false };
 
@@ -1845,7 +1845,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port31.param = { __xlx_apatb_param_input_31 };
-  port31.depth = { 78125 };
+  port31.depth = { 156250 };
   port31.offset = {  };
   port31.hasWrite = { false };
 
@@ -1869,7 +1869,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port32.param = { __xlx_apatb_param_input_32 };
-  port32.depth = { 78125 };
+  port32.depth = { 156250 };
   port32.offset = {  };
   port32.hasWrite = { false };
 
@@ -1893,7 +1893,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port33.param = { __xlx_apatb_param_input_33 };
-  port33.depth = { 78125 };
+  port33.depth = { 156250 };
   port33.offset = {  };
   port33.hasWrite = { false };
 
@@ -1917,7 +1917,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port34.param = { __xlx_apatb_param_input_34 };
-  port34.depth = { 78125 };
+  port34.depth = { 156250 };
   port34.offset = {  };
   port34.hasWrite = { false };
 
@@ -1941,7 +1941,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port35.param = { __xlx_apatb_param_input_35 };
-  port35.depth = { 78125 };
+  port35.depth = { 156250 };
   port35.offset = {  };
   port35.hasWrite = { false };
 
@@ -1965,7 +1965,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port36.param = { __xlx_apatb_param_input_36 };
-  port36.depth = { 78125 };
+  port36.depth = { 156250 };
   port36.offset = {  };
   port36.hasWrite = { false };
 
@@ -1989,7 +1989,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port37.param = { __xlx_apatb_param_input_37 };
-  port37.depth = { 78125 };
+  port37.depth = { 156250 };
   port37.offset = {  };
   port37.hasWrite = { false };
 
@@ -2013,7 +2013,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port38.param = { __xlx_apatb_param_input_38 };
-  port38.depth = { 78125 };
+  port38.depth = { 156250 };
   port38.offset = {  };
   port38.hasWrite = { false };
 
@@ -2037,7 +2037,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port39.param = { __xlx_apatb_param_input_39 };
-  port39.depth = { 78125 };
+  port39.depth = { 156250 };
   port39.offset = {  };
   port39.hasWrite = { false };
 
@@ -2061,7 +2061,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port40.param = { __xlx_apatb_param_input_40 };
-  port40.depth = { 78125 };
+  port40.depth = { 156250 };
   port40.offset = {  };
   port40.hasWrite = { false };
 
@@ -2085,7 +2085,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port41.param = { __xlx_apatb_param_input_41 };
-  port41.depth = { 78125 };
+  port41.depth = { 156250 };
   port41.offset = {  };
   port41.hasWrite = { false };
 
@@ -2109,7 +2109,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port42.param = { __xlx_apatb_param_input_42 };
-  port42.depth = { 78125 };
+  port42.depth = { 156250 };
   port42.offset = {  };
   port42.hasWrite = { false };
 
@@ -2133,7 +2133,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port43.param = { __xlx_apatb_param_input_43 };
-  port43.depth = { 78125 };
+  port43.depth = { 156250 };
   port43.offset = {  };
   port43.hasWrite = { false };
 
@@ -2157,7 +2157,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port44.param = { __xlx_apatb_param_input_44 };
-  port44.depth = { 78125 };
+  port44.depth = { 156250 };
   port44.offset = {  };
   port44.hasWrite = { false };
 
@@ -2181,7 +2181,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port45.param = { __xlx_apatb_param_input_45 };
-  port45.depth = { 78125 };
+  port45.depth = { 156250 };
   port45.offset = {  };
   port45.hasWrite = { false };
 
@@ -2205,7 +2205,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port46.param = { __xlx_apatb_param_input_46 };
-  port46.depth = { 78125 };
+  port46.depth = { 156250 };
   port46.offset = {  };
   port46.hasWrite = { false };
 
@@ -2229,7 +2229,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port47.param = { __xlx_apatb_param_input_47 };
-  port47.depth = { 78125 };
+  port47.depth = { 156250 };
   port47.offset = {  };
   port47.hasWrite = { false };
 
@@ -2253,7 +2253,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port48.param = { __xlx_apatb_param_input_48 };
-  port48.depth = { 78125 };
+  port48.depth = { 156250 };
   port48.offset = {  };
   port48.hasWrite = { false };
 
@@ -2277,7 +2277,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port49.param = { __xlx_apatb_param_input_49 };
-  port49.depth = { 78125 };
+  port49.depth = { 156250 };
   port49.offset = {  };
   port49.hasWrite = { false };
 
@@ -2301,7 +2301,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port50.param = { __xlx_apatb_param_input_50 };
-  port50.depth = { 78125 };
+  port50.depth = { 156250 };
   port50.offset = {  };
   port50.hasWrite = { false };
 
@@ -2325,7 +2325,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port51.param = { __xlx_apatb_param_input_51 };
-  port51.depth = { 78125 };
+  port51.depth = { 156250 };
   port51.offset = {  };
   port51.hasWrite = { false };
 
@@ -2349,7 +2349,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port52.param = { __xlx_apatb_param_input_52 };
-  port52.depth = { 78125 };
+  port52.depth = { 156250 };
   port52.offset = {  };
   port52.hasWrite = { false };
 
@@ -2373,7 +2373,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port53.param = { __xlx_apatb_param_input_53 };
-  port53.depth = { 78125 };
+  port53.depth = { 156250 };
   port53.offset = {  };
   port53.hasWrite = { false };
 
@@ -2397,7 +2397,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port54.param = { __xlx_apatb_param_input_54 };
-  port54.depth = { 78125 };
+  port54.depth = { 156250 };
   port54.offset = {  };
   port54.hasWrite = { false };
 
@@ -2421,7 +2421,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port55.param = { __xlx_apatb_param_input_55 };
-  port55.depth = { 78125 };
+  port55.depth = { 156250 };
   port55.offset = {  };
   port55.hasWrite = { false };
 
@@ -2445,7 +2445,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port56.param = { __xlx_apatb_param_input_56 };
-  port56.depth = { 78125 };
+  port56.depth = { 156250 };
   port56.offset = {  };
   port56.hasWrite = { false };
 
@@ -2469,7 +2469,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port57.param = { __xlx_apatb_param_input_57 };
-  port57.depth = { 78125 };
+  port57.depth = { 156250 };
   port57.offset = {  };
   port57.hasWrite = { false };
 
@@ -2493,7 +2493,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port58.param = { __xlx_apatb_param_input_58 };
-  port58.depth = { 78125 };
+  port58.depth = { 156250 };
   port58.offset = {  };
   port58.hasWrite = { false };
 
@@ -2517,7 +2517,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port59.param = { __xlx_apatb_param_input_59 };
-  port59.depth = { 78125 };
+  port59.depth = { 156250 };
   port59.offset = {  };
   port59.hasWrite = { false };
 
@@ -2541,7 +2541,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port60.param = { __xlx_apatb_param_input_60 };
-  port60.depth = { 78125 };
+  port60.depth = { 156250 };
   port60.offset = {  };
   port60.hasWrite = { false };
 
@@ -2565,7 +2565,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port61.param = { __xlx_apatb_param_input_61 };
-  port61.depth = { 78125 };
+  port61.depth = { 156250 };
   port61.offset = {  };
   port61.hasWrite = { false };
 
@@ -2589,7 +2589,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port62.param = { __xlx_apatb_param_input_62 };
-  port62.depth = { 78125 };
+  port62.depth = { 156250 };
   port62.offset = {  };
   port62.hasWrite = { false };
 
@@ -2613,7 +2613,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port63.param = { __xlx_apatb_param_input_63 };
-  port63.depth = { 78125 };
+  port63.depth = { 156250 };
   port63.offset = {  };
   port63.hasWrite = { false };
 
@@ -2646,7 +2646,7 @@ void apatb_multi_radix_oct_kmerge_hw(void* __xlx_apatb_param_input_0, void* __xl
 #endif
   };
   port64.param = { __xlx_apatb_param_output_r };
-  port64.depth = { 5000000 };
+  port64.depth = { 10000000 };
   port64.offset = {  };
   port64.hasWrite = { true };
 

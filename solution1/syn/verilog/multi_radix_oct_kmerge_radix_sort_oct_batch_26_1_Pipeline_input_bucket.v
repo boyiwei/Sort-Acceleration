@@ -114,16 +114,16 @@ input  [31:0] bucket_pointer_1463_reload;
 input  [31:0] bucket_pointer_1462_reload;
 input  [31:0] bucket_pointer_1461_reload;
 input  [31:0] bucket_pointer_1460_reload;
-input  [17:0] mul_ln41;
-output  [17:0] bucket_address0;
+input  [18:0] mul_ln41;
+output  [18:0] bucket_address0;
 output   bucket_ce0;
 output   bucket_we0;
 output  [31:0] bucket_d0;
-output  [17:0] bucket_address1;
+output  [18:0] bucket_address1;
 output   bucket_ce1;
 input  [31:0] bucket_q1;
 input  [6:0] mul_cast_i;
-input  [17:0] mul_ln43;
+input  [18:0] mul_ln43;
 input  [31:0] bucket_sizes_3276_out_i;
 output  [31:0] bucket_sizes_3276_out_o;
 output   bucket_sizes_3276_out_o_ap_vld;
@@ -237,17 +237,17 @@ wire   [2:0] trunc_ln43_fu_486_p1;
 reg   [63:0] reuse_addr_reg_fu_128;
 reg   [31:0] reuse_reg_fu_132;
 wire   [31:0] reuse_select_fu_472_p3;
-reg   [16:0] j_45_fu_136;
-wire   [16:0] add_ln40_fu_403_p2;
-reg   [16:0] ap_sig_allocacmp_j;
-wire   [17:0] zext_ln41_fu_409_p1;
-wire   [17:0] add_ln41_fu_413_p2;
+reg   [17:0] j_45_fu_136;
+wire   [17:0] add_ln40_fu_403_p2;
+reg   [17:0] ap_sig_allocacmp_j;
+wire   [18:0] zext_ln41_fu_409_p1;
+wire   [18:0] add_ln41_fu_413_p2;
 wire   [0:0] addr_cmp_fu_467_p2;
 wire   [31:0] shifted_fu_481_p2;
 wire   [2:0] tmp_74_i_fu_490_p9;
 wire   [31:0] tmp_74_i_fu_490_p10;
-wire   [17:0] trunc_ln43_46_fu_512_p1;
-wire   [17:0] add_ln43_fu_516_p2;
+wire   [18:0] trunc_ln43_46_fu_512_p1;
+wire   [18:0] add_ln43_fu_516_p2;
 wire   [2:0] tmp_75_i_fu_632_p9;
 wire   [31:0] tmp_75_i_fu_632_p10;
 reg    ap_done_reg;
@@ -369,7 +369,7 @@ always @ (posedge ap_clk) begin
         if (((icmp_ln40_fu_397_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             j_45_fu_136 <= add_ln40_fu_403_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            j_45_fu_136 <= 17'd0;
+            j_45_fu_136 <= 18'd0;
         end
     end
 end
@@ -402,7 +402,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln40_fu_397_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        zext_ln41_45_reg_742[17 : 0] <= zext_ln41_45_fu_419_p1[17 : 0];
+        zext_ln41_45_reg_742[18 : 0] <= zext_ln41_45_fu_419_p1[18 : 0];
     end
 end
 
@@ -448,7 +448,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_j = 17'd0;
+        ap_sig_allocacmp_j = 18'd0;
     end else begin
         ap_sig_allocacmp_j = j_45_fu_136;
     end
@@ -841,7 +841,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln40_fu_403_p2 = (ap_sig_allocacmp_j + 17'd1);
+assign add_ln40_fu_403_p2 = (ap_sig_allocacmp_j + 18'd1);
 
 assign add_ln41_fu_413_p2 = (mul_ln41 + zext_ln41_fu_409_p1);
 
@@ -877,7 +877,7 @@ assign bucket_pointer_fu_536_p2 = (tmp_74_i_fu_490_p10 + 32'd1);
 
 assign bucket_sizes_fu_654_p2 = (tmp_75_i_fu_632_p10 + 32'd1);
 
-assign icmp_ln40_fu_397_p2 = ((ap_sig_allocacmp_j == 17'd78125) ? 1'b1 : 1'b0);
+assign icmp_ln40_fu_397_p2 = ((ap_sig_allocacmp_j == 18'd156250) ? 1'b1 : 1'b0);
 
 assign mul_cast_i_cast_fu_279_p1 = $signed(mul_cast_i);
 
@@ -889,7 +889,7 @@ assign tmp_74_i_fu_490_p9 = shifted_fu_481_p2[2:0];
 
 assign tmp_75_i_fu_632_p9 = {{shifted_fu_481_p2[5:3]}};
 
-assign trunc_ln43_46_fu_512_p1 = tmp_74_i_fu_490_p10[17:0];
+assign trunc_ln43_46_fu_512_p1 = tmp_74_i_fu_490_p10[18:0];
 
 assign trunc_ln43_fu_486_p1 = shifted_fu_481_p2[2:0];
 
@@ -902,7 +902,7 @@ assign zext_ln41_fu_409_p1 = ap_sig_allocacmp_j;
 assign zext_ln43_fu_521_p1 = add_ln43_fu_516_p2;
 
 always @ (posedge ap_clk) begin
-    zext_ln41_45_reg_742[63:18] <= 46'b0000000000000000000000000000000000000000000000;
+    zext_ln41_45_reg_742[63:19] <= 45'b000000000000000000000000000000000000000000000;
 end
 
 endmodule //multi_radix_oct_kmerge_radix_sort_oct_batch_26_1_Pipeline_input_bucket

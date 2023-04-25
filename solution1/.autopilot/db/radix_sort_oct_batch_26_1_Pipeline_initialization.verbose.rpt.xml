@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'radix_sort_oct_batch_26_1_Pipeline_initialization'" level="0">
-<item name = "Date">Mon Apr 24 11:03:35 2023
+<item name = "Date">Mon Apr 24 11:28:47 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">sort_seperate_bucket</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">78127, 78127, 0.781 ms, 0.781 ms, 78127, 78127, no</column>
+<column name="">156252, 156252, 1.563 ms, 1.563 ms, 156252, 156252, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- initialization">78125, 78125, 2, 1, 1, 78125, yes</column>
+<column name="- initialization">156250, 156250, 2, 1, 1, 156250, yes</column>
 </table>
 </item>
 </section>
@@ -48,12 +48,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 103, -</column>
+<column name="Expression">-, -, 0, 105, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, 0, 43, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 148, -</column>
-<column name="Register">-, -, 37, -, -</column>
+<column name="Register">-, -, 39, -, -</column>
 <specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
 <specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
 <specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
@@ -81,10 +81,10 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln20_fu_229_p2">+, 0, 0, 24, 17, 1</column>
-<column name="add_ln21_fu_280_p2">+, 0, 0, 25, 18, 17</column>
+<column name="add_ln20_fu_229_p2">+, 0, 0, 25, 18, 1</column>
+<column name="add_ln21_fu_280_p2">+, 0, 0, 26, 19, 18</column>
 <column name="bucket_sizes_fu_317_p2">+, 0, 0, 39, 32, 1</column>
-<column name="icmp_ln20_fu_223_p2">icmp, 0, 0, 13, 17, 17</column>
+<column name="icmp_ln20_fu_223_p2">icmp, 0, 0, 13, 18, 18</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -92,7 +92,7 @@
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_done_int">9, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_sig_allocacmp_j_46">9, 2, 17, 34</column>
+<column name="ap_sig_allocacmp_j_46">9, 2, 18, 36</column>
 <column name="bucket_sizes_3228_out_o">14, 3, 32, 96</column>
 <column name="bucket_sizes_3229_out_o">14, 3, 32, 96</column>
 <column name="bucket_sizes_3230_out_o">14, 3, 32, 96</column>
@@ -101,7 +101,7 @@
 <column name="bucket_sizes_3233_out_o">14, 3, 32, 96</column>
 <column name="bucket_sizes_3234_out_o">14, 3, 32, 96</column>
 <column name="bucket_sizes_3235_out_o">14, 3, 32, 96</column>
-<column name="j_fu_88">9, 2, 17, 34</column>
+<column name="j_fu_88">9, 2, 18, 36</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
@@ -109,8 +109,8 @@
 <column name="ap_CS_fsm">1, 0, 1, 0</column>
 <column name="ap_done_reg">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
-<column name="j_46_reg_378">17, 0, 17, 0</column>
-<column name="j_fu_88">17, 0, 17, 0</column>
+<column name="j_46_reg_378">18, 0, 18, 0</column>
+<column name="j_fu_88">18, 0, 18, 0</column>
 </table>
 </item>
 </section>
@@ -134,11 +134,11 @@
 <column name="bucket_sizes_3214_reload">in, 32, ap_none, bucket_sizes_3214_reload, scalar</column>
 <column name="bucket_sizes_3213_reload">in, 32, ap_none, bucket_sizes_3213_reload, scalar</column>
 <column name="bucket_sizes_reload">in, 32, ap_none, bucket_sizes_reload, scalar</column>
-<column name="bucket_address0">out, 18, ap_memory, bucket, array</column>
+<column name="bucket_address0">out, 19, ap_memory, bucket, array</column>
 <column name="bucket_ce0">out, 1, ap_memory, bucket, array</column>
 <column name="bucket_we0">out, 1, ap_memory, bucket, array</column>
 <column name="bucket_d0">out, 32, ap_memory, bucket, array</column>
-<column name="input_25_address0">out, 17, ap_memory, input_25, array</column>
+<column name="input_25_address0">out, 18, ap_memory, input_25, array</column>
 <column name="input_25_ce0">out, 1, ap_memory, input_25, array</column>
 <column name="input_25_q0">in, 32, ap_memory, input_25, array</column>
 <column name="bucket_sizes_3235_out_i">in, 32, ap_ovld, bucket_sizes_3235_out, pointer</column>

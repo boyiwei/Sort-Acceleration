@@ -17,10 +17,10 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    bucket_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
+    bucket_address0 : OUT STD_LOGIC_VECTOR (18 downto 0);
     bucket_ce0 : OUT STD_LOGIC;
     bucket_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    multi_radix_oct_kmerge_temp0_32_address0 : OUT STD_LOGIC_VECTOR (16 downto 0);
+    multi_radix_oct_kmerge_temp0_32_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
     multi_radix_oct_kmerge_temp0_32_ce0 : OUT STD_LOGIC;
     multi_radix_oct_kmerge_temp0_32_we0 : OUT STD_LOGIC;
     multi_radix_oct_kmerge_temp0_32_d0 : OUT STD_LOGIC_VECTOR (31 downto 0) );
@@ -36,9 +36,9 @@ architecture behav of multi_radix_oct_kmerge_radix_sort_oct_batch_33_1_Pipeline_
     constant ap_const_boolean_0 : BOOLEAN := false;
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
-    constant ap_const_lv17_0 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000000000";
-    constant ap_const_lv17_1312D : STD_LOGIC_VECTOR (16 downto 0) := "10011000100101101";
-    constant ap_const_lv17_1 : STD_LOGIC_VECTOR (16 downto 0) := "00000000000000001";
+    constant ap_const_lv18_0 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000000000";
+    constant ap_const_lv18_2625A : STD_LOGIC_VECTOR (17 downto 0) := "100110001001011010";
+    constant ap_const_lv18_1 : STD_LOGIC_VECTOR (17 downto 0) := "000000000000000001";
 
 attribute shreg_extract : string;
     signal ap_CS_fsm : STD_LOGIC_VECTOR (0 downto 0) := "1";
@@ -60,10 +60,10 @@ attribute shreg_extract : string;
     signal k_cast_i_reg_101 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_block_pp0_stage0_11001 : BOOLEAN;
     signal ap_block_pp0_stage0 : BOOLEAN;
-    signal k_fu_30 : STD_LOGIC_VECTOR (16 downto 0);
-    signal add_ln53_fu_75_p2 : STD_LOGIC_VECTOR (16 downto 0);
+    signal k_fu_30 : STD_LOGIC_VECTOR (17 downto 0);
+    signal add_ln53_fu_75_p2 : STD_LOGIC_VECTOR (17 downto 0);
     signal ap_loop_init : STD_LOGIC;
-    signal ap_sig_allocacmp_k_37 : STD_LOGIC_VECTOR (16 downto 0);
+    signal ap_sig_allocacmp_k_37 : STD_LOGIC_VECTOR (17 downto 0);
     signal ap_done_reg : STD_LOGIC := '0';
     signal ap_continue_int : STD_LOGIC;
     signal ap_done_int : STD_LOGIC;
@@ -161,7 +161,7 @@ begin
                 if (((icmp_ln53_fu_69_p2 = ap_const_lv1_0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then 
                     k_fu_30 <= add_ln53_fu_75_p2;
                 elsif ((ap_loop_init = ap_const_logic_1)) then 
-                    k_fu_30 <= ap_const_lv17_0;
+                    k_fu_30 <= ap_const_lv18_0;
                 end if;
             end if; 
         end if;
@@ -170,11 +170,11 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((icmp_ln53_fu_69_p2 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then
-                    k_cast_i_reg_101(16 downto 0) <= k_cast_i_fu_81_p1(16 downto 0);
+                    k_cast_i_reg_101(17 downto 0) <= k_cast_i_fu_81_p1(17 downto 0);
             end if;
         end if;
     end process;
-    k_cast_i_reg_101(63 downto 17) <= "00000000000000000000000000000000000000000000000";
+    k_cast_i_reg_101(63 downto 18) <= "0000000000000000000000000000000000000000000000";
 
     ap_NS_fsm_assign_proc : process (ap_CS_fsm)
     begin
@@ -185,7 +185,7 @@ begin
                 ap_NS_fsm <= "X";
         end case;
     end process;
-    add_ln53_fu_75_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_k_37) + unsigned(ap_const_lv17_1));
+    add_ln53_fu_75_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_k_37) + unsigned(ap_const_lv18_1));
     ap_CS_fsm_pp0_stage0 <= ap_CS_fsm(0);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_pp0_stage0_11001 <= not((ap_const_boolean_1 = ap_const_boolean_1));
@@ -249,13 +249,13 @@ begin
     ap_sig_allocacmp_k_37_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0, k_fu_30, ap_loop_init)
     begin
         if (((ap_loop_init = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            ap_sig_allocacmp_k_37 <= ap_const_lv17_0;
+            ap_sig_allocacmp_k_37 <= ap_const_lv18_0;
         else 
             ap_sig_allocacmp_k_37 <= k_fu_30;
         end if; 
     end process;
 
-    bucket_address0 <= k_cast_i_fu_81_p1(18 - 1 downto 0);
+    bucket_address0 <= k_cast_i_fu_81_p1(19 - 1 downto 0);
 
     bucket_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)
     begin
@@ -266,9 +266,9 @@ begin
         end if; 
     end process;
 
-    icmp_ln53_fu_69_p2 <= "1" when (ap_sig_allocacmp_k_37 = ap_const_lv17_1312D) else "0";
+    icmp_ln53_fu_69_p2 <= "1" when (ap_sig_allocacmp_k_37 = ap_const_lv18_2625A) else "0";
     k_cast_i_fu_81_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(ap_sig_allocacmp_k_37),64));
-    multi_radix_oct_kmerge_temp0_32_address0 <= k_cast_i_reg_101(17 - 1 downto 0);
+    multi_radix_oct_kmerge_temp0_32_address0 <= k_cast_i_reg_101(18 - 1 downto 0);
 
     multi_radix_oct_kmerge_temp0_32_ce0_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0_11001)
     begin

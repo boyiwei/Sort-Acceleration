@@ -71,11 +71,11 @@ input  [31:0] bucket_sizes_1828_reload;
 input  [31:0] bucket_sizes_1827_reload;
 input  [31:0] bucket_sizes_1826_reload;
 input  [31:0] bucket_sizes_reload;
-output  [17:0] bucket_address0;
+output  [18:0] bucket_address0;
 output   bucket_ce0;
 output   bucket_we0;
 output  [31:0] bucket_d0;
-output  [16:0] input_42_address0;
+output  [17:0] input_42_address0;
 output   input_42_ce0;
 input  [31:0] input_42_q0;
 input  [31:0] bucket_sizes_1848_out_i;
@@ -136,7 +136,7 @@ wire   [0:0] icmp_ln20_fu_223_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-reg   [16:0] j_27_reg_378;
+reg   [17:0] j_27_reg_378;
 wire    ap_block_pp0_stage0_11001;
 wire   [63:0] j_cast_i_fu_235_p1;
 wire    ap_block_pp0_stage0;
@@ -144,11 +144,11 @@ wire   [63:0] zext_ln21_26_fu_286_p1;
 wire   [31:0] bucket_sizes_fu_317_p2;
 wire   [2:0] trunc_ln23_fu_291_p1;
 wire    ap_loop_init;
-reg   [16:0] j_fu_88;
-wire   [16:0] add_ln20_fu_229_p2;
-reg   [16:0] ap_sig_allocacmp_j_27;
-wire   [17:0] zext_ln21_fu_277_p1;
-wire   [17:0] add_ln21_fu_280_p2;
+reg   [17:0] j_fu_88;
+wire   [17:0] add_ln20_fu_229_p2;
+reg   [17:0] ap_sig_allocacmp_j_27;
+wire   [18:0] zext_ln21_fu_277_p1;
+wire   [18:0] add_ln21_fu_280_p2;
 wire   [2:0] tmp_i_fu_295_p9;
 wire   [31:0] tmp_i_fu_295_p10;
 reg    ap_done_reg;
@@ -244,7 +244,7 @@ always @ (posedge ap_clk) begin
         if (((icmp_ln20_fu_223_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             j_fu_88 <= add_ln20_fu_229_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            j_fu_88 <= 17'd0;
+            j_fu_88 <= 18'd0;
         end
     end
 end
@@ -297,7 +297,7 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_j_27 = 17'd0;
+        ap_sig_allocacmp_j_27 = 18'd0;
     end else begin
         ap_sig_allocacmp_j_27 = j_fu_88;
     end
@@ -514,9 +514,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln20_fu_229_p2 = (ap_sig_allocacmp_j_27 + 17'd1);
+assign add_ln20_fu_229_p2 = (ap_sig_allocacmp_j_27 + 18'd1);
 
-assign add_ln21_fu_280_p2 = (zext_ln21_fu_277_p1 + 18'd78125);
+assign add_ln21_fu_280_p2 = (zext_ln21_fu_277_p1 + 19'd156250);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -542,7 +542,7 @@ assign bucket_d0 = input_42_q0;
 
 assign bucket_sizes_fu_317_p2 = (tmp_i_fu_295_p10 + 32'd1);
 
-assign icmp_ln20_fu_223_p2 = ((ap_sig_allocacmp_j_27 == 17'd78125) ? 1'b1 : 1'b0);
+assign icmp_ln20_fu_223_p2 = ((ap_sig_allocacmp_j_27 == 18'd156250) ? 1'b1 : 1'b0);
 
 assign input_42_address0 = j_cast_i_fu_235_p1;
 

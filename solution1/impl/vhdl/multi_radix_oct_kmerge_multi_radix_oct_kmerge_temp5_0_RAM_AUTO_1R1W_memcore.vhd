@@ -12,8 +12,8 @@ entity multi_radix_oct_kmerge_multi_radix_oct_kmerge_temp5_0_RAM_AUTO_1R1W_memco
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 32; 
-        AddressWidth    : integer   := 23;
-        AddressRange    : integer   := 5000000
+        AddressWidth    : integer   := 24;
+        AddressRange    : integer   := 10000000
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

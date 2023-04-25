@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename multi_radix_oct_kmerge_temp0_34 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp0_34_address0 { O 17 vector } multi_radix_oct_kmerge_temp0_34_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_34_q0 { I 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp0_34_address0 { O 18 vector } multi_radix_oct_kmerge_temp0_34_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_34_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp0_34'"
@@ -37,7 +37,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename multi_radix_oct_kmerge_temp0_35 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp0_35_address0 { O 17 vector } multi_radix_oct_kmerge_temp0_35_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_35_q0 { I 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp0_35_address0 { O 18 vector } multi_radix_oct_kmerge_temp0_35_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_35_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp0_35'"
@@ -56,7 +56,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename multi_radix_oct_kmerge_temp1_17 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp1_17_address0 { O 18 vector } multi_radix_oct_kmerge_temp1_17_ce0 { O 1 bit } multi_radix_oct_kmerge_temp1_17_we0 { O 1 bit } multi_radix_oct_kmerge_temp1_17_d0 { O 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp1_17_address0 { O 19 vector } multi_radix_oct_kmerge_temp1_17_ce0 { O 1 bit } multi_radix_oct_kmerge_temp1_17_we0 { O 1 bit } multi_radix_oct_kmerge_temp1_17_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp1_17'"

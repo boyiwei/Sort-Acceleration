@@ -13,8 +13,8 @@ set hasInterrupt 0
 set C_modelName {radix_sort_oct_batch.33.1}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ input_32 int 32 regular {array 78125 { 1 3 } 1 1 }  }
-	{ multi_radix_oct_kmerge_temp0_32 int 32 regular {array 78125 { 0 3 } 0 1 } {global 1}  }
+	{ input_32 int 32 regular {array 156250 { 1 3 } 1 1 }  }
+	{ multi_radix_oct_kmerge_temp0_32 int 32 regular {array 156250 { 0 3 } 0 1 } {global 1}  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "input_32", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
@@ -29,10 +29,10 @@ set portList {
 	{ ap_continue sc_in sc_logic 1 continue -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ input_32_address0 sc_out sc_lv 17 signal 0 } 
+	{ input_32_address0 sc_out sc_lv 18 signal 0 } 
 	{ input_32_ce0 sc_out sc_logic 1 signal 0 } 
 	{ input_32_q0 sc_in sc_lv 32 signal 0 } 
-	{ multi_radix_oct_kmerge_temp0_32_address0 sc_out sc_lv 17 signal 1 } 
+	{ multi_radix_oct_kmerge_temp0_32_address0 sc_out sc_lv 18 signal 1 } 
 	{ multi_radix_oct_kmerge_temp0_32_ce0 sc_out sc_logic 1 signal 1 } 
 	{ multi_radix_oct_kmerge_temp0_32_we0 sc_out sc_logic 1 signal 1 } 
 	{ multi_radix_oct_kmerge_temp0_32_d0 sc_out sc_lv 32 signal 1 } 
@@ -45,10 +45,10 @@ set NewPortList {[
  	{ "name": "ap_continue", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "continue", "bundle":{"name": "ap_continue", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "input_32_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":17, "type": "signal", "bundle":{"name": "input_32", "role": "address0" }} , 
+ 	{ "name": "input_32_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "input_32", "role": "address0" }} , 
  	{ "name": "input_32_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "input_32", "role": "ce0" }} , 
  	{ "name": "input_32_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "input_32", "role": "q0" }} , 
- 	{ "name": "multi_radix_oct_kmerge_temp0_32_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":17, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp0_32", "role": "address0" }} , 
+ 	{ "name": "multi_radix_oct_kmerge_temp0_32_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp0_32", "role": "address0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp0_32_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp0_32", "role": "ce0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp0_32_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp0_32", "role": "we0" }} , 
  	{ "name": "multi_radix_oct_kmerge_temp0_32_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "multi_radix_oct_kmerge_temp0_32", "role": "d0" }}  ]}
@@ -60,7 +60,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "1", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "1015831", "EstimateLatencyMax" : "1015831",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "2031456", "EstimateLatencyMax" : "2031456",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -111,7 +111,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "78127", "EstimateLatencyMax" : "78127",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "156252", "EstimateLatencyMax" : "156252",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -201,7 +201,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "78127", "EstimateLatencyMax" : "78127",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "156252", "EstimateLatencyMax" : "156252",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -222,7 +222,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "78127", "EstimateLatencyMax" : "78127",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "156252", "EstimateLatencyMax" : "156252",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -273,8 +273,8 @@ set RtlHierarchyInfo {[
 	{"ID" : "13", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_sort_oct_batch_33_1_Pipeline_input_bucket_fu_298.mux_83_32_1_1_U3423", "Parent" : "12"},
 	{"ID" : "14", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_sort_oct_batch_33_1_Pipeline_input_bucket_fu_298.mux_83_32_1_1_U3424", "Parent" : "12"},
 	{"ID" : "15", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_radix_sort_oct_batch_33_1_Pipeline_input_bucket_fu_298.flow_control_loop_pipe_sequential_init_U", "Parent" : "12"},
-	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_18s_17ns_18_4_1_U3463", "Parent" : "0"},
-	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_18s_17ns_18_4_1_U3464", "Parent" : "0"}]}
+	{"ID" : "16", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_19s_18ns_19_4_1_U3463", "Parent" : "0"},
+	{"ID" : "17", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mul_mul_19s_18ns_19_4_1_U3464", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -386,14 +386,14 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "1015831", "Max" : "1015831"}
-	, {"Name" : "Interval", "Min" : "1015831", "Max" : "1015831"}
+	{"Name" : "Latency", "Min" : "2031456", "Max" : "2031456"}
+	, {"Name" : "Interval", "Min" : "2031456", "Max" : "2031456"}
 ]}
 
 set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	input_32 { ap_memory {  { input_32_address0 mem_address 1 17 }  { input_32_ce0 mem_ce 1 1 }  { input_32_q0 mem_dout 0 32 } } }
-	multi_radix_oct_kmerge_temp0_32 { ap_memory {  { multi_radix_oct_kmerge_temp0_32_address0 mem_address 1 17 }  { multi_radix_oct_kmerge_temp0_32_ce0 mem_ce 1 1 }  { multi_radix_oct_kmerge_temp0_32_we0 mem_we 1 1 }  { multi_radix_oct_kmerge_temp0_32_d0 mem_din 1 32 } } }
+	input_32 { ap_memory {  { input_32_address0 mem_address 1 18 }  { input_32_ce0 mem_ce 1 1 }  { input_32_q0 mem_dout 0 32 } } }
+	multi_radix_oct_kmerge_temp0_32 { ap_memory {  { multi_radix_oct_kmerge_temp0_32_address0 mem_address 1 18 }  { multi_radix_oct_kmerge_temp0_32_ce0 mem_ce 1 1 }  { multi_radix_oct_kmerge_temp0_32_we0 mem_we 1 1 }  { multi_radix_oct_kmerge_temp0_32_d0 mem_din 1 32 } } }
 }

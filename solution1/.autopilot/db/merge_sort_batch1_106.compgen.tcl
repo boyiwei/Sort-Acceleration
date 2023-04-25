@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename multi_radix_oct_kmerge_temp2_11 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp2_11_address0 { O 19 vector } multi_radix_oct_kmerge_temp2_11_ce0 { O 1 bit } multi_radix_oct_kmerge_temp2_11_we0 { O 1 bit } multi_radix_oct_kmerge_temp2_11_d0 { O 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp2_11_address0 { O 20 vector } multi_radix_oct_kmerge_temp2_11_ce0 { O 1 bit } multi_radix_oct_kmerge_temp2_11_we0 { O 1 bit } multi_radix_oct_kmerge_temp2_11_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp2_11'"
@@ -37,7 +37,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename multi_radix_oct_kmerge_temp1_22 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp1_22_address0 { O 18 vector } multi_radix_oct_kmerge_temp1_22_ce0 { O 1 bit } multi_radix_oct_kmerge_temp1_22_q0 { I 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp1_22_address0 { O 19 vector } multi_radix_oct_kmerge_temp1_22_ce0 { O 1 bit } multi_radix_oct_kmerge_temp1_22_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp1_22'"
@@ -56,7 +56,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename multi_radix_oct_kmerge_temp1_23 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp1_23_address0 { O 18 vector } multi_radix_oct_kmerge_temp1_23_ce0 { O 1 bit } multi_radix_oct_kmerge_temp1_23_q0 { I 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp1_23_address0 { O 19 vector } multi_radix_oct_kmerge_temp1_23_ce0 { O 1 bit } multi_radix_oct_kmerge_temp1_23_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp1_23'"

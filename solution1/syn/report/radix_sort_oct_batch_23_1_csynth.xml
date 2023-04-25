@@ -18,26 +18,26 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>5.157</EstimatedClockPeriod>
+<EstimatedClockPeriod>5.163</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>1015831</Best-caseLatency>
-<Average-caseLatency>1015831</Average-caseLatency>
-<Worst-caseLatency>1015831</Worst-caseLatency>
-<Best-caseRealTimeLatency>10.158 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>10.158 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>10.158 ms</Worst-caseRealTimeLatency>
-<Interval-min>1015831</Interval-min>
-<Interval-max>1015831</Interval-max>
+<Best-caseLatency>2031456</Best-caseLatency>
+<Average-caseLatency>2031456</Average-caseLatency>
+<Worst-caseLatency>2031456</Worst-caseLatency>
+<Best-caseRealTimeLatency>20.315 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>20.315 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>20.315 ms</Worst-caseRealTimeLatency>
+<Interval-min>2031456</Interval-min>
+<Interval-max>2031456</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
 <sort_procedure>
 <Slack>7.30</Slack>
 <TripCount>11</TripCount>
-<Latency>859562</Latency>
-<AbsoluteTimeLatency>8595620</AbsoluteTimeLatency>
-<IterationLatency>78142</IterationLatency>
+<Latency>1718937</Latency>
+<AbsoluteTimeLatency>17189370</AbsoluteTimeLatency>
+<IterationLatency>156267</IterationLatency>
 <InstanceList>
 </InstanceList>
 </sort_procedure>
@@ -48,8 +48,8 @@
 <Resources>
 <BRAM_18K>16</BRAM_18K>
 <DSP>2</DSP>
-<FF>1408</FF>
-<LUT>1713</LUT>
+<FF>1416</FF>
+<LUT>1719</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>
@@ -147,7 +147,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>17</Bits>
+<Bits>18</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -180,7 +180,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>17</Bits>
+<Bits>18</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>

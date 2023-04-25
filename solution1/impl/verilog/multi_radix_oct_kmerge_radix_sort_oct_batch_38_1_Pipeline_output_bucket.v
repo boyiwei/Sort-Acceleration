@@ -31,10 +31,10 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [17:0] bucket_address0;
+output  [18:0] bucket_address0;
 output   bucket_ce0;
 input  [31:0] bucket_q0;
-output  [16:0] multi_radix_oct_kmerge_temp0_37_address0;
+output  [17:0] multi_radix_oct_kmerge_temp0_37_address0;
 output   multi_radix_oct_kmerge_temp0_37_ce0;
 output   multi_radix_oct_kmerge_temp0_37_we0;
 output  [31:0] multi_radix_oct_kmerge_temp0_37_d0;
@@ -60,10 +60,10 @@ wire   [63:0] k_cast_i_fu_81_p1;
 reg   [63:0] k_cast_i_reg_101;
 wire    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0;
-reg   [16:0] k_fu_30;
-wire   [16:0] add_ln53_fu_75_p2;
+reg   [17:0] k_fu_30;
+wire   [17:0] add_ln53_fu_75_p2;
 wire    ap_loop_init;
-reg   [16:0] ap_sig_allocacmp_k_32;
+reg   [17:0] ap_sig_allocacmp_k_32;
 reg    ap_done_reg;
 wire    ap_continue_int;
 reg    ap_done_int;
@@ -131,14 +131,14 @@ always @ (posedge ap_clk) begin
         if (((icmp_ln53_fu_69_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
             k_fu_30 <= add_ln53_fu_75_p2;
         end else if ((ap_loop_init == 1'b1)) begin
-            k_fu_30 <= 17'd0;
+            k_fu_30 <= 18'd0;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln53_fu_69_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        k_cast_i_reg_101[16 : 0] <= k_cast_i_fu_81_p1[16 : 0];
+        k_cast_i_reg_101[17 : 0] <= k_cast_i_fu_81_p1[17 : 0];
     end
 end
 
@@ -184,7 +184,7 @@ end
 
 always @ (*) begin
     if (((ap_loop_init == 1'b1) & (1'b0 == ap_block_pp0_stage0) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        ap_sig_allocacmp_k_32 = 17'd0;
+        ap_sig_allocacmp_k_32 = 18'd0;
     end else begin
         ap_sig_allocacmp_k_32 = k_fu_30;
     end
@@ -225,7 +225,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln53_fu_75_p2 = (ap_sig_allocacmp_k_32 + 17'd1);
+assign add_ln53_fu_75_p2 = (ap_sig_allocacmp_k_32 + 18'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -247,7 +247,7 @@ assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
 assign bucket_address0 = k_cast_i_fu_81_p1;
 
-assign icmp_ln53_fu_69_p2 = ((ap_sig_allocacmp_k_32 == 17'd78125) ? 1'b1 : 1'b0);
+assign icmp_ln53_fu_69_p2 = ((ap_sig_allocacmp_k_32 == 18'd156250) ? 1'b1 : 1'b0);
 
 assign k_cast_i_fu_81_p1 = ap_sig_allocacmp_k_32;
 
@@ -256,7 +256,7 @@ assign multi_radix_oct_kmerge_temp0_37_address0 = k_cast_i_reg_101;
 assign multi_radix_oct_kmerge_temp0_37_d0 = bucket_q0;
 
 always @ (posedge ap_clk) begin
-    k_cast_i_reg_101[63:17] <= 47'b00000000000000000000000000000000000000000000000;
+    k_cast_i_reg_101[63:18] <= 46'b0000000000000000000000000000000000000000000000;
 end
 
 endmodule //multi_radix_oct_kmerge_radix_sort_oct_batch_38_1_Pipeline_output_bucket

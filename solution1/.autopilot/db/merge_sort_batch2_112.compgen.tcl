@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename multi_radix_oct_kmerge_temp3_2 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp3_2_address0 { O 20 vector } multi_radix_oct_kmerge_temp3_2_ce0 { O 1 bit } multi_radix_oct_kmerge_temp3_2_we0 { O 1 bit } multi_radix_oct_kmerge_temp3_2_d0 { O 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp3_2_address0 { O 21 vector } multi_radix_oct_kmerge_temp3_2_ce0 { O 1 bit } multi_radix_oct_kmerge_temp3_2_we0 { O 1 bit } multi_radix_oct_kmerge_temp3_2_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp3_2'"
@@ -37,7 +37,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename multi_radix_oct_kmerge_temp2_4 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp2_4_address0 { O 19 vector } multi_radix_oct_kmerge_temp2_4_ce0 { O 1 bit } multi_radix_oct_kmerge_temp2_4_q0 { I 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp2_4_address0 { O 20 vector } multi_radix_oct_kmerge_temp2_4_ce0 { O 1 bit } multi_radix_oct_kmerge_temp2_4_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp2_4'"
@@ -56,7 +56,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename multi_radix_oct_kmerge_temp2_5 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp2_5_address0 { O 19 vector } multi_radix_oct_kmerge_temp2_5_ce0 { O 1 bit } multi_radix_oct_kmerge_temp2_5_q0 { I 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp2_5_address0 { O 20 vector } multi_radix_oct_kmerge_temp2_5_ce0 { O 1 bit } multi_radix_oct_kmerge_temp2_5_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp2_5'"

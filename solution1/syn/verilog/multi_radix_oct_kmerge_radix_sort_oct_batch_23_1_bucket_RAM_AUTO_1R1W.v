@@ -17,8 +17,8 @@ module multi_radix_oct_kmerge_radix_sort_oct_batch_23_1_bucket_RAM_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 18;
-parameter AddressRange = 156250;
+parameter AddressWidth = 19;
+parameter AddressRange = 312500;
  
 input[AddressWidth-1:0] address0;
 input ce0;

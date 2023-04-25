@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 102
-set name multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1
+set name multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1
 set corename simcore_mul
 set op mul
 set stage_num 4
@@ -9,14 +9,14 @@ set clk_width 1
 set clk_signed 0
 set reset_width 1
 set reset_signed 0
-set in0_width 18
+set in0_width 19
 set in0_signed 1
-set in1_width 17
+set in1_width 18
 set in1_signed 0
 set ce_width 1
 set ce_signed 0
-set out_width 18
-set arg_lists {i0 {18 1 +} i1 {17 0 +} p {18 1 +} acc {0} }
+set out_width 19
+set arg_lists {i0 {19 1 +} i1 {18 0 +} p {19 1 +} acc {0} }
 set TrueReset 0
 if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler $name BINDTYPE {op} TYPE {all} IMPL {dsp48} LATENCY 3 ALLOW_PRAGMA 1
@@ -78,7 +78,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename input_0 \
     op interface \
-    ports { input_0_address0 { O 17 vector } input_0_ce0 { O 1 bit } input_0_q0 { I 32 vector } } \
+    ports { input_0_address0 { O 18 vector } input_0_ce0 { O 1 bit } input_0_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_0'"
@@ -97,7 +97,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename multi_radix_oct_kmerge_temp0_0 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp0_0_address0 { O 17 vector } multi_radix_oct_kmerge_temp0_0_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_0_we0 { O 1 bit } multi_radix_oct_kmerge_temp0_0_d0 { O 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp0_0_address0 { O 18 vector } multi_radix_oct_kmerge_temp0_0_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_0_we0 { O 1 bit } multi_radix_oct_kmerge_temp0_0_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp0_0'"

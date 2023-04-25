@@ -1,20 +1,20 @@
 
 `timescale 1 ns / 1 ps
 
-  module multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1_DSP48_0(clk, rst, ce, a, b, p);
+  module multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1_DSP48_0(clk, rst, ce, a, b, p);
 input clk;
 input rst;
 input ce;
-input signed [18 - 1 : 0] a;
-input [17 - 1 : 0] b;
-output signed [18 - 1 : 0] p;
+input signed [19 - 1 : 0] a;
+input [18 - 1 : 0] b;
+output signed [19 - 1 : 0] p;
 
-reg signed [18 - 1 : 0] p_reg; 
+reg signed [19 - 1 : 0] p_reg; 
 
-reg signed [18 - 1 : 0] a_reg; 
-reg [17 - 1 : 0] b_reg; 
+reg signed [19 - 1 : 0] a_reg; 
+reg [18 - 1 : 0] b_reg; 
 
-reg signed [18 - 1 : 0] p_reg_tmp; 
+reg signed [19 - 1 : 0] p_reg_tmp; 
 
 always @ (posedge clk) begin
     if (ce) begin
@@ -29,7 +29,7 @@ assign p = p_reg;
 
 endmodule
 `timescale 1 ns / 1 ps
-module multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1(
+module multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1(
     clk,
     reset,
     ce,
@@ -51,7 +51,7 @@ output[dout_WIDTH - 1:0] dout;
 
 
 
-multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1_DSP48_0 multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1_DSP48_0_U(
+multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1_DSP48_0 multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1_DSP48_0_U(
     .clk( clk ),
     .rst( reset ),
     .ce( ce ),

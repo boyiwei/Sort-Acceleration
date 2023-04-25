@@ -9,8 +9,8 @@ use ieee.numeric_std.all;
 entity multi_radix_oct_kmerge_multi_radix_oct_kmerge_temp1_0_RAM_AUTO_1R1W  is
     generic (
         DataWidth    : integer := 32;
-        AddressRange : integer := 156250;
-        AddressWidth : integer := 18;
+        AddressRange : integer := 312500;
+        AddressWidth : integer := 19;
         BufferCount  : integer := 2;
         MemLatency   : integer := 1;
         IndexWidth   : integer := 1
@@ -45,13 +45,13 @@ architecture rtl of multi_radix_oct_kmerge_multi_radix_oct_kmerge_temp1_0_RAM_AU
 component multi_radix_oct_kmerge_multi_radix_oct_kmerge_temp1_0_RAM_AUTO_1R1W_memcore is
 port (
     ce0      : in  std_logic;
-    address0 : in  std_logic_vector(18 downto 0);
+    address0 : in  std_logic_vector(19 downto 0);
     we0      : in  std_logic;
     d0       : in  std_logic_vector(DataWidth-1 downto 0);
     q0       : out std_logic_vector(DataWidth-1 downto 0);   
     
     ce1      : in  std_logic;
-    address1 : in  std_logic_vector(18 downto 0);
+    address1 : in  std_logic_vector(19 downto 0);
     we1      : in  std_logic;
     d1       : in  std_logic_vector(DataWidth-1 downto 0);
     q1       : out std_logic_vector(DataWidth-1 downto 0);   
@@ -71,8 +71,8 @@ signal push_buf : std_logic;        -- finish writing a buffer
 signal write_buf: std_logic;        -- write a buffer
 signal pop_buf  : std_logic;        -- finish reading a buffer
 
-signal memcore_iaddr: std_logic_vector(18 downto 0);
-signal memcore_taddr: std_logic_vector(18 downto 0);
+signal memcore_iaddr: std_logic_vector(19 downto 0);
+signal memcore_taddr: std_logic_vector(19 downto 0);
 
 begin 
 

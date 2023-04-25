@@ -14,7 +14,7 @@ set SynModuleInfo {
   {SRCNAME radix_sort_oct_batch.1.1_Pipeline_output_bucket MODELNAME radix_sort_oct_batch_1_1_Pipeline_output_bucket RTLNAME multi_radix_oct_kmerge_radix_sort_oct_batch_1_1_Pipeline_output_bucket}
   {SRCNAME radix_sort_oct_batch.1.1 MODELNAME radix_sort_oct_batch_1_1 RTLNAME multi_radix_oct_kmerge_radix_sort_oct_batch_1_1
     SUBMODULES {
-      {MODELNAME multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1 RTLNAME multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
+      {MODELNAME multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1 RTLNAME multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1 BINDTYPE op TYPE all IMPL dsp48 LATENCY 3 ALLOW_PRAGMA 1}
       {MODELNAME multi_radix_oct_kmerge_radix_sort_oct_batch_1_1_bucket_RAM_AUTO_1R1W RTLNAME multi_radix_oct_kmerge_radix_sort_oct_batch_1_1_bucket_RAM_AUTO_1R1W BINDTYPE storage TYPE ram IMPL auto LATENCY 2 ALLOW_PRAGMA 1}
     }
   }

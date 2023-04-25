@@ -23,7 +23,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename input_61 \
     op interface \
-    ports { input_61_address0 { O 17 vector } input_61_ce0 { O 1 bit } input_61_q0 { I 32 vector } } \
+    ports { input_61_address0 { O 18 vector } input_61_ce0 { O 1 bit } input_61_q0 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_61'"
@@ -42,7 +42,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename multi_radix_oct_kmerge_temp0_61 \
     op interface \
-    ports { multi_radix_oct_kmerge_temp0_61_address0 { O 17 vector } multi_radix_oct_kmerge_temp0_61_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_61_we0 { O 1 bit } multi_radix_oct_kmerge_temp0_61_d0 { O 32 vector } } \
+    ports { multi_radix_oct_kmerge_temp0_61_address0 { O 18 vector } multi_radix_oct_kmerge_temp0_61_ce0 { O 1 bit } multi_radix_oct_kmerge_temp0_61_we0 { O 1 bit } multi_radix_oct_kmerge_temp0_61_d0 { O 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'multi_radix_oct_kmerge_temp0_61'"

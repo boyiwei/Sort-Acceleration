@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_oct_batch_2_1'
 ================================================================
-* Date:           Mon Apr 24 11:01:40 2023
+* Date:           Mon Apr 24 11:27:27 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  5.157 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  5.163 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -29,28 +29,28 @@
     |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
     |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
     +---------+---------+-----------+-----------+---------+---------+---------+
-    |  1015831|  1015831|  10.158 ms|  10.158 ms|  1015831|  1015831|       no|
+    |  2031456|  2031456|  20.315 ms|  20.315 ms|  2031456|  2031456|       no|
     +---------+---------+-----------+-----------+---------+---------+---------+
 
     + Detail: 
         * Instance: 
-        +----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
-        |                                                                            |                                                                 |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-        |                                  Instance                                  |                              Module                             |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-        +----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
-        |grp_radix_sort_oct_batch_2_1_Pipeline_1_fu_220                              |radix_sort_oct_batch_2_1_Pipeline_1                              |       10|       10|  0.100 us|  0.100 us|     10|     10|       no|
-        |grp_radix_sort_oct_batch_2_1_Pipeline_initialization_fu_232                 |radix_sort_oct_batch_2_1_Pipeline_initialization                 |    78127|    78127|  0.781 ms|  0.781 ms|  78127|  78127|       no|
-        |grp_radix_sort_oct_batch_2_1_Pipeline_bucket_pointer_initialization_fu_255  |radix_sort_oct_batch_2_1_Pipeline_bucket_pointer_initialization  |       10|       10|  0.100 us|  0.100 us|     10|     10|       no|
-        |grp_radix_sort_oct_batch_2_1_Pipeline_output_bucket_fu_291                  |radix_sort_oct_batch_2_1_Pipeline_output_bucket                  |    78127|    78127|  0.781 ms|  0.781 ms|  78127|  78127|       no|
-        |grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298                   |radix_sort_oct_batch_2_1_Pipeline_input_bucket                   |    78127|    78127|  0.781 ms|  0.781 ms|  78127|  78127|       no|
-        +----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+-------+-------+---------+
+        +----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+        |                                                                            |                                                                 |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+        |                                  Instance                                  |                              Module                             |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+        +----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+        |grp_radix_sort_oct_batch_2_1_Pipeline_1_fu_220                              |radix_sort_oct_batch_2_1_Pipeline_1                              |       10|       10|  0.100 us|  0.100 us|      10|      10|       no|
+        |grp_radix_sort_oct_batch_2_1_Pipeline_initialization_fu_232                 |radix_sort_oct_batch_2_1_Pipeline_initialization                 |   156252|   156252|  1.563 ms|  1.563 ms|  156252|  156252|       no|
+        |grp_radix_sort_oct_batch_2_1_Pipeline_bucket_pointer_initialization_fu_255  |radix_sort_oct_batch_2_1_Pipeline_bucket_pointer_initialization  |       10|       10|  0.100 us|  0.100 us|      10|      10|       no|
+        |grp_radix_sort_oct_batch_2_1_Pipeline_output_bucket_fu_291                  |radix_sort_oct_batch_2_1_Pipeline_output_bucket                  |   156252|   156252|  1.563 ms|  1.563 ms|  156252|  156252|       no|
+        |grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298                   |radix_sort_oct_batch_2_1_Pipeline_input_bucket                   |   156252|   156252|  1.563 ms|  1.563 ms|  156252|  156252|       no|
+        +----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
 
         * Loop: 
         +------------------+---------+---------+----------+-----------+-----------+------+----------+
         |                  |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |     Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +------------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- sort_procedure  |   859562|   859562|     78142|          -|          -|    11|        no|
+        |- sort_procedure  |  1718937|  1718937|    156267|          -|          -|    11|        no|
         +------------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -65,12 +65,12 @@
 |DSP                  |        -|     2|        -|        -|    -|
 |Expression           |        -|     -|        0|       76|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
-|Instance             |        -|     -|      797|     1402|    -|
+|Instance             |        -|     -|      803|     1408|    -|
 |Memory               |       16|     -|        0|        0|    0|
 |Multiplexer          |        -|     -|        -|      235|    -|
-|Register             |        -|     -|      611|        -|    -|
+|Register             |        -|     -|      613|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |       16|     2|     1408|     1713|    0|
+|Total                |       16|     2|     1416|     1719|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -88,28 +88,28 @@
     +----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+-----+-----+-----+
     |grp_radix_sort_oct_batch_2_1_Pipeline_1_fu_220                              |radix_sort_oct_batch_2_1_Pipeline_1                              |        0|   0|    6|   48|    0|
     |grp_radix_sort_oct_batch_2_1_Pipeline_bucket_pointer_initialization_fu_255  |radix_sort_oct_batch_2_1_Pipeline_bucket_pointer_initialization  |        0|   0|  551|  301|    0|
-    |grp_radix_sort_oct_batch_2_1_Pipeline_initialization_fu_232                 |radix_sort_oct_batch_2_1_Pipeline_initialization                 |        0|   0|   37|  294|    0|
-    |grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298                   |radix_sort_oct_batch_2_1_Pipeline_input_bucket                   |        0|   0|  166|  684|    0|
-    |grp_radix_sort_oct_batch_2_1_Pipeline_output_bucket_fu_291                  |radix_sort_oct_batch_2_1_Pipeline_output_bucket                  |        0|   0|   37|   75|    0|
+    |grp_radix_sort_oct_batch_2_1_Pipeline_initialization_fu_232                 |radix_sort_oct_batch_2_1_Pipeline_initialization                 |        0|   0|   39|  296|    0|
+    |grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298                   |radix_sort_oct_batch_2_1_Pipeline_input_bucket                   |        0|   0|  168|  687|    0|
+    |grp_radix_sort_oct_batch_2_1_Pipeline_output_bucket_fu_291                  |radix_sort_oct_batch_2_1_Pipeline_output_bucket                  |        0|   0|   39|   76|    0|
     +----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+-----+-----+-----+
-    |Total                                                                       |                                                                 |        0|   0|  797| 1402|    0|
+    |Total                                                                       |                                                                 |        0|   0|  803| 1408|    0|
     +----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
     +------------------------------+-------------------------+-----------+
     |           Instance           |          Module         | Expression|
     +------------------------------+-------------------------+-----------+
-    |mul_mul_18s_17ns_18_4_1_U208  |mul_mul_18s_17ns_18_4_1  |    i0 * i1|
-    |mul_mul_18s_17ns_18_4_1_U209  |mul_mul_18s_17ns_18_4_1  |    i0 * i1|
+    |mul_mul_19s_18ns_19_4_1_U208  |mul_mul_19s_18ns_19_4_1  |    i0 * i1|
+    |mul_mul_19s_18ns_19_4_1_U209  |mul_mul_19s_18ns_19_4_1  |    i0 * i1|
     +------------------------------+-------------------------+-----------+
 
     * Memory: 
     +----------+-----------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
     |  Memory  |                     Module                    | BRAM_18K| FF| LUT| URAM|  Words | Bits| Banks| W*Bits*Banks|
     +----------+-----------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
-    |bucket_U  |radix_sort_oct_batch_2_1_bucket_RAM_AUTO_1R1W  |       16|  0|   0|    0|  156250|   32|     1|      5000000|
+    |bucket_U  |radix_sort_oct_batch_2_1_bucket_RAM_AUTO_1R1W  |       16|  0|   0|    0|  312500|   32|     1|     10000000|
     +----------+-----------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
-    |Total     |                                               |       16|  0|   0|    0|  156250|   32|     1|      5000000|
+    |Total     |                                               |       16|  0|   0|    0|  312500|   32|     1|     10000000|
     +----------+-----------------------------------------------+---------+---+----+-----+--------+-----+------+-------------+
 
     * FIFO: 
@@ -134,7 +134,7 @@
     +--------------------------+----+-----------+-----+-----------+
     |ap_NS_fsm                 |  59|         11|    1|         11|
     |ap_done                   |   9|          2|    1|          2|
-    |bucket_address0           |  20|          4|   18|         72|
+    |bucket_address0           |  20|          4|   19|         76|
     |bucket_ce0                |  20|          4|    1|          4|
     |bucket_ce1                |   9|          2|    1|          2|
     |bucket_d0                 |  14|          3|   32|         96|
@@ -150,7 +150,7 @@
     |bucket_we0                |  14|          3|    1|          3|
     |i_fu_48                   |   9|          2|    4|          8|
     +--------------------------+----+-----------+-----+-----------+
-    |Total                     | 235|         49|  347|        774|
+    |Total                     | 235|         49|  348|        778|
     +--------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -184,10 +184,10 @@
     |i_103_reg_871                                                                            |   4|   0|    4|          0|
     |i_fu_48                                                                                  |   4|   0|    4|          0|
     |mul_i_reg_991                                                                            |   7|   0|    7|          0|
-    |mul_ln41_reg_986                                                                         |  18|   0|   18|          0|
-    |mul_ln43_reg_996                                                                         |  18|   0|   18|          0|
+    |mul_ln41_reg_986                                                                         |  19|   0|   19|          0|
+    |mul_ln43_reg_996                                                                         |  19|   0|   19|          0|
     +-----------------------------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                                                    | 611|   0|  611|          0|
+    |Total                                                                                    | 613|   0|  613|          0|
     +-----------------------------------------------------------------------------------------+----+----+-----+-----------+
 
 
@@ -206,10 +206,10 @@
 |ap_continue                              |   in|    1|  ap_ctrl_hs|        radix_sort_oct_batch.2.1|  return value|
 |ap_idle                                  |  out|    1|  ap_ctrl_hs|        radix_sort_oct_batch.2.1|  return value|
 |ap_ready                                 |  out|    1|  ap_ctrl_hs|        radix_sort_oct_batch.2.1|  return value|
-|input_1_address0                         |  out|   17|   ap_memory|                         input_1|         array|
+|input_1_address0                         |  out|   18|   ap_memory|                         input_1|         array|
 |input_1_ce0                              |  out|    1|   ap_memory|                         input_1|         array|
 |input_1_q0                               |   in|   32|   ap_memory|                         input_1|         array|
-|multi_radix_oct_kmerge_temp0_1_address0  |  out|   17|   ap_memory|  multi_radix_oct_kmerge_temp0_1|         array|
+|multi_radix_oct_kmerge_temp0_1_address0  |  out|   18|   ap_memory|  multi_radix_oct_kmerge_temp0_1|         array|
 |multi_radix_oct_kmerge_temp0_1_ce0       |  out|    1|   ap_memory|  multi_radix_oct_kmerge_temp0_1|         array|
 |multi_radix_oct_kmerge_temp0_1_we0       |  out|    1|   ap_memory|  multi_radix_oct_kmerge_temp0_1|         array|
 |multi_radix_oct_kmerge_temp0_1_d0        |  out|   32|   ap_memory|  multi_radix_oct_kmerge_temp0_1|         array|
@@ -352,21 +352,21 @@ ST_5 : Operation 91 [1/1] (0.00ns)   --->   "%bucket_sizes_1085_load = load i32 
 ST_5 : Operation 92 [2/2] (0.38ns)   --->   "%call_ln0 = call void @radix_sort_oct_batch.2.1_Pipeline_bucket_pointer_initialization, i32 %bucket_sizes_1085_load, i32 %bucket_sizes_1084_load, i32 %bucket_sizes_1083_load, i32 %bucket_sizes_1082_load, i32 %bucket_sizes_1081_load, i32 %bucket_sizes_1080_load, i32 %bucket_sizes_1079_load, i32 %bucket_sizes_load, i32 %bucket_pointer_936_load, i32 %bucket_pointer_935_load, i32 %bucket_pointer_934_load, i32 %bucket_pointer_933_load, i32 %bucket_pointer_932_load, i32 %bucket_pointer_931_load, i32 %bucket_pointer_930_load, i32 %bucket_pointer_load, i32 %bucket_sizes_3771_loc, i32 %bucket_sizes_3770_loc, i32 %bucket_sizes_3769_loc, i32 %bucket_sizes_3768_loc, i32 %bucket_sizes_3767_loc, i32 %bucket_sizes_3766_loc, i32 %bucket_sizes_3765_loc, i32 %bucket_sizes_3764_loc, i32 %bucket_pointer_1698_loc, i32 %bucket_pointer_1697_loc, i32 %bucket_pointer_1696_loc, i32 %bucket_pointer_1695_loc, i32 %bucket_pointer_1694_loc, i32 %bucket_pointer_1693_loc, i32 %bucket_pointer_1692_loc, i32 %bucket_pointer_1691_loc"   --->   Operation 92 'call' 'call_ln0' <Predicate = (!icmp_ln27)> <Delay = 0.38> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_5 : Operation 93 [1/1] (0.88ns)   --->   "%bucket_num_52 = sub i32 1, i32 %bucket_num_load" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 93 'sub' 'bucket_num_52' <Predicate = (!icmp_ln27)> <Delay = 0.88> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_5 : Operation 94 [1/1] (0.00ns)   --->   "%trunc_ln41 = trunc i32 %bucket_num_52" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 94 'trunc' 'trunc_ln41' <Predicate = (!icmp_ln27)> <Delay = 0.00>
-ST_5 : Operation 95 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln41 = mul i18 %trunc_ln41, i18 78125" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 95 'mul' 'mul_ln41' <Predicate = (!icmp_ln27)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 95 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln41 = mul i19 %trunc_ln41, i19 156250" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 95 'mul' 'mul_ln41' <Predicate = (!icmp_ln27)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 ST_5 : Operation 96 [1/1] (0.00ns)   --->   "%trunc_ln43 = trunc i32 %bucket_num_load" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 96 'trunc' 'trunc_ln43' <Predicate = (!icmp_ln27)> <Delay = 0.00>
-ST_5 : Operation 97 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln43 = mul i18 %trunc_ln43, i18 78125" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 97 'mul' 'mul_ln43' <Predicate = (!icmp_ln27)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 97 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln43 = mul i19 %trunc_ln43, i19 156250" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 97 'mul' 'mul_ln43' <Predicate = (!icmp_ln27)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 ST_5 : Operation 98 [1/1] (0.38ns)   --->   "%store_ln27 = store i32 %bucket_num_52, i32 %bucket_num" [sort_seperate_bucket/multi_radix_oct_kmerge.c:27]   --->   Operation 98 'store' 'store_ln27' <Predicate = (!icmp_ln27)> <Delay = 0.38>
 ST_5 : Operation 99 [1/1] (0.38ns)   --->   "%store_ln27 = store i4 %i_104, i4 %i" [sort_seperate_bucket/multi_radix_oct_kmerge.c:27]   --->   Operation 99 'store' 'store_ln27' <Predicate = (!icmp_ln27)> <Delay = 0.38>
 ST_5 : Operation 100 [2/2] (0.00ns)   --->   "%call_ln0 = call void @radix_sort_oct_batch.2.1_Pipeline_output_bucket, i32 %bucket, i32 %multi_radix_oct_kmerge_temp0_1"   --->   Operation 100 'call' 'call_ln0' <Predicate = (icmp_ln27)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 6 <SV = 5> <Delay = 0.65>
 ST_6 : Operation 101 [1/2] (0.65ns)   --->   "%call_ln0 = call void @radix_sort_oct_batch.2.1_Pipeline_bucket_pointer_initialization, i32 %bucket_sizes_1085_load, i32 %bucket_sizes_1084_load, i32 %bucket_sizes_1083_load, i32 %bucket_sizes_1082_load, i32 %bucket_sizes_1081_load, i32 %bucket_sizes_1080_load, i32 %bucket_sizes_1079_load, i32 %bucket_sizes_load, i32 %bucket_pointer_936_load, i32 %bucket_pointer_935_load, i32 %bucket_pointer_934_load, i32 %bucket_pointer_933_load, i32 %bucket_pointer_932_load, i32 %bucket_pointer_931_load, i32 %bucket_pointer_930_load, i32 %bucket_pointer_load, i32 %bucket_sizes_3771_loc, i32 %bucket_sizes_3770_loc, i32 %bucket_sizes_3769_loc, i32 %bucket_sizes_3768_loc, i32 %bucket_sizes_3767_loc, i32 %bucket_sizes_3766_loc, i32 %bucket_sizes_3765_loc, i32 %bucket_sizes_3764_loc, i32 %bucket_pointer_1698_loc, i32 %bucket_pointer_1697_loc, i32 %bucket_pointer_1696_loc, i32 %bucket_pointer_1695_loc, i32 %bucket_pointer_1694_loc, i32 %bucket_pointer_1693_loc, i32 %bucket_pointer_1692_loc, i32 %bucket_pointer_1691_loc"   --->   Operation 101 'call' 'call_ln0' <Predicate = true> <Delay = 0.65> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_6 : Operation 102 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln41 = mul i18 %trunc_ln41, i18 78125" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 102 'mul' 'mul_ln41' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
-ST_6 : Operation 103 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln43 = mul i18 %trunc_ln43, i18 78125" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 103 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 102 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln41 = mul i19 %trunc_ln41, i19 156250" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 102 'mul' 'mul_ln41' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 103 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln43 = mul i19 %trunc_ln43, i19 156250" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 103 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
 State 7 <SV = 6> <Delay = 0.53>
-ST_7 : Operation 104 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln41 = mul i18 %trunc_ln41, i18 78125" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 104 'mul' 'mul_ln41' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
-ST_7 : Operation 105 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln43 = mul i18 %trunc_ln43, i18 78125" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 105 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 104 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln41 = mul i19 %trunc_ln41, i19 156250" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 104 'mul' 'mul_ln41' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 105 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul_ln43 = mul i19 %trunc_ln43, i19 156250" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 105 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 
 State 8 <SV = 7> <Delay = 2.75>
 ST_8 : Operation 106 [1/1] (0.00ns)   --->   "%zext_ln27 = zext i4 %i_103" [sort_seperate_bucket/multi_radix_oct_kmerge.c:27]   --->   Operation 106 'zext' 'zext_ln27' <Predicate = true> <Delay = 0.00>
@@ -386,16 +386,16 @@ ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%bucket_pointer_1694_loc_load = lo
 ST_8 : Operation 120 [1/1] (0.00ns)   --->   "%bucket_pointer_1693_loc_load = load i32 %bucket_pointer_1693_loc"   --->   Operation 120 'load' 'bucket_pointer_1693_loc_load' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%bucket_pointer_1692_loc_load = load i32 %bucket_pointer_1692_loc"   --->   Operation 121 'load' 'bucket_pointer_1692_loc_load' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 122 [1/1] (0.00ns)   --->   "%bucket_pointer_1691_loc_load = load i32 %bucket_pointer_1691_loc"   --->   Operation 122 'load' 'bucket_pointer_1691_loc_load' <Predicate = true> <Delay = 0.00>
-ST_8 : Operation 123 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln41 = mul i18 %trunc_ln41, i18 78125" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 123 'mul' 'mul_ln41' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 123 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln41 = mul i19 %trunc_ln41, i19 156250" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 123 'mul' 'mul_ln41' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
 ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%p_shl_i = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i4.i2, i4 %i_103, i2 0" [sort_seperate_bucket/multi_radix_oct_kmerge.c:27]   --->   Operation 124 'bitconcatenate' 'p_shl_i' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 125 [1/1] (0.00ns)   --->   "%p_shl_cast_i = zext i6 %p_shl_i" [sort_seperate_bucket/multi_radix_oct_kmerge.c:27]   --->   Operation 125 'zext' 'p_shl_cast_i' <Predicate = true> <Delay = 0.00>
 ST_8 : Operation 126 [1/1] (0.70ns)   --->   "%mul_i = sub i7 %p_shl_cast_i, i7 %zext_ln27" [sort_seperate_bucket/multi_radix_oct_kmerge.c:27]   --->   Operation 126 'sub' 'mul_i' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_8 : Operation 127 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln43 = mul i18 %trunc_ln43, i18 78125" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 127 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
-ST_8 : Operation 128 [2/2] (2.04ns)   --->   "%call_ln41 = call void @radix_sort_oct_batch.2.1_Pipeline_input_bucket, i32 %bucket_sizes_3771_loc_load, i32 %bucket_sizes_3770_loc_load, i32 %bucket_sizes_3769_loc_load, i32 %bucket_sizes_3768_loc_load, i32 %bucket_sizes_3767_loc_load, i32 %bucket_sizes_3766_loc_load, i32 %bucket_sizes_3765_loc_load, i32 %bucket_sizes_3764_loc_load, i32 %bucket_pointer_1698_loc_load, i32 %bucket_pointer_1697_loc_load, i32 %bucket_pointer_1696_loc_load, i32 %bucket_pointer_1695_loc_load, i32 %bucket_pointer_1694_loc_load, i32 %bucket_pointer_1693_loc_load, i32 %bucket_pointer_1692_loc_load, i32 %bucket_pointer_1691_loc_load, i18 %mul_ln41, i32 %bucket, i7 %mul_i, i18 %mul_ln43, i32 %bucket_sizes_1085, i32 %bucket_sizes_1084, i32 %bucket_sizes_1083, i32 %bucket_sizes_1082, i32 %bucket_sizes_1081, i32 %bucket_sizes_1080, i32 %bucket_sizes_1079, i32 %bucket_sizes, i32 %bucket_pointer_936, i32 %bucket_pointer_935, i32 %bucket_pointer_934, i32 %bucket_pointer_933, i32 %bucket_pointer_932, i32 %bucket_pointer_931, i32 %bucket_pointer_930, i32 %bucket_pointer" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 128 'call' 'call_ln41' <Predicate = true> <Delay = 2.04> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 127 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln43 = mul i19 %trunc_ln43, i19 156250" [sort_seperate_bucket/multi_radix_oct_kmerge.c:43]   --->   Operation 127 'mul' 'mul_ln43' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 128 [2/2] (2.05ns)   --->   "%call_ln41 = call void @radix_sort_oct_batch.2.1_Pipeline_input_bucket, i32 %bucket_sizes_3771_loc_load, i32 %bucket_sizes_3770_loc_load, i32 %bucket_sizes_3769_loc_load, i32 %bucket_sizes_3768_loc_load, i32 %bucket_sizes_3767_loc_load, i32 %bucket_sizes_3766_loc_load, i32 %bucket_sizes_3765_loc_load, i32 %bucket_sizes_3764_loc_load, i32 %bucket_pointer_1698_loc_load, i32 %bucket_pointer_1697_loc_load, i32 %bucket_pointer_1696_loc_load, i32 %bucket_pointer_1695_loc_load, i32 %bucket_pointer_1694_loc_load, i32 %bucket_pointer_1693_loc_load, i32 %bucket_pointer_1692_loc_load, i32 %bucket_pointer_1691_loc_load, i19 %mul_ln41, i32 %bucket, i7 %mul_i, i19 %mul_ln43, i32 %bucket_sizes_1085, i32 %bucket_sizes_1084, i32 %bucket_sizes_1083, i32 %bucket_sizes_1082, i32 %bucket_sizes_1081, i32 %bucket_sizes_1080, i32 %bucket_sizes_1079, i32 %bucket_sizes, i32 %bucket_pointer_936, i32 %bucket_pointer_935, i32 %bucket_pointer_934, i32 %bucket_pointer_933, i32 %bucket_pointer_932, i32 %bucket_pointer_931, i32 %bucket_pointer_930, i32 %bucket_pointer" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 128 'call' 'call_ln41' <Predicate = true> <Delay = 2.05> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
 State 9 <SV = 8> <Delay = 0.00>
 ST_9 : Operation 129 [1/1] (0.00ns)   --->   "%specloopname_ln11 = specloopname void @_ssdm_op_SpecLoopName, void @empty_71" [sort_seperate_bucket/multi_radix_oct_kmerge.c:11]   --->   Operation 129 'specloopname' 'specloopname_ln11' <Predicate = true> <Delay = 0.00>
-ST_9 : Operation 130 [1/2] (0.00ns)   --->   "%call_ln41 = call void @radix_sort_oct_batch.2.1_Pipeline_input_bucket, i32 %bucket_sizes_3771_loc_load, i32 %bucket_sizes_3770_loc_load, i32 %bucket_sizes_3769_loc_load, i32 %bucket_sizes_3768_loc_load, i32 %bucket_sizes_3767_loc_load, i32 %bucket_sizes_3766_loc_load, i32 %bucket_sizes_3765_loc_load, i32 %bucket_sizes_3764_loc_load, i32 %bucket_pointer_1698_loc_load, i32 %bucket_pointer_1697_loc_load, i32 %bucket_pointer_1696_loc_load, i32 %bucket_pointer_1695_loc_load, i32 %bucket_pointer_1694_loc_load, i32 %bucket_pointer_1693_loc_load, i32 %bucket_pointer_1692_loc_load, i32 %bucket_pointer_1691_loc_load, i18 %mul_ln41, i32 %bucket, i7 %mul_i, i18 %mul_ln43, i32 %bucket_sizes_1085, i32 %bucket_sizes_1084, i32 %bucket_sizes_1083, i32 %bucket_sizes_1082, i32 %bucket_sizes_1081, i32 %bucket_sizes_1080, i32 %bucket_sizes_1079, i32 %bucket_sizes, i32 %bucket_pointer_936, i32 %bucket_pointer_935, i32 %bucket_pointer_934, i32 %bucket_pointer_933, i32 %bucket_pointer_932, i32 %bucket_pointer_931, i32 %bucket_pointer_930, i32 %bucket_pointer" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 130 'call' 'call_ln41' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 130 [1/2] (0.00ns)   --->   "%call_ln41 = call void @radix_sort_oct_batch.2.1_Pipeline_input_bucket, i32 %bucket_sizes_3771_loc_load, i32 %bucket_sizes_3770_loc_load, i32 %bucket_sizes_3769_loc_load, i32 %bucket_sizes_3768_loc_load, i32 %bucket_sizes_3767_loc_load, i32 %bucket_sizes_3766_loc_load, i32 %bucket_sizes_3765_loc_load, i32 %bucket_sizes_3764_loc_load, i32 %bucket_pointer_1698_loc_load, i32 %bucket_pointer_1697_loc_load, i32 %bucket_pointer_1696_loc_load, i32 %bucket_pointer_1695_loc_load, i32 %bucket_pointer_1694_loc_load, i32 %bucket_pointer_1693_loc_load, i32 %bucket_pointer_1692_loc_load, i32 %bucket_pointer_1691_loc_load, i19 %mul_ln41, i32 %bucket, i7 %mul_i, i19 %mul_ln43, i32 %bucket_sizes_1085, i32 %bucket_sizes_1084, i32 %bucket_sizes_1083, i32 %bucket_sizes_1082, i32 %bucket_sizes_1081, i32 %bucket_sizes_1080, i32 %bucket_sizes_1079, i32 %bucket_sizes, i32 %bucket_pointer_936, i32 %bucket_pointer_935, i32 %bucket_pointer_934, i32 %bucket_pointer_933, i32 %bucket_pointer_932, i32 %bucket_pointer_931, i32 %bucket_pointer_930, i32 %bucket_pointer" [sort_seperate_bucket/multi_radix_oct_kmerge.c:41]   --->   Operation 130 'call' 'call_ln41' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 ST_9 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln27 = br void %bucket_pointer_initialization.i" [sort_seperate_bucket/multi_radix_oct_kmerge.c:27]   --->   Operation 131 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
 
 State 10 <SV = 5> <Delay = 0.00>
@@ -1353,10 +1353,10 @@ ret_ln0                      (ret              ) [ 00000000000]
 <pin id="313" dir="0" index="14" bw="32" slack="0"/>
 <pin id="314" dir="0" index="15" bw="32" slack="0"/>
 <pin id="315" dir="0" index="16" bw="32" slack="0"/>
-<pin id="316" dir="0" index="17" bw="18" slack="0"/>
+<pin id="316" dir="0" index="17" bw="19" slack="0"/>
 <pin id="317" dir="0" index="18" bw="32" slack="2147483647"/>
 <pin id="318" dir="0" index="19" bw="7" slack="0"/>
-<pin id="319" dir="0" index="20" bw="18" slack="0"/>
+<pin id="319" dir="0" index="20" bw="19" slack="0"/>
 <pin id="320" dir="0" index="21" bw="32" slack="7"/>
 <pin id="321" dir="0" index="22" bw="32" slack="7"/>
 <pin id="322" dir="0" index="23" bw="32" slack="7"/>
@@ -1730,7 +1730,7 @@ ret_ln0                      (ret              ) [ 00000000000]
 <comp id="468" class="1004" name="trunc_ln41_fu_468">
 <pin_list>
 <pin id="469" dir="0" index="0" bw="32" slack="0"/>
-<pin id="470" dir="1" index="1" bw="18" slack="0"/>
+<pin id="470" dir="1" index="1" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -1741,7 +1741,7 @@ ret_ln0                      (ret              ) [ 00000000000]
 <comp id="472" class="1004" name="trunc_ln43_fu_472">
 <pin_list>
 <pin id="473" dir="0" index="0" bw="32" slack="0"/>
-<pin id="474" dir="1" index="1" bw="18" slack="0"/>
+<pin id="474" dir="1" index="1" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -1998,9 +1998,9 @@ ret_ln0                      (ret              ) [ 00000000000]
 
 <comp id="571" class="1007" name="grp_fu_571">
 <pin_list>
-<pin id="572" dir="0" index="0" bw="18" slack="0"/>
-<pin id="573" dir="0" index="1" bw="17" slack="0"/>
-<pin id="574" dir="1" index="2" bw="18" slack="0"/>
+<pin id="572" dir="0" index="0" bw="19" slack="0"/>
+<pin id="573" dir="0" index="1" bw="18" slack="0"/>
+<pin id="574" dir="1" index="2" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="mul(12) " fcode="mul"/>
@@ -2010,9 +2010,9 @@ ret_ln0                      (ret              ) [ 00000000000]
 
 <comp id="578" class="1007" name="grp_fu_578">
 <pin_list>
-<pin id="579" dir="0" index="0" bw="18" slack="0"/>
-<pin id="580" dir="0" index="1" bw="17" slack="0"/>
-<pin id="581" dir="1" index="2" bw="18" slack="0"/>
+<pin id="579" dir="0" index="0" bw="19" slack="0"/>
+<pin id="580" dir="0" index="1" bw="18" slack="0"/>
+<pin id="581" dir="1" index="2" bw="19" slack="0"/>
 </pin_list>
 <bind>
 <opcode="mul(12) " fcode="mul"/>
@@ -2452,8 +2452,8 @@ ret_ln0                      (ret              ) [ 00000000000]
 
 <comp id="928" class="1005" name="trunc_ln41_reg_928">
 <pin_list>
-<pin id="929" dir="0" index="0" bw="18" slack="1"/>
-<pin id="930" dir="1" index="1" bw="18" slack="1"/>
+<pin id="929" dir="0" index="0" bw="19" slack="1"/>
+<pin id="930" dir="1" index="1" bw="19" slack="1"/>
 </pin_list>
 <bind>
 <opset="trunc_ln41 "/>
@@ -2462,8 +2462,8 @@ ret_ln0                      (ret              ) [ 00000000000]
 
 <comp id="933" class="1005" name="trunc_ln43_reg_933">
 <pin_list>
-<pin id="934" dir="0" index="0" bw="18" slack="1"/>
-<pin id="935" dir="1" index="1" bw="18" slack="1"/>
+<pin id="934" dir="0" index="0" bw="19" slack="1"/>
+<pin id="935" dir="1" index="1" bw="19" slack="1"/>
 </pin_list>
 <bind>
 <opset="trunc_ln43 "/>
@@ -2472,8 +2472,8 @@ ret_ln0                      (ret              ) [ 00000000000]
 
 <comp id="986" class="1005" name="mul_ln41_reg_986">
 <pin_list>
-<pin id="987" dir="0" index="0" bw="18" slack="1"/>
-<pin id="988" dir="1" index="1" bw="18" slack="1"/>
+<pin id="987" dir="0" index="0" bw="19" slack="1"/>
+<pin id="988" dir="1" index="1" bw="19" slack="1"/>
 </pin_list>
 <bind>
 <opset="mul_ln41 "/>
@@ -2492,8 +2492,8 @@ ret_ln0                      (ret              ) [ 00000000000]
 
 <comp id="996" class="1005" name="mul_ln43_reg_996">
 <pin_list>
-<pin id="997" dir="0" index="0" bw="18" slack="1"/>
-<pin id="998" dir="1" index="1" bw="18" slack="1"/>
+<pin id="997" dir="0" index="0" bw="19" slack="1"/>
+<pin id="998" dir="1" index="1" bw="19" slack="1"/>
 </pin_list>
 <bind>
 <opset="mul_ln43 "/>
@@ -3081,10 +3081,10 @@ ret_ln0                      (ret              ) [ 00000000000]
 | Operation|                               Functional Unit                              |   DSP   |  Delay  |    FF   |   LUT   |
 |----------|----------------------------------------------------------------------------|---------|---------|---------|---------|
 |          |               grp_radix_sort_oct_batch_2_1_Pipeline_1_fu_220               |    0    |    0    |   260   |    21   |
-|          |         grp_radix_sort_oct_batch_2_1_Pipeline_initialization_fu_232        |    0    |  0.387  |    51   |   153   |
+|          |         grp_radix_sort_oct_batch_2_1_Pipeline_initialization_fu_232        |    0    |  0.387  |    54   |   155   |
 |   call   | grp_radix_sort_oct_batch_2_1_Pipeline_bucket_pointer_initialization_fu_255 |    0    |    0    |   548   |   103   |
-|          |         grp_radix_sort_oct_batch_2_1_Pipeline_output_bucket_fu_291         |    0    |  0.387  |    99   |    46   |
-|          |          grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298         |    0    |  0.387  |   245   |   413   |
+|          |         grp_radix_sort_oct_batch_2_1_Pipeline_output_bucket_fu_291         |    0    |  0.387  |   101   |    47   |
+|          |          grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298         |    0    |  0.387  |   248   |   416   |
 |----------|----------------------------------------------------------------------------|---------|---------|---------|---------|
 |    sub   |                            bucket_num_52_fu_462                            |    0    |    0    |    0    |    39   |
 |          |                                mul_i_fu_564                                |    0    |    0    |    0    |    13   |
@@ -3104,7 +3104,7 @@ ret_ln0                      (ret              ) [ 00000000000]
 |----------|----------------------------------------------------------------------------|---------|---------|---------|---------|
 |bitconcatenate|                               p_shl_i_fu_553                               |    0    |    0    |    0    |    0    |
 |----------|----------------------------------------------------------------------------|---------|---------|---------|---------|
-|   Total  |                                                                            |    2    |  1.161  |   1203  |   809   |
+|   Total  |                                                                            |    2    |  1.161  |   1211  |   815   |
 |----------|----------------------------------------------------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -3164,25 +3164,25 @@ Memories:
 |         i_103_reg_871         |    4   |
 |           i_reg_585           |    4   |
 |         mul_i_reg_991         |    7   |
-|        mul_ln41_reg_986       |   18   |
-|        mul_ln43_reg_996       |   18   |
-|       trunc_ln41_reg_928      |   18   |
-|       trunc_ln43_reg_933      |   18   |
+|        mul_ln41_reg_986       |   19   |
+|        mul_ln43_reg_996       |   19   |
+|       trunc_ln41_reg_928      |   19   |
+|       trunc_ln43_reg_933      |   19   |
 +-------------------------------+--------+
-|             Total             |  1399  |
+|             Total             |  1403  |
 +-------------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |-----------------------------------------------------------|------|------|------|--------||---------||---------|
 |                            Comp                           |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
 |-----------------------------------------------------------|------|------|------|--------||---------||---------|
-| grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298 |  p17 |   2  |  18  |   36   ||    9    |
+| grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298 |  p17 |   2  |  19  |   38   ||    9    |
 | grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298 |  p19 |   2  |   7  |   14   ||    9    |
-| grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298 |  p20 |   2  |  18  |   36   ||    9    |
-|                         grp_fu_571                        |  p0  |   2  |  18  |   36   ||    9    |
-|                         grp_fu_578                        |  p0  |   2  |  18  |   36   ||    9    |
+| grp_radix_sort_oct_batch_2_1_Pipeline_input_bucket_fu_298 |  p20 |   2  |  19  |   38   ||    9    |
+|                         grp_fu_571                        |  p0  |   2  |  19  |   38   ||    9    |
+|                         grp_fu_578                        |  p0  |   2  |  19  |   38   ||    9    |
 |-----------------------------------------------------------|------|------|------|--------||---------||---------|
-|                           Total                           |      |      |      |   158  ||  1.935  ||    45   |
+|                           Total                           |      |      |      |   166  ||  1.935  ||    45   |
 |-----------------------------------------------------------|------|------|------|--------||---------||---------|
 
 
@@ -3191,10 +3191,10 @@ Memories:
 +-----------+--------+--------+--------+--------+--------+--------+
 |           |  BRAM  |   DSP  |  Delay |   FF   |   LUT  |  URAM  |
 +-----------+--------+--------+--------+--------+--------+--------+
-|  Function |    -   |    2   |    1   |  1203  |   809  |    -   |
+|  Function |    -   |    2   |    1   |  1211  |   815  |    -   |
 |   Memory  |   16   |    -   |    -   |    0   |    0   |    0   |
 |Multiplexer|    -   |    -   |    1   |    -   |   45   |    -   |
-|  Register |    -   |    -   |    -   |  1399  |    -   |    -   |
+|  Register |    -   |    -   |    -   |  1403  |    -   |    -   |
 +-----------+--------+--------+--------+--------+--------+--------+
-|   Total   |   16   |    2   |    3   |  2602  |   854  |    0   |
+|   Total   |   16   |    2   |    3   |  2614  |   860  |    0   |
 +-----------+--------+--------+--------+--------+--------+--------+

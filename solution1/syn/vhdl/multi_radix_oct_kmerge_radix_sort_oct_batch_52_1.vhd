@@ -18,10 +18,10 @@ port (
     ap_continue : IN STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    input_51_address0 : OUT STD_LOGIC_VECTOR (16 downto 0);
+    input_51_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
     input_51_ce0 : OUT STD_LOGIC;
     input_51_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
-    multi_radix_oct_kmerge_temp0_51_address0 : OUT STD_LOGIC_VECTOR (16 downto 0);
+    multi_radix_oct_kmerge_temp0_51_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
     multi_radix_oct_kmerge_temp0_51_ce0 : OUT STD_LOGIC;
     multi_radix_oct_kmerge_temp0_51_we0 : OUT STD_LOGIC;
     multi_radix_oct_kmerge_temp0_51_d0 : OUT STD_LOGIC_VECTOR (31 downto 0) );
@@ -57,7 +57,7 @@ architecture behav of multi_radix_oct_kmerge_radix_sort_oct_batch_52_1 is
     constant ap_const_lv4_B : STD_LOGIC_VECTOR (3 downto 0) := "1011";
     constant ap_const_lv4_1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
-    constant ap_const_lv18_1312D : STD_LOGIC_VECTOR (17 downto 0) := "010011000100101101";
+    constant ap_const_lv19_2625A : STD_LOGIC_VECTOR (18 downto 0) := "0100110001001011010";
     constant ap_const_lv32_6 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000110";
 
 attribute shreg_extract : string;
@@ -71,15 +71,15 @@ attribute shreg_extract : string;
     signal ap_CS_fsm_state5 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
     signal icmp_ln27_fu_383_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_fu_571_p2 : STD_LOGIC_VECTOR (17 downto 0);
-    signal mul_ln41_reg_986 : STD_LOGIC_VECTOR (17 downto 0);
+    signal grp_fu_571_p2 : STD_LOGIC_VECTOR (18 downto 0);
+    signal mul_ln41_reg_986 : STD_LOGIC_VECTOR (18 downto 0);
     signal ap_CS_fsm_state8 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state8 : signal is "none";
     signal mul_i_fu_564_p2 : STD_LOGIC_VECTOR (6 downto 0);
     signal mul_i_reg_991 : STD_LOGIC_VECTOR (6 downto 0);
-    signal grp_fu_578_p2 : STD_LOGIC_VECTOR (17 downto 0);
-    signal mul_ln43_reg_996 : STD_LOGIC_VECTOR (17 downto 0);
-    signal bucket_address0 : STD_LOGIC_VECTOR (17 downto 0);
+    signal grp_fu_578_p2 : STD_LOGIC_VECTOR (18 downto 0);
+    signal mul_ln43_reg_996 : STD_LOGIC_VECTOR (18 downto 0);
+    signal bucket_address0 : STD_LOGIC_VECTOR (18 downto 0);
     signal bucket_ce0 : STD_LOGIC;
     signal bucket_we0 : STD_LOGIC;
     signal bucket_d0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -110,11 +110,11 @@ attribute shreg_extract : string;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_ap_done : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_ap_idle : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_ap_ready : STD_LOGIC;
-    signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_bucket_address0 : STD_LOGIC_VECTOR (17 downto 0);
+    signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_bucket_address0 : STD_LOGIC_VECTOR (18 downto 0);
     signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_bucket_ce0 : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_bucket_we0 : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_bucket_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_input_51_address0 : STD_LOGIC_VECTOR (16 downto 0);
+    signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_input_51_address0 : STD_LOGIC_VECTOR (17 downto 0);
     signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_input_51_ce0 : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_bucket_sizes_1118_out_o : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_bucket_sizes_1118_out_o_ap_vld : STD_LOGIC;
@@ -172,9 +172,9 @@ attribute shreg_extract : string;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_ap_done : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_ap_idle : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_ap_ready : STD_LOGIC;
-    signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_bucket_address0 : STD_LOGIC_VECTOR (17 downto 0);
+    signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_bucket_address0 : STD_LOGIC_VECTOR (18 downto 0);
     signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_bucket_ce0 : STD_LOGIC;
-    signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_51_address0 : STD_LOGIC_VECTOR (16 downto 0);
+    signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_51_address0 : STD_LOGIC_VECTOR (17 downto 0);
     signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_51_ce0 : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_51_we0 : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_51_d0 : STD_LOGIC_VECTOR (31 downto 0);
@@ -182,11 +182,11 @@ attribute shreg_extract : string;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_ap_done : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_ap_idle : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_ap_ready : STD_LOGIC;
-    signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_address0 : STD_LOGIC_VECTOR (17 downto 0);
+    signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_address0 : STD_LOGIC_VECTOR (18 downto 0);
     signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_ce0 : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_we0 : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_d0 : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_address1 : STD_LOGIC_VECTOR (17 downto 0);
+    signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_address1 : STD_LOGIC_VECTOR (18 downto 0);
     signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_ce1 : STD_LOGIC;
     signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_sizes_1159_out_o : STD_LOGIC_VECTOR (31 downto 0);
     signal grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_sizes_1159_out_o_ap_vld : STD_LOGIC;
@@ -262,10 +262,10 @@ attribute shreg_extract : string;
     signal p_shl_i_fu_553_p3 : STD_LOGIC_VECTOR (5 downto 0);
     signal p_shl_cast_i_fu_560_p1 : STD_LOGIC_VECTOR (6 downto 0);
     signal zext_ln27_fu_486_p1 : STD_LOGIC_VECTOR (6 downto 0);
-    signal grp_fu_571_p0 : STD_LOGIC_VECTOR (17 downto 0);
-    signal grp_fu_571_p1 : STD_LOGIC_VECTOR (16 downto 0);
-    signal grp_fu_578_p0 : STD_LOGIC_VECTOR (17 downto 0);
-    signal grp_fu_578_p1 : STD_LOGIC_VECTOR (16 downto 0);
+    signal grp_fu_571_p0 : STD_LOGIC_VECTOR (18 downto 0);
+    signal grp_fu_571_p1 : STD_LOGIC_VECTOR (17 downto 0);
+    signal grp_fu_578_p0 : STD_LOGIC_VECTOR (18 downto 0);
+    signal grp_fu_578_p1 : STD_LOGIC_VECTOR (17 downto 0);
     signal grp_fu_571_ce : STD_LOGIC;
     signal ap_CS_fsm_state7 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state7 : signal is "none";
@@ -326,11 +326,11 @@ attribute shreg_extract : string;
         bucket_sizes_1097_reload : IN STD_LOGIC_VECTOR (31 downto 0);
         bucket_sizes_1096_reload : IN STD_LOGIC_VECTOR (31 downto 0);
         bucket_sizes_reload : IN STD_LOGIC_VECTOR (31 downto 0);
-        bucket_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
+        bucket_address0 : OUT STD_LOGIC_VECTOR (18 downto 0);
         bucket_ce0 : OUT STD_LOGIC;
         bucket_we0 : OUT STD_LOGIC;
         bucket_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-        input_51_address0 : OUT STD_LOGIC_VECTOR (16 downto 0);
+        input_51_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
         input_51_ce0 : OUT STD_LOGIC;
         input_51_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
         bucket_sizes_1118_out_i : IN STD_LOGIC_VECTOR (31 downto 0);
@@ -427,10 +427,10 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        bucket_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
+        bucket_address0 : OUT STD_LOGIC_VECTOR (18 downto 0);
         bucket_ce0 : OUT STD_LOGIC;
         bucket_q0 : IN STD_LOGIC_VECTOR (31 downto 0);
-        multi_radix_oct_kmerge_temp0_51_address0 : OUT STD_LOGIC_VECTOR (16 downto 0);
+        multi_radix_oct_kmerge_temp0_51_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
         multi_radix_oct_kmerge_temp0_51_ce0 : OUT STD_LOGIC;
         multi_radix_oct_kmerge_temp0_51_we0 : OUT STD_LOGIC;
         multi_radix_oct_kmerge_temp0_51_d0 : OUT STD_LOGIC_VECTOR (31 downto 0) );
@@ -461,16 +461,16 @@ attribute shreg_extract : string;
         bucket_pointer_505_reload : IN STD_LOGIC_VECTOR (31 downto 0);
         bucket_pointer_504_reload : IN STD_LOGIC_VECTOR (31 downto 0);
         bucket_pointer_503_reload : IN STD_LOGIC_VECTOR (31 downto 0);
-        mul_ln41 : IN STD_LOGIC_VECTOR (17 downto 0);
-        bucket_address0 : OUT STD_LOGIC_VECTOR (17 downto 0);
+        mul_ln41 : IN STD_LOGIC_VECTOR (18 downto 0);
+        bucket_address0 : OUT STD_LOGIC_VECTOR (18 downto 0);
         bucket_ce0 : OUT STD_LOGIC;
         bucket_we0 : OUT STD_LOGIC;
         bucket_d0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-        bucket_address1 : OUT STD_LOGIC_VECTOR (17 downto 0);
+        bucket_address1 : OUT STD_LOGIC_VECTOR (18 downto 0);
         bucket_ce1 : OUT STD_LOGIC;
         bucket_q1 : IN STD_LOGIC_VECTOR (31 downto 0);
         mul_cast_i : IN STD_LOGIC_VECTOR (6 downto 0);
-        mul_ln43 : IN STD_LOGIC_VECTOR (17 downto 0);
+        mul_ln43 : IN STD_LOGIC_VECTOR (18 downto 0);
         bucket_sizes_1159_out_i : IN STD_LOGIC_VECTOR (31 downto 0);
         bucket_sizes_1159_out_o : OUT STD_LOGIC_VECTOR (31 downto 0);
         bucket_sizes_1159_out_o_ap_vld : OUT STD_LOGIC;
@@ -522,7 +522,7 @@ attribute shreg_extract : string;
     end component;
 
 
-    component multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1 IS
+    component multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1 IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -532,10 +532,10 @@ attribute shreg_extract : string;
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
-        din0 : IN STD_LOGIC_VECTOR (17 downto 0);
-        din1 : IN STD_LOGIC_VECTOR (16 downto 0);
+        din0 : IN STD_LOGIC_VECTOR (18 downto 0);
+        din1 : IN STD_LOGIC_VECTOR (17 downto 0);
         ce : IN STD_LOGIC;
-        dout : OUT STD_LOGIC_VECTOR (17 downto 0) );
+        dout : OUT STD_LOGIC_VECTOR (18 downto 0) );
     end component;
 
 
@@ -547,12 +547,12 @@ attribute shreg_extract : string;
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
-        address0 : IN STD_LOGIC_VECTOR (17 downto 0);
+        address0 : IN STD_LOGIC_VECTOR (18 downto 0);
         ce0 : IN STD_LOGIC;
         we0 : IN STD_LOGIC;
         d0 : IN STD_LOGIC_VECTOR (31 downto 0);
         q0 : OUT STD_LOGIC_VECTOR (31 downto 0);
-        address1 : IN STD_LOGIC_VECTOR (17 downto 0);
+        address1 : IN STD_LOGIC_VECTOR (18 downto 0);
         ce1 : IN STD_LOGIC;
         q1 : OUT STD_LOGIC_VECTOR (31 downto 0) );
     end component;
@@ -563,8 +563,8 @@ begin
     bucket_U : component multi_radix_oct_kmerge_radix_sort_oct_batch_52_1_bucket_RAM_AUTO_1R1W
     generic map (
         DataWidth => 32,
-        AddressRange => 156250,
-        AddressWidth => 18)
+        AddressRange => 312500,
+        AddressWidth => 19)
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -806,13 +806,13 @@ begin
         bucket_pointer_512_out_o => grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_pointer_512_out_o,
         bucket_pointer_512_out_o_ap_vld => grp_radix_sort_oct_batch_52_1_Pipeline_input_bucket_fu_298_bucket_pointer_512_out_o_ap_vld);
 
-    mul_mul_18s_17ns_18_4_1_U5458 : component multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1
+    mul_mul_19s_18ns_19_4_1_U5458 : component multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
-        din0_WIDTH => 18,
-        din1_WIDTH => 17,
-        dout_WIDTH => 18)
+        din0_WIDTH => 19,
+        din1_WIDTH => 18,
+        dout_WIDTH => 19)
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -821,13 +821,13 @@ begin
         ce => grp_fu_571_ce,
         dout => grp_fu_571_p2);
 
-    mul_mul_18s_17ns_18_4_1_U5459 : component multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1
+    mul_mul_19s_18ns_19_4_1_U5459 : component multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1
     generic map (
         ID => 1,
         NUM_STAGE => 4,
-        din0_WIDTH => 18,
-        din1_WIDTH => 17,
-        dout_WIDTH => 18)
+        din0_WIDTH => 19,
+        din1_WIDTH => 18,
+        dout_WIDTH => 19)
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -1321,7 +1321,7 @@ begin
         elsif ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
             bucket_address0 <= grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_bucket_address0;
         else 
-            bucket_address0 <= "XXXXXXXXXXXXXXXXXX";
+            bucket_address0 <= "XXXXXXXXXXXXXXXXXXX";
         end if; 
     end process;
 
@@ -1384,8 +1384,8 @@ begin
         end if; 
     end process;
 
-    grp_fu_571_p0 <= bucket_num_16_fu_462_p2(18 - 1 downto 0);
-    grp_fu_571_p1 <= ap_const_lv18_1312D(17 - 1 downto 0);
+    grp_fu_571_p0 <= bucket_num_16_fu_462_p2(19 - 1 downto 0);
+    grp_fu_571_p1 <= ap_const_lv19_2625A(18 - 1 downto 0);
 
     grp_fu_578_ce_assign_proc : process(ap_CS_fsm_state5, ap_CS_fsm_state8, grp_radix_sort_oct_batch_52_1_Pipeline_bucket_pointer_initialization_fu_255_ap_done, ap_CS_fsm_state6, ap_CS_fsm_state7)
     begin
@@ -1396,8 +1396,8 @@ begin
         end if; 
     end process;
 
-    grp_fu_578_p0 <= bucket_num_fu_52(18 - 1 downto 0);
-    grp_fu_578_p1 <= ap_const_lv18_1312D(17 - 1 downto 0);
+    grp_fu_578_p0 <= bucket_num_fu_52(19 - 1 downto 0);
+    grp_fu_578_p1 <= ap_const_lv19_2625A(18 - 1 downto 0);
     grp_radix_sort_oct_batch_52_1_Pipeline_1_fu_220_ap_start <= grp_radix_sort_oct_batch_52_1_Pipeline_1_fu_220_ap_start_reg;
     grp_radix_sort_oct_batch_52_1_Pipeline_bucket_pointer_initialization_fu_255_ap_start <= grp_radix_sort_oct_batch_52_1_Pipeline_bucket_pointer_initialization_fu_255_ap_start_reg;
     grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_ap_start <= grp_radix_sort_oct_batch_52_1_Pipeline_initialization_fu_232_ap_start_reg;

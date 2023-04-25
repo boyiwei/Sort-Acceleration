@@ -17,8 +17,8 @@ module multi_radix_oct_kmerge_multi_radix_oct_kmerge_temp2_0_RAM_AUTO_1R1W_memco
     reset, clk);
 
 parameter DataWidth = 32;
-parameter AddressWidth = 20;
-parameter AddressRange = 625000;
+parameter AddressWidth = 21;
+parameter AddressRange = 1250000;
  
 input[AddressWidth-1:0] address0;
 input ce0;

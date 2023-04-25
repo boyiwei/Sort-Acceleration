@@ -42,10 +42,10 @@ output   ap_done;
 input   ap_continue;
 output   ap_idle;
 output   ap_ready;
-output  [16:0] input_34_address0;
+output  [17:0] input_34_address0;
 output   input_34_ce0;
 input  [31:0] input_34_q0;
-output  [16:0] multi_radix_oct_kmerge_temp0_34_address0;
+output  [17:0] multi_radix_oct_kmerge_temp0_34_address0;
 output   multi_radix_oct_kmerge_temp0_34_ce0;
 output   multi_radix_oct_kmerge_temp0_34_we0;
 output  [31:0] multi_radix_oct_kmerge_temp0_34_d0;
@@ -60,14 +60,14 @@ wire    ap_CS_fsm_state1;
 reg   [3:0] i_69_reg_871;
 wire    ap_CS_fsm_state5;
 wire   [0:0] icmp_ln27_fu_383_p2;
-wire  signed [17:0] grp_fu_571_p2;
-reg   [17:0] mul_ln41_reg_986;
+wire  signed [18:0] grp_fu_571_p2;
+reg   [18:0] mul_ln41_reg_986;
 wire    ap_CS_fsm_state8;
 wire   [6:0] mul_i_fu_564_p2;
 reg   [6:0] mul_i_reg_991;
-wire  signed [17:0] grp_fu_578_p2;
-reg   [17:0] mul_ln43_reg_996;
-reg   [17:0] bucket_address0;
+wire  signed [18:0] grp_fu_578_p2;
+reg   [18:0] mul_ln43_reg_996;
+reg   [18:0] bucket_address0;
 reg    bucket_ce0;
 reg    bucket_we0;
 reg   [31:0] bucket_d0;
@@ -98,11 +98,11 @@ wire    grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_ap_start;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_ap_done;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_ap_idle;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_ap_ready;
-wire   [17:0] grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_bucket_address0;
+wire   [18:0] grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_bucket_address0;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_bucket_ce0;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_bucket_we0;
 wire   [31:0] grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_bucket_d0;
-wire   [16:0] grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_input_34_address0;
+wire   [17:0] grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_input_34_address0;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_input_34_ce0;
 wire   [31:0] grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_bucket_sizes_2505_out_o;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_initialization_fu_232_bucket_sizes_2505_out_o_ap_vld;
@@ -160,9 +160,9 @@ wire    grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_ap_start;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_ap_done;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_ap_idle;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_ap_ready;
-wire   [17:0] grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_bucket_address0;
+wire   [18:0] grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_bucket_address0;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_bucket_ce0;
-wire   [16:0] grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_34_address0;
+wire   [17:0] grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_34_address0;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_34_ce0;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_34_we0;
 wire   [31:0] grp_radix_sort_oct_batch_35_1_Pipeline_output_bucket_fu_291_multi_radix_oct_kmerge_temp0_34_d0;
@@ -170,11 +170,11 @@ wire    grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_ap_start;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_ap_done;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_ap_idle;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_ap_ready;
-wire   [17:0] grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_address0;
+wire   [18:0] grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_address0;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_ce0;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_we0;
 wire   [31:0] grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_d0;
-wire   [17:0] grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_address1;
+wire   [18:0] grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_address1;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_ce1;
 wire   [31:0] grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_sizes_2546_out_o;
 wire    grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_sizes_2546_out_o_ap_vld;
@@ -244,10 +244,10 @@ wire   [31:0] bucket_num_35_fu_462_p2;
 wire   [5:0] p_shl_i_fu_553_p3;
 wire   [6:0] p_shl_cast_i_fu_560_p1;
 wire   [6:0] zext_ln27_fu_486_p1;
-wire  signed [17:0] grp_fu_571_p0;
-wire   [16:0] grp_fu_571_p1;
-wire  signed [17:0] grp_fu_578_p0;
-wire   [16:0] grp_fu_578_p1;
+wire  signed [18:0] grp_fu_571_p0;
+wire   [17:0] grp_fu_571_p1;
+wire  signed [18:0] grp_fu_578_p0;
+wire   [17:0] grp_fu_578_p1;
 reg    grp_fu_571_ce;
 wire    ap_CS_fsm_state7;
 reg    grp_fu_578_ce;
@@ -277,8 +277,8 @@ end
 
 multi_radix_oct_kmerge_radix_sort_oct_batch_35_1_bucket_RAM_AUTO_1R1W #(
     .DataWidth( 32 ),
-    .AddressRange( 156250 ),
-    .AddressWidth( 18 ))
+    .AddressRange( 312500 ),
+    .AddressWidth( 19 ))
 bucket_U(
     .clk(ap_clk),
     .reset(ap_rst),
@@ -521,13 +521,13 @@ multi_radix_oct_kmerge_radix_sort_oct_batch_35_1_Pipeline_input_bucket grp_radix
     .bucket_pointer_1139_out_o_ap_vld(grp_radix_sort_oct_batch_35_1_Pipeline_input_bucket_fu_298_bucket_pointer_1139_out_o_ap_vld)
 );
 
-multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1 #(
+multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1 #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
-    .din0_WIDTH( 18 ),
-    .din1_WIDTH( 17 ),
-    .dout_WIDTH( 18 ))
-mul_mul_18s_17ns_18_4_1_U3673(
+    .din0_WIDTH( 19 ),
+    .din1_WIDTH( 18 ),
+    .dout_WIDTH( 19 ))
+mul_mul_19s_18ns_19_4_1_U3673(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_571_p0),
@@ -536,13 +536,13 @@ mul_mul_18s_17ns_18_4_1_U3673(
     .dout(grp_fu_571_p2)
 );
 
-multi_radix_oct_kmerge_mul_mul_18s_17ns_18_4_1 #(
+multi_radix_oct_kmerge_mul_mul_19s_18ns_19_4_1 #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
-    .din0_WIDTH( 18 ),
-    .din1_WIDTH( 17 ),
-    .dout_WIDTH( 18 ))
-mul_mul_18s_17ns_18_4_1_U3674(
+    .din0_WIDTH( 19 ),
+    .din1_WIDTH( 18 ),
+    .dout_WIDTH( 19 ))
+mul_mul_19s_18ns_19_4_1_U3674(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_578_p0),
@@ -1017,13 +1017,13 @@ end
 
 assign bucket_num_35_fu_462_p2 = (32'd1 - bucket_num_fu_52);
 
-assign grp_fu_571_p0 = bucket_num_35_fu_462_p2[17:0];
+assign grp_fu_571_p0 = bucket_num_35_fu_462_p2[18:0];
 
-assign grp_fu_571_p1 = 18'd78125;
+assign grp_fu_571_p1 = 19'd156250;
 
-assign grp_fu_578_p0 = bucket_num_fu_52[17:0];
+assign grp_fu_578_p0 = bucket_num_fu_52[18:0];
 
-assign grp_fu_578_p1 = 18'd78125;
+assign grp_fu_578_p1 = 19'd156250;
 
 assign grp_radix_sort_oct_batch_35_1_Pipeline_1_fu_220_ap_start = grp_radix_sort_oct_batch_35_1_Pipeline_1_fu_220_ap_start_reg;
 

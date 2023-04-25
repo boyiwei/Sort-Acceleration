@@ -21,8 +21,8 @@ set C_modelArgList {
 	{ bucket_sizes_1024_reload int 32 regular  }
 	{ bucket_sizes_1023_reload int 32 regular  }
 	{ bucket_sizes_reload int 32 regular  }
-	{ bucket int 32 regular {array 156250 { 0 3 } 0 1 }  }
-	{ input_52 int 32 regular {array 78125 { 1 3 } 1 1 }  }
+	{ bucket int 32 regular {array 312500 { 0 3 } 0 1 }  }
+	{ input_52 int 32 regular {array 156250 { 1 3 } 1 1 }  }
 	{ bucket_sizes_1045_out int 32 regular {pointer 2}  }
 	{ bucket_sizes_1044_out int 32 regular {pointer 2}  }
 	{ bucket_sizes_1043_out int 32 regular {pointer 2}  }
@@ -68,11 +68,11 @@ set portList {
 	{ bucket_sizes_1024_reload sc_in sc_lv 32 signal 5 } 
 	{ bucket_sizes_1023_reload sc_in sc_lv 32 signal 6 } 
 	{ bucket_sizes_reload sc_in sc_lv 32 signal 7 } 
-	{ bucket_address0 sc_out sc_lv 18 signal 8 } 
+	{ bucket_address0 sc_out sc_lv 19 signal 8 } 
 	{ bucket_ce0 sc_out sc_logic 1 signal 8 } 
 	{ bucket_we0 sc_out sc_logic 1 signal 8 } 
 	{ bucket_d0 sc_out sc_lv 32 signal 8 } 
-	{ input_52_address0 sc_out sc_lv 17 signal 9 } 
+	{ input_52_address0 sc_out sc_lv 18 signal 9 } 
 	{ input_52_ce0 sc_out sc_logic 1 signal 9 } 
 	{ input_52_q0 sc_in sc_lv 32 signal 9 } 
 	{ bucket_sizes_1045_out_i sc_in sc_lv 32 signal 10 } 
@@ -115,11 +115,11 @@ set NewPortList {[
  	{ "name": "bucket_sizes_1024_reload", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1024_reload", "role": "default" }} , 
  	{ "name": "bucket_sizes_1023_reload", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1023_reload", "role": "default" }} , 
  	{ "name": "bucket_sizes_reload", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_reload", "role": "default" }} , 
- 	{ "name": "bucket_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "bucket", "role": "address0" }} , 
+ 	{ "name": "bucket_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":19, "type": "signal", "bundle":{"name": "bucket", "role": "address0" }} , 
  	{ "name": "bucket_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bucket", "role": "ce0" }} , 
  	{ "name": "bucket_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "bucket", "role": "we0" }} , 
  	{ "name": "bucket_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket", "role": "d0" }} , 
- 	{ "name": "input_52_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":17, "type": "signal", "bundle":{"name": "input_52", "role": "address0" }} , 
+ 	{ "name": "input_52_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":18, "type": "signal", "bundle":{"name": "input_52", "role": "address0" }} , 
  	{ "name": "input_52_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "input_52", "role": "ce0" }} , 
  	{ "name": "input_52_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "input_52", "role": "q0" }} , 
  	{ "name": "bucket_sizes_1045_out_i", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_1045_out", "role": "i" }} , 
@@ -154,7 +154,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "78127", "EstimateLatencyMax" : "78127",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "156252", "EstimateLatencyMax" : "156252",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -212,8 +212,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "78127", "Max" : "78127"}
-	, {"Name" : "Interval", "Min" : "78127", "Max" : "78127"}
+	{"Name" : "Latency", "Min" : "156252", "Max" : "156252"}
+	, {"Name" : "Interval", "Min" : "156252", "Max" : "156252"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -229,8 +229,8 @@ set Spec2ImplPortList {
 	bucket_sizes_1024_reload { ap_none {  { bucket_sizes_1024_reload in_data 0 32 } } }
 	bucket_sizes_1023_reload { ap_none {  { bucket_sizes_1023_reload in_data 0 32 } } }
 	bucket_sizes_reload { ap_none {  { bucket_sizes_reload in_data 0 32 } } }
-	bucket { ap_memory {  { bucket_address0 mem_address 1 18 }  { bucket_ce0 mem_ce 1 1 }  { bucket_we0 mem_we 1 1 }  { bucket_d0 mem_din 1 32 } } }
-	input_52 { ap_memory {  { input_52_address0 mem_address 1 17 }  { input_52_ce0 mem_ce 1 1 }  { input_52_q0 in_data 0 32 } } }
+	bucket { ap_memory {  { bucket_address0 mem_address 1 19 }  { bucket_ce0 mem_ce 1 1 }  { bucket_we0 mem_we 1 1 }  { bucket_d0 mem_din 1 32 } } }
+	input_52 { ap_memory {  { input_52_address0 mem_address 1 18 }  { input_52_ce0 mem_ce 1 1 }  { input_52_q0 in_data 0 32 } } }
 	bucket_sizes_1045_out { ap_ovld {  { bucket_sizes_1045_out_i in_data 0 32 }  { bucket_sizes_1045_out_o out_data 1 32 }  { bucket_sizes_1045_out_o_ap_vld out_vld 1 1 } } }
 	bucket_sizes_1044_out { ap_ovld {  { bucket_sizes_1044_out_i in_data 0 32 }  { bucket_sizes_1044_out_o out_data 1 32 }  { bucket_sizes_1044_out_o_ap_vld out_vld 1 1 } } }
 	bucket_sizes_1043_out { ap_ovld {  { bucket_sizes_1043_out_i in_data 0 32 }  { bucket_sizes_1043_out_o out_data 1 32 }  { bucket_sizes_1043_out_o_ap_vld out_vld 1 1 } } }

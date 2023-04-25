@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'radix_sort_oct_batch_40_1_Pipeline_output_bucket'
 ================================================================
-* Date:           Mon Apr 24 11:04:35 2023
+* Date:           Mon Apr 24 11:30:08 2023
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        sort_seperate_bucket
@@ -25,24 +25,24 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    78127|    78127|  0.781 ms|  0.781 ms|  78127|  78127|       no|
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   156252|   156252|  1.563 ms|  1.563 ms|  156252|  156252|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +-----------------+---------+---------+----------+-----------+-----------+-------+----------+
-        |                 |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
-        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
-        +-----------------+---------+---------+----------+-----------+-----------+-------+----------+
-        |- output_bucket  |    78125|    78125|         2|          1|          1|  78125|       yes|
-        +-----------------+---------+---------+----------+-----------+-----------+-------+----------+
+        +-----------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- output_bucket  |   156250|   156250|         2|          1|          1|  156250|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+--------+----------+
 
 
 
@@ -54,14 +54,14 @@
 |         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
 +---------------------+---------+------+---------+---------+-----+
 |DSP                  |        -|     -|        -|        -|    -|
-|Expression           |        -|     -|        0|       39|    -|
+|Expression           |        -|     -|        0|       40|    -|
 |FIFO                 |        -|     -|        -|        -|    -|
 |Instance             |        -|     -|        -|        -|    -|
 |Memory               |        -|     -|        -|        -|    -|
 |Multiplexer          |        -|     -|        -|       36|    -|
-|Register             |        -|     -|       37|        -|    -|
+|Register             |        -|     -|       39|        -|    -|
 +---------------------+---------+------+---------+---------+-----+
-|Total                |        0|     0|       37|       75|    0|
+|Total                |        0|     0|       39|       76|    0|
 +---------------------+---------+------+---------+---------+-----+
 |Available SLR        |     1344|  3008|   869120|   434560|  320|
 +---------------------+---------+------+---------+---------+-----+
@@ -89,11 +89,11 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |add_ln53_fu_75_p2   |         +|   0|  0|  24|          17|           1|
-    |icmp_ln53_fu_69_p2  |      icmp|   0|  0|  13|          17|          17|
+    |add_ln53_fu_75_p2   |         +|   0|  0|  25|          18|           1|
+    |icmp_ln53_fu_69_p2  |      icmp|   0|  0|  13|          18|          18|
     |ap_enable_pp0       |       xor|   0|  0|   2|           1|           2|
     +--------------------+----------+----+---+----+------------+------------+
-    |Total               |          |   0|  0|  39|          35|          20|
+    |Total               |          |   0|  0|  40|          37|          21|
     +--------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -102,10 +102,10 @@
     +-------------------------+----+-----------+-----+-----------+
     |ap_done_int              |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
-    |ap_sig_allocacmp_k_29    |   9|          2|   17|         34|
-    |k_fu_30                  |   9|          2|   17|         34|
+    |ap_sig_allocacmp_k_29    |   9|          2|   18|         36|
+    |k_fu_30                  |   9|          2|   18|         36|
     +-------------------------+----+-----------+-----+-----------+
-    |Total                    |  36|          8|   36|         72|
+    |Total                    |  36|          8|   38|         76|
     +-------------------------+----+-----------+-----+-----------+
 
     * Register: 
@@ -115,10 +115,10 @@
     |ap_CS_fsm                |   1|   0|    1|          0|
     |ap_done_reg              |   1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
-    |k_cast_i_reg_101         |  17|   0|   64|         47|
-    |k_fu_30                  |  17|   0|   17|          0|
+    |k_cast_i_reg_101         |  18|   0|   64|         46|
+    |k_fu_30                  |  18|   0|   18|          0|
     +-------------------------+----+----+-----+-----------+
-    |Total                    |  37|   0|   84|         47|
+    |Total                    |  39|   0|   85|         46|
     +-------------------------+----+----+-----+-----------+
 
 
@@ -136,10 +136,10 @@
 |ap_done                                   |  out|    1|  ap_ctrl_hs|  radix_sort_oct_batch.40.1_Pipeline_output_bucket|  return value|
 |ap_idle                                   |  out|    1|  ap_ctrl_hs|  radix_sort_oct_batch.40.1_Pipeline_output_bucket|  return value|
 |ap_ready                                  |  out|    1|  ap_ctrl_hs|  radix_sort_oct_batch.40.1_Pipeline_output_bucket|  return value|
-|bucket_address0                           |  out|   18|   ap_memory|                                            bucket|         array|
+|bucket_address0                           |  out|   19|   ap_memory|                                            bucket|         array|
 |bucket_ce0                                |  out|    1|   ap_memory|                                            bucket|         array|
 |bucket_q0                                 |   in|   32|   ap_memory|                                            bucket|         array|
-|multi_radix_oct_kmerge_temp0_39_address0  |  out|   17|   ap_memory|                   multi_radix_oct_kmerge_temp0_39|         array|
+|multi_radix_oct_kmerge_temp0_39_address0  |  out|   18|   ap_memory|                   multi_radix_oct_kmerge_temp0_39|         array|
 |multi_radix_oct_kmerge_temp0_39_ce0       |  out|    1|   ap_memory|                   multi_radix_oct_kmerge_temp0_39|         array|
 |multi_radix_oct_kmerge_temp0_39_we0       |  out|    1|   ap_memory|                   multi_radix_oct_kmerge_temp0_39|         array|
 |multi_radix_oct_kmerge_temp0_39_d0        |  out|   32|   ap_memory|                   multi_radix_oct_kmerge_temp0_39|         array|
