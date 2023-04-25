@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/single_radix_sort_hex.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_radix_sort_hex.pp.0.c
-        Offset:          11506245
+        Offset:          11506253
         Length:          0
         ReplacementText: 'VITIS_LOOP_73_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/single_radix_sort_hex.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_radix_sort_hex.pp.0.c
-        Offset:          11506333
+        Offset:          11506342
         Length:          0
         ReplacementText: 'VITIS_LOOP_77_2: '
 ...

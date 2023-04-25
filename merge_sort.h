@@ -16,4 +16,8 @@ void merge_sort_batch4(int input1[16*batch_size], int input2[16*batch_size], int
 
 void merge_sort_batch5(int input1[32*batch_size], int input2[32*batch_size], int sorted_data[64*batch_size]);
 
-void loser_tree(int input[64][batch_size], int output[64 * batch_size]);
+void loser_tree_64(int input[64][batch_size], int output[64 * batch_size]);
+
+void loser_tree_32(int input[32][batch_size], int output[32*batch_size]);
+
+void loser_tree_16(int input[16][batch_size], int output[16*batch_size]);

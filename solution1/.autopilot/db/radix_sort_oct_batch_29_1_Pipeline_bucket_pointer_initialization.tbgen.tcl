@@ -1,0 +1,330 @@
+set moduleName radix_sort_oct_batch_29_1_Pipeline_bucket_pointer_initialization
+set isTopModule 0
+set isCombinational 0
+set isDatapathOnly 0
+set isPipelined 1
+set pipeline_type none
+set FunctionProtocol ap_ctrl_hs
+set isOneStateSeq 0
+set ProfileFlag 0
+set StallSigGenFlag 0
+set isEnableWaveformDebug 1
+set hasInterrupt 0
+set C_modelName {radix_sort_oct_batch.29.1_Pipeline_bucket_pointer_initialization}
+set C_modelType { void 0 }
+set C_modelArgList {
+	{ bucket_sizes_3033 int 32 regular  }
+	{ bucket_sizes_3032 int 32 regular  }
+	{ bucket_sizes_3031 int 32 regular  }
+	{ bucket_sizes_3030 int 32 regular  }
+	{ bucket_sizes_3029 int 32 regular  }
+	{ bucket_sizes_3028 int 32 regular  }
+	{ bucket_sizes_3027 int 32 regular  }
+	{ bucket_sizes_3026 int 32 regular  }
+	{ bucket_pointer_1360 int 32 regular  }
+	{ bucket_pointer_1359 int 32 regular  }
+	{ bucket_pointer_1358 int 32 regular  }
+	{ bucket_pointer_1357 int 32 regular  }
+	{ bucket_pointer_1356 int 32 regular  }
+	{ bucket_pointer_1355 int 32 regular  }
+	{ bucket_pointer_1354 int 32 regular  }
+	{ bucket_pointer int 32 regular  }
+	{ bucket_sizes_3041_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_3040_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_3039_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_3038_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_3037_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_3036_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_3035_out int 32 regular {pointer 1}  }
+	{ bucket_sizes_3034_out int 32 regular {pointer 1}  }
+	{ bucket_pointer_1368_out int 32 regular {pointer 1}  }
+	{ bucket_pointer_1367_out int 32 regular {pointer 1}  }
+	{ bucket_pointer_1366_out int 32 regular {pointer 1}  }
+	{ bucket_pointer_1365_out int 32 regular {pointer 1}  }
+	{ bucket_pointer_1364_out int 32 regular {pointer 1}  }
+	{ bucket_pointer_1363_out int 32 regular {pointer 1}  }
+	{ bucket_pointer_1362_out int 32 regular {pointer 1}  }
+	{ bucket_pointer_1361_out int 32 regular {pointer 1}  }
+}
+set C_modelArgMapList {[ 
+	{ "Name" : "bucket_sizes_3033", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_sizes_3032", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_sizes_3031", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_sizes_3030", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_sizes_3029", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_sizes_3028", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_sizes_3027", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_sizes_3026", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_pointer_1360", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_pointer_1359", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_pointer_1358", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_pointer_1357", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_pointer_1356", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_pointer_1355", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_pointer_1354", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_pointer", "interface" : "wire", "bitwidth" : 32, "direction" : "READONLY"} , 
+ 	{ "Name" : "bucket_sizes_3041_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_3040_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_3039_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_3038_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_3037_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_3036_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_3035_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_sizes_3034_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_pointer_1368_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_pointer_1367_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_pointer_1366_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_pointer_1365_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_pointer_1364_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_pointer_1363_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_pointer_1362_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} , 
+ 	{ "Name" : "bucket_pointer_1361_out", "interface" : "wire", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
+# RTL Port declarations: 
+set portNum 54
+set portList { 
+	{ ap_clk sc_in sc_logic 1 clock -1 } 
+	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
+	{ ap_start sc_in sc_logic 1 start -1 } 
+	{ ap_done sc_out sc_logic 1 predone -1 } 
+	{ ap_idle sc_out sc_logic 1 done -1 } 
+	{ ap_ready sc_out sc_logic 1 ready -1 } 
+	{ bucket_sizes_3033 sc_in sc_lv 32 signal 0 } 
+	{ bucket_sizes_3032 sc_in sc_lv 32 signal 1 } 
+	{ bucket_sizes_3031 sc_in sc_lv 32 signal 2 } 
+	{ bucket_sizes_3030 sc_in sc_lv 32 signal 3 } 
+	{ bucket_sizes_3029 sc_in sc_lv 32 signal 4 } 
+	{ bucket_sizes_3028 sc_in sc_lv 32 signal 5 } 
+	{ bucket_sizes_3027 sc_in sc_lv 32 signal 6 } 
+	{ bucket_sizes_3026 sc_in sc_lv 32 signal 7 } 
+	{ bucket_pointer_1360 sc_in sc_lv 32 signal 8 } 
+	{ bucket_pointer_1359 sc_in sc_lv 32 signal 9 } 
+	{ bucket_pointer_1358 sc_in sc_lv 32 signal 10 } 
+	{ bucket_pointer_1357 sc_in sc_lv 32 signal 11 } 
+	{ bucket_pointer_1356 sc_in sc_lv 32 signal 12 } 
+	{ bucket_pointer_1355 sc_in sc_lv 32 signal 13 } 
+	{ bucket_pointer_1354 sc_in sc_lv 32 signal 14 } 
+	{ bucket_pointer sc_in sc_lv 32 signal 15 } 
+	{ bucket_sizes_3041_out sc_out sc_lv 32 signal 16 } 
+	{ bucket_sizes_3041_out_ap_vld sc_out sc_logic 1 outvld 16 } 
+	{ bucket_sizes_3040_out sc_out sc_lv 32 signal 17 } 
+	{ bucket_sizes_3040_out_ap_vld sc_out sc_logic 1 outvld 17 } 
+	{ bucket_sizes_3039_out sc_out sc_lv 32 signal 18 } 
+	{ bucket_sizes_3039_out_ap_vld sc_out sc_logic 1 outvld 18 } 
+	{ bucket_sizes_3038_out sc_out sc_lv 32 signal 19 } 
+	{ bucket_sizes_3038_out_ap_vld sc_out sc_logic 1 outvld 19 } 
+	{ bucket_sizes_3037_out sc_out sc_lv 32 signal 20 } 
+	{ bucket_sizes_3037_out_ap_vld sc_out sc_logic 1 outvld 20 } 
+	{ bucket_sizes_3036_out sc_out sc_lv 32 signal 21 } 
+	{ bucket_sizes_3036_out_ap_vld sc_out sc_logic 1 outvld 21 } 
+	{ bucket_sizes_3035_out sc_out sc_lv 32 signal 22 } 
+	{ bucket_sizes_3035_out_ap_vld sc_out sc_logic 1 outvld 22 } 
+	{ bucket_sizes_3034_out sc_out sc_lv 32 signal 23 } 
+	{ bucket_sizes_3034_out_ap_vld sc_out sc_logic 1 outvld 23 } 
+	{ bucket_pointer_1368_out sc_out sc_lv 32 signal 24 } 
+	{ bucket_pointer_1368_out_ap_vld sc_out sc_logic 1 outvld 24 } 
+	{ bucket_pointer_1367_out sc_out sc_lv 32 signal 25 } 
+	{ bucket_pointer_1367_out_ap_vld sc_out sc_logic 1 outvld 25 } 
+	{ bucket_pointer_1366_out sc_out sc_lv 32 signal 26 } 
+	{ bucket_pointer_1366_out_ap_vld sc_out sc_logic 1 outvld 26 } 
+	{ bucket_pointer_1365_out sc_out sc_lv 32 signal 27 } 
+	{ bucket_pointer_1365_out_ap_vld sc_out sc_logic 1 outvld 27 } 
+	{ bucket_pointer_1364_out sc_out sc_lv 32 signal 28 } 
+	{ bucket_pointer_1364_out_ap_vld sc_out sc_logic 1 outvld 28 } 
+	{ bucket_pointer_1363_out sc_out sc_lv 32 signal 29 } 
+	{ bucket_pointer_1363_out_ap_vld sc_out sc_logic 1 outvld 29 } 
+	{ bucket_pointer_1362_out sc_out sc_lv 32 signal 30 } 
+	{ bucket_pointer_1362_out_ap_vld sc_out sc_logic 1 outvld 30 } 
+	{ bucket_pointer_1361_out sc_out sc_lv 32 signal 31 } 
+	{ bucket_pointer_1361_out_ap_vld sc_out sc_logic 1 outvld 31 } 
+}
+set NewPortList {[ 
+	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
+ 	{ "name": "ap_rst", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "reset", "bundle":{"name": "ap_rst", "role": "default" }} , 
+ 	{ "name": "ap_start", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "start", "bundle":{"name": "ap_start", "role": "default" }} , 
+ 	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
+ 	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
+ 	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3033", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3033", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3032", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3032", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3031", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3031", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3030", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3030", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3029", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3029", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3028", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3028", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3027", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3027", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3026", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3026", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1360", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1360", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1359", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1359", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1358", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1358", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1357", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1357", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1356", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1356", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1355", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1355", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1354", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1354", "role": "default" }} , 
+ 	{ "name": "bucket_pointer", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3041_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3041_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3041_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_3041_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_3040_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3040_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3040_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_3040_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_3039_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3039_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3039_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_3039_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_3038_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3038_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3038_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_3038_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_3037_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3037_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3037_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_3037_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_3036_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3036_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3036_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_3036_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_3035_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3035_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3035_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_3035_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_sizes_3034_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_sizes_3034_out", "role": "default" }} , 
+ 	{ "name": "bucket_sizes_3034_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_sizes_3034_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_pointer_1368_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1368_out", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1368_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_pointer_1368_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_pointer_1367_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1367_out", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1367_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_pointer_1367_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_pointer_1366_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1366_out", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1366_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_pointer_1366_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_pointer_1365_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1365_out", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1365_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_pointer_1365_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_pointer_1364_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1364_out", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1364_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_pointer_1364_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_pointer_1363_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1363_out", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1363_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_pointer_1363_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_pointer_1362_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1362_out", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1362_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_pointer_1362_out", "role": "ap_vld" }} , 
+ 	{ "name": "bucket_pointer_1361_out", "direction": "out", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "bucket_pointer_1361_out", "role": "default" }} , 
+ 	{ "name": "bucket_pointer_1361_out_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "bucket_pointer_1361_out", "role": "ap_vld" }}  ]}
+
+set RtlHierarchyInfo {[
+	{"ID" : "0", "Level" : "0", "Path" : "`AUTOTB_DUT_INST", "Parent" : "", "Child" : ["1", "2"],
+		"CDFG" : "radix_sort_oct_batch_29_1_Pipeline_bucket_pointer_initialization",
+		"Protocol" : "ap_ctrl_hs",
+		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
+		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
+		"II" : "0",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "10", "EstimateLatencyMax" : "10",
+		"Combinational" : "0",
+		"Datapath" : "0",
+		"ClockEnable" : "0",
+		"HasSubDataflow" : "0",
+		"InDataflowNetwork" : "0",
+		"HasNonBlockingOperation" : "0",
+		"IsBlackBox" : "0",
+		"Port" : [
+			{"Name" : "bucket_sizes_3033", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_3032", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_3031", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_3030", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_3029", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_3028", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_3027", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_3026", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_1360", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_1359", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_1358", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_1357", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_1356", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_1355", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer_1354", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_pointer", "Type" : "None", "Direction" : "I"},
+			{"Name" : "bucket_sizes_3041_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_3040_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_3039_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_3038_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_3037_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_3036_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_3035_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_sizes_3034_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_1368_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_1367_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_1366_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_1365_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_1364_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_1363_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_1362_out", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "bucket_pointer_1361_out", "Type" : "Vld", "Direction" : "O"}],
+		"Loop" : [
+			{"Name" : "bucket_pointer_initialization", "PipelineType" : "UPC",
+				"LoopDec" : {"FSMBitwidth" : "1", "FirstState" : "ap_ST_fsm_pp0_stage0", "FirstStateIter" : "ap_enable_reg_pp0_iter1", "FirstStateBlock" : "ap_block_pp0_stage0_subdone", "LastState" : "ap_ST_fsm_pp0_stage0", "LastStateIter" : "ap_enable_reg_pp0_iter1", "LastStateBlock" : "ap_block_pp0_stage0_subdone", "QuitState" : "ap_ST_fsm_pp0_stage0", "QuitStateIter" : "ap_enable_reg_pp0_iter1", "QuitStateBlock" : "ap_block_pp0_stage0_subdone", "OneDepthLoop" : "0", "has_ap_ctrl" : "1", "has_continue" : "0"}}]},
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.mux_83_32_1_1_U2970", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.flow_control_loop_pipe_sequential_init_U", "Parent" : "0"}]}
+
+
+set ArgLastReadFirstWriteLatency {
+	radix_sort_oct_batch_29_1_Pipeline_bucket_pointer_initialization {
+		bucket_sizes_3033 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_3032 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_3031 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_3030 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_3029 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_3028 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_3027 {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_3026 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_1360 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_1359 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_1358 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_1357 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_1356 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_1355 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer_1354 {Type I LastRead 0 FirstWrite -1}
+		bucket_pointer {Type I LastRead 0 FirstWrite -1}
+		bucket_sizes_3041_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_3040_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_3039_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_3038_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_3037_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_3036_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_3035_out {Type O LastRead -1 FirstWrite 1}
+		bucket_sizes_3034_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_1368_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_1367_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_1366_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_1365_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_1364_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_1363_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_1362_out {Type O LastRead -1 FirstWrite 1}
+		bucket_pointer_1361_out {Type O LastRead -1 FirstWrite 1}}}
+
+set hasDtUnsupportedChannel 0
+
+set PerformanceInfo {[
+	{"Name" : "Latency", "Min" : "10", "Max" : "10"}
+	, {"Name" : "Interval", "Min" : "10", "Max" : "10"}
+]}
+
+set PipelineEnableSignalInfo {[
+	{"Pipeline" : "0", "EnableSignal" : "ap_enable_pp0"}
+]}
+
+set Spec2ImplPortList { 
+	bucket_sizes_3033 { ap_none {  { bucket_sizes_3033 in_data 0 32 } } }
+	bucket_sizes_3032 { ap_none {  { bucket_sizes_3032 in_data 0 32 } } }
+	bucket_sizes_3031 { ap_none {  { bucket_sizes_3031 in_data 0 32 } } }
+	bucket_sizes_3030 { ap_none {  { bucket_sizes_3030 in_data 0 32 } } }
+	bucket_sizes_3029 { ap_none {  { bucket_sizes_3029 in_data 0 32 } } }
+	bucket_sizes_3028 { ap_none {  { bucket_sizes_3028 in_data 0 32 } } }
+	bucket_sizes_3027 { ap_none {  { bucket_sizes_3027 in_data 0 32 } } }
+	bucket_sizes_3026 { ap_none {  { bucket_sizes_3026 in_data 0 32 } } }
+	bucket_pointer_1360 { ap_none {  { bucket_pointer_1360 in_data 0 32 } } }
+	bucket_pointer_1359 { ap_none {  { bucket_pointer_1359 in_data 0 32 } } }
+	bucket_pointer_1358 { ap_none {  { bucket_pointer_1358 in_data 0 32 } } }
+	bucket_pointer_1357 { ap_none {  { bucket_pointer_1357 in_data 0 32 } } }
+	bucket_pointer_1356 { ap_none {  { bucket_pointer_1356 in_data 0 32 } } }
+	bucket_pointer_1355 { ap_none {  { bucket_pointer_1355 in_data 0 32 } } }
+	bucket_pointer_1354 { ap_none {  { bucket_pointer_1354 in_data 0 32 } } }
+	bucket_pointer { ap_none {  { bucket_pointer in_data 0 32 } } }
+	bucket_sizes_3041_out { ap_vld {  { bucket_sizes_3041_out out_data 1 32 }  { bucket_sizes_3041_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_3040_out { ap_vld {  { bucket_sizes_3040_out out_data 1 32 }  { bucket_sizes_3040_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_3039_out { ap_vld {  { bucket_sizes_3039_out out_data 1 32 }  { bucket_sizes_3039_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_3038_out { ap_vld {  { bucket_sizes_3038_out out_data 1 32 }  { bucket_sizes_3038_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_3037_out { ap_vld {  { bucket_sizes_3037_out out_data 1 32 }  { bucket_sizes_3037_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_3036_out { ap_vld {  { bucket_sizes_3036_out out_data 1 32 }  { bucket_sizes_3036_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_3035_out { ap_vld {  { bucket_sizes_3035_out out_data 1 32 }  { bucket_sizes_3035_out_ap_vld out_vld 1 1 } } }
+	bucket_sizes_3034_out { ap_vld {  { bucket_sizes_3034_out out_data 1 32 }  { bucket_sizes_3034_out_ap_vld out_vld 1 1 } } }
+	bucket_pointer_1368_out { ap_vld {  { bucket_pointer_1368_out out_data 1 32 }  { bucket_pointer_1368_out_ap_vld out_vld 1 1 } } }
+	bucket_pointer_1367_out { ap_vld {  { bucket_pointer_1367_out out_data 1 32 }  { bucket_pointer_1367_out_ap_vld out_vld 1 1 } } }
+	bucket_pointer_1366_out { ap_vld {  { bucket_pointer_1366_out out_data 1 32 }  { bucket_pointer_1366_out_ap_vld out_vld 1 1 } } }
+	bucket_pointer_1365_out { ap_vld {  { bucket_pointer_1365_out out_data 1 32 }  { bucket_pointer_1365_out_ap_vld out_vld 1 1 } } }
+	bucket_pointer_1364_out { ap_vld {  { bucket_pointer_1364_out out_data 1 32 }  { bucket_pointer_1364_out_ap_vld out_vld 1 1 } } }
+	bucket_pointer_1363_out { ap_vld {  { bucket_pointer_1363_out out_data 1 32 }  { bucket_pointer_1363_out_ap_vld out_vld 1 1 } } }
+	bucket_pointer_1362_out { ap_vld {  { bucket_pointer_1362_out out_data 1 32 }  { bucket_pointer_1362_out_ap_vld out_vld 1 1 } } }
+	bucket_pointer_1361_out { ap_vld {  { bucket_pointer_1361_out out_data 1 32 }  { bucket_pointer_1361_out_ap_vld out_vld 1 1 } } }
+}

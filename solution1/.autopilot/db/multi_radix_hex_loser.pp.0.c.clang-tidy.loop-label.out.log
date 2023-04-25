@@ -1,20 +1,60 @@
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:948:2: warning: Added loop label VITIS_LOOP_15_1:   [xilinx-label-all-loops]
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:944:2: warning: Added loop label VITIS_LOOP_15_1:   [xilinx-label-all-loops]
  for(i=0; i<64; i++){
  ^~~
  VITIS_LOOP_15_1: 
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:948:2: note: FIX-IT applied suggested code changes
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1000970:2: warning: Added loop label VITIS_LOOP_35_1:   [xilinx-label-all-loops]
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:944:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:962:2: warning: Added loop label VITIS_LOOP_33_1:   [xilinx-label-all-loops]
+ for(i=0; i<32; i++){
+ ^~~
+ VITIS_LOOP_33_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:962:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:980:2: warning: Added loop label VITIS_LOOP_51_1:   [xilinx-label-all-loops]
+ for(i=0; i<16; i++){
+ ^~~
+ VITIS_LOOP_51_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:980:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1001002:2: warning: Added loop label VITIS_LOOP_71_1:   [xilinx-label-all-loops]
  for(i=0; i<64; i++){
  ^~~
- VITIS_LOOP_35_1: 
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1000970:2: note: FIX-IT applied suggested code changes
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1000971:3: warning: Added loop label VITIS_LOOP_36_2:   [xilinx-label-all-loops]
-  for(j=0; j<1000000/64; j++){
+ VITIS_LOOP_71_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1001002:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1001003:3: warning: Added loop label VITIS_LOOP_72_2:   [xilinx-label-all-loops]
+  for(j=0; j<10000000/64; j++){
   ^~~
-  VITIS_LOOP_36_2: 
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1000971:3: note: FIX-IT applied suggested code changes
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1000976:2: warning: Added loop label VITIS_LOOP_41_3:   [xilinx-label-all-loops]
- for(i=0; i<64*1000000/64; i++){
+  VITIS_LOOP_72_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1001003:3: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1001008:2: warning: Added loop label VITIS_LOOP_77_3:   [xilinx-label-all-loops]
+ for(i=0; i<64*10000000/64; i++){
  ^~~
- VITIS_LOOP_41_3: 
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1000976:2: note: FIX-IT applied suggested code changes
+ VITIS_LOOP_77_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:1001008:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:2001026:2: warning: Added loop label VITIS_LOOP_93_1:   [xilinx-label-all-loops]
+ for(i=0; i<32; i++){
+ ^~~
+ VITIS_LOOP_93_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:2001026:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:2001027:3: warning: Added loop label VITIS_LOOP_94_2:   [xilinx-label-all-loops]
+  for(j=0; j<10000000/64; j++){
+  ^~~
+  VITIS_LOOP_94_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:2001027:3: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:2001032:2: warning: Added loop label VITIS_LOOP_99_3:   [xilinx-label-all-loops]
+ for(i=0; i<32*10000000/64; i++){
+ ^~~
+ VITIS_LOOP_99_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:2001032:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:3001050:2: warning: Added loop label VITIS_LOOP_115_1:   [xilinx-label-all-loops]
+ for(i=0; i<16; i++){
+ ^~~
+ VITIS_LOOP_115_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:3001050:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:3001051:3: warning: Added loop label VITIS_LOOP_116_2:   [xilinx-label-all-loops]
+  for(j=0; j<10000000/64; j++){
+  ^~~
+  VITIS_LOOP_116_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:3001051:3: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:3001056:2: warning: Added loop label VITIS_LOOP_121_3:   [xilinx-label-all-loops]
+ for(i=0; i<16*10000000/64; i++){
+ ^~~
+ VITIS_LOOP_121_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c:3001056:2: note: FIX-IT applied suggested code changes

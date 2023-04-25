@@ -1,0 +1,235 @@
+
+
+================================================================
+== Vitis HLS Report for 'radix_sort_oct_batch_3_1_Pipeline_bucket_pointer_initialization'
+================================================================
+* Date:           Tue Apr 25 13:56:04 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        sort_seperate_bucket
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu280-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.851 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       10|       10|  0.100 us|  0.100 us|   10|   10|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |            Loop Name            |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- bucket_pointer_initialization  |        8|        8|         1|          1|          1|     8|       yes|
+        +---------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       78|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|       43|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      180|    -|
+|Register             |        -|     -|      551|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|      551|      301|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------+---------------+---------+----+---+----+-----+
+    |      Instance      |     Module    | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------+---------------+---------+----+---+----+-----+
+    |mux_83_32_1_1_U240  |mux_83_32_1_1  |        0|   0|  0|  43|    0|
+    +--------------------+---------------+---------+----+---+----+-----+
+    |Total               |               |        0|   0|  0|  43|    0|
+    +--------------------+---------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |         Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |add_ln33_fu_490_p2             |         +|   0|  0|  12|           4|           1|
+    |next_bucket_pointer_fu_546_p2  |         +|   0|  0|  39|          32|          32|
+    |ap_condition_321               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_324               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_327               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_330               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_333               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_336               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_339               |       and|   0|  0|   2|           1|           1|
+    |ap_condition_342               |       and|   0|  0|   2|           1|           1|
+    |icmp_ln33_fu_484_p2            |      icmp|   0|  0|   9|           4|           5|
+    |ap_enable_pp0                  |       xor|   0|  0|   2|           1|           2|
+    +-------------------------------+----------+----+---+----+------------+------------+
+    |Total                          |          |   0|  0|  78|          49|          48|
+    +-------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_done_int                |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1    |   9|          2|    1|          2|
+    |bucket_pointer_721_fu_112  |   9|          2|   32|         64|
+    |bucket_pointer_722_fu_116  |   9|          2|   32|         64|
+    |bucket_pointer_723_fu_120  |   9|          2|   32|         64|
+    |bucket_pointer_724_fu_124  |   9|          2|   32|         64|
+    |bucket_pointer_725_fu_128  |   9|          2|   32|         64|
+    |bucket_pointer_726_fu_132  |   9|          2|   32|         64|
+    |bucket_pointer_727_fu_136  |   9|          2|   32|         64|
+    |bucket_pointer_728_fu_140  |   9|          2|   32|         64|
+    |bucket_pointer_729_fu_144  |   9|          2|   32|         64|
+    |bucket_sizes_834_fu_152    |   9|          2|   32|         64|
+    |bucket_sizes_835_fu_156    |   9|          2|   32|         64|
+    |bucket_sizes_836_fu_160    |   9|          2|   32|         64|
+    |bucket_sizes_837_fu_164    |   9|          2|   32|         64|
+    |bucket_sizes_838_fu_168    |   9|          2|   32|         64|
+    |bucket_sizes_839_fu_172    |   9|          2|   32|         64|
+    |bucket_sizes_840_fu_176    |   9|          2|   32|         64|
+    |bucket_sizes_fu_148        |   9|          2|   32|         64|
+    |m_fu_108                   |   9|          2|    4|          8|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 180|         40|  550|       1100|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------+----+----+-----+-----------+
+    |            Name           | FF | LUT| Bits| Const Bits|
+    +---------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                  |   1|   0|    1|          0|
+    |ap_done_reg                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1    |   1|   0|    1|          0|
+    |bucket_pointer_721_fu_112  |  32|   0|   32|          0|
+    |bucket_pointer_722_fu_116  |  32|   0|   32|          0|
+    |bucket_pointer_723_fu_120  |  32|   0|   32|          0|
+    |bucket_pointer_724_fu_124  |  32|   0|   32|          0|
+    |bucket_pointer_725_fu_128  |  32|   0|   32|          0|
+    |bucket_pointer_726_fu_132  |  32|   0|   32|          0|
+    |bucket_pointer_727_fu_136  |  32|   0|   32|          0|
+    |bucket_pointer_728_fu_140  |  32|   0|   32|          0|
+    |bucket_pointer_729_fu_144  |  32|   0|   32|          0|
+    |bucket_sizes_834_fu_152    |  32|   0|   32|          0|
+    |bucket_sizes_835_fu_156    |  32|   0|   32|          0|
+    |bucket_sizes_836_fu_160    |  32|   0|   32|          0|
+    |bucket_sizes_837_fu_164    |  32|   0|   32|          0|
+    |bucket_sizes_838_fu_168    |  32|   0|   32|          0|
+    |bucket_sizes_839_fu_172    |  32|   0|   32|          0|
+    |bucket_sizes_840_fu_176    |  32|   0|   32|          0|
+    |bucket_sizes_fu_148        |  32|   0|   32|          0|
+    |m_fu_108                   |   4|   0|    4|          0|
+    +---------------------------+----+----+-----+-----------+
+    |Total                      | 551|   0|  551|          0|
+    +---------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
+|            RTL Ports           | Dir | Bits|  Protocol  |                          Source Object                          |    C Type    |
++--------------------------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
+|ap_clk                          |   in|    1|  ap_ctrl_hs|  radix_sort_oct_batch.3.1_Pipeline_bucket_pointer_initialization|  return value|
+|ap_rst                          |   in|    1|  ap_ctrl_hs|  radix_sort_oct_batch.3.1_Pipeline_bucket_pointer_initialization|  return value|
+|ap_start                        |   in|    1|  ap_ctrl_hs|  radix_sort_oct_batch.3.1_Pipeline_bucket_pointer_initialization|  return value|
+|ap_done                         |  out|    1|  ap_ctrl_hs|  radix_sort_oct_batch.3.1_Pipeline_bucket_pointer_initialization|  return value|
+|ap_idle                         |  out|    1|  ap_ctrl_hs|  radix_sort_oct_batch.3.1_Pipeline_bucket_pointer_initialization|  return value|
+|ap_ready                        |  out|    1|  ap_ctrl_hs|  radix_sort_oct_batch.3.1_Pipeline_bucket_pointer_initialization|  return value|
+|bucket_sizes_2960               |   in|   32|     ap_none|                                                bucket_sizes_2960|        scalar|
+|bucket_sizes_2959               |   in|   32|     ap_none|                                                bucket_sizes_2959|        scalar|
+|bucket_sizes_2958               |   in|   32|     ap_none|                                                bucket_sizes_2958|        scalar|
+|bucket_sizes_2957               |   in|   32|     ap_none|                                                bucket_sizes_2957|        scalar|
+|bucket_sizes_2956               |   in|   32|     ap_none|                                                bucket_sizes_2956|        scalar|
+|bucket_sizes_2955               |   in|   32|     ap_none|                                                bucket_sizes_2955|        scalar|
+|bucket_sizes_2954               |   in|   32|     ap_none|                                                bucket_sizes_2954|        scalar|
+|bucket_sizes_2953               |   in|   32|     ap_none|                                                bucket_sizes_2953|        scalar|
+|bucket_pointer_1327             |   in|   32|     ap_none|                                              bucket_pointer_1327|        scalar|
+|bucket_pointer_1326             |   in|   32|     ap_none|                                              bucket_pointer_1326|        scalar|
+|bucket_pointer_1325             |   in|   32|     ap_none|                                              bucket_pointer_1325|        scalar|
+|bucket_pointer_1324             |   in|   32|     ap_none|                                              bucket_pointer_1324|        scalar|
+|bucket_pointer_1323             |   in|   32|     ap_none|                                              bucket_pointer_1323|        scalar|
+|bucket_pointer_1322             |   in|   32|     ap_none|                                              bucket_pointer_1322|        scalar|
+|bucket_pointer_1321             |   in|   32|     ap_none|                                              bucket_pointer_1321|        scalar|
+|bucket_pointer                  |   in|   32|     ap_none|                                                   bucket_pointer|        scalar|
+|bucket_sizes_2968_out           |  out|   32|      ap_vld|                                            bucket_sizes_2968_out|       pointer|
+|bucket_sizes_2968_out_ap_vld    |  out|    1|      ap_vld|                                            bucket_sizes_2968_out|       pointer|
+|bucket_sizes_2967_out           |  out|   32|      ap_vld|                                            bucket_sizes_2967_out|       pointer|
+|bucket_sizes_2967_out_ap_vld    |  out|    1|      ap_vld|                                            bucket_sizes_2967_out|       pointer|
+|bucket_sizes_2966_out           |  out|   32|      ap_vld|                                            bucket_sizes_2966_out|       pointer|
+|bucket_sizes_2966_out_ap_vld    |  out|    1|      ap_vld|                                            bucket_sizes_2966_out|       pointer|
+|bucket_sizes_2965_out           |  out|   32|      ap_vld|                                            bucket_sizes_2965_out|       pointer|
+|bucket_sizes_2965_out_ap_vld    |  out|    1|      ap_vld|                                            bucket_sizes_2965_out|       pointer|
+|bucket_sizes_2964_out           |  out|   32|      ap_vld|                                            bucket_sizes_2964_out|       pointer|
+|bucket_sizes_2964_out_ap_vld    |  out|    1|      ap_vld|                                            bucket_sizes_2964_out|       pointer|
+|bucket_sizes_2963_out           |  out|   32|      ap_vld|                                            bucket_sizes_2963_out|       pointer|
+|bucket_sizes_2963_out_ap_vld    |  out|    1|      ap_vld|                                            bucket_sizes_2963_out|       pointer|
+|bucket_sizes_2962_out           |  out|   32|      ap_vld|                                            bucket_sizes_2962_out|       pointer|
+|bucket_sizes_2962_out_ap_vld    |  out|    1|      ap_vld|                                            bucket_sizes_2962_out|       pointer|
+|bucket_sizes_2961_out           |  out|   32|      ap_vld|                                            bucket_sizes_2961_out|       pointer|
+|bucket_sizes_2961_out_ap_vld    |  out|    1|      ap_vld|                                            bucket_sizes_2961_out|       pointer|
+|bucket_pointer_1335_out         |  out|   32|      ap_vld|                                          bucket_pointer_1335_out|       pointer|
+|bucket_pointer_1335_out_ap_vld  |  out|    1|      ap_vld|                                          bucket_pointer_1335_out|       pointer|
+|bucket_pointer_1334_out         |  out|   32|      ap_vld|                                          bucket_pointer_1334_out|       pointer|
+|bucket_pointer_1334_out_ap_vld  |  out|    1|      ap_vld|                                          bucket_pointer_1334_out|       pointer|
+|bucket_pointer_1333_out         |  out|   32|      ap_vld|                                          bucket_pointer_1333_out|       pointer|
+|bucket_pointer_1333_out_ap_vld  |  out|    1|      ap_vld|                                          bucket_pointer_1333_out|       pointer|
+|bucket_pointer_1332_out         |  out|   32|      ap_vld|                                          bucket_pointer_1332_out|       pointer|
+|bucket_pointer_1332_out_ap_vld  |  out|    1|      ap_vld|                                          bucket_pointer_1332_out|       pointer|
+|bucket_pointer_1331_out         |  out|   32|      ap_vld|                                          bucket_pointer_1331_out|       pointer|
+|bucket_pointer_1331_out_ap_vld  |  out|    1|      ap_vld|                                          bucket_pointer_1331_out|       pointer|
+|bucket_pointer_1330_out         |  out|   32|      ap_vld|                                          bucket_pointer_1330_out|       pointer|
+|bucket_pointer_1330_out_ap_vld  |  out|    1|      ap_vld|                                          bucket_pointer_1330_out|       pointer|
+|bucket_pointer_1329_out         |  out|   32|      ap_vld|                                          bucket_pointer_1329_out|       pointer|
+|bucket_pointer_1329_out_ap_vld  |  out|    1|      ap_vld|                                          bucket_pointer_1329_out|       pointer|
+|bucket_pointer_1328_out         |  out|   32|      ap_vld|                                          bucket_pointer_1328_out|       pointer|
+|bucket_pointer_1328_out_ap_vld  |  out|    1|      ap_vld|                                          bucket_pointer_1328_out|       pointer|
++--------------------------------+-----+-----+------------+-----------------------------------------------------------------+--------------+
+

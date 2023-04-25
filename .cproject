@@ -211,8 +211,6 @@
                     					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1785636069.1746305169" name="dataset_10M_3.h" rcbsApplicability="disable" resourcePath="testbench/dataset_10M_3.h" toolsToInvoke=""/>
                     					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1785636069.953038066" name="batch_size.h" rcbsApplicability="disable" resourcePath="testbench/batch_size.h" toolsToInvoke=""/>
-                    					
                     <sourceEntries>
                         						
                         <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
@@ -414,8 +412,6 @@
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.release.2006708030.1913860006" name="dataset_10M_2.h" rcbsApplicability="disable" resourcePath="testbench/dataset_10M_2.h" toolsToInvoke=""/>
                     					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.release.2006708030.861871011" name="dataset_10M_3.h" rcbsApplicability="disable" resourcePath="testbench/dataset_10M_3.h" toolsToInvoke=""/>
-                    					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.2006708030.1960641182" name="batch_size.h" rcbsApplicability="disable" resourcePath="testbench/batch_size.h" toolsToInvoke=""/>
                     					
                     <sourceEntries>
                         						

@@ -7,34 +7,106 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
-        Offset:          25981
+        Offset:          25772
         Length:          0
         ReplacementText: 'VITIS_LOOP_15_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_35_1:  '
-    FileOffset:      35
+    Message:         'Added loop label VITIS_LOOP_33_1:  '
+    FileOffset:      33
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
-        Offset:          11508411
+        Offset:          26179
         Length:          0
-        ReplacementText: 'VITIS_LOOP_35_1: '
+        ReplacementText: 'VITIS_LOOP_33_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_36_2:  '
-    FileOffset:      36
+    Message:         'Added loop label VITIS_LOOP_51_1:  '
+    FileOffset:      51
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
-        Offset:          11508434
+        Offset:          26586
         Length:          0
-        ReplacementText: 'VITIS_LOOP_36_2: '
+        ReplacementText: 'VITIS_LOOP_51_1: '
   - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_41_3:  '
-    FileOffset:      41
+    Message:         'Added loop label VITIS_LOOP_71_1:  '
+    FileOffset:      71
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
-        Offset:          11508553
+        Offset:          11509024
         Length:          0
-        ReplacementText: 'VITIS_LOOP_41_3: '
+        ReplacementText: 'VITIS_LOOP_71_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_72_2:  '
+    FileOffset:      72
+    FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
+        Offset:          11509047
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_72_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_77_3:  '
+    FileOffset:      77
+    FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
+        Offset:          11509171
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_77_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_93_1:  '
+    FileOffset:      93
+    FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
+        Offset:          22991596
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_93_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_94_2:  '
+    FileOffset:      94
+    FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
+        Offset:          22991619
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_94_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_99_3:  '
+    FileOffset:      99
+    FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
+        Offset:          22991743
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_99_3: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_115_1:  '
+    FileOffset:      115
+    FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
+        Offset:          34474169
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_115_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_116_2:  '
+    FileOffset:      116
+    FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
+        Offset:          34474192
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_116_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_121_3:  '
+    FileOffset:      121
+    FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_hex_loser.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_hex_loser.pp.0.c
+        Offset:          34474316
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_121_3: '
 ...

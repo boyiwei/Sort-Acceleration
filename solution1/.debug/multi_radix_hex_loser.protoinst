@@ -23,7 +23,7 @@
 						"AP_START": { "actual": "ap_start"}
 					}
 				},
-				"loser_tree_1_U0/grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368/grp_loser_tree_1_Pipeline_VITIS_LOOP_298_2_fu_1368_activity": {
+				"loser_tree_1_U0/grp_loser_tree_1_Pipeline_VITIS_LOOP_297_2_fu_1368/grp_loser_tree_1_Pipeline_VITIS_LOOP_297_2_fu_1368_activity": {
 					"interface": "xilinx.com:interface:internal_hls_dataflow:1.0",
 					"ports": {
 						"AP_CLK": { "actual": "ap_clk"},

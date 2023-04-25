@@ -162,11 +162,6 @@
 			<location>/home/boyiw7/sort_seperate_bucket/sort_top.c</location>
 		</link>
 		<link>
-			<name>testbench/batch_size.h</name>
-			<type>1</type>
-			<location>/home/boyiw7/sort_seperate_bucket/batch_size.h</location>
-		</link>
-		<link>
 			<name>testbench/dataset.h</name>
 			<type>1</type>
 			<location>/home/boyiw7/sort_seperate_bucket/dataset.h</location>

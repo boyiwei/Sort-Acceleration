@@ -1,9 +1,9 @@
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 306, 
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 305, 
                    Column: 4 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Loop '''
   - LoopName:        find_winner_stage0
@@ -12,9 +12,9 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 311, 
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 310, 
                    Column: 4 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Loop '''
   - LoopName:        find_winner_stage1
@@ -23,9 +23,9 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 316, 
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 315, 
                    Column: 4 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Loop '''
   - LoopName:        find_winner_stage2
@@ -34,9 +34,9 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 321, 
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 320, 
                    Column: 4 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Loop '''
   - LoopName:        find_winner_stage3
@@ -45,9 +45,9 @@ Args:
 --- !Passed
 Pass:            reflow-infer-unroll
 Name:            ImplicitUnroll
-DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 326, 
+DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 325, 
                    Column: 4 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Loop '''
   - LoopName:        find_winner_stage4
@@ -56,17 +56,17 @@ Args:
 --- !Passed
 Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_loser.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_loser.c, 
                    Line: 7, Column: 0 }
-Function:        multi_radix_hex_loser
+Function:        multi_radix_oct_loser_64
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        VITIS_LOOP_15_1
   - String:          ''' ('
-  - LoopLoc:         'sort_seperate_bucket/multi_radix_hex_loser.c:15:19'
+  - LoopLoc:         'sort_seperate_bucket/multi_radix_oct_loser.c:15:19'
   - String:          ') '
   - String:          'in function '''
-  - String:          multi_radix_hex_loser
+  - String:          multi_radix_oct_loser_64
   - String:          ''' completely with a factor of '
   - Factor:          '64'
 ...
@@ -75,15 +75,15 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
                    Column: 0 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        find_winner_stage0
   - String:          ''' ('
-  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:306:4'
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:305:4'
   - String:          ') '
   - String:          'in function '''
-  - String:          loser_tree
+  - String:          loser_tree_64
   - String:          ''' completely with a factor of '
   - Factor:          '32'
 ...
@@ -92,15 +92,15 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
                    Column: 0 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        find_winner_stage1
   - String:          ''' ('
-  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:311:4'
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:310:4'
   - String:          ') '
   - String:          'in function '''
-  - String:          loser_tree
+  - String:          loser_tree_64
   - String:          ''' completely with a factor of '
   - Factor:          '16'
 ...
@@ -109,15 +109,15 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
                    Column: 0 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        find_winner_stage2
   - String:          ''' ('
-  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:316:4'
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:315:4'
   - String:          ') '
   - String:          'in function '''
-  - String:          loser_tree
+  - String:          loser_tree_64
   - String:          ''' completely with a factor of '
   - Factor:          '8'
 ...
@@ -126,15 +126,15 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
                    Column: 0 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        find_winner_stage3
   - String:          ''' ('
-  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:321:4'
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:320:4'
   - String:          ') '
   - String:          'in function '''
-  - String:          loser_tree
+  - String:          loser_tree_64
   - String:          ''' completely with a factor of '
   - Factor:          '4'
 ...
@@ -143,15 +143,15 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
                    Column: 0 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        find_winner_stage4
   - String:          ''' ('
-  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:326:4'
+  - LoopLoc:         'sort_seperate_bucket/merge_sort.c:325:4'
   - String:          ') '
   - String:          'in function '''
-  - String:          loser_tree
+  - String:          loser_tree_64
   - String:          ''' completely with a factor of '
   - Factor:          '2'
 ...
@@ -160,7 +160,7 @@ Pass:            reflow-pragma-loop-unroll
 Name:            PragmaFullyUnroll
 DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 272, 
                    Column: 0 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Unrolling loop '''
   - LoopName:        VITIS_LOOP_292_1
@@ -168,21 +168,21 @@ Args:
   - LoopLoc:         'sort_seperate_bucket/merge_sort.c:292:23'
   - String:          ') '
   - String:          'in function '''
-  - String:          loser_tree
+  - String:          loser_tree_64
   - String:          ''' completely with a factor of '
   - Factor:          '64'
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_loser.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_loser.c, 
                    Line: 8, Column: 0 }
-Function:        multi_radix_hex_loser
+Function:        multi_radix_oct_loser_64
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          multi_radix_hex_loser.temp0
+  - UOName:          multi_radix_oct_loser_64.temp0
   - String:          ''':'
   - String:          ' '
   - Mode:            Complete
@@ -194,9 +194,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.1
+Function:        radix_sort_oct_batch.1
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -213,47 +213,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.1
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          bucket_sizes
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
-                   Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.2
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          bucket_pointer
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
-                   Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.2
+Function:        radix_sort_oct_batch.1
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -270,9 +232,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.3
+Function:        radix_sort_oct_batch.2
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -289,9 +251,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.3
+Function:        radix_sort_oct_batch.2
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -308,9 +270,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.4
+Function:        radix_sort_oct_batch.3
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -327,9 +289,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.4
+Function:        radix_sort_oct_batch.3
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -346,9 +308,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.5
+Function:        radix_sort_oct_batch.4
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -365,9 +327,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.5
+Function:        radix_sort_oct_batch.4
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -384,9 +346,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.6
+Function:        radix_sort_oct_batch.5
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -403,9 +365,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.6
+Function:        radix_sort_oct_batch.5
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -422,9 +384,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.7
+Function:        radix_sort_oct_batch.6
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -441,9 +403,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.7
+Function:        radix_sort_oct_batch.6
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -460,9 +422,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.8
+Function:        radix_sort_oct_batch.7
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -479,9 +441,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.8
+Function:        radix_sort_oct_batch.7
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -498,9 +460,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.9
+Function:        radix_sort_oct_batch.8
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -517,9 +479,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.9
+Function:        radix_sort_oct_batch.8
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -536,9 +498,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.10
+Function:        radix_sort_oct_batch.9
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -555,9 +517,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.10
+Function:        radix_sort_oct_batch.9
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -574,9 +536,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.11
+Function:        radix_sort_oct_batch.10
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -593,9 +555,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.11
+Function:        radix_sort_oct_batch.10
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -612,9 +574,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.12
+Function:        radix_sort_oct_batch.11
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -631,9 +593,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.12
+Function:        radix_sort_oct_batch.11
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -650,9 +612,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.13
+Function:        radix_sort_oct_batch.12
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -669,9 +631,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.13
+Function:        radix_sort_oct_batch.12
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -688,9 +650,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.14
+Function:        radix_sort_oct_batch.13
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -707,9 +669,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.14
+Function:        radix_sort_oct_batch.13
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -726,9 +688,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.15
+Function:        radix_sort_oct_batch.14
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -745,9 +707,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.15
+Function:        radix_sort_oct_batch.14
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -764,9 +726,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.16
+Function:        radix_sort_oct_batch.15
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -783,9 +745,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.16
+Function:        radix_sort_oct_batch.15
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -802,9 +764,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.17
+Function:        radix_sort_oct_batch.16
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -821,9 +783,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.17
+Function:        radix_sort_oct_batch.16
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -840,9 +802,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.18
+Function:        radix_sort_oct_batch.17
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -859,9 +821,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.18
+Function:        radix_sort_oct_batch.17
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -878,9 +840,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.19
+Function:        radix_sort_oct_batch.18
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -897,9 +859,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.19
+Function:        radix_sort_oct_batch.18
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -916,9 +878,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.20
+Function:        radix_sort_oct_batch.19
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -935,9 +897,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.20
+Function:        radix_sort_oct_batch.19
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -954,9 +916,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.21
+Function:        radix_sort_oct_batch.20
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -973,9 +935,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.21
+Function:        radix_sort_oct_batch.20
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -992,9 +954,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.22
+Function:        radix_sort_oct_batch.21
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1011,9 +973,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.22
+Function:        radix_sort_oct_batch.21
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1030,9 +992,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.23
+Function:        radix_sort_oct_batch.22
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1049,9 +1011,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.23
+Function:        radix_sort_oct_batch.22
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1068,9 +1030,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.24
+Function:        radix_sort_oct_batch.23
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1087,9 +1049,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.24
+Function:        radix_sort_oct_batch.23
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1106,9 +1068,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.25
+Function:        radix_sort_oct_batch.24
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1125,9 +1087,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.25
+Function:        radix_sort_oct_batch.24
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1144,9 +1106,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.26
+Function:        radix_sort_oct_batch.25
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1163,9 +1125,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.26
+Function:        radix_sort_oct_batch.25
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1182,9 +1144,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.27
+Function:        radix_sort_oct_batch.26
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1201,9 +1163,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.27
+Function:        radix_sort_oct_batch.26
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1220,9 +1182,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.28
+Function:        radix_sort_oct_batch.27
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1239,9 +1201,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.28
+Function:        radix_sort_oct_batch.27
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1258,9 +1220,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.29
+Function:        radix_sort_oct_batch.28
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1277,9 +1239,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.29
+Function:        radix_sort_oct_batch.28
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1296,9 +1258,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.30
+Function:        radix_sort_oct_batch.29
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1315,9 +1277,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.30
+Function:        radix_sort_oct_batch.29
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1334,9 +1296,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.31
+Function:        radix_sort_oct_batch.30
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1353,9 +1315,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.31
+Function:        radix_sort_oct_batch.30
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1372,9 +1334,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.32
+Function:        radix_sort_oct_batch.31
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1391,9 +1353,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.32
+Function:        radix_sort_oct_batch.31
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1410,9 +1372,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.33
+Function:        radix_sort_oct_batch.32
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1429,9 +1391,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.33
+Function:        radix_sort_oct_batch.32
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1448,9 +1410,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.34
+Function:        radix_sort_oct_batch.33
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1467,9 +1429,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.34
+Function:        radix_sort_oct_batch.33
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1486,9 +1448,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.35
+Function:        radix_sort_oct_batch.34
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1505,9 +1467,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.35
+Function:        radix_sort_oct_batch.34
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1524,9 +1486,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.36
+Function:        radix_sort_oct_batch.35
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1543,9 +1505,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.36
+Function:        radix_sort_oct_batch.35
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1562,9 +1524,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.37
+Function:        radix_sort_oct_batch.36
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1581,9 +1543,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.37
+Function:        radix_sort_oct_batch.36
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1600,9 +1562,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.38
+Function:        radix_sort_oct_batch.37
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1619,9 +1581,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.38
+Function:        radix_sort_oct_batch.37
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1638,9 +1600,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.39
+Function:        radix_sort_oct_batch.38
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1657,9 +1619,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.39
+Function:        radix_sort_oct_batch.38
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1676,9 +1638,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.40
+Function:        radix_sort_oct_batch.39
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1695,9 +1657,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.40
+Function:        radix_sort_oct_batch.39
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1714,9 +1676,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.41
+Function:        radix_sort_oct_batch.40
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1733,9 +1695,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.41
+Function:        radix_sort_oct_batch.40
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1752,9 +1714,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.42
+Function:        radix_sort_oct_batch.41
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1771,9 +1733,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.42
+Function:        radix_sort_oct_batch.41
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1790,9 +1752,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.43
+Function:        radix_sort_oct_batch.42
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1809,9 +1771,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.43
+Function:        radix_sort_oct_batch.42
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1828,9 +1790,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.44
+Function:        radix_sort_oct_batch.43
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1847,9 +1809,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.44
+Function:        radix_sort_oct_batch.43
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1866,9 +1828,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.45
+Function:        radix_sort_oct_batch.44
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1885,9 +1847,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.45
+Function:        radix_sort_oct_batch.44
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1904,9 +1866,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.46
+Function:        radix_sort_oct_batch.45
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1923,9 +1885,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.46
+Function:        radix_sort_oct_batch.45
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1942,9 +1904,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.47
+Function:        radix_sort_oct_batch.46
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1961,9 +1923,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.47
+Function:        radix_sort_oct_batch.46
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1980,9 +1942,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.48
+Function:        radix_sort_oct_batch.47
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -1999,9 +1961,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.48
+Function:        radix_sort_oct_batch.47
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2018,9 +1980,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.49
+Function:        radix_sort_oct_batch.48
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2037,9 +1999,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.49
+Function:        radix_sort_oct_batch.48
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2056,9 +2018,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.50
+Function:        radix_sort_oct_batch.49
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2075,9 +2037,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.50
+Function:        radix_sort_oct_batch.49
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2094,9 +2056,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.51
+Function:        radix_sort_oct_batch.50
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2113,9 +2075,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.51
+Function:        radix_sort_oct_batch.50
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2132,9 +2094,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.52
+Function:        radix_sort_oct_batch.51
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2151,9 +2113,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.52
+Function:        radix_sort_oct_batch.51
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2170,9 +2132,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.53
+Function:        radix_sort_oct_batch.52
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2189,9 +2151,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.53
+Function:        radix_sort_oct_batch.52
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2208,9 +2170,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.54
+Function:        radix_sort_oct_batch.53
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2227,9 +2189,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.54
+Function:        radix_sort_oct_batch.53
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2246,9 +2208,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.55
+Function:        radix_sort_oct_batch.54
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2265,9 +2227,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.55
+Function:        radix_sort_oct_batch.54
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2284,9 +2246,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.56
+Function:        radix_sort_oct_batch.55
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2303,9 +2265,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.56
+Function:        radix_sort_oct_batch.55
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2322,9 +2284,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.57
+Function:        radix_sort_oct_batch.56
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2341,9 +2303,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.57
+Function:        radix_sort_oct_batch.56
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2360,9 +2322,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.58
+Function:        radix_sort_oct_batch.57
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2379,9 +2341,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.58
+Function:        radix_sort_oct_batch.57
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2398,9 +2360,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.59
+Function:        radix_sort_oct_batch.58
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2417,9 +2379,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.59
+Function:        radix_sort_oct_batch.58
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2436,9 +2398,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.60
+Function:        radix_sort_oct_batch.59
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2455,9 +2417,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.60
+Function:        radix_sort_oct_batch.59
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2474,9 +2436,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.61
+Function:        radix_sort_oct_batch.60
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2493,9 +2455,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.61
+Function:        radix_sort_oct_batch.60
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2512,9 +2474,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.62
+Function:        radix_sort_oct_batch.61
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2531,9 +2493,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.62
+Function:        radix_sort_oct_batch.61
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2550,9 +2512,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch.63
+Function:        radix_sort_oct_batch.62
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2569,9 +2531,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch.63
+Function:        radix_sort_oct_batch.62
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2588,9 +2550,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 11, Column: 9 }
-Function:        radix_sort_hex_batch
+Function:        radix_sort_oct_batch.63
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2607,9 +2569,47 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_kmerge.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
                    Line: 12, Column: 9 }
-Function:        radix_sort_hex_batch
+Function:        radix_sort_oct_batch.63
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          bucket_sizes
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
+                   Line: 11, Column: 9 }
+Function:        radix_sort_oct_batch
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          bucket_pointer
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_kmerge.c, 
+                   Line: 12, Column: 9 }
+Function:        radix_sort_oct_batch
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2627,32 +2627,13 @@ Args:
 Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 273, 
-                   Column: 28 }
-Function:        loser_tree
+                   Column: 9 }
+Function:        loser_tree_64
 Args:            
   - String:          'Applying '
   - String:          array_partition
   - String:          ' to '''
-  - UOName:          loser_tree.data
-  - String:          ''':'
-  - String:          ' '
-  - Mode:            Complete
-  - String:          ' partitioning'
-  - String:          ' on dimension '
-  - Dim:             '1'
-  - String:          .
-...
---- !Passed
-Pass:            reflow-array-partition
-Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 273, 
-                   Column: 28 }
-Function:        loser_tree
-Args:            
-  - String:          'Applying '
-  - String:          array_partition
-  - String:          ' to '''
-  - UOName:          loser_tree.index
+  - UOName:          loser_tree
   - String:          ''':'
   - String:          ' '
   - Mode:            Complete
@@ -2666,7 +2647,7 @@ Pass:            reflow-array-partition
 Name:            ArrayXform
 DebugLoc:        { File: sort_seperate_bucket/merge_sort.c, Line: 274, 
                    Column: 9 }
-Function:        loser_tree
+Function:        loser_tree_64
 Args:            
   - String:          'Applying '
   - String:          array_partition
@@ -2683,9 +2664,9 @@ Args:
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: sort_seperate_bucket/multi_radix_hex_loser.c, 
+DebugLoc:        { File: sort_seperate_bucket/multi_radix_oct_loser.c, 
                    Line: 7, Column: 0 }
-Function:        multi_radix_hex_loser
+Function:        multi_radix_oct_loser_64
 Args:            
   - String:          'Applying '
   - String:          array_partition

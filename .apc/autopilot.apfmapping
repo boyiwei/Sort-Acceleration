@@ -27,7 +27,6 @@
     <originFiles name="dataset_size.h" path="/home/boyiw7/sort_seperate_bucket/dataset_size.h"/>
   </source>
   <testbench>
-    <originFiles name="batch_size.h" path="/home/boyiw7/sort_seperate_bucket/batch_size.h"/>
     <originFiles name="dataset.h" path="/home/boyiw7/sort_seperate_bucket/dataset.h"/>
     <originFiles name="dataset_10M_1.h" path="/home/boyiw7/dataset_gen/dataset_10M_1.h"/>
     <originFiles name="dataset_10M_2.h" path="/home/boyiw7/dataset_gen/dataset_10M_2.h"/>

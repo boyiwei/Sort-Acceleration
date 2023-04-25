@@ -269,8 +269,8 @@ void merge_sort_batch5(int input1[32*batch_size], int input2[32*batch_size], int
 // ---------------------------functions for loser_tree-------------------------------------
 
 
-void loser_tree(int input[64][batch_size], int output[64 * batch_size]) {
-    struct data_index_pair loser_tree[64];
+void loser_tree_64(int input[64][batch_size], int output[64 * batch_size]) {
+    int loser_tree[64];
     int current_indices[64] = {0};
     int winner_index_stage0[32] = {0};
     int winner_index_stage1[16] = {0};
@@ -291,8 +291,7 @@ void loser_tree(int input[64][batch_size], int output[64 * batch_size]) {
     int j;
     for (i = 0; i < 64; i++) {
 #pragma HLS UNROLL
-        loser_tree[i].data = input[i][0];
-        loser_tree[i].index = i;
+        loser_tree[i] = input[i][0];
     }
 
     for (i = 0; i < 64*batch_size; i++) {
@@ -305,45 +304,177 @@ void loser_tree(int input[64][batch_size], int output[64 * batch_size]) {
 			find_winner_stage0:
 			for(j=0; j<32; j++){
 #pragma HLS UNROLL
-				winner_index_stage0[j] = loser_tree[2*j].data < loser_tree[2*j+1].data ? loser_tree[2*j].index:loser_tree[2*j+1].index;
+				winner_index_stage0[j] = loser_tree[2*j] < loser_tree[2*j+1] ? 2*j : 2*j+1;
 			}
         	find_winner_stage1:
 			for(j=0; j<16; j++){
 #pragma HLS UNROLL
-				winner_index_stage1[j] = loser_tree[winner_index_stage0[2*j]].data < loser_tree[winner_index_stage0[2*j+1]].data ? winner_index_stage0[2*j] : winner_index_stage0[2*j+1];
+				winner_index_stage1[j] = loser_tree[winner_index_stage0[2*j]]< loser_tree[winner_index_stage0[2*j+1]] ? winner_index_stage0[2*j] : winner_index_stage0[2*j+1];
 			}
 			find_winner_stage2:
 			for(j=0; j<8; j++){
 #pragma HLS UNROLL
-				winner_index_stage2[j] = loser_tree[winner_index_stage1[2*j]].data < loser_tree[winner_index_stage1[2*j+1]].data ? winner_index_stage1[2*j] : winner_index_stage1[2*j+1];
+				winner_index_stage2[j] = loser_tree[winner_index_stage1[2*j]] < loser_tree[winner_index_stage1[2*j+1]] ? winner_index_stage1[2*j] : winner_index_stage1[2*j+1];
 			}
 			find_winner_stage3:
 			for(j=0; j<4; j++){
 #pragma HLS UNROLL
-				winner_index_stage3[j] = loser_tree[winner_index_stage2[2*j]].data < loser_tree[winner_index_stage2[2*j+1]].data ? winner_index_stage2[2*j] : winner_index_stage2[2*j+1];
+				winner_index_stage3[j] = loser_tree[winner_index_stage2[2*j]] < loser_tree[winner_index_stage2[2*j+1]] ? winner_index_stage2[2*j] : winner_index_stage2[2*j+1];
 			}
 			find_winner_stage4:
 			for(j=0; j<2; j++){
 #pragma HLS UNROLL
-				winner_index_stage4[j] = loser_tree[winner_index_stage3[2*j]].data < loser_tree[winner_index_stage3[2*j+1]].data ? winner_index_stage3[2*j] : winner_index_stage3[2*j+1];
+				winner_index_stage4[j] = loser_tree[winner_index_stage3[2*j]] < loser_tree[winner_index_stage3[2*j+1]] ? winner_index_stage3[2*j] : winner_index_stage3[2*j+1];
 			}
 
-			winner_index = loser_tree[winner_index_stage4[0]].data < loser_tree[winner_index_stage4[1]].data ? winner_index_stage4[0] : winner_index_stage4[1];
-			winner_value = loser_tree[winner_index].data;
+			winner_index = loser_tree[winner_index_stage4[0]] < loser_tree[winner_index_stage4[1]] ? winner_index_stage4[0] : winner_index_stage4[1];
+			winner_value = loser_tree[winner_index];
 
 
         output[i] = winner_value;
 
-        int input_index = loser_tree[winner_index].index;
+        int input_index = winner_index;
         current_indices[input_index]++;
 
         if (current_indices[input_index] < batch_size) {
-            loser_tree[winner_index].data = input[input_index][current_indices[input_index]];
+            loser_tree[winner_index] = input[input_index][current_indices[input_index]];
         } else {
-            loser_tree[winner_index].data = MAX_VALUE;
+            loser_tree[winner_index] = MAX_VALUE;
         }
     }
 }
+
+
+void loser_tree_32(int input[32][batch_size], int output[32 * batch_size]) {
+    int loser_tree[32];
+    int current_indices[32] = {0};
+    int winner_index_stage0[16] = {0};
+    int winner_index_stage1[8] = {0};
+    int winner_index_stage2[4] = {0};
+    int winner_index_stage3[2] = {0};
+#pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
+#pragma HLS ARRAY_PARTITION variable=loser_tree type=complete
+#pragma HLS ARRAY_PARTITION variable=current_indices type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage0 type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage1 type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage2 type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage3 type=complete
+
+
+    int i;
+    int j;
+    for (i = 0; i < 32; i++) {
+#pragma HLS UNROLL
+        loser_tree[i] = input[i][0];
+    }
+
+    for (i = 0; i < 32*batch_size; i++) {
+#pragma HLS PIPELINE II=1
+
+        int winner_index = 0;
+        int winner_value = MAX_VALUE;
+
+        find_winner:
+			find_winner_stage0:
+			for(j=0; j<16; j++){
+#pragma HLS UNROLL
+				winner_index_stage0[j] = loser_tree[2*j] < loser_tree[2*j+1] ? 2*j : 2*j+1;
+			}
+        	find_winner_stage1:
+			for(j=0; j<8; j++){
+#pragma HLS UNROLL
+				winner_index_stage1[j] = loser_tree[winner_index_stage0[2*j]]< loser_tree[winner_index_stage0[2*j+1]] ? winner_index_stage0[2*j] : winner_index_stage0[2*j+1];
+			}
+			find_winner_stage2:
+			for(j=0; j<4; j++){
+#pragma HLS UNROLL
+				winner_index_stage2[j] = loser_tree[winner_index_stage1[2*j]] < loser_tree[winner_index_stage1[2*j+1]] ? winner_index_stage1[2*j] : winner_index_stage1[2*j+1];
+			}
+			find_winner_stage3:
+			for(j=0; j<2; j++){
+#pragma HLS UNROLL
+				winner_index_stage3[j] = loser_tree[winner_index_stage2[2*j]] < loser_tree[winner_index_stage2[2*j+1]] ? winner_index_stage2[2*j] : winner_index_stage2[2*j+1];
+			}
+
+			winner_index = loser_tree[winner_index_stage3[0]] < loser_tree[winner_index_stage3[1]] ? winner_index_stage3[0] : winner_index_stage3[1];
+			winner_value = loser_tree[winner_index];
+
+
+        output[i] = winner_value;
+
+        int input_index = winner_index;
+        current_indices[input_index]++;
+
+        if (current_indices[input_index] < batch_size) {
+            loser_tree[winner_index] = input[input_index][current_indices[input_index]];
+        } else {
+            loser_tree[winner_index] = MAX_VALUE;
+        }
+    }
+}
+
+
+void loser_tree_16(int input[16][batch_size], int output[16 * batch_size]) {
+    int loser_tree[16];
+    int current_indices[16] = {0};
+    int winner_index_stage0[8] = {0};
+    int winner_index_stage1[4] = {0};
+    int winner_index_stage2[2] = {0};
+#pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
+#pragma HLS ARRAY_PARTITION variable=loser_tree type=complete
+#pragma HLS ARRAY_PARTITION variable=current_indices type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage0 type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage1 type=complete
+#pragma HLS ARRAY_PARTITION variable=winner_index_stage2 type=complete
+
+
+    int i;
+    int j;
+    for (i = 0; i < 16; i++) {
+#pragma HLS UNROLL
+        loser_tree[i] = input[i][0];
+    }
+
+    for (i = 0; i < 16*batch_size; i++) {
+#pragma HLS PIPELINE II=1
+
+        int winner_index = 0;
+        int winner_value = MAX_VALUE;
+
+        find_winner:
+			find_winner_stage0:
+			for(j=0; j<8; j++){
+#pragma HLS UNROLL
+				winner_index_stage0[j] = loser_tree[2*j] < loser_tree[2*j+1] ? 2*j : 2*j+1;
+			}
+        	find_winner_stage1:
+			for(j=0; j<4; j++){
+#pragma HLS UNROLL
+				winner_index_stage1[j] = loser_tree[winner_index_stage0[2*j]]< loser_tree[winner_index_stage0[2*j+1]] ? winner_index_stage0[2*j] : winner_index_stage0[2*j+1];
+			}
+			find_winner_stage2:
+			for(j=0; j<2; j++){
+#pragma HLS UNROLL
+				winner_index_stage2[j] = loser_tree[winner_index_stage1[2*j]] < loser_tree[winner_index_stage1[2*j+1]] ? winner_index_stage1[2*j] : winner_index_stage1[2*j+1];
+			}
+
+			winner_index = loser_tree[winner_index_stage2[0]] < loser_tree[winner_index_stage2[1]] ? winner_index_stage2[0] : winner_index_stage2[1];
+			winner_value = loser_tree[winner_index];
+
+
+        output[i] = winner_value;
+
+        int input_index = winner_index;
+        current_indices[input_index]++;
+
+        if (current_indices[input_index] < batch_size) {
+            loser_tree[winner_index] = input[input_index][current_indices[input_index]];
+        } else {
+            loser_tree[winner_index] = MAX_VALUE;
+        }
+    }
+}
+
 
 
 
