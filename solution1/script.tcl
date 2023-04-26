@@ -4,7 +4,7 @@
 ## Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project sort_seperate_bucket
-set_top multi_radix_oct_loser_64
+set_top single_heap_sort
 add_files sort_seperate_bucket/dataset_size.h
 add_files sort_seperate_bucket/heapsort.c
 add_files sort_seperate_bucket/merge_sort.c

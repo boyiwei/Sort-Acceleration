@@ -3,8 +3,13 @@
     ^~~~~
     VITIS_LOOP_16_1: 
 /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c:1940:5: note: FIX-IT applied suggested code changes
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c:1981:5: warning: Added loop label VITIS_LOOP_57_1:   [xilinx-label-all-loops]
-    for (j = 10000000 - 1; j >= 0; j--) {
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c:1985:5: warning: Added loop label VITIS_LOOP_57_1:   [xilinx-label-all-loops]
+    for (j = 5000000 - 1; j >= 0; j--) {
     ^~~
     VITIS_LOOP_57_1: 
-/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c:1981:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c:1985:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c:1002010:3: warning: Added loop label VITIS_LOOP_80_1:   [xilinx-label-all-loops]
+  for(i=0; i<5000000; i++){
+  ^~~
+  VITIS_LOOP_80_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c:1002010:3: note: FIX-IT applied suggested code changes

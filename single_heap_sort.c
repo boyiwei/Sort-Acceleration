@@ -70,3 +70,16 @@ void single_heap_sort(int input[dataset_size], int output[dataset_size]) {
 }
 
 
+void single_heap_sort_test(){
+	static int dataset[] = {
+	#include "/home/boyiw7/dataset_gen/dataset_1M_1.h"
+		};
+		static int output[dataset_size];
+		int i;
+		single_heap_sort(dataset, output);
+		for(i=0; i<dataset_size; i++){
+		        printf("Sorted_results: rank %d, value= %d \n", i, output[i]);
+		    }
+}
+
+

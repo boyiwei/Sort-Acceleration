@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_oct_loser.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_loser.pp.0.c
-        Offset:          26004
+        Offset:          25738
         Length:          0
         ReplacementText: 'VITIS_LOOP_15_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_oct_loser.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_loser.pp.0.c
-        Offset:          11508442
+        Offset:          11508174
         Length:          0
         ReplacementText: 'VITIS_LOOP_35_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -25,7 +25,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_oct_loser.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_loser.pp.0.c
-        Offset:          11508465
+        Offset:          11508197
         Length:          0
         ReplacementText: 'VITIS_LOOP_36_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -34,7 +34,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/multi_radix_oct_loser.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_oct_loser.pp.0.c
-        Offset:          11508589
+        Offset:          11508319
         Length:          0
         ReplacementText: 'VITIS_LOOP_41_3: '
 ...

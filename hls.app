@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="multi_radix_oct_loser_64">
+<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="single_heap_sort">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

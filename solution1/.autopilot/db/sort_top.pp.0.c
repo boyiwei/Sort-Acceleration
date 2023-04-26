@@ -887,25 +887,25 @@ void radix_sort_unified_bucket(int data[15625], int sorted_data[15625]);
 # 3 "sort_seperate_bucket/merge_sort.h" 2
 
 
-void merge_sort(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+void merge_sort(int input1[5000000/64], int input2[5000000/64], int sorted_data[2*5000000/64]);
 
-void merge_sort_batch0(int input1[10000000/64], int input2[10000000/64], int sorted_data[2*10000000/64]);
+void merge_sort_batch0(int input1[5000000/64], int input2[5000000/64], int sorted_data[2*5000000/64]);
 
-void merge_sort_batch1(int input1[2*10000000/64], int input2[2*10000000/64], int sorted_data[4*10000000/64]);
+void merge_sort_batch1(int input1[2*5000000/64], int input2[2*5000000/64], int sorted_data[4*5000000/64]);
 
-void merge_sort_batch2(int input1[4*10000000/64], int input2[4*10000000/64], int sorted_data[8*10000000/64]);
+void merge_sort_batch2(int input1[4*5000000/64], int input2[4*5000000/64], int sorted_data[8*5000000/64]);
 
-void merge_sort_batch3(int input1[8*10000000/64], int input2[8*10000000/64], int sorted_data[16*10000000/64]);
+void merge_sort_batch3(int input1[8*5000000/64], int input2[8*5000000/64], int sorted_data[16*5000000/64]);
 
-void merge_sort_batch4(int input1[16*10000000/64], int input2[16*10000000/64], int sorted_data[32*10000000/64]);
+void merge_sort_batch4(int input1[16*5000000/64], int input2[16*5000000/64], int sorted_data[32*5000000/64]);
 
-void merge_sort_batch5(int input1[32*10000000/64], int input2[32*10000000/64], int sorted_data[64*10000000/64]);
+void merge_sort_batch5(int input1[32*5000000/64], int input2[32*5000000/64], int sorted_data[64*5000000/64]);
 
-void loser_tree_64(int input[64][10000000/64], int output[64 * 10000000/64]);
+void loser_tree_64(int input[64][5000000/64], int output[64 * 5000000/64]);
 
-void loser_tree_32(int input[32][10000000/64], int output[32*10000000/64]);
+void loser_tree_32(int input[32][5000000/64], int output[32*5000000/64]);
 
-void loser_tree_16(int input[16][10000000/64], int output[16*10000000/64]);
+void loser_tree_16(int input[16][5000000/64], int output[16*5000000/64]);
 # 4 "sort_seperate_bucket/sort_top.c" 2
 # 1 "sort_seperate_bucket/batch_size.h" 1
 # 5 "sort_seperate_bucket/sort_top.c" 2

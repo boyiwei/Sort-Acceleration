@@ -1,0 +1,12 @@
+---
+MainSourceFile:  /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_radix_bin_loser.pp.0.c
+Diagnostics:     
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-8] Static scalars and arrays declared inside a dataflow region will be treated like local variables'
+    FileOffset:      '8:16'
+    FilePath:        sort_seperate_bucket/multi_radix_bin_loser.c
+  - DiagnosticName:  clang-diagnostic-warning
+    Message:         '[xlx-df-check-11] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region'
+    FileOffset:      '13:9'
+    FilePath:        sort_seperate_bucket/multi_radix_bin_loser.c
+...

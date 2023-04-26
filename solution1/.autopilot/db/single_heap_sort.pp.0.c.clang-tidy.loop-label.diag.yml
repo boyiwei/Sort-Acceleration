@@ -7,7 +7,7 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/single_heap_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c
-        Offset:          49196
+        Offset:          49195
         Length:          0
         ReplacementText: 'VITIS_LOOP_16_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -16,7 +16,16 @@ Diagnostics:
     FilePath:        /home/boyiw7/sort_seperate_bucket/single_heap_sort.c
     Replacements:    
       - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c
-        Offset:          49926
+        Offset:          50131
         Length:          0
         ReplacementText: 'VITIS_LOOP_57_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_80_1:  '
+    FileOffset:      80
+    FilePath:        /home/boyiw7/sort_seperate_bucket/single_heap_sort.c
+    Replacements:    
+      - FilePath:        /home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/single_heap_sort.pp.0.c
+        Offset:          11532635
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_80_1: '
 ...

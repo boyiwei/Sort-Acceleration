@@ -1,24 +1,4 @@
 <pragmas>
-<pragma file="sort_seperate_bucket/multi_radix_oct_loser.c" line="13" pragmaType="dataflow" parentfunction="multi_radix_oct_loser_64" disable_start_propagation="0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_loser.c" line="16" pragmaType="unroll" parentfunction="multi_radix_oct_loser_64" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_loser.c" line="9" pragmaType="array_partition" parentfunction="multi_radix_oct_loser_64" dim="1" factor="0" mode="complete" dynamic="0" variable="input"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_loser.c" line="10" pragmaType="array_partition" parentfunction="multi_radix_oct_loser_64" dim="1" factor="0" mode="complete" dynamic="0" variable="multi_radix_oct_loser_64.temp0"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="298" pragmaType="pipeline" parentfunction="loser_tree_64" off="0" ii="1" rewind="0" style=""/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="306" pragmaType="unroll" parentfunction="loser_tree_64" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="311" pragmaType="unroll" parentfunction="loser_tree_64" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="316" pragmaType="unroll" parentfunction="loser_tree_64" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="321" pragmaType="unroll" parentfunction="loser_tree_64" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="326" pragmaType="unroll" parentfunction="loser_tree_64" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="293" pragmaType="unroll" parentfunction="loser_tree_64" factor="-1" skip_exit_check="0"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="280" pragmaType="array_partition" parentfunction="loser_tree_64" dim="1" factor="0" mode="complete" dynamic="0" variable="input"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="281" pragmaType="array_partition" parentfunction="loser_tree_64" dim="1" factor="0" mode="complete" dynamic="0" variable="loser_tree"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="282" pragmaType="array_partition" parentfunction="loser_tree_64" dim="1" factor="0" mode="complete" dynamic="0" variable="current_indices"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="283" pragmaType="array_partition" parentfunction="loser_tree_64" dim="1" factor="0" mode="complete" dynamic="0" variable="winner_index_stage0"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="284" pragmaType="array_partition" parentfunction="loser_tree_64" dim="1" factor="0" mode="complete" dynamic="0" variable="winner_index_stage1"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="285" pragmaType="array_partition" parentfunction="loser_tree_64" dim="1" factor="0" mode="complete" dynamic="0" variable="winner_index_stage2"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="286" pragmaType="array_partition" parentfunction="loser_tree_64" dim="1" factor="0" mode="complete" dynamic="0" variable="winner_index_stage3"/>
-<pragma file="sort_seperate_bucket/merge_sort.c" line="287" pragmaType="array_partition" parentfunction="loser_tree_64" dim="1" factor="0" mode="complete" dynamic="0" variable="winner_index_stage4"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="14" pragmaType="array_partition" parentfunction="radix_sort_oct_batch" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_pointer"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="15" pragmaType="array_partition" parentfunction="radix_sort_oct_batch" dim="1" factor="0" mode="complete" dynamic="0" variable="bucket_sizes"/>
-<pragma file="sort_seperate_bucket/multi_radix_oct_kmerge.c" line="29" pragmaType="loop_merge" parentfunction="radix_sort_oct_batch" force="0"/>
+<pragma file="sort_seperate_bucket/single_heap_sort.c" line="67" pragmaType="pipeline" parentfunction="single_heap_sort" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="sort_seperate_bucket/single_heap_sort.c" line="47" pragmaType="pipeline" parentfunction="single_heap_sort" off="0" ii="-1" rewind="0" style=""/>
 </pragmas>

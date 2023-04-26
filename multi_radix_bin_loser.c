@@ -23,7 +23,7 @@ void multi_radix_bin_loser_64(int input[64][batch_size], int output[dataset_size
 
 
 void multi_radix_bin_loser_64_test(){
-	//testbench function for multi_radix_hex_loser.
+	//testbench function for multi_radix_bin_loser.
 	static int dataset[] = {
 #include "/home/boyiw7/dataset_gen/dataset_1M_1.h"
 	};

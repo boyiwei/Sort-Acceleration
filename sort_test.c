@@ -30,7 +30,7 @@ void multi_radix_hex_kmerge_test(){
 
 
 int main(){
-	multi_radix_oct_loser_64_test();
+	single_heap_sort_test();
     return 0;
 }
 

@@ -96,6 +96,21 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:111:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="sort_top_64" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_radix_sort_oct.c:29:9" msg_body="Only for/while/do support the pipeline  pragma">
+        <args ClangWarningOption="ignored-hls-attributes"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_radix_sort_oct.c:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="single_radix_sort_oct" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bucket_pointer type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_radix_sort_oct.c:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="single_radix_sort_oct" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bucket_sizes type=complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_radix_sort_oct.c:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="single_radix_sort_oct" ARG_PragmaIsValid="1" ARG_PragmaType="loop_merge" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_radix_sort_oct.c:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="single_radix_sort_oct" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
     <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_radix_sort_hex.c:32:9" msg_body="Only for/while/do support the pipeline  pragma">
         <args ClangWarningOption="ignored-hls-attributes"/>
     </msg>
@@ -132,6 +147,9 @@
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_merge_sort.c:53:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="single_merge_sort_parallel" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="single_heap_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=single_heap_sort" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_heap_sort.c:47:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="single_heap_sort" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
@@ -216,9 +234,6 @@
     </msg>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_oct_loser.c:8:16" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_oct_loser.c:13:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:48:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaContext="directive" ARG_PragmaFunction="multi_radix_oct_loser_64" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=multi_radix_oct_loser_64" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_oct_loser.c:9:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="multi_radix_oct_loser_64" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input type=complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
@@ -402,6 +417,20 @@
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_hex_kmerge.c:104:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="multi_radix_hex_kmerge" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_bin_loser.c:8:16" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
+    <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_bin_loser.c:13:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_bin_loser.c:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multi_radix_bin_loser_64" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=input type=complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_bin_loser.c:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multi_radix_bin_loser_64" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=temp0 type=complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_bin_loser.c:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multi_radix_bin_loser_64" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_bin_loser.c:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="multi_radix_bin_loser_64" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_bin_kmerge.c:30:9" msg_body="Only for/while/do support the pipeline  pragma">
         <args ClangWarningOption="ignored-hls-attributes"/>
@@ -625,59 +654,14 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/heapsort.c:69:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="heap_sort" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:305:4" msg_body="Loop 'find_winner_stage0' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="find_winner_stage0"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sort_seperate_bucket/single_heap_sort.c:15:0" msg_body="Inlining function 'single_swap' into 'single_maxHeapify'">
+        <args Callee="single_swap" Caller="single_maxHeapify"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:310:4" msg_body="Loop 'find_winner_stage1' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="find_winner_stage1"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sort_seperate_bucket/single_heap_sort.c:41:0" msg_body="Inlining function 'single_maxHeapify' into 'single_heap_sort'">
+        <args Callee="single_maxHeapify" Caller="single_heap_sort"/>
     </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:315:4" msg_body="Loop 'find_winner_stage2' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="find_winner_stage2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:320:4" msg_body="Loop 'find_winner_stage3' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="find_winner_stage3"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:325:4" msg_body="Loop 'find_winner_stage4' is marked as complete unroll implied by the pipeline pragma">
-        <args LoopName="find_winner_stage4"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sort_seperate_bucket/multi_radix_oct_loser.c:7:0" msg_body="Unrolling loop 'VITIS_LOOP_15_1' (sort_seperate_bucket/multi_radix_oct_loser.c:15:19) in function 'multi_radix_oct_loser_64' completely with a factor of 64">
-        <args Factor="64" LoopLoc="sort_seperate_bucket/multi_radix_oct_loser.c:15:19" LoopName="VITIS_LOOP_15_1"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:272:0" msg_body="Unrolling loop 'find_winner_stage0' (sort_seperate_bucket/merge_sort.c:305:4) in function 'loser_tree_64' completely with a factor of 32">
-        <args Factor="32" LoopLoc="sort_seperate_bucket/merge_sort.c:305:4" LoopName="find_winner_stage0"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:272:0" msg_body="Unrolling loop 'find_winner_stage1' (sort_seperate_bucket/merge_sort.c:310:4) in function 'loser_tree_64' completely with a factor of 16">
-        <args Factor="16" LoopLoc="sort_seperate_bucket/merge_sort.c:310:4" LoopName="find_winner_stage1"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:272:0" msg_body="Unrolling loop 'find_winner_stage2' (sort_seperate_bucket/merge_sort.c:315:4) in function 'loser_tree_64' completely with a factor of 8">
-        <args Factor="8" LoopLoc="sort_seperate_bucket/merge_sort.c:315:4" LoopName="find_winner_stage2"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:272:0" msg_body="Unrolling loop 'find_winner_stage3' (sort_seperate_bucket/merge_sort.c:320:4) in function 'loser_tree_64' completely with a factor of 4">
-        <args Factor="4" LoopLoc="sort_seperate_bucket/merge_sort.c:320:4" LoopName="find_winner_stage3"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:272:0" msg_body="Unrolling loop 'find_winner_stage4' (sort_seperate_bucket/merge_sort.c:325:4) in function 'loser_tree_64' completely with a factor of 2">
-        <args Factor="2" LoopLoc="sort_seperate_bucket/merge_sort.c:325:4" LoopName="find_winner_stage4"/>
-    </msg>
-    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:272:0" msg_body="Unrolling loop 'VITIS_LOOP_292_1' (sort_seperate_bucket/merge_sort.c:292:23) in function 'loser_tree_64' completely with a factor of 64">
-        <args Factor="64" LoopLoc="sort_seperate_bucket/merge_sort.c:292:23" LoopName="VITIS_LOOP_292_1"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sort_seperate_bucket/multi_radix_oct_loser.c:8:0" msg_body="Applying array_partition to 'multi_radix_oct_loser_64.temp0': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="multi_radix_oct_loser_64.temp0"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sort_seperate_bucket/multi_radix_oct_kmerge.c:11:9" msg_body="Applying array_partition to 'bucket_pointer': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="bucket_pointer"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sort_seperate_bucket/multi_radix_oct_kmerge.c:12:9" msg_body="Applying array_partition to 'bucket_sizes': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="bucket_sizes"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:273:9" msg_body="Applying array_partition to 'loser_tree': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="loser_tree"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sort_seperate_bucket/merge_sort.c:274:9" msg_body="Applying array_partition to 'current_indices': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="current_indices"/>
-    </msg>
-    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="sort_seperate_bucket/multi_radix_oct_loser.c:7:0" msg_body="Applying array_partition to 'input': Complete partitioning on dimension 1.">
-        <args Dim="1" Mode="Complete" UOName="input"/>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sort_seperate_bucket/single_heap_sort.c:41:0" msg_body="Inlining function 'single_swap' into 'single_heap_sort'">
+        <args Callee="single_swap" Caller="single_heap_sort"/>
     </msg>
 </xilinx:hls_fe_msgs>
 
