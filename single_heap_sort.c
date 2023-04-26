@@ -12,11 +12,38 @@ void single_swap(int *x, int *y) {
 }
 
 // Function to heapify a subtree rooted at index i
+//void single_maxHeapify(int arr[dataset_size], int n, int i) {
+//    while (1) {
+//        int largest = i;
+//        int left = 2 * i + 1;
+//        int right = 2 * i + 2;
+//
+//        // Check if left child is larger than root
+//        if (left < n && arr[left] > arr[largest])
+//            largest = left;
+//
+//        // Check if right child is larger than largest so far
+//        if (right < n && arr[right] > arr[largest])
+//            largest = right;
+//
+//        // Break the loop if root is the largest
+//        if (largest == i)
+//            break;
+//
+//        // single_swap and update the index i
+//        single_swap(&arr[i], &arr[largest]);
+//        i = largest;
+//    }
+//}
 void single_maxHeapify(int arr[dataset_size], int n, int i) {
-    while (1) {
-        int largest = i;
-        int left = 2 * i + 1;
-        int right = 2 * i + 2;
+    int largest;
+    int left;
+    int right;
+    
+    for (int loop_iter = 0; loop_iter < n; loop_iter++) {
+        largest = i;
+        left = 2 * i + 1;
+        right = 2 * i + 2;
 
         // Check if left child is larger than root
         if (left < n && arr[left] > arr[largest])

@@ -1,0 +1,677 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date              : Wed Apr 26 10:32:43 2023
+| Host              : reactor running 64-bit Ubuntu 20.04.5 LTS
+| Command           : report_timing -max_paths 10 -file ./report/single_heap_sort_timing_paths_synth.rpt
+| Design            : bd_0_wrapper
+| Device            : xcu280-fsvh2892
+| Speed File        : -2L  PRODUCTION 1.30 05-01-2022
+| Temperature Grade : E
+---------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[0]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[0]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[0]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[10]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[10]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[10]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[10]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[11]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[11]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[11]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[11]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[12]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[12]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[12]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[12]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[13]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[13]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[13]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[13]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[14]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[14]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[14]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[14]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[15]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[15]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[15]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[15]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[16]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[16]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[16]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[16]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[17]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[17]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[17]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[17]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+Slack (MET) :             7.497ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[18]/CE
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        2.399ns  (logic 0.665ns (27.720%)  route 1.734ns (72.280%))
+  Logic Levels:           9  (CARRY8=3 LUT2=3 LUT4=1 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.020ns = ( 10.020 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.028ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.028     0.028    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.079     0.107 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/Q
+                         net (fo=4, unplaced)         0.149     0.256    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/zext_ln27_fu_168_p1[7]
+                         LUT2 (Prop_LUT2_I1_O)        0.070     0.326 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5/O
+                         net (fo=1, unplaced)         0.242     0.568    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5_n_2
+                         CARRY8 (Prop_CARRY8_DI[0]_CO[7])
+                                                      0.140     0.708 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry/CO[7]
+                         net (fo=1, unplaced)         0.005     0.713    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_n_2
+                         CARRY8 (Prop_CARRY8_CI_CO[4])
+                                                      0.092     0.805 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0/CO[4]
+                         net (fo=34, unplaced)        0.244     1.049    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.070     1.119 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4/O
+                         net (fo=46, unplaced)        0.253     1.372    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4_n_2
+                         LUT6 (Prop_LUT6_I1_O)        0.038     1.410 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3/O
+                         net (fo=2, unplaced)         0.185     1.595    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_reg_210_reg[30]_0
+                         LUT6 (Prop_LUT6_I5_O)        0.038     1.633 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1/O
+                         net (fo=5, unplaced)         0.203     1.836    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/ap_CS_fsm_reg[2][30]
+                         LUT4 (Prop_LUT4_I2_O)        0.037     1.873 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1/O
+                         net (fo=1, unplaced)         0.028     1.901    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U_n_23
+                         CARRY8 (Prop_CARRY8_S[2]_CO[2])
+                                                      0.063     1.964 f  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0/CO[2]
+                         net (fo=7, unplaced)         0.210     2.174    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2
+                         LUT2 (Prop_LUT2_I1_O)        0.038     2.212 r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0/O
+                         net (fo=63, unplaced)        0.215     2.427    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_NS_fsm_0[3]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[18]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=602, unset)          0.020    10.020    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[18]/C
+                         clock pessimism              0.000    10.020    
+                         clock uncertainty           -0.035     9.985    
+                         FDRE (Setup_FDRE_C_CE)      -0.061     9.924    bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[18]
+  -------------------------------------------------------------------
+                         required time                          9.924    
+                         arrival time                          -2.427    
+  -------------------------------------------------------------------
+                         slack                                  7.497    
+
+
+
+

@@ -1,0 +1,152 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2022.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>2.503</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>2.503</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>2.503</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>7.497</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>7.497</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>7.497</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>7.497</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>0</BRAM>
+    <CLB>0</CLB>
+    <DSP>0</DSP>
+    <FF>603</FF>
+    <LATCH>0</LATCH>
+    <LUT>773</LUT>
+    <SRL>0</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>4032</BRAM>
+    <CLB>0</CLB>
+    <DSP>9024</DSP>
+    <FF>2607360</FF>
+    <LUT>1303680</LUT>
+    <URAM>960</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="single_heap_sort" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="3">grp_single_heap_sort_Pipeline_VITIS_LOOP_17_11_fu_107 grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92 grp_single_heap_sort_Pipeline_output_data_fu_99</SubModules>
+    <Resources FF="603" LUT="773" LogicLUT="773"/>
+    <LocalResources FF="124" LUT="47" LogicLUT="47"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_11_fu_107" DEPTH="1" FILE_NAME="single_heap_sort.v" ORIG_REF_NAME="single_heap_sort_single_heap_sort_Pipeline_VITIS_LOOP_17_11">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="228" LUT="326" LogicLUT="326"/>
+    <LocalResources FF="226" LUT="189" LogicLUT="189"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_11_fu_107/flow_control_loop_pipe_sequential_init_U" BINDMODULE="single_heap_sort_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="single_heap_sort_single_heap_sort_Pipeline_VITIS_LOOP_17_11.v" ORIG_REF_NAME="single_heap_sort_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="137" LogicLUT="137"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92" DEPTH="1" FILE_NAME="single_heap_sort.v" ORIG_REF_NAME="single_heap_sort_single_heap_sort_Pipeline_VITIS_LOOP_17_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="208" LUT="359" LogicLUT="359"/>
+    <LocalResources FF="206" LUT="142" LogicLUT="142"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U" BINDMODULE="single_heap_sort_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="single_heap_sort_single_heap_sort_Pipeline_VITIS_LOOP_17_1.v" ORIG_REF_NAME="single_heap_sort_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="217" LogicLUT="217"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_single_heap_sort_Pipeline_output_data_fu_99" DEPTH="1" FILE_NAME="single_heap_sort.v" ORIG_REF_NAME="single_heap_sort_single_heap_sort_Pipeline_output_data">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="43" LUT="41" LogicLUT="41"/>
+    <LocalResources FF="41"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_single_heap_sort_Pipeline_output_data_fu_99/flow_control_loop_pipe_sequential_init_U" BINDMODULE="single_heap_sort_flow_control_loop_pipe_sequential_init" DEPTH="2" FILE_NAME="single_heap_sort_single_heap_sort_Pipeline_output_data.v" ORIG_REF_NAME="single_heap_sort_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="41" LogicLUT="41"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="2.399" DATAPATH_LOGIC_DELAY="0.665" DATAPATH_NET_DELAY="1.734" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[0]/CE" LOGIC_LEVELS="9" MAX_FANOUT="63" SLACK="7.497" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="175"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="187"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.399" DATAPATH_LOGIC_DELAY="0.665" DATAPATH_NET_DELAY="1.734" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[10]/CE" LOGIC_LEVELS="9" MAX_FANOUT="63" SLACK="7.497" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="175"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="187"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.399" DATAPATH_LOGIC_DELAY="0.665" DATAPATH_NET_DELAY="1.734" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[11]/CE" LOGIC_LEVELS="9" MAX_FANOUT="63" SLACK="7.497" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="175"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[11]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="187"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.399" DATAPATH_LOGIC_DELAY="0.665" DATAPATH_NET_DELAY="1.734" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[12]/CE" LOGIC_LEVELS="9" MAX_FANOUT="63" SLACK="7.497" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="175"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="187"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="2.399" DATAPATH_LOGIC_DELAY="0.665" DATAPATH_NET_DELAY="1.734" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[13]/CE" LOGIC_LEVELS="9" MAX_FANOUT="63" SLACK="7.497" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/right_reg_222_reg[7]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="175"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln27_fu_163_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_address1[19]_INST_0_i_4" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/largest_2_load_reg_247[30]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/largest_2_load_reg_247[30]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/flow_control_loop_pipe_sequential_init_U/icmp_ln31_fu_188_p2_carry__0_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT4" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/icmp_ln31_fu_188_p2_carry__0" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/ap_CS_fsm[3]_i_1__0" PRIMITIVE_TYPE="CLB.LUT.LUT2" LINE_NUMBER="67"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/grp_single_heap_sort_Pipeline_VITIS_LOOP_17_1_fu_92/input_r_addr_6_reg_271_reg[13]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" LINE_NUMBER="187"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/single_heap_sort_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/single_heap_sort_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/single_heap_sort_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/single_heap_sort_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/single_heap_sort_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/single_heap_sort_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

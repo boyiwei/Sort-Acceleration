@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "batch_size.h"
+#include "dataset_size.h"
 
 //// HLS header files
 //#include <hls_stream.h>

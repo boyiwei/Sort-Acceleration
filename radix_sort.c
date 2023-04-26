@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "batch_size.h"
+#include "dataset_size.h"
 #define bit_width_bin 32
 #define bit_width_hex bit_width_bin/4
 #define bit_width_oct bit_width_bin/3

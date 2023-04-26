@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "batch_size.h"
+#include "dataset_size.h"
 
 void radix_sort_seperate_bucket(int data[batch_size], int sorted_data[batch_size]);
 
