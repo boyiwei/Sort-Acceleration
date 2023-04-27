@@ -1,87 +1,69 @@
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 15, 
+DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 39, 
                    Column: 0 }
 Function:        single_maxHeapify
 Args:            
   - String:          'Inlining function '''
   - Callee:          single_swap
-    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 8, 
+    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 9, 
                        Column: 0 }
   - String:          ''' into '''
   - Caller:          single_maxHeapify
-    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 15, 
+    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 39, 
                        Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 41, 
+DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 69, 
                    Column: 0 }
 Function:        single_heap_sort
 Args:            
   - String:          'Inlining function '''
   - Callee:          single_maxHeapify
-    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 15, 
+    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 39, 
                        Column: 0 }
   - String:          ''' into '''
   - Caller:          single_heap_sort
-    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 41, 
+    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 69, 
                        Column: 0 }
   - String:          ''''
 ...
 --- !Passed
 Pass:            reflow-inliner
 Name:            AutoInline
-DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 41, 
+DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 69, 
                    Column: 0 }
 Function:        single_heap_sort
 Args:            
   - String:          'Inlining function '''
   - Callee:          single_swap
-    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 8, 
+    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 9, 
                        Column: 0 }
   - String:          ''' into '''
   - Caller:          single_heap_sort
-    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 41, 
+    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 69, 
                        Column: 0 }
   - String:          ''''
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 16, 
+DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 44, 
                    Column: 22 }
 Function:        single_heap_sort
 Args:            
   - String:          Could not analyze the loop bounds
   - String:          ' _XLX_SEP_ '
-  - LoopName:        VITIS_LOOP_16_1
+  - LoopName:        VITIS_LOOP_44_1
   - String:          ' '
-  - LoopLoc:         'sort_seperate_bucket/single_heap_sort.c:16:22'
-  - String:          ' '
-  - Function:        single_heap_sort
-    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 41, 
-                       Column: 0 }
-  - String:          ' '
-...
---- !Missed
-Pass:            reflow-burst-inference
-Name:            CouldNotAnalyzeBoundsPattern
-DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 16, 
-                   Column: 22 }
-Function:        single_heap_sort
-Args:            
-  - String:          Could not analyze the loop bounds
-  - String:          ' _XLX_SEP_ '
-  - LoopName:        VITIS_LOOP_16_1
-  - String:          ' '
-  - LoopLoc:         'sort_seperate_bucket/single_heap_sort.c:16:22'
+  - LoopLoc:         'sort_seperate_bucket/single_heap_sort.c:44:22'
   - String:          ' '
   - Function:        single_heap_sort
-    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 41, 
+    DebugLoc:        { File: sort_seperate_bucket/single_heap_sort.c, Line: 69, 
                        Column: 0 }
   - String:          ' '
 ...

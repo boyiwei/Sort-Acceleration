@@ -1,5 +1,4 @@
-remark: sort_seperate_bucket/single_heap_sort.c:15:0: Inlining function 'single_swap' into 'single_maxHeapify'
-remark: sort_seperate_bucket/single_heap_sort.c:41:0: Inlining function 'single_maxHeapify' into 'single_heap_sort'
-remark: sort_seperate_bucket/single_heap_sort.c:41:0: Inlining function 'single_swap' into 'single_heap_sort'
-remark: sort_seperate_bucket/single_heap_sort.c:16:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_16_1 sort_seperate_bucket/single_heap_sort.c:16:22 single_heap_sort 
-remark: sort_seperate_bucket/single_heap_sort.c:16:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_16_1 sort_seperate_bucket/single_heap_sort.c:16:22 single_heap_sort 
+remark: sort_seperate_bucket/single_heap_sort.c:39:0: Inlining function 'single_swap' into 'single_maxHeapify'
+remark: sort_seperate_bucket/single_heap_sort.c:69:0: Inlining function 'single_maxHeapify' into 'single_heap_sort'
+remark: sort_seperate_bucket/single_heap_sort.c:69:0: Inlining function 'single_swap' into 'single_heap_sort'
+remark: sort_seperate_bucket/single_heap_sort.c:44:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_44_1 sort_seperate_bucket/single_heap_sort.c:44:22 single_heap_sort 

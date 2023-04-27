@@ -14,9 +14,9 @@ module single_heap_sort_single_heap_sort_Pipeline_output_data (
         ap_done,
         ap_idle,
         ap_ready,
-        data_address0,
-        data_ce0,
-        data_q0,
+        input_r_address0,
+        input_r_ce0,
+        input_r_q0,
         output_r_address0,
         output_r_ce0,
         output_r_we0,
@@ -31,16 +31,16 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [22:0] data_address0;
-output   data_ce0;
-input  [31:0] data_q0;
+output  [22:0] input_r_address0;
+output   input_r_ce0;
+input  [31:0] input_r_q0;
 output  [22:0] output_r_address0;
 output   output_r_ce0;
 output   output_r_we0;
 output  [31:0] output_r_d0;
 
 reg ap_idle;
-reg data_ce0;
+reg input_r_ce0;
 reg output_r_ce0;
 reg output_r_we0;
 
@@ -52,16 +52,16 @@ reg    ap_idle_pp0;
 wire    ap_block_state1_pp0_stage0_iter0;
 wire    ap_block_state2_pp0_stage0_iter1;
 wire    ap_block_pp0_stage0_subdone;
-wire   [0:0] icmp_ln66_fu_73_p2;
+wire   [0:0] icmp_ln88_fu_73_p2;
 reg    ap_condition_exit_pp0_iter0_stage0;
 wire    ap_loop_exit_ready;
 reg    ap_ready_int;
-wire   [63:0] zext_ln66_fu_85_p1;
-reg   [63:0] zext_ln66_reg_105;
+wire   [63:0] zext_ln88_fu_85_p1;
+reg   [63:0] zext_ln88_reg_105;
 wire    ap_block_pp0_stage0_11001;
 wire    ap_block_pp0_stage0;
 reg   [22:0] j_fu_34;
-wire   [22:0] add_ln66_fu_79_p2;
+wire   [22:0] add_ln88_fu_79_p2;
 wire    ap_loop_init;
 reg   [22:0] ap_sig_allocacmp_j_1;
 reg    ap_done_reg;
@@ -128,8 +128,8 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        if (((icmp_ln66_fu_73_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
-            j_fu_34 <= add_ln66_fu_79_p2;
+        if (((icmp_ln88_fu_73_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            j_fu_34 <= add_ln88_fu_79_p2;
         end else if ((ap_loop_init == 1'b1)) begin
             j_fu_34 <= 23'd0;
         end
@@ -137,13 +137,13 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln66_fu_73_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        zext_ln66_reg_105[22 : 0] <= zext_ln66_fu_85_p1[22 : 0];
+    if (((icmp_ln88_fu_73_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+        zext_ln88_reg_105[22 : 0] <= zext_ln88_fu_85_p1[22 : 0];
     end
 end
 
 always @ (*) begin
-    if (((icmp_ln66_fu_73_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln88_fu_73_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b1;
     end else begin
         ap_condition_exit_pp0_iter0_stage0 = 1'b0;
@@ -192,9 +192,9 @@ end
 
 always @ (*) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        data_ce0 = 1'b1;
+        input_r_ce0 = 1'b1;
     end else begin
-        data_ce0 = 1'b0;
+        input_r_ce0 = 1'b0;
     end
 end
 
@@ -225,7 +225,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln66_fu_79_p2 = (ap_sig_allocacmp_j_1 + 23'd1);
+assign add_ln88_fu_79_p2 = (ap_sig_allocacmp_j_1 + 23'd1);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd0];
 
@@ -245,18 +245,18 @@ assign ap_enable_reg_pp0_iter0 = ap_start_int;
 
 assign ap_loop_exit_ready = ap_condition_exit_pp0_iter0_stage0;
 
-assign data_address0 = zext_ln66_fu_85_p1;
+assign icmp_ln88_fu_73_p2 = ((ap_sig_allocacmp_j_1 == 23'd5000000) ? 1'b1 : 1'b0);
 
-assign icmp_ln66_fu_73_p2 = ((ap_sig_allocacmp_j_1 == 23'd5000000) ? 1'b1 : 1'b0);
+assign input_r_address0 = zext_ln88_fu_85_p1;
 
-assign output_r_address0 = zext_ln66_reg_105;
+assign output_r_address0 = zext_ln88_reg_105;
 
-assign output_r_d0 = data_q0;
+assign output_r_d0 = input_r_q0;
 
-assign zext_ln66_fu_85_p1 = ap_sig_allocacmp_j_1;
+assign zext_ln88_fu_85_p1 = ap_sig_allocacmp_j_1;
 
 always @ (posedge ap_clk) begin
-    zext_ln66_reg_105[63:23] <= 41'b00000000000000000000000000000000000000000;
+    zext_ln88_reg_105[63:23] <= 41'b00000000000000000000000000000000000000000;
 end
 
 endmodule //single_heap_sort_single_heap_sort_Pipeline_output_data

@@ -1,4 +1,4 @@
 <VitisHLS:BurstInfo>
-    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="sort_seperate_bucket/single_heap_sort.c:16:22" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="sort_seperate_bucket/single_heap_sort.c:16:22" LoopName="VITIS_LOOP_16_1" ParentFunc="single_heap_sort"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="sort_seperate_bucket/single_heap_sort.c:44:22" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="sort_seperate_bucket/single_heap_sort.c:44:22" LoopName="VITIS_LOOP_44_1" ParentFunc="single_heap_sort"/>
 </VitisHLS:BurstInfo>
 

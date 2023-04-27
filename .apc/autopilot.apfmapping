@@ -6,6 +6,7 @@
     <originFiles name="single_radix_sort_hex.c" path="/home/boyiw7/sort_seperate_bucket/single_radix_sort_hex.c"/>
     <originFiles name="single_radix_sort_bin.c" path="/home/boyiw7/sort_seperate_bucket/single_radix_sort_bin.c"/>
     <originFiles name="single_merge_sort.c" path="/home/boyiw7/sort_seperate_bucket/single_merge_sort.c"/>
+    <originFiles name="single_heap_sort.h" path="/home/boyiw7/sort_seperate_bucket/single_heap_sort.h"/>
     <originFiles name="single_heap_sort.c" path="/home/boyiw7/sort_seperate_bucket/single_heap_sort.c"/>
     <originFiles name="radix_sort_separate_bucket_parallel.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort_separate_bucket_parallel.c"/>
     <originFiles name="radix_sort.h" path="/home/boyiw7/sort_seperate_bucket/radix_sort.h"/>

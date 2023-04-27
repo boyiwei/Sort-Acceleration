@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'single_heap_sort_Pipeline_output_data'" level="0">
-<item name = "Date">Tue Apr 25 23:13:38 2023
+<item name = "Date">Wed Apr 26 16:22:05 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">sort_seperate_bucket</item>

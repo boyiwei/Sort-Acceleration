@@ -13,11 +13,11 @@ set hasInterrupt 0
 set C_modelName {single_heap_sort_Pipeline_output_data}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ data int 32 regular {array 5000000 { 1 3 } 1 1 }  }
+	{ input_r int 32 regular {array 5000000 { 1 3 } 1 1 }  }
 	{ output_r int 32 regular {array 5000000 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "data", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
+	{ "Name" : "input_r", "interface" : "memory", "bitwidth" : 32, "direction" : "READONLY"} , 
  	{ "Name" : "output_r", "interface" : "memory", "bitwidth" : 32, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
 set portNum 13
@@ -28,9 +28,9 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ data_address0 sc_out sc_lv 23 signal 0 } 
-	{ data_ce0 sc_out sc_logic 1 signal 0 } 
-	{ data_q0 sc_in sc_lv 32 signal 0 } 
+	{ input_r_address0 sc_out sc_lv 23 signal 0 } 
+	{ input_r_ce0 sc_out sc_logic 1 signal 0 } 
+	{ input_r_q0 sc_in sc_lv 32 signal 0 } 
 	{ output_r_address0 sc_out sc_lv 23 signal 1 } 
 	{ output_r_ce0 sc_out sc_logic 1 signal 1 } 
 	{ output_r_we0 sc_out sc_logic 1 signal 1 } 
@@ -43,9 +43,9 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "data_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":23, "type": "signal", "bundle":{"name": "data", "role": "address0" }} , 
- 	{ "name": "data_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "data", "role": "ce0" }} , 
- 	{ "name": "data_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "data", "role": "q0" }} , 
+ 	{ "name": "input_r_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":23, "type": "signal", "bundle":{"name": "input_r", "role": "address0" }} , 
+ 	{ "name": "input_r_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "input_r", "role": "ce0" }} , 
+ 	{ "name": "input_r_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":32, "type": "signal", "bundle":{"name": "input_r", "role": "q0" }} , 
  	{ "name": "output_r_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":23, "type": "signal", "bundle":{"name": "output_r", "role": "address0" }} , 
  	{ "name": "output_r_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_r", "role": "ce0" }} , 
  	{ "name": "output_r_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "output_r", "role": "we0" }} , 
@@ -67,7 +67,7 @@ set RtlHierarchyInfo {[
 		"HasNonBlockingOperation" : "0",
 		"IsBlackBox" : "0",
 		"Port" : [
-			{"Name" : "data", "Type" : "Memory", "Direction" : "I"},
+			{"Name" : "input_r", "Type" : "Memory", "Direction" : "I"},
 			{"Name" : "output_r", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "output_data", "PipelineType" : "UPC",
@@ -77,7 +77,7 @@ set RtlHierarchyInfo {[
 
 set ArgLastReadFirstWriteLatency {
 	single_heap_sort_Pipeline_output_data {
-		data {Type I LastRead 0 FirstWrite -1}
+		input_r {Type I LastRead 0 FirstWrite -1}
 		output_r {Type O LastRead -1 FirstWrite 1}}}
 
 set hasDtUnsupportedChannel 0
@@ -92,6 +92,6 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	data { ap_memory {  { data_address0 mem_address 1 23 }  { data_ce0 mem_ce 1 1 }  { data_q0 in_data 0 32 } } }
+	input_r { ap_memory {  { input_r_address0 mem_address 1 23 }  { input_r_ce0 mem_ce 1 1 }  { input_r_q0 in_data 0 32 } } }
 	output_r { ap_memory {  { output_r_address0 mem_address 1 23 }  { output_r_ce0 mem_ce 1 1 }  { output_r_we0 mem_we 1 1 }  { output_r_d0 mem_din 1 32 } } }
 }

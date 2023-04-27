@@ -1,10 +1,5 @@
 # This script segment is generated automatically by AutoPilot
 
-if {${::AESL::PGuard_rtl_comp_handler}} {
-	::AP::rtl_comp_handler single_heap_sort_data_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
-}
-
-
 # clear list
 if {${::AESL::PGuard_autoexp_gen}} {
     cg_default_interface_gen_dc_begin
@@ -17,14 +12,14 @@ set axilite_register_dict [dict create]
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 10 \
+    id 8 \
     name input_r \
     reset_level 1 \
     sync_rst true \
-    dir I \
+    dir IO \
     corename input_r \
     op interface \
-    ports { input_r_address0 { O 23 vector } input_r_ce0 { O 1 bit } input_r_q0 { I 32 vector } } \
+    ports { input_r_address0 { O 23 vector } input_r_ce0 { O 1 bit } input_r_we0 { O 1 bit } input_r_d0 { O 32 vector } input_r_q0 { I 32 vector } input_r_address1 { O 23 vector } input_r_ce1 { O 1 bit } input_r_we1 { O 1 bit } input_r_d1 { O 32 vector } input_r_q1 { I 32 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'input_r'"
@@ -36,7 +31,7 @@ puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored ge
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
 eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
-    id 11 \
+    id 9 \
     name output_r \
     reset_level 1 \
     sync_rst true \

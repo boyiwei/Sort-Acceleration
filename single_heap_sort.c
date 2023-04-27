@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dataset_size.h"
+#include "single_heap_sort.h"
 
 
 
@@ -35,11 +36,12 @@ void single_swap(int *x, int *y) {
 //        i = largest;
 //    }
 //}
+
 void single_maxHeapify(int arr[dataset_size], int n, int i) {
     int largest;
     int left;
     int right;
-    
+
     for (int loop_iter = 0; loop_iter < n; loop_iter++) {
         largest = i;
         left = 2 * i + 1;
@@ -66,40 +68,34 @@ void single_maxHeapify(int arr[dataset_size], int n, int i) {
 
 // Main function to do heap sort
 void single_heap_sort(int input[dataset_size], int output[dataset_size]) {
-    int data[dataset_size];
     int i = 0;
     int j = 0;
-    initialization:
-    for(i=0; i<dataset_size; i++){
-#pragma HLS PIPELINE
-        data[i] = input[i];
-    }
 
     heap_sort_procedure:
     // Build max heap
     for (i = dataset_size / 2 - 1; i >= 0; i--)
-        single_maxHeapify(data, dataset_size, i);
+        single_maxHeapify(input, dataset_size, i);
 
     // Extract elements from heap
     for (j = dataset_size - 1; j >= 0; j--) {
         // Move the current root to the end
-        single_swap(&data[0], &data[j]);
+        single_swap(&input[0], &input[j]);
 
         // Heapify the reduced heap
-        single_maxHeapify(data, j, 0);
+        single_maxHeapify(input, j, 0);
     }
 
     output_data:
     for(j=0; j<dataset_size; j++){
 #pragma HLS PIPELINE
-        output[j] = data[j];
+        output[j] = input[j];
     }
 }
 
 
 void single_heap_sort_test(){
 	static int dataset[] = {
-	#include "/home/boyiw7/dataset_gen/dataset_1M_1.h"
+	#include "/home/boyiw7/dataset_gen/dataset_5M_1.h"
 		};
 		static int output[dataset_size];
 		int i;

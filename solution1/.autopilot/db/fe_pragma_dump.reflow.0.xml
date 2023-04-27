@@ -1,4 +1,3 @@
 <pragmas>
-<pragma file="sort_seperate_bucket/single_heap_sort.c" line="67" pragmaType="pipeline" parentfunction="single_heap_sort" off="0" ii="-1" rewind="0" style=""/>
-<pragma file="sort_seperate_bucket/single_heap_sort.c" line="47" pragmaType="pipeline" parentfunction="single_heap_sort" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="sort_seperate_bucket/single_heap_sort.c" line="89" pragmaType="pipeline" parentfunction="single_heap_sort" off="0" ii="-1" rewind="0" style=""/>
 </pragmas>

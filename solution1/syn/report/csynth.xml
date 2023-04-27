@@ -15,7 +15,7 @@
         <PipelineType>no</PipelineType>
         <SummaryOfTimingAnalysis>
             <unit>ns</unit>
-            <EstimatedClockPeriod>2.754</EstimatedClockPeriod>
+            <EstimatedClockPeriod>4.000</EstimatedClockPeriod>
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
@@ -32,28 +32,43 @@
             <heap_sort_procedure>
                 <Slack>7.30</Slack>
                 <TripCount>2500000</TripCount>
-                <Latency>undef</Latency>
-                <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-                <IterationLatency>undef</IterationLatency>
+                <Latency>
+                    <range>
+                        <min>27500000</min>
+                        <max>62500015000000</max>
+                    </range>
+                </Latency>
+                <AbsoluteTimeLatency>
+                    <range>
+                        <min>275000000</min>
+                        <max>625000150000000</max>
+                    </range>
+                </AbsoluteTimeLatency>
+                <IterationLatency>
+                    <range>
+                        <min>11</min>
+                        <max>25000006</max>
+                    </range>
+                </IterationLatency>
                 <InstanceList/>
             </heap_sort_procedure>
-            <VITIS_LOOP_57_1>
+            <VITIS_LOOP_79_1>
                 <Slack>7.30</Slack>
                 <TripCount>5000000</TripCount>
                 <Latency>undef</Latency>
                 <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
                 <IterationLatency>undef</IterationLatency>
                 <InstanceList/>
-            </VITIS_LOOP_57_1>
+            </VITIS_LOOP_79_1>
         </SummaryOfLoopLatency>
     </PerformanceEstimates>
     <AreaEstimates>
         <Resources>
-            <BRAM_18K>16</BRAM_18K>
-            <FF>738</FF>
-            <LUT>1224</LUT>
-            <URAM>0</URAM>
+            <FF>851</FF>
+            <LUT>1387</LUT>
+            <BRAM_18K>0</BRAM_18K>
             <DSP>0</DSP>
+            <URAM>0</URAM>
         </Resources>
         <AvailableResources>
             <BRAM_18K>4032</BRAM_18K>
@@ -155,7 +170,91 @@
             <CType>int</CType>
         </RtlPorts>
         <RtlPorts>
+            <name>input_r_we0</name>
+            <Object>input_r</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_r_d0</name>
+            <Object>input_r</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
             <name>input_r_q0</name>
+            <Object>input_r</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_r_address1</name>
+            <Object>input_r</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>23</Bits>
+            <Attribute>address</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_r_ce1</name>
+            <Object>input_r</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_r_we1</name>
+            <Object>input_r</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_r_d1</name>
+            <Object>input_r</Object>
+            <Type>array</Type>
+            <Scope/>
+            <IOProtocol>ap_memory</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>input_r_q1</name>
             <Object>input_r</Object>
             <Type>array</Type>
             <Scope/>
@@ -220,79 +319,77 @@
             <ModuleName>single_heap_sort</ModuleName>
             <InstancesList>
                 <Instance>
-                    <InstName>grp_single_heap_sort_Pipeline_initialization_fu_94</InstName>
-                    <ModuleName>single_heap_sort_Pipeline_initialization</ModuleName>
+                    <InstName>grp_single_heap_sort_Pipeline_VITIS_LOOP_44_1_fu_94</InstName>
+                    <ModuleName>single_heap_sort_Pipeline_VITIS_LOOP_44_1</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>94</ID>
-                    <BindInstances>add_ln46_fu_79_p2</BindInstances>
+                    <BindInstances>loop_iter_2_fu_133_p2 right_fu_164_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_single_heap_sort_Pipeline_VITIS_LOOP_16_1_fu_102</InstName>
-                    <ModuleName>single_heap_sort_Pipeline_VITIS_LOOP_16_1</ModuleName>
-                    <IsCompInst>true</IsCompInst>
-                    <ID>102</ID>
-                    <BindInstances>right_fu_124_p2</BindInstances>
-                </Instance>
-                <Instance>
-                    <InstName>grp_single_heap_sort_Pipeline_output_data_fu_108</InstName>
+                    <InstName>grp_single_heap_sort_Pipeline_output_data_fu_101</InstName>
                     <ModuleName>single_heap_sort_Pipeline_output_data</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>108</ID>
-                    <BindInstances>add_ln66_fu_79_p2</BindInstances>
+                    <ID>101</ID>
+                    <BindInstances>add_ln88_fu_79_p2</BindInstances>
                 </Instance>
                 <Instance>
-                    <InstName>grp_single_heap_sort_Pipeline_VITIS_LOOP_16_11_fu_115</InstName>
-                    <ModuleName>single_heap_sort_Pipeline_VITIS_LOOP_16_11</ModuleName>
+                    <InstName>grp_single_heap_sort_Pipeline_VITIS_LOOP_44_11_fu_109</InstName>
+                    <ModuleName>single_heap_sort_Pipeline_VITIS_LOOP_44_11</ModuleName>
                     <IsCompInst>true</IsCompInst>
-                    <ID>115</ID>
-                    <BindInstances>right_fu_122_p2</BindInstances>
+                    <ID>109</ID>
+                    <BindInstances>add_ln44_fu_155_p2 right_fu_173_p2</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>data_U i_2_fu_142_p2 add_ln57_fu_178_p2</BindInstances>
+            <BindInstances>i_fu_138_p2 add_ln79_fu_179_p2</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>single_heap_sort_Pipeline_initialization</Name>
+            <Name>single_heap_sort_Pipeline_VITIS_LOOP_44_1</Name>
             <Loops>
-                <initialization/>
+                <VITIS_LOOP_44_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>2.496</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>3.582</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>5000002</Best-caseLatency>
-                    <Average-caseLatency>5000002</Average-caseLatency>
-                    <Worst-caseLatency>5000002</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>50.000 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>50.000 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>50.000 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>5000002</PipelineInitiationInterval>
+                    <Best-caseLatency>9</Best-caseLatency>
+                    <Average-caseLatency>12500004</Average-caseLatency>
+                    <Worst-caseLatency>25000004</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>90.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.125 sec</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.250 sec</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>9 ~ 25000004</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <initialization>
-                        <Name>initialization</Name>
+                    <VITIS_LOOP_44_1>
+                        <Name>VITIS_LOOP_44_1</Name>
                         <Slack>7.30</Slack>
-                        <TripCount>5000000</TripCount>
-                        <Latency>5000000</Latency>
-                        <AbsoluteTimeLatency>50.000 ms</AbsoluteTimeLatency>
-                        <PipelineII>1</PipelineII>
-                        <PipelineDepth>2</PipelineDepth>
+                        <TripCount>
+                            <range>
+                                <min>1</min>
+                                <max>5000000</max>
+                            </range>
+                        </TripCount>
+                        <Latency>7 ~ 25000002</Latency>
+                        <AbsoluteTimeLatency>70.000 ns ~ 0.250 sec</AbsoluteTimeLatency>
+                        <PipelineII>5</PipelineII>
+                        <PipelineDepth>5</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </initialization>
+                    </VITIS_LOOP_44_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>49</FF>
+                    <FF>323</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>84</LUT>
+                    <LUT>492</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -307,13 +404,14 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="initialization" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_79_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_1" OPTYPE="add" PRAGMA="" RTLNAME="loop_iter_2_fu_133_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:44" URAM="0" VARIABLE="loop_iter_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_1" OPTYPE="add" PRAGMA="" RTLNAME="right_fu_164_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:47" URAM="0" VARIABLE="right"/>
             </BindNodes>
         </Module>
         <Module>
-            <Name>single_heap_sort_Pipeline_VITIS_LOOP_16_1</Name>
+            <Name>single_heap_sort_Pipeline_VITIS_LOOP_44_11</Name>
             <Loops>
-                <VITIS_LOOP_16_1/>
+                <VITIS_LOOP_44_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
@@ -332,8 +430,8 @@
                     <PipelineType>no</PipelineType>
                 </SummaryOfOverallLatency>
                 <SummaryOfLoopLatency>
-                    <VITIS_LOOP_16_1>
-                        <Name>VITIS_LOOP_16_1</Name>
+                    <VITIS_LOOP_44_1>
+                        <Name>VITIS_LOOP_44_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>undef</TripCount>
                         <Latency>undef</Latency>
@@ -342,15 +440,15 @@
                         <PipelineDepth>5</PipelineDepth>
                         <PipelineType>yes</PipelineType>
                         <InstanceList/>
-                    </VITIS_LOOP_16_1>
+                    </VITIS_LOOP_44_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <FF>244</FF>
+                    <FF>319</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>368</LUT>
+                    <LUT>489</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
@@ -365,65 +463,8 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_16_1" OPTYPE="add" PRAGMA="" RTLNAME="right_fu_124_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:19" URAM="0" VARIABLE="right"/>
-            </BindNodes>
-        </Module>
-        <Module>
-            <Name>single_heap_sort_Pipeline_VITIS_LOOP_16_11</Name>
-            <Loops>
-                <VITIS_LOOP_16_1/>
-            </Loops>
-            <PerformanceEstimates>
-                <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>10.00</TargetClockPeriod>
-                    <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>2.754</EstimatedClockPeriod>
-                </SummaryOfTimingAnalysis>
-                <SummaryOfOverallLatency>
-                    <Best-caseLatency>undef</Best-caseLatency>
-                    <Average-caseLatency>undef</Average-caseLatency>
-                    <Worst-caseLatency>undef</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>undef</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>undef</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>undef</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>undef</PipelineInitiationInterval>
-                    <PipelineType>no</PipelineType>
-                </SummaryOfOverallLatency>
-                <SummaryOfLoopLatency>
-                    <VITIS_LOOP_16_1>
-                        <Name>VITIS_LOOP_16_1</Name>
-                        <Slack>7.30</Slack>
-                        <TripCount>undef</TripCount>
-                        <Latency>undef</Latency>
-                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-                        <PipelineII>5</PipelineII>
-                        <PipelineDepth>5</PipelineDepth>
-                        <PipelineType>yes</PipelineType>
-                        <InstanceList/>
-                    </VITIS_LOOP_16_1>
-                </SummaryOfLoopLatency>
-            </PerformanceEstimates>
-            <AreaEstimates>
-                <Resources>
-                    <FF>267</FF>
-                    <AVAIL_FF>2607360</AVAIL_FF>
-                    <UTIL_FF>~0</UTIL_FF>
-                    <LUT>368</LUT>
-                    <AVAIL_LUT>1303680</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
-                    <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>4032</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>9024</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>960</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
-                </Resources>
-            </AreaEstimates>
-            <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_16_1" OPTYPE="add" PRAGMA="" RTLNAME="right_fu_122_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:19" URAM="0" VARIABLE="right"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln44_fu_155_p2" SOURCE="" URAM="0" VARIABLE="add_ln44"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_44_1" OPTYPE="add" PRAGMA="" RTLNAME="right_fu_173_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:47" URAM="0" VARIABLE="right"/>
             </BindNodes>
         </Module>
         <Module>
@@ -481,20 +522,20 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_data" OPTYPE="add" PRAGMA="" RTLNAME="add_ln66_fu_79_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:66" URAM="0" VARIABLE="add_ln66"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="output_data" OPTYPE="add" PRAGMA="" RTLNAME="add_ln88_fu_79_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:88" URAM="0" VARIABLE="add_ln88"/>
             </BindNodes>
         </Module>
         <Module>
             <Name>single_heap_sort</Name>
             <Loops>
                 <heap_sort_procedure/>
-                <VITIS_LOOP_57_1/>
+                <VITIS_LOOP_79_1/>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>2.754</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>4.000</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
                     <Best-caseLatency>undef</Best-caseLatency>
@@ -511,17 +552,22 @@
                         <Name>heap_sort_procedure</Name>
                         <Slack>7.30</Slack>
                         <TripCount>2500000</TripCount>
-                        <Latency>undef</Latency>
-                        <AbsoluteTimeLatency>undef</AbsoluteTimeLatency>
-                        <IterationLatency>undef</IterationLatency>
-                        <PipelineDepth>undef</PipelineDepth>
+                        <Latency>27500000 ~ 62500015000000</Latency>
+                        <AbsoluteTimeLatency>0.275 sec ~ 6.3e+05 sec</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>11</min>
+                                <max>25000006</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>11 ~ 25000006</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_single_heap_sort_Pipeline_VITIS_LOOP_16_1_fu_102</Instance>
+                            <Instance>grp_single_heap_sort_Pipeline_VITIS_LOOP_44_1_fu_94</Instance>
                         </InstanceList>
                     </heap_sort_procedure>
-                    <VITIS_LOOP_57_1>
-                        <Name>VITIS_LOOP_57_1</Name>
+                    <VITIS_LOOP_79_1>
+                        <Name>VITIS_LOOP_79_1</Name>
                         <Slack>7.30</Slack>
                         <TripCount>5000000</TripCount>
                         <Latency>undef</Latency>
@@ -530,34 +576,33 @@
                         <PipelineDepth>undef</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <InstanceList>
-                            <Instance>grp_single_heap_sort_Pipeline_VITIS_LOOP_16_11_fu_115</Instance>
+                            <Instance>grp_single_heap_sort_Pipeline_VITIS_LOOP_44_11_fu_109</Instance>
                         </InstanceList>
-                    </VITIS_LOOP_57_1>
+                    </VITIS_LOOP_79_1>
                 </SummaryOfLoopLatency>
             </PerformanceEstimates>
             <AreaEstimates>
                 <Resources>
-                    <BRAM_18K>16</BRAM_18K>
-                    <AVAIL_BRAM>4032</AVAIL_BRAM>
-                    <UTIL_BRAM>~0</UTIL_BRAM>
-                    <FF>738</FF>
+                    <FF>851</FF>
                     <AVAIL_FF>2607360</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1224</LUT>
+                    <LUT>1387</LUT>
                     <AVAIL_LUT>1303680</AVAIL_LUT>
                     <UTIL_LUT>~0</UTIL_LUT>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>960</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>4032</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
                     <DSP>0</DSP>
                     <AVAIL_DSP>9024</AVAIL_DSP>
                     <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>960</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="16" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="data_U" SOURCE="sort_seperate_bucket/single_heap_sort.c:42" URAM="0" VARIABLE="data"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="heap_sort_procedure" OPTYPE="add" PRAGMA="" RTLNAME="i_2_fu_142_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:53" URAM="0" VARIABLE="i_2"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_57_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln57_fu_178_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:57" URAM="0" VARIABLE="add_ln57"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="heap_sort_procedure" OPTYPE="add" PRAGMA="" RTLNAME="i_fu_138_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:75" URAM="0" VARIABLE="i"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="VITIS_LOOP_79_1" OPTYPE="add" PRAGMA="" RTLNAME="add_ln79_fu_179_p2" SOURCE="sort_seperate_bucket/single_heap_sort.c:79" URAM="0" VARIABLE="add_ln79"/>
             </BindNodes>
         </Module>
     </ModuleInformation>
@@ -566,11 +611,18 @@
         <config_export vivado_clock="10"/>
     </UserConfigCommands>
     <Args>
-        <Arg ArgName="input" index="0" direction="in" srcType="int*" srcSize="32">
+        <Arg ArgName="input" index="0" direction="inout" srcType="int*" srcSize="32">
             <hwRefs>
                 <hwRef type="port" interface="input_r_address0" name="input_r_address0" usage="address" direction="out"/>
                 <hwRef type="port" interface="input_r_ce0" name="input_r_ce0" usage="control" direction="out"/>
+                <hwRef type="port" interface="input_r_we0" name="input_r_we0" usage="control" direction="out"/>
+                <hwRef type="port" interface="input_r_d0" name="input_r_d0" usage="data" direction="out"/>
                 <hwRef type="port" interface="input_r_q0" name="input_r_q0" usage="data" direction="in"/>
+                <hwRef type="port" interface="input_r_address1" name="input_r_address1" usage="address" direction="out"/>
+                <hwRef type="port" interface="input_r_ce1" name="input_r_ce1" usage="control" direction="out"/>
+                <hwRef type="port" interface="input_r_we1" name="input_r_we1" usage="control" direction="out"/>
+                <hwRef type="port" interface="input_r_d1" name="input_r_d1" usage="data" direction="out"/>
+                <hwRef type="port" interface="input_r_q1" name="input_r_q1" usage="data" direction="in"/>
             </hwRefs>
         </Arg>
         <Arg ArgName="output" index="1" direction="out" srcType="int*" srcSize="32">
@@ -630,12 +682,56 @@
                 <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="input"/>
             </constraints>
         </Interface>
+        <Interface InterfaceName="input_r_d0" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="input_r_d0">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>input_r_d0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="input"/>
+            </constraints>
+        </Interface>
         <Interface InterfaceName="input_r_q0" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
             <portMaps>
                 <portMap portMapName="input_r_q0">DATA</portMap>
             </portMaps>
             <ports>
                 <port>input_r_q0</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="input"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="input_r_address1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="23">
+            <portMaps>
+                <portMap portMapName="input_r_address1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>input_r_address1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="input"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="input_r_d1" type="data" busTypeName="data" protocol="ap_memory" mode="master" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="input_r_d1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>input_r_d1</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="input"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="input_r_q1" type="data" busTypeName="data" protocol="ap_memory" mode="slave" dataWidth="32">
+            <portMaps>
+                <portMap portMapName="input_r_q1">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>input_r_q1</port>
             </ports>
             <constraints>
                 <constraint constraint_type="pragma interface" mode="ap_memory" register_option="0" argName="input"/>
@@ -670,7 +766,11 @@
                 <table isCollapsed="0">
                     <keys size="2">Interface, Bitwidth</keys>
                     <column name="input_r_address0">23, , </column>
+                    <column name="input_r_address1">23, , </column>
+                    <column name="input_r_d0">32, , </column>
+                    <column name="input_r_d1">32, , </column>
                     <column name="input_r_q0">32, , </column>
+                    <column name="input_r_q1">32, , </column>
                     <column name="output_r_address0">23, , </column>
                     <column name="output_r_d0">32, , </column>
                 </table>
@@ -690,7 +790,7 @@
             <item name="Top Function Arguments">
                 <table isCollapsed="1">
                     <keys size="3">Argument, Direction, Datatype</keys>
-                    <column name="input">in, int*</column>
+                    <column name="input">inout, int*</column>
                     <column name="output">out, int*</column>
                 </table>
             </item>
@@ -699,7 +799,14 @@
                     <keys size="4">Argument, HW Interface, HW Type, HW Usage</keys>
                     <column name="input">input_r_address0, port, offset, </column>
                     <column name="input">input_r_ce0, port, , </column>
+                    <column name="input">input_r_we0, port, , </column>
+                    <column name="input">input_r_d0, port, , </column>
                     <column name="input">input_r_q0, port, , </column>
+                    <column name="input">input_r_address1, port, offset, </column>
+                    <column name="input">input_r_ce1, port, , </column>
+                    <column name="input">input_r_we1, port, , </column>
+                    <column name="input">input_r_d1, port, , </column>
+                    <column name="input">input_r_q1, port, , </column>
                     <column name="output">output_r_address0, port, offset, </column>
                     <column name="output">output_r_ce0, port, , </column>
                     <column name="output">output_r_we0, port, , </column>
@@ -881,20 +988,19 @@
         <Pragma type="pipeline" location="sort_seperate_bucket/radix_sort.c:124" status="warning" parentFunction="radix_sort_separate_bucket" variable="" isDirective="0" options="">
             <Msg msg_id="207-5560" msg_severity="WARNING" msg_body="Only for/while/do support the pipeline  pragma"/>
         </Pragma>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort.c:137" status="valid" parentFunction="radix_sort_separate_bucket" variable="" isDirective="0" options="min=0 max=15625 -1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort.c:137" status="valid" parentFunction="radix_sort_separate_bucket" variable="" isDirective="0" options="min=0 max=5000000/64 -1"/>
         <Pragma type="dataflow" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:19" status="valid" parentFunction="input_bucket_parallel_2" variable="" isDirective="0" options=""/>
         <Pragma type="array_partition" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:27" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="bucket" isDirective="0" options="variable=bucket type=complete dim=1"/>
         <Pragma type="array_partition" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:28" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="bucket_pointer" isDirective="0" options="variable=bucket_pointer type=complete dim=1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:44" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=15625/2-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:49" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=15625/2-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:44" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=5000000/64/2-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:49" status="valid" parentFunction="radix_sort_separate_bucket_parallel_2" variable="" isDirective="0" options="min=0 max=5000000/64/2-1"/>
         <Pragma type="dataflow" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:81" status="valid" parentFunction="input_bucket_parallel_5" variable="" isDirective="0" options=""/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:143" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=15625/5-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:148" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=15625/5-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:153" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=15625/5-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:158" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=15625/5-1"/>
-        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:163" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=15625/5-1"/>
-        <Pragma type="pipeline" location="sort_seperate_bucket/single_heap_sort.c:47" status="valid" parentFunction="single_heap_sort" variable="" isDirective="0" options=""/>
-        <Pragma type="pipeline" location="sort_seperate_bucket/single_heap_sort.c:67" status="valid" parentFunction="single_heap_sort" variable="" isDirective="0" options=""/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:143" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=5000000/64/5-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:148" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=5000000/64/5-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:153" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=5000000/64/5-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:158" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=5000000/64/5-1"/>
+        <Pragma type="loop_tripcount" location="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:163" status="valid" parentFunction="radix_sort_separate_bucket_parallel_5" variable="" isDirective="0" options="min=0 max=5000000/64/5-1"/>
+        <Pragma type="pipeline" location="sort_seperate_bucket/single_heap_sort.c:89" status="valid" parentFunction="single_heap_sort" variable="" isDirective="0" options=""/>
         <Pragma type="pipeline" location="sort_seperate_bucket/single_merge_sort.c:17" status="valid" parentFunction="single_merge_arrays" variable="" isDirective="0" options="II=1"/>
         <Pragma type="dataflow" location="sort_seperate_bucket/single_merge_sort.c:44" status="warning" parentFunction="single_merge_sort_parallel" variable="" isDirective="0" options="">
             <Msg msg_id="214-114" msg_severity="WARNING" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>

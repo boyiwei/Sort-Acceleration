@@ -1,0 +1,11 @@
+sv work "glbl.v"
+sv xil_defaultlib "single_heap_sort_single_heap_sort_Pipeline_VITIS_LOOP_44_1.v"
+sv xil_defaultlib "single_heap_sort_single_heap_sort_Pipeline_output_data.v"
+sv xil_defaultlib "AESL_automem_input_r.v"
+sv xil_defaultlib "single_heap_sort_flow_control_loop_pipe_sequential_init.v"
+sv xil_defaultlib "AESL_automem_output_r.v"
+sv xil_defaultlib "single_heap_sort_single_heap_sort_Pipeline_VITIS_LOOP_44_11.v"
+sv xil_defaultlib "single_heap_sort.autotb.v"
+sv xil_defaultlib "single_heap_sort.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

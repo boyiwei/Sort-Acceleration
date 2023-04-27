@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'single_heap_sort'" level="0">
-<item name = "Date">Tue Apr 25 23:13:40 2023
+<item name = "Date">Wed Apr 26 16:22:06 2023
 </item>
 <item name = "Version">2022.2 (Build 3670227 on Oct 13 2022)</item>
 <item name = "Project">sort_seperate_bucket</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 2.754 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 4.000 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -31,16 +31,15 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_single_heap_sort_Pipeline_initialization_fu_94">single_heap_sort_Pipeline_initialization, 5000002, 5000002, 50.000 ms, 50.000 ms, 5000002, 5000002, no</column>
-<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_16_1_fu_102">single_heap_sort_Pipeline_VITIS_LOOP_16_1, ?, ?, ?, ?, ?, ?, no</column>
-<column name="grp_single_heap_sort_Pipeline_output_data_fu_108">single_heap_sort_Pipeline_output_data, 5000002, 5000002, 50.000 ms, 50.000 ms, 5000002, 5000002, no</column>
-<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_16_11_fu_115">single_heap_sort_Pipeline_VITIS_LOOP_16_11, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_44_1_fu_94">single_heap_sort_Pipeline_VITIS_LOOP_44_1, 9, 25000004, 90.000 ns, 0.250 sec, 9, 25000004, no</column>
+<column name="grp_single_heap_sort_Pipeline_output_data_fu_101">single_heap_sort_Pipeline_output_data, 5000002, 5000002, 50.000 ms, 50.000 ms, 5000002, 5000002, no</column>
+<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_44_11_fu_109">single_heap_sort_Pipeline_VITIS_LOOP_44_11, ?, ?, ?, ?, ?, ?, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- heap_sort_procedure">?, ?, ?, -, -, 2500000, no</column>
-<column name="- VITIS_LOOP_57_1">?, ?, ?, -, -, 5000000, no</column>
+<column name="- heap_sort_procedure">27500000, 62500015000000, 11 ~ 25000006, -, -, 2500000, no</column>
+<column name="- VITIS_LOOP_79_1">?, ?, ?, -, -, 5000000, no</column>
 </table>
 </item>
 </section>
@@ -53,26 +52,25 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 61, -</column>
+<column name="Expression">-, -, 0, 79, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 609, 904, -</column>
-<column name="Memory">16, -, 0, 0, 0</column>
-<column name="Multiplexer">-, -, -, 259, -</column>
-<column name="Register">-, -, 129, -, -</column>
+<column name="Instance">-, -, 691, 1065, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 243, -</column>
+<column name="Register">-, -, 160, -, -</column>
 <specialColumn name="Available SLR">1344, 3008, 869120, 434560, 320</specialColumn>
-<specialColumn name="Utilization SLR (%)">1, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0, 0</specialColumn>
 <specialColumn name="Available">4032, 9024, 2607360, 1303680, 960</specialColumn>
-<specialColumn name="Utilization (%)">~0, 0, ~0, ~0, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_16_1_fu_102">single_heap_sort_Pipeline_VITIS_LOOP_16_1, 0, 0, 244, 368, 0</column>
-<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_16_11_fu_115">single_heap_sort_Pipeline_VITIS_LOOP_16_11, 0, 0, 267, 368, 0</column>
-<column name="grp_single_heap_sort_Pipeline_initialization_fu_94">single_heap_sort_Pipeline_initialization, 0, 0, 49, 84, 0</column>
-<column name="grp_single_heap_sort_Pipeline_output_data_fu_108">single_heap_sort_Pipeline_output_data, 0, 0, 49, 84, 0</column>
+<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_44_1_fu_94">single_heap_sort_Pipeline_VITIS_LOOP_44_1, 0, 0, 323, 492, 0</column>
+<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_44_11_fu_109">single_heap_sort_Pipeline_VITIS_LOOP_44_11, 0, 0, 319, 489, 0</column>
+<column name="grp_single_heap_sort_Pipeline_output_data_fu_101">single_heap_sort_Pipeline_output_data, 0, 0, 49, 84, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -81,7 +79,6 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="data_U">data_RAM_AUTO_1R1W, 16, 0, 0, 0, 5000000, 32, 1, 160000000</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -90,37 +87,40 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln57_fu_178_p2">+, 0, 0, 31, 24, 2</column>
-<column name="i_2_fu_142_p2">+, 0, 0, 30, 23, 2</column>
+<column name="add_ln79_fu_179_p2">+, 0, 0, 31, 24, 2</column>
+<column name="i_fu_138_p2">+, 0, 0, 30, 23, 2</column>
+<column name="ap_block_state8_on_subcall_done">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln44_fu_174_p2">icmp, 0, 0, 16, 24, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">59, 11, 1, 11</column>
-<column name="data_address0">43, 8, 23, 184</column>
-<column name="data_address1">14, 3, 23, 69</column>
-<column name="data_ce0">31, 6, 1, 6</column>
-<column name="data_ce1">14, 3, 1, 3</column>
-<column name="data_d0">26, 5, 32, 160</column>
-<column name="data_d1">14, 3, 32, 96</column>
-<column name="data_we0">26, 5, 1, 5</column>
-<column name="data_we1">14, 3, 1, 3</column>
-<column name="i_1_fu_62">9, 2, 23, 46</column>
-<column name="j_1_fu_70">9, 2, 24, 48</column>
+<column name="ap_NS_fsm">54, 10, 1, 10</column>
+<column name="i_1_fu_60">9, 2, 23, 46</column>
+<column name="input_r_address0">31, 6, 23, 138</column>
+<column name="input_r_address1">26, 5, 23, 115</column>
+<column name="input_r_ce0">26, 5, 1, 5</column>
+<column name="input_r_ce1">20, 4, 1, 4</column>
+<column name="input_r_d0">20, 4, 32, 128</column>
+<column name="input_r_d1">14, 3, 32, 96</column>
+<column name="input_r_we0">20, 4, 1, 4</column>
+<column name="input_r_we1">14, 3, 1, 3</column>
+<column name="j_1_fu_64">9, 2, 24, 48</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">10, 0, 10, 0</column>
-<column name="data_addr_4_reg_224">23, 0, 23, 0</column>
-<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_16_11_fu_115_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_16_1_fu_102_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_single_heap_sort_Pipeline_initialization_fu_94_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_single_heap_sort_Pipeline_output_data_fu_108_ap_start_reg">1, 0, 1, 0</column>
-<column name="i_1_fu_62">23, 0, 23, 0</column>
-<column name="j_1_fu_70">24, 0, 24, 0</column>
-<column name="trunc_ln43_reg_199">22, 0, 22, 0</column>
-<column name="trunc_ln44_reg_219">23, 0, 23, 0</column>
+<column name="ap_CS_fsm">9, 0, 9, 0</column>
+<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_44_11_fu_109_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_single_heap_sort_Pipeline_VITIS_LOOP_44_1_fu_94_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_single_heap_sort_Pipeline_output_data_fu_101_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_1_fu_60">23, 0, 23, 0</column>
+<column name="icmp_ln44_reg_240">1, 0, 1, 0</column>
+<column name="input_r_addr_1_reg_229">23, 0, 23, 0</column>
+<column name="j_1_fu_64">24, 0, 24, 0</column>
+<column name="temp_reg_235">32, 0, 32, 0</column>
+<column name="trunc_ln70_reg_199">22, 0, 22, 0</column>
+<column name="trunc_ln79_reg_220">23, 0, 23, 0</column>
 </table>
 </item>
 </section>
@@ -138,7 +138,14 @@
 <column name="ap_ready">out, 1, ap_ctrl_hs, single_heap_sort, return value</column>
 <column name="input_r_address0">out, 23, ap_memory, input_r, array</column>
 <column name="input_r_ce0">out, 1, ap_memory, input_r, array</column>
+<column name="input_r_we0">out, 1, ap_memory, input_r, array</column>
+<column name="input_r_d0">out, 32, ap_memory, input_r, array</column>
 <column name="input_r_q0">in, 32, ap_memory, input_r, array</column>
+<column name="input_r_address1">out, 23, ap_memory, input_r, array</column>
+<column name="input_r_ce1">out, 1, ap_memory, input_r, array</column>
+<column name="input_r_we1">out, 1, ap_memory, input_r, array</column>
+<column name="input_r_d1">out, 32, ap_memory, input_r, array</column>
+<column name="input_r_q1">in, 32, ap_memory, input_r, array</column>
 <column name="output_r_address0">out, 23, ap_memory, output_r, array</column>
 <column name="output_r_ce0">out, 1, ap_memory, output_r, array</column>
 <column name="output_r_we0">out, 1, ap_memory, output_r, array</column>

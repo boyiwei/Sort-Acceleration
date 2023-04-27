@@ -1,16 +1,4 @@
 <xilinx:hls_fe_msgs>
-    <msg msg_groups="" msg_id="207-910" msg_severity="WARNING" msg_loc="sort_seperate_bucket/dataset_size.h:2:9" msg_body="'batch_size' macro redefined">
-        <args ClangWarningOption="macro-redefined"/>
-    </msg>
-    <msg msg_groups="" msg_id="207-71" msg_severity="INFO" msg_loc="sort_seperate_bucket/batch_size.h:1:9" msg_body="previous definition is here">
-        <args/>
-    </msg>
-    <msg msg_groups="" msg_id="207-910" msg_severity="WARNING" msg_loc="sort_seperate_bucket/batch_size.h:1:9" msg_body="'batch_size' macro redefined">
-        <args ClangWarningOption="macro-redefined"/>
-    </msg>
-    <msg msg_groups="" msg_id="207-71" msg_severity="INFO" msg_loc="sort_seperate_bucket/dataset_size.h:2:9" msg_body="previous definition is here">
-        <args/>
-    </msg>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:35:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-169" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:35:9" msg_body="There are a total of 5 such instances of non-canonical statements in the dataflow region"/>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="sort_seperate_bucket/sort_top.c:83:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
@@ -148,13 +136,10 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_merge_sort.c:53:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="single_merge_sort_parallel" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:48:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/boyiw7/sort_seperate_bucket/solution1/csynth.tcl:49:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="single_heap_sort" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=single_heap_sort" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_heap_sort.c:47:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="single_heap_sort" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
-    </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_heap_sort.c:67:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/single_heap_sort.c:89:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="single_heap_sort" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:19:9" msg_body="HLS pragma dump">
@@ -167,28 +152,28 @@
         <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=bucket_pointer type=complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:44:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=15625/2-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=5000000/64/2-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:49:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=15625/2-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_2" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=5000000/64/2-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:81:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="input_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:143:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=15625/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=5000000/64/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:148:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=15625/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=5000000/64/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:153:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=15625/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=5000000/64/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:158:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=15625/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=5000000/64/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:163:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=15625/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket_parallel_5" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=5000000/64/5-1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_INVALID" msg_id="207-5560" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:30:9" msg_body="Only for/while/do support the pipeline  pragma">
         <args ClangWarningOption="ignored-hls-attributes"/>
@@ -230,7 +215,7 @@
         <args ARG_PragmaFunction="radix_sort_separate_bucket" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/radix_sort.c:137:9" msg_body="HLS pragma dump">
-        <args ARG_PragmaFunction="radix_sort_separate_bucket" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=15625 -1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+        <args ARG_PragmaFunction="radix_sort_separate_bucket" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=0 max=5000000/64 -1" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-111" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_oct_loser.c:8:16" msg_body="Static scalars and arrays declared inside a dataflow region will be treated like local variables"/>
     <msg msg_groups="PRAGMA_DATAFLOW" msg_id="214-114" msg_severity="WARNING" msg_loc="sort_seperate_bucket/multi_radix_oct_loser.c:13:9" msg_body="Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region"/>
@@ -654,13 +639,13 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="sort_seperate_bucket/heapsort.c:69:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="heap_sort" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sort_seperate_bucket/single_heap_sort.c:15:0" msg_body="Inlining function 'single_swap' into 'single_maxHeapify'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sort_seperate_bucket/single_heap_sort.c:39:0" msg_body="Inlining function 'single_swap' into 'single_maxHeapify'">
         <args Callee="single_swap" Caller="single_maxHeapify"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sort_seperate_bucket/single_heap_sort.c:41:0" msg_body="Inlining function 'single_maxHeapify' into 'single_heap_sort'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sort_seperate_bucket/single_heap_sort.c:69:0" msg_body="Inlining function 'single_maxHeapify' into 'single_heap_sort'">
         <args Callee="single_maxHeapify" Caller="single_heap_sort"/>
     </msg>
-    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sort_seperate_bucket/single_heap_sort.c:41:0" msg_body="Inlining function 'single_swap' into 'single_heap_sort'">
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="sort_seperate_bucket/single_heap_sort.c:69:0" msg_body="Inlining function 'single_swap' into 'single_heap_sort'">
         <args Callee="single_swap" Caller="single_heap_sort"/>
     </msg>
 </xilinx:hls_fe_msgs>

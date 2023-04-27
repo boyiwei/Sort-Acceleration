@@ -1923,7 +1923,7 @@ extern int getloadavg (double __loadavg[], int __nelem)
 # 1 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 1 3 4
 # 1014 "/usr/include/stdlib.h" 2 3 4
 # 3 "sort_seperate_bucket/heapsort.c" 2
-# 1 "sort_seperate_bucket/batch_size.h" 1
+# 1 "sort_seperate_bucket/dataset_size.h" 1
 # 4 "sort_seperate_bucket/heapsort.c" 2
 
 
@@ -1938,7 +1938,7 @@ void swap(int *x, int *y) {
 }
 
 
-void maxHeapify(int arr[15625], int n, int i) {
+void maxHeapify(int arr[5000000/64], int n, int i) {
  VITIS_LOOP_18_1: while (1) {
          int largest = i;
          int left = 2 * i + 1;
@@ -1964,23 +1964,23 @@ void maxHeapify(int arr[15625], int n, int i) {
 
 
 
-void heap_sort(int input[15625], int output[15625]) {
- int data[15625];
+void heap_sort(int input[5000000/64], int output[5000000/64]) {
+ int data[5000000/64];
  int i = 0;
  int j = 0;
  initialization:
- for(i=0; i<15625; i++){
+ for(i=0; i<5000000/64; i++){
 #pragma HLS PIPELINE
  data[i] = input[i];
  }
 
  heap_sort_procedure:
 
-    for (i = 15625 / 2 - 1; i >= 0; i--)
-        maxHeapify(data, 15625, i);
+    for (i = 5000000/64 / 2 - 1; i >= 0; i--)
+        maxHeapify(data, 5000000/64, i);
 
 
-    VITIS_LOOP_59_1: for (j = 15625 - 1; j >= 0; j--) {
+    VITIS_LOOP_59_1: for (j = 5000000/64 - 1; j >= 0; j--) {
 
         swap(&data[0], &data[j]);
 
@@ -1989,7 +1989,7 @@ void heap_sort(int input[15625], int output[15625]) {
     }
 
     output_data:
- for(j=0; j<15625; j++){
+ for(j=0; j<5000000/64; j++){
 #pragma HLS PIPELINE
  output[j] = data[j];
  }

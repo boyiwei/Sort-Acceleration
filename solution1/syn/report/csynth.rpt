@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'single_heap_sort'
 ================================================================
 + General Information: 
-    * Date:           Tue Apr 25 23:13:40 2023
+    * Date:           Wed Apr 26 16:22:06 2023
     * Version:        2022.2 (Build 3670227 on Oct 13 2022)
     * Project:        sort_seperate_bucket
     * Solution:       solution1 (Vivado IP Flow Target)
@@ -15,22 +15,20 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +------------------------------------------------+------+------+---------+-----------+----------+---------+---------+----------+----------+----+-----------+------------+-----+
-    |                     Modules                    | Issue|      | Latency |  Latency  | Iteration|         |   Trip  |          |          |    |           |            |     |
-    |                     & Loops                    | Type | Slack| (cycles)|    (ns)   |  Latency | Interval|  Count  | Pipelined|   BRAM   | DSP|     FF    |     LUT    | URAM|
-    +------------------------------------------------+------+------+---------+-----------+----------+---------+---------+----------+----------+----+-----------+------------+-----+
-    |+ single_heap_sort                              |     -|  4.55|        -|          -|         -|        -|        -|        no|  16 (~0%)|   -|  738 (~0%)|  1224 (~0%)|    -|
-    | + single_heap_sort_Pipeline_initialization     |     -|  4.80|  5000002|  5.000e+07|         -|  5000002|        -|        no|         -|   -|   49 (~0%)|    84 (~0%)|    -|
-    |  o initialization                              |     -|  7.30|  5000000|  5.000e+07|         2|        1|  5000000|       yes|         -|   -|          -|           -|    -|
-    | + single_heap_sort_Pipeline_output_data        |     -|  4.80|  5000002|  5.000e+07|         -|  5000002|        -|        no|         -|   -|   49 (~0%)|    84 (~0%)|    -|
-    |  o output_data                                 |     -|  7.30|  5000000|  5.000e+07|         2|        1|  5000000|       yes|         -|   -|          -|           -|    -|
-    | o heap_sort_procedure                          |     -|  7.30|        -|          -|         -|        -|        -|        no|         -|   -|          -|           -|    -|
-    |  + single_heap_sort_Pipeline_VITIS_LOOP_16_1   |     -|  4.55|        -|          -|         -|        -|        -|        no|         -|   -|  244 (~0%)|   368 (~0%)|    -|
-    |   o VITIS_LOOP_16_1                            |    II|  7.30|        -|          -|         5|        5|        -|       yes|         -|   -|          -|           -|    -|
-    | o VITIS_LOOP_57_1                              |     -|  7.30|        -|          -|         -|        -|        -|        no|         -|   -|          -|           -|    -|
-    |  + single_heap_sort_Pipeline_VITIS_LOOP_16_11  |     -|  4.55|        -|          -|         -|        -|        -|        no|         -|   -|  267 (~0%)|   368 (~0%)|    -|
-    |   o VITIS_LOOP_16_1                            |    II|  7.30|        -|          -|         5|        5|        -|       yes|         -|   -|          -|           -|    -|
-    +------------------------------------------------+------+------+---------+-----------+----------+---------+---------+----------+----------+----+-----------+------------+-----+
+    +------------------------------------------------+------+------+----------------+-----------+----------+----------+---------+----------+------+----+-----------+------------+-----+
+    |                     Modules                    | Issue|      |    Latency     |  Latency  | Iteration|          |   Trip  |          |      |    |           |            |     |
+    |                     & Loops                    | Type | Slack|    (cycles)    |    (ns)   |  Latency | Interval |  Count  | Pipelined| BRAM | DSP|     FF    |     LUT    | URAM|
+    +------------------------------------------------+------+------+----------------+-----------+----------+----------+---------+----------+------+----+-----------+------------+-----+
+    |+ single_heap_sort                              |     -|  3.30|               -|          -|         -|         -|        -|        no|     -|   -|  851 (~0%)|  1387 (~0%)|    -|
+    | + single_heap_sort_Pipeline_output_data        |     -|  4.80|         5000002|  5.000e+07|         -|   5000002|        -|        no|     -|   -|   49 (~0%)|    84 (~0%)|    -|
+    |  o output_data                                 |     -|  7.30|         5000000|  5.000e+07|         2|         1|  5000000|       yes|     -|   -|          -|           -|    -|
+    | o heap_sort_procedure                          |     -|  7.30|  62500015000000|  6.250e+14|  25000006|         -|  2500000|        no|     -|   -|          -|           -|    -|
+    |  + single_heap_sort_Pipeline_VITIS_LOOP_44_1   |     -|  3.72|        25000004|  2.500e+08|         -|  25000004|        -|        no|     -|   -|  323 (~0%)|   492 (~0%)|    -|
+    |   o VITIS_LOOP_44_1                            |    II|  7.30|        25000002|  2.500e+08|         5|         5|  5000000|       yes|     -|   -|          -|           -|    -|
+    | o VITIS_LOOP_79_1                              |     -|  7.30|               -|          -|         -|         -|        -|        no|     -|   -|          -|           -|    -|
+    |  + single_heap_sort_Pipeline_VITIS_LOOP_44_11  |     -|  4.55|               -|          -|         -|         -|        -|        no|     -|   -|  319 (~0%)|   489 (~0%)|    -|
+    |   o VITIS_LOOP_44_1                            |    II|  7.30|               -|          -|         5|         5|        -|       yes|     -|   -|          -|           -|    -|
+    +------------------------------------------------+------+------+----------------+-----------+----------+----------+---------+----------+------+----+-----------+------------+-----+
 
 
 ================================================================
@@ -41,7 +39,11 @@
 | Interface         | Bitwidth |
 +-------------------+----------+
 | input_r_address0  | 23       |
+| input_r_address1  | 23       |
+| input_r_d0        | 32       |
+| input_r_d1        | 32       |
 | input_r_q0        | 32       |
+| input_r_q1        | 32       |
 | output_r_address0 | 23       |
 | output_r_d0       | 32       |
 +-------------------+----------+
@@ -63,7 +65,7 @@
 +----------+-----------+----------+
 | Argument | Direction | Datatype |
 +----------+-----------+----------+
-| input    | in        | int*     |
+| input    | inout     | int*     |
 | output   | out       | int*     |
 +----------+-----------+----------+
 
@@ -73,7 +75,14 @@
 +----------+-------------------+---------+----------+
 | input    | input_r_address0  | port    | offset   |
 | input    | input_r_ce0       | port    |          |
+| input    | input_r_we0       | port    |          |
+| input    | input_r_d0        | port    |          |
 | input    | input_r_q0        | port    |          |
+| input    | input_r_address1  | port    | offset   |
+| input    | input_r_ce1       | port    |          |
+| input    | input_r_we1       | port    |          |
+| input    | input_r_d1        | port    |          |
+| input    | input_r_q1        | port    |          |
 | output   | output_r_address0 | port    | offset   |
 | output   | output_r_ce0      | port    |          |
 | output   | output_r_we0      | port    |          |
@@ -91,33 +100,27 @@
 ================================================================
 == Bind Op Report
 ================================================================
-+-----------------------------------------------+-----+--------+----------+-----+--------+---------+
-| Name                                          | DSP | Pragma | Variable | Op  | Impl   | Latency |
-+-----------------------------------------------+-----+--------+----------+-----+--------+---------+
-| + single_heap_sort                            | 0   |        |          |     |        |         |
-|   i_2_fu_142_p2                               | -   |        | i_2      | add | fabric | 0       |
-|   add_ln57_fu_178_p2                          | -   |        | add_ln57 | add | fabric | 0       |
-|  + single_heap_sort_Pipeline_initialization   | 0   |        |          |     |        |         |
-|    add_ln46_fu_79_p2                          | -   |        | add_ln46 | add | fabric | 0       |
-|  + single_heap_sort_Pipeline_VITIS_LOOP_16_1  | 0   |        |          |     |        |         |
-|    right_fu_124_p2                            | -   |        | right    | add | fabric | 0       |
-|  + single_heap_sort_Pipeline_output_data      | 0   |        |          |     |        |         |
-|    add_ln66_fu_79_p2                          | -   |        | add_ln66 | add | fabric | 0       |
-|  + single_heap_sort_Pipeline_VITIS_LOOP_16_11 | 0   |        |          |     |        |         |
-|    right_fu_122_p2                            | -   |        | right    | add | fabric | 0       |
-+-----------------------------------------------+-----+--------+----------+-----+--------+---------+
++-----------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                          | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++-----------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + single_heap_sort                            | 0   |        |             |     |        |         |
+|   i_fu_138_p2                                 | -   |        | i           | add | fabric | 0       |
+|   add_ln79_fu_179_p2                          | -   |        | add_ln79    | add | fabric | 0       |
+|  + single_heap_sort_Pipeline_VITIS_LOOP_44_1  | 0   |        |             |     |        |         |
+|    loop_iter_2_fu_133_p2                      | -   |        | loop_iter_2 | add | fabric | 0       |
+|    right_fu_164_p2                            | -   |        | right       | add | fabric | 0       |
+|  + single_heap_sort_Pipeline_output_data      | 0   |        |             |     |        |         |
+|    add_ln88_fu_79_p2                          | -   |        | add_ln88    | add | fabric | 0       |
+|  + single_heap_sort_Pipeline_VITIS_LOOP_44_11 | 0   |        |             |     |        |         |
+|    add_ln44_fu_155_p2                         | -   |        | add_ln44    | add | fabric | 0       |
+|    right_fu_173_p2                            | -   |        | right       | add | fabric | 0       |
++-----------------------------------------------+-----+--------+-------------+-----+--------+---------+
 
 
 ================================================================
 == Bind Storage Report
 ================================================================
-+--------------------+------+------+--------+----------+---------+------+---------+
-| Name               | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
-+--------------------+------+------+--------+----------+---------+------+---------+
-| + single_heap_sort | 16   | 0    |        |          |         |      |         |
-|   data_U           | 16   | -    |        | data     | ram_t2p | auto | 1       |
-+--------------------+------+------+--------+----------+---------+------+---------+
-
+  No bind storage info in design
 
 ================================================================
 == Pragma Report
@@ -279,20 +282,19 @@
 | array_partition | variable=bucket_sizes type=complete         | sort_seperate_bucket/radix_sort.c:66 in radix_sort_unified_bucket_pingpong, bucket_sizes                               |
 | loop_merge      |                                             | sort_seperate_bucket/radix_sort.c:80 in radix_sort_unified_bucket_pingpong                                             |
 | loop_merge      |                                             | sort_seperate_bucket/radix_sort.c:123 in radix_sort_separate_bucket                                                    |
-| loop_tripcount  | min=0 max=15625 -1                          | sort_seperate_bucket/radix_sort.c:137 in radix_sort_separate_bucket                                                    |
+| loop_tripcount  | min=0 max=5000000/64 -1                     | sort_seperate_bucket/radix_sort.c:137 in radix_sort_separate_bucket                                                    |
 | dataflow        |                                             | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:19 in input_bucket_parallel_2                               |
 | array_partition | variable=bucket type=complete dim=1         | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:27 in radix_sort_separate_bucket_parallel_2, bucket         |
 | array_partition | variable=bucket_pointer type=complete dim=1 | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:28 in radix_sort_separate_bucket_parallel_2, bucket_pointer |
-| loop_tripcount  | min=0 max=15625/2-1                         | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:44 in radix_sort_separate_bucket_parallel_2                 |
-| loop_tripcount  | min=0 max=15625/2-1                         | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:49 in radix_sort_separate_bucket_parallel_2                 |
+| loop_tripcount  | min=0 max=5000000/64/2-1                    | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:44 in radix_sort_separate_bucket_parallel_2                 |
+| loop_tripcount  | min=0 max=5000000/64/2-1                    | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:49 in radix_sort_separate_bucket_parallel_2                 |
 | dataflow        |                                             | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:81 in input_bucket_parallel_5                               |
-| loop_tripcount  | min=0 max=15625/5-1                         | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:143 in radix_sort_separate_bucket_parallel_5                |
-| loop_tripcount  | min=0 max=15625/5-1                         | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:148 in radix_sort_separate_bucket_parallel_5                |
-| loop_tripcount  | min=0 max=15625/5-1                         | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:153 in radix_sort_separate_bucket_parallel_5                |
-| loop_tripcount  | min=0 max=15625/5-1                         | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:158 in radix_sort_separate_bucket_parallel_5                |
-| loop_tripcount  | min=0 max=15625/5-1                         | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:163 in radix_sort_separate_bucket_parallel_5                |
-| pipeline        |                                             | sort_seperate_bucket/single_heap_sort.c:47 in single_heap_sort                                                         |
-| pipeline        |                                             | sort_seperate_bucket/single_heap_sort.c:67 in single_heap_sort                                                         |
+| loop_tripcount  | min=0 max=5000000/64/5-1                    | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:143 in radix_sort_separate_bucket_parallel_5                |
+| loop_tripcount  | min=0 max=5000000/64/5-1                    | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:148 in radix_sort_separate_bucket_parallel_5                |
+| loop_tripcount  | min=0 max=5000000/64/5-1                    | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:153 in radix_sort_separate_bucket_parallel_5                |
+| loop_tripcount  | min=0 max=5000000/64/5-1                    | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:158 in radix_sort_separate_bucket_parallel_5                |
+| loop_tripcount  | min=0 max=5000000/64/5-1                    | sort_seperate_bucket/radix_sort_separate_bucket_parallel.c:163 in radix_sort_separate_bucket_parallel_5                |
+| pipeline        |                                             | sort_seperate_bucket/single_heap_sort.c:89 in single_heap_sort                                                         |
 | pipeline        | II=1                                        | sort_seperate_bucket/single_merge_sort.c:17 in single_merge_arrays                                                     |
 | array_partition | variable=temp type=complete dim=1           | sort_seperate_bucket/single_merge_sort.c:47 in single_merge_sort_parallel, temp                                        |
 | unroll          |                                             | sort_seperate_bucket/single_merge_sort.c:53 in single_merge_sort_parallel                                              |

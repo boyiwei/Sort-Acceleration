@@ -1,13 +1,7 @@
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/apcc'
-INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 26 10:38:44 PDT 2023
+INFO: [HLS 200-10] For user 'boyiw7' on host 'reactor' (Linux_x86_64 version 5.14.0-1054-oem) on Wed Apr 26 11:02:39 PDT 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
 INFO: [HLS 200-10] In directory '/home/boyiw7/sort_seperate_bucket/solution1/csim/build'
-../../../heapsort.c:3:10: fatal error: 'batch_size.h' file not found
-#include "batch_size.h"
-         ^
-1 error generated.
-ERROR: [APCC 202-10] clang compile failed: child process exited abnormally
-ERROR: [APCC 202-1] ProcessSources failed
-INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/6810901682530724635679
-ERROR: [APCC 202-1] APCC failed.
-INFO: [HLS 200-112] Total CPU user time: 1.11 seconds. Total CPU system time: 0.14 seconds. Total elapsed time: 1.09 seconds; peak allocated memory: 98.965 MB.
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_boyiw7/7192661682532159383339
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 7.11 seconds. Total CPU system time: 1.01 seconds. Total elapsed time: 8 seconds; peak allocated memory: 98.965 MB.
