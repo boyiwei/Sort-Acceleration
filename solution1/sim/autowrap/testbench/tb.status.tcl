@@ -1,1 +1,0 @@
-set ::AESL_AUTOSIM::gTopFileName /home/boyiw7/sort_seperate_bucket/solution1/./sim/autowrap/testbench/single_heap_sort.c_pre.c.tb.c
