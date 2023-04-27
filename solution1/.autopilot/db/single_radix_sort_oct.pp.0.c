@@ -877,8 +877,8 @@ extern int __overflow (FILE *, int);
 
 
 
-void single_radix_sort_oct(int input[5000000], int output[5000000]){
-    int bucket[2][5000000];
+void single_radix_sort_oct(int input[1000000], int output[1000000]){
+    int bucket[2][1000000];
     int bucket_pointer[8];
     int bucket_sizes[8] = {0};
 
@@ -888,7 +888,7 @@ void single_radix_sort_oct(int input[5000000], int output[5000000]){
 
 
     initialization:
-    for (int j = 0; j < 5000000; j++) {
+    for (int j = 0; j < 1000000; j++) {
         bucket[1-bucket_num][j] = input[j];
         int next_ith_radix = bucket[1-bucket_num][j] & 0b111;
         bucket_sizes[next_ith_radix] += 1;
@@ -908,7 +908,7 @@ void single_radix_sort_oct(int input[5000000], int output[5000000]){
         }
 
         input_bucket:
-        for (int j = 0; j < 5000000; j++) {
+        for (int j = 0; j < 1000000; j++) {
             int shifted = bucket[1-bucket_num][j] >> (i * 3);
             int ith_radix = shifted & 0b111;
             bucket[bucket_num][bucket_pointer[ith_radix]] = bucket[1-bucket_num][j];
@@ -921,7 +921,7 @@ void single_radix_sort_oct(int input[5000000], int output[5000000]){
     }
 
     output_bucket:
-    for (int k = 0; k < 5000000; k++) {
+    for (int k = 0; k < 1000000; k++) {
         output[k] = bucket[1-bucket_num][k];
     }
 }

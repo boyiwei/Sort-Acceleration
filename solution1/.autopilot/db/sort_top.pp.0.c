@@ -875,11 +875,11 @@ extern int __overflow (FILE *, int);
 # 1 "sort_seperate_bucket/dataset_size.h" 1
 # 3 "sort_seperate_bucket/radix_sort.h" 2
 
-void radix_sort_seperate_bucket(int data[5000000/64], int sorted_data[5000000/64]);
+void radix_sort_seperate_bucket(int data[1000000/64], int sorted_data[1000000/64]);
 
-void radix_sort_unified_bucket_pingpong(int data[5000000/64], int sorted_data[5000000/64]);
+void radix_sort_unified_bucket_pingpong(int data[1000000/64], int sorted_data[1000000/64]);
 
-void radix_sort_unified_bucket(int data[5000000/64], int sorted_data[5000000/64]);
+void radix_sort_unified_bucket(int data[1000000/64], int sorted_data[1000000/64]);
 # 3 "sort_seperate_bucket/sort_top.c" 2
 # 1 "sort_seperate_bucket/merge_sort.h" 1
 
@@ -887,35 +887,35 @@ void radix_sort_unified_bucket(int data[5000000/64], int sorted_data[5000000/64]
 # 3 "sort_seperate_bucket/merge_sort.h" 2
 
 
-void merge_sort(int input1[5000000/64], int input2[5000000/64], int sorted_data[2*5000000/64]);
+void merge_sort(int input1[1000000/64], int input2[1000000/64], int sorted_data[2*1000000/64]);
 
-void merge_sort_batch0(int input1[5000000/64], int input2[5000000/64], int sorted_data[2*5000000/64]);
+void merge_sort_batch0(int input1[1000000/64], int input2[1000000/64], int sorted_data[2*1000000/64]);
 
-void merge_sort_batch1(int input1[2*5000000/64], int input2[2*5000000/64], int sorted_data[4*5000000/64]);
+void merge_sort_batch1(int input1[2*1000000/64], int input2[2*1000000/64], int sorted_data[4*1000000/64]);
 
-void merge_sort_batch2(int input1[4*5000000/64], int input2[4*5000000/64], int sorted_data[8*5000000/64]);
+void merge_sort_batch2(int input1[4*1000000/64], int input2[4*1000000/64], int sorted_data[8*1000000/64]);
 
-void merge_sort_batch3(int input1[8*5000000/64], int input2[8*5000000/64], int sorted_data[16*5000000/64]);
+void merge_sort_batch3(int input1[8*1000000/64], int input2[8*1000000/64], int sorted_data[16*1000000/64]);
 
-void merge_sort_batch4(int input1[16*5000000/64], int input2[16*5000000/64], int sorted_data[32*5000000/64]);
+void merge_sort_batch4(int input1[16*1000000/64], int input2[16*1000000/64], int sorted_data[32*1000000/64]);
 
-void merge_sort_batch5(int input1[32*5000000/64], int input2[32*5000000/64], int sorted_data[64*5000000/64]);
+void merge_sort_batch5(int input1[32*1000000/64], int input2[32*1000000/64], int sorted_data[64*1000000/64]);
 
-void loser_tree_64(int input[64][5000000/64], int output[64 * 5000000/64]);
+void loser_tree_64(int input[64][1000000/64], int output[64 * 1000000/64]);
 
-void loser_tree_32(int input[32][5000000/64], int output[32*5000000/64]);
+void loser_tree_32(int input[32][1000000/64], int output[32*1000000/64]);
 
-void loser_tree_16(int input[16][5000000/64], int output[16*5000000/64]);
+void loser_tree_16(int input[16][1000000/64], int output[16*1000000/64]);
 # 4 "sort_seperate_bucket/sort_top.c" 2
 # 1 "sort_seperate_bucket/dataset_size.h" 1
 # 5 "sort_seperate_bucket/sort_top.c" 2
 
 
 
-void sort_top_2(int input[2][5000000/64], int output[2*5000000/64]){
- printf("batch_size = %d\n", 5000000/64/2);
- int half_sorted0[5000000/64];
- int half_sorted1[5000000/64];
+void sort_top_2(int input[2][1000000/64], int output[2*1000000/64]){
+ printf("batch_size = %d\n", 1000000/64/2);
+ int half_sorted0[1000000/64];
+ int half_sorted1[1000000/64];
 
 #pragma HLS DATAFLOW
 
@@ -925,12 +925,12 @@ void sort_top_2(int input[2][5000000/64], int output[2*5000000/64]){
  merge_sort(half_sorted0, half_sorted1, output);
 }
 
-void sort_top_32(int input[32][5000000/64], int output[32*5000000/64]){
- int temp0[32][5000000/64];
- int temp1[16][2*5000000/64];
- int temp2[8][4*5000000/64];
- int temp3[4][8*5000000/64];
- int temp4[2][16*5000000/64];
+void sort_top_32(int input[32][1000000/64], int output[32*1000000/64]){
+ int temp0[32][1000000/64];
+ int temp1[16][2*1000000/64];
+ int temp2[8][4*1000000/64];
+ int temp3[4][8*1000000/64];
+ int temp4[2][16*1000000/64];
 #pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
 #pragma HLS ARRAY_PARTITION variable=temp0 type=complete dim=1
 #pragma HLS ARRAY_PARTITION variable=temp1 type=complete dim=1
@@ -970,13 +970,13 @@ void sort_top_32(int input[32][5000000/64], int output[32*5000000/64]){
 
 }
 
-void sort_top_64(int input[64][5000000/64], int output[64*5000000/64]){
- int temp0[64][5000000/64];
- int temp1[32][2*5000000/64];
- int temp2[16][4*5000000/64];
- int temp3[8][8*5000000/64];
- int temp4[4][16*5000000/64];
- int temp5[2][32*5000000/64];
+void sort_top_64(int input[64][1000000/64], int output[64*1000000/64]){
+ int temp0[64][1000000/64];
+ int temp1[32][2*1000000/64];
+ int temp2[16][4*1000000/64];
+ int temp3[8][8*1000000/64];
+ int temp4[4][16*1000000/64];
+ int temp5[2][32*1000000/64];
 
 #pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
 #pragma HLS ARRAY_PARTITION variable=temp0 type=complete dim=1

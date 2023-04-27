@@ -4,7 +4,7 @@
 ## Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project sort_seperate_bucket
-set_top single_heap_sort
+set_top multi_heap_kmerge
 add_files sort_seperate_bucket/sort_top.c
 add_files sort_seperate_bucket/single_radix_sort_oct.c
 add_files sort_seperate_bucket/single_radix_sort_hex.c
@@ -45,7 +45,7 @@ open_solution "solution1" -flow_target vivado
 set_part {xcu280-fsvh2892-2L-e}
 create_clock -period 10 -name default
 config_export -format ip_catalog -rtl verilog -vivado_clock 10
-source "./sort_seperate_bucket/solution1/directives.tcl"
+#source "./sort_seperate_bucket/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design

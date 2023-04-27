@@ -1,4 +1,80 @@
-remark: sort_seperate_bucket/single_heap_sort.c:39:0: Inlining function 'single_swap' into 'single_maxHeapify'
-remark: sort_seperate_bucket/single_heap_sort.c:69:0: Inlining function 'single_maxHeapify' into 'single_heap_sort'
-remark: sort_seperate_bucket/single_heap_sort.c:69:0: Inlining function 'single_swap' into 'single_heap_sort'
-remark: sort_seperate_bucket/single_heap_sort.c:44:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_44_1 sort_seperate_bucket/single_heap_sort.c:44:22 single_heap_sort 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:71:0: Unrolling loop 'VITIS_LOOP_115_6' (sort_seperate_bucket/multi_heap_kmerge.c:115:23) in function 'multi_heap_kmerge' completely with a factor of 2
+remark: sort_seperate_bucket/multi_heap_kmerge.c:71:0: Unrolling loop 'VITIS_LOOP_110_5' (sort_seperate_bucket/multi_heap_kmerge.c:110:23) in function 'multi_heap_kmerge' completely with a factor of 4
+remark: sort_seperate_bucket/multi_heap_kmerge.c:71:0: Unrolling loop 'VITIS_LOOP_105_4' (sort_seperate_bucket/multi_heap_kmerge.c:105:23) in function 'multi_heap_kmerge' completely with a factor of 8
+remark: sort_seperate_bucket/multi_heap_kmerge.c:71:0: Unrolling loop 'VITIS_LOOP_100_3' (sort_seperate_bucket/multi_heap_kmerge.c:100:23) in function 'multi_heap_kmerge' completely with a factor of 16
+remark: sort_seperate_bucket/multi_heap_kmerge.c:71:0: Unrolling loop 'VITIS_LOOP_95_2' (sort_seperate_bucket/multi_heap_kmerge.c:95:22) in function 'multi_heap_kmerge' completely with a factor of 32
+remark: sort_seperate_bucket/multi_heap_kmerge.c:71:0: Unrolling loop 'VITIS_LOOP_90_1' (sort_seperate_bucket/multi_heap_kmerge.c:90:19) in function 'multi_heap_kmerge' completely with a factor of 64
+remark: sort_seperate_bucket/multi_heap_kmerge.c:15:0: Inlining function 'batch_swap' into 'batch_maxHeapify'
+remark: sort_seperate_bucket/multi_heap_kmerge.c:45:0: Inlining function 'batch_maxHeapify' into 'batch_heap_sort'
+remark: sort_seperate_bucket/multi_heap_kmerge.c:45:0: Inlining function 'batch_swap' into 'batch_heap_sort'
+remark: sort_seperate_bucket/multi_heap_kmerge.c:77:0: Applying array_partition to 'multi_heap_kmerge.temp5': Complete partitioning on dimension 1.
+remark: sort_seperate_bucket/multi_heap_kmerge.c:76:0: Applying array_partition to 'multi_heap_kmerge.temp4': Complete partitioning on dimension 1.
+remark: sort_seperate_bucket/multi_heap_kmerge.c:75:0: Applying array_partition to 'multi_heap_kmerge.temp3': Complete partitioning on dimension 1.
+remark: sort_seperate_bucket/multi_heap_kmerge.c:74:0: Applying array_partition to 'multi_heap_kmerge.temp2': Complete partitioning on dimension 1.
+remark: sort_seperate_bucket/multi_heap_kmerge.c:73:0: Applying array_partition to 'multi_heap_kmerge.temp1': Complete partitioning on dimension 1.
+remark: sort_seperate_bucket/multi_heap_kmerge.c:72:0: Applying array_partition to 'multi_heap_kmerge.temp0': Complete partitioning on dimension 1.
+remark: sort_seperate_bucket/multi_heap_kmerge.c:71:0: Applying array_partition to 'input': Complete partitioning on dimension 1.
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.1 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.2 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.3 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.4 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.5 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.6 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.7 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.8 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.9 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.10 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.11 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.12 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.13 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.14 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.15 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.16 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.17 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.18 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.19 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.20 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.21 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.22 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.23 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.24 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.25 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.26 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.27 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.28 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.29 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.30 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.31 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.32 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.33 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.34 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.35 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.36 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.37 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.38 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.39 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.40 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.41 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.42 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.43 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.44 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.45 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.46 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.47 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.48 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.49 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.50 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.51 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.52 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.53 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.54 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.55 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.56 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.57 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.58 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.59 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.60 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.61 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.62 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort.63 
+remark: sort_seperate_bucket/multi_heap_kmerge.c:20:22: Could not analyze the loop bounds _XLX_SEP_ VITIS_LOOP_20_1 sort_seperate_bucket/multi_heap_kmerge.c:20:22 batch_heap_sort 

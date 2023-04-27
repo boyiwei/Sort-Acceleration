@@ -878,17 +878,17 @@ extern int __overflow (FILE *, int);
 
 
 
-void radix_sort_unified_bucket(int data[5000000/64], int sorted_data[5000000/64])
+void radix_sort_unified_bucket(int data[1000000/64], int sorted_data[1000000/64])
 {
 
- int bucket[5000000/64];
+ int bucket[1000000/64];
  int bucket_pointer[16];
  int bucket_sizes[16] = {0};
 #pragma HLS ARRAY_PARTITION variable=bucket_pointer type=complete
 #pragma HLS ARRAY_PARTITION variable=bucket_sizes type=complete
 
  initialization:
- for (int j = 0; j < 5000000/64; j++) {
+ for (int j = 0; j < 1000000/64; j++) {
   sorted_data[j] = data[j];
   int next_ith_radix = sorted_data[j] & 0xf;
   bucket_sizes[next_ith_radix] += 1;
@@ -910,7 +910,7 @@ void radix_sort_unified_bucket(int data[5000000/64], int sorted_data[5000000/64]
   }
 
   input_bucket:
-  for (int j = 0; j < 5000000/64; j++) {
+  for (int j = 0; j < 1000000/64; j++) {
    int shifted = sorted_data[j] >> (i * 4);
    int ith_radix = shifted & 0xf;
    bucket[bucket_pointer[ith_radix]] = sorted_data[j];
@@ -921,16 +921,16 @@ void radix_sort_unified_bucket(int data[5000000/64], int sorted_data[5000000/64]
   }
 
   output_bucket:
-  for (int k = 0; k < 5000000/64; k++) {
+  for (int k = 0; k < 1000000/64; k++) {
    sorted_data[k] = bucket[k];
   }
  }
 }
 
-void radix_sort_unified_bucket_pingpong(int data[5000000/64], int sorted_data[5000000/64])
+void radix_sort_unified_bucket_pingpong(int data[1000000/64], int sorted_data[1000000/64])
 {
 
- int bucket[2][5000000/64];
+ int bucket[2][1000000/64];
  int bucket_pointer[16];
  int bucket_sizes[16] = {0};
 
@@ -940,7 +940,7 @@ void radix_sort_unified_bucket_pingpong(int data[5000000/64], int sorted_data[50
 
 
  initialization:
- for (int j = 0; j < 5000000/64; j++) {
+ for (int j = 0; j < 1000000/64; j++) {
   bucket[1-bucket_num][j] = data[j];
   int next_ith_radix = bucket[1-bucket_num][j] & 0xf;
   bucket_sizes[next_ith_radix] += 1;
@@ -961,7 +961,7 @@ void radix_sort_unified_bucket_pingpong(int data[5000000/64], int sorted_data[50
   }
 
   input_bucket:
-  for (int j = 0; j < 5000000/64; j++) {
+  for (int j = 0; j < 1000000/64; j++) {
    int shifted = bucket[1-bucket_num][j] >> (i * 4);
    int ith_radix = shifted & 0xf;
    bucket[bucket_num][bucket_pointer[ith_radix]] = bucket[1-bucket_num][j];
@@ -974,18 +974,18 @@ void radix_sort_unified_bucket_pingpong(int data[5000000/64], int sorted_data[50
  }
 
  output_bucket:
- for (int k = 0; k < 5000000/64; k++) {
+ for (int k = 0; k < 1000000/64; k++) {
   sorted_data[k] = bucket[1-bucket_num][k];
  }
 }
 
-void radix_sort_separate_bucket(int data[5000000/64], int sorted_data[5000000/64]){
- int bucket[16][5000000/64];
+void radix_sort_separate_bucket(int data[1000000/64], int sorted_data[1000000/64]){
+ int bucket[16][1000000/64];
  int bucket_pointer[16] = {0};
  int k = 0;
 
  initialization:
- for(int j=0; j<5000000/64; j++){
+ for(int j=0; j<1000000/64; j++){
   sorted_data[j] = data[j];
  }
 
@@ -996,7 +996,7 @@ void radix_sort_separate_bucket(int data[5000000/64], int sorted_data[5000000/64
 #pragma HLS pipeline
 
  input_bucket:
-  for (int j = 0; j < 5000000/64; j++) {
+  for (int j = 0; j < 1000000/64; j++) {
    int shifted = sorted_data[j] >> (i * 4);
    int ith_radix = shifted & 0xf;
    bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];
@@ -1006,7 +1006,7 @@ void radix_sort_separate_bucket(int data[5000000/64], int sorted_data[5000000/64
   output_bucket:
   for (int l = 0; l < 16; l++) {
    VITIS_LOOP_136_1: for(int m=0; m<bucket_pointer[l]; m++){
-#pragma HLS loop_tripcount min=0 max=5000000/64 -1
+#pragma HLS loop_tripcount min=0 max=1000000/64 -1
  sorted_data[k] = bucket[l][m];
     k = k + 1;
    }

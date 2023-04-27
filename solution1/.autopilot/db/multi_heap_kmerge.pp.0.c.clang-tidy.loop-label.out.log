@@ -1,0 +1,55 @@
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:925:5: warning: Added loop label VITIS_LOOP_20_1:   [xilinx-label-all-loops]
+    for (int loop_iter = 0; loop_iter < n; loop_iter++) {
+    ^~~
+    VITIS_LOOP_20_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:925:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:960:5: warning: Added loop label VITIS_LOOP_55_1:   [xilinx-label-all-loops]
+    for (j = 1000000/64 - 1; j >= 0; j--) {
+    ^~~
+    VITIS_LOOP_55_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:960:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:999:2: warning: Added loop label VITIS_LOOP_90_1:   [xilinx-label-all-loops]
+ for(i=0; i<64; i++){
+ ^~~
+ VITIS_LOOP_90_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:999:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1004:5: warning: Added loop label VITIS_LOOP_95_2:   [xilinx-label-all-loops]
+    for(i=0; i<32; i++){
+    ^~~
+    VITIS_LOOP_95_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1004:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1009:5: warning: Added loop label VITIS_LOOP_100_3:   [xilinx-label-all-loops]
+    for(i=0; i<16; i++){
+    ^~~
+    VITIS_LOOP_100_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1009:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1014:5: warning: Added loop label VITIS_LOOP_105_4:   [xilinx-label-all-loops]
+    for(i=0; i<8; i++){
+    ^~~
+    VITIS_LOOP_105_4: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1014:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1019:5: warning: Added loop label VITIS_LOOP_110_5:   [xilinx-label-all-loops]
+    for(i=0; i<4; i++){
+    ^~~
+    VITIS_LOOP_110_5: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1019:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1024:5: warning: Added loop label VITIS_LOOP_115_6:   [xilinx-label-all-loops]
+    for(i=0; i<2; i++){
+    ^~~
+    VITIS_LOOP_115_6: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1024:5: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1001046:2: warning: Added loop label VITIS_LOOP_135_1:   [xilinx-label-all-loops]
+ for(i=0; i<64; i++){
+ ^~~
+ VITIS_LOOP_135_1: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1001046:2: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1001047:3: warning: Added loop label VITIS_LOOP_136_2:   [xilinx-label-all-loops]
+  for(j=0; j<1000000/64; j++){
+  ^~~
+  VITIS_LOOP_136_2: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1001047:3: note: FIX-IT applied suggested code changes
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1001052:2: warning: Added loop label VITIS_LOOP_141_3:   [xilinx-label-all-loops]
+ for(i=0; i<64*1000000/64; i++){
+ ^~~
+ VITIS_LOOP_141_3: 
+/home/boyiw7/sort_seperate_bucket/solution1/.autopilot/db/multi_heap_kmerge.pp.0.c:1001052:2: note: FIX-IT applied suggested code changes
