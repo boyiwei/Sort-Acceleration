@@ -99,7 +99,7 @@ void single_heap_sort_test(){
 		};
 		static int output[dataset_size];
 		int i;
-		int input[dataset_size];
+		static int input[dataset_size];
 		for(i=0; i<dataset_size; i++){
 			input[i] = dataset[i];
 		}

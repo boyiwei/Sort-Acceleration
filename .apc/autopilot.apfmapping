@@ -26,6 +26,7 @@
     <originFiles name="merge_sort.c" path="/home/boyiw7/sort_seperate_bucket/merge_sort.c"/>
     <originFiles name="heapsort.c" path="/home/boyiw7/sort_seperate_bucket/heapsort.c"/>
     <originFiles name="dataset_size.h" path="/home/boyiw7/sort_seperate_bucket/dataset_size.h"/>
+    <originFiles name="multi_heap_kmerge.h" path="/home/boyiw7/sort_seperate_bucket/multi_heap_kmerge.h"/>
   </source>
   <testbench>
     <originFiles name="dataset.h" path="/home/boyiw7/sort_seperate_bucket/dataset.h"/>

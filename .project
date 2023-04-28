@@ -67,6 +67,11 @@
 			<location>/home/boyiw7/sort_seperate_bucket/multi_heap_kmerge.c</location>
 		</link>
 		<link>
+			<name>source/multi_heap_kmerge.h</name>
+			<type>1</type>
+			<location>/home/boyiw7/sort_seperate_bucket/multi_heap_kmerge.h</location>
+		</link>
+		<link>
 			<name>source/multi_heap_loser.c</name>
 			<type>1</type>
 			<location>/home/boyiw7/sort_seperate_bucket/multi_heap_loser.c</location>
