@@ -99,7 +99,11 @@ void single_heap_sort_test(){
 		};
 		static int output[dataset_size];
 		int i;
-		single_heap_sort(dataset, output);
+		int input[dataset_size];
+		for(i=0; i<dataset_size; i++){
+			input[i] = dataset[i];
+		}
+		single_heap_sort(input, output);
 		for(i=0; i<dataset_size; i++){
 		        printf("Sorted_results: rank %d, value= %d \n", i, output[i]);
 		    }
