@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="single_heap_sort">
+<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="encode_morton_radix_sort">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -38,6 +38,7 @@
         <file name="sort_seperate_bucket/multi_heap_loser.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/multi_heap_kmerge.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/multi_heap_kmerge.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+        <file name="sort_seperate_bucket/morton_code.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/merge_sort.h" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/merge_sort.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
         <file name="sort_seperate_bucket/heapsort.c" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
