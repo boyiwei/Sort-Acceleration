@@ -7,7 +7,7 @@
 
 
 void input_bucket_2(int i, int sorted_data[batch_size], int bucket[16][batch_size/2], int bucket_pointer[16], int start){
-	for (int j = start; j < batch_size/2; j++) {
+	for (int j = start; j-start < batch_size/2; j++) {
 		int shifted = sorted_data[j] >> (i * 4);
 		int ith_radix = shifted & 0xf;
 		bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];
@@ -66,7 +66,7 @@ void radix_sort_separate_bucket_parallel_2(int data[batch_size], int sorted_data
 //-----------------------------------------------------------------------section line----------------------------------------------------------------------------------------
 
 void input_bucket_5(int i, int sorted_data[batch_size], int bucket[16][batch_size/5], int bucket_pointer[16], int start){
-	for (int j = start; j < batch_size/2; j++) {
+	for (int j = start; j-start < batch_size/2; j++) {
 		int shifted = sorted_data[j] >> (i * 4);
 		int ith_radix = shifted & 0xf;
 		bucket[ith_radix][bucket_pointer[ith_radix]] = sorted_data[j];

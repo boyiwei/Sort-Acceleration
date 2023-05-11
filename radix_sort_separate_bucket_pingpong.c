@@ -77,14 +77,14 @@ void input_bucket_parallel_2_new(int i, int sorted_data[dataset_size], int bucke
 
 void radix_sort_separate_bucket_parallel_2_new(int data[dataset_size], int sorted_data[dataset_size]){
     static int bucket[2][2][16][dataset_size/2]; // Be careful that dataset_size can't be an odd number.
-    // First index: pingpong_buffer number
-    // Second index: Inside parallel bucket
-    // Third index: Number of the bucket in a bucket set
+    // First index: pingpong_buffer id
+    // Second index: Inside parallel bucket set id
+    // Third index:  bucket id in a bucket set
     // Fourth index: Size of each bucket
     static int bucket_pointer[2][2][16] = {0};
-    // First index: pingpong_buffer number
-    // Second index: Inside parallel bucket
-    // Third index: Number of the bucket in a bucket set
+    // First index: pingpong_buffer id
+    // Second index: Inside parallel bucket set id
+    // Third index: bucket id in a bucket set
 #pragma HLS ARRAY_PARTITION variable=bucket type=complete dim=1 // If dim=0, means partition all elements completely
 #pragma HLS ARRAY_PARTITION variable=bucket type=complete dim=2
 #pragma HLS ARRAY_PARTITION variable=bucket type=complete dim=3
