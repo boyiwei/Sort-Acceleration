@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="multi_radix_hex_kmerge">
+<project xmlns="com.autoesl.autopilot.project" name="sort_seperate_bucket" top="radix_sort_separate_bucket_parallel_2_new">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

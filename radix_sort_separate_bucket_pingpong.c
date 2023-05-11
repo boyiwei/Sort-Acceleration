@@ -21,7 +21,9 @@ void output_bucket_2_new(int i, int bucket0[2][16][dataset_size/2], int bucket1[
 	int shifted;
 	int ith_radix;
 	for(l=start; l<end; l++){
+#pragma HLS loop_tripcount min=8 max=8
 		for(m1=0; m1<bucket_pointer0[0][l]; m1++){
+#pragma HLS loop_tripcount min=dataset_size/32 max=dataset_size/32
 			shifted = bucket0[0][l][m1] >> (i * 4);
 			ith_radix = shifted & 0xf;
 			bucket1[ith_radix][bucket_pointer1[ith_radix]] = bucket0[0][l][m1];
@@ -29,6 +31,7 @@ void output_bucket_2_new(int i, int bucket0[2][16][dataset_size/2], int bucket1[
 		}
 
 		for(m2=0; m2<bucket_pointer0[1][l]; m2++){
+#pragma HLS loop_tripcount min=dataset_size/32 max=dataset_size/32
 			shifted = bucket0[1][l][m2] >> (i * 4);
 			ith_radix = shifted & 0xf;
 			bucket1[ith_radix][bucket_pointer1[ith_radix]] = bucket0[1][l][m2];
@@ -53,6 +56,7 @@ void output_bucket_parallel_2_new(int i, int bucket0[2][16][dataset_size/2], int
     int ith_radix;
 
     output_bucket_temp1:
+#pragma HLS DATAFLOW
 	output_bucket_2_new(i, bucket0, bucket1[0], bucket_pointer0, bucket_pointer1[0], 0, 8);
 	output_bucket_2_new(i, bucket0, bucket1[1], bucket_pointer0, bucket_pointer1[1], 8, 16);
 
@@ -82,7 +86,9 @@ void radix_sort_separate_bucket_parallel_2_new(int data[dataset_size], int sorte
     // Second index: Inside parallel bucket
     // Third index: Number of the bucket in a bucket set
 #pragma HLS ARRAY_PARTITION variable=bucket type=complete dim=1 // If dim=0, means partition all elements completely
-#pragma HLS ARRAY_PARTITION variable=bucket_pointer type=complete dim=1
+#pragma HLS ARRAY_PARTITION variable=bucket type=complete dim=2
+#pragma HLS ARRAY_PARTITION variable=bucket type=complete dim=3
+#pragma HLS ARRAY_PARTITION variable=bucket_pointer type=complete
     int i = 0;
     int k = 0;
     int l = 0;
@@ -102,13 +108,14 @@ void radix_sort_separate_bucket_parallel_2_new(int data[dataset_size], int sorte
 
     output_bucket:
     for (l = 0; l < 16; l++) {
+#pragma HLS PIPELINE
         for(m1=0; m1<bucket_pointer[1-id][0][l]; m1++){
-#pragma HLS loop_tripcount min=0 max=dataset_size/2-1 // depends on the size of dataset_size/n
+#pragma HLS loop_tripcount min=dataset_size/32 max=dataset_size/32// depends on the size of dataset_size/n
             sorted_data[k] = bucket[1-id][0][l][m1];
             k = k + 1;
         }
         for(m2=0; m2<bucket_pointer[1-id][1][l]; m2++){
-#pragma HLS loop_tripcount min=0 max=dataset_size/2-1
+#pragma HLS loop_tripcount min=dataset_size/32 max=dataset_size/32
             sorted_data[k] = bucket[1-id][1][l][m2];
             k = k + 1;
         }
