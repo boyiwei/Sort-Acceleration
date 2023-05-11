@@ -142,6 +142,11 @@
 			<location>/home/boyiw7/sort_seperate_bucket/radix_sort_separate_bucket_parallel.c</location>
 		</link>
 		<link>
+			<name>source/radix_sort_separate_bucket_pingpong.c</name>
+			<type>1</type>
+			<location>/home/boyiw7/radix_sort_separate_bucket_pingpong.c</location>
+		</link>
+		<link>
 			<name>source/single_heap_sort.c</name>
 			<type>1</type>
 			<location>/home/boyiw7/sort_seperate_bucket/single_heap_sort.c</location>

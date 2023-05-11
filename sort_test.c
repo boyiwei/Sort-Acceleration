@@ -30,7 +30,7 @@ void multi_radix_hex_kmerge_test(){
 
 
 int main(){
-	encode_morton_radix_sort_test();
+	radix_sort_separate_bucket_parallel_2_new_test();
     return 0;
 }
 
