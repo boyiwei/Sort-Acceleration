@@ -28,7 +28,7 @@
     <originFiles name="single_radix_sort_hex.c" path="/home/boyiw7/sort_seperate_bucket/single_radix_sort_hex.c"/>
     <originFiles name="single_radix_sort_oct.c" path="/home/boyiw7/sort_seperate_bucket/single_radix_sort_oct.c"/>
     <originFiles name="sort_top.c" path="/home/boyiw7/sort_seperate_bucket/sort_top.c"/>
-    <originFiles name="radix_sort_separate_bucket_pingpong.c" path="/home/boyiw7/radix_sort_separate_bucket_pingpong.c"/>
+    <originFiles name="radix_sort_separate_bucket_pingpong.c" path="/home/boyiw7/sort_seperate_bucket/radix_sort_separate_bucket_pingpong.c"/>
   </source>
   <testbench>
     <originFiles name="dataset.h" path="/home/boyiw7/sort_seperate_bucket/dataset.h"/>
