@@ -5,6 +5,23 @@
       <synLog/>
       <packageLog/>
       <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:18:55.285-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:18:55.162-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:18:55.155-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:18:55.148-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:17:58.065-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:17:57.948-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:17:57.943-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:17:57.935-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:16:54.479-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:16:54.367-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:16:54.362-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:16:54.358-0700"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:05:54.569-0700"/>
+        <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:05:54.467-0700"/>
+        <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:05:54.462-0700"/>
+        <logs message="ERROR: [APCC 202-10] clang compile failed: child process exited abnormally" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T22:05:54.435-0700"/>
+        <logs message="ERROR: [SIM 211-100] CSim failed with errors." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T18:41:05.925-0700"/>
         <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T18:35:02.772-0700"/>
         <logs message="ERROR: [APCC 202-1] APCC failed." projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T18:35:02.655-0700"/>
         <logs message="ERROR: [APCC 202-1] ProcessSources failed" projectName="sort_seperate_bucket" solutionName="solution1" date="2023-05-10T18:35:02.648-0700"/>
