@@ -40,6 +40,7 @@ void output_bucket_2_new(int i, int bucket0[2][16][dataset_size/2], int bucket1[
 	}
 }
 
+
 void output_bucket_parallel_2_new(int i, int bucket0[2][16][dataset_size/2], int bucket1[2][16][dataset_size/2], int bucket_pointer0[2][16], int bucket_pointer1[2][16]){
     /*
      * i: ith_radix

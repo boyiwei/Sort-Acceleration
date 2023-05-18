@@ -57,6 +57,9 @@ void radix_sort_hex_batch(int input[batch_size], int output[batch_size]){
 
 
 void multi_radix_hex_kmerge(int input[64][batch_size], int output[dataset_size]){
+#pragma HLS INTERFACE m_axi depth=dataset_size port=input offset=slave bundle=intput
+#pragma HLS INTERFACE m_axi depth=dataset_size port=output offset=slave bundle=output
+#pragma HLS INTERFACE s_axilite port=return bundle=control
     static int temp0[64][batch_size];
     static int temp1[32][2*batch_size];
     static int temp2[16][4*batch_size];
@@ -106,6 +109,27 @@ void multi_radix_hex_kmerge(int input[64][batch_size], int output[dataset_size])
     }
 
     merge_sort_batch5(temp5[0], temp5[1], output);
+
+}
+
+
+void multi_radix_hex_kmerge_top(int dataset[dataset_size], int output[dataset_size]){
+#pragma HLS INTERFACE m_axi depth=dataset_size port=dataset offset=slave bundle=dataset
+#pragma HLS INTERFACE m_axi depth=dataset_size port=output offset=slave bundle=output
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+	static int input[64][batch_size] = {0};
+	static int output_temp[dataset_size] = {0};
+//#pragma HLS ARRAY_PARTITION variable=input type=complete dim=1
+//#pragma HLS ARRAY_PARTITION variable=dataset type=block factor=64
+	int i;
+	int j;
+	for(i=0; i<64; i++){
+//#pragma HLS PIPELINE
+		for(j=0; j<batch_size; j++){
+			input[i][j] = dataset[i*batch_size+j];
+		}
+	}
+	multi_radix_hex_kmerge(input, output_temp);
 
 }
 

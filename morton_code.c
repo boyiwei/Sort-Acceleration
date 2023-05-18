@@ -30,12 +30,18 @@ void encode_morton_full(int dataset_x[dataset_size], int dataset_y[dataset_size]
 
 
 void encode_morton_radix_sort(int dataset_x[dataset_size], int dataset_y[dataset_size], int dataset_z[dataset_size], int output[dataset_size]){
+#pragma HLS INTERFACE m_axi depth=dataset_size port=dataset_x offset=slave bundle=dataset_x
+#pragma HLS INTERFACE m_axi depth=dataset_size port=dataset_y offset=slave bundle=dataset_y
+#pragma HLS INTERFACE m_axi depth=dataset_size port=dataset_z offset=slave bundle=dataset_z
+#pragma HLS INTERFACE m_axi depth=dataset_size port=output offset=slave bundle=output
+#pragma HLS INTERFACE s_axilite port=return bundle=control
 	static int morton_code[64][batch_size];
 #pragma HLS ARRAY_PARTITION variable=morton_code type=complete dim=1
 	encode_morton_full(dataset_x, dataset_y, dataset_z, morton_code);
 	multi_radix_hex_kmerge(morton_code, output);
 
 }
+
 
 
 void encode_morton_radix_sort_test(){
